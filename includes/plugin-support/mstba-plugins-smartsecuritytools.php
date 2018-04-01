@@ -255,7 +255,7 @@ if ( current_user_can( 'activate_plugins' ) ) {
 
 		}  // end if
 
-		if ( smart_ssect_core()->settings[ 'blog_allow_sucuri' ] ) ) {
+		if ( smart_ssect_core()->settings[ 'blog_allow_sucuri' ] ) {
 
 			$mstba_tb_items[ 'siteext_smartsecuritytools_sucuri' ] = array(
 				'parent' => $siteext_smartsecuritytools,
@@ -269,7 +269,7 @@ if ( current_user_can( 'activate_plugins' ) ) {
 
 		}  // end if
 
-		if ( smart_ssect_core()->settings[ 'blog_allow_sucuri' ] ) ) {
+		if ( smart_ssect_core()->settings[ 'blog_allow_sucuri' ] ) {
 
 			$mstba_tb_items[ 'siteext_smartsecuritytools_virustotal' ] = array(
 				'parent' => $siteext_smartsecuritytools,

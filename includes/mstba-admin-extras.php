@@ -71,10 +71,10 @@ function ddw_mstba_custom_menu_link( $mstba_links ) {
 	/** Add link only if user can edit theme options */
 	if ( current_user_can( 'edit_theme_options' ) ) {
 
-		/** Settings Page link */
+		/** Menus Page link */
 		$mstba_menu_link = sprintf(
-			'<a href="%s" title="%s">%s</a>',
-			admin_url( 'nav-menus.php' ),
+			'<a class="dashicons-before dashicons-menu" href="%s" title="%s">%s</a>',
+			esc_url( admin_url( 'nav-menus.php' ) ),
 			esc_html__( 'Setup a custom toolbar menu', 'multisite-toolbar-additions' ),
 			esc_attr__( 'Custom Menu', 'multisite-toolbar-additions' )
 		);
