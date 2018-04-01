@@ -1,0 +1,2199 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Multisite Toolbar Additions\n"
+"POT-Creation-Date: 2018-04-01 22:14+0200\n"
+"PO-Revision-Date: 2018-04-01 22:16+0200\n"
+"Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
+"Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: multisite-toolbar-additions.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Author of the plugin/theme
+#: includes/mstba-admin-extras.php:49
+msgid "David Decker - DECKERWEB"
+msgstr "David Decker - DECKERWEB.de"
+
+#. Author URI of the plugin/theme
+#: includes/mstba-admin-extras.php:50
+msgid "https://deckerweb.de/"
+msgstr "https://deckerweb.de/"
+
+#: includes/mstba-admin-extras.php:78
+msgid "Setup a custom toolbar menu"
+msgstr ""
+"Ein benutzerdefiniertes Menü für die Werkzeugleiste (Toolbar) einrichten"
+
+#: includes/mstba-admin-extras.php:79
+msgid "Custom Menu"
+msgstr "Eigenes Menü"
+
+#: includes/mstba-admin-extras.php:120
+msgctxt "Translators: plugin page listing"
+msgid "FAQ"
+msgstr "FAQ - Häufige Fragen"
+
+#: includes/mstba-admin-extras.php:122
+msgctxt "Translators: plugin page listing"
+msgid "Support"
+msgstr "Support"
+
+#: includes/mstba-admin-extras.php:124 includes/mstba-admin-extras.php:226
+msgid "Code Snippets for Customization"
+msgstr "Codeschnipsel für Anpassungen"
+
+#: includes/mstba-admin-extras.php:124 includes/mstba-admin-extras.php:226
+#: includes/mstba-plugins.php:553 includes/mstba-plugins.php:555
+#: includes/plugin-support/mstba-plugins-codesnippets.php:93
+#: includes/plugin-support/mstba-plugins-codesnippets.php:97
+msgid "Code Snippets"
+msgstr "Codeschnipsel"
+
+#: includes/mstba-admin-extras.php:126 includes/mstba-admin-extras.php:228
+msgid "Translations"
+msgstr "Übersetzungen"
+
+#: includes/mstba-admin-extras.php:128 includes/mstba-admin-extras.php:230
+msgid "Donate"
+msgstr "Spenden"
+
+#. Plugin Name of the plugin/theme
+#: includes/mstba-admin-extras.php:173 includes/mstba-admin-extras.php:195
+#: includes/mstba-admin-extras.php:316 includes/mstba-global-functions.php:114
+#: includes/mstba-global-functions.php:163
+#: includes/mstba-global-functions.php:321
+msgid "Multisite Toolbar Additions"
+msgstr "Multisite Werkzeugleiste Zusätze"
+
+#: includes/mstba-admin-extras.php:195 includes/mstba-global-functions.php:321
+msgid "Plugin"
+msgstr "Plugin"
+
+#: includes/mstba-admin-extras.php:214
+msgid "Other, recommended Multisite &amp; Toolbar plugins:"
+msgstr "Weitere, empfohlene Plugins für Multisite &amp; Werkzeugleiste:"
+
+#: includes/mstba-admin-extras.php:215
+msgid "Toolbar plugin series"
+msgstr "Toolbar Plugin-Serie"
+
+#: includes/mstba-admin-extras.php:215
+msgid "My Toolbar plugin series"
+msgstr "Meine Toolbar-Plugin-Serie"
+
+#: includes/mstba-admin-extras.php:216
+msgid "More plugins at WordPress.org"
+msgstr "Noch mehr Plugins bei WordPress.org"
+
+#: includes/mstba-admin-extras.php:218
+msgid "Important plugin links:"
+msgstr "Wichtige Plugin-Links:"
+
+#: includes/mstba-admin-extras.php:220
+msgid "Plugin website"
+msgstr "Plugin-Webseite"
+
+#: includes/mstba-admin-extras.php:222
+msgctxt "Translators: help tab info"
+msgid "FAQ"
+msgstr "FAQ - Häufige Fragen"
+
+#: includes/mstba-admin-extras.php:224
+msgctxt "Translators: help tab info"
+msgid "Support"
+msgstr "Support"
+
+#: includes/mstba-admin-extras.php:248
+#, php-format
+msgid "Special custom menu for %s"
+msgstr "Besonderes, benutzerdefiniertes Menü für %s"
+
+#: includes/mstba-admin-extras.php:249 includes/mstba-items-multisite.php:110
+#: includes/mstba-items-multisite.php:114
+msgid "Super Admins"
+msgstr "Super-Administratoren"
+
+#: includes/mstba-admin-extras.php:252
+msgid ""
+"All menu items via a Custom Menu here - and at all other places in the "
+"Toolbar (a.k.a. Admin Bar) - are only visible and accessable for Super "
+"Admins. That means in a Multisite Environment all Admins who can manage the "
+"Network. In regular WordPress (single) installs these are users with the "
+"Administrator user role."
+msgstr ""
+"Alle Menüelemente von einem benutzerdefinierten Menü hier - sowie an alle "
+"anderen Stellen in der Werkzeugleiste (a.k.a. Adminbar) - sind nur sichtbar "
+"und erreichbar für Super-Admins. Das bedeutet in einer Multisite-Umgebung "
+"alle Administratoren, die das Netzwerk verwalten können. In einer regulären "
+"WordPress-Installation (Single) sind dies alle Benutzer mit der "
+"Benutzerrolle 'Administrator'."
+
+#: includes/mstba-admin-extras.php:253
+msgid "Added Menu Location by the plugin - only for Super Admins:"
+msgstr "Vom Plugin hinzugefügter Menü-Ort - nur für Super-Admins:"
+
+#: includes/mstba-admin-extras.php:253
+msgid "Multisite Toolbar Menu"
+msgstr "Multisite Werkzeugleiste Menü"
+
+#: includes/mstba-admin-extras.php:253
+msgid "How to use it?"
+msgstr "Wie wird es verwendet?"
+
+#: includes/mstba-admin-extras.php:255
+#, php-format
+msgid "Create a new menu, set a name like %s"
+msgstr "Ein neues Menü erstellen, einen Namen vergeben, zum Beispiel %s"
+
+#: includes/mstba-admin-extras.php:256
+msgid "Setup your links, might mostly be custom links, or any other..."
+msgstr ""
+"Links einrichten, werden vermutlich meist nur URLs sein, oder eben jeden "
+"anderen aus einer der Menüboxen unten..."
+
+#: includes/mstba-admin-extras.php:257
+msgid "Save the new menu to the plugin's menu location. That's it :)"
+msgstr ""
+"Das neue Menü dann speichern im neuen Menü-Ort des Plugins. Das ist alles :)"
+
+#: includes/mstba-admin-extras.php:259
+msgid "Please note:"
+msgstr "Bitte beachten:"
+
+#: includes/mstba-admin-extras.php:259
+msgid ""
+"Every parent item = one main toolbar entry! So best would be to only use one "
+"parent item and set all other items as children."
+msgstr ""
+"Jedes Eltern-Menüelement = ein neuer Toolbar-Eintrag! Es ist also besser, "
+"nur ein Eltern-Element für das Toolbar-Menü zu verwenden und alle anderen "
+"Menüeinträge als Kind-Elemente."
+
+#: includes/mstba-admin-extras.php:259
+msgid "See also this screenshot."
+msgstr "Bitte auch diesen Screenshot beachten."
+
+#: includes/mstba-admin-extras.php:260
+msgid ""
+"Also, only Super Admins can edit this menu, all other users/ roles will be "
+"blocked!"
+msgstr ""
+"Außerdem, nur Super-Administratoren können dieses Menü bearbeiten, alle "
+"anderen Benutzer/ -rollen werden blockiert!"
+
+#: includes/mstba-admin-extras.php:273
+#, php-format
+msgid "In Multisite: Special restricted custom menu for %s"
+msgstr "In Multisite: Besonderes, gesichertes benutzerdefiniertes Menü für %s"
+
+#: includes/mstba-admin-extras.php:274
+msgid "Site Admins"
+msgstr "Webseiten-Administratoren"
+
+#: includes/mstba-admin-extras.php:277
+msgid ""
+"This custom menu is almost identical to the custom menu for Super Admins "
+"(see above), with two differences"
+msgstr ""
+"Dieses benutzerdefinierte Menü ist nahezu identisch mit für Super-"
+"Administratoren (siehe oben), mit zwei Unterschieden"
+
+#: includes/mstba-admin-extras.php:280
+msgid "Only Super Admins can setup and edit this menu"
+msgstr "Nur Super-Administratoren können das Menü einrichten und bearbeiten"
+
+#: includes/mstba-admin-extras.php:281
+msgid "Site Admins can see this menu but are not able to edit it"
+msgstr "Webseiten-Administratoren können das Menü sehen, aber nicht bearbeiten"
+
+#: includes/mstba-admin-extras.php:314
+#, php-format
+msgid "%s only for Super Admins."
+msgstr "%s nur für Super-Administratoren."
+
+#: includes/mstba-admin-extras.php:314
+#, php-format
+msgid "This is provided by the plugin %s."
+msgstr "Dies wird bereitgestellt durch das Plugin %s."
+
+#: includes/mstba-admin-extras.php:315
+msgctxt "plural (in Multisite)"
+msgid "The following menu locations above are"
+msgstr "Die folgenden oben aufgelisteten Menüpositionen sind"
+
+#: includes/mstba-admin-extras.php:315
+msgctxt "singular (non-Multisite)"
+msgid "The following menu location above is"
+msgstr "Die folgende oben aufgelistete Menüposition ist"
+
+#: includes/mstba-admin-extras.php:327
+msgid "See help tab on top right corner for more usage instructions."
+msgstr ""
+"Der Hilfe-Tab oben rechts bietet weitere Instruktionen zum Einsatz der Menüs."
+
+#: includes/mstba-global-functions.php:87
+msgid "Guide"
+msgstr "Wegweiser"
+
+#: includes/mstba-global-functions.php:87
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: includes/mstba-global-functions.php:88
+msgctxt "Translators: For the tooltip"
+msgid "Guide (Main Site)"
+msgstr "Wegweiser (Haupt-Webseite)"
+
+#: includes/mstba-global-functions.php:88
+msgctxt "Translators: For the tooltip"
+msgid "Dashboard (Main Site)"
+msgstr "Dashboard (Haupt-Webseite)"
+
+#: includes/mstba-global-functions.php:113
+#: includes/mstba-global-functions.php:162
+msgid "via Plugin"
+msgstr "via Plugin"
+
+#: includes/mstba-global-functions.php:115
+msgid "Multisite"
+msgstr "Multisite"
+
+#: includes/mstba-global-functions.php:115
+msgid "Site"
+msgstr "Webseite"
+
+#: includes/mstba-global-functions.php:121
+#: includes/mstba-global-functions.php:128
+#, php-format
+msgid "%s Toolbar Menu"
+msgstr "%s Werkzeugleiste Menü"
+
+#: includes/mstba-global-functions.php:154
+msgid "Restricted Site Admin Menu"
+msgstr "Gesichertes Webseiten-Admin-Menü"
+
+#: includes/mstba-global-functions.php:155
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:167
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:171
+msgid "Toolbar"
+msgstr "Werkzeugleiste"
+
+#: includes/mstba-global-functions.php:317
+msgid "You have no sufficient permission to edit this special menu."
+msgstr ""
+"Sie haben keine ausreichende Berechtigung, um dieses besondere Menü "
+"bearbeiten zu können."
+
+#: includes/mstba-items-manage-content.php:36
+msgid "Landing Pages"
+msgstr "Landingseiten"
+
+#: includes/mstba-items-manage-content.php:37
+msgid "Products"
+msgstr "Produkte"
+
+#: includes/mstba-items-manage-content.php:38
+msgid "Portfolio Items"
+msgstr "Portfolio-Beiträge"
+
+#: includes/mstba-items-manage-content.php:39
+msgid "Events"
+msgstr "Termine"
+
+#: includes/mstba-items-manage-content.php:40
+msgid "Downloads"
+msgstr "Downloads"
+
+#: includes/mstba-items-manage-content.php:41
+msgid "Galleries"
+msgstr "Galerien"
+
+#: includes/mstba-items-manage-content.php:42
+msgid "Persons"
+msgstr "Personen"
+
+#: includes/mstba-items-manage-content.php:43
+msgid "Sermons"
+msgstr "Predigten"
+
+#: includes/mstba-items-manage-content.php:52
+msgid "News"
+msgstr "News"
+
+#: includes/mstba-items-manage-content.php:55
+msgid "Documents"
+msgstr "Dokumente"
+
+#: includes/mstba-items-manage-content.php:83
+msgid "Projects"
+msgstr "Projekte"
+
+#: includes/mstba-items-manage-content.php:119
+msgid "Sliders"
+msgstr "Slider"
+
+#: includes/mstba-items-manage-content.php:131
+msgid "Media Grid Items"
+msgstr "Medienraster-Elemente"
+
+#: includes/mstba-items-manage-content.php:156
+msgid "Listings"
+msgstr "Auflistungen"
+
+#: includes/mstba-items-manage-content.php:160
+msgid "Job Listings"
+msgstr "Job-Auflistungen"
+
+#: includes/mstba-items-manage-content.php:164
+msgid "Resumes"
+msgstr "Lebensläufe"
+
+#: includes/mstba-items-manage-content.php:168
+msgid "Tables"
+msgstr "Tabellen"
+
+#: includes/mstba-items-manage-content.php:174
+msgid "Content Boxes"
+msgstr "Inhaltsboxen"
+
+#: includes/mstba-items-manage-content.php:207
+#, php-format
+msgid "Edit %s"
+msgstr "%s bearbeiten"
+
+#: includes/mstba-items-multisite.php:55 includes/mstba-items-multisite.php:59
+msgid "Network Settings"
+msgstr "Netzwerk-Einstellungen"
+
+#: includes/mstba-items-multisite.php:66 includes/mstba-items-multisite.php:70
+msgid "Check for Updates"
+msgstr "Verfügbare Aktualisierungen"
+
+#: includes/mstba-items-multisite.php:77
+msgid "Updates all Sites"
+msgstr "Alle Webseiten aktualisieren"
+
+#: includes/mstba-items-multisite.php:81
+msgctxt "Translators: For the tooltip"
+msgid "Updates all Sites"
+msgstr "Alle Webseiten im Netzwerk aktualisieren"
+
+#: includes/mstba-items-multisite.php:88 includes/mstba-items-multisite.php:92
+msgid "Add Site"
+msgstr "Webseite hinzufügen"
+
+#: includes/mstba-items-multisite.php:99 includes/mstba-items-multisite.php:103
+msgid "Add User"
+msgstr "Benutzer hinzufügen"
+
+#: includes/mstba-items-multisite.php:121
+#: includes/mstba-items-multisite.php:125
+#: includes/mstba-network-admin-additions.php:71
+#: includes/mstba-network-admin-additions.php:72
+msgid "Network Plugins"
+msgstr "Netzwerkweite Plugins"
+
+#: includes/mstba-items-multisite.php:132
+msgid "Install Plugins: Search"
+msgstr "Plugins installieren: Suche"
+
+#: includes/mstba-items-multisite.php:136
+msgid "Install Plugins - Search on WordPress.org"
+msgstr "Plugins installieren - Suche auf WordPress.org"
+
+#: includes/mstba-items-multisite.php:143
+msgid "Install Plugins: Upload"
+msgstr "Plugin-ZIP hochladen"
+
+#: includes/mstba-items-multisite.php:147
+msgid "Install Plugins - Upload ZIP file"
+msgstr "Plugins installieren - ZIP-Datei hochladen"
+
+#: includes/mstba-items-multisite.php:154
+msgid "Install Plugins: Favorites"
+msgstr "Plugins installieren: Favoriten"
+
+#: includes/mstba-items-multisite.php:158 multisite-toolbar-additions.php:556
+msgid "Install Plugins - Favorites (via WordPress.org)"
+msgstr "Plugins installieren - Favoriten (via WordPress.org)"
+
+#: includes/mstba-items-multisite.php:165
+#: includes/mstba-items-multisite.php:169
+msgid "Network Themes"
+msgstr "Netzwerkweite Themes"
+
+#: includes/mstba-items-multisite.php:176
+msgid "Install Themes: Search"
+msgstr "Themes installieren: Suche"
+
+#: includes/mstba-items-multisite.php:180
+msgid "Install Themes - Search on WordPress.org"
+msgstr "Themes installieren - Suche auf WordPress.org"
+
+#: includes/mstba-items-multisite.php:187
+msgid "Install Themes: Upload"
+msgstr "Theme-ZIP hochladen"
+
+#: includes/mstba-items-multisite.php:191
+msgid "Install Themes - Upload ZIP file"
+msgstr "Themes installieren - ZIP-Datei hochladen"
+
+#: includes/mstba-items-multisite.php:200
+#: includes/mstba-items-multisite.php:204
+#: includes/mstba-network-admin-additions.php:83
+#: includes/mstba-network-admin-additions.php:84
+msgid "Network Theme Editor"
+msgstr "Netzwerk Theme-Editor"
+
+#: includes/mstba-items-multisite.php:226
+#: includes/mstba-items-multisite.php:230
+msgid "Visit Network"
+msgstr "Zum Netzwerk gehen"
+
+#: includes/mstba-items-navmenus.php:78 includes/mstba-items-navmenus.php:82
+msgid "Edit Menu:"
+msgstr "Menü bearbeiten:"
+
+#: includes/mstba-items-navmenus.php:138 includes/mstba-items-navmenus.php:154
+msgid "Toolbar Menu:"
+msgstr "Werkzeugleiste:"
+
+#: includes/mstba-items-navmenus.php:142
+msgid "Edit Super Admin Toolbar Menu:"
+msgstr "Werkzeugleisten-Menü für Super-Admins bearbeiten:"
+
+#: includes/mstba-items-navmenus.php:158
+msgid "Edit Site Admin Toolbar Menu:"
+msgstr "Werkzeugleisten-Menü für Webseiten-Admins bearbeiten:"
+
+#: includes/mstba-items-resources.php:35 includes/mstba-items-resources.php:37
+msgid "PHP Coding Standards"
+msgstr "PHP Coding Standards"
+
+#: includes/mstba-items-resources.php:42 includes/mstba-items-resources.php:44
+msgid "CSS Coding Standards"
+msgstr "CSS Coding Standards"
+
+#: includes/mstba-items-resources.php:49 includes/mstba-items-resources.php:51
+msgid "JavaScript Coding Standards"
+msgstr "JavaScript Coding Standards"
+
+#: includes/mstba-items-resources.php:56 includes/mstba-items-resources.php:58
+msgid "HTML Coding Standards"
+msgstr "HTML Coding Standards"
+
+#: includes/mstba-items-resources.php:65
+msgid "Get Involved"
+msgstr "Jetzt mitmachen!"
+
+#: includes/mstba-items-resources.php:67
+msgctxt "Translators: For the tooltip"
+msgid "Get Involved"
+msgstr "Jetzt mitmachen und WordPress weiter voranbringen!"
+
+#: includes/mstba-items-resources.php:72 includes/mstba-items-resources.php:74
+msgid "Core Development Updates"
+msgstr "Core-Entwicklungsblog"
+
+#: includes/mstba-items-resources.php:79 includes/mstba-items-resources.php:81
+msgid "Core Components Development"
+msgstr "Core-Komponentenentwicklung"
+
+#: includes/mstba-items-resources.php:86 includes/mstba-items-resources.php:88
+msgid "Plugin Development"
+msgstr "Plugin-Entwicklung"
+
+#: includes/mstba-items-resources.php:93 includes/mstba-items-resources.php:95
+msgid "Theme Development"
+msgstr "Theme-Entwicklung"
+
+#: includes/mstba-items-resources.php:100
+#: includes/mstba-items-resources.php:102
+msgid "Translations/ L10n"
+msgstr "Übersetzungen/ L10n"
+
+#: includes/mstba-items-resources.php:107
+#: includes/mstba-items-resources.php:109
+msgid "Polyglots/ i18n"
+msgstr "Mehrsprachigkeit/ i18n"
+
+#: includes/mstba-items-resources.php:114
+#: includes/mstba-items-resources.php:116
+msgid "GlotPress"
+msgstr "GlotPress Entwicklung"
+
+#: includes/mstba-items-resources.php:121
+#: includes/mstba-items-resources.php:123
+msgid "Mobile Apps"
+msgstr "Mobile Applikationen"
+
+#: includes/mstba-items-resources.php:128
+#: includes/mstba-items-resources.php:130
+msgid "UI Design"
+msgstr "UI-Design"
+
+#: includes/mstba-items-resources.php:135
+#: includes/mstba-items-resources.php:137
+msgid "Accessibility"
+msgstr "Barrierefreiheit"
+
+#: includes/mstba-items-resources.php:142
+#: includes/mstba-items-resources.php:144
+msgid "Help supporting"
+msgstr "Hilfe beim Support"
+
+#: includes/mstba-items-resources.php:149
+#: includes/mstba-items-resources.php:151
+msgid "Help Make WordPress.org"
+msgstr "Helfen, WordPress.org zu bauen"
+
+#: includes/mstba-items-resources.php:157
+msgid "WordPress Answers (SE)"
+msgstr "WordPress-Antworten (SE)"
+
+#: includes/mstba-items-resources.php:159
+msgctxt "Translators: For the tooltip"
+msgid "WordPress Answers at StackExchange"
+msgstr "WordPress-Antworten beim Dienst 'StackExchange'"
+
+#: includes/mstba-items-site-group.php:36
+#: includes/mstba-items-site-group.php:40
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:107
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:111
+msgid "Widgets"
+msgstr "Widgets"
+
+#: includes/mstba-items-site-group.php:46
+#: includes/mstba-items-site-group.php:50
+msgid "Nav Menus"
+msgstr "Menüs"
+
+#: includes/mstba-items-site-group.php:56
+#: includes/mstba-items-site-group.php:60
+msgid "Manage Content"
+msgstr "Inhalte verwalten"
+
+#: includes/mstba-items-site-group.php:68
+#: includes/mstba-items-site-group.php:72 multisite-toolbar-additions.php:800
+#: multisite-toolbar-additions.php:804
+msgid "Add new Menu"
+msgstr "Neues Menü erstellen"
+
+#: includes/mstba-items-site-group.php:80
+msgid "Nav Menu"
+msgstr "Nav-Menü"
+
+#: includes/mstba-items-site-group.php:84
+msgid "Add new Nav Menu"
+msgstr "Neues Navigationsmenü hinzufügen"
+
+#: includes/mstba-items-site-group.php:95 multisite-toolbar-additions.php:813
+#: multisite-toolbar-additions.php:817
+msgid "Menu Locations"
+msgstr "Menüpositionen"
+
+#: includes/mstba-items-site-group.php:99
+msgctxt "Translators: For the tooltip"
+msgid "Menu Locations"
+msgstr "Menüpositionen & Zuordnung"
+
+#: includes/mstba-items-site-group.php:107
+#: includes/mstba-items-site-group.php:111
+msgid "Edit Pages"
+msgstr "Seiten bearbeiten"
+
+#: includes/mstba-items-site-group.php:117
+#: includes/mstba-items-site-group.php:121
+msgid "Edit Posts"
+msgstr "Beiträge bearbeiten"
+
+#: includes/mstba-items-site-group.php:127
+#: includes/mstba-items-site-group.php:131
+msgid "Media Library"
+msgstr "Mediathek"
+
+#: includes/mstba-items-site-group.php:137
+#: includes/mstba-items-site-group.php:141
+msgid "Upload File(s)"
+msgstr "Datei(en) hochladen"
+
+#: includes/mstba-items-site-group.php:151
+#: includes/mstba-items-site-group.php:155
+msgid "Theme Editor"
+msgstr "Theme-Editor"
+
+#: includes/mstba-items-site-group.php:163
+#: includes/mstba-items-site-group.php:167
+msgid "Customizer"
+msgstr "Theme anpassen"
+
+#: includes/mstba-items-site-group.php:178
+#: includes/mstba-items-site-group.php:182 multisite-toolbar-additions.php:850
+#: multisite-toolbar-additions.php:855
+msgid "Theme Customizer"
+msgstr "Theme anpassen"
+
+#: includes/mstba-items-site-group.php:193
+#: includes/mstba-items-site-group.php:197
+msgid "Custom Background"
+msgstr "Hintergrund anpassen"
+
+#: includes/mstba-items-site-group.php:208
+#: includes/mstba-items-site-group.php:212
+msgid "Custom Header"
+msgstr "Kopfzeile anpassen"
+
+#: includes/mstba-items-site-group.php:222
+#: includes/mstba-items-site-group.php:225
+msgid "Pingdom Speed Test"
+msgstr "Pingdom Ladezeit-Test"
+
+#: includes/mstba-items-site-group.php:231
+#: includes/mstba-items-site-group.php:234
+msgid "Google Page Speed"
+msgstr "Google Webseiten-Ladezeit"
+
+#: includes/mstba-items-site-plugins.php:33
+msgctxt "Translators: Site plugins"
+msgid "Plugins"
+msgstr "Plugins"
+
+#: includes/mstba-items-site-plugins.php:37
+msgctxt "Translators: For the tooltip"
+msgid "Plugins"
+msgstr "Plugins für diese Webseite"
+
+#: includes/mstba-items-site-plugins.php:45
+msgid "Updateable"
+msgstr "Aktualisierbar"
+
+#: includes/mstba-items-site-plugins.php:49
+msgctxt "Translators: For the tooltip"
+msgid "Updateable Only"
+msgstr "Nur aktualisierbare Plugins anzeigen"
+
+#: includes/mstba-items-site-plugins.php:57
+msgid "Active"
+msgstr "Aktivierte"
+
+#: includes/mstba-items-site-plugins.php:61
+msgctxt "Translators: For the tooltip"
+msgid "Active Only"
+msgstr "Nur aktivierte Plugins anzeigen"
+
+#: includes/mstba-items-site-plugins.php:67
+msgid "Recently Activated"
+msgstr "Kürzlich aktivierte"
+
+#: includes/mstba-items-site-plugins.php:71
+msgctxt "Translators: For the tooltip"
+msgid "Recently Activated Only"
+msgstr "Nur kürzlich aktivierte Plugins anzeigen (1 Woche)"
+
+#: includes/mstba-items-site-plugins.php:77
+msgid "Inactive"
+msgstr "Deaktivierte"
+
+#: includes/mstba-items-site-plugins.php:81
+msgctxt "Translators: For the tooltip"
+msgid "Inactive Only"
+msgstr "Nur deaktivierte Plugins anzeigen"
+
+#: includes/mstba-items-site-plugins.php:87
+msgid "All Installed"
+msgstr "Alle Installierten"
+
+#: includes/mstba-items-site-plugins.php:91
+msgctxt "Translators: For the tooltip"
+msgid "All Installed - Active and Inactive"
+msgstr "Alle installierten Plugins - aktivierte und deaktivierte"
+
+#: includes/mstba-items-site-plugins.php:102
+msgid "Must Use (MU)"
+msgstr "Must Use (MU)"
+
+#: includes/mstba-items-site-plugins.php:106
+msgctxt "Translators: For the tooltip"
+msgid "Must Use - MU Plugins"
+msgstr "MU Plugins - Must Use"
+
+#: includes/mstba-items-site-plugins.php:116
+msgid "Drop-ins"
+msgstr "Drop-ins"
+
+#: includes/mstba-items-site-plugins.php:120
+msgctxt "Translators: For the tooltip"
+msgid "Drop-ins - Special Plugins"
+msgstr "Drop-ins - Spezial-Plugins/ Dateien"
+
+#: includes/mstba-items-widgets.php:37 includes/mstba-items-widgets.php:41
+msgid "Widgets Customizer"
+msgstr "Widgets-Customizer"
+
+#: includes/mstba-items-widgets.php:57 includes/mstba-items-widgets.php:61
+msgid "Genesis Simple Sidebars"
+msgstr "Genesis Einfache Sidebars"
+
+#: includes/mstba-items-widgets.php:77 includes/mstba-items-widgets.php:81
+msgid "Go Sidebar Wizard"
+msgstr "Go Sidebar-Assistent"
+
+#: includes/mstba-items-widgets.php:87 includes/mstba-items-widgets.php:91
+msgid "Custom Sidebars"
+msgstr "Eigene Sidebars"
+
+#: includes/mstba-items-widgets.php:120 includes/mstba-items-widgets.php:124
+msgid "Widget Settings Export"
+msgstr "Widget-Einstellungen exportieren"
+
+#: includes/mstba-items-widgets.php:130 includes/mstba-items-widgets.php:134
+msgid "Widget Settings Import"
+msgstr "Widget-Einstellungen importieren"
+
+#: includes/mstba-items-widgets.php:150 includes/mstba-items-widgets.php:154
+msgid "Restrict Widgets"
+msgstr "Widgets beschränken"
+
+#: includes/mstba-network-admin-additions.php:44
+#: includes/mstba-network-admin-additions.php:45
+msgid "Add New"
+msgstr "Installieren"
+
+#: includes/mstba-network-new-content.php:113
+msgctxt "Translators: Network admin bar menu group label"
+msgid "New"
+msgstr "Neu"
+
+#: includes/mstba-network-new-content.php:114
+msgctxt ""
+"Translators: Additional mark for Multisite to differentiate from regular "
+"sites"
+msgid "MS"
+msgstr "MS"
+
+#: includes/mstba-network-new-content.php:125
+msgctxt "Translators: Network admin bar menu group label"
+msgid "Add New - within Network"
+msgstr "Hinzufügen - Netzwerk-spezifisch"
+
+#: includes/mstba-network-new-content.php:133
+msgid "Website"
+msgstr "Webseite"
+
+#: includes/mstba-network-new-content.php:137
+msgctxt "Translators: add new site/ blog"
+msgid "Website or Blog"
+msgstr "Webseite bzw. Blog"
+
+#: includes/mstba-network-new-content.php:144
+msgid "User (Network)"
+msgstr "Benutzer (Netzwerk)"
+
+#: includes/mstba-network-new-content.php:148
+msgctxt "Translators: add new user via network admin"
+msgid "User in Network"
+msgstr "Benutzer im Netzwerk"
+
+#: includes/mstba-plugins.php:31
+msgctxt "Translators: For sitewide code snippets"
+msgid "Site"
+msgstr "Website:"
+
+#: includes/mstba-plugins.php:319
+msgid "Maintenance Mode"
+msgstr "Wartungsmodus"
+
+#: includes/mstba-plugins.php:321
+msgctxt "Translators: For the tooltip"
+msgid "Multisite Maintenance Mode"
+msgstr "Multisite Wartungsmodus"
+
+#: includes/mstba-plugins.php:336
+msgid "Organizational Messages"
+msgstr "Organisatorische Mitteilungen"
+
+#: includes/mstba-plugins.php:338
+msgctxt "Translators: For the tooltip"
+msgid "Organizational Message Notifier for Users/ Admins"
+msgstr "Organisatorische Mitteilungen für Benutzer/ Administratoren"
+
+#: includes/mstba-plugins.php:343 includes/mstba-plugins.php:345
+msgid "Create Messages"
+msgstr "Nachrichten erstellen"
+
+#: includes/mstba-plugins.php:350 includes/mstba-plugins.php:352
+msgid "User Messages"
+msgstr "Benutzer-Mitteilungen"
+
+#: includes/mstba-plugins.php:368 includes/mstba-plugins.php:785
+msgid "Login Security Solution"
+msgstr "Anmelde-Sicherheit"
+
+#: includes/mstba-plugins.php:370 includes/mstba-plugins.php:787
+msgctxt "Translators: For the tooltip"
+msgid "Login Security Solution"
+msgstr "Anmelde-Sicherheit"
+
+#: includes/mstba-plugins.php:411
+msgid "Blog Copier"
+msgstr "Webseite duplizieren"
+
+#: includes/mstba-plugins.php:413 includes/mstba-plugins.php:423
+msgctxt "Translators: For the tooltip"
+msgid "Blog Copier - Clone Website (Sub Site)"
+msgstr "Webseite/ Blog duplizieren - Webseite (Sub-Seite) klonen"
+
+#: includes/mstba-plugins.php:421 includes/mstba-plugins.php:450
+#: includes/mstba-plugins.php:479
+msgid "Clone Site"
+msgstr "Webseite duplizieren"
+
+#: includes/mstba-plugins.php:440
+msgid "NS Cloner"
+msgstr "NS Cloner"
+
+#: includes/mstba-plugins.php:442 includes/mstba-plugins.php:452
+msgctxt "Translators: For the tooltip"
+msgid "NS Cloner - Clone Website (Sub Site)"
+msgstr "NS Cloner - Webseite (Sub-Seite) klonen"
+
+#: includes/mstba-plugins.php:469
+msgid "NS Cloner Pro"
+msgstr "NS Cloner Pro"
+
+#: includes/mstba-plugins.php:471 includes/mstba-plugins.php:481
+msgctxt "Translators: For the tooltip"
+msgid "NS Cloner Pro - Clone Website (Sub Sites)"
+msgstr "NS Cloner Pro - Webseite (Sub-Seite) klonen"
+
+#: includes/mstba-plugins.php:529 includes/mstba-plugins.php:531
+msgid "Manage Repositories"
+msgstr "Repositorien verwalten"
+
+#: includes/mstba-plugins.php:536 includes/mstba-plugins.php:538
+msgid "Add new Repository"
+msgstr "Neues Repositorium hinzufügen"
+
+#: includes/mstba-plugins.php:560 includes/mstba-plugins.php:562
+#: includes/plugin-support/mstba-plugins-codesnippets.php:51
+#: includes/plugin-support/mstba-plugins-codesnippets.php:55
+#: includes/plugin-support/mstba-plugins-codesnippets.php:106
+#: includes/plugin-support/mstba-plugins-codesnippets.php:110
+msgid "Add new Snippet"
+msgstr "Neuer Codeschnipsel"
+
+#: includes/mstba-plugins.php:570 includes/mstba-plugins.php:572
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:84
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:88
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:227
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:231
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:114
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:118
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:232
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:236
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:187
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:191
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:400
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:404
+msgid "Import/ Export"
+msgstr "Import/ Export"
+
+#: includes/mstba-plugins.php:589 includes/mstba-plugins.php:591
+msgid "Toolbox Modules"
+msgstr "Toolbox-Module"
+
+#: includes/mstba-plugins.php:606 includes/mstba-plugins.php:608
+msgid "Relevanssi Premium"
+msgstr "Relevanssi Premium"
+
+#: includes/mstba-plugins.php:606 includes/mstba-plugins.php:608
+msgid "Relevanssi"
+msgstr "Relevanssi"
+
+#: includes/mstba-plugins.php:616 includes/mstba-plugins.php:618
+msgid "User Searches"
+msgstr "Benutzer-Suchanfragen"
+
+#: includes/mstba-plugins.php:635 includes/mstba-plugins.php:637
+msgid "Multisite Language Switcher"
+msgstr "Multisite Sprachwähler"
+
+#: includes/mstba-plugins.php:652 includes/mstba-plugins.php:654
+msgid "Howdy Tweaks"
+msgstr "Willkommens-Einstellungen"
+
+#: includes/mstba-plugins.php:669 includes/mstba-plugins.php:671
+msgid "White Label CMS"
+msgstr "White-Label-CMS"
+
+#: includes/mstba-plugins.php:686 includes/mstba-plugins.php:688
+msgid "Cachify Settings"
+msgstr "Cachify Einstellungen"
+
+#: includes/mstba-plugins.php:703 includes/mstba-plugins.php:705
+msgid "Hyper Cache"
+msgstr "Hyper Cache"
+
+#: includes/mstba-plugins.php:720 includes/mstba-plugins.php:722
+msgid "Hyper Cache Extended"
+msgstr "Hyper Cache Extended"
+
+#: includes/mstba-plugins.php:737
+msgid "Manage Translations"
+msgstr "Übersetzungen verwalten"
+
+#: includes/mstba-plugins.php:739
+msgctxt "Translators: For the tooltip"
+msgid "Codestyling Localization - Manage Translations"
+msgstr ""
+"Codestyling Localization - Übersetzungen für Plugins, Themes bzw. die "
+"WordPress-Basis verwalten"
+
+#: includes/mstba-plugins.php:767 includes/mstba-plugins.php:769
+msgid "Limit Login Attempts"
+msgstr "Limit Login-Versuche"
+
+#: includes/mstba-plugins.php:817 includes/mstba-plugins.php:821
+msgid "Snitch Network Monitor"
+msgstr "Snitch Netzwerkmonitor"
+
+#: includes/mstba-plugins.php:853 includes/mstba-plugins.php:855
+msgid "Migrate Database"
+msgstr "Datenbankmigration"
+
+#: includes/mstba-plugins.php:872
+msgid "WP-Optimize (DB)"
+msgstr "WP-Optimize (DB)"
+
+#: includes/mstba-plugins.php:874
+msgctxt "Translators: For the tooltip"
+msgid "Database Optimize via WP-Optimize"
+msgstr "Datenbankoptimierung via WP-Optimize"
+
+#: includes/mstba-plugins.php:879 includes/mstba-plugins.php:881
+#: includes/mstba-plugins.php:910 includes/mstba-plugins.php:912
+#: includes/plugin-support/mstba-plugins-backwpup.php:98
+#: includes/plugin-support/mstba-plugins-backwpup.php:102
+#: includes/plugin-support/mstba-plugins-backwpup.php:173
+#: includes/plugin-support/mstba-plugins-backwpup.php:177
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:78
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:82
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:161
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:165
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:66
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:70
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:66
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:70
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:104
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:108
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:222
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:226
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:149
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:153
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:362
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:366
+#: includes/plugin-support/mstba-plugins-snapshot.php:151
+#: includes/plugin-support/mstba-plugins-snapshot.php:155
+#: includes/plugin-support/mstba-plugins-stream.php:53
+#: includes/plugin-support/mstba-plugins-stream.php:57
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:49
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:54
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:107
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:112
+#: includes/plugin-support/mstba-plugins-wpmudomainmapping.php:43
+#: includes/plugin-support/mstba-plugins-wpmudomainmapping.php:47
+#: includes/plugin-support/mstba-plugins-wppiwik.php:59
+#: includes/plugin-support/mstba-plugins-wppiwik.php:63
+#: includes/plugin-support/mstba-plugins-wppiwik.php:122
+#: includes/plugin-support/mstba-plugins-wppiwik.php:126
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:55
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:59
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:139
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:143
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/mstba-plugins.php:886 includes/mstba-plugins.php:888
+msgid "Info &amp; Credits"
+msgstr "Info &amp; Credits"
+
+#: includes/mstba-plugins.php:903 includes/mstba-plugins.php:905
+msgid "Optimize Database"
+msgstr "Datenbank optimieren"
+
+#: includes/mstba-plugins.php:936
+msgid "Entire Network"
+msgstr "Gesamtes Netzwerk"
+
+#: includes/mstba-plugins.php:938
+msgctxt "Translators: for the tooltip"
+msgid "Entire Network - User Bulk Actions"
+msgstr "Gesamtes Netzwerk - Benutzer-Stapelverarbeitung"
+
+#: includes/mstba-plugins.php:959 includes/mstba-plugins.php:961
+msgid "Network Mass Email"
+msgstr "Netzwerk E-Mail-Versand"
+
+#: includes/mstba-plugins.php:978 includes/mstba-plugins.php:980
+msgid "Tabify Edit Screens"
+msgstr "Tabs für Bearbeiten-Ansichten"
+
+#: includes/plugin-support/mstba-plugins-backwpup.php:38
+#: includes/plugin-support/mstba-plugins-backwpup.php:42
+#: includes/plugin-support/mstba-plugins-backwpup.php:113
+#: includes/plugin-support/mstba-plugins-backwpup.php:117
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:38
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:42
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:121
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:125
+msgid "BackWPup Jobs"
+msgstr "BackWPup Aufträge"
+
+#: includes/plugin-support/mstba-plugins-backwpup.php:48
+#: includes/plugin-support/mstba-plugins-backwpup.php:52
+#: includes/plugin-support/mstba-plugins-backwpup.php:123
+#: includes/plugin-support/mstba-plugins-backwpup.php:127
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:48
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:52
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:131
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:135
+msgid "Add new Job"
+msgstr "Neuer Auftrag"
+
+#: includes/plugin-support/mstba-plugins-backwpup.php:58
+#: includes/plugin-support/mstba-plugins-backwpup.php:62
+#: includes/plugin-support/mstba-plugins-backwpup.php:133
+#: includes/plugin-support/mstba-plugins-backwpup.php:137
+msgid "Job Working..."
+msgstr "In Bearbeitung..."
+
+#: includes/plugin-support/mstba-plugins-backwpup.php:68
+#: includes/plugin-support/mstba-plugins-backwpup.php:72
+#: includes/plugin-support/mstba-plugins-backwpup.php:143
+#: includes/plugin-support/mstba-plugins-backwpup.php:147
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:58
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:62
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:141
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:145
+msgid "Log Files"
+msgstr "Protokolldateien"
+
+#: includes/plugin-support/mstba-plugins-backwpup.php:78
+#: includes/plugin-support/mstba-plugins-backwpup.php:82
+#: includes/plugin-support/mstba-plugins-backwpup.php:153
+#: includes/plugin-support/mstba-plugins-backwpup.php:157
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:68
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:72
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:151
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:155
+msgid "Backups Archive"
+msgstr "Datensicherungen"
+
+#: includes/plugin-support/mstba-plugins-backwpup.php:88
+#: includes/plugin-support/mstba-plugins-backwpup.php:92
+#: includes/plugin-support/mstba-plugins-backwpup.php:163
+#: includes/plugin-support/mstba-plugins-backwpup.php:167
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:64
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:68
+msgid "Tools"
+msgstr "Werkzeuge"
+
+#: includes/plugin-support/mstba-plugins-backwpup.php:192
+#: includes/plugin-support/mstba-plugins-backwpup.php:196
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:208
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:212
+msgid "BackWPup Job"
+msgstr "BackWPup Auftrag"
+
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:89
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:97
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:172
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:180
+msgctxt "Translators: BackWPup v3.x plugin"
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:106
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:189
+msgid "About/ Info"
+msgstr "Über/ Informationen"
+
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:110
+#: includes/plugin-support/mstba-plugins-backwpup3x.php:193
+msgid "About &amp; Backup Info"
+msgstr "Über das Plugin &amp; Infos zu Datensicherungen"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:52
+msgid "Better WP Security"
+msgstr "Bessere WP-Sicherheit"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:57
+msgctxt "Translators: For the tooltip"
+msgid "Better WP Security - Dashboard"
+msgstr "Bessere WordPress-Sicherheit - Übersicht"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:66
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:70
+msgid "Admin User"
+msgstr "Admin-Benutzer"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:76
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:80
+msgid "Away Mode"
+msgstr "Abwesenheitsmodus"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:86
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:90
+msgid "Ban Users"
+msgstr "Benutzer sperren"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:96
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:100
+msgid "Content Directory"
+msgstr "Inhaltsverzeichnis"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:106
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:110
+msgid "Database Backup"
+msgstr "Datenbanksicherung"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:116
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:120
+msgid "Database Prefix"
+msgstr "Datenbank-Präfix"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:126
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:130
+msgid "Hide Backend"
+msgstr "Adminbereich verbergen"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:136
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:140
+msgid "Intrusion Detection"
+msgstr "Intrusion-Entdeckung"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:146
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:150
+msgid "Login Limits"
+msgstr "Login-Limits"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:156
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:160
+msgid "SSL/ HTTPS"
+msgstr "SSL/ HTTPS"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:166
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:170
+msgid "System Tweaks"
+msgstr "Systemoptimierungen"
+
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:176
+#: includes/plugin-support/mstba-plugins-betterwpsecurity.php:180
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:94
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:98
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:212
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:216
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:119
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:123
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:332
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:336
+msgid "View Logs"
+msgstr "Protokolle ansehen"
+
+#: includes/plugin-support/mstba-plugins-codesnippets.php:38
+#: includes/plugin-support/mstba-plugins-codesnippets.php:42
+msgid "Network Code Snippets"
+msgstr "Netzwerk Codeschnipsel"
+
+#: includes/plugin-support/mstba-plugins-codesnippets.php:61
+#: includes/plugin-support/mstba-plugins-codesnippets.php:65
+#: includes/plugin-support/mstba-plugins-codesnippets.php:116
+#: includes/plugin-support/mstba-plugins-codesnippets.php:120
+msgid "Import"
+msgstr "Import"
+
+#: includes/plugin-support/mstba-plugins-codesnippets.php:74
+#: includes/plugin-support/mstba-plugins-codesnippets.php:129
+msgid "Code Snippet"
+msgstr "Codeschnipsel"
+
+#: includes/plugin-support/mstba-plugins-codesnippets.php:78
+#: includes/plugin-support/mstba-plugins-codesnippets.php:133
+msgid "Add new Code Snippet"
+msgstr "Neuen Codeschnipsel hinzufügen"
+
+#: includes/plugin-support/mstba-plugins-hidemywp.php:41
+#: includes/plugin-support/mstba-plugins-hidemywp.php:79
+msgid "Hide My WP"
+msgstr "Hide My WP"
+
+#: includes/plugin-support/mstba-plugins-hidemywp.php:46
+#: includes/plugin-support/mstba-plugins-hidemywp.php:84
+msgctxt "Translators: For the tooltip"
+msgid "Hide My WP - Security & Branding Settings"
+msgstr "Hide My WP - Sicherheits- und Branding-Einstellungen"
+
+#: includes/plugin-support/mstba-plugins-hidemywp.php:54
+#: includes/plugin-support/mstba-plugins-hidemywp.php:58
+#: includes/plugin-support/mstba-plugins-hidemywp.php:93
+#: includes/plugin-support/mstba-plugins-hidemywp.php:97
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: includes/plugin-support/mstba-plugins-hidemywp.php:64
+#: includes/plugin-support/mstba-plugins-hidemywp.php:68
+#: includes/plugin-support/mstba-plugins-hidemywp.php:103
+#: includes/plugin-support/mstba-plugins-hidemywp.php:107
+msgid "Permalinks & URLs"
+msgstr "Permalinks &amp; URLs"
+
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:52
+msgid "iThemes Security"
+msgstr "iThemes Security"
+
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:57
+msgctxt "Translators: For the tooltip"
+msgid "iThemes Security - Dashboard"
+msgstr "iThemes Security - Übersicht"
+
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:76
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:80
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:76
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:80
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:86
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:86
+msgid "Backups"
+msgstr "Datensicherungen"
+
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:91
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:91
+msgctxt "Translators: for the tooltip"
+msgid "Simple Basic Backups"
+msgstr "Einfache Basis-Datensicherungen"
+
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:100
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:104
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:100
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:104
+msgid "Logs"
+msgstr "Protokolle"
+
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:110
+#: includes/plugin-support/mstba-plugins-ithemessecurity.php:114
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:110
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:114
+msgid "Help"
+msgstr "Hilfe"
+
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:52
+msgid "iThemes Security Pro"
+msgstr "iThemes Security Pro"
+
+#: includes/plugin-support/mstba-plugins-ithemessecuritypro.php:57
+msgctxt "Translators: For the tooltip"
+msgid "iThemes Security Pro - Dashboard"
+msgstr "iThemes Security Pro - Übersicht"
+
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:56
+msgid "Multisite Robots.txt Manager"
+msgstr "Multisite Robots.txt Manager"
+
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:61
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:100
+msgctxt "Translators: For the tooltip"
+msgid "Multisite Robots.txt Manager"
+msgstr "Multisite Robots.txt Manager"
+
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:70
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:74
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:109
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:113
+msgid "Presets/ Examples"
+msgstr "Vorgaben/ Beispiele"
+
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:80
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:84
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:119
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:123
+msgid "Help/ How to Use"
+msgstr "Hilfe/ Verwendung"
+
+#: includes/plugin-support/mstba-plugins-msrobotstxt.php:95
+msgid "Site Robots.txt Manager"
+msgstr "Webseite Robots.txt verwalten"
+
+#: includes/plugin-support/mstba-plugins-p3profiler.php:33
+msgid "P3 Plugin Profiler"
+msgstr "P3 Plugin-Profiler"
+
+#: includes/plugin-support/mstba-plugins-p3profiler.php:38
+msgctxt "Translators: For the tooltip"
+msgid "P3 Plugin Performance Profiler"
+msgstr "P3 Plugin-Performance-Profiler"
+
+#: includes/plugin-support/mstba-plugins-p3profiler.php:47
+#: includes/plugin-support/mstba-plugins-p3profiler.php:51
+msgid "Current Scan"
+msgstr "Aktueller Scan"
+
+#: includes/plugin-support/mstba-plugins-p3profiler.php:57
+#: includes/plugin-support/mstba-plugins-p3profiler.php:61
+msgid "History"
+msgstr "Historie/ Verlauf"
+
+#: includes/plugin-support/mstba-plugins-p3profiler.php:67
+#: includes/plugin-support/mstba-plugins-p3profiler.php:71
+msgid "Help/ FAQ"
+msgstr "Hilfe/ Häufige Fragen"
+
+#: includes/plugin-support/mstba-plugins-p3profiler.php:77
+#: includes/plugin-support/mstba-plugins-p3profiler.php:80
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:104
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:107
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:182
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:185
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:104
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:107
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:247
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:250
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:134
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:137
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:252
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:255
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:74
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:77
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:122
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:125
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:84
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:87
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:142
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:145
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:74
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:77
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:122
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:125
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:217
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:220
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:432
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:435
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:88
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:91
+#: includes/plugin-support/mstba-plugins-stream.php:102
+#: includes/plugin-support/mstba-plugins-stream.php:105
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:91
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:94
+msgid "Support Forum"
+msgstr "Support-Forum"
+
+#: includes/plugin-support/mstba-plugins-quickcache-pro.php:38
+#: includes/plugin-support/mstba-plugins-quickcache-pro.php:42
+#: includes/plugin-support/mstba-plugins-quickcache-pro.php:63
+#: includes/plugin-support/mstba-plugins-quickcache-pro.php:67
+#: includes/plugin-support/mstba-plugins-quickcache.php:42
+#: includes/plugin-support/mstba-plugins-quickcache.php:46
+#: includes/plugin-support/mstba-plugins-quickcache.php:67
+#: includes/plugin-support/mstba-plugins-quickcache.php:71
+msgid "Quick Cache Options"
+msgstr "Quick Cache Optionen"
+
+#: includes/plugin-support/mstba-plugins-quickcache-pro.php:48
+#: includes/plugin-support/mstba-plugins-quickcache-pro.php:52
+#: includes/plugin-support/mstba-plugins-quickcache-pro.php:73
+#: includes/plugin-support/mstba-plugins-quickcache-pro.php:77
+msgid "Plugin Updater"
+msgstr "Plugin-Updater"
+
+#: includes/plugin-support/mstba-plugins-quickcache.php:52
+#: includes/plugin-support/mstba-plugins-quickcache.php:56
+#: includes/plugin-support/mstba-plugins-quickcache.php:77
+#: includes/plugin-support/mstba-plugins-quickcache.php:81
+msgid "Plugin Info"
+msgstr "Plugin-Infos"
+
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:40
+msgid "Network System Info"
+msgstr "Netzwerk-Systeminfos"
+
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:45
+msgctxt "Translators: For the tooltip"
+msgid "Network System Info - Overview"
+msgstr "Netzwerk-Systeminfos - Übersicht"
+
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:54
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:132
+msgid "WordPress"
+msgstr "WordPress"
+
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:58
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:136
+msgid "WordPress Install Info"
+msgstr "Info zur WordPress-Installation"
+
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:64
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:68
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:142
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:146
+msgid "Database"
+msgstr "Datenbank-Info"
+
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:74
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:78
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:152
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:156
+msgid "PHP Info"
+msgstr "PHP-Info"
+
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:84
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:88
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:162
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:166
+msgid "MySQL Info"
+msgstr "MySQL-Info"
+
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:94
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:98
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:172
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:176
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:94
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:98
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:237
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:241
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:124
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:128
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:242
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:246
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:64
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:68
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:112
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:116
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:74
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:78
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:132
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:136
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:64
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:68
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:112
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:116
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:207
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:211
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:422
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:426
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:78
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:82
+msgid "About"
+msgstr "Über das Plugin"
+
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:118
+msgid "Site System Info"
+msgstr "Webseite-Systeminfos"
+
+#: includes/plugin-support/mstba-plugins-simplesysteminfo.php:123
+msgctxt "Translators: For the tooltip"
+msgid "Site System Info - Overview"
+msgstr "Webseite-Systeminfos - Übersicht"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:40
+msgid "Smart Network Tweaks"
+msgstr "Smarte Netzwerkoptimierung"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:45
+msgctxt "Translators: For the tooltip"
+msgid "Smart Network Admin Tweaks"
+msgstr "Smarte Optimierungen für Netzwerk-Adminbereich"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:54
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:58
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:135
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:139
+msgid "Updates Control"
+msgstr "Aktualisierungen kontrollieren"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:64
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:68
+msgid "Global Settings"
+msgstr "Globale Einstellungen"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:74
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:78
+msgid "Network Admin"
+msgstr "Netzwerk-Admin"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:118
+msgid "Smart Admin Tweaks"
+msgstr "Smarte Adminoptimierungen"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:123
+msgctxt "Translators: For the tooltip"
+msgid "Smart Site Admin Tweaks"
+msgstr "Smarte Optimierungen für den Webseiten-Adminbereich"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:145
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:149
+msgid "Global Tweaks"
+msgstr "Globale Optimierungen"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:157
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:161
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:89
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:93
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:300
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:304
+msgid "General Tweaks"
+msgstr "Allgemeine Tweaks"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:177
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:181
+msgid "Site Admin"
+msgstr "Website-Admin"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:187
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:191
+msgid "Rewriter"
+msgstr "Rewriter"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:197
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:201
+msgid "Media"
+msgstr "Mediathek"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:207
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:211
+msgid "Posts"
+msgstr "Beiträge/ Seiten"
+
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:217
+#: includes/plugin-support/mstba-plugins-smartadmintweaks.php:221
+msgid "Header"
+msgstr "Kopfzeile (Header)"
+
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:40
+msgid "Smart Network Cleanup"
+msgstr "Smartes Netzwerk-Aufräumen"
+
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:45
+msgctxt "Translators: For the tooltip"
+msgid "Smart Network Cleanup Tools"
+msgstr "Smarte Netzwerk-Aufräumwerkzeuge"
+
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:54
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:58
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:162
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:166
+msgid "Cleanup Tools"
+msgstr "Säuberungs-Werkzeuge"
+
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:64
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:68
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:172
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:176
+msgid "Reset Tools"
+msgstr "Zurücksetzen-Werkzeuge"
+
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:74
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:78
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:192
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:196
+msgid "Scheduler"
+msgstr "Zeitplanung"
+
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:84
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:88
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:202
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:206
+msgid "Statistics"
+msgstr "Statistiken"
+
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:148
+msgid "Smart Site Cleanup"
+msgstr "Smartes Webseite-Aufräumen"
+
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:153
+msgctxt "Translators: For the tooltip"
+msgid "Smart Site Cleanup Tools"
+msgstr "Smarte Webseite-Aufräumwerkzeuge"
+
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:182
+#: includes/plugin-support/mstba-plugins-smartcleanuptools.php:186
+msgid "Removal Tools"
+msgstr "Entfernungs-Werkzeuge"
+
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:40
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:88
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:40
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:88
+msgid "Smart CRON Tools"
+msgstr "Smarte Cron-Werkzeuge"
+
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:45
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:93
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:45
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:93
+msgctxt "Translators: For the tooltip"
+msgid "Smart CRON Tools - List of Jobs"
+msgstr "Smarte Cron-Werkzeuge - Liste der Aufträge"
+
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:54
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:58
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:102
+#: includes/plugin-support/mstba-plugins-smartcrontools.php:106
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:54
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:58
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:102
+#: includes/plugin-support/mstba-plugins-smartrobotstxttools.php:106
+msgid "Schedules"
+msgstr "Zeitplanung"
+
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:40
+msgid "Smart Network Options Optimizer"
+msgstr "Netzwerkoptionen optimieren"
+
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:45
+msgctxt "Translators: For the tooltip"
+msgid "Smart Network Options Optimizer - Tracer"
+msgstr "Smarter Netzwerk-Optionen-Optimierer - Tracer (Aufspürwerkzeug)"
+
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:54
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:58
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:112
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:116
+msgid "Analyze"
+msgstr "Analysieren"
+
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:98
+msgid "Smart Site Options Optimizer"
+msgstr "Webseiteoptionen optimieren"
+
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:103
+msgctxt "Translators: For the tooltip"
+msgid "Smarte Site Options Optimizer - Tracer"
+msgstr "Smarter Webseiten-Optionen-Optimierer - Tracer (Aufspürwerkzeug)"
+
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:122
+#: includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php:126
+msgid "Auto Load"
+msgstr "Auto Load"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:40
+msgid "Smart Network Security"
+msgstr "Smarte Netzwerk-Sicherheit"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:45
+msgctxt "Translators: For the tooltip"
+msgid "Smart Network Security Tools"
+msgstr "Smarte Netzwerk-Sicherheit - Werkzeuge"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:57
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:61
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:161
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:165
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:248
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:252
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:374
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:378
+msgid "Live Monitor"
+msgstr "Live-Monitor"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:69
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:73
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:262
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:266
+msgid "Sucuri Scanner"
+msgstr "Sucuri-Scanner"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:79
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:83
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:290
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:294
+msgid "Security Advisor"
+msgstr "Sicherheitsempfehlungen"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:99
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:103
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:310
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:314
+msgid ".htaccess Tweaks"
+msgstr ".htacces Optimierungen"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:109
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:113
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:320
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:324
+msgid "Various Tools"
+msgstr "Verschiedene Werkzeuge"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:129
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:133
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:342
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:346
+msgid "Log Analyzing"
+msgstr "Protokolle analysieren"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:139
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:143
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:352
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:356
+msgid "Banned IPs"
+msgstr "Gesperrte IPs"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:175
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:179
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:387
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:391
+msgid "Login Limit"
+msgstr "Login-Limits"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:197
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:201
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:410
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:414
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:60
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:65
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:118
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:123
+msgid "Add-Ons"
+msgstr "Zusatzmodule"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:232
+msgid "Smart Site Security"
+msgstr "Smarte Webseite-Sicherheit"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:237
+msgctxt "Translators: For the tooltip"
+msgid "Smart Site Security Tools"
+msgstr "Smarte Webseite-Sicherheit - Werkzeuge"
+
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:276
+#: includes/plugin-support/mstba-plugins-smartsecuritytools.php:280
+msgid "VirusTotal Scanner"
+msgstr "VirusTotal-Scanner"
+
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:34
+msgid "Smart Tabber Widget"
+msgstr "Smartes Tab-Widget"
+
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:39
+msgctxt "Translators: For the tooltip"
+msgid "Smart Tabber Widget - Settings"
+msgstr "Smartes Tab-Widget - Einstellungen"
+
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:48
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:52
+msgid "Style Builder"
+msgstr "Stile bearbeiten"
+
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:58
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:62
+msgid "Create new Style"
+msgstr "Neuen Stil erstellen"
+
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:68
+#: includes/plugin-support/mstba-plugins-smarttabberwidget.php:72
+msgid "Export/ Import"
+msgstr "Export/ Import"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:57
+msgid "All Snapshots"
+msgstr "Alle Datensicherungen"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:61
+msgctxt "Translators: For the tooltip"
+msgid "All Snapshots"
+msgstr "Alle Datensicherungen (Snapshots)"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:68
+msgid "Add new"
+msgstr "Neue Datensicherung"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:72
+msgctxt "Translators: For the tooltip"
+msgid "Add new Snapshot for Backup"
+msgstr "Neuen Schnappschuss zur Datensicherung hinzufügen"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:79
+msgid "Destinations"
+msgstr "Ziele"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:83
+msgctxt "Translators: For the tooltip"
+msgid "Backup Destinations"
+msgstr "Ziele für die Datensicherung"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:89
+#: includes/plugin-support/mstba-plugins-snapshot.php:93
+msgid "Amazon S3"
+msgstr "Amazon S3"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:99
+#: includes/plugin-support/mstba-plugins-snapshot.php:103
+msgid "Dropbox"
+msgstr "Dropbox"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:109
+#: includes/plugin-support/mstba-plugins-snapshot.php:113
+msgid "FTP/sFTP"
+msgstr "FTP/sFTP"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:119
+#: includes/plugin-support/mstba-plugins-snapshot.php:123
+msgid "Google Drive"
+msgstr "Google Drive"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:129
+#: includes/plugin-support/mstba-plugins-snapshot.php:133
+msgid "GreenQloud Storage"
+msgstr "GreenQloud Speicher"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:140
+#: includes/plugin-support/mstba-plugins-snapshot.php:144
+msgid "Snapshots Scan/ Import"
+msgstr "Snapshots Scannen/ Import"
+
+#: includes/plugin-support/mstba-plugins-snapshot.php:170
+#: includes/plugin-support/mstba-plugins-snapshot.php:174
+msgid "New Snapshot"
+msgstr "Neue Datensicherung"
+
+#: includes/plugin-support/mstba-plugins-stream.php:33
+msgid "Activity Streams"
+msgstr "Aktivitätenaufzeichnungen"
+
+#: includes/plugin-support/mstba-plugins-stream.php:37
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:37
+msgctxt "Translators: For the tooltip"
+msgid "Site Streams - Logged Activity"
+msgstr "Webseiten-Streams - Protokollierte Aktivitäten"
+
+#: includes/plugin-support/mstba-plugins-stream.php:43
+#: includes/plugin-support/mstba-plugins-stream.php:47
+msgid "View Streams"
+msgstr "Streams ansehen"
+
+#: includes/plugin-support/mstba-plugins-stream.php:63
+#: includes/plugin-support/mstba-plugins-stream.php:67
+msgid "Exclude Options"
+msgstr "Ausschließen-Optionen"
+
+#: includes/plugin-support/mstba-plugins-stream.php:73
+#: includes/plugin-support/mstba-plugins-stream.php:77
+msgid "Extensions"
+msgstr "Erweiterungen"
+
+#: includes/plugin-support/mstba-plugins-stream.php:83
+#: includes/plugin-support/mstba-plugins-stream.php:87
+msgid "Premium Membership &amp; Support"
+msgstr "Premium-Mitgliedschaft &amp; Support"
+
+#: includes/plugin-support/mstba-plugins-stream.php:93
+#: includes/plugin-support/mstba-plugins-stream.php:96
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:82
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:85
+msgid "Development"
+msgstr "Entwicklung"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:49
+msgid "Ultimate Branding"
+msgstr "Ultimate Branding"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:53
+msgctxt "Translators: For the tooltip"
+msgid "Ultimate Branding Dashboard"
+msgstr "Ultimate Branding Verwaltung"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:62
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:66
+msgid "Images"
+msgstr "Bilder"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:77
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:81
+msgid "From Email"
+msgstr "E-Mail-Absender"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:92
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:96
+msgid "Admin Bar"
+msgstr "Adminbar"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:122
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:126
+msgid "Help Content"
+msgstr "Hilfe-Inhalte"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:137
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:141
+msgid "Footer Content"
+msgstr "Fußzeilen-Inhalt"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:152
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:156
+msgid "Header Content"
+msgstr "Kopfzeilen-Inhalt"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:167
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:171
+msgid "Site Generator"
+msgstr "Webseite-Generator"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:182
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:186
+msgid "Permalinks Menu"
+msgstr "Permalinks-Menü"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:197
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:201
+msgid "Text Change"
+msgstr "Textänderungen"
+
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:212
+#: includes/plugin-support/mstba-plugins-ultimatebranding.php:216
+msgid "CSS"
+msgstr "CSS"
+
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:38
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:43
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:96
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:101
+msgid "Migrate Database Pro"
+msgstr "Datenbankmigration Pro"
+
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:71
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:76
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:129
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:134
+msgid "Help (Inline)"
+msgstr "Hilfe (Admin)"
+
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:82
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:85
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:140
+#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:143
+#: includes/plugin-support/mstba-plugins-wpmudomainmapping.php:53
+#: includes/plugin-support/mstba-plugins-wpmudomainmapping.php:57
+#: includes/plugin-support/mstba-plugins-wppiwik.php:92
+#: includes/plugin-support/mstba-plugins-wppiwik.php:96
+#: includes/plugin-support/mstba-plugins-wppiwik.php:155
+#: includes/plugin-support/mstba-plugins-wppiwik.php:159
+msgctxt "Translators: Toolbar item"
+msgid "Support"
+msgstr "Support"
+
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:33
+msgid "Admin Reports"
+msgstr "Admin-Berichte"
+
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:43
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:47
+msgid "Statistics Overview"
+msgstr "Statistikübersicht"
+
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:53
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:57
+msgid "Site Report"
+msgstr "Webseiten-Bericht"
+
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:63
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:67
+msgid "User Report"
+msgstr "Benutzer-Bericht"
+
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:73
+#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:76
+msgid "Plugin Report"
+msgstr "Plugins-Bericht"
+
+#: includes/plugin-support/mstba-plugins-wpmudomainmapping.php:33
+#: includes/plugin-support/mstba-plugins-wpmudomainmapping.php:37
+msgid "Domain Mapping"
+msgstr "Domain-Mapping"
+
+#: includes/plugin-support/mstba-plugins-wppiwik.php:46
+#: includes/plugin-support/mstba-plugins-wppiwik.php:50
+#: includes/plugin-support/mstba-plugins-wppiwik.php:109
+#: includes/plugin-support/mstba-plugins-wppiwik.php:113
+msgid "WP-Piwik Statistics"
+msgstr "WP-Piwik Statistiken"
+
+#: includes/plugin-support/mstba-plugins-wppiwik.php:69
+#: includes/plugin-support/mstba-plugins-wppiwik.php:73
+#: includes/plugin-support/mstba-plugins-wppiwik.php:132
+#: includes/plugin-support/mstba-plugins-wppiwik.php:136
+msgid "Tracking Settings"
+msgstr "Tracking-Einstellungen"
+
+#: includes/plugin-support/mstba-plugins-wppiwik.php:79
+#: includes/plugin-support/mstba-plugins-wppiwik.php:83
+#: includes/plugin-support/mstba-plugins-wppiwik.php:142
+#: includes/plugin-support/mstba-plugins-wppiwik.php:146
+msgid "Views Settings"
+msgstr "Ansichts-Einstellungen"
+
+#: includes/plugin-support/mstba-plugins-wppiwik.php:170
+#: includes/plugin-support/mstba-plugins-wppiwik.php:174
+msgid "WP-Piwik Settings"
+msgstr "WP-Piwik Einstellungen"
+
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:45
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:49
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:129
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:133
+msgid "WP Super Cache"
+msgstr "WP Super Cache"
+
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:65
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:149
+msgid "CDN"
+msgstr "CDN"
+
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:70
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:154
+msgctxt "Translators: For the tooltip"
+msgid "CDN (Content Delivery Network)"
+msgstr "CDN (Content Delivery Network)"
+
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:79
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:83
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:163
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:167
+msgid "Contents"
+msgstr "Inhalte"
+
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:89
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:93
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:173
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:177
+msgid "Preload"
+msgstr "Vorab laden"
+
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:99
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:103
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:183
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:187
+msgid "Plugins"
+msgstr "Plugins"
+
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:109
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:113
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:193
+#: includes/plugin-support/mstba-plugins-wpsupercache.php:197
+msgid "Debug"
+msgstr "Debugging"
+
+#: multisite-toolbar-additions.php:308
+msgid "View Site"
+msgstr "Webseite aufrufen"
+
+#: multisite-toolbar-additions.php:312
+msgctxt "Translators: For the tooltip"
+msgid "View Site (Main Site)"
+msgstr "Webseite aufrufen (Haupt-Webseite)"
+
+#: multisite-toolbar-additions.php:329
+msgid "View Website"
+msgstr "Webseite aufrufen"
+
+#: multisite-toolbar-additions.php:333
+msgctxt "Translators: For the tooltip"
+msgid "View Website"
+msgstr "Webseite aufrufen (Frontend, Startseite)"
+
+#: multisite-toolbar-additions.php:517
+msgid "Install Plugin"
+msgstr "Plugin installieren"
+
+#: multisite-toolbar-additions.php:521
+msgid "Install Plugin - Search via WordPress.org"
+msgstr "Plugin installieren - Suche via WordPress.org"
+
+#: multisite-toolbar-additions.php:527 multisite-toolbar-additions.php:572
+msgid "Upload ZIP file"
+msgstr "ZIP-Datei hochladen"
+
+#: multisite-toolbar-additions.php:531
+msgid "Install Plugin - Upload ZIP file"
+msgstr "Plugin installieren - ZIP-Datei hochladen"
+
+#: multisite-toolbar-additions.php:540
+msgid "Topics, Use Cases, Tags"
+msgstr "Themen, Einsätze, Tags"
+
+#: multisite-toolbar-additions.php:544
+msgid ""
+"Install Plugins - Curated Topics, Use Cases, Plugin Tags (via WordPress.org)"
+msgstr "Plugins installieren - Favoriten (via WordPress.org)"
+
+#: multisite-toolbar-additions.php:552
+msgid "Install Favorites"
+msgstr "Favoriten installieren"
+
+#: multisite-toolbar-additions.php:562
+msgid "Install Theme"
+msgstr "Theme installieren"
+
+#: multisite-toolbar-additions.php:566
+msgid "Install Theme - Search via WordPress.org"
+msgstr "Theme installieren - Suche auf WordPress.org"
+
+#: multisite-toolbar-additions.php:576
+msgid "Install Theme - Upload ZIP file"
+msgstr "Theme installieren - ZIP-Datei hochladen"
+
+#: multisite-toolbar-additions.php:765 multisite-toolbar-additions.php:769
+#: multisite-toolbar-additions.php:863 multisite-toolbar-additions.php:867
+msgid "Site Settings"
+msgstr "Webseite: Einstellungen"
+
+#: multisite-toolbar-additions.php:777 multisite-toolbar-additions.php:781
+msgid "Site Widgets"
+msgstr "Webseite: Widgets"
+
+#: multisite-toolbar-additions.php:789 multisite-toolbar-additions.php:793
+msgid "Site Menus"
+msgstr "Webseite: Menüs"
+
+#: multisite-toolbar-additions.php:826 multisite-toolbar-additions.php:830
+msgid "Site Plugins"
+msgstr "Webseite: Plugins"
+
+#: multisite-toolbar-additions.php:838 multisite-toolbar-additions.php:842
+msgid "Site Themes"
+msgstr "Webseite: Themes"
+
+#: multisite-toolbar-additions.php:875 multisite-toolbar-additions.php:879
+msgid "Site Tools"
+msgstr "Webseite: Werkzeuge"
+
+#: multisite-toolbar-additions.php:887 multisite-toolbar-additions.php:891
+msgid "Visit Site"
+msgstr "Webseite aufrufen"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/deckerweb/multisite-toolbar-additions"
+msgstr "https://github.com/deckerweb/multisite-toolbar-additions"
+
+#. Description of the plugin/theme
+msgid ""
+"This plugin adds a lot of useful (super) admin links to the WordPress "
+"Toolbar / Admin Bar in Multisite, Network and single site installs. Also "
+"comes with extended support for third-party plugins!"
+msgstr ""
+"Dieses Plugin fügt der WordPress Werkzeugleiste bzw. Adminbar nützliche "
+"Admin-Links hinzu - innerhalb von Multisite- bzw. Netzwerk-Installationen. "
+"Ebenfalls dabei: Erweiterte Unterstützung für Drittanbieter-Plugins!"
+
+#~ msgid "Connectors"
+#~ msgstr "Verbindungen"
