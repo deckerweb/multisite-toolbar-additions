@@ -410,7 +410,7 @@ See packaged `changelog.txt` file in the plugin folder.
 == Upgrade Notice ==
 
 = 1.9.1 =
-Maintenance release. Small fixes.
+Maintenance release. Various tweaks, improvements and fixes.
 
 = 1.9.0 =
 Maintenance release.
