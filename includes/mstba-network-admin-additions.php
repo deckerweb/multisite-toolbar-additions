@@ -41,13 +41,13 @@ function mstba_site_submenu_install_plugins() {
 
 	/** Add "Plugins" submenu "Add New" */
 	add_plugins_page(
-		__( 'Add New', 'multisite-toolbar-additions' ),
-		__( 'Add New', 'multisite-toolbar-additions' ),
+		esc_attr__( 'Add New', 'multisite-toolbar-additions' ),
+		esc_attr__( 'Add New', 'multisite-toolbar-additions' ),
 		'manage_network',
 		'plugin-install.php'
 	);
 
-}  // end of function mstba_site_submenu_install_plugins
+}  // end function
 
 
 add_action( 'admin_menu', 'mstba_site_submenu_additions', 20 );
@@ -88,4 +88,4 @@ function mstba_site_submenu_additions() {
 
 	}  // end if
 
-}  // end of function mstba_site_submenu_additions
+}  // end function

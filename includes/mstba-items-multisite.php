@@ -41,7 +41,7 @@ function ddw_mstba_remove_network_items() {
 	$GLOBALS[ 'wp_admin_bar' ]->remove_node( 'network-admin-t' );
 	$GLOBALS[ 'wp_admin_bar' ]->remove_node( 'network-admin-p' );
 
-}  // end of function ddw_mstba_remove_network_items
+}  // end function
 
 
 /**

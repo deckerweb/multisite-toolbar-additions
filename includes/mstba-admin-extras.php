@@ -24,46 +24,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /**
- * Setting internal plugin helper values.
- *
- * @since  1.7.0
- *
- * @return array $mstba_info Array of info values.
- */
-function ddw_mstba_info_values() {
-
-	$mstba_info = array(
-
-		'url_translate'     => 'https://translate.wordpress.org/projects/wp-plugins/multisite-toolbar-additions',
-		'url_wporg_faq'     => 'https://wordpress.org/plugins/multisite-toolbar-additions/#faq',
-		'url_wporg_forum'   => 'https://wordpress.org/support/plugin/multisite-toolbar-additions',
-		'url_wporg_profile' => 'https://profiles.wordpress.org/daveshine/',
-		'url_wporg_more'    => 'https://wordpress.org/plugins/search.php?q=toolbar+multisite',
-		'url_ddw_series'    => 'https://wordpress.org/plugins/tags/ddwtoolbar',
-		'url_snippets'      => 'https://gist.github.com/deckerweb/3498510',
-		'license'           => 'GPL-2.0+',
-		'url_license'       => 'https://opensource.org/licenses/GPL-2.0',
-		'first_release'     => '2012',
-		'url_donate'        => 'https://www.paypal.me/deckerweb',
-		'url_plugin'        => 'https://github.com/deckerweb/multisite-toolbar-additions',
-		'author'            => __( 'David Decker - DECKERWEB', 'multisite-toolbar-additions' ),
-		'author_uri'        => __( 'https://deckerweb.de/', 'multisite-toolbar-additions' ),
-
-	);  // end of array
-
-	return $mstba_info;
-
-}  // end of function ddw_mstba_info_values
-
-
-/**
  * Add "Custom Menu" link to plugin page.
  *
  * @since  1.0.0
  *
  * @param  $mstba_links
  * @param  $mstba_menu_link
- *
  * @return strings $mstba_links Menu Admin link.
  */
 function ddw_mstba_custom_menu_link( $mstba_links ) {
@@ -87,7 +53,7 @@ function ddw_mstba_custom_menu_link( $mstba_links ) {
 
 	}  // end if cap check
 
-}  // end of function ddw_mstba_custom_menu_link
+}  // end function
 
 
 add_filter( 'plugin_row_meta', 'ddw_mstba_plugin_links', 10, 2 );
@@ -100,7 +66,6 @@ add_filter( 'plugin_row_meta', 'ddw_mstba_plugin_links', 10, 2 );
  *
  * @param  $mstba_links
  * @param  $mstba_file
- *
  * @return strings $mstba_links Plugin links.
  */
 function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
@@ -117,15 +82,20 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 
 		$mstba_info = (array) ddw_mstba_info_values();
 
-		$mstba_links[] = '<a href="' . esc_url( $mstba_info[ 'url_wporg_faq' ] ) . '" target="_new" title="' . esc_html_x( 'FAQ', 'Translators: plugin page listing', 'multisite-toolbar-additions' ) . '">' . _x( 'FAQ', 'Translators: plugin page listing', 'multisite-toolbar-additions' ) . '</a>';
+		/* translators: Plugins page listing */
+		$mstba_links[] = ddw_mstba_get_info_link( 'url_wporg_faq', esc_html_x( 'FAQ', 'Plugins page listing', 'multisite-toolbar-additions' ) );
 
-		$mstba_links[] = '<a href="' . esc_url( $mstba_info[ 'url_wporg_forum' ] ) . '" target="_new" title="' . esc_html_x( 'Support', 'Translators: plugin page listing', 'multisite-toolbar-additions' ) . '">' . _x( 'Support', 'Translators: plugin page listing', 'multisite-toolbar-additions' ) . '</a>';
+		/* translators: Plugins page listing */
+		$mstba_links[] = ddw_mstba_get_info_link( 'url_wporg_forum', esc_html_x( 'Support', 'Plugins page listing', 'multisite-toolbar-additions' ) );
 
-		$mstba_links[] = '<a href="' . esc_url( $mstba_info[ 'url_snippets' ] ) . '" target="_new" title="' . esc_html__( 'Code Snippets for Customization', 'multisite-toolbar-additions' ) . '">' . __( 'Code Snippets', 'multisite-toolbar-additions' ) . '</a>';
+		/* translators: Plugins page listing */
+		$mstba_links[] = ddw_mstba_get_info_link( 'url_snippets', esc_html_x( 'Code Snippets', 'Plugins page listing', 'multisite-toolbar-additions' ) );
 
-		$mstba_links[] = '<a href="' . esc_url( $mstba_info[ 'url_translate' ] ) . '" target="_new" title="' . esc_html__( 'Translations', 'multisite-toolbar-additions' ) . '">' . __( 'Translations', 'multisite-toolbar-additions' ) . '</a>';
+		/* translators: Plugins page listing */
+		$mstba_links[] = ddw_mstba_get_info_link( 'url_translate', esc_html_x( 'Translations', 'Plugins page listing', 'multisite-toolbar-additions' ) );
 
-		$mstba_links[] = '<a class="button" href="' . esc_url( $mstba_info[ 'url_donate' ] ) . '" target="_new" title="' . esc_html__( 'Donate', 'multisite-toolbar-additions' ) . '"><strong>' . __( 'Donate', 'multisite-toolbar-additions' ) . '</strong></a>';
+		/* translators: Plugins page listing */
+		$mstba_links[] = ddw_mstba_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'toolbar-extras' ), 'multisite-toolbar-additions' );
 
 	}  // end if plugin links
 
@@ -135,21 +105,19 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 		$mstba_links
 	);
 
-}  // end of function ddw_mstba_plugin_links
+}  // end function
 
 
 add_action( 'admin_head-nav-menus.php', 'ddw_mstba_widgets_help_content', 15 );
 /**
  * Create and display plugin help tab content.
  *
- * Load it after core help tabs on Menus admin page.
- * Some plugin menu instructions for super_admins plus general plugin info.
+ *   Load it after core help tabs on Menus admin page.
+ *   Some plugin menu instructions for super_admins plus general plugin info.
  *
  * @since  1.0.0
  *
  * @uses   WP_Screen::add_help_tab()
- *
- * @param  $mstba_menu_area_help
  *
  * @global mixed $GLOBALS[ 'mstba_widgets_screen' ]
  */
@@ -175,7 +143,7 @@ function ddw_mstba_widgets_help_content() {
 		)
 	);
 
-}  // end of function ddw_mstba_menu_help_content
+}  // end function
 
 
 /**
@@ -192,7 +160,7 @@ function ddw_mstba_help_tab_content() {
 	$mstba_space_helper = '<div style="height: 10px;"></div>';
 
 	/** Content: Multisite Toolbar Additions plugin */
-	echo '<h3>' . __( 'Plugin', 'multisite-toolbar-additions' ) . ': ' . __( 'Multisite Toolbar Additions', 'multisite-toolbar-additions' ) . ' <small>v' . esc_attr( ddw_mstba_plugin_get_data( 'Version' ) ) . '</small></h3>';
+	echo '<h3>' . __( 'Plugin', 'multisite-toolbar-additions' ) . ': ' . __( 'Multisite Toolbar Additions', 'multisite-toolbar-additions' ) . ' <small>v' . MSTBA_PLUGIN_VERSION . '</small></h3>';
 
 	/** Super Admin menu help */
 	if ( defined( 'MSTBA_SUPER_ADMIN_NAV_MENU' ) && MSTBA_SUPER_ADMIN_NAV_MENU ) {
@@ -229,12 +197,16 @@ function ddw_mstba_help_tab_content() {
 
 		'&nbsp;&nbsp;<a class="button" href="' . esc_url( $mstba_info[ 'url_donate' ] ) . '" target="_new" title="' . esc_html__( 'Donate', 'multisite-toolbar-additions' ) . '"><strong>' . __( 'Donate', 'multisite-toolbar-additions' ) . '</strong></a></p>';
 
-	/** Set first release year */
-	$release_first_year = ( '' != $mstba_info[ 'first_release' ] && date( 'Y' ) != $mstba_info[ 'first_release' ] ) ? $mstba_info[ 'first_release' ] . '&#x02013;' : '';
+	echo sprintf(
+		'<p><a href="%1$s" target="_blank" rel="nofollow noopener noreferrer" title="%2$s">%2$s</a> &#x000A9; %3$s <a href="%4$s" target="_blank" rel="noopener noreferrer" title="%5$s">%5$s</a></p>',
+		esc_url( $mstba_info[ 'url_license' ] ),
+		esc_attr( $mstba_info[ 'license' ] ),
+		ddw_mstba_coding_years(),
+		esc_url( $mstba_info[ 'author_uri' ] ),
+		esc_html( $mstba_info[ 'author' ] )
+	);
 
-	echo '<p><a href="' . esc_url( $mstba_info[ 'url_license' ] ) . '" target="_new" title="' . esc_attr( $mstba_info[ 'license' ] ). '">' . esc_attr( $mstba_info[ 'license' ] ) . '</a> &#x000A9; ' . $release_first_year . date( 'Y' ) . ' <a href="' . esc_url( $mstba_info[ 'author_uri' ] ) . '" target="_new" title="' . esc_attr( $mstba_info[ 'author' ] ) . '">' . esc_attr( $mstba_info[ 'author' ] ) . '</a></p>';
-
-}  // end of function ddw_mstba_help_tab_content
+}  // end function
 
 
 /**
@@ -259,7 +231,7 @@ function ddw_mstba_help_content_super_admin_menu() {
 	'<blockquote><p><em>' . __( 'Please note:', 'multisite-toolbar-additions' ) . '</em> ' . __( 'Every parent item = one main toolbar entry! So best would be to only use one parent item and set all other items as children.', 'multisite-toolbar-additions' ) . ' (<a href="https://www.dropbox.com/s/7u83c0g5ehk4ozq/screenshot-5.png" target="_new">' . __( 'See also this screenshot.', 'multisite-toolbar-additions' ) . '</a>)' .
 		'<br />' . __( 'Also, only Super Admins can edit this menu, all other users/ roles will be blocked!', 'multisite-toolbar-additions' ) . '</p></blockquote>';
 
-}  // end of function ddw_mstba_help_content_super_admin_menu
+}  // end function
 
 
 /**
@@ -281,7 +253,7 @@ function ddw_mstba_help_content_resctricted_admin_menu() {
 			'<li>' . __( 'Site Admins can see this menu but are not able to edit it', 'multisite-toolbar-additions' ) . '</li>' .
 		'<ul></blockquote>';
 
-}  // end of function ddw_mstba_help_content_resctricted_admin_menu
+}  // end function
 
 
 add_action( 'after_menu_locations_table', 'ddw_mstba_help_info_menu_locations' );
@@ -327,82 +299,82 @@ function ddw_mstba_help_info_menu_locations() {
 		__( 'See help tab on top right corner for more usage instructions.', 'multisite-toolbar-additions' )
 	);
 
-
 	echo $output;
 
-}  // end of function ddw_mstba_help_info_menu_locations
+}  // end function
 
 
-add_filter( 'plugins_api_result', 'ddw_mstba_add_cpi_api_result', 11, 3 );
+
 /**
- * Filter plugin fetching API results to inject plugin "Cleaner Plugin Installer".
+ * Optionally tweaking Plugin API results to make more useful recommendations to
+ *   the user.
  *
- * @since   1.9.0
- *
- * Original code by Remy Perona/ WP-Rocket.
- * @author  Remy Perona
- * @link    https://wp-rocket.me/
- * @license GPL-2.0+
- * 
- * @param   object|WP_Error $result Response object or WP_Error.
- * @param   string          $action The type of information being requested from the Plugin Install API.
- * @param   object          $args   Plugin API arguments.
- *
- * @return array Updated array of results.
+ * @since 1.9.1
  */
-function ddw_mstba_add_cpi_api_result( $result, $action, $args ) {
 
-	if ( empty( $args->browse ) ) {
-		return $result;
-	}
-
-	if ( 'featured' !== $args->browse
-		&& 'recommended' !== $args->browse
-		&& 'popular' !== $args->browse
-	) {
-		return $result;
-	}
-
-	if ( ! isset( $result->info[ 'page' ] ) || 1 < $result->info[ 'page' ] ) {
-		return $result;
-	}
-
-	/** Check if plugin active */
-	if ( is_plugin_active( 'cleaner-plugin-installer/cleaner-plugin-installer.php' )
-		|| is_plugin_active_for_network( 'cleaner-plugin-installer/cleaner-plugin-installer.php' )
-	) {
-		return $result;
-	}
-
-	/** Grab all slugs from the api results. */
-	$result_slugs = wp_list_pluck( $result->plugins, 'slug' );
-
-	if ( in_array( 'cleaner-plugin-installer', $result_slugs, TRUE ) ) {
-		return $result;
-	}
-
-	$query_args = array(
-		'slug'   => 'cleaner-plugin-installer',	// plugin slug from wordpress.org
-		'fields' => array(
-			'icons'             => TRUE,
-			'active_installs'   => TRUE,
-			'short_description' => TRUE,
-			'group'             => TRUE,
+add_filter( 'ddwlib_plir/filter/plugins', 'ddw_mstba_register_plugin_recommendations' );
+/**
+ * Register specific plugins for the class "DDWlib Plugin Installer
+ *   Recommendations".
+ *   Note: The top-level array keys are plugin slugs from the WordPress.org
+ *         Plugin Directory.
+ *
+ * @since  1.9.1
+ *
+ * @param  array $plugins Array holding all plugin recommendations, coming from
+ *                        the class and the filter.
+ * @return array Filtered and merged array of all plugin recommendations.
+ */
+function ddw_mstba_register_plugin_recommendations( array $plugins ) {
+  
+  	/** Register our additional plugin recommendations */
+	$mstba_plugins = array(
+		'multisite-post-duplicator' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
+		),
+		'multisite-plugin-manager' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
+		),
+		'multisite-enhancements' => array(
+			'featured'    => 'no',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
+		),
+		'wordpress-mu-domain-mapping' => array(
+			'featured'    => 'no',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
+		),
+		'multisite-language-switcher' => array(
+			'featured'    => 'no',
+			'recommended' => 'no',
+			'popular'     => 'yes',
+		),
+		'multilingual-press' => array(
+			'featured'    => 'no',
+			'recommended' => 'no',
+			'popular'     => 'yes',
+		),
+		'duplicator' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
+		),
+		'multisite-clone-duplicator' => array(
+			'featured'    => 'no',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
 		),
 	);
-
-	$mstba_data = plugins_api( 'plugin_information', $query_args );
-
-	if ( is_wp_error( $mstba_data ) ) {
-		return $result;
-	}
-
-	if ( 'featured' === $args->browse ) {
-		array_push( $result->plugins, $mstba_data );
-	} else {
-		array_unshift( $result->plugins, $mstba_data );
-	}
-
-	return $result;
-
+  
+  	/** Merge with the existing recommendations and return */
+	return array_merge( $plugins, $mstba_plugins );
+  
 }  // end function
+
+/** Include class DDWlib Plugin Installer Recommendations */
+require_once( MSTBA_PLUGIN_DIR . 'includes/ddwlib-plugin-installer-recommendations.php' );

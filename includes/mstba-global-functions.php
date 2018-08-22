@@ -66,7 +66,7 @@ function ddw_mstba_is_wpgermanformal() {
 
 	return FALSE;
 
-}  // end of function ddw_mstba_is_wpgermanformal
+}  // end function
 
 
 /**
@@ -92,7 +92,7 @@ function ddw_mstba_string_dashboard() {
 	/** Return the array */
 	return (array) $dashboard_string;
 
-}  // end of function ddw_mstba_string_dashboard
+}  // end function
 
 
 /**
@@ -118,6 +118,7 @@ function ddw_mstba_string_super_admin_menu_location() {
 	if ( isset( $GLOBALS[ 'wp_customize' ] ) ) {
 
 		$mstba_menu_string = sprintf(
+			/* translators: %s - Type of install/site: "Multisite" or "Site" */
 			esc_attr__( '%s Toolbar Menu', 'multisite-toolbar-additions' ),
 			$string_site_type
 		);
@@ -125,6 +126,7 @@ function ddw_mstba_string_super_admin_menu_location() {
 	} else {
 
 		$mstba_menu_string = sprintf(
+			/* translators: %s - Type of install/site: "Multisite" or "Site" */
 			'<span title="%s: %s">' . esc_attr__( '%s Toolbar Menu', 'multisite-toolbar-additions' ) . '</span>',
 			$string_via,
 			$string_plugin,
@@ -136,7 +138,7 @@ function ddw_mstba_string_super_admin_menu_location() {
 	/** Output */
 	return $mstba_menu_string;
 	
-}  // end of function ddw_mstba_super_admin_menu_location_string
+}  // end function
 
 
 /**
@@ -178,7 +180,7 @@ function ddw_mstba_string_restricted_admin_menu_location() {
 	/** Output */
 	return $mstba_menu_string;
 
-}  // end of function ddw_mstba_string_restricted_admin_menu_location
+}  // end function
 
 
 /**
@@ -199,7 +201,7 @@ function ddw_mstba_restricted_admin_menu_cap() {
 		)
 	);
 
-}  // end of function ddw_mstba_restricted_admin_menu_cap
+}  // end function
 
 
 /**
@@ -216,7 +218,7 @@ function ddw_mstba_restrict_super_admin_menu_access() {
 		'edit_theme_options'
 	);
 
-}  // end of function ddw_mstba_restrict_super_admin_menu_access
+}  // end function
 
 
 /**
@@ -234,7 +236,7 @@ function ddw_mstba_restrict_admin_menu_access() {
 		ddw_mstba_restricted_admin_menu_cap()
 	);
 
-}  // end of function ddw_mstba_restrict_admin_menu_access
+}  // end function
 
 
 /**
@@ -267,7 +269,7 @@ function ddw_mstba_get_menu_id_from_menu_location( $single_menu_location ) {
 	/** Return ID of nav menu */
 	return $menu_id;
 
-}  // end of function ddw_mstba_get_menu_id_from_menu_location
+}  // end function
 
 
 /**
@@ -324,7 +326,7 @@ function ddw_mstba_restrict_nav_menu_edit_access( $single_menu_location, $checke
 
 	}  // end if
 
-}  // end of function ddw_mstba_restrict_edit_admin_menu
+}  // end function
 
 
 /**
@@ -348,7 +350,7 @@ function ddw_mstba_plugin_install_link() {
 
 	return network_admin_url( 'plugin-install.php?tab=dashboard' );
 
-}  // end of function ddw_mstba_plugin_install_link
+}  // end function
 
 
 /**
@@ -372,7 +374,7 @@ function ddw_mstba_theme_install_link() {
 
 	return network_admin_url( 'theme-install.php?tab=dashboard' );
 
-}  // end of function ddw_mstba_theme_install_link
+}  // end function
 
 
 /**
@@ -396,7 +398,7 @@ function ddw_mstba_theme_upload_link() {
 
 	return network_admin_url( 'theme-install.php?tab=upload' );
 
-}  // end of function ddw_mstba_theme_upload_link
+}  // end function
 
 
 /**
@@ -425,4 +427,113 @@ function ddw_mstba_affwp( $site = '', $ref = '', $www = FALSE, $ssl = FALSE ) {
 	/** Output */
 	return esc_url_raw( $link );
 
-}  // end of function ddw_mstba_affwp
+}  // end function
+
+
+/**
+ * Setting internal plugin helper values.
+ *
+ * @since  1.7.0
+ *
+ * @return array $mstba_info Array of info values.
+ */
+function ddw_mstba_info_values() {
+
+	$mstba_info = array(
+
+		'url_translate'     => 'https://translate.wordpress.org/projects/wp-plugins/multisite-toolbar-additions',
+		'url_wporg_faq'     => 'https://wordpress.org/plugins/multisite-toolbar-additions/#faq',
+		'url_wporg_forum'   => 'https://wordpress.org/support/plugin/multisite-toolbar-additions',
+		'url_wporg_profile' => 'https://profiles.wordpress.org/daveshine/',
+		'url_wporg_more'    => 'https://wordpress.org/plugins/search.php?q=toolbar+multisite',
+		'url_ddw_series'    => 'https://wordpress.org/plugins/tags/ddwtoolbar',
+		'url_snippets'      => 'https://gist.github.com/deckerweb/3498510',
+		'license'           => 'GPL-2.0+',
+		'url_license'       => 'https://opensource.org/licenses/GPL-2.0',
+		'first_code'        => '2012',
+		'url_donate'        => 'https://www.paypal.me/deckerweb',
+		'url_plugin'        => 'https://github.com/deckerweb/multisite-toolbar-additions',
+		'author'            => __( 'David Decker - DECKERWEB', 'multisite-toolbar-additions' ),
+		'author_uri'        => __( 'https://deckerweb.de/', 'multisite-toolbar-additions' ),
+
+	);  // end array
+
+	return $mstba_info;
+
+}  // end function
+
+
+/**
+ * Get URL of specific MSTBA info value.
+ *
+ * @since  1.9.1
+ *
+ * @uses   ddw_mstba_info_values()
+ *
+ * @param  string $url_key String of value key from array of ddw_mstba_info_values()
+ * @param  bool   $raw     If raw escaping or regular escaping of URL gets used
+ * @return string URL for info value.
+ */
+function ddw_mstba_get_info_url( $url_key = '', $raw = FALSE ) {
+
+	$mstba_info = (array) ddw_mstba_info_values();
+
+	$output = esc_url( $mstba_info[ sanitize_key( $url_key ) ] );
+
+	if ( TRUE === $raw ) {
+		$output = esc_url_raw( $mstba_info[ esc_attr( $url_key ) ] );
+	}
+
+	return $output;
+
+}  // end function
+
+
+/**
+ * Setting internal plugin helper values.
+ *
+ * @since  1.9.1
+ *
+ * @uses   ddw_mstba_get_info_url()
+ *
+ * @param  string $url_key String of value key
+ * @param  string $text    String of text and link attribute
+ * @param  string $class   String of CSS class
+ * @return string HTML markup for linked URL.
+ */
+function ddw_mstba_get_info_link( $url_key = '', $text = '', $class = '' ) {
+
+	$link = sprintf(
+		'<a class="%1$s" href="%2$s" target="_blank" rel="nofollow noopener noreferrer" title="%3$s">%3$s</a>',
+		strtolower( esc_attr( $class ) ),	//sanitize_html_class( $class ),
+		ddw_mstba_get_info_url( $url_key ),
+		esc_html( $text )
+	);
+
+	return $link;
+
+}  // end function
+
+
+/**
+ * Get timespan of coding years for this plugin.
+ *
+ * @since  1.9.1
+ *
+ * @uses   ddw_mstba_info_values()
+ *
+ * @param  int $first_year Integer number of first year
+ * @return string Timespan of years.
+ */
+function ddw_mstba_coding_years( $first_year = '' ) {
+
+	$mstba_info = (array) ddw_mstba_info_values();
+
+	$first_year = ( empty( $first_year ) ) ? absint( $mstba_info[ 'first_code' ] ) : absint( $first_year );
+
+	/** Set year of first released code */
+	$code_first_year = ( '' !== $first_year && date( 'Y' ) !== $first_year ) ? $first_year . '&#x02013;' : '';
+
+	return $code_first_year . date( 'Y' );
+
+}  // end function

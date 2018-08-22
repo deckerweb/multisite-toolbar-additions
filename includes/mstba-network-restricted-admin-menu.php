@@ -46,7 +46,7 @@ function ddw_mstba_restricted_admin_menu_hook_priority() {
 		absint( $mstba_restricted_admin_nav_menu_priority )
 	);
 
-}  // end of ddw_mstba_restricted_admin_menu_hook_priority
+}  // end function
 
 
 add_action( 'init', 'ddw_mstba_restricted_admin_menu_init', 20 );
@@ -91,7 +91,7 @@ function ddw_mstba_restricted_admin_menu_init() {
 
 	}  // end if
 
-}  // end of function ddw_mstba_restricted_admin_menu_init
+}  // end function
 
 
 /**
@@ -162,4 +162,4 @@ function ddw_mstba_build_restricted_admin_menu( $wp_admin_bar ) {
 
 	}  // end if check if a 'mstba_menu' menu exists
 
-}  // end of function ddw_mstba_build_restricted_admin_menu
+}  // end function

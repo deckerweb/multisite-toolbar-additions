@@ -1,28 +1,30 @@
-<?php 
+<?php # -*- coding: utf-8 -*-
 /**
  * Main plugin file.
  * This plugin adds a lot of useful (super) admin links to the WordPress
  *    Toolbar / Admin Bar in Multisite, Network and single site installs. Also
  *    comes with extended support for third-party plugins!
  *
- * @package     Multisite Toolbar Additions
- * @author      David Decker
- * @copyright   Copyright (c) 2012-2018, David Decker - DECKERWEB
- * @license     GPL-2.0+
- * @link        https://deckerweb.de/twitter
+ * @package      Multisite Toolbar Additions
+ * @author       David Decker
+ * @copyright    Copyright (c) 2012-2018, David Decker - DECKERWEB
+ * @license      GPL-2.0+
+ * @link         https://deckerweb.de/twitter
  *
  * @wordpress-plugin
- * Plugin Name: Multisite Toolbar Additions
- * Plugin URI:  https://github.com/deckerweb/multisite-toolbar-additions
- * Description: This plugin adds a lot of useful (super) admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Also comes with extended support for third-party plugins!
- * Version:     1.9.0
- * Author:      David Decker - DECKERWEB
- * Author URI:  https://deckerweb.de/
- * License:     GPL-2.0+
- * License URI: https://opensource.org/licenses/GPL-2.0
- * Text Domain: multisite-toolbar-additions
- * Domain Path: /languages/
- * Network:     true
+ * Plugin Name:  Multisite Toolbar Additions
+ * Plugin URI:   https://github.com/deckerweb/multisite-toolbar-additions
+ * Description:  This plugin adds a lot of useful (super) admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Also comes with extended support for third-party plugins!
+ * Version:      1.9.1
+ * Author:       David Decker - DECKERWEB
+ * Author URI:   https://deckerweb.de/
+ * License:      GPL-2.0+
+ * License URI:  https://opensource.org/licenses/GPL-2.0
+ * Text Domain:  multisite-toolbar-additions
+ * Domain Path:  /languages/
+ * Network:      true
+ * Requires WP:  4.7
+ * Requires PHP: 5.6
  *
  * Copyright (c) 2012-2018 David Decker - DECKERWEB
  *
@@ -60,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'MSTBA_PLUGIN_VERSION', '1.9.0' );
+define( 'MSTBA_PLUGIN_VERSION', '1.9.1' );
 
 /** Plugin directory */
 define( 'MSTBA_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -115,7 +117,7 @@ function ddw_mstba_helper_constants() {
 		define( 'MSTBA_DISPLAY_LIST_EDIT_MENUS', TRUE );
 	}
 
-}  // ddw_mstba_helper_constants
+}  // end of ddw_mstba_helper_constants()
 
 
 add_action( 'init', 'ddw_mstba_init', 1 );
@@ -140,7 +142,11 @@ function ddw_mstba_init() {
 	$mstba_textdomain = 'multisite-toolbar-additions';
 
 	/** The 'plugin_locale' filter is also used by default in load_plugin_textdomain() */
-	$locale = apply_filters( 'plugin_locale', get_locale(), $mstba_textdomain );
+	$locale = apply_filters(
+		'plugin_locale',
+		get_locale(),
+		$mstba_textdomain
+	);
 
 	/** Set filter for WordPress languages directory */
 	$mstba_wp_lang_dir = trailingslashit( WP_LANG_DIR ) . trailingslashit( $mstba_textdomain ) . $mstba_textdomain . '-' . $locale . '.mo';
@@ -149,7 +155,11 @@ function ddw_mstba_init() {
 	load_textdomain( $mstba_textdomain, $mstba_wp_lang_dir );
 
 	/** Translations: Secondly, look in plugin's "languages" folder = default */
-	load_plugin_textdomain( $mstba_textdomain, FALSE, MSTBA_PLUGIN_BASEDIR . 'languages' );
+	load_plugin_textdomain(
+		$mstba_textdomain,
+		FALSE,
+		MSTBA_PLUGIN_BASEDIR . 'languages'
+	);
 
 
 	/** Include global helper functions */
@@ -195,7 +205,9 @@ function ddw_mstba_init() {
 	}  // end if
 
 	/** Only register & add additional toolbar menu for super admins */
-	if ( ( defined( 'MSTBA_SUPER_ADMIN_NAV_MENU' ) && MSTBA_SUPER_ADMIN_NAV_MENU ) && is_super_admin() ) {
+	if ( ( defined( 'MSTBA_SUPER_ADMIN_NAV_MENU' ) && MSTBA_SUPER_ADMIN_NAV_MENU )
+		&& is_super_admin()
+	) {
 
 		require_once( MSTBA_PLUGIN_DIR . 'includes/mstba-global-superadmin-menu.php' );
 
@@ -214,7 +226,7 @@ function ddw_mstba_init() {
 	/** Restrict access to the above custom site admin menu */
 	add_action( 'admin_menu', 'ddw_mstba_restrict_admin_menu_access', 1 );
 
-}  // end of function ddw_mstba_init
+}  // end function
 
 
 add_action( 'wp_before_admin_bar_render', 'ddw_mstba_toolbar_main_site_remove_view_site' );
@@ -261,7 +273,7 @@ function ddw_mstba_toolbar_main_site_remove_view_site() {
 
 	}  // end if
 
-}  // end of function ddw_mstba_toolbar_main_site_remove_view_site
+}  // end function
 
 
 add_action( 'admin_bar_menu', 'ddw_mstba_toolbar_main_site_dashboard' );
@@ -336,7 +348,7 @@ function ddw_mstba_toolbar_main_site_dashboard() {
 
 	}  // end if is_admin() check
 
-}  // end of function ddw_mstba_toolbar_main_site_dashboard
+}  // end function
 
 
 add_action( 'admin_bar_menu', 'ddw_mstba_toolbar_additions', 99 );
@@ -383,7 +395,6 @@ function ddw_mstba_toolbar_additions() {
 	$networkplugins = $mstba_prefix . 'networkplugins';				// sub level: network plugins
 	$networkthemes = $mstba_prefix . 'networkthemes';				// sub level: network themes
 	$networkextgroup = $mstba_prefix . 'networkextgroup';				// sub level: network extend group ("hook" place)
-		$networkext_quickcache = $mstba_prefix . 'networkext_quickcache';	// third level: quick cache (network)
 		$networkext_wpsupercache = $mstba_prefix . 'networkext_wpsupercache';	// third level: wp super cache (network)
 		$networkext_wppiwik = $mstba_prefix . 'networkext_wppiwik';			// third level: wp-piwik (network)
 		$networkext_orgmessagenotifier = $mstba_prefix . 'networkext_orgmessagenotifier';	// third level: o.messg.not (network)
@@ -409,7 +420,6 @@ function ddw_mstba_toolbar_additions() {
 		$networkext_ithemessecuritypro = $mstba_prefix . 'networkext_ithemessecuritypro';	// third level: ithemes security pro (network)
 		$networkext_wpmsar = $mstba_prefix . 'networkext_wpmsar';			// third level: wpms admin report (network)
 	$siteextgroup = $mstba_prefix . 'siteextgroup';					// sub level: site extend group ("hook" place)
-		$siteext_quickcache = $mstba_prefix . 'siteext_quickcache';			// third level: quick cache (site)
 		$siteext_wpsupercache = $mstba_prefix . 'siteext_wpsupercache';		// third level: wp super cache (site)
 		$siteext_wppiwik = $mstba_prefix . 'siteext_wppiwik';				// third level: wp-piwik (site)
 		$siteext_wprcinstaller = $mstba_prefix . 'siteext_wprcinstaller';	// third level: wprc installer
@@ -613,7 +623,6 @@ function ddw_mstba_toolbar_additions() {
 									$networkplugins,
 									$networkthemes,
 									$networkextgroup,
-										$networkext_quickcache,
 										$networkext_wpsupercache,
 										$networkext_wppiwik,
 										$networkext_orgmessagenotifier,
@@ -638,7 +647,6 @@ function ddw_mstba_toolbar_additions() {
 										$networkext_ithemessecuritypro,
 										$networkext_wpmsar,
 									$siteextgroup,
-										$siteext_quickcache,
 										$siteext_wpsupercache,
 										$siteext_wppiwik,
 										$siteext_wprcinstaller,
@@ -713,7 +721,7 @@ function ddw_mstba_toolbar_additions() {
 
 	}  // end foreach menu items
 
-}  // end of function ddw_mstba_toolbar_additions
+}  // end function
 
 
 add_action( 'wp_before_admin_bar_render', 'ddw_mstba_toolbar_subsite_items' );
@@ -894,7 +902,7 @@ function ddw_mstba_toolbar_subsite_items() {
 
 	}  // end foreach
 
-}  // end of function ddw_mstba_subsite_items
+}  // end function
 
 
 /**
@@ -910,7 +918,7 @@ function ddw_mstba_network_new_content_filter() {
 
 	return (bool) apply_filters( 'mstba_filter_display_network_new_content', '__return_true' );
 
-}  // end of function ddw_mstba_network_new_content_filter
+}  // end function
 
 
 add_action( 'init', 'ddw_mstba_network_new_content_helper' );
@@ -935,7 +943,7 @@ function ddw_mstba_network_new_content_helper() {
 
 	}  // end if is_network_admin() plus Toolbar checks
 
-}  // end of function ddw_mstba_network_new_content_helper
+}  // end function
 
 
 add_action( 'wp_head', 'ddw_mstba_admin_style' );
@@ -967,39 +975,4 @@ function ddw_mstba_admin_style() {
 		</style>
 	<?php
 
-}  // end of function ddw_mstba_admin_style
-
-
-/**
- * Returns current plugin's header data in a flexible way.
- *
- * @since  1.1.0
- *
- * @uses   get_plugins()
- *
- * @param  $mstba_plugin_value
- *
- * @return string $mstba_plugin_folder String of plugin data.
- */
-function ddw_mstba_plugin_get_data( $mstba_plugin_value ) {
-
-	/** Bail early if we are not in wp-admin */
-	if ( ! is_admin() ) {
-
-		return;
-
-	}  // end if
-
-	/** Include WordPress plugin data */
-	if ( ! function_exists( 'get_plugins' ) ) {
-
-		require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
-	}  // end if
-
-	$mstba_plugin_folder = get_plugins( '/' . plugin_basename( dirname( __FILE__ ) ) );
-	$mstba_plugin_file   = basename( ( __FILE__ ) );
-
-	return $mstba_plugin_folder[ $mstba_plugin_file ][ $mstba_plugin_value ];
-
-}  // end of function ddw_mstba_plugin_get_data
+}  // end function

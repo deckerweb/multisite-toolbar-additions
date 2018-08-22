@@ -58,7 +58,7 @@ function ddw_mstba_remove_members_item() {
 
 	}  // end if is_network_admin() check
 
-}  // end of function ddw_mstba_remove_members_item
+}  // end function
 
 
 /**
@@ -81,7 +81,7 @@ function ddw_mstba_network_admin_new_content_priority() {
 		absint( $mstba_network_admin_new_content_priority )
 	);
 
-}  // end of function ddw_mstba_network_admin_new_content_priority
+}  // end function
 
 
 add_action(
@@ -149,4 +149,4 @@ function ddw_mstba_network_admin_new_content() {
 			)
 		) );
 
-}  // end of function ddw_mstba_network_admin_new_content
+}  // end function

@@ -93,14 +93,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		);
 
 		/** MU Plugins (Must Use) and DropIns */
-		if ( ! is_multisite() || ( is_ntwork_admin() && current_user_can( 'manage_network_plugins' ) ) ) {
+		if ( ! is_multisite() || ( is_network_admin() && current_user_can( 'manage_network_plugins' ) ) ) {
 
 			if ( apply_filters( 'show_advanced_plugins', true, 'mustuse' ) ) {
 
 				$mstba_tb_items[ 'siteplugins-mustuse' ] = array(
 					'parent' => $siteplugins,
 					'title'  => __( 'Must Use (MU)', 'multisite-toolbar-additions' ),
-					'href'   => admin_url( 'plugins.php?plugin_status=mustuse' ),
+					'href'   => network_admin_url( 'plugins.php?plugin_status=mustuse' ),
 					'meta'   => array(
 						'target' => '',
 						'title'  => _x( 'Must Use - MU Plugins', 'Translators: For the tooltip', 'multisite-toolbar-additions' )
@@ -114,7 +114,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				$mstba_tb_items[ 'siteplugins-dropins' ] = array(
 					'parent' => $siteplugins,
 					'title'  => __( 'Drop-ins', 'multisite-toolbar-additions' ),
-					'href'   => admin_url( 'plugins.php?plugin_status=dropins' ),
+					'href'   => network_admin_url( 'plugins.php?plugin_status=dropins' ),
 					'meta'   => array(
 						'target' => '',
 						'title'  => _x( 'Drop-ins - Special Plugins', 'Translators: For the tooltip', 'multisite-toolbar-additions' )

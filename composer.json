@@ -1,0 +1,22 @@
+{
+  "name": "deckerweb/multisite-toolbar-additions",
+  "description": "WordPress plugin which adds a lot of useful (Super) Admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Also comes with extended support for third-party plugins!",
+  "keywords": ["toolbar", "admin bar", "adminbar", "multisite", "network", "administration", "menu", "super admin", "links", "deckerweb", "ddwtoolbar"],
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/deckerweb/multisite-toolbar-additions",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "David Decker",
+      "homepage": "https://deckerweb.de/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/deckerweb/multisite-toolbar-additions/issues",
+    "source": "https://github.com/deckerweb/multisite-toolbar-additions"
+  },
+  "require": {
+    "php": ">=5.6"
+  }
+}

@@ -189,37 +189,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 
 
 	/**
-	 * Quick Cache (free, by PriMoThemes.com / WebSharks, Inc.)
-	 *
-	 * @since 1.0.0
-	 */
-	if ( defined( 'WS_PLUGIN__QCACHE_VERSION' ) && current_user_can( 'edit_plugins' ) ) {
-
-		/** Include code part for Quick Cache plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-quickcache.php' );
-
-	}  // end if Quick Cache
-
-
-	/**
-	 * Quick Cache 2013/Pro (free & premium, by WebSharks, Inc.)
-	 *
-	 * @since 1.6.0
-	 */
-	if ( current_user_can( 'activate_plugins' )
-		&& ( in_array( 'quick-cache/quick-cache.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) )
-				|| in_array( 'quick-cache-pro/quick-cache-pro.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) )
-				|| ( function_exists( 'is_plugin_active_for_network' ) && ( is_plugin_active_for_network( 'quick-cache/quick-cache.php' ) || is_plugin_active_for_network( 'quick-cache-pro/quick-cache-pro.php' ) ) )
-			)
-	) {
-
-		/** Include code part for Quick Cache plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-quickcache-pro.php' );
-
-	}  // end if Quick Cache 2013/Pro
-
-
-	/**
 	 * WP Super Cache (free, by Donncha O Caoimh)
 	 *
 	 * @since 1.0.0

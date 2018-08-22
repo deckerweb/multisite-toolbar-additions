@@ -180,7 +180,7 @@ function ddw_mstba_manage_content_default_post_types() {
 	/** Return array */
 	return $post_types;
 
-}  // end of function ddw_mstba_manage_content_default_post_types
+}  // end function
 
 
 add_action( 'admin_bar_menu', 'ddw_mstba_manage_content_popular_post_types', 100 );
@@ -224,4 +224,4 @@ function ddw_mstba_manage_content_popular_post_types() {
 
 	}  // end foreach
 
-}  // end of function ddw_mstba_manage_content_popular_post_types
+}  // end function

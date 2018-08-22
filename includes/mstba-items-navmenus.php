@@ -87,7 +87,7 @@ function ddw_mstba_list_edit_nav_menus() {
 
 	}  // end foreach
 
-}  // end of function ddw_mstba_list_edit_nav_menus
+}  // end function
 
 
 add_action( 'admin_bar_menu', 'ddw_mstba_edit_custom_toolbar_menus', 1000 );
@@ -161,4 +161,4 @@ function ddw_mstba_edit_custom_toolbar_menus() {
 
 	}  // end if
 
-}  // end of function ddw_mstba_edit_custom_toolbar_menus
+}  // end function
