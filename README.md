@@ -5,7 +5,7 @@
 **Requires at least:** 3.6  
 **Tested up to:** 4.9.8  
 **Requires PHP:** 5.6  
-**Stable tag:** 1.9.1  
+**Stable tag:** 1.9.2  
 **License:** GPL-2.0+  
 **License URI:** https://opensource.org/licenses/GPL-2.0  
 
@@ -36,7 +36,7 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 * Network Settings, Updates, plus Site Upgrade
 * Special "+ New" (new content) section, like on site dashboards, but only for Network admin with Network specific items!
 * Extra special *Custom Nav Menu* vieable for Site Admins but only editable for Super Admins, setup via WP Menu system, [see FAQ for more...](https://wordpress.org/plugins/multisite-toolbar-additions/faq/).
-* Multisite aware plugin support, to date for: *Quick Cache, WP Super Cache, WP-Piwik, WPMS Site Maintenance Mode, Code Snippets, BackWPup, User Management Tools, Network Mass Email, Organizational Message Notifier, Snapshot (premium), Ultimate Branding (premium), Login Security Solution, Smart Admin Tweaks (premium), Smart Cleanup Tools (premium), Smart Options Optimizer (premium), Simple System Info (premium), Smart Security Tools (premium), Hide My WP (premium), Blog Copier, NS Cloner, NS Cloner Pro, Multisite Robots.txt Manager, WordPress MU Domain Mapping, WP Migrate DB Pro (premium), WPMS Admin Reports*
+* Multisite aware plugin support, to date for: *WP Super Cache, WP-Piwik, WPMS Site Maintenance Mode, Code Snippets, BackWPup, User Management Tools, Network Mass Email, Organizational Message Notifier, Snapshot (premium), Ultimate Branding (premium), Login Security Solution, Smart Admin Tweaks (premium), Smart Cleanup Tools (premium), Smart Options Optimizer (premium), Simple System Info (premium), Smart Security Tools (premium), Hide My WP (premium), Blog Copier, NS Cloner, NS Cloner Pro, Multisite Robots.txt Manager, WordPress MU Domain Mapping, WP Migrate DB Pro (premium), WPMS Admin Reports*
 
 
 ### (Sub) Site Specific Features & Benefits 
@@ -50,7 +50,6 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 ### Included Plugin Support 
 *Out of the box the plugin supports the following other plugins' admin menu links in the Toolbar if installed and activated:*
 
-* ["Quick Cache" (free, by PriMoThemes.com / WebSharks, Inc.)](https://wordpress.org/plugins/quick-cache/) - also network wide
 * ["WP Super Cache" (free, by Donncha O Caoimh)](https://wordpress.org/plugins/wp-super-cache/) - also network wide
 * ["WP-Piwik" (free, by Andr&eacute; Br&auml;kling)](https://wordpress.org/plugins/wp-piwik/) - also network wide
 * ["WPMS Site Maintenance Mode" (free, 7 Media Web Solutions, LLC)](https://wordpress.org/plugins/wpms-site-maintenance-mode/) - also network wide
@@ -382,6 +381,14 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 ## Changelog 
 
+### 1.9.2 - 2018-09-08
+* New: Added plugin update message also to Plugins page (overview table)
+* Update: Fixed and improved various Plugins page links for Super Admins within the Admin area
+* Update: Fixed CSS class name in the admin
+* Update: Fixed wrong textdomain for one string
+* Update: Improved plugin installer recommendations
+* Update: `.pot` file for translators, plus German translations
+
 
 ### 1.9.1 - 2018-08-22 
 * New: Added first language packs via WordPress.org translations platform - for German (de_DE - informal) and German Formal (de_DE_formal) - thanks to Team WordPress DE! ;-)
@@ -456,6 +463,9 @@ See packaged `changelog.txt` file in the plugin folder.
 
 ## Upgrade Notice 
 
+### 1.9.2
+Maintenance release. Various tweaks, improvements and fixes.
+
 
 ### 1.9.1 
 Maintenance release. Various tweaks, improvements and fixes.
@@ -499,4 +509,8 @@ Enjoy using *Multisite Toolbar Additions*? **[Please consider making a donation]
 * [**Toolbar Extras for Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [Genesis What's New Info](https://wordpress.org/plugins/genesis-whats-new-info/)
+* [Genesis Layout Extras](https://wordpress.org/plugins/genesis-layout-extras/)
+* [Genesis Widgetized Not Found & 404](https://wordpress.org/plugins/genesis-widgetized-notfound/)
+* [Genesis Widgetized Footer](https://wordpress.org/plugins/genesis-widgetized-footer/)
+* [Genesis Widgetized Archive](https://wordpress.org/plugins/genesis-widgetized-archive/)
 * [Cleaner Plugin Installer](https://wordpress.org/plugins/cleaner-plugin-installer/)

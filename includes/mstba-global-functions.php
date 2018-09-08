@@ -448,6 +448,7 @@ function ddw_mstba_info_values() {
 		'url_wporg_more'    => 'https://wordpress.org/plugins/search.php?q=toolbar+multisite',
 		'url_ddw_series'    => 'https://wordpress.org/plugins/tags/ddwtoolbar',
 		'url_snippets'      => 'https://gist.github.com/deckerweb/3498510',
+		'url_fb_group'      => 'https://www.facebook.com/groups/ToolbarExtras/',
 		'license'           => 'GPL-2.0+',
 		'url_license'       => 'https://opensource.org/licenses/GPL-2.0',
 		'first_code'        => '2012',
