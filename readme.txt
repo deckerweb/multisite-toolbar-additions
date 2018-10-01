@@ -5,7 +5,7 @@ Tags: toolbar, adminbar, admin bar, multisite, network, administration, menu, su
 Requires at least: 3.6
 Tested up to: 4.9.8
 Requires PHP: 5.6
-Stable tag: 1.9.2
+Stable tag: 1.9.3
 License: GPL-2.0+
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -325,6 +325,7 @@ if ( ! is_admin() ) {
 
 All the custom & branding stuff code above can also be found as a Gist on Github: https://gist.github.com/deckerweb/3498510 (you can also add your questions/ feedback there :)
 
+
 == Screenshots ==
 
 1. Multisite Toolbar Additions: New Network specific menu items located in "My Sites" toolbar parent item. ([Click here for larger version of screenshot](https://www.dropbox.com/s/m6w6h8icr44e568/screenshot-1.png)).
@@ -339,7 +340,15 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 6. Multisite Toolbar Additions: Plugin's help tab on Nav Menu admin page. ([Click here for larger version of screenshot](https://www.dropbox.com/s/dt6kkxqsh7yvbfn/screenshot-6.png)).
 
+
 == Changelog ==
+
+= 1.9.3 - 2018-10-01 =
+* New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
+* Update: Small internal code improvements
+* Update: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.1.0) - which brings smaller additions and enhancements, like CSS styles to the upload areas and plugin cards, plus plugin version number on plugin cards
+* Update: `.pot` file plus all German translations (formal, informal) and language packs
+
 
 = 1.9.2 - 2018-09-08 =
 * New: Added plugin update message also to Plugins page (overview table)
@@ -417,6 +426,9 @@ See packaged `changelog.txt` file in the plugin folder.
 
 == Upgrade Notice ==
 
+= 1.9.3 =
+Maintenance release. Bundled library update, plus small improvements. Update recommended.
+
 = 1.9.2 =
 Maintenance release. Various tweaks, improvements and fixes.
 
@@ -430,6 +442,8 @@ Maintenance release.
 * [Translations (WordPress.org Translations Portal)](https://translate.wordpress.org/projects/wp-plugins/multisite-toolbar-additions)
 * [User support forums](https://wordpress.org/support/plugin/multisite-toolbar-additions)
 * [Code snippets archive for customizing, GitHub Gist](https://gist.github.com/deckerweb/3498510)
+* [Toolbar Extras Facebook Group](https://www.facebook.com/groups/ToolbarExtras/)
+* [DECKERWEB WordPress Plugins Facebook Group](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 
 == Donate ==
 Enjoy using *Multisite Toolbar Additions*? **[Please consider making a donation](https://www.paypal.me/deckerweb)** - every donation helps to support the project's continued development, maintenance and support.

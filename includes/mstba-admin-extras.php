@@ -538,5 +538,41 @@ function ddw_mstba_register_plugin_recommendations( array $plugins ) {
 
 }  // end function
 
+/** Optionally add string translations for the library */
+if ( ! function_exists( 'ddwlib_plir_strings_plugin_installer' ) ) :
+
+	add_filter( 'ddwlib_plir/filter/strings/plugin_installer', 'ddwlib_plir_strings_plugin_installer' );
+	/**
+	 * Optionally, make strings translateable for included library "DDWlib Plugin
+	 *   Installer Recommendations".
+	 *   Strings:
+	 *    - "Newest" --> tab in plugin installer toolbar
+	 *    - "Version:" --> label in plugin installer plugin card
+	 *
+	 * @since  1.9.3
+	 *
+	 * @param  array $strings Holds all filterable strings of the library.
+	 * @return array Array of tweaked translateable strings.
+	 */
+	function ddwlib_plir_strings_plugin_installer( $strings ) {
+
+		$strings[ 'newest' ] = _x(
+			'Newest',
+			'Plugin installer: Tab name in installer toolbar',
+			'multisite-toolbar-additions'
+		);
+
+		$strings[ 'version' ] = _x(
+			'Version:',
+			'Plugin card: plugin version',
+			'multisite-toolbar-additions'
+		);
+
+		return $strings;
+
+	}  // end function
+
+endif;  // function check
+
 /** Include class DDWlib Plugin Installer Recommendations */
 require_once( MSTBA_PLUGIN_DIR . 'includes/ddwlib-plugin-installer-recommendations.php' );

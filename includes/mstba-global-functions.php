@@ -455,7 +455,7 @@ function ddw_mstba_info_values() {
 		'url_donate'        => 'https://www.paypal.me/deckerweb',
 		'url_plugin'        => 'https://github.com/deckerweb/multisite-toolbar-additions',
 		'author'            => __( 'David Decker - DECKERWEB', 'multisite-toolbar-additions' ),
-		'author_uri'        => __( 'https://deckerweb.de/', 'multisite-toolbar-additions' ),
+		'author_uri'        => 'https://deckerweb.de/',
 
 	);  // end array
 
@@ -520,6 +520,7 @@ function ddw_mstba_get_info_link( $url_key = '', $text = '', $class = '' ) {
  * Get timespan of coding years for this plugin.
  *
  * @since  1.9.1
+ * @since  1.9.3 Improved first year logic.
  *
  * @uses   ddw_mstba_info_values()
  *
@@ -533,7 +534,7 @@ function ddw_mstba_coding_years( $first_year = '' ) {
 	$first_year = ( empty( $first_year ) ) ? absint( $mstba_info[ 'first_code' ] ) : absint( $first_year );
 
 	/** Set year of first released code */
-	$code_first_year = ( '' !== $first_year && date( 'Y' ) !== $first_year ) ? $first_year . '&#x02013;' : '';
+	$code_first_year = ( date( 'Y' ) == $first_year || 0 === $first_year ) ? '' : $first_year . '&#x02013;';
 
 	return $code_first_year . date( 'Y' );
 
