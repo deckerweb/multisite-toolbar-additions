@@ -11,6 +11,8 @@
 
 Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Comes with extended plugin support!
 
+[<img src="https://ps.w.org/multisite-toolbar-additions/assets/banner-1544x500.png" data-canonical-src="https://ps.w.org/multisite-toolbar-additions/assets/banner-1544x500.png" width="772" height="250" />](https://wordpress.org/plugins/multisite-toolbar-additions/)
+
 
 ## Description 
 
