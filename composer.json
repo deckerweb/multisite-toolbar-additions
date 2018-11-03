@@ -4,7 +4,7 @@
   "keywords": ["toolbar", "admin bar", "adminbar", "multisite", "network", "administration", "menu", "super admin", "links", "deckerweb", "ddwtoolbar"],
   "type": "wordpress-plugin",
   "homepage": "https://github.com/deckerweb/multisite-toolbar-additions",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "David Decker",

@@ -2,12 +2,14 @@
 
 
 ### 1.6.1 - 2013-12-08 
+
 * BUGFIX: Fix check for a special Multisite function.
 * *Otherwise see below for changelog of v1.6.0*
 
 
 
 ### 1.6.0 - 2013-12-07 
+
 * UPDATE: Tweaked the adding of Network "New Content" instance, to load more reliable.
 * UPDATE: Tweaked "View Site" link for sub sites and fixed the display.
 * UPDATE: Fixed double appearance of "Themes" and "Plugins" in Network Admin, that came in WordPress 3.7+ -- decided to unhook these defaults and keep our own items - already there from v1.0.0 :-).
@@ -21,6 +23,7 @@
 
 
 ### 1.5.0 - 2013-11-21 
+
 * UPDATE: Fixed "Menu Locations" link, updated for WordPress 3.6+.
 * UPDATE: Fixed "Google Pagespeed" URL to their current used version.
 * UPDATE: In Multisite context the plugin has "Network: true" defined in plugin header that means it is only network activated (the whole sense & purpose of the plugin, anyways :).
@@ -36,6 +39,7 @@
 
 
 ### 1.4.0 - 2013-05-07 
+
 * NEW: Added filter for hook priority for the custom nav menu for super admins -- this allows you to change the position of your custom nav menu (try values between 1 and 100..., see FAQ for more info...).
 * NEW: For Sub Sites or non-Multisite installs, added links for Widgets, Nav Menus, Theme Customizer, appropriate for backend/ frontend, based on default toolbar items.
 * NEW: Added "+ New" (new content) section for the Network admin area, that contains only Network specific items for super admins, plus a few items from our supported plugins.
@@ -70,6 +74,7 @@
 
 
 ### 1.3.0 - 2013-03-21 
+
 * NEW: Added additional "Install Plugin" & "Install Theme" items to the regular "+ Add New" section. This makes it even faster and more elegant to jump to the install/ upload/ search sections!
 * NEW: Little CSS tweak for Network Admin "My Sites Menu", to remove additional border line if Network Items from this plugin here are active.
 * UPDATE: Enhanced Network wide "Plugins" & "Themes" items.
@@ -85,6 +90,7 @@
 
 
 ### 1.2.0 - 2012-11-27 
+
 * *Extended plugin support:*
  * NEW: Added support for "Snapshot" (premium, by Paul Menard (Incsub)/ WPMU DEV).
  * NEW: Added support for "Ultimate Branding" (premium, by Incsub Team/ WPMU DEV).
@@ -96,11 +102,13 @@
 
 
 ### 1.1.1 - 2012-10-05 
+
 * BUGFIX: Corrected settings link for "Multisite Language Switcher" plugin - sorry!
 
 
 
 ### 1.1.0 - 2012-09-18 
+
 * *Extended plugin support:*
  * NEW: Added support for "User Management Tools" (free, by scribu/AppThemes).
  * NEW: Added support for "Network Mass Email" (free, Kenny Zaron).
@@ -120,7 +128,8 @@
 
 
 
-### 1.0.0 - 2012-08-28 
+### 1.0.0 - 2012-08-28
+
 * *Initial release*
 * Including support for 4 Multisite aware plugins
 * Including support for 7 site specific plugins

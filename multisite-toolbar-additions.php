@@ -8,17 +8,17 @@
  * @package      Multisite Toolbar Additions
  * @author       David Decker
  * @copyright    Copyright (c) 2012-2018, David Decker - DECKERWEB
- * @license      GPL-2.0+
+ * @license      GPL-2.0-or-later
  * @link         https://deckerweb.de/twitter
  *
  * @wordpress-plugin
  * Plugin Name:  Multisite Toolbar Additions
  * Plugin URI:   https://github.com/deckerweb/multisite-toolbar-additions
  * Description:  This plugin adds a lot of useful (super) admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Also comes with extended support for third-party plugins!
- * Version:      1.9.3
+ * Version:      1.9.4
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
- * License:      GPL-2.0+
+ * License:      GPL-2.0-or-later
  * License URI:  https://opensource.org/licenses/GPL-2.0
  * Text Domain:  multisite-toolbar-additions
  * Domain Path:  /languages/
@@ -62,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'MSTBA_PLUGIN_VERSION', '1.9.3' );
+define( 'MSTBA_PLUGIN_VERSION', '1.9.4' );
 
 /** Plugin directory */
 define( 'MSTBA_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );

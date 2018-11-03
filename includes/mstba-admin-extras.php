@@ -98,7 +98,7 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 
 		?>
 			<style type="text/css">
-				tr[data-slug="multisite-toolbar-additions"] .plugin-version-author-uri a.dashicons-before:before {
+				tr[data-plugin="<?php echo $mstba_file; ?>"] .plugin-version-author-uri a.dashicons-before:before {
 					font-size: 17px;
 					margin-right: 2px;
 					opacity: .85;

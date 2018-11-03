@@ -5,8 +5,8 @@
 **Requires at least:** 3.6  
 **Tested up to:** 4.9.8  
 **Requires PHP:** 5.6  
-**Stable tag:** 1.9.3
-**License:** GPL-2.0+  
+**Stable tag:** 1.9.4
+**License:** GPL-2.0-or-later  
 **License URI:** https://opensource.org/licenses/GPL-2.0  
 
 Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Comes with extended plugin support!
@@ -383,6 +383,11 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 ## Changelog 
 
+### 1.9.4 - 2018-11-03
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
+* Tweak: Few internal code tweaks and improvements
+
+
 ### 1.9.3 - 2018-10-01
 * New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 * Update: Small internal code improvements
@@ -471,6 +476,10 @@ See packaged `changelog.txt` file in the plugin folder.
 
 
 ## Upgrade Notice 
+
+### 1.9.4
+Maintenance release. Bundled library update. Small tweaks. Update recommended.
+
 
 ### 1.9.3
 Maintenance release. Bundled library update, plus small improvements. Update recommended.
