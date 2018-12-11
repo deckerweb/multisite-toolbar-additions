@@ -3,7 +3,7 @@ Contributors: daveshine, deckerweb, wpautobahn, toolbarextras
 Donate link: https://www.paypal.me/deckerweb
 Tags: toolbar, adminbar, admin bar, multisite, network, administration, menu, super admins, links, settings, deckerweb, ddwtoolbar
 Requires at least: 3.6
-Tested up to: 4.9.8
+Tested up to: 5.0.0
 Requires PHP: 5.6
 Stable tag: 1.9.4
 License: GPL-2.0-or-later
