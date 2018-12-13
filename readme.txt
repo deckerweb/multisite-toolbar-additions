@@ -3,7 +3,7 @@ Contributors: daveshine, deckerweb, wpautobahn, toolbarextras
 Donate link: https://www.paypal.me/deckerweb
 Tags: toolbar, adminbar, admin bar, multisite, network, administration, menu, super admins, links, settings, deckerweb, ddwtoolbar
 Requires at least: 3.6
-Tested up to: 5.0.0
+Tested up to: 5.0
 Requires PHP: 5.6
 Stable tag: 1.9.4
 License: GPL-2.0-or-later
@@ -477,6 +477,7 @@ Enjoy using *Multisite Toolbar Additions*? **[Please consider making a donation]
 * [**Toolbar Extras for Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [**Polylang Connect for Elementor – Language Switcher & Template Tweaks**](https://wordpress.org/plugins/connect-polylang-elementor/)
+* [**Simple Download Manager for WP Document Revisions**](https://wordpress.org/plugins/wpdr-simple-downloads/)
 * [Genesis What's New Info](https://wordpress.org/plugins/genesis-whats-new-info/)
 * [Genesis Layout Extras](https://wordpress.org/plugins/genesis-layout-extras/)
 * [Genesis Widgetized Not Found & 404](https://wordpress.org/plugins/genesis-widgetized-notfound/)
