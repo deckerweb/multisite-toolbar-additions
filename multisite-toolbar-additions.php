@@ -7,15 +7,16 @@
  *
  * @package      Multisite Toolbar Additions
  * @author       David Decker
- * @copyright    Copyright (c) 2012-2018, David Decker - DECKERWEB
+ * @copyright    Copyright (c) 2012-2019, David Decker - DECKERWEB
  * @license      GPL-2.0-or-later
  * @link         https://deckerweb.de/twitter
+ * @link         https://www.facebook.com/groups/deckerweb.wordpress.plugins/
  *
  * @wordpress-plugin
  * Plugin Name:  Multisite Toolbar Additions
  * Plugin URI:   https://github.com/deckerweb/multisite-toolbar-additions
  * Description:  This plugin adds a lot of useful (super) admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Also comes with extended support for third-party plugins!
- * Version:      1.9.4
+ * Version:      2.0.0
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
  * License:      GPL-2.0-or-later
@@ -26,7 +27,7 @@
  * Requires WP:  4.7
  * Requires PHP: 5.6
  *
- * Copyright (c) 2012-2018 David Decker - DECKERWEB
+ * Copyright (c) 2012-2019 David Decker - DECKERWEB
  *
  *     This file is part of Multisite Toolbar Additions,
  *     a plugin for WordPress.
@@ -62,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'MSTBA_PLUGIN_VERSION', '1.9.4' );
+define( 'MSTBA_PLUGIN_VERSION', '2.0.0' );
 
 /** Plugin directory */
 define( 'MSTBA_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -128,13 +129,13 @@ add_action( 'init', 'ddw_mstba_init', 1 );
  * Load admin helper functions - only within 'wp-admin'.
  * Add a WordPress custom menu to the toolbar - only do and display stuff for super admins.
  *
- * @see   ddw_mstba_build_custom_menu()
+ * @see ddw_mstba_build_custom_menu()
  *
  * @since 1.0.0
  *
- * @uses  load_textdomain() To load translations first from WP_LANG_DIR sub folder.
- * @uses  load_plugin_textdomain() To additionally load default translations from plugin folder (default).
- * @uses  ddw_mstba_menu_hook_priority() For (optionally) setting the hook priority via filter.
+ * @uses load_textdomain() To load translations first from WP_LANG_DIR sub folder.
+ * @uses load_plugin_textdomain() To additionally load default translations from plugin folder (default).
+ * @uses ddw_mstba_menu_hook_priority() For (optionally) setting the hook priority via filter.
  */
 function ddw_mstba_init() {
 
@@ -236,9 +237,9 @@ add_action( 'wp_before_admin_bar_render', 'ddw_mstba_toolbar_main_site_remove_vi
 /**
  * Remove original 'View Site' for main site within Network Admin.
  *
- * @see    ddw_mstba_toolbar_main_site_dashboard()
+ * @see ddw_mstba_toolbar_main_site_dashboard()
  *
- * @since  1.2.0
+ * @since 1.2.0
  *
  * @global mixed $wp_admin_bar
  */
@@ -283,10 +284,10 @@ add_action( 'admin_bar_menu', 'ddw_mstba_toolbar_main_site_dashboard' );
 /**
  * Adding 'Dashboard' for main site within Network Admin.
  *
- * @since  1.2.0
+ * @since 1.2.0
  *
- * @uses   ddw_mstba_string_dashboard()
- * @uses   WP_Admin_Bar::add_node()
+ * @uses ddw_mstba_string_dashboard()
+ * @uses WP_Admin_Bar::add_node()
  *
  * @global mixed $wp_admin_bar
  */
@@ -358,11 +359,11 @@ add_action( 'admin_bar_menu', 'ddw_mstba_toolbar_additions', 99 );
 /**
  * Add new menu items to the WordPress Toolbar / Admin Bar.
  * 
- * @since  1.0.0
+ * @since 1.0.0
  *
- * @uses   WP_Admin_Bar::remove_node()
- * @uses   WP_Admin_Bar::add_node()
- * @uses   WP_Admin_Bar::add_group()
+ * @uses WP_Admin_Bar::remove_node()
+ * @uses WP_Admin_Bar::add_node()
+ * @uses WP_Admin_Bar::add_group()
  *
  * @global mixed $wp_admin_bar
  */
@@ -525,15 +526,26 @@ function ddw_mstba_toolbar_additions() {
 
 		}  // end if constant check
 
+		/** Plugin Installer */
 		$mstba_tb_items[ 'addnew_plugin' ] = array(
 			'parent' => $addnewgroup,
 			'title'  => __( 'Install Plugin', 'multisite-toolbar-additions' ),
-			'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=dashboard' ) ),
+			'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=featured' ) ),
 			'meta'   => array(
 				'target' => '',
 				'title'  => __( 'Install Plugin - Search via WordPress.org', 'multisite-toolbar-additions' )
 			)
 		);
+
+			$mstba_tb_items[ 'addnew_plugin_search' ] = array(
+				'parent' => $addnew_plugin,
+				'title'  => __( 'Search Plugin Directory', 'multisite-toolbar-additions' ),
+				'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=recommended' ) ),
+				'meta'   => array(
+					'target' => '',
+					'title'  => __( 'Search WordPress.org Plugin Directory', 'multisite-toolbar-additions' )
+				)
+			);
 
 			$mstba_tb_items[ 'addnew_plugin_upload' ] = array(
 				'parent' => $addnew_plugin,
@@ -542,6 +554,16 @@ function ddw_mstba_toolbar_additions() {
 				'meta'   => array(
 					'target' => '',
 					'title'  => __( 'Install Plugin - Upload ZIP file', 'multisite-toolbar-additions' )
+				)
+			);
+
+			$mstba_tb_items[ 'addnew_plugin_newest' ] = array(
+				'parent' => $addnew_plugin,
+				'title'  => __( 'Newest Plugins', 'multisite-toolbar-additions' ),
+				'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=new' ) ),
+				'meta'   => array(
+					'target' => '',
+					'title'  => __( 'Newest Plugins added on WordPress.org', 'multisite-toolbar-additions' )
 				)
 			);
 
@@ -570,6 +592,7 @@ function ddw_mstba_toolbar_additions() {
 				)
 			);
 
+		/** Theme Installer */
 		$mstba_tb_items[ 'addnew_theme' ] = array(
 			'parent' => $addnewgroup,
 			'title'  => __( 'Install Theme', 'multisite-toolbar-additions' ),
@@ -580,13 +603,43 @@ function ddw_mstba_toolbar_additions() {
 			)
 		);
 
+			$mstba_tb_items[ 'addnew_theme_search' ] = array(
+				'parent' => $addnew_theme,
+				'title'  => __( 'Search Theme Directory', 'multisite-toolbar-additions' ),
+				'href'   => esc_url( network_admin_url( 'theme-install.php' ) ),	//ddw_mstba_theme_upload_link(),
+				'meta'   => array(
+					'target' => '',
+					'title'  => __( 'Search WordPress Theme Directory', 'multisite-toolbar-additions' )
+				)
+			);
+
 			$mstba_tb_items[ 'addnew_theme_upload' ] = array(
 				'parent' => $addnew_theme,
 				'title'  => __( 'Upload ZIP file', 'multisite-toolbar-additions' ),
-				'href'   => ddw_mstba_theme_upload_link(),
+				'href'   => esc_url( network_admin_url( 'theme-install.php?tab=mstba-upload' ) ),	//ddw_mstba_theme_upload_link(),
 				'meta'   => array(
 					'target' => '',
 					'title'  => __( 'Install Theme - Upload ZIP file', 'multisite-toolbar-additions' )
+				)
+			);
+
+			$mstba_tb_items[ 'addnew_theme_newest' ] = array(
+				'parent' => $addnew_theme,
+				'title'  => __( 'Newest Themes', 'multisite-toolbar-additions' ),
+				'href'   => esc_url( network_admin_url( 'theme-install.php?browse=new' ) ),
+				'meta'   => array(
+					'target' => '',
+					'title'  => __( 'Newest Themes added on WordPress.org', 'multisite-toolbar-additions' )
+				)
+			);
+
+			$mstba_tb_items[ 'addnew_theme_favorites' ] = array(
+				'parent' => $addnew_theme,
+				'title'  => __( 'Install Favorites', 'multisite-toolbar-additions' ),
+				'href'   => esc_url( network_admin_url( 'theme-install.php?browse=favorites' ) ),
+				'meta'   => array(
+					'target' => '',
+					'title'  => __( 'Install Theme - Favorites (via WordPress.org)', 'multisite-toolbar-additions' )
 				)
 			);
 
@@ -731,12 +784,12 @@ add_action( 'wp_before_admin_bar_render', 'ddw_mstba_toolbar_subsite_items' );
 /**
  * Adding subsite items within "My Sites/[Site Name]"
  *
- * @since  1.0.0
+ * @since 1.0.0
  *
- * @uses   $blog To get Site ID.
- * @uses   WP_Admin_Bar::remove_node()
- * @uses   WP_Admin_Bar::add_node()
- * @uses   get_admin_url()
+ * @uses $blog To get Site ID.
+ * @uses WP_Admin_Bar::remove_node()
+ * @uses WP_Admin_Bar::add_node()
+ * @uses get_admin_url()
  *
  * @global mixed $wp_admin_bar
  */
@@ -911,9 +964,7 @@ function ddw_mstba_toolbar_subsite_items() {
 /**
  * Helper function for custom deactivation of ddw_mstba_network_new_content_helper() items.
  *
- * @since  1.4.0
- *
- * @uses   __return_true() WordPress helper function, to return 'TRUE'.
+ * @since 1.4.0
  *
  * @return bool 
  */
@@ -956,9 +1007,9 @@ add_action( 'admin_head', 'ddw_mstba_admin_style' );
  * 
  * @since 1.3.0
  *
- * @uses  is_admin_bar_showing()
- * @uses  is_user_logged_in()
- * @uses  MSTBA_DISPLAY_NETWORK_EXTEND_GROUP Our helper constant.
+ * @uses is_admin_bar_showing()
+ * @uses is_user_logged_in()
+ * @uses MSTBA_DISPLAY_NETWORK_EXTEND_GROUP Our helper constant.
  */
 function ddw_mstba_admin_style() {
 

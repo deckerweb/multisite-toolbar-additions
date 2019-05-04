@@ -87,20 +87,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	}  // end if
 
-	/** Add "Menu Locations" item for WordPress 3.6+ */
-	if ( function_exists( 'get_attached_media' ) ) {
-
-		$mstba_tb_items[ 'navmenus-locations' ] = array(
-			'parent' => is_admin() ? $navmenus : 'menus',
-			'title'  => __( 'Menu Locations', 'multisite-toolbar-additions' ),
-			'href'   => admin_url( 'nav-menus.php?action=locations' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => _x( 'Menu Locations', 'Translators: For the tooltip', 'multisite-toolbar-additions' )
-			)
-		);
-
-	}  // end if
+	$mstba_tb_items[ 'navmenus-locations' ] = array(
+		'parent' => is_admin() ? $navmenus : 'menus',
+		'title'  => __( 'Menu Locations', 'multisite-toolbar-additions' ),
+		'href'   => admin_url( 'nav-menus.php?action=locations' ),
+		'meta'   => array(
+			'target' => '',
+			'title'  => _x( 'Menu Locations', 'Translators: For the tooltip', 'multisite-toolbar-additions' )
+		)
+	);
 
 	$mstba_tb_items[ 'edit-pages' ] = array(
 		'parent' => is_admin() ? $mcbase : $sitegroup,
@@ -219,17 +214,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	/** Special external tools - Site-specific */
 	$mstba_tb_items[ 'view_site_pingdom' ] = array(
 		'parent' => is_network_admin() ? 'ddw-mstba-main-site-view' : ( is_admin() ? $view_site : 'dashboard' ),
-		'title'  => __( 'Pingdom Speed Test', 'multisite-toolbar-additions' ),
-		'href'   => esc_url( 'http://tools.pingdom.com/fpt/#!/' . home_url( '/' ) ),
+		'title'  => __( 'Pingdom Tools', 'multisite-toolbar-additions' ),
+		'href'   => 'https://tools.pingdom.com/',	//esc_url( 'http://tools.pingdom.com/fpt/#!/' . home_url( '/' ) ),
 		'meta'   => array(
-			'title' => __( 'Pingdom Speed Test', 'multisite-toolbar-additions' )
+			'title' => __( 'Pingdom Tools - Check Your URL', 'multisite-toolbar-additions' )
 		)
 	);
 
 	$mstba_tb_items[ 'view_site_googlepagespeed' ] = array(
 		'parent' => is_network_admin() ? 'ddw-mstba-main-site-view' : ( is_admin() ? $view_site : 'dashboard' ),
 		'title'  => __( 'Google Page Speed', 'multisite-toolbar-additions' ),
-		'href'   => esc_url( 'http://developers.google.com/speed/pagespeed/insights/?url=' . home_url( '/' ) ),
+		'href'   => esc_url( 'https://developers.google.com/speed/pagespeed/insights/?url=' . home_url( '/' ) ),
 		'meta'   => array(
 			'title' => __( 'Google Page Speed', 'multisite-toolbar-additions' )
 		)

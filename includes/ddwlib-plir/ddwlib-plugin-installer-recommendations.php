@@ -3,7 +3,7 @@
 /**
  * DDWlib Plugin Installer Recommendations
  *
- * Copyright (C) 2018 David Decker - DECKERWEB <https://deckerweb.de>
+ * Copyright (C) 2018-2019 David Decker - DECKERWEB <https://deckerweb.de>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@
  * @package DDWlib Plugin Installer Recommendations
  * @author  David Decker
  * @license http://www.gnu.org/licenses GNU General Public License
- * @version 1.2.0
+ * @version 1.4.0
  * @link    https://github.com/deckerweb/ddwlib-plugin-installer-recommendations
  */
 
@@ -53,6 +53,16 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 	class DDWlib_Plugin_Installer_Recommendations {
 
 		/**
+		 * Class version.
+		 *
+		 * @access private
+		 *
+		 * @since 1.3.0
+		 */
+		private static $version = '1.4.0';
+
+
+		/**
 		 * Constructor. Hooks all interactions into correct areas to start the class.
 		 *
 		 * @since 1.0.0
@@ -60,42 +70,37 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 */
 		public function __construct() {
 
-			/** Re-add hidden "Newest" tab */
-			add_filter(
-				'install_plugins_tabs',
-				array( 'DDWlib_Plugin_Installer_Recommendations', 'plugin_installer_tweak_tabs' ),
-				5,
-				1
-			);
+			/** Tabs: Re-add hidden "Newest" / Add deckerweb Plugins tab */
+			add_filter( 'install_plugins_tabs', array( 'DDWlib_Plugin_Installer_Recommendations', 'plugin_installer_tweak_tabs' ), 5, 1 );
 
 			/** Add version number to plugin cards */
-			add_filter(
-				'plugin_install_action_links',
-				array( 'DDWlib_Plugin_Installer_Recommendations', 'plugin_install_action_links' ),
-				10,
-				2
-			);
+			add_filter( 'plugin_install_action_links', array( 'DDWlib_Plugin_Installer_Recommendations', 'plugin_install_action_links' ), 10, 2 );
 
 			/** Filter Plugins API results (the main purpose!) */
-			add_filter(
-				'plugins_api_result',
-				array( 'DDWlib_Plugin_Installer_Recommendations', 'plugins_api_result' ),
-				11,
-				3
-			);
+			add_filter( 'plugins_api_result', array( 'DDWlib_Plugin_Installer_Recommendations', 'plugins_api_result' ), 11, 3 );
+
+
+			/** Deckerweb Plugins tab (Installer page) */
+			add_filter( 'install_plugins_table_api_args_ddwplugins', array( 'DDWlib_Plugin_Installer_Recommendations', 'install_plugins_table_api_args_ddwplugins' ), 1 );
+			add_action( 'install_plugins_ddwplugins', array( 'DDWlib_Plugin_Installer_Recommendations', 'install_plugins_ddwplugins' ) );
+
 
 			/** Style tweaks for Plugin & Theme Installer */
-			add_action(
-				'admin_head-plugin-install.php',
-				array( 'DDWlib_Plugin_Installer_Recommendations', 'installer_styles' ),
-				15
-			);
+			add_action( 'admin_enqueue_scripts', array( 'DDWlib_Plugin_Installer_Recommendations', 'register_styles' ) );
+			add_action( 'admin_head-plugin-install.php', array( 'DDWlib_Plugin_Installer_Recommendations', 'installer_styles' ), 15 );
+			add_action( 'admin_head-theme-install.php', array( 'DDWlib_Plugin_Installer_Recommendations', 'installer_styles' ), 15 );
 
-			add_action(
-				'admin_head-theme-install.php',
-				array( 'DDWlib_Plugin_Installer_Recommendations', 'installer_styles' ),
-				15
-			);
+
+			/** Deckerweb Plugins view on Plugins page */
+			add_filter( 'show_advanced_plugins', array( 'DDWlib_Plugin_Installer_Recommendations', 'filter_ddwplugins' ), 100 );
+			add_filter( 'show_network_active_plugins', array( 'DDWlib_Plugin_Installer_Recommendations', 'filter_ddwplugins' ), 100 );
+
+			add_action( 'check_admin_referer', array( 'DDWlib_Plugin_Installer_Recommendations', 'filter_ddwplugins_referer' ), 10, 2 );
+
+			add_filter( 'views_plugins', array( 'DDWlib_Plugin_Installer_Recommendations', 'plugins_view_ddwplugins' ) );
+			add_filter( 'views_plugins-network', array( 'DDWlib_Plugin_Installer_Recommendations', 'plugins_view_ddwplugins' ) );
+
+			add_filter( 'all_plugins', array( 'DDWlib_Plugin_Installer_Recommendations', 'prepare_plugins_view_ddwplugins' ) );
 
 		}  // end method
 
@@ -103,7 +108,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		/**
 		 * Define the query fields to be used for the API request.
 		 *
-		 * @since  1.0.0
+		 * @since 1.0.0
 		 *
 		 * @return array Array of query fields as Plugins API arguments.
 		 */
@@ -127,7 +132,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 *   Can be filtered by plugins & themes via the filter:
 		 *   'ddwlib_parr/filter/plugins'
 		 *
-		 * @since  1.0.0
+		 * @since 1.0.0
 		 *
 		 * @return array Filterable array of recommended plugins.
 		 */
@@ -265,7 +270,6 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 					'popular'     => 'yes',
 				),
 				'antispam-bee' => array(
-					'slug'        => 'antispam-bee',
 					'featured'    => 'no',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
@@ -301,9 +305,9 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 *   the appropiate array key ('featured', 'recommended', 'popular') set
 		 *   to 'yes'.
 		 *
-		 * @since  1.0.0
+		 * @since 1.0.0
 		 *
-		 * @param  string $tab The tab of the plugin installer (as array key).
+		 * @param string $tab The tab of the plugin installer (as array key).
 		 * @return array Array of plugins for the specified tab with the proper
 		 *               Plugins API arguments.
 		 */
@@ -312,6 +316,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 			/** Prepare data & values */
 			$plugins = (array) DDWlib_Plugin_Installer_Recommendations::recommended_plugins();
 			$fields  = (array) DDWlib_Plugin_Installer_Recommendations::query_fields();
+			$tab     = sanitize_key( $tab );
 
 			/** Set array */
 			$get_plugins = array();
@@ -319,12 +324,14 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 			/** Loop through plugin data arguments */
 			foreach ( $plugins as $plugin_slug => $plugin_data ) {
 
-				if ( 'yes' === $plugin_data[ sanitize_key( $tab ) ] ) {
+				if ( 'yes' === $plugin_data[ $tab ] ) {
 
-					$get_plugins[ sanitize_key( $plugin_slug ) ] = plugins_api(
+					$plugin_slug = sanitize_key( $plugin_slug );
+
+					$get_plugins[ $plugin_slug ] = plugins_api(
 						'plugin_information',
 						array(
-							'slug'   => sanitize_key( $plugin_slug ),
+							'slug'   => $plugin_slug,
 							'fields' => $fields,
 						)
 					);
@@ -343,12 +350,11 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 * Filter plugin fetching API results to inject multiple plugin recommendations
 		 *   - all via WordPress.org Plugin Directory.
 		 *
-		 * @since   1.0.0
+		 * @since 1.0.0
 		 * 
-		 * @param   object|WP_Error $result Response object or WP_Error.
-		 * @param   string          $action The type of information being requested from the Plugin Install API.
-		 * @param   object          $args   Plugin API arguments.
-		 *
+		 * @param object|WP_Error $result Response object or WP_Error.
+		 * @param string          $action The type of information being requested from the Plugin Install API.
+		 * @param object          $args   Plugin API arguments.
 		 * @return array Updated array of results.
 		 */
 		static function plugins_api_result( $result, $action, $args ) {
@@ -395,7 +401,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		/**
 		 * Set needed default strings, make them filterable for plugins.
 		 *
-		 * @since  1.1.0
+		 * @since 1.1.0
 		 *
 		 * @return array Filterable array of strings.
 		 */
@@ -404,8 +410,18 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 			return apply_filters(
 				'ddwlib_plir/filter/strings/plugin_installer',
 				array(
-					'newest'  => 'Newest',
-					'version' => 'Version',
+					'newest'         => 'Newest',
+					'version'        => 'Version',
+					'ddwplugins_tab' => 'deckerweb Plugins',
+					'tab_title'      => 'deckerweb Plugins',
+					'tab_slogan'     => 'Great helper tools for Site Builders to save time and get more productive',
+					'tab_info'       => sprintf(
+						'You can use any of our free plugins or premium plugins from %s',
+						'<a href="https://deckerweb-plugins.com/" target="_blank" rel="nofollow noopener noreferrer">deckerweb Plugins</a>'
+					),
+					'tab_newsletter' => 'Join our newsletter',
+					'tab_fbgroup'    => 'Facebook User Group',
+					'plugins_view'   => 'deckerweb',
 				)
 			);
 
@@ -418,23 +434,23 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 *   Note: The render function for the tab is still part of WordPress
 		 *         Core!
 		 *
-		 * @since  1.1.0
+		 * @since 1.1.0
+		 * @since 1.3.0 Added 'deckerweb Plugins' tab.
 		 *
-		 * @param  array $tabs Array of plugin installer tabs.
+		 * @param array $tabs Array of plugin installer tabs.
 		 * @return array Tweaked array of tabs for plugin installer toolbar.
 		 */
 		static function plugin_installer_tweak_tabs( $tabs ) {
-
-			/** Bail early if plugin "Cleaner Plugin Installer" is active */
-			if ( defined( 'CLPINST_PLUGIN_VERSION' ) ) {
-				return $tabs;
-			}
 
 			/** Get array of label strings */
 			$labels = DDWlib_Plugin_Installer_Recommendations::get_strings();
 
 			/** Re-enable hidden tab from core */
-			$tabs[ 'new' ] = esc_attr( $labels[ 'newest' ] );
+			if ( ! defined( 'CLPINST_PLUGIN_VERSION' ) ) {
+				$tabs[ 'new' ] = esc_attr( $labels[ 'newest' ] );
+			}
+
+			$tabs[ 'ddwplugins' ] = esc_attr( $labels[ 'ddwplugins_tab' ] );
 
 			/** Return tweaked tabs array */
 			return $tabs;
@@ -445,10 +461,10 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		/**
 		 * Add plugin version to plugin card overview.
 		 *
-		 * @since  1.1.0
+		 * @since 1.1.0
 		 *
-		 * @param  array $action_links Collected action links in plugin card.
-		 * @param  array $plugin       Values from Plugins API for each plugin.
+		 * @param array $action_links Collected action links in plugin card.
+		 * @param array $plugin       Values from Plugins API for each plugin.
 		 * @return array $action_links Array of tweaked action links in plugin
 		 *                             card.
 		 */
@@ -476,6 +492,155 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 
 
 		/**
+		 * Get URI. - Helper method to get proper file path URI.
+		 *
+		 * @since 1.3.0
+		 *
+		 * @return mixed URL.
+		 */
+		public static function _get_uri() {
+
+			$path       = wp_normalize_path( dirname( __FILE__ ) );
+			$theme_dir  = wp_normalize_path( get_template_directory() );
+			$plugin_dir = wp_normalize_path( WP_PLUGIN_DIR );
+
+			if ( strpos( $path, $theme_dir ) !== FALSE ) {
+
+				return trailingslashit( get_template_directory_uri() . str_replace( $theme_dir, '', $path ) );
+
+			} elseif ( strpos( $path, $plugin_dir ) !== FALSE ) {
+
+				return plugin_dir_url( __FILE__ );
+
+			} elseif ( strpos( $path, dirname( plugin_basename( __FILE__ ) ) ) !== FALSE ) {
+
+				return plugin_dir_url( __FILE__ );
+
+			}  // end if
+
+			return;
+
+		}  // end method
+
+
+		/**
+		 * Set the API params for the installer tab 'ddwplugins'.
+		 *
+		 * @since 1.3.0
+		 *
+		 * @global string $paged
+		 * @global string $tab
+		 *
+		 * @return array $args Modified array of arguments for this tab
+		 *                     ('ddwplugins').
+		 */
+		static function install_plugins_table_api_args_ddwplugins() {
+
+			global $paged, $tab;
+
+			wp_reset_vars( array( 'tab' ) );
+
+			$defined_class = new WP_Plugin_Install_List_Table();
+			$paged         = $defined_class->get_pagenum();
+
+			$per_page = 30;
+
+			$args = array(
+				'page'     => $paged,
+				'per_page' => $per_page,
+				'fields'   => array(
+					'last_updated'    => TRUE,
+					'icons'           => TRUE,
+					'active_installs' => TRUE
+				),
+
+				// Send the locale and installed plugin slugs to the API so it can provide context-sensitive results.
+				'locale'   => get_user_locale(),
+			);
+
+			/** Add author filter for our plugins */
+			$args[ 'author' ] = 'wpautobahn';
+
+			return $args;
+
+		}  // end method
+
+
+		/**
+		 * Render the installer tab 'ddwplugins'.
+		 *
+		 * @since 1.3.0
+		 *
+		 * @global string $GLOBALS[ 'tab' ]
+		 * @global object $GLOBALS[ 'wp_list_table' ]
+		 */
+		static function install_plugins_ddwplugins() {
+
+			/** Get array of label strings */
+			$labels = DDWlib_Plugin_Installer_Recommendations::get_strings();
+
+			/** Build output */
+			$output = sprintf(
+				'<div class="ddwplugins-preface">
+					<a href="https://deckerweb-plugins.com/" target="_blank" rel="nofollow noopener noreferrer">
+						<img class="ddwplugins-logo" src="%1$s" width="%2$s" height="%2$s" alt="Logo deckerweb Plugins" />
+					</a>
+					<div class="ddwplugins-text">
+						<h3>%3$s</h3>
+						<h4>%4$s</h4>
+						<p>%5$s</p>
+						<p><a class="button" href="https://www.facebook.com/groups/deckerweb.wordpress.plugins/" target="_blank" rel="nofollow noopener noreferrer">%6$s</a> &nbsp; <a class="button" href="https://eepurl.com/gbAUUn" target="_blank" rel="nofollow noopener noreferrer">%7$s</a></p>
+					</div>
+				</div><div class="clear"></div>',
+				self::_get_uri() . 'deckerweb-plugins-logo.png',	// 1
+				'150',												// 2
+				esc_attr( $labels[ 'ddwplugins_tab' ] ),			// 3
+				esc_attr( $labels[ 'tab_slogan' ] ),				// 4
+				wp_kses_post( $labels[ 'tab_info' ] ),				// 5
+				esc_attr( $labels[ 'tab_fbgroup' ] ),				// 6
+				esc_attr( $labels[ 'tab_newsletter' ] )				// 7
+			);
+
+			/** Render output */
+			if ( 'ddwplugins' === $GLOBALS[ 'tab' ] && 'search' !== $GLOBALS[ 'tab' ] ) {
+
+				echo $output;
+
+			} else {
+
+				echo '';
+
+			}  // end if
+
+			/** Render plugin list table form based on API args */
+			?>
+				<form id="plugin-filter" method="post">
+					<?php $GLOBALS[ 'wp_list_table' ]->display(); ?>
+				</form>
+			<?php
+
+		}  // end method
+
+
+		/**
+		 * Enqueue Scripts.
+		 *
+		 * @since 1.3.0
+		 *
+		 * @return void
+		 */
+		static function register_styles() {
+
+			wp_register_style(
+				'ddwlib-plir-styles',
+				self::_get_uri() . 'ddwlib-plir-styles.css',
+				array(),
+				self::$version
+			);
+
+		}  // end method
+
+		/**
 		 * Add (CSS inline) style tweaks to the following areas:
 		 *   - Plugin cards (plugin installer results)
 		 *   - Plugin uploader
@@ -483,6 +648,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 *
 		 * @since 1.1.0
 		 * @since 1.2.0 Added more styles for plugin cards. Dark mode support.
+		 * @since 1.3.0 Moved CSS into own stylesheet. WP Enqueue declaration.
 		 */
 		static function installer_styles() {
 
@@ -491,117 +657,149 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 				return;
 			}
 
-			/** Add CSS inline styles */
-			?>
-				<style type="text/css">
-					/** Plugin cards */
-					.plugin-card:hover {
-						background: #ffffd9;
-						border: 1px solid #bbb;
-					}
-					.plugin-card-bottom {
-						background: #f2f2f2;
-					}
-					.plugin-card:hover > .plugin-card-bottom {
-						background: #e1e1e1;
-					}
-					.plugin-install-php .tablenav .tablenav-pages {
-						margin-top: 15px;
-						margin-bottom: 15px;
-					}
-					.plugin-action-buttons div small {
-						margin-left: 10px;
-					}
+			wp_enqueue_style( 'ddwlib-plir-styles' );
 
-					.dark-mode .plugin-card:hover {
-						background: #404C58 !important;
-						border-color: #090909 !important;
-					}
-					.dark-mode .plugin-card:hover > .plugin-card-bottom {
-						background: #111921 !important;
-					}
-					.dark-mode .plugin-action-buttons div small {
-						color: #bbc8d4;
-					}
+		}  // end method
 
-					/** Plugin cards: buttons */
-					#wpwrap .plugin-action-buttons .button-disabled {
-						background-color: #d9edc2 !important;
-						border-color: #b2ce96 !important;
-						color: #555 !important;
-					}
-					.plugin-action-buttons .update-now,
-					.plugin-action-buttons .install-now.updating-message {
-						background-color: #fef5c4;
-					}
-					.plugin-action-buttons .activate-now,
-					.plugin-action-buttons .activate-now:focus,
-					.dark-mode .plugin-action-buttons .activate-now,
-					.dark-mode .plugin-action-buttons .activate-now:focus, {
-						background-color: #e2e2f9;
-						border-color: #bebde9;
-						color: #333;
-					}
-					.plugin-action-buttons a.activate-now:before {
-						color: #999;  /* #f56e28; */
-						content: "\f106";
-						display: inline-block;
-						font: 400 20px/1 dashicons;
-						margin: 3px 5px 0 -2px;
-						speak: none;
-						-webkit-font-smoothing: antialiased;
-						-moz-osx-font-smoothing: grayscale;
-						vertical-align: top;
-					}
 
-					/** Plugin cards: compatibility */
-					.plugin-card .compatibility-compatible:before,
-					.plugin-card .compatibility-compatible strong {
-						color: #0b0 !important;
-					}
-					.plugin-card .compatibility-incompatible:before,
-					.plugin-card .compatibility-incompatible strong {
-						color: #f00 !important;
-					}
+		/**
+		 * For new view on Plugins page create the filter logic - this will
+		 *   group/show all plugins by deckerweb.
+		 *
+		 * @since 1.4.0
+		 *
+		 * @global object $plugins
+		 *
+		 * @param bool $plugin_menu Whether to show advanced menu or not.
+		 * @return mixed
+		 */
+		static function filter_ddwplugins( $plugin_menu ) {
 
-					/** Plugin & Theme uploaders */
-					.upload-plugin .wp-upload-form,
-					.upload-theme .wp-upload-form {
-    					padding: 20px;
-    					margin: 20px auto;
-    					max-width: 80%;
-    					text-align: center;
-					}
-					input#pluginzip,
-					input#themezip {
-					    background-color: #ffffe8;
-					    border: 4px dashed #b4b9be;
-					    display: inline-block;
-					    font-size: 135%;
-					    padding: 20px;
-					    width: 100% !important;
-					}
-					input#pluginzip:hover,
-					input#themezip:hover {
-					    background-color: #ffffd9;
-					}
-					input#install-plugin-submit,
-					input#install-theme-submit {
-						display: inline-block;
-						font-size: 120%;
-						margin-top: 20px;
-					}
-					.dark-mode input#pluginzip,
-					.dark-mode input#themezip {
-						background-color: #404C58;
-						border-color: #23282d;
-					}
-					.dark-mode input#pluginzip:hover,
-					.dark-mode input#themezip:hover {
-					    background-color: #50626f;
-					}
-				</style>
-			<?php
+			global $plugins;
+
+			if ( is_array( $plugins ) ) {
+
+				foreach ( $plugins[ 'all' ] as $plugin_slug => $plugin_data ) {
+
+					if ( FALSE !== strpos( $plugin_data[ 'AuthorName' ], 'David Decker' ) || FALSE !== strpos( $plugin_data[ 'AuthorName' ], 'DECKERWEB' ) ) {
+
+						$plugins[ 'ddwplugins' ][ $plugin_slug ]             = $plugins[ 'all' ][ $plugin_slug ];
+						$plugins[ 'ddwplugins' ][ $plugin_slug ][ 'plugin' ] = $plugin_slug;
+
+						/** replicate the next step. */
+						if ( current_user_can( 'update_plugins' ) ) {
+
+							$current = get_site_transient( 'update_plugins' );
+
+							if ( isset( $current->response[ $plugin_slug ] ) ) {
+								$plugins[ 'ddwplugins' ][ $plugin_slug ][ 'update' ] = TRUE;
+							}
+
+						}  // end if user permission check
+
+					}  // end if Plugin Name/Data check
+
+				}  // end foreach
+
+			}  // end if Array check
+
+			return $plugin_menu;
+
+		}  // end method
+
+
+		/**
+		 * Check for proper admin referer to only set "deckerweb" view if
+		 *   conditions are met.
+		 *
+		 * @since 1.4.0
+		 *
+		 * @global string $status
+		 *
+		 * @param string    $action The nonce action.
+		 * @param false|int $result Result of the nonce.
+		 */
+		static function filter_ddwplugins_referer( $action, $result ) {
+
+			if ( ! function_exists( 'get_current_screen' ) ) {
+				return;
+			}
+
+			$screen = get_current_screen();
+
+			if ( is_object( $screen )
+				&& 'plugins' === $screen->base
+				&& ! empty( $_REQUEST[ 'plugin_status' ] ) && 'ddwplugins' === sanitize_key( wp_unslash( $_REQUEST[ 'plugin_status' ] ) )
+			) {
+
+				global $status;
+
+				$status = 'ddwplugins';
+
+			}  // end if
+
+		}  // end method
+
+
+		/**
+		 * Make the "deckerweb" view as an default view (menu) and update the
+		 *   view/menu name.
+		 *
+		 * @since 1.4.0
+		 *
+		 * @uses DDWlib_Plugin_Installer_Recommendations::get_strings()
+		 *
+		 * @param string[] $views Array that holds all views.
+		 * @return mixed
+		 */
+		static function plugins_view_ddwplugins( $views ) {
+
+			global $status, $plugins;
+
+			if ( ! empty( $plugins[ 'ddwplugins' ] ) ) {
+
+				$class = '';
+
+				if ( 'ddwplugins' === $status ) {
+					$class = 'current';
+				}
+
+				/** Get array of label strings */
+				$labels = DDWlib_Plugin_Installer_Recommendations::get_strings();
+
+				$views[ 'ddwplugins' ] = sprintf(
+					'<a class="%s" href="plugins.php?plugin_status=ddwplugins"> %s <span class="count">(%s) </span></a>',
+					$class,
+					esc_attr( $labels[ 'plugins_view' ] ),	// "deckerweb"
+					absint( count( $plugins[ 'ddwplugins' ] ) )
+				);
+			}
+
+			return $views;
+
+		}  // end method
+
+
+		/**
+		 * Set the "deckerweb" as the main view (menu) when admin click on the
+		 *   "deckerweb" view on Plugins page.
+		 *
+		 * @since 1.4.0
+		 *
+		 * @global string $status
+		 *
+		 * @param array $plugins Array of plugins to display in the list table.
+		 * @return mixed
+		 */
+		static function prepare_plugins_view_ddwplugins( $plugins ) {
+
+			global $status;
+
+			if ( isset( $_REQUEST[ 'plugin_status' ] ) && 'ddwplugins' === sanitize_key( wp_unslash( $_REQUEST[ 'plugin_status' ] ) ) ) {
+				$status = 'ddwplugins';
+			}
+
+			return $plugins;
 
 		}  // end method
 
@@ -621,7 +819,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 *
 		 * @since 1.0.0
 		 *
-		 * @uses  DDWlib_Plugin_Installer_Recommendations()
+		 * @uses DDWlib_Plugin_Installer_Recommendations()
 		 */
 		function ddwlib_plir_admin_init() {
 

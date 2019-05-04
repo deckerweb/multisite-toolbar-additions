@@ -26,10 +26,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Add "Custom Menu" link to plugin page.
  *
- * @since  1.0.0
- * @since  1.9.2 Improvements and tweaks.
+ * @since 1.0.0
+ * @since 1.9.2 Improvements and tweaks.
  *
- * @param  $mstba_links
+ * @param $mstba_links
  * @return strings $mstba_links Menu Admin link.
  */
 function ddw_mstba_custom_menu_link( $mstba_links ) {
@@ -39,9 +39,9 @@ function ddw_mstba_custom_menu_link( $mstba_links ) {
 
 		/** Menus Page link */
 		$mstba_menu_link = sprintf(
-			'<a class="dashicons-before dashicons-menu" href="%s" title="%s">%s</a>',
+			'<a href="%1$s" title="%2$s"><span class="dashicons-before dashicons-menu"></span> %3$s</a>',
 			esc_url( admin_url( 'nav-menus.php' ) ),
-			esc_html__( 'Setup a custom toolbar menu', 'multisite-toolbar-additions' ),
+			esc_html__( 'Setup a custom Toolbar menu', 'multisite-toolbar-additions' ),
 			esc_attr__( 'Custom Menu', 'multisite-toolbar-additions' )
 		);
 
@@ -51,7 +51,7 @@ function ddw_mstba_custom_menu_link( $mstba_links ) {
 		if ( is_multisite() && ! is_network_admin() ) {
 
 			$mstba_network_link = sprintf(
-				'<a class="dashicons-before dashicons-admin-network" href="%s" title="%s">%s</a>',
+				'<a href="%1$s" title="%2$s"><span class="dashicons-before dashicons-admin-network"></span> %3$s</a>',
 				esc_url( network_admin_url() ),
 				esc_html__( 'Go to the Network Admin', 'multisite-toolbar-additions' ),
 				esc_attr__( 'Network Admin', 'multisite-toolbar-additions' )
@@ -77,13 +77,13 @@ add_filter( 'plugin_row_meta', 'ddw_mstba_plugin_links', 10, 2 );
 /**
  * Add various support links to plugin page.
  *
- * @since  1.0.0
- * @since  1.9.1 Improvements and partly refactoring.
+ * @since 1.0.0
+ * @since 1.9.1 Improvements and partly refactoring.
  *
- * @uses   ddw_mstba_get_info_link()
+ * @uses ddw_mstba_get_info_link()
  *
- * @param  array  $mstba_links (Default) Array of plugin meta links
- * @param  string $mstba_file  URL of base plugin file
+ * @param array  $mstba_links (Default) Array of plugin meta links
+ * @param string $mstba_file  URL of base plugin file
  * @return array  $mstba_links Array of plugin link strings to build HTML markup.
  */
 function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
@@ -123,7 +123,10 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 		$mstba_links[] = ddw_mstba_get_info_link( 'url_translate', esc_html_x( 'Translations', 'Plugins page listing', 'multisite-toolbar-additions' ), 'dashicons-before dashicons-translation' );
 
 		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'multisite-toolbar-additions' ), 'button-primary dashicons-before dashicons-thumbs-up' );
+		$mstba_links[] = ddw_mstba_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'multisite-toolbar-additions' ), 'button dashicons-before dashicons-thumbs-up' );
+
+		/* translators: Plugins page listing */
+		$mstba_links[] = ddw_mstba_get_info_link( 'url_newsletter', esc_html_x( 'Join our Newsletter', 'Plugins page listing', 'multisite-toolbar-additions' ), 'button-primary dashicons-before dashicons-awards' );
 
 	}  // end if plugin links
 
@@ -143,10 +146,10 @@ add_action( 'admin_head-nav-menus.php', 'ddw_mstba_widgets_help_content', 15 );
  *   Load it after core help tabs on Menus admin page.
  *   Some plugin menu instructions for super_admins plus general plugin info.
  *
- * @since  1.0.0
- * @since  1.9.2 Added subtle CSS styling.
+ * @since 1.0.0
+ * @since 1.9.2 Added subtle CSS styling.
  *
- * @uses   WP_Screen::add_help_tab()
+ * @uses WP_Screen::add_help_tab()
  *
  * @global mixed $GLOBALS[ 'mstba_widgets_screen' ]
  */
@@ -208,7 +211,7 @@ function ddw_mstba_widgets_help_content() {
  *
  * @since 1.0.0
  *
- * @uses  ddw_mstba_info_values() To get some strings of info values.
+ * @uses ddw_mstba_info_values() To get some strings of info values.
  */
 function ddw_mstba_help_tab_content() {
 
@@ -321,8 +324,8 @@ add_action( 'after_menu_locations_table', 'ddw_mstba_help_info_menu_locations' )
  *
  * @since 1.7.0
  *
- * @uses  ddw_mstba_string_super_admin_menu_location()
- * @uses  ddw_mstba_string_restricted_admin_menu_location()
+ * @uses ddw_mstba_string_super_admin_menu_location()
+ * @uses ddw_mstba_string_restricted_admin_menu_location()
  */
 function ddw_mstba_help_info_menu_locations() {
 
@@ -361,13 +364,159 @@ function ddw_mstba_help_info_menu_locations() {
 }  // end function
 
 
+add_filter( 'debug_information', 'ddw_mstba_site_health_add_debug_info', 12 );
+/**
+ * Add additional plugin related info to the Site Health Debug Info section.
+ *   (Only relevant for WordPress 5.2 or higher)
+ *
+ * @link https://make.wordpress.org/core/2019/04/25/site-health-check-in-5-2/
+ *
+ * @since 2.0.0
+ *
+ * @param array $debug_info Array holding all Debug Info items.
+ * @return array Modified array of Debug Info.
+ */
+function ddw_mstba_site_health_add_debug_info( $debug_info ) {
+
+	$string_undefined = esc_html_x( 'Undefined', 'Site Health Debug info', 'multisite-toolbar-additions' );
+	$string_enabled   = esc_html_x( 'Enabled', 'Site Health Debug info', 'multisite-toolbar-additions' );
+	$string_disabled  = esc_html_x( 'Disabled', 'Site Health Debug info', 'multisite-toolbar-additions' );
+
+	/** Add our Debug info */
+	$debug_info[ 'multisite-toolbar-additions' ] = array(
+		'label'  => esc_html__( 'Multisite Toolbar Additions', 'multisite-toolbar-additions' ) . ' (' . esc_html__( 'Plugin', 'multisite-toolbar-additions' ) . ')',
+		'fields' => array(
+
+			/** Various values */
+			'mstba_plugin_version' => array(
+				'label' => __( 'Plugin version', 'multisite-toolbar-additions' ),
+				'value' => MSTBA_PLUGIN_VERSION,
+			),
+			'mstba_install_type' => array(
+				'label' => __( 'WordPress Install Type', 'multisite-toolbar-additions' ),
+				'value' => ( is_multisite() ? esc_html__( 'Multisite install', 'multisite-toolbar-additions' ) : esc_html__( 'Single Site install', 'multisite-toolbar-additions' ) ),
+			),
+
+			/** Multisite Toolbar Additions constants */
+			'MSTBA_DISPLAY_NETWORK_ITEMS' => array(
+				'label' => 'MSTBA_DISPLAY_NETWORK_ITEMS',
+				'value' => ( ! defined( 'MSTBA_DISPLAY_NETWORK_ITEMS' ) ? $string_undefined : ( MSTBA_DISPLAY_NETWORK_ITEMS ? $string_enabled : $string_disabled ) ),
+			),
+			'MSTBA_DISPLAY_SUBSITE_ITEMS' => array(
+				'label' => 'MSTBA_DISPLAY_SUBSITE_ITEMS',
+				'value' => ( ! defined( 'MSTBA_DISPLAY_SUBSITE_ITEMS' ) ? $string_undefined : ( MSTBA_DISPLAY_SUBSITE_ITEMS ? $string_enabled : $string_disabled ) ),
+			),
+			'MSTBA_SUPER_ADMIN_NAV_MENU' => array(
+				'label' => 'MSTBA_SUPER_ADMIN_NAV_MENU',
+				'value' => ( ! defined( 'MSTBA_SUPER_ADMIN_NAV_MENU' ) ? $string_undefined : ( MSTBA_SUPER_ADMIN_NAV_MENU ? $string_enabled : $string_disabled ) ),
+			),
+			'MSTBA_RESRICTED_ADMIN_NAV_MENU' => array(
+				'label' => 'MSTBA_RESRICTED_ADMIN_NAV_MENU',
+				'value' => ( ! defined( 'MSTBA_RESRICTED_ADMIN_NAV_MENU' ) ? $string_undefined : ( MSTBA_RESRICTED_ADMIN_NAV_MENU ? $string_enabled : $string_disabled ) ),
+			),
+			'MSTBA_DISPLAY_NETWORK_EXTEND_GROUP' => array(
+				'label' => 'MSTBA_DISPLAY_NETWORK_EXTEND_GROUP',
+				'value' => ( ! defined( 'MSTBA_DISPLAY_NETWORK_EXTEND_GROUP' ) ? $string_undefined : ( MSTBA_DISPLAY_NETWORK_EXTEND_GROUP ? $string_enabled : $string_disabled ) ),
+			),
+			'MSTBA_DISPLAY_SITE_EXTEND_GROUP' => array(
+				'label' => 'MSTBA_DISPLAY_SITE_EXTEND_GROUP',
+				'value' => ( ! defined( 'MSTBA_DISPLAY_SITE_EXTEND_GROUP' ) ? $string_undefined : ( MSTBA_DISPLAY_SITE_EXTEND_GROUP ? $string_enabled : $string_disabled ) ),
+			),
+			'MSTBA_DISPLAY_SITE_GROUP' => array(
+				'label' => 'MSTBA_DISPLAY_SITE_GROUP',
+				'value' => ( ! defined( 'MSTBA_DISPLAY_SITE_GROUP' ) ? $string_undefined : ( MSTBA_DISPLAY_SITE_GROUP ? $string_enabled : $string_disabled ) ),
+			),
+			'MSTBA_DISPLAY_RESOURCES' => array(
+				'label' => 'MSTBA_DISPLAY_RESOURCES',
+				'value' => ( ! defined( 'MSTBA_DISPLAY_RESOURCES' ) ? $string_undefined : ( MSTBA_DISPLAY_RESOURCES ? $string_enabled : $string_disabled ) ),
+			),
+			'MSTBA_DISPLAY_LIST_EDIT_MENUS' => array(
+				'label' => 'MSTBA_DISPLAY_LIST_EDIT_MENUS',
+				'value' => ( ! defined( 'MSTBA_DISPLAY_LIST_EDIT_MENUS' ) ? $string_undefined : ( MSTBA_DISPLAY_LIST_EDIT_MENUS ? $string_enabled : $string_disabled ) ),
+			),
+
+		),  // end array
+	);
+
+	/** Return modified Debug Info array */
+	return $debug_info;
+
+}  // end function
+
+
+if ( ! function_exists( 'ddw_wp_site_health_remove_percentage' ) ) :
+
+	add_action( 'admin_head', 'ddw_wp_site_health_remove_percentage', 100 );
+	/**
+	 * Remove the "Percentage Progress" display in Site Health feature as this will
+	 *   get users obsessed with fullfilling a 100% where there are non-problems!
+	 *
+	 * @link https://make.wordpress.org/core/2019/04/25/site-health-check-in-5-2/
+	 *
+	 * @since 2.0.0
+	 */
+	function ddw_wp_site_health_remove_percentage() {
+
+		/** Bail early if not on WP 5.2+ */
+		if ( version_compare( $GLOBALS[ 'wp_version' ], '5.2-beta', '<' ) ) {
+			return;
+		}
+
+		?>
+			<style type="text/css">
+				.site-health-progress {
+					display: none;
+				}
+			</style>
+		<?php
+
+	}  // end function
+
+endif;
+
+
+if ( ! function_exists( 'ddw_genesis_tweak_plugins_submenu' ) && defined( 'PARENT_THEME_VERSION' ) ) :
+
+	add_action( 'admin_menu', 'ddw_genesis_tweak_plugins_submenu', 11 );
+	/**
+	 * Add Genesis submenu redirecting to "genesis" plugin search within the
+	 *   WordPress.org Plugin Directory. For Genesis 2.10.0 or higher this
+	 *   replaces the "Genesis Plugins" submenu which only lists plugins from
+	 *   StudioPress - but there are many more from the community.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @uses remove_submenu_page()
+	 * @uses add_submenu_page()
+	 */
+	function ddw_genesis_tweak_plugins_submenu() {
+
+		/** Remove the StudioPress plugins submenu */
+		if ( class_exists( 'Genesis_Admin_Plugins' ) ) {
+			remove_submenu_page( 'genesis', 'genesis-plugins' );
+		}
+
+		/** Add a Genesis community plugins submenu */
+		add_submenu_page(
+			'genesis',
+			esc_html__( 'Genesis Plugins from the Plugin Directory', 'multisite-toolbar-additions' ),
+			esc_html__( 'Genesis Plugins', 'multisite-toolbar-additions' ),
+			'install_plugins',
+			esc_url( network_admin_url( 'plugin-install.php?s=genesis&tab=search&type=term' ) )
+		);
+
+	}  // end function
+
+endif;
+
+
 /**
  * Inline CSS fix for Plugins page update messages.
  *
  * @since 1.9.2
  *
- * @see   ddw_mstba_plugin_update_message()
- * @see   ddw_mstba_multisite_subsite_plugin_update_message()
+ * @see ddw_mstba_plugin_update_message()
+ * @see ddw_mstba_multisite_subsite_plugin_update_message()
  */
 function ddw_mstba_plugin_update_message_style_tweak() {
 
@@ -389,10 +538,10 @@ add_action( 'in_plugin_update_message-' . MSTBA_PLUGIN_BASEDIR . 'multisite-tool
  *   Note: This action fires for regular single site installs, and for Multisite
  *         installs where the plugin is activated Network-wide.
  *
- * @since  1.9.2
+ * @since 1.9.2
  *
- * @param  object $data
- * @param  object $response
+ * @param object $data
+ * @param object $response
  * @return string Echoed string and markup for the plugin's upgrade/update
  *                notice.
  */
@@ -418,10 +567,10 @@ add_action( 'after_plugin_row_wp-' . MSTBA_PLUGIN_BASEDIR . 'multisite-toolbar-a
  *   Note: This action fires for Multisite installs where the plugin is
  *         activated on a per site basis.
  *
- * @since  1.9.2
+ * @since 1.9.2
  *
- * @param  string $file
- * @param  object $plugin
+ * @param string $file
+ * @param object $plugin
  * @return string Echoed string and markup for the plugin's upgrade/update
  *                notice.
  */
@@ -460,10 +609,10 @@ add_filter( 'ddwlib_plir/filter/plugins', 'ddw_mstba_register_plugin_recommendat
  *   Note: The top-level array keys are plugin slugs from the WordPress.org
  *         Plugin Directory.
  *
- * @since  1.9.1
- * @since  1.9.2 Improved for Multisite context.
+ * @since 1.9.1
+ * @since 1.9.2 Improved for Multisite context.
  *
- * @param  array $plugins Array holding all plugin recommendations, coming from
+ * @param array $plugins Array holding all plugin recommendations, coming from
  *                        the class and the filter.
  * @return array Filtered and merged array of all plugin recommendations.
  */
@@ -549,9 +698,10 @@ if ( ! function_exists( 'ddwlib_plir_strings_plugin_installer' ) ) :
 	 *    - "Newest" --> tab in plugin installer toolbar
 	 *    - "Version:" --> label in plugin installer plugin card
 	 *
-	 * @since  1.9.3
+	 * @since 1.9.3
+	 * @since 2.0.0 Added new strings.
 	 *
-	 * @param  array $strings Holds all filterable strings of the library.
+	 * @param array $strings Holds all filterable strings of the library.
 	 * @return array Array of tweaked translateable strings.
 	 */
 	function ddwlib_plir_strings_plugin_installer( $strings ) {
@@ -568,6 +718,29 @@ if ( ! function_exists( 'ddwlib_plir_strings_plugin_installer' ) ) :
 			'multisite-toolbar-additions'
 		);
 
+		$strings[ 'ddwplugins_tab' ] = _x(
+			'deckerweb Plugins',
+			'Plugin installer: Tab name in installer toolbar',
+			'multisite-toolbar-additions'
+		);
+
+		$strings[ 'tab_title' ] = _x(
+			'deckerweb Plugins',
+			'Plugin installer: Page title',
+			'multisite-toolbar-additions'
+		);
+
+		$strings[ 'tab_slogan' ] = __( 'Great helper tools for Site Builders to save time and get more productive', 'multisite-toolbar-additions' );
+
+		$strings[ 'tab_info' ] = sprintf(
+			__( 'You can use any of our free plugins or premium plugins from %s', 'multisite-toolbar-additions' ),
+			'<a href="https://deckerweb-plugins.com/" target="_blank" rel="nofollow noopener noreferrer">' . $strings[ 'tab_title' ] . '</a>'
+		);
+
+		$strings[ 'tab_newsletter' ] = __( 'Join our Newsletter', 'multisite-toolbar-additions' );
+
+		$strings[ 'tab_fbgroup' ] = __( 'Facebook User Group', 'multisite-toolbar-additions' );
+
 		return $strings;
 
 	}  // end function
@@ -575,4 +748,4 @@ if ( ! function_exists( 'ddwlib_plir_strings_plugin_installer' ) ) :
 endif;  // function check
 
 /** Include class DDWlib Plugin Installer Recommendations */
-require_once( MSTBA_PLUGIN_DIR . 'includes/ddwlib-plugin-installer-recommendations.php' );
+require_once( MSTBA_PLUGIN_DIR . 'includes/ddwlib-plir/ddwlib-plugin-installer-recommendations.php' );

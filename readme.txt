@@ -3,9 +3,9 @@ Contributors: daveshine, deckerweb, wpautobahn, toolbarextras
 Donate link: https://www.paypal.me/deckerweb
 Tags: toolbar, adminbar, admin bar, multisite, network, administration, menu, super admins, links, settings, deckerweb, ddwtoolbar
 Requires at least: 3.6
-Tested up to: 5.0
+Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 1.9.4
+Stable tag: 2.0.0
 License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -102,7 +102,7 @@ You can also contribute code-wise via our [Multisite Toolbar Additions GitHub Re
 
 = Liked Multisite Toolbar Additions Plugin? =
 - Join our [Facebook Community Group](https://www.facebook.com/groups/ToolbarExtras/).
-- Or rate us on [WordPress](https://wordpress.org/support/plugin/multisite-toolbar-additions/reviews/?filter=5/#new-post) :)
+- [**Rate 5 stars us on WordPress**](https://wordpress.org/support/plugin/multisite-toolbar-additions/reviews/?filter=5/#new-post) :)
 - *Try my other admin bar related plugin:* **[Toolbar Extras for Elementor](https://wordpress.org/plugins/toolbar-extras/)**
 - *Try my other plugin:* **[Cleaner Plugin Installer](https://wordpress.org/plugins/cleaner-plugin-installer/)**
 
@@ -110,6 +110,7 @@ You can also contribute code-wise via our [Multisite Toolbar Additions GitHub Re
 - ... scratches my own itch!
 - ... is *Quality Made in Germany*
 - ... was created with love (plus some coffee) :-) - [if you like it consider donating](https://www.paypal.me/deckerweb)
+
 
 == Installation ==
 
@@ -132,6 +133,7 @@ You can also contribute code-wise via our [Multisite Toolbar Additions GitHub Re
 **Single install:** The plugin WILL also working like a charm for regular non-Multisite installs - just without the network specific stuff. However, there's still A LOT (single) site specific stuff supported. So it's up to your use case :). -- I for myself use this plugin on each and every install because it SAVES ME A LOT OF CLICKS & TIME! ...and that was the very reason I've developed it, yeah :-)
 
 **Own translation/wording:** For custom and update-secure language files please upload them to `/wp-content/languages/multisite-toolbar-additions/` (just create this folder) - This enables you to use fully custom translations that won't be overridden on plugin updates. Also, complete custom English wording is possible with that, just use a language file like `multisite-toolbar-extras-en_US.mo/.po` to achieve that (for creating one see the tools on "Other Notes").
+
 
 == Frequently Asked Questions ==
 
@@ -319,7 +321,7 @@ if ( ! is_admin() ) {
 **Final note:** I DON'T recommend to add customization code snippets to your main theme's/ child theme's `functions.php` file! **Please use a functionality plugin or an MU-plugin instead!** This way you can also use this better for Multisite environments. In general you are then more independent from theme/child theme changes etc. If you don't know how to create such a plugin yourself just use one of my recommended 'Code Snippets' plugins. Read & bookmark these Sites:
 
 * [**"Code Snippets"** plugin by Shea Bunge](https://wordpress.org/plugins/code-snippets/) - also network wide!
-* [**PHP Code Snippets (Insert PHP)** plugin by webcraftic](https://wordpress.org/plugins/insert-php/)
+* [**Woody Snippets (Insert PHP)** plugin by webcraftic](https://wordpress.org/plugins/insert-php/)
 * [**"What is a functionality plugin and how to create one?"**](http://wpcandy.com/teaches/how-to-create-a-functionality-plugin) - *blog post by WPCandy*
 * [**"Creating a custom functions plugin for end users"**](http://justintadlock.com/archives/2011/02/02/creating-a-custom-functions-plugin-for-end-users) - *blog post by Justin Tadlock*
 
@@ -343,19 +345,30 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 == Changelog ==
 
-= 1.9.4 - 2018-11-03 =
+= 🎉 2.0.0 - 2019-05-04 =
+* *New: Successfully tested with WordPress 5.2*
+* New: Dedicated Theme and Plugin ZIP Uploader pages
+* New: Enhanced Theme and Plugin Installer items in Toolbar (New Content Group)
+* New: Integrated with WordPress 5.2+ new Site Health feature: Multisite Toolbar Additions now has an extra section on the Debug Info tab - this is especially helpful for support requests
+* Tweak: Smaller internal improvements
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.4.0) - feature updates
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* New: [Join my newsletter for DECKERWEB WordPress Plugins](https://eepurl.com/gbAUUn) - insider info, plus tutorials and more useful stuff
+
+
+= ⚡ 1.9.4 - 2018-11-03 =
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
 * Tweak: Few internal code tweaks and improvements
 
 
-= 1.9.3 - 2018-10-01 =
+= ⚡ 1.9.3 - 2018-10-01 =
 * New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 * Update: Small internal code improvements
 * Update: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.1.0) - which brings smaller additions and enhancements, like CSS styles to the upload areas and plugin cards, plus plugin version number on plugin cards
 * Update: `.pot` file plus all German translations (formal, informal) and language packs
 
 
-= 1.9.2 - 2018-09-08 =
+= ⚡ 1.9.2 - 2018-09-08 =
 * New: Added plugin update message also to Plugins page (overview table)
 * Update: Fixed and improved various Plugins page links for Super Admins within the Admin area
 * Update: Fixed CSS class name in the admin
@@ -364,7 +377,7 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 * Update: `.pot` file for translators, plus German translations
 
 
-= 1.9.1 - 2018-08-22 =
+= ⚡ 1.9.1 - 2018-08-22 =
 * New: Added first language packs via WordPress.org translations platform - for German (de_DE - informal) and German Formal (de_DE_formal) - thanks to Team WordPress DE! ;-)
 * New: Added `composer.json` file to the plugin's root folder - this is great for developers using Composer
 * New: Added `README.md` file for plugin's GitHub.com repository to make it more readable there
@@ -376,7 +389,7 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 * *Trivia fact: this plugin is now 6 (six!) years old. Whoa, that's a lot. ;-)*
 
 
-= 1.9.0 - 2018-04-01 =
+= 🎉 1.9.0 - 2018-04-01 =
 * *Maintenance release*
 * Tweak: Improved security.
 * Tweak: Updated all internal plugin links to current state, deleted the ones that were dead or no longer needed.
@@ -385,7 +398,7 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 * Update: Readme.txt file.
 
 
-= 1.8.0 - 2014-10-20 =
+= 🎉 1.8.0 - 2014-10-20 =
 * **Unreleased - private beta version!**
 * NEW: Added support for more (custom) post types in the "Manage Content" section.
 * NEW: Added "Widget Customizer" admin deep link for WordPress 3.9+.
@@ -402,11 +415,11 @@ All the custom & branding stuff code above can also be found as a Gist on Github
  * UPDATE: Updated and improved support for these plugins: "Snapshot", "Smart Security Tools", "Smart Options Optimizer", "Simple System Info", "Stream", "Quick Cache Pro".
 
 
-= 1.7.1 - 2014-04/05 =
+= ⚡ 1.7.1 - 2014-04/05 =
 * *Unreleased - private beta version!*
 
 
-= 1.7.0 - 2014-03-04 =
+= 🎉 1.7.0 - 2014-03-04 =
 * NEW: Highly improved "Nav Menu" support, all editable menus are now listed as sub level items for "Menus" entry. (Could be disabled via constant if needed.)
 * NEW: As per user request I added an additional restricted Site Administrators toolbar menu. This is only effective in Multisite installs. Those menus can only be setup & edited via WP Nav Menus by Super Administrators - but then they are visible for administrator user roles (`edit_theme_options` capability).
 * NEW: For Multisite, under "Plugins" added "Network Plugins" admin link for sub site admin areas - handy link to network wide plugins page.
@@ -430,6 +443,9 @@ See packaged `changelog.txt` file in the plugin folder.
 
 
 == Upgrade Notice ==
+
+= 2.0.0 =
+Enhanced Theme & Plugin Uploader links. Now with WordPress 5.2 Site Health integration. Plus few internal improvements. - **Update highly recommended!**
 
 = 1.9.4 =
 Maintenance release. Bundled library update. Small tweaks. Update recommended.
@@ -475,6 +491,7 @@ Enjoy using *Multisite Toolbar Additions*? **[Please consider making a donation]
 
 == My Other Plugins ==
 * [**Toolbar Extras for Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
+* [**Toolbar Extras for Oxygen Builder - Add-On plugin**](https://wordpress.org/plugins/toolbar-extras-oxygen/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [**Polylang Connect for Elementor – Language Switcher & Template Tweaks**](https://wordpress.org/plugins/connect-polylang-elementor/)
 * [**Simple Download Manager for WP Document Revisions**](https://wordpress.org/plugins/wpdr-simple-downloads/)
@@ -484,3 +501,4 @@ Enjoy using *Multisite Toolbar Additions*? **[Please consider making a donation]
 * [Genesis Widgetized Footer](https://wordpress.org/plugins/genesis-widgetized-footer/)
 * [Genesis Widgetized Archive](https://wordpress.org/plugins/genesis-widgetized-archive/)
 * [Cleaner Plugin Installer](https://wordpress.org/plugins/cleaner-plugin-installer/)
+* [*My plugins newsletter*](https://eepurl.com/gbAUUn)
