@@ -5,7 +5,7 @@ Tags: toolbar, adminbar, admin bar, multisite, network, administration, menu, su
 Requires at least: 3.6
 Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -345,6 +345,11 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 == Changelog ==
 
+= ⚡ 2.0.1 - 2019-09-23 =
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.5.0) - better performance due to the use of transients
+* Tweak: Minor code improvements
+
+
 = 🎉 2.0.0 - 2019-05-04 =
 * *New: Successfully tested with WordPress 5.2*
 * New: Dedicated Theme and Plugin ZIP Uploader pages
@@ -444,6 +449,9 @@ See packaged `changelog.txt` file in the plugin folder.
 
 == Upgrade Notice ==
 
+= 2.0.1 =
+Internal library and code improvements. - **Update highly recommended!**
+
 = 2.0.0 =
 Enhanced Theme & Plugin Uploader links. Now with WordPress 5.2 Site Health integration. Plus few internal improvements. - **Update highly recommended!**
 
@@ -491,7 +499,10 @@ Enjoy using *Multisite Toolbar Additions*? **[Please consider making a donation]
 
 == My Other Plugins ==
 * [**Toolbar Extras for Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
+* [**Toolbar Extras for Give Donations (GiveWP) - Add-On plugin**](https://wordpress.org/plugins/toolbar-extras-givewp/)
+* [**Toolbar Extras for MainWP Dashboard - Add-On plugin**](https://wordpress.org/plugins/toolbar-extras-mainwp/)
 * [**Toolbar Extras for Oxygen Builder - Add-On plugin**](https://wordpress.org/plugins/toolbar-extras-oxygen/)
+* [**Builder Shortcode Extras – WordPress Shortcodes Collection to Save You Time**](https://wordpress.org/plugins/builder-shortcode-extras/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [**Polylang Connect for Elementor – Language Switcher & Template Tweaks**](https://wordpress.org/plugins/connect-polylang-elementor/)
 * [**Simple Download Manager for WP Document Revisions**](https://wordpress.org/plugins/wpdr-simple-downloads/)

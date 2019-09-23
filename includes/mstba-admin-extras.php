@@ -24,21 +24,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /**
+ * Remove unethical Jetpack search results Ads as no one needs these anyway.
+ *   Additionally remove other promotions and Ads from Jetpack.
+ *
+ * @link https://wptavern.com/jetpack-7-1-adds-feature-suggestions-to-plugin-search-results#comment-284531
+ *
+ * @since 2.0.1
+ */
+add_filter( 'jetpack_show_promotions', '__return_false', 20 );
+add_filter( 'can_display_jetpack_manage_notice', '__return_false', 20 );
+add_filter( 'jetpack_just_in_time_msgs', '__return_false', 20 );
+
+
+/**
+ * Remove unethical WooCommerce Ads injections.
+ *
+ * @since 2.0.1
+ */
+add_filter( 'woocommerce_allow_marketplace_suggestions', '__return_false' );
+
+
+/**
  * Add "Custom Menu" link to plugin page.
  *
  * @since 1.0.0
  * @since 1.9.2 Improvements and tweaks.
+ * @since 2.0.1 Overall code improvements.
  *
- * @param $mstba_links
- * @return strings $mstba_links Menu Admin link.
+ * @param array $action_links (Default) Array of plugin action links.
+ * @return array Modified array of plugin action links.
  */
-function ddw_mstba_custom_menu_link( $mstba_links ) {
+function ddw_mstba_custom_menu_link( $action_links = [] ) {
+
+	$mstba_links = array();
 
 	/** Add link only if user can edit theme options */
 	if ( current_user_can( 'edit_theme_options' ) ) {
 
 		/** Menus Page link */
-		$mstba_menu_link = sprintf(
+		$mstba_links[ 'mstba-menu' ] = sprintf(
 			'<a href="%1$s" title="%2$s"><span class="dashicons-before dashicons-menu"></span> %3$s</a>',
 			esc_url( admin_url( 'nav-menus.php' ) ),
 			esc_html__( 'Setup a custom Toolbar menu', 'multisite-toolbar-additions' ),
@@ -50,7 +74,7 @@ function ddw_mstba_custom_menu_link( $mstba_links ) {
 
 		if ( is_multisite() && ! is_network_admin() ) {
 
-			$mstba_network_link = sprintf(
+			$mstba_links[ 'network-admin' ] = sprintf(
 				'<a href="%1$s" title="%2$s"><span class="dashicons-before dashicons-admin-network"></span> %3$s</a>',
 				esc_url( network_admin_url() ),
 				esc_html__( 'Go to the Network Admin', 'multisite-toolbar-additions' ),
@@ -59,13 +83,11 @@ function ddw_mstba_custom_menu_link( $mstba_links ) {
 
 		}  // end if
 
-		/** Set the order of the links */
-		array_unshift( $mstba_links, $mstba_menu_link, $mstba_network_link );
-
 		/** Display plugin settings links */
 		return apply_filters(
 			'mstba_filter_settings_page_link',
-			$mstba_links
+			array_merge( $mstba_links, $action_links ),
+			$mstba_links 		// additional param
 		);
 
 	}  // end if cap check
@@ -96,37 +118,54 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 	/** List additional links only for this plugin */
 	if ( $mstba_file === MSTBA_PLUGIN_BASEDIR . 'multisite-toolbar-additions.php' ) {
 
-		?>
-			<style type="text/css">
-				tr[data-plugin="<?php echo $mstba_file; ?>"] .plugin-version-author-uri a.dashicons-before:before {
-					font-size: 17px;
-					margin-right: 2px;
-					opacity: .85;
-					vertical-align: sub;
-				}
-			</style>
-		<?php
+		/* translators: Plugins page listing */
+		$mstba_links[] = ddw_mstba_get_info_link(
+			'url_wporg_faq',
+			esc_html_x( 'FAQ', 'Plugins page listing', 'multisite-toolbar-additions' ),
+			'dashicons-before dashicons-editor-help'
+		);
 
 		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link( 'url_wporg_faq', esc_html_x( 'FAQ', 'Plugins page listing', 'multisite-toolbar-additions' ), 'dashicons-before dashicons-editor-help' );
+		$mstba_links[] = ddw_mstba_get_info_link(
+			'url_wporg_forum',
+			esc_html_x( 'Support', 'Plugins page listing', 'multisite-toolbar-additions' ),
+			'dashicons-before dashicons-sos'
+		);
 
 		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link( 'url_wporg_forum', esc_html_x( 'Support', 'Plugins page listing', 'multisite-toolbar-additions' ), 'dashicons-before dashicons-sos' );
+		$mstba_links[] = ddw_mstba_get_info_link(
+			'url_snippets',
+			esc_html_x( 'Code Snippets', 'Plugins page listing', 'multisite-toolbar-additions' ),
+			'dashicons-before dashicons-editor-code'
+		);
 
 		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link( 'url_snippets', esc_html_x( 'Code Snippets', 'Plugins page listing', 'multisite-toolbar-additions' ), 'dashicons-before dashicons-editor-code' );
+		$mstba_links[] = ddw_mstba_get_info_link(
+			'url_fb_group',
+			esc_html_x( 'Facebook Group', 'Plugins page listing', 'multisite-toolbar-additions' ),
+			'dashicons-before dashicons-facebook'
+		);
 
 		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link( 'url_fb_group', esc_html_x( 'Facebook Group', 'Plugins page listing', 'multisite-toolbar-additions' ), 'dashicons-before dashicons-facebook' );
+		$mstba_links[] = ddw_mstba_get_info_link(
+			'url_translate',
+			esc_html_x( 'Translations', 'Plugins page listing', 'multisite-toolbar-additions' ),
+			'dashicons-before dashicons-translation'
+		);
 
 		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link( 'url_translate', esc_html_x( 'Translations', 'Plugins page listing', 'multisite-toolbar-additions' ), 'dashicons-before dashicons-translation' );
+		$mstba_links[] = ddw_mstba_get_info_link(
+			'url_donate',
+			esc_html_x( 'Donate', 'Plugins page listing', 'multisite-toolbar-additions' ),
+			'button dashicons-before dashicons-thumbs-up'
+		);
 
 		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'multisite-toolbar-additions' ), 'button dashicons-before dashicons-thumbs-up' );
-
-		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link( 'url_newsletter', esc_html_x( 'Join our Newsletter', 'Plugins page listing', 'multisite-toolbar-additions' ), 'button-primary dashicons-before dashicons-awards' );
+		$mstba_links[] = ddw_mstba_get_info_link(
+			'url_newsletter',
+			esc_html_x( 'Join our Newsletter', 'Plugins page listing', 'multisite-toolbar-additions' ),
+			'button-primary dashicons-before dashicons-awards'
+		);
 
 	}  // end if plugin links
 
@@ -135,6 +174,54 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 		'mstba_filter_plugin_links',
 		$mstba_links
 	);
+
+}  // end function
+
+
+add_action( 'admin_enqueue_scripts', 'ddw_mstba_inline_styles_plugins_page', 20 );
+/**
+ * Add additional inline styles on the admin Plugins page.
+ *
+ * @since 1.9.1
+ * @since 2.0.1 Splitted into function; using wp_add_inline_style() from Core.
+ *
+ * @uses wp_add_inline_style()
+ *
+ * @global string $GLOBALS[ 'pagenow' ]
+ */
+function ddw_mstba_inline_styles_plugins_page() {
+
+	/** Bail early if not on plugins.php admin page */
+	if ( 'plugins.php' !== $GLOBALS[ 'pagenow' ] ) {
+		return;
+	}
+
+	$mstba_file = MSTBA_PLUGIN_BASEDIR . 'multisite-toolbar-additions.php';
+
+    /**
+     * For WordPress Admin Area
+     *   Style handle: 'wp-admin' (WordPress Core)
+     */
+    $inline_css = sprintf(
+    	'
+        tr[data-plugin="%s"] .plugin-version-author-uri a.dashicons-before:before {
+			font-size: 17px;
+			margin-right: 2px;
+			opacity: .85;
+			vertical-align: sub;
+		}
+
+		.mstba-update-message p:before,
+		.update-message.notice p:empty,
+		.update-message.updating-message > p,
+		.update-message.notice-success > p,
+		.update-message.notice-error > p {
+			display: none !important;
+		}',
+		$mstba_file
+	);
+
+    wp_add_inline_style( 'wp-admin', $inline_css );
 
 }  // end function
 
@@ -364,7 +451,7 @@ function ddw_mstba_help_info_menu_locations() {
 }  // end function
 
 
-add_filter( 'debug_information', 'ddw_mstba_site_health_add_debug_info', 12 );
+add_filter( 'debug_information', 'ddw_mstba_site_health_add_debug_info', 9 );
 /**
  * Add additional plugin related info to the Site Health Debug Info section.
  *   (Only relevant for WordPress 5.2 or higher)
@@ -510,28 +597,6 @@ if ( ! function_exists( 'ddw_genesis_tweak_plugins_submenu' ) && defined( 'PAREN
 endif;
 
 
-/**
- * Inline CSS fix for Plugins page update messages.
- *
- * @since 1.9.2
- *
- * @see ddw_mstba_plugin_update_message()
- * @see ddw_mstba_multisite_subsite_plugin_update_message()
- */
-function ddw_mstba_plugin_update_message_style_tweak() {
-
-	?>
-		<style type="text/css">
-			.mstba-update-message p:before,
-			.update-message.notice p:empty {
-				display: none !important;
-			}
-		</style>
-	<?php
-
-}  // end function
-
-
 add_action( 'in_plugin_update_message-' . MSTBA_PLUGIN_BASEDIR . 'multisite-toolbar-additions.php', 'ddw_mstba_plugin_update_message', 10, 2 );
 /**
  * On Plugins page add visible upgrade/update notice in the overview table.
@@ -548,8 +613,6 @@ add_action( 'in_plugin_update_message-' . MSTBA_PLUGIN_BASEDIR . 'multisite-tool
 function ddw_mstba_plugin_update_message( $data, $response ) {
 
 	if ( isset( $data[ 'upgrade_notice' ] ) ) {
-
-		ddw_mstba_plugin_update_message_style_tweak();
 
 		printf(
 			'<div class="update-message mstba-update-message">%s</div>',
@@ -579,8 +642,6 @@ function ddw_mstba_multisite_subsite_plugin_update_message( $file, $plugin ) {
 	if ( is_multisite() && version_compare( $plugin[ 'Version' ], $plugin[ 'new_version' ], '<' ) ) {
 
 		$wp_list_table = _get_list_table( 'WP_Plugins_List_Table' );
-
-		ddw_mstba_plugin_update_message_style_tweak();
 
 		printf(
 			'<tr class="plugin-update-tr"><td colspan="%s" class="plugin-update update-message notice inline notice-warning notice-alt"><div class="update-message mstba-update-message"><h4 style="margin: 0; font-size: 14px;">%s</h4>%s</div></td></tr>',
@@ -625,9 +686,7 @@ function ddw_mstba_register_plugin_recommendations( array $plugins ) {
 
 	/** When NOT in Multisite mode just return the core registered plugins */
 	if ( ! is_multisite() ) {
-
 		return $plugins;
-
 	}
 
 	/** In Multisite, add new keys, tweak existing */
