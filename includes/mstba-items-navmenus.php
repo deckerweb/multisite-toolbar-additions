@@ -6,7 +6,7 @@
  * @package    Multisite Toolbar Additions
  * @subpackage Nav Menus Items
  * @author     David Decker - DECKERWEB
- * @copyright  Copyright (c) 2014-2018, David Decker - DECKERWEB
+ * @copyright  Copyright (c) 2014-2025, David Decker - DECKERWEB
  * @license    https://opensource.org/licenses/GPL-2.0 GPL-2.0+
  *
  * @since      1.7.0

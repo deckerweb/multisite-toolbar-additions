@@ -5,7 +5,7 @@
  * @package    Multisite Toolbar Additions
  * @subpackage Site: Plugins
  * @author     David Decker - DECKERWEB
- * @copyright  Copyright (c) 2013-2018, David Decker - DECKERWEB
+ * @copyright  Copyright (c) 2013-2025, David Decker - DECKERWEB
  * @license    https://opensource.org/licenses/GPL-2.0 GPL-2.0+
  *
  * @since      1.4.0
