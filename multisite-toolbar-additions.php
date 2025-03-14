@@ -1,22 +1,9 @@
 <?php # -*- coding: utf-8 -*-
 /**
- * Main plugin file.
- * This plugin adds a lot of useful (super) admin links to the WordPress
- *    Toolbar / Admin Bar in Multisite, Network and single site installs. Also
- *    comes with extended support for third-party plugins!
- *
- * @package      Multisite Toolbar Additions
- * @author       David Decker
- * @copyright    Copyright (c) 2012-2019, David Decker - DECKERWEB
- * @license      GPL-2.0-or-later
- * @link         https://deckerweb.de/twitter
- * @link         https://www.facebook.com/groups/deckerweb.wordpress.plugins/
- *
- * @wordpress-plugin
  * Plugin Name:  Multisite Toolbar Additions
  * Plugin URI:   https://github.com/deckerweb/multisite-toolbar-additions
  * Description:  This plugin adds a lot of useful (super) admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Also comes with extended support for third-party plugins!
- * Version:      2.0.1
+ * Version:      3.0.0
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
  * License:      GPL-2.0-or-later
@@ -24,10 +11,10 @@
  * Text Domain:  multisite-toolbar-additions
  * Domain Path:  /languages/
  * Network:      true
- * Requires WP:  4.7
- * Requires PHP: 5.6
+ * Requires WP:  6.7
+ * Requires PHP: 7.4
  *
- * Copyright (c) 2012-2019 David Decker - DECKERWEB
+ * Copyright (c) 2012-2025 David Decker - DECKERWEB
  *
  *     This file is part of Multisite Toolbar Additions,
  *     a plugin for WordPress.
@@ -63,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'MSTBA_PLUGIN_VERSION', '2.0.1' );
+define( 'MSTBA_PLUGIN_VERSION', '3.0.0' );
 
 /** Plugin directory */
 define( 'MSTBA_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -138,33 +125,6 @@ add_action( 'init', 'ddw_mstba_init', 1 );
  * @uses ddw_mstba_menu_hook_priority() For (optionally) setting the hook priority via filter.
  */
 function ddw_mstba_init() {
-
-	/** Set unique textdomain string */
-	$mstba_textdomain = 'multisite-toolbar-additions';
-
-	/** The 'plugin_locale' filter is also used by default in load_plugin_textdomain() */
-	$locale = apply_filters(
-		'plugin_locale',
-		get_locale(),
-		$mstba_textdomain
-	);
-
-	/** Set filter for WordPress languages directory */
-	$mstba_wp_lang_dir = trailingslashit( WP_LANG_DIR ) . trailingslashit( $mstba_textdomain ) . $mstba_textdomain . '-' . $locale . '.mo';
-
-	/** Translations: First, look in WordPress' "languages" folder = custom & update-secure! */
-	load_textdomain(
-		$mstba_textdomain,
-		$mstba_wp_lang_dir
-	);
-
-	/** Translations: Secondly, look in plugin's "languages" folder = default */
-	load_plugin_textdomain(
-		$mstba_textdomain,
-		FALSE,
-		MSTBA_PLUGIN_BASEDIR . 'languages'
-	);
-
 
 	/** Include global helper functions */
 	require_once( MSTBA_PLUGIN_DIR . 'includes/mstba-global-functions.php' );
