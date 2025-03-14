@@ -5,10 +5,8 @@
  * @package    Multisite Toolbar Additions
  * @subpackage Plugin/Extension Support
  * @author     David Decker - DECKERWEB
- * @copyright  Copyright (c) 2014-2018, David Decker - DECKERWEB
+ * @copyright  Copyright (c) 2014-2025, David Decker - DECKERWEB
  * @license    https://opensource.org/licenses/GPL-2.0 GPL-2.0+
- * @link       https://github.com/deckerweb/multisite-toolbar-additions
- * @link       https://deckerweb.de/twitter
  *
  * @since      1.7.0
  */
