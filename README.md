@@ -1,16 +1,17 @@
 # Multisite Toolbar Additions 
 
-Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Comes with extended plugin support!
+Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs.
 
 ![Multisite Toolbar Additions plugin banner](https://raw.githubusercontent.com/deckerweb/multisite-toolbar-additions/master/assets/banner-772x250.png)
 
+---
 
 ## Description 
 
 > #### Quick Access to Super Admin Resources - Time Saver!
 > This **small and lightweight** plugin just adds some missed and **very useful admin links** to your Toolbar / Admin Bar in Multisite installs, and even regular single site installs.
 >
-> Also included is support for some awesome, useful third-party plugins out of the box. So you might just switch from the backend or frontend of your site to the 'Network Wide Plugins' or access the 'Nav Menu' Settings of a sub site/blog. To make you even more happy, the plugin also works just perfectly in single WordPress installs (non-Multisite context), just fewer menu items then... ---> **Use this time saver and get quicker access :-)**
+> Also included is support for a few third-party plugins out of the box. So you might just switch from the backend or frontend of your site to the 'Network Wide Plugins' or access the 'Nav Menu' Settings of a sub site/blog. To make you even more happy, the plugin also works just perfectly in single WordPress installs (non-Multisite context), just fewer menu items then... ---> **Use this time saver and get quicker access :-)**
 
 *NOTE:* This plugin is **only intended towards Super Admins / Admins**.
 
@@ -55,33 +56,24 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 * ["WP Migrate DB" (free, by Brad Touesnard)](https://wordpress.org/plugins/wp-migrate-db/)
 * ["Stream" (free, by X-Team)](https://wordpress.org/plugins/stream/)
 
-
-### This Plugin ... 
-- ... scratches my own itch!
-- ... is *Quality Made in Germany*
-- ... was created with love (plus some coffee) :-) - [if you like it consider donating](https://www.paypal.me/deckerweb)
-
+---
 
 ## Installation 
 
-
-### Installation Steps 
-1. Installing alternatives:
- * *via Admin Dashboard:* Go to 'Plugins > Add New', search for "Multisite Toolbar Additions", click "install"
- * *OR via direct ZIP upload:* Upload the ZIP package via 'Plugins > Add New > Upload' in your WP Admin
- * *OR via FTP upload:* Upload `multisite-toolbar-additions` folder to the `/wp-content/plugins/` directory
-2. In your Network Dashboard network activate the plugin through the (Network) 'Plugins' menu -- or in a sub site dashboard: per-site activate this plugin through the (Site) 'Plugins' menu
+**Quick Install**
+1. **Download ZIP:** [**multisite-toolbar-additions.zip**](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest/download/multisite-toolbar-additions.zip)
+2. Upload via WordPress (Network) Plugins > Add New > Upload Plugin --> in _Multisite_ you can _activate network wide_!
 3. Look at your toolbar / admin bar within the "My Sites" menu and enjoy using the new links there :)
 4. If you want you could add a special custom Nav Menu via "Design > Menus" (best if using the main site of your Network for that) and assign it to the new "Multisite Toolbar Menu" menu location (only visible & accessable for Super Admins!).
-5. Go and manage your Multisite Network :)
+5. Go and manage your Multisite Network or just your single site :)
 
-**Please note, this plugin requires WordPress 3.3 or higher in order to work!**
-
-**Also note:** This plugin has NO settings page because I believe it's just not neccessarry. All customizing could be done via filters, constants and regular WordPress user roles & capabilities. As the plugin is only indended for a Super Admin (Network Admin) usage - that's the way to go. This way we can save the overhaul of an options panel/settings page, additional database requests, uninstall routines and such. End result: a lightweight system that just works and saves clicks & time :-).
+**Note:** This plugin has NO settings page because I believe it's just not neccessarry. All customizing could be done via filters, constants and regular WordPress user roles & capabilities. As the plugin is only indended for a Super Admin (Network Admin) usage - that's the way to go. This way we can save the overhaul of an options panel/settings page, additional database requests, uninstall routines and such. End result: a lightweight system that just works and saves clicks & time :-).
 
 **Multisite install:** Of course, it's fully compatible
 
 **Single install:** The plugin WILL also working like a charm for regular non-Multisite installs - just without the network specific stuff. However, there's still A LOT (single) site specific stuff supported. So it's up to your use case :). -- I for myself use this plugin on each and every install because it SAVES ME A LOT OF CLICKS & TIME! ...and that was the very reason I've developed it, yeah :-)
+
+---
 
 ## Frequently Asked Questions 
 
@@ -91,11 +83,6 @@ You're right! If you're happy with one of the others then that's absolutely grea
 I just made this new plugin here for my own needs and some of my client admins. As I am an open source evangelist I like to release my stuff to the public to give back to the community!
 
 Plugin developer David Decker: *What has proved its day to day usage and usefulness on more than 100 installs (Multisites and regular single site installs) before, could be used by many other (super) admins as well, right? :-)))*
-
-
-### Does this plugin work with latest WordPress version and also older versions? 
-Yes, this plugin works really fine with the LATEST WordPress branch 3.8+! :-)
-And sorry, it DOES NOT work with WordPress versions older than 3.6 so please update your install if you haven't done yet :).
 
 
 ### How do I use the custom Nav Menu for Super Admins for the toolbar? 
@@ -256,13 +243,16 @@ if ( ! is_admin() ) {
 
 **Final note:** I DON'T recommend to add customization code snippets to your main theme's/ child theme's `functions.php` file! **Please use a functionality plugin or an MU-plugin instead!** This way you can also use this better for Multisite environments. In general you are then more independent from theme/child theme changes etc. If you don't know how to create such a plugin yourself just use one of my recommended 'Code Snippets' plugins. Read & bookmark these Sites:
 
-* [**"Code Snippets"** plugin by Shea Bunge](https://wordpress.org/plugins/code-snippets/) - also network wide!
-* [**Woody Snippets (Insert PHP)** plugin by webcraftic](https://wordpress.org/plugins/insert-php/)
-* [**"What is a functionality plugin and how to create one?"**](http://wpcandy.com/teaches/how-to-create-a-functionality-plugin) - *blog post by WPCandy*
-* [**"Creating a custom functions plugin for end users"**](http://justintadlock.com/archives/2011/02/02/creating-a-custom-functions-plugin-for-end-users) - *blog post by Justin Tadlock*
+* _Code Snippets_ (free, .org plugin repo) / also _Code Snippets Pro_ (premium)
+* _FluentSnipperts_ (free, .org plugin repo)
+* _Advanced Scripts_ (premium)
+* _Scripts Organizer_ (premium)
+* _WPCodeBox_ (premium)
+* _WPCode_ (free, .org plugin repo)
 
 All the custom & branding stuff code above can also be found as a Gist on Github: https://gist.github.com/deckerweb/3498510 (you can also add your questions/ feedback there :)
 
+---
 
 ## Screenshots 
 
@@ -289,15 +279,16 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 ### 6. Multisite Toolbar Additions: Plugin's help tab on Nav Menu admin page. ([Click here for larger version of screenshot](https://www.dropbox.com/s/dt6kkxqsh7yvbfn/screenshot-6.png)).
 ![Multisite Toolbar Additions: Plugin's help tab on Nav Menu admin page. ([Click here for larger version of screenshot](https://www.dropbox.com/s/dt6kkxqsh7yvbfn/screenshot-6.png)).](https://ps.w.org/multisite-toolbar-additions/assets/screenshot-6.png)
 
-
+---
 
 ## Changelog 
 
-### ⚡ 3.0.0 - 2025 ...
-_Currently being worked on ..._
+### ⚡ 3.0.0 - March 2025
+* Brought back plugin into a lightweight and working state as it was originally intended!
 * Cleanup: Restricted admin menu feature got completely removed as it was causing lots of issues (the global super admin menu remains)
 * Cleanup: Lot of supported plugins got removed as they are no longer available or outdated.
-* Some info links, help texts and the _DDWlib Plugin Installer Recommendations_ library got removed, it is no longer wanted/supported anyways
+* Some info links, help texts, plus the _DDWlib Plugin Installer Recommendations_ library got removed, it is no longer wanted/supported anyways
+* **Note:** No longer in the .org plugin repo available – thanks to Matt... (I've taken it out myself as I have no longer interest in WordPress.org repo strategy) – just install yourself via ZIP file, see above under "Installation"
 
 
 ### ⚡ 2.0.1 - 2019-09-23
