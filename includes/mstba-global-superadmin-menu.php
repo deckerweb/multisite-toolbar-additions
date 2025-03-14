@@ -9,8 +9,6 @@
  * @author     David Decker - DECKERWEB
  * @copyright  Copyright (c) 2012-2018, David Decker - DECKERWEB
  * @license    https://opensource.org/licenses/GPL-2.0 GPL-2.0+
- * @link       https://github.com/deckerweb/multisite-toolbar-additions
- * @link       https://deckerweb.de/twitter
  *
  * @since      1.0.0
  */
@@ -105,7 +103,9 @@ function ddw_mstba_build_custom_menu( $wp_admin_bar ) {
 	/** Only add menu items if location exists and an actual menu is applied to it */
 	if ( has_nav_menu( 'mstba_menu' ) ) {
 
-		if ( ( $mstba_menu_locations = get_nav_menu_locations() ) && isset( $mstba_menu_locations[ $mstba_menu_name ] ) ) {
+		if ( ( $mstba_menu_locations = get_nav_menu_locations() )
+			&& isset( $mstba_menu_locations[ $mstba_menu_name ] )
+		) {
 
 			$mstba_menu_locations = get_nav_menu_locations();
 			$mstba_menu           = wp_get_nav_menu_object( $mstba_menu_locations[ $mstba_menu_name ] );

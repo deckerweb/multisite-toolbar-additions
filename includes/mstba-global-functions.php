@@ -7,8 +7,6 @@
  * @author     David Decker - DECKERWEB
  * @copyright  Copyright (c) 2012-2018, David Decker - DECKERWEB
  * @license    https://opensource.org/licenses/GPL-2.0 GPL-2.0+
- * @link       https://github.com/deckerweb/multisite-toolbar-additions
- * @link       https://deckerweb.de/twitter
  *
  * @since      1.0.0
  */
@@ -216,24 +214,6 @@ function ddw_mstba_restrict_super_admin_menu_access() {
 	ddw_mstba_restrict_nav_menu_edit_access(
 		'mstba_menu',
 		'edit_theme_options'
-	);
-
-}  // end function
-
-
-/**
- * Restrict editing access of special custom "Restricted Admin" toolbar menu.
- *
- * @since 1.7.0
- *
- * @uses ddw_mstba_restrict_nav_menu_edit_access()
- * @uses ddw_mstba_restricted_admin_menu_cap()
- */
-function ddw_mstba_restrict_admin_menu_access() {
-
-	ddw_mstba_restrict_nav_menu_edit_access(
-		'mstba_restricted_admin_menu',
-		ddw_mstba_restricted_admin_menu_cap()
 	);
 
 }  // end function
@@ -452,14 +432,7 @@ function ddw_mstba_info_values() {
 
 	$mstba_info = array(
 
-		'url_translate'     => 'https://translate.wordpress.org/projects/wp-plugins/multisite-toolbar-additions',
-		'url_wporg_faq'     => 'https://wordpress.org/plugins/multisite-toolbar-additions/#faq',
-		'url_wporg_forum'   => 'https://wordpress.org/support/plugin/multisite-toolbar-additions',
-		'url_wporg_profile' => 'https://profiles.wordpress.org/daveshine/',
-		'url_wporg_more'    => 'https://wordpress.org/plugins/search.php?q=toolbar+multisite',
-		'url_ddw_series'    => 'https://wordpress.org/plugins/tags/ddwtoolbar',
 		'url_snippets'      => 'https://gist.github.com/deckerweb/3498510',
-		'url_fb_group'      => 'https://www.facebook.com/groups/ToolbarExtras/',
 		'license'           => 'GPL-2.0-or-later',
 		'url_license'       => 'https://opensource.org/licenses/GPL-2.0',
 		'first_code'        => '2012',

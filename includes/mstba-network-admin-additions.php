@@ -7,8 +7,6 @@
  * @author     David Decker - DECKERWEB
  * @copyright  Copyright (c) 2013-2018, David Decker - DECKERWEB
  * @license    https://opensource.org/licenses/GPL-2.0 GPL-2.0+
- * @link       https://github.com/deckerweb/multisite-toolbar-additions
- * @link       https://deckerweb.de/twitter
  *
  * @since      1.5.0
  */

@@ -7,8 +7,6 @@
  * @author     David Decker - DECKERWEB
  * @copyright  Copyright (c) 2012-2018, David Decker - DECKERWEB
  * @license    https://opensource.org/licenses/GPL-2.0 GPL-2.0+
- * @link       https://github.com/deckerweb/multisite-toolbar-additions
- * @link       https://deckerweb.de/twitter
  *
  * @since      1.0.0
  */
@@ -36,110 +34,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
  *
  * @since 1.0.0
  */
-
-	/**
-	 * Smart Admin Tweaks (premium, by Smart Plugins/ Milan Petrovic)
-	 *
-	 * @since 1.3.0
-	 */
-	if ( class_exists( 'sat_loader' ) ) {
-
-		/** Include code part for Smart Admin Tweaks plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-smartadmintweaks.php' );
-
-	}  // end if Smart Admin Tweaks
-
-
-	/**
-	 * Smart CRON Tools (premium, by Smart Plugins/ Milan Petrovic)
-	 *
-	 * @since 1.5.0
-	 */
-	if ( class_exists( 'srt_loader' ) ) {
-
-		/** Include code part for Smart CRON Tools plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-smartcrontools.php' );
-
-	}  // end if Smart CRON Tools
-
-
-	/**
-	 * Smart Cleanup Tools (premium, by Smart Plugins/ Milan Petrovic)
-	 *
-	 * @since 1.3.0
-	 */
-	if ( defined( 'SCT_WP_CRON' ) ) {
-
-		/** Include code part for Smart Cleanup Tools plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-smartcleanuptools.php' );
-
-	}  // end if Smart Cleanup Tools
-
-
-	/**
-	 * Smart Security Tools (premium, by Smart Plugins/ Milan Petrovic)
-	 *
-	 * @since 1.5.1
-	 */
-	if ( defined( 'SSECT_WP_CRON' ) ) {
-
-		/** Include code part for Smart Security Tools plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-smartsecuritytools.php' );
-
-	}  // end if Smart Security Tools
-
-
-	/**
-	 * Smart Options Optimizer (premium, by Smart Plugins/ Milan Petrovic)
-	 *
-	 * @since 1.4.0
-	 */
-	if ( class_exists( 'soo_loader' ) ) {
-
-		/** Include code part for Smart Options Optimizer plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-smartoptionsoptimizer.php' );
-
-	}  // end if Smart Options Optimizer
-
-
-	/**
-	 * iThemes Security (free, by iThemes)
-	 *
-	 * @since 1.7.1
-	 */
-	if ( class_exists( 'ITSEC_One_Version' ) && current_user_can( 'manage_options' ) ) {
-
-		/** Include code part for iThemes Security plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-ithemessecurity.php' );
-
-	}  // end if iThemes Security
-
-
-	/**
-	 * iThemes Security (premium, by iThemes)
-	 *
-	 * @since 1.7.1
-	 */
-	if ( class_exists( 'ITSEC_One_Version_Pro' ) && current_user_can( 'manage_options' ) ) {
-
-		/** Include code part for iThemes Security plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-ithemessecuritypro.php' );
-
-	}  // end if iThemes Security Pro
-
-
-	/**
-	 * Better WP Security (free, by Chris Wiegman & iThemes)
-	 *
-	 * @since 1.6.0
-	 */
-	if ( class_exists( 'bit51_bwps' ) && current_user_can( 'manage_options' ) ) {
-
-		/** Include code part for Better WP Security plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-betterwpsecurity.php' );
-
-	}  // end if Better WP Security
-
 
 	/**
 	 * Snapshot (premium, by Paul Menard (Incsub)/ WPMU DEV)

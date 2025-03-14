@@ -180,16 +180,6 @@ function ddw_mstba_init() {
 	/** Restrict access to the above custom super admin menu */
 	add_action( 'admin_menu', 'ddw_mstba_restrict_super_admin_menu_access', 1 );
 
-	/** Optional custom toolbar menu, viewable for admins, editable for super admins */
-	if ( is_multisite() ) {
-
-		require_once( MSTBA_PLUGIN_DIR . 'includes/mstba-network-restricted-admin-menu.php' );
-
-	}  // end if
-
-	/** Restrict access to the above custom site admin menu */
-	add_action( 'admin_menu', 'ddw_mstba_restrict_admin_menu_access', 1 );
-
 }  // end function
 
 

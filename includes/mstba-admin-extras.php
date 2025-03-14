@@ -7,8 +7,6 @@
  * @author     David Decker - DECKERWEB
  * @copyright  Copyright (c) 2012-2018, David Decker - DECKERWEB
  * @license    https://opensource.org/licenses/GPL-2.0 GPL-2.0+
- * @link       https://github.com/deckerweb/multisite-toolbar-additions
- * @link       https://deckerweb.de/twitter
  *
  * @since      1.0.0
  */
@@ -120,37 +118,9 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 
 		/* translators: Plugins page listing */
 		$mstba_links[] = ddw_mstba_get_info_link(
-			'url_wporg_faq',
-			esc_html_x( 'FAQ', 'Plugins page listing', 'multisite-toolbar-additions' ),
-			'dashicons-before dashicons-editor-help'
-		);
-
-		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link(
-			'url_wporg_forum',
-			esc_html_x( 'Support', 'Plugins page listing', 'multisite-toolbar-additions' ),
-			'dashicons-before dashicons-sos'
-		);
-
-		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link(
 			'url_snippets',
 			esc_html_x( 'Code Snippets', 'Plugins page listing', 'multisite-toolbar-additions' ),
 			'dashicons-before dashicons-editor-code'
-		);
-
-		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link(
-			'url_fb_group',
-			esc_html_x( 'Facebook Group', 'Plugins page listing', 'multisite-toolbar-additions' ),
-			'dashicons-before dashicons-facebook'
-		);
-
-		/* translators: Plugins page listing */
-		$mstba_links[] = ddw_mstba_get_info_link(
-			'url_translate',
-			esc_html_x( 'Translations', 'Plugins page listing', 'multisite-toolbar-additions' ),
-			'dashicons-before dashicons-translation'
 		);
 
 		/* translators: Plugins page listing */
@@ -315,34 +285,13 @@ function ddw_mstba_help_tab_content() {
 		ddw_mstba_help_content_super_admin_menu();
 
 	}  // end if
-	
-	/** Restricted Site Admin menu help */
-	if ( is_multisite() && ( defined( 'MSTBA_RESRICTED_ADMIN_NAV_MENU' ) && MSTBA_RESRICTED_ADMIN_NAV_MENU ) ) {
-
-		echo $mstba_space_helper;
-		
-		ddw_mstba_help_content_resctricted_admin_menu();
-
-	}  // end if
 
 	/** Further help content */
-	echo $mstba_space_helper . '<p><strong>' . __( 'Other, recommended Multisite &amp; Toolbar plugins:', 'multisite-toolbar-additions' ) . '</strong></strong>' .
-		'<blockquote><p>&raquo; <a href="' . esc_url( $mstba_info[ 'url_ddw_series' ] ) . '" target="_new" title="David Decker ' . __( 'Toolbar plugin series', 'multisite-toolbar-additions' ) . ' ...">' . __( 'My Toolbar plugin series', 'multisite-toolbar-additions' ) . ' (David Decker, DECKERWEB.de)</a>' .
-		'<br />&raquo; <a href="' . esc_url( $mstba_info[ 'url_wporg_more' ] ) . '" target="_new" title="' . __( 'More plugins at WordPress.org', 'multisite-toolbar-additions' ) . ' ...">' . __( 'More plugins at WordPress.org', 'multisite-toolbar-additions' ) . '</a></p></blockquote>';
-
 	echo $mstba_space_helper . '<p><h4 style="font-size: 1.1em;">' . __( 'Important plugin links:', 'multisite-toolbar-additions' ) . '</h4>' .
 
 		'<a class="button" href="' . esc_url( $mstba_info[ 'url_plugin' ] ) . '" target="_new" title="' . esc_html__( 'Plugin website', 'multisite-toolbar-additions' ) . '">' . __( 'Plugin website', 'multisite-toolbar-additions' ) . '</a>' .
 
-		'&nbsp;&nbsp;<a class="button" href="' . esc_url( $mstba_info[ 'url_wporg_faq' ] ) . '" target="_new" title="' . esc_html_x( 'FAQ', 'Translators: help tab info', 'multisite-toolbar-additions' ) . '">' . _x( 'FAQ', 'Translators: help tab info', 'multisite-toolbar-additions' ) . '</a>' .
-
-		'&nbsp;&nbsp;<a class="button" href="' . esc_url( $mstba_info[ 'url_wporg_forum' ] ) . '" target="_new" title="' . esc_html_x( 'Support', 'Translators: help tab info', 'multisite-toolbar-additions' ) . '">' . _x( 'Support', 'Translators: help tab info', 'multisite-toolbar-additions' ) . '</a>' .
-
 		'&nbsp;&nbsp;<a class="button" href="' . esc_url( $mstba_info[ 'url_snippets' ] ) . '" target="_new" title="' . esc_html__( 'Code Snippets for Customization', 'multisite-toolbar-additions' ) . '">' . __( 'Code Snippets', 'multisite-toolbar-additions' ) . '</a>' .
-
-		'&nbsp;&nbsp;<a class="button" href="' . esc_url( $mstba_info[ 'url_fb_group' ] ) . '" target="_new" title="' . esc_html__( 'Facebook Group', 'multisite-toolbar-additions' ) . '">' . __( 'Facebook Group', 'multisite-toolbar-additions' ) . '</a>' .
-
-		'&nbsp;&nbsp;<a class="button" href="' . esc_url( $mstba_info[ 'url_translate' ] ) . '" target="_new" title="' . esc_html__( 'Translations', 'multisite-toolbar-additions' ) . '">' . __( 'Translations', 'multisite-toolbar-additions' ) . '</a>' .
 
 		'&nbsp;&nbsp;<a class="button" href="' . esc_url( $mstba_info[ 'url_donate' ] ) . '" target="_new" title="' . esc_html__( 'Donate', 'multisite-toolbar-additions' ) . '"><strong>' . __( 'Donate', 'multisite-toolbar-additions' ) . '</strong></a></p>';
 
@@ -383,28 +332,6 @@ function ddw_mstba_help_content_super_admin_menu() {
 }  // end function
 
 
-/**
- * Help content part: for restricted site admin menu.
- *
- * @since 1.0.0
- */
-function ddw_mstba_help_content_resctricted_admin_menu() {
-
-	echo '<h4 style="font-size: 1.1em;">' . sprintf(
-			__( 'In Multisite: Special restricted custom menu for %s', 'multisite-toolbar-additions' ),
-			'<em>' . __( 'Site Admins', 'multisite-toolbar-additions' ) . '</em>'
-		) . ':</h4>';
-
-	echo '<blockquote><p>' . __( 'This custom menu is almost identical to the custom menu for Super Admins (see above), with two differences', 'multisite-toolbar-additions' ) . ':</p></blockquote>';
-
-	echo '<blockquote><ul>' .
-			'<li>' . __( 'Only Super Admins can setup and edit this menu', 'multisite-toolbar-additions' ) . '</li>' .
-			'<li>' . __( 'Site Admins can see this menu but are not able to edit it', 'multisite-toolbar-additions' ) . '</li>' .
-		'<ul></blockquote>';
-
-}  // end function
-
-
 add_action( 'after_menu_locations_table', 'ddw_mstba_help_info_menu_locations' );
 /**
  * Help info content on "Menu Locations" tab on nav-menus.php.
@@ -418,27 +345,21 @@ function ddw_mstba_help_info_menu_locations() {
 
 	/** Bail early if no Super Admin */
 	if ( ! is_super_admin()
-		|| (
-			( defined( 'MSTBA_SUPER_ADMIN_NAV_MENU' ) && ! MSTBA_SUPER_ADMIN_NAV_MENU )
-				&& ( defined( 'MSTBA_RESRICTED_ADMIN_NAV_MENU' ) && ! MSTBA_RESRICTED_ADMIN_NAV_MENU )
-			)
+		|| ( defined( 'MSTBA_SUPER_ADMIN_NAV_MENU' ) && ! MSTBA_SUPER_ADMIN_NAV_MENU )
 	) {
 		return;
 	}
 
 	$super_menu = ( defined( 'MSTBA_SUPER_ADMIN_NAV_MENU' ) && MSTBA_SUPER_ADMIN_NAV_MENU ) ? TRUE : FALSE;
-	$admin_menu = ( is_multisite() && ( defined( 'MSTBA_RESRICTED_ADMIN_NAV_MENU' ) && MSTBA_RESRICTED_ADMIN_NAV_MENU ) ) ? TRUE : FALSE;
 
 	$output = sprintf(
-		'<br />&nbsp;<p>' . __( '%s only for Super Admins.', 'multisite-toolbar-additions' ) . ' ' . __( 'This is provided by the plugin %s.', 'multisite-toolbar-additions' ) . '</p>',
-		( $super_menu && $admin_menu ) ? _x( 'The following menu locations above are', 'plural (in Multisite)', 'multisite-toolbar-additions' ) : _x( 'The following menu location above is', 'singular (non-Multisite)', 'multisite-toolbar-additions' ),
+		'<br />&nbsp;<p>' . __( 'The following menu locations above are only for Super Admins.', 'multisite-toolbar-additions' ) . ' ' . __( 'This is provided by the plugin %s.', 'multisite-toolbar-additions' ) . '</p>',
 		'<em>' . __( 'Multisite Toolbar Additions', 'multisite-toolbar-additions' ) . '</em>'
 	);
 
 	$output .= sprintf(
 		'<p>%s%s</p>',
-		'&rarr; ' . ddw_mstba_string_super_admin_menu_location(),
-		( $admin_menu ) ? '<br />&rarr; ' . ddw_mstba_string_restricted_admin_menu_location() : ''
+		'&rarr; ' . ddw_mstba_string_super_admin_menu_location()
 	);
 
 	$output .= sprintf(
@@ -459,6 +380,7 @@ add_filter( 'debug_information', 'ddw_mstba_site_health_add_debug_info', 9 );
  * @link https://make.wordpress.org/core/2019/04/25/site-health-check-in-5-2/
  *
  * @since 2.0.0
+ * @since 3.0.0 Removed restricted Admin Menu feature
  *
  * @param array $debug_info Array holding all Debug Info items.
  * @return array Modified array of Debug Info.
@@ -496,10 +418,6 @@ function ddw_mstba_site_health_add_debug_info( $debug_info ) {
 			'MSTBA_SUPER_ADMIN_NAV_MENU' => array(
 				'label' => 'MSTBA_SUPER_ADMIN_NAV_MENU',
 				'value' => ( ! defined( 'MSTBA_SUPER_ADMIN_NAV_MENU' ) ? $string_undefined : ( MSTBA_SUPER_ADMIN_NAV_MENU ? $string_enabled : $string_disabled ) ),
-			),
-			'MSTBA_RESRICTED_ADMIN_NAV_MENU' => array(
-				'label' => 'MSTBA_RESRICTED_ADMIN_NAV_MENU',
-				'value' => ( ! defined( 'MSTBA_RESRICTED_ADMIN_NAV_MENU' ) ? $string_undefined : ( MSTBA_RESRICTED_ADMIN_NAV_MENU ? $string_enabled : $string_disabled ) ),
 			),
 			'MSTBA_DISPLAY_NETWORK_EXTEND_GROUP' => array(
 				'label' => 'MSTBA_DISPLAY_NETWORK_EXTEND_GROUP',
