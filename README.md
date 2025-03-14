@@ -283,7 +283,7 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 ## Changelog 
 
-### ⚡ 3.0.0 - March 2025
+### 🎉 3.0.0 - March 2025
 * Brought back plugin into a lightweight and working state as it was originally intended!
 * Cleanup: Restricted admin menu feature got completely removed as it was causing lots of issues (the global super admin menu remains)
 * Cleanup: Lot of supported plugins got removed as they are no longer available or outdated.
