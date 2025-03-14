@@ -461,3 +461,6 @@ Enjoy using *Multisite Toolbar Additions*? **[Please consider making a donation]
 **Idea Behind / Philosophy:** Just a little lightweight plugin for all the Multisite Super Admins out there to make their daily network admin life a bit easier. I'll try to add more plugin support if it makes some sense. So stay tuned :).
 
 
+---
+
+Copyright © 2012–2025 David Decker – DECKERWEB.de
