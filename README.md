@@ -352,6 +352,9 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 ### ⚡ 3.0.0 - 2025 ...
 _Currently being worked on ..._
+* Cleanup: Restricted admin menu feature got completely removed as it was causing lots of issues (the global super admin menu remains)
+* Cleanup: Lot of supported plugins got removed as they are no longer available or outdated.
+* Some info links, help texts and the DDW Plugin Recommendations library got removed, it is no longer wanted/supported anyways
 
 
 ### ⚡ 2.0.1 - 2019-09-23
