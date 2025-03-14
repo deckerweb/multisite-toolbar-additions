@@ -16,7 +16,7 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 
 
 ### General Features & Benefits -- Global Usage 
-* Add a **Custom Nav Menu** to the toolbar via WP Menu system - great for instructions for your staff members or other resources... ([see FAQ for more...](https://wordpress.org/plugins/multisite-toolbar-additions/faq/))
+* Add a **Custom Nav Menu** to the toolbar via WP Menu system - great for instructions for your staff members or other resources...
 * Recommended in Multisite: to use the main site for this (but menu is available globally)
 * Only visible and accessable for Super Admins (Multisite context) or for Site Admins (non-Multisite context)!
 * Plugin is fully internationalized, English & German language files included by default :)
@@ -28,8 +28,8 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 * Network wide Themes (plus Theme Editor)
 * Network Settings, Updates, plus Site Upgrade
 * Special "+ New" (new content) section, like on site dashboards, but only for Network admin with Network specific items!
-* Extra special *Custom Nav Menu* vieable for Site Admins but only editable for Super Admins, setup via WP Menu system, [see FAQ for more...](https://wordpress.org/plugins/multisite-toolbar-additions/faq/).
-* Multisite aware plugin support, to date for: *WP Super Cache, WP-Piwik, WPMS Site Maintenance Mode, Code Snippets, BackWPup, User Management Tools, Network Mass Email, Organizational Message Notifier, Snapshot (premium), Ultimate Branding (premium), Login Security Solution, Smart Admin Tweaks (premium), Smart Cleanup Tools (premium), Smart Options Optimizer (premium), Simple System Info (premium), Smart Security Tools (premium), Hide My WP (premium), Blog Copier, NS Cloner, NS Cloner Pro, Multisite Robots.txt Manager, WordPress MU Domain Mapping, WP Migrate DB Pro (premium), WPMS Admin Reports*
+* Extra special *Custom Nav Menu* vieable for Site Admins but only editable for Super Admins, setup via WP Menu system.
+* Multisite aware plugin support, to date for: *WP-Piwik, WPMS Site Maintenance Mode, Multisite Robots.txt Manager, WordPress MU Domain Mapping, WP Migrate DB Pro (premium), WPMS Admin Reports*
 
 
 ### (Sub) Site Specific Features & Benefits 
@@ -37,58 +37,23 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
  * Nav Menus, including list of editable Nav Menus!
  * *Manage Content:* Media Library / Edit Posts / Edit Pages
  * Theme Editor (also detects Multisite network-admin!), great for fast editions on the fly... -- also includes "Customizer", plus "Custom Background" and "Custom Header"!
- * (Site specific) Plugin support, to date for: *Howdy Tweaks, Cachify, Hyper Cache, Hyper Cache Extended, Limit Login Attempts, WP-Optimize, Installer (by WMPL.org Team), Code With WP Code Snippets, Toolbox Modules, Relevanssi & Relevanssi Premium, Multisite Language Switcher, Optimize Database after Deleting Revisions, Widget Settings Importer/Exporter, Tabify Edit Screen, Restrict Widgets, P3 (Plugin Performance Profiler), Codestyling Localization, WP Migrate DB, Go Sidebar Wizard (premium), Stream, Snitch*
+ * (Site specific) Plugin support, to date for: *Relevanssi & Relevanssi Premium, Multisite Language Switcher, Tabify Edit Screen, WP Migrate DB, Stream*
 
 
 ### Included Plugin Support 
 *Out of the box the plugin supports the following other plugins' admin menu links in the Toolbar if installed and activated:*
 
-* ["WP Super Cache" (free, by Donncha O Caoimh)](https://wordpress.org/plugins/wp-super-cache/) - also network wide
 * ["WP-Piwik" (free, by Andr&eacute; Br&auml;kling)](https://wordpress.org/plugins/wp-piwik/) - also network wide
 * ["WPMS Site Maintenance Mode" (free, 7 Media Web Solutions, LLC)](https://wordpress.org/plugins/wpms-site-maintenance-mode/) - also network wide
-* ["User Management Tools" (free, by scribu/AppThemes)](https://wordpress.org/plugins/user-management-tools/) - also network wide
-* ["Network Mass Email" (free, Kenny Zaron)](https://wordpress.org/plugins/network-mass-email/) - also network wide
-* ["Organizational Message Notifier" (free, Zaantar)](https://wordpress.org/plugins/organizational-message-notifier/) - also network wide
 * ["Code Snippets" (free, by Shea Bunge)](https://wordpress.org/plugins/code-snippets/) - also network wide
-* ["BackWPup" (free, by Daniel Hüsken)](https://wordpress.org/plugins/backwpup/) - also network wide - *v3.x plus older v2.x branch supported!*
-* ["Snapshot" (premium, by Paul Menard (Incsub)/ WPMU DEV)](https://ddwb.me/8f) - also network wide
-* ["Ultimate Branding" (premium, by Incsub Team/ WPMU DEV)](https://ddwb.me/8g) - also network wide
-* ["Smart Admin Tweaks v3.0+" (premium, by Smart Plugins/ Milan Petrovic)](https://ddwb.me/8u) - also network wide
-* ["Smart Cleanup Tools v4.0+" (premium, by Smart Plugins/ Milan Petrovic)](https://ddwb.me/8v) - also network wide
-* ["Smart Security Tools" (premium, by Smart Plugins/ Milan Petrovic)](https://ddwb.me/9g) - also network wide
-* ["Smart Options Optimizer" (premium, by Smart Plugins/ Milan Petrovic)](https://ddwb.me/91) - also network wide
-* ["Simple System Info" (premium, by Smart Plugins/ Milan Petrovic)](https://ddwb.me/94) - also network wide
-* ["Hide My WP" (premium, by Hassan Jahangiri)](https://ddwb.me/8z) - also network wide
-* ["Better WP Security" (free, by Chris Wiegman & iThemes)](https://wordpress.org/plugins/better-wp-security/) - also network wide
-* ["Login Security Solution" (free, by Daniel Convissor)](https://wordpress.org/plugins/login-security-solution/) - also network wide
-* ["Blog Copier" (free, by Modern Tribe, Inc.)](https://wordpress.org/plugins/blog-copier/) - network wide
-* ["NS Cloner - Site Copier" (free, by Never Settle)](https://wordpress.org/plugins/ns-cloner-site-copier/) - network wide
-* ["NS Cloner Pro" (premium, by Never Settle)](https://ddwb.me/8-) - network wide
 * ["WP Migrate DB Pro" (premium, by Delicious Brains (Brad Touesnard & Chris Aprea))](https://ddwb.me/ai) - network wide
 * ["Multisite Robots.txt Manager" (free, by tribalNerd)](https://wordpress.org/plugins/multisite-robotstxt-manager/) - network only!
 * ["WordPress MU Domain Mapping" (free, by Donncha O Caoimh, Ron Rennick, Automatic Inc.)](https://wordpress.org/plugins/wordpress-mu-domain-mapping/) - network only!
 * ["WPMS Admin Reports" (free, by Joe Motacek)](https://wordpress.org/plugins/wpms-admin-reports/) - network only! (MU Plugin!)
 * ["Multisite Language Switcher" (free, Dennis Ploetner)](https://wordpress.org/plugins/multisite-language-switcher/)
-* ["Howdy Tweaks" (free, by Kailey Lampert)](https://wordpress.org/plugins/howdy-tweaks/)
-* ["Cachify" (free, by Sergej Müller)](https://wordpress.org/plugins/cachify/)
-* ["Hyper Cache" (free, by Stefano Lissa)](https://wordpress.org/plugins/hyper-cache/)
-* ["Hyper Cache Extended" (free, by Martin Lazarov)](https://wordpress.org/plugins/hyper-cache-extended/)
-* ["Limit Login Attempts" (free, by Johan Eenfeldt)](https://wordpress.org/plugins/limit-login-attempts/)
-* ["Optimize Database after Deleting Revisions" (free, by Rolf van Gelder)](https://wordpress.org/plugins/rvg-optimize-database/)
-* ["WP-Optimize" (free, by Ruhani Rabin)](https://wordpress.org/plugins/wp-optimize/)
-* "Installer (WPRC Installer)" (free, by OnTheGoSystems, Inc. (WPML.org team))
-* ["Code With WP Code Snippets" (free, by Thomas Griffin)](https://github.com/thomasgriffin/CWWP-Custom-Snippets) (plugin currently in beta, hosted at GitHub)
-* ["Toolbox Modules" (free, by Sergej Müller)](https://wordpress.org/plugins/toolbox/) - see also his [plugin instructions](http://playground.ebiene.de/toolbox-wordpress-plugin/)
 * ["Relevanssi" (free)](https://wordpress.org/plugins/relevanssi/) and ["Relevanssi Premium" (premium)](https://www.relevanssi.com/) both by Mikko Saari
-* ["Widget Settings Importer/Exporter" (free, by Kevin Langley, Sean McCafferty, Mark Parolisi)](https://wordpress.org/plugins/widget-settings-importexport/)
-* ["Tabify Edit Screen" (free, by Marko Heijnen)](https://wordpress.org/plugins/tabify-edit-screen/)
-* ["Restrict Widgets" (free, by Digital Factory)](https://wordpress.org/plugins/restrict-widgets/)
-* ["P3 (Plugin Performance Profiler)" (free, by GoDaddy.com)](https://wordpress.org/plugins/p3-profiler/description/)
-* ["Codestyling Localization" (free, by Heiko Rabe)](https://wordpress.org/plugins/codestyling-localization/)
 * ["WP Migrate DB" (free, by Brad Touesnard)](https://wordpress.org/plugins/wp-migrate-db/)
-* ["Go - Sidebar Wizard" (premium, by Granth)](https://ddwb.me/92)
 * ["Stream" (free, by X-Team)](https://wordpress.org/plugins/stream/)
-* ["Snitch" (free, by Sergej Müller)](https://wordpress.org/plugins/snitch/)
 
 
 ### This Plugin ... 
@@ -107,14 +72,14 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
  * *OR via FTP upload:* Upload `multisite-toolbar-additions` folder to the `/wp-content/plugins/` directory
 2. In your Network Dashboard network activate the plugin through the (Network) 'Plugins' menu -- or in a sub site dashboard: per-site activate this plugin through the (Site) 'Plugins' menu
 3. Look at your toolbar / admin bar within the "My Sites" menu and enjoy using the new links there :)
-4. If you want you could add a special custom Nav Menu via "Design > Menus" (best if using the main site of your Network for that) and assign it to the new "Multisite Toolbar Menu" menu location (only visible & accessable for Super Admins!). [(See FAQ here for more instructions)](https://wordpress.org/plugins/multisite-toolbar-additions/#faq)
+4. If you want you could add a special custom Nav Menu via "Design > Menus" (best if using the main site of your Network for that) and assign it to the new "Multisite Toolbar Menu" menu location (only visible & accessable for Super Admins!).
 5. Go and manage your Multisite Network :)
 
 **Please note, this plugin requires WordPress 3.3 or higher in order to work!**
 
 **Also note:** This plugin has NO settings page because I believe it's just not neccessarry. All customizing could be done via filters, constants and regular WordPress user roles & capabilities. As the plugin is only indended for a Super Admin (Network Admin) usage - that's the way to go. This way we can save the overhaul of an options panel/settings page, additional database requests, uninstall routines and such. End result: a lightweight system that just works and saves clicks & time :-).
 
-**Multisite install:** Of course, it's fully compatible but have a look in the [FAQ section here](https://wordpress.org/plugins/multisite-toolbar-additions/faq/) for more info :)
+**Multisite install:** Of course, it's fully compatible
 
 **Single install:** The plugin WILL also working like a charm for regular non-Multisite installs - just without the network specific stuff. However, there's still A LOT (single) site specific stuff supported. So it's up to your use case :). -- I for myself use this plugin on each and every install because it SAVES ME A LOT OF CLICKS & TIME! ...and that was the very reason I've developed it, yeah :-)
 
@@ -125,7 +90,7 @@ You're right! If you're happy with one of the others then that's absolutely grea
 
 I just made this new plugin here for my own needs and some of my client admins. As I am an open source evangelist I like to release my stuff to the public to give back to the community!
 
-Plugin developer David Decker: *What has proved its day to day usage and usefullness on more than 100 installs (Multisites and regular single site installs) before, could be used by many other (super) admins as well, right? :-)))*
+Plugin developer David Decker: *What has proved its day to day usage and usefulness on more than 100 installs (Multisites and regular single site installs) before, could be used by many other (super) admins as well, right? :-)))*
 
 
 ### Does this plugin work with latest WordPress version and also older versions? 
@@ -155,12 +120,9 @@ add_filter( 'mstba_filter_super_admin_nav_menu_priority', 'mstba_custom_position
  *    Adjust Super Admin Nav Menu Position
  */
 function mstba_custom_position_super_admin_nav_menu() {
-
 	return 20;
-
 }
 ```
-
 
 
 ### How do I use the custom Nav Menu for Site Admins for the toolbar? 
@@ -169,7 +131,6 @@ The usage is identical as the Super Admin menu - see above 2 questions for instr
 Only difference: This Site Admins menu is only viewable by site admins but only Super Admins can setup and edit it!
 
 The filter for the hook priority here is called `mstba_filter_restricted_admin_nav_menu_priority` -- and works in the very same as above!
-
 
 
 ### How can I adjust the position of Network admin "+ New" section? 
@@ -181,12 +142,9 @@ add_filter( 'mstba_filter_network_admin_new_content_priority', 'mstba_custom_pos
  *    Adjust Network Admin "+ New" Position
  */
 function mstba_custom_position_network_admin_new_content() {
-
 	return 80;
-
 }
 ```
-
 
 
 ### Can I remove the "+ New" (new content) section in Network admin? 
@@ -198,13 +156,6 @@ Yes, it's possible! This line of code needs to be added to your theme's/ child t
  */
 add_filter( 'mstba_filter_display_network_new_content', '__return_false' );
 ```
-
-
-
-### How are new resources being added to the toolbar/admin bar? 
-Just drop me a note on [my Twitter @deckerweb](https://twitter.com/deckerweb) or via my contact page and I'll add the link if it is useful for Multisite/ Super Admins.
-
-
 
 ### Is this plugin Multisite compatible? 
 Of course it is! :) Works really fine in Multisite invironment - for Super Admins.
@@ -218,14 +169,6 @@ Yes, you could! Again, it's only displayed and useful for Super Admins. -- Activ
 
 ### Has this plugin any use for non-Multisite installs? 
 Yes, of course! :) The plugin is *working like a charm* in single-site installs - just without the network specific stuff. However, there's still A LOT (single) site specific stuff supported. So it's up to your use case :).
-
-
-
-### Special instructions for the supported 'BackWPup' plugin? 
-Yes, I have some advise for you :) -- My plugin only adds any BackWPup resources to your toolbar if you didn't enabled the "Toolbar / Admin Bar option" on the BackWPup settings page.
-
-* **Enable** BackWPup Toolbar / Adminbar = BackWPup handles its own stuff...
-* **Disable** BackWPup Toolbar / Adminbar = Multisite Toolbar Additions will handle BackWPup's toolbar items :)
 
 
 
@@ -354,7 +297,7 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 _Currently being worked on ..._
 * Cleanup: Restricted admin menu feature got completely removed as it was causing lots of issues (the global super admin menu remains)
 * Cleanup: Lot of supported plugins got removed as they are no longer available or outdated.
-* Some info links, help texts and the DDW Plugin Recommendations library got removed, it is no longer wanted/supported anyways
+* Some info links, help texts and the _DDWlib Plugin Installer Recommendations_ library got removed, it is no longer wanted/supported anyways
 
 
 ### ⚡ 2.0.1 - 2019-09-23
