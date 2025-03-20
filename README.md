@@ -2,7 +2,7 @@
 
 Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs.
 
-![Multisite Toolbar Additions plugin banner](https://raw.githubusercontent.com/deckerweb/multisite-toolbar-additions/master/assets/banner-772x250.png)
+![Multisite Toolbar Additions plugin banner](https://repository-images.githubusercontent.com/127668325/2a7279cf-2bd5-4743-9d2d-42b1555aa7f9)
 
 ---
 
@@ -388,6 +388,7 @@ All the custom & branding stuff code above can also be found as a Gist on Github
  * NEW: Added support for "WPMS Admin Reports" (free, by Joe Motacek).
  * UPDATE: Updated and improved support for these plugins: "WP Migrate DB Pro".
 
+---
 
 ## Donate 
 Enjoy using *Multisite Toolbar Additions*? **[Please consider making a donation](https://www.paypal.me/deckerweb)** - every donation helps to support the project's continued development, maintenance and support.
