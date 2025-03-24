@@ -6,6 +6,19 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 
 ---
 
+## Support the Project
+
+If you find this project helpful, consider showing your support by buying me a coffee! Your contribution helps me keep developing and improving this plugin.
+
+Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through the following options:
+
+- [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W81BNTZE)
+- [Buy me a coffee](https://buymeacoffee.com/daveshine)
+- [PayPal donation](https://paypal.me/deckerweb)
+- [Join my **newsletter** for DECKERWEB WordPress Plugins](https://eepurl.com/gbAUUn)
+
+---
+
 ## Description 
 
 > #### Quick Access to Super Admin Resources - Time Saver!
@@ -71,7 +84,7 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 
 **Multisite install:** Of course, it's fully compatible
 
-**Single install:** The plugin WILL also working like a charm for regular non-Multisite installs - just without the network specific stuff. However, there's still A LOT (single) site specific stuff supported. So it's up to your use case :). -- I for myself use this plugin on each and every install because it SAVES ME A LOT OF CLICKS & TIME! ...and that was the very reason I've developed it, yeah :-)
+**Single Site install:** The plugin WILL also working like a charm for regular non-Multisite installs - just without the network specific stuff. However, there's still A LOT (single) site specific stuff supported. So it's up to your use case :). -- I for myself use this plugin on each and every install because it SAVES ME A LOT OF CLICKS & TIME! ...and that was the very reason I've developed it, yeah :-)
 
 ---
 
@@ -285,8 +298,8 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 ### 🎉 3.0.0 - March 2025
 * Brought back plugin into a lightweight and working state as it was originally intended!
-* Cleanup: Restricted admin menu feature got completely removed as it was causing lots of issues (the global super admin menu remains)
-* Cleanup: Lot of supported plugins got removed as they are no longer available or outdated.
+* Cleanup: Restricted admin menu feature got completely removed as it was causing lots of issues (note: the global super admin menu remains)
+* Cleanup: Lots of originally supported plugins got removed as these are no longer available or outdated.
 * Some info links, help texts, plus the _DDWlib Plugin Installer Recommendations_ library got removed, it is no longer wanted/supported anyways
 * **Note:** No longer in the .org plugin repo available – thanks to Matt... (I've taken it out myself as I have no longer interest in WordPress.org repo strategy) – just install yourself via ZIP file, see above under "Installation"
 
@@ -307,86 +320,7 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 * New: [Join my newsletter for DECKERWEB WordPress Plugins](https://eepurl.com/gbAUUn) - insider info, plus tutorials and more useful stuff
 
 
-### ⚡ 1.9.4 - 2018-11-03
-* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
-* Tweak: Few internal code tweaks and improvements
-
-
-### ⚡ 1.9.3 - 2018-10-01
-* New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
-* Update: Small internal code improvements
-* Update: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.1.0) - which brings smaller additions and enhancements, like CSS styles to the upload areas and plugin cards, plus plugin version number on plugin cards
-* Update: `.pot` file plus all German translations (formal, informal) and language packs
-
-
-### ⚡ 1.9.2 - 2018-09-08
-* New: Added plugin update message also to Plugins page (overview table)
-* Update: Fixed and improved various Plugins page links for Super Admins within the Admin area
-* Update: Fixed CSS class name in the admin
-* Update: Fixed wrong textdomain for one string
-* Update: Improved plugin installer recommendations
-* Update: `.pot` file for translators, plus German translations
-
-
-### ⚡ 1.9.1 - 2018-08-22 
-* New: Added first language packs via WordPress.org translations platform - for German (de_DE - informal) and German Formal (de_DE_formal) - thanks to Team WordPress DE! ;-)
-* New: Added `composer.json` file to the plugin's root folder - this is great for developers using Composer
-* New: Added `README.md` file for plugin's GitHub.com repository to make it more readable there
-* Fix: Fatal error related to to Network Admin/ Multisite context.
-* Removed: Plugin support for "Quick Cache" was removed as this plugin is no longer existing
-* Update: Some smaller code tweaks and improvements
-* Update: `.pot` file for translators, plus German translations
-* Update: Readme.txt file
-* *Trivia fact: this plugin is now 6 (six!) years old. Whoa, that's a lot. ;-)*
-
-
-### 🎉 1.9.0 - 2018-04-01 
-* *Maintenance release*
-* Tweak: Improved security.
-* Tweak: Updated all internal plugin links to current state, deleted the ones that were dead or no longer needed.
-* Tweak: Added new plugin icon and banner on WordPress.org
-* Update: `.pot` file for translators, plus German translations
-* Update: Readme.txt file.
-
-
-### 🎉 1.8.0 - 2014-10-20 
-* **Unreleased - private beta version!**
-* NEW: Added support for more (custom) post types in the "Manage Content" section.
-* NEW: Added "Widget Customizer" admin deep link for WordPress 3.9+.
-* UPDATE: Updated plugin installer & uploader admin links to be compatible with WordPress 4.0+.
-* UPDATE: Updated theme installer & uploader admin links to be compatible with WordPress 3.9+.
-* UPDATE: Updated labels for Super Admin/ Admin custom menus within the "Customizer".
-* UPDATE: Updated German translations and also the .pot file for all translators!
-* *Extended plugin support:*
- * NEW: Added support for "Smart Security Tools: Login Limit Add-On" (premium, by Smart Plugins/ Milan Petrovic).
- * NEW: Added support for "Smart Security Tools: Live Monitor Add-On" (premium, by Smart Plugins/ Milan Petrovic).
- * NEW: Added support for "Smart Robots.txt Tools" (premium, by Smart Plugins/ Milan Petrovic).
- * NEW: Added support for "iThemes Security" (free, by iThemes).
- * NEW: Added support for "iThemes Security Pro" (premium, by iThemes).
- * UPDATE: Updated and improved support for these plugins: "Snapshot", "Smart Security Tools", "Smart Options Optimizer", "Simple System Info", "Stream", "Quick Cache Pro".
-
-
-### ⚡ 1.7.1 - 2014-04/05 
-* *Unreleased - private beta version!*
-
-
-### 🎉 1.7.0 - 2014-03-04 
-* NEW: Highly improved "Nav Menu" support, all editable menus are now listed as sub level items for "Menus" entry. (Could be disabled via constant if needed.)
-* NEW: As per user request I added an additional restricted Site Administrators toolbar menu. This is only effective in Multisite installs. Those menus can only be setup & edited via WP Nav Menus by Super Administrators - but then they are visible for administrator user roles (`edit_theme_options` capability).
-* NEW: For Multisite, under "Plugins" added "Network Plugins" admin link for sub site admin areas - handy link to network wide plugins page.
-* NEW: For Multisite, under "Themes" added "Network Theme Editor" admin link (respects all Editor disable stuff, hehe! :) for sub site admin areas - handy link to theme editor if needed.
-* NEW: Added new logic to prevent other users than super admins from editing those custom (nav) menus that are used within the Toolbar.
-* UPDATE: Removed all CSS that was added in v1.5.0 -- it was annoying and should not longer be there for WordPress 3.8 or higher. I guess this is finally for the better! :)
-* UPDATE: Fixed double appearance of "Themes" and "Plugins" in Network Admin sublevel - now fixed for all instances :).
-* CODE: Improved modular structure of the plugin for better maintenance and performance.
-* CODE: Code and documentation tweaks and improvements.
-* UPDATE: Extended and improved readme.txt file here.
-* UPDATE: Updated German translations and also the .pot file for all translators!
-* *Extended plugin support:*
- * NEW: Added support for "Stream" (free, by X-Team).
- * NEW: Added support for "Snitch" (free, by Sergej Müller).
- * NEW: Added support for "WPMS Admin Reports" (free, by Joe Motacek).
- * UPDATE: Updated and improved support for these plugins: "WP Migrate DB Pro".
+**NOTE:** See [**Changelog Archive**](https://github.com/deckerweb/multisite-toolbar-additions/blob/master/changelog-archive.md) for all versions prior to 2.0.0
 
 ---
 
