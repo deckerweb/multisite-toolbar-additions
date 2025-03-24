@@ -478,3 +478,142 @@ if ( ! function_exists( 'ddw_wp_site_health_remove_percentage' ) ) :
 	}  // end function
 
 endif;
+
+/**
+ * Get specific Admin Color scheme colors we need. Covers all 9 default
+ *	 color schemes coming with a default WordPress install.
+ *   (helper function)
+ *
+ * @since 3.1.0
+ */
+function ddw_mstba_get_scheme_colors() {
+	
+	$scheme_colors = array(
+		'fresh' => array(
+			'bg'    => '#1d2327',
+			'base'  => 'rgba(240,246,252,.6)',
+			'hover' => '#72aee6',
+		),
+		'light' => array(
+			'bg'    => '#e5e5e5',
+			'base'  => '#999',
+			'hover' => '#04a4cc',
+		),
+		'modern' => array(
+			'bg'    => '#1e1e1e',
+			'base'  => '#f3f1f1',
+			'hover' => '#33f078',
+		),
+		'blue' => array(
+			'bg'    => '#52accc',
+			'base'  => '#e5f8ff',
+			'hover' => '#fff',
+		),
+		'coffee' => array(
+			'bg'    => '#59524c',
+			'base'  => 'hsl(27.6923076923,7%,95%)',
+			'hover' => '#c7a589',
+		),
+		'ectoplasm' => array(
+			'bg'    => '#523f6d',
+			'base'  => '#ece6f6',
+			'hover' => '#a3b745',
+		),
+		'midnight' => array(
+			'bg'    => '#363b3f',
+			'base'  => 'hsl(206.6666666667,7%,95%)',
+			'hover' => '#e14d43',
+		),
+		'ocean' => array(
+			'bg'    => '#738e96',
+			'base'  => '#f2fcff',
+			'hover' => '#9ebaa0',
+		),
+		'sunrise' => array(
+			'bg'    => '#cf4944',
+			'base'  => 'hsl(2.1582733813,7%,95%)',
+			'hover' => 'rgb(247.3869565217,227.0108695652,211.1130434783)',
+		),
+	);
+	
+	/** No filter currently b/c of sanitizing issues with the above CSS values */
+	//$scheme_colors = (array) apply_filters( 'ddw/mstba/scheme_colors', $scheme_colors );
+	
+	return $scheme_colors;
+	
+}  // end function
+
+
+/**
+ * Show the Admin Bar also in Block Editor full screen mode.
+ *
+ * @since 3.1.0
+ */
+function ddw_mstba_adminbar_block_editor_fullscreen() {
+	
+	if ( ! is_admin_bar_showing() ) {
+		return;
+	}
+	
+	/**
+	 * Depending on user color scheme get proper bg color value for admin bar.
+	 */
+	$user_color_scheme = get_user_option( 'admin_color' );
+	$admin_scheme      = ddw_mstba_get_scheme_colors();
+	
+	$bg_color = $admin_scheme[ $user_color_scheme ][ 'bg' ];
+	
+	$inline_css = sprintf(
+		'
+			@media (min-width: 600px) {
+				body.is-fullscreen-mode .block-editor__container {
+					top: var(--wp-admin--admin-bar--height);
+				}
+			}
+			
+			@media (min-width: 782px) {
+				body.js.is-fullscreen-mode #wpadminbar {
+					display: block;
+				}
+			
+				body.is-fullscreen-mode .block-editor__container {
+					min-height: calc(100vh - var(--wp-admin--admin-bar--height));
+				}
+			
+				body.is-fullscreen-mode .edit-post-layout .editor-post-publish-panel {
+					top: var(--wp-admin--admin-bar--height);
+				}
+				
+				.edit-post-fullscreen-mode-close.components-button {
+					background: %s;
+				}
+				
+				.edit-post-fullscreen-mode-close.components-button::before {
+					box-shadow: none;
+				}
+			}
+			
+			@media (min-width: 783px) {
+				.is-fullscreen-mode .interface-interface-skeleton {
+					top: var(--wp-admin--admin-bar--height);
+				}
+			}
+		',
+		sanitize_hex_color( $bg_color )
+	);
+	
+	wp_add_inline_style( 'wp-block-editor', $inline_css );
+	
+	add_action( 'admin_bar_menu', 'ddw_mstba_remove_adminbar_nodes', 999 );
+}
+
+/**
+ * Remove Admin Bar nodes.
+ *
+ * @since 3.1.0
+ */
+function ddw_mstba_remove_adminbar_nodes( $wp_admin_bar ) {
+	
+	$wp_admin_bar->remove_node( 'wp-logo' );
+	
+}  // end function

@@ -296,11 +296,15 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 ## Changelog 
 
+### 🎉 3.1.0 - ?? 2025
+* New: Show Admin Bar also in Block Editor full screen mode
+
+
 ### 🎉 3.0.0 - March 2025
-* Brought back plugin into a lightweight and working state as it was originally intended!
+* Improved: Brought back plugin into a lightweight and working state as it was originally intended!
 * Cleanup: Restricted admin menu feature got completely removed as it was causing lots of issues (note: the global super admin menu remains)
 * Cleanup: Lots of originally supported plugins got removed as these are no longer available or outdated.
-* Some info links, help texts, plus the _DDWlib Plugin Installer Recommendations_ library got removed, it is no longer wanted/supported anyways
+* Removed: Some info links, help texts, plus the _DDWlib Plugin Installer Recommendations_ library got removed, it is no longer wanted/supported anyways
 * **Note:** No longer in the .org plugin repo available – thanks to Matt... (I've taken it out myself as I have no longer interest in WordPress.org repo strategy) – just install yourself via ZIP file, see above under "Installation"
 
 
