@@ -140,69 +140,6 @@ function ddw_mstba_string_super_admin_menu_location() {
 
 
 /**
- * String for restricted Site Admin menu location.
- *
- * @since 1.7.0
- *
- * @global $GLOBALS[ 'wp_customize' ]
- *
- * @return string $mstba_menu_string String for menu location.
- */
-function ddw_mstba_string_restricted_admin_menu_location() {
-
-	/** Helper strings */
-	$string_restricted = __( 'Restricted Site Admin Menu', 'multisite-toolbar-additions' );
-	$string_toolbar    = __( 'Toolbar', 'multisite-toolbar-additions' );
-
-	/** Build menu location string */
-	if ( isset( $GLOBALS[ 'wp_customize' ] ) ) {
-
-		$mstba_menu_string = sprintf(
-			'<span title="%s: %s">%s (%s)</span>',
-			esc_html__( 'via Plugin', 'multisite-toolbar-additions' ),
-			esc_html__( 'Multisite Toolbar Additions', 'multisite-toolbar-additions' ),
-			$string_restricted,
-			$string_toolbar
-		);
-
-	} else {
-
-		$mstba_menu_string = sprintf(
-			'%s (%s)',
-			$string_restricted,
-			$string_toolbar
-		);
-
-	}  // end if
-
-	/** Output */
-	return $mstba_menu_string;
-
-}  // end function
-
-
-/**
- * Filterable capability for custom site admin menus.
- *    Default: 'edit_theme_options'
- *
- * @since 1.7.0
- *
- * @return string String of capability ID.
- */
-function ddw_mstba_restricted_admin_menu_cap() {
-
-	/** Set filterable cap */
-	return sanitize_key(
-		apply_filters(
-			'mstba_filter_restricted_admin_menu_cap',
-			'edit_theme_options'
-		)
-	);
-
-}  // end function
-
-
-/**
  * Restrict editing access of special custom "Super Admin Admin" toolbar menu.
  *
  * @since 1.7.0

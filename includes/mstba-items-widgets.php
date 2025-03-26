@@ -34,10 +34,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' => is_admin() ? $widgets : 'widgets',
 			'title'  => __( 'Widgets Customizer', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'customize.php?widget-customizer=open' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Widgets Customizer', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end if
@@ -54,10 +50,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' => is_admin() ? $widgets : 'widgets',
 			'title'  => __( 'Genesis Simple Sidebars', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'admin.php?page=simple-sidebars' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Genesis Simple Sidebars', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end if Genesis Simple Sidebars
@@ -74,36 +66,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' => is_admin() ? $widgets : 'widgets',
 			'title'  => __( 'Go Sidebar Wizard', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'admin.php?page=go-sbwizard' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Go Sidebar Wizard', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'widgets-plggosbwizard-sidebars' ] = array(
 			'parent' => is_admin() ? $widgets : 'widgets',
 			'title'  => __( 'Custom Sidebars', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'admin.php?page=go-sbwizard-custom-sidebars' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Custom Sidebars', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end if Go Sidebar Wizard
-
-
-	/**
-	 * Smart Tabber Widget (premium, by Smart Plugins/ Milan Petrovic)
-	 *
-	 * @since 1.5.0
-	 */
-	if ( class_exists( 'stw_loader' ) && current_user_can( 'activate_plugins' ) ) {
-
-		/** Include code part for Smart Tabber Widget plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-smarttabberwidget.php' );
-
-	}  // end if Smart Tabber Widget
 
 
 	/**
@@ -117,20 +88,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' => is_admin() ? $widgets : 'widgets',
 			'title'  => __( 'Widget Settings Export', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'tools.php?page=widget-settings-export' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Widget Settings Export', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'widgets-plgwdata-import' ] = array(
 			'parent' => is_admin() ? $widgets : 'widgets',
 			'title'  => __( 'Widget Settings Import', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'tools.php?page=widget-settings-import' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Widget Settings Import', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end if Widget Settings Importer/Exporter
@@ -147,10 +110,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' => is_admin() ? $widgets : 'widgets',
 			'title'  => __( 'Restrict Widgets', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'widgets.php' ) . '#widgets-options',
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Restrict Widgets', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end if Restrict Widgets

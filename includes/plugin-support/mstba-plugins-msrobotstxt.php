@@ -53,34 +53,18 @@ if ( class_exists( 'msrtm_robots_txt' ) ) {
 		'parent' => $networkextgroup,
 		'title'  => __( 'Multisite Robots.txt Manager', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'settings.php?tab=' . $mstba_msrtm_tab_slug . 'settings&page=' .$mstba_msrtm_settings_slug . '' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => _x(
-				'Multisite Robots.txt Manager',
-				'Translators: For the tooltip',
-				'multisite-toolbar-additions'
-			)
-		)
 	);
 
 		$mstba_tb_items[ 'networkext_msrobotstxt_presets' ] = array(
 			'parent' => $networkext_msrobotstxt,
 			'title'  => __( 'Presets/ Examples', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'settings.php?tab=' . $mstba_msrtm_tab_slug . 'presets&page=' .$mstba_msrtm_settings_slug . '' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Presets/ Examples', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'networkext_msrobotstxt_help' ] = array(
 			'parent' => $networkext_msrobotstxt,
 			'title'  => __( 'Help/ How to Use', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'settings.php?tab=' . $mstba_msrtm_tab_slug . 'help&page=' .$mstba_msrtm_settings_slug . '' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Help/ How to Use', 'multisite-toolbar-additions' )
-			)
 		);
 
 	/**
@@ -92,32 +76,16 @@ if ( class_exists( 'msrtm_robots_txt' ) ) {
 		'parent' => $siteextgroup,
 		'title'  => __( 'Site Robots.txt Manager', 'multisite-toolbar-additions' ),
 		'href'   => admin_url( 'options-general.php?tab=' . $mstba_msrtm_tab_slug . 'settings&page=' . $mstba_msrtm_site_slug . '' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => _x(
-				'Multisite Robots.txt Manager',
-				'Translators: For the tooltip',
-				'multisite-toolbar-additions'
-			)
-		)
 	);
 
 		$mstba_tb_items[ 'siteext_msrobotstxt_presets' ] = array(
 			'parent' => $siteext_msrobotstxt,
 			'title'  => __( 'Presets/ Examples', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'options-general.php?tab=' . $mstba_msrtm_tab_slug . 'presets&page=' . $mstba_msrtm_site_slug . '' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Presets/ Examples', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'siteext_msrobotstxt_help' ] = array(
 			'parent' => $siteext_msrobotstxt,
 			'title'  => __( 'Help/ How to Use', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'options-general.php?tab=' . $mstba_msrtm_tab_slug . 'help&page=' . $mstba_msrtm_site_slug . '' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Help/ How to Use', 'multisite-toolbar-additions' )
-			)
 		);

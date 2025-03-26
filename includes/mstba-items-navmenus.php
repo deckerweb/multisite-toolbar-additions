@@ -75,10 +75,6 @@ function ddw_mstba_list_edit_nav_menus() {
 				'parent' => $navmenugroup,
 				'title'  => __( 'Edit Menu:', 'multisite-toolbar-additions' ) . ' ' . esc_html( $nav_menu->name ),
 				'href'   => admin_url( 'nav-menus.php?action=edit&menu=' . $nav_menu->term_id . '' ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Edit Menu:', 'multisite-toolbar-additions' ) . ' ' . esc_html( $nav_menu->name )
-				)
 			) );
 
 		}  // end if
@@ -135,10 +131,6 @@ function ddw_mstba_edit_custom_toolbar_menus() {
 			'parent' => $admin_navmenugroup,
 			'title'  => __( 'Toolbar Menu:', 'multisite-toolbar-additions' ) . ' ' . esc_html( $menu_obj_super_admin->name ),
 			'href'   => admin_url( 'nav-menus.php?action=edit&menu=' . $edit_menu_id_super_admin . '' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Edit Super Admin Toolbar Menu:', 'multisite-toolbar-additions' ) . ' ' . esc_html( $menu_obj_super_admin->name )
-			)
 		) );
 
 	}  // end if
@@ -151,10 +143,6 @@ function ddw_mstba_edit_custom_toolbar_menus() {
 			'parent' => $admin_navmenugroup,
 			'title'  => __( 'Toolbar Menu:', 'multisite-toolbar-additions' ) . ' ' . esc_html( $menu_obj_admin->name ),
 			'href'   => admin_url( 'nav-menus.php?action=edit&menu=' . $edit_menu_id_admin . '' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Edit Site Admin Toolbar Menu:', 'multisite-toolbar-additions' ) . ' ' . esc_html( $menu_obj_admin->name )
-			)
 		) );
 
 	}  // end if

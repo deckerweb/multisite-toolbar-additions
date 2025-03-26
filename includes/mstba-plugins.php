@@ -78,22 +78,23 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 
 
 	/**
-	 * WPMS Site Maintenance Mode (free, by 7 Media Web Solutions, LLC)
+	 * Multisite Robots.txt Manager (free, by tribalNerd)
 	 *
-	 * @since 1.0.0
+	 * Note: Currently versions 0.4.x and former 0.3.x are supported.
+	 *
+	 * @since 1.4.0
 	 */
-	if ( class_exists( 'wpms_sitemaint' ) && current_user_can( 'manage_network_options' ) ) {
-
-		$mstba_tb_items[ 'networkext_wpmsmaintenance' ] = array(
-			'parent' => $networkextgroup,
-			'title'  => __( 'Maintenance Mode', 'multisite-toolbar-additions' ),
-			'href'   => network_admin_url( 'settings.php?page=wpms_site_maint' ),
-			'meta'   => array( 'target' => '', 'title' => _x( 'Multisite Maintenance Mode', 'Translators: For the tooltip', 'multisite-toolbar-additions' ) )
-		);
-
-	}  // end if WPMS Site Maintenance Mode
-
-
+	if ( is_multisite()
+		&& ( class_exists( 'msrtm_robots_txt' ) || class_exists( 'display_robots' ) )
+		&& current_user_can( 'manage_options' )
+	) {
+	
+		/** Include code part for MS Robots.txt Manager plugin support */
+		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-msrobotstxt.php' );
+	
+	}  // end if Multisite Robots.txt Manager
+	
+	
 	/**
 	 * WP Migrate DB Pro (premium, by Delicious Brains (Brad Touesnard & Chris Aprea))
 	 *
@@ -114,6 +115,21 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
  */
 
 	/**
+	 * Stream (free, by X-Team)
+	 *
+	 * @since 1.7.0
+	 */
+	if ( class_exists( 'WP_Stream' )
+		&& ( current_user_can( 'manage_options' ) || current_user_can( 'view_stream' ) )
+	) {
+	
+		/** Include code part for Stream plugin support */
+		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-stream.php' );
+	
+	}  // end if Stream
+ 
+ 
+	/**
 	 * Relevanssi & Relevanssi Premium (free & premium, by Mikko Saari, www.relevanssi.com)
 	 *
 	 * @since 1.1.0
@@ -124,7 +140,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 			'parent' => $siteextgroup,
 			'title'  => RELEVANSSI_PREMIUM ? __( 'Relevanssi Premium', 'multisite-toolbar-additions' ) : __( 'Relevanssi', 'multisite-toolbar-additions' ),
 			'href'   => RELEVANSSI_PREMIUM ? admin_url( 'options-general.php?page=relevanssi-premium/relevanssi.php' ) : admin_url( 'options-general.php?page=relevanssi/relevanssi.php' ),
-			'meta'   => array( 'target' => '', 'title' => RELEVANSSI_PREMIUM ? __( 'Relevanssi Premium', 'multisite-toolbar-additions' ) : __( 'Relevanssi', 'multisite-toolbar-additions' ) )
 		);
 
 		/** Display menu item only if option is true */
@@ -134,7 +149,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 				'parent' => $siteext_relevanssi,
 				'title'  => __( 'User Searches', 'multisite-toolbar-additions' ),
 				'href'   => RELEVANSSI_PREMIUM ? admin_url( 'index.php?page=relevanssi-premium/relevanssi.php' ) : admin_url( 'index.php?page=relevanssi/relevanssi.php' ),
-				'meta'   => array( 'target' => '', 'title' => __( 'User Searches', 'multisite-toolbar-additions' ) )
 			);
 
 		}  // end if relevanssi option check
@@ -153,7 +167,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 			'parent' => $siteextgroup,
 			'title'  => __( 'Multisite Language Switcher', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'options-general.php?page=MslsAdmin' ),
-			'meta'   => array( 'target' => '', 'title' => __( 'Multisite Language Switcher', 'multisite-toolbar-additions' ) )
 		);
 
 	}  // end if Multisite Language Switcher
@@ -170,27 +183,27 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 			'parent' => $siteextgroup,
 			'title'  => __( 'White Label CMS', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'options-general.php?page=wlcms-plugin.php' ),
-			'meta'   => array( 'target' => '', 'title' => __( 'White Label CMS', 'multisite-toolbar-additions' ) )
 		);
 
 	}  // end if White Label CMS
 
 
 	/**
-	 * Stream (free, by X-Team)
+	 * WordPress Multisite Admin Reports (free, by Joe Motacek)
 	 *
 	 * @since 1.7.0
 	 */
-	if ( class_exists( 'WP_Stream' )
-		&& ( current_user_can( 'manage_options' ) || current_user_can( 'view_stream' ) )
+	if ( is_multisite()
+		&& defined( 'MCMVC_REQUIRED_WP_VERSION' )
+		&& current_user_can( 'manage_network' )
 	) {
-
-		/** Include code part for Stream plugin support */
-		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-stream.php' );
-
-	}  // end if Stream
-
-
+	
+		/** Include code part for WPMS Admin Reports plugin support */
+		require_once( MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-wpmsadminreports.php' );
+	
+	}  // end if WPMS Admin Reports
+	
+	
 	/**
 	 * WP Migrate DB (free, by Brad Touesnard)
 	 *
@@ -202,7 +215,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 			'parent' => $siteextgroup,
 			'title'  => __( 'Migrate Database', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'tools.php?page=wp-migrate-db' ),
-			'meta'   => array( 'target' => '', 'title' => __( 'Migrate Database', 'multisite-toolbar-additions' ) )
 		);
 
 	}  // end if WP Migrate DB

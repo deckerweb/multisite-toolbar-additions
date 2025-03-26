@@ -254,10 +254,7 @@ function ddw_mstba_toolbar_main_site_dashboard() {
 			'id'     => 'ddw-mstba-main-site-dashboard',  
 			'title'  => $dashboard_string[ 'dashboard' ],  
 			'href'   => esc_url( admin_url( '/' ) ),  
-			'meta'   => array(
-				'target' => '',
-				'title'  => $dashboard_string[ 'dashboard_main_site' ]
-			)
+			'meta'   => array( 'title'  => $dashboard_string[ 'dashboard_main_site' ] ),
 		) );
 
 		/** Re-add 'View Site' item */
@@ -266,10 +263,7 @@ function ddw_mstba_toolbar_main_site_dashboard() {
 			'id'     => 'ddw-mstba-main-site-view',  
 			'title'  => __( 'View Site', 'multisite-toolbar-additions' ),  
 			'href'   => esc_url( get_home_url() ),  
-			'meta'   => array(
-				'target' => '_blank',
-				'title'  => _x( 'View Site (Main Site)', 'Translators: For the tooltip', 'multisite-toolbar-additions' )
-			)
+			'meta'   => array( 'target' => '_blank' ),
 		) );
 
 	}  // end if is_network_admin() check
@@ -350,15 +344,6 @@ function ddw_mstba_toolbar_additions() {
 		$networkext_snapshot = $mstba_prefix . 'networkext_snapshot';		// third level: snapshot (network)
 		$networkext_snapshot_destinations = $mstba_prefix . 'networkext_snapshot_destinations';	// third level: snapshot dest. (nw.)
 		$networkext_ubranding = $mstba_prefix . 'networkext_ubranding';		// third level: ultimate branding (network)
-		$networkext_smartadmintweaks = $mstba_prefix . 'networkext_smartadmintweaks';	// third level: smart admin tweaks (network)
-		$networkext_smartcleanuptools = $mstba_prefix . 'networkext_smartcleanuptools';	// third level: smart cleanup tools (network)
-		$networkext_smartsecuritytools = $mstba_prefix . 'networkext_smartsecuritytools';	// third level: smart security tools (network)
-		$networkext_smartsecuritytools_settings = $mstba_prefix . 'networkext_smartsecuritytools_settings';	// fourth level: smart security tools - settings (network)
-		$networkext_smartsecuritytools_logs = $mstba_prefix . 'networkext_smartsecuritytools_logs';	// fourth level: smart security tools - logs (network)
-		$networkext_smartooptimizer = $mstba_prefix . 'networkext_smartooptimizer';	// third level: smart o.optimizer (network)
-		$networkext_simplesystinfo = $mstba_prefix . 'networkext_simplesystinfo';	// third level: simple syst.info (network)
-		$networkext_smartcrontools = $mstba_prefix . 'networkext_smartcrontools';	// third level: smart cron tools (network)
-		$networkext_hidemywp = $mstba_prefix . 'networkext_hidemywp';		// third level: hide my wp (network)
 		$networkext_msrobotstxt = $mstba_prefix . 'networkext_msrobotstxt';		// third level: ms robots.txt (network)
 		$networkext_wpmudomainmapping = $mstba_prefix . 'networkext_wpmudomainmapping';	// third level: wpmu domain mapping (network)
 		$networkext_wpmigratedbpro = $mstba_prefix . 'networkext_wpmigratedbpro';	// third level: wp migrate db pro (network)
@@ -372,20 +357,10 @@ function ddw_mstba_toolbar_additions() {
 		$siteext_wprcinstaller = $mstba_prefix . 'siteext_wprcinstaller';	// third level: wprc installer
 		$siteext_relevanssi = $mstba_prefix . 'siteext_relevanssi';			// third level: relevanssi/premium
 		$siteext_codesnippets = $mstba_prefix . 'siteext_codesnippets';		// third level: code snippets (site)
-		$siteext_cwwpcsnippets = $mstba_prefix . 'siteext_cwwpcsnippets';	// third level: cwwp code snippets
 		$siteext_backwpup = $mstba_prefix . 'siteext_backwpup';				// third level: backwpup (site)
 		$siteext_snapshot = $mstba_prefix . 'siteext_snapshot';				// third level: snapshot (site)
 		$siteext_snapshot_destinations = $mstba_prefix . 'siteext_snapshot_destinations';	// third level: snapshot dest. (si
 		$siteext_ubranding = $mstba_prefix . 'siteext_ubranding';			// third level: ultimate branding (site)
-		$siteext_smartadmintweaks = $mstba_prefix . 'siteext_smartadmintweaks';	// third level: smart admin tweaks (site)
-		$siteext_smartcleanuptools = $mstba_prefix . 'siteext_smartcleanuptools';	// third level: smart cleanup tools (site)
-		$siteext_smartsecuritytools = $mstba_prefix . 'siteext_smartsecuritytools';	// third level: smart security tools (site)
-		$siteext_smartsecuritytools_settings = $mstba_prefix . 'siteext_smartsecuritytools_settings';	// fourth level: smart security tools - settings (site)
-		$siteext_smartsecuritytools_logs = $mstba_prefix . 'siteext_smartsecuritytools_logs';	// fourth level: smart security tools - logs (site)
-		$siteext_smartooptimizer = $mstba_prefix . 'siteext_smartooptimizer';	// third level: smart o.optimizer (site)
-		$siteext_simplesystinfo = $mstba_prefix . 'siteext_simplesystinfo';	// third level: simple syst.info (site)
-		$siteext_smartcrontools = $mstba_prefix . 'siteext_smartcrontools';	// third level: smart cron tools (site)
-		$siteext_smarttabberwidget = $mstba_prefix . 'siteext_smarttabberwidget';	// third level: smart tabber widget (site)
 		$siteext_wpoptimize = $mstba_prefix . 'siteext_wpoptimize';			// third level: wp-optimize (site)
 		$siteext_rvgoptimizedb = $mstba_prefix . 'siteext_rvgoptimizedb';	// third level: rvg optimize db (site)
 		$siteext_hidemywp = $mstba_prefix . 'siteext_hidemywp';				// third level: hide my wp (site)
@@ -438,6 +413,8 @@ function ddw_mstba_toolbar_additions() {
 				'id'     => $sitegroup,
 			) );
 
+			$wp_admin_bar->remove_node( 'plugins' );
+
 		}  // end if constant check
 
 		/** Include code part with site group items */
@@ -474,40 +451,24 @@ function ddw_mstba_toolbar_additions() {
 			'parent' => $addnewgroup,
 			'title'  => __( 'Install Plugin', 'multisite-toolbar-additions' ),
 			'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=featured' ) ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Install Plugin - Search via WordPress.org', 'multisite-toolbar-additions' )
-			)
 		);
 
 			$mstba_tb_items[ 'addnew_plugin_search' ] = array(
 				'parent' => $addnew_plugin,
 				'title'  => __( 'Search Plugin Directory', 'multisite-toolbar-additions' ),
 				'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=recommended' ) ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Search WordPress.org Plugin Directory', 'multisite-toolbar-additions' )
-				)
 			);
 
 			$mstba_tb_items[ 'addnew_plugin_upload' ] = array(
 				'parent' => $addnew_plugin,
 				'title'  => __( 'Upload ZIP file', 'multisite-toolbar-additions' ),
 				'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=upload' ) ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Install Plugin - Upload ZIP file', 'multisite-toolbar-additions' )
-				)
 			);
 
 			$mstba_tb_items[ 'addnew_plugin_newest' ] = array(
 				'parent' => $addnew_plugin,
 				'title'  => __( 'Newest Plugins', 'multisite-toolbar-additions' ),
 				'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=new' ) ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Newest Plugins added on WordPress.org', 'multisite-toolbar-additions' )
-				)
 			);
 
 			/** Plugin support: "Cleaner Plugin Installer" (by myself :) */
@@ -517,10 +478,6 @@ function ddw_mstba_toolbar_additions() {
 					'parent' => $addnew_plugin,
 					'title'  => __( 'Topics, Use Cases, Tags', 'multisite-toolbar-additions' ),
 					'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=topics' ) ),
-					'meta'   => array(
-						'target' => '',
-						'title'  => __( 'Install Plugins - Curated Topics, Use Cases, Plugin Tags (via WordPress.org)', 'multisite-toolbar-additions' )
-					)
 				);
 
 			}  // end if
@@ -529,10 +486,6 @@ function ddw_mstba_toolbar_additions() {
 				'parent' => $addnew_plugin,
 				'title'  => __( 'Install Favorites', 'multisite-toolbar-additions' ),
 				'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=favorites' ) ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Install Plugins - Favorites (via WordPress.org)', 'multisite-toolbar-additions' )
-				)
 			);
 
 		/** Theme Installer */
@@ -540,50 +493,30 @@ function ddw_mstba_toolbar_additions() {
 			'parent' => $addnewgroup,
 			'title'  => __( 'Install Theme', 'multisite-toolbar-additions' ),
 			'href'   => ddw_mstba_theme_install_link(),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Install Theme - Search via WordPress.org', 'multisite-toolbar-additions' )
-			)
 		);
 
 			$mstba_tb_items[ 'addnew_theme_search' ] = array(
 				'parent' => $addnew_theme,
 				'title'  => __( 'Search Theme Directory', 'multisite-toolbar-additions' ),
 				'href'   => esc_url( network_admin_url( 'theme-install.php' ) ),	//ddw_mstba_theme_upload_link(),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Search WordPress Theme Directory', 'multisite-toolbar-additions' )
-				)
 			);
 
 			$mstba_tb_items[ 'addnew_theme_upload' ] = array(
 				'parent' => $addnew_theme,
 				'title'  => __( 'Upload ZIP file', 'multisite-toolbar-additions' ),
 				'href'   => esc_url( network_admin_url( 'theme-install.php?tab=mstba-upload' ) ),	//ddw_mstba_theme_upload_link(),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Install Theme - Upload ZIP file', 'multisite-toolbar-additions' )
-				)
 			);
 
 			$mstba_tb_items[ 'addnew_theme_newest' ] = array(
 				'parent' => $addnew_theme,
 				'title'  => __( 'Newest Themes', 'multisite-toolbar-additions' ),
 				'href'   => esc_url( network_admin_url( 'theme-install.php?browse=new' ) ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Newest Themes added on WordPress.org', 'multisite-toolbar-additions' )
-				)
 			);
 
 			$mstba_tb_items[ 'addnew_theme_favorites' ] = array(
 				'parent' => $addnew_theme,
 				'title'  => __( 'Install Favorites', 'multisite-toolbar-additions' ),
 				'href'   => esc_url( network_admin_url( 'theme-install.php?browse=favorites' ) ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Install Theme - Favorites (via WordPress.org)', 'multisite-toolbar-additions' )
-				)
 			);
 
 	/** Site Extend Group: Main Entry */
@@ -629,15 +562,6 @@ function ddw_mstba_toolbar_additions() {
 										$networkext_backwpup,
 										$networkext_snapshot,
 										$networkext_snapshot_destinations,
-										$networkext_smartadmintweaks,
-										$networkext_smartcleanuptools,
-										$networkext_smartsecuritytools,
-											$networkext_smartsecuritytools_settings,
-											$networkext_smartsecuritytools_logs,
-										$networkext_smartooptimizer,
-										$networkext_simplesystinfo,
-										$networkext_smartcrontools,
-										$networkext_hidemywp,
 										$networkext_msrobotstxt,
 										$networkext_wpmudomainmapping,
 										$networkext_wpmigratedbpro,
@@ -651,7 +575,6 @@ function ddw_mstba_toolbar_additions() {
 										$siteext_wprcinstaller,
 										$siteext_relevanssi,
 										$siteext_codesnippets,
-										$siteext_cwwpcsnippets,
 										$siteext_backwpup,
 										$siteext_snapshot,
 										$siteext_snapshot_destinations,
@@ -771,10 +694,6 @@ function ddw_mstba_toolbar_subsite_items() {
 			'id'     => $mstba_blog_menu_id . '-mstba_site_settings_old',
 			'title'  => __( 'Site Settings', 'multisite-toolbar-additions' ),
 			'href'   => get_admin_url( $blog->userblog_id, 'options-general.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Site Settings', 'multisite-toolbar-additions' )
-			)
 		) );
 
 		/** Site > Widgets */
@@ -783,10 +702,6 @@ function ddw_mstba_toolbar_subsite_items() {
 			'id'     => $mstba_blog_menu_id . '-mstba_site_widgets',
 			'title'  => __( 'Site Widgets', 'multisite-toolbar-additions' ),
 			'href'   => get_admin_url( $blog->userblog_id, 'widgets.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Site Widgets', 'multisite-toolbar-additions' )
-			)
 		) );
 
 		/** Site > Menus */
@@ -795,10 +710,6 @@ function ddw_mstba_toolbar_subsite_items() {
 			'id'     => $mstba_blog_menu_id . '-mstba_site_menus',
 			'title'  => __( 'Site Menus', 'multisite-toolbar-additions' ),
 			'href'   => get_admin_url( $blog->userblog_id, 'nav-menus.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Site Menus', 'multisite-toolbar-additions' )
-			)
 		) );
 
 			$wp_admin_bar->add_node( array(
@@ -806,10 +717,6 @@ function ddw_mstba_toolbar_subsite_items() {
 				'id'     => $mstba_blog_menu_id . '-mstba_site_menu_add',
 				'title'  => __( 'Add new Menu', 'multisite-toolbar-additions' ),
 				'href'   => get_admin_url( $blog->userblog_id, 'nav-menus.php?action=edit&menu=0' ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Add new Menu', 'multisite-toolbar-additions' )
-				)
 			) );
 
 			/** Add "Menu Locations" item for WordPress 3.6+ */
@@ -819,10 +726,6 @@ function ddw_mstba_toolbar_subsite_items() {
 					'id'     => $mstba_blog_menu_id . '-mstba_site_menu_locations',
 					'title'  => __( 'Menu Locations', 'multisite-toolbar-additions' ),
 					'href'   => get_admin_url( $blog->userblog_id, 'nav-menus.php?action=locations' ),
-					'meta'   => array(
-						'target' => '',
-						'title'  => __( 'Menu Locations', 'multisite-toolbar-additions' )
-					)
 				) );
 			}
 
@@ -832,10 +735,6 @@ function ddw_mstba_toolbar_subsite_items() {
 			'id'     => $mstba_blog_menu_id . '-mstba_site_plugins',
 			'title'  => __( 'Site Plugins', 'multisite-toolbar-additions' ),
 			'href'   => get_admin_url( $blog->userblog_id, 'plugins.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Site Plugins', 'multisite-toolbar-additions' )
-			)
 		) );
 
 		/** Site > Themes */
@@ -844,10 +743,6 @@ function ddw_mstba_toolbar_subsite_items() {
 			'id'     => $mstba_blog_menu_id . '-mstba_site_themes',
 			'title'  => __( 'Site Themes', 'multisite-toolbar-additions' ),
 			'href'   => get_admin_url( $blog->userblog_id, 'themes.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Site Themes', 'multisite-toolbar-additions' )
-			)
 		) );
 
 			// $mstba_current_url = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER[ 'HTTP_HOST' ] . $_SERVER[ 'REQUEST_URI' ];
@@ -858,8 +753,6 @@ function ddw_mstba_toolbar_subsite_items() {
 				'href'   => get_admin_url( $blog->userblog_id, 'customize.php' ),	// is_admin() ? get_admin_url( $blog->userblog_id, 'customize.php' ) : add_query_arg( 'url', urlencode( $mstba_current_url ), wp_customize_url() ),
 				'meta'   => array(
 					'class'  => ! is_admin() ? 'hide-if-no-customize' : '',
-					'target' => '',
-					'title'  => __( 'Theme Customizer', 'multisite-toolbar-additions' )
 				)
 			) );
 
@@ -869,10 +762,6 @@ function ddw_mstba_toolbar_subsite_items() {
 			'id'     => $mstba_blog_menu_id . '-mstba_site_settings',
 			'title'  => __( 'Site Settings', 'multisite-toolbar-additions' ),
 			'href'   => get_admin_url( $blog->userblog_id, 'options-general.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Site Settings', 'multisite-toolbar-additions' )
-			)
 		) );
 
 		/** Site > Tools */
@@ -881,10 +770,6 @@ function ddw_mstba_toolbar_subsite_items() {
 			'id'     => $mstba_blog_menu_id . '-mstba_site_tools',
 			'title'  => __( 'Site Tools', 'multisite-toolbar-additions' ),
 			'href'   => get_admin_url( $blog->userblog_id, 'tools.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Site Tools', 'multisite-toolbar-additions' )
-			)
 		) );
 
 		/** Re-add "Visit Site" item as the last one - and opening in blank window/tab */
@@ -893,10 +778,7 @@ function ddw_mstba_toolbar_subsite_items() {
 			'id'     => $mstba_blog_menu_id . '-v',  
 			'title'  => __( 'Visit Site', 'multisite-toolbar-additions' ),  
 			'href'   => get_home_url( $blog->userblog_id, '/' ),  
-			'meta'   => array(
-				'target' => '_blank',
-				'title'  => __( 'Visit Site', 'multisite-toolbar-additions' )
-			)
+			'meta'   => array( 'target' => '_blank' ),
 		) );
 
 	}  // end foreach

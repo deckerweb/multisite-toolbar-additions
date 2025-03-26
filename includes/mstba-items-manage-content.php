@@ -212,10 +212,6 @@ function ddw_mstba_manage_content_popular_post_types() {
 				'id'     => 'edit-' . $post_type,  
 				'title'  => $edit_label,  
 				'href'   => ( ! isset( $cpt_value[ 'admin_url' ] ) ) ? admin_url( 'edit.php?post_type=' . $post_type . '' ) : $cpt_value[ 'admin_url' ],  
-				'meta'   => array(
-					'target' => '',
-					'title'  => $edit_label
-				)
 			) );
 
 		}  // end if

@@ -35,10 +35,6 @@ if ( current_user_can( 'manage_network_snippets' ) ) {
 		'parent' => $networkextgroup,
 		'title'  => __( 'Network Code Snippets', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'admin.php?page=snippets' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Network Code Snippets', 'multisite-toolbar-additions' )
-		)
 	);
 
 	/** Check for snippets network install capability */
@@ -48,20 +44,12 @@ if ( current_user_can( 'manage_network_snippets' ) ) {
 			'parent' => $networkext_codesnippets,
 			'title'  => __( 'Add new Snippet', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'admin.php?page=snippet' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Add new Snippet', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'networkext_codesnippets_import' ] = array(
 			'parent' => $networkext_codesnippets,
 			'title'  => __( 'Import', 'multisite-toolbar-additions' ),
 			'href'   => ! function_exists( 'cs_uninstall' ) ? network_admin_url( 'admin.php?page=import-code-snippets' ) : network_admin_url( 'admin.php?page=import-snippets' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Import', 'multisite-toolbar-additions' )
-			)
 		);
 
 		/** Also, hook into 'new-content' section */
@@ -71,10 +59,6 @@ if ( current_user_can( 'manage_network_snippets' ) ) {
 				'parent' => 'new-content',
 				'title'  => __( 'Code Snippet', 'multisite-toolbar-additions' ),
 				'href'   => network_admin_url( 'admin.php?page=snippet' ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Add new Code Snippet', 'multisite-toolbar-additions' )
-				)
 			);
 
 		}  // end-if is_network_admin() check
@@ -90,10 +74,6 @@ if ( current_user_can( 'manage_snippets' ) ) {
 		'parent' => $siteextgroup,
 		'title'  => $mstba_multisite_check . __( 'Code Snippets', 'multisite-toolbar-additions' ),
 		'href'   => admin_url( 'admin.php?page=snippets' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => $mstba_multisite_check . __( 'Code Snippets', 'multisite-toolbar-additions' )
-		)
 	);
 
 	/** Check for snippets site install capability */
@@ -103,20 +83,12 @@ if ( current_user_can( 'manage_snippets' ) ) {
 			'parent' => $siteext_codesnippets,
 			'title'  => __( 'Add new Snippet', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'admin.php?page=snippet' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Add new Snippet', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'siteext_codesnippets_import' ] = array(
 			'parent' => $siteext_codesnippets,
 			'title'  => __( 'Import', 'multisite-toolbar-additions' ),
 			'href'   => ! function_exists( 'cs_uninstall' ) ? admin_url( 'admin.php?import=code-snippets' ) : admin_url( 'admin.php?page=import-snippets' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Import', 'multisite-toolbar-additions' )
-			)
 		);
 
 		/** Also, hook into 'new-content' section */
@@ -126,10 +98,6 @@ if ( current_user_can( 'manage_snippets' ) ) {
 				'parent' => 'new-content',
 				'title'  => __( 'Code Snippet', 'multisite-toolbar-additions' ),
 				'href'   => admin_url( 'admin.php?page=snippet' ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Add new Code Snippet', 'multisite-toolbar-additions' )
-				)
 			);
 
 		}  // end-if !is_network_admin() check

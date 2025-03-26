@@ -35,53 +35,34 @@ if ( function_exists( 'is_plugin_active_for_network' ) && is_plugin_active_for_n
 		'parent' => $networkextgroup,
 		'title'  => __( 'Migrate Database Pro', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'settings.php?page=wp-migrate-db-pro#migrate' ),
-		'meta'   => array(
-			'class'  => 'js-action-link migrate',
-			'target' => '',
-			'title'  => __( 'Migrate Database Pro', 'multisite-toolbar-additions' )
-		)
+		'meta'   => array( 'class'  => 'js-action-link migrate' ),
 	);
 
 		$mstba_tb_items[ 'networkext_wpmigratedbpro_settings' ] = array(
 			'parent' => $networkext_wpmigratedbpro,
 			'title'  => __( 'Settings', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'settings.php?page=wp-migrate-db-pro#settings' ),
-			'meta'   => array(
-				'class'  => 'js-action-link settings',
-				'target' => '',
-				'title'  => __( 'Settings', 'multisite-toolbar-additions' )
-			)
+			'meta'   => array( 'class'  => 'js-action-link settings' ),
 		);
 
 		$mstba_tb_items[ 'networkext_wpmigratedbpro_addons' ] = array(
 			'parent' => $networkext_wpmigratedbpro,
 			'title'  => __( 'Add-Ons', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'settings.php?page=wp-migrate-db-pro#addons' ),
-			'meta'   => array(
-				'class'  => 'js-action-link addons',
-				'target' => '',
-				'title'  => __( 'Add-Ons', 'multisite-toolbar-additions' )
-			)
+			'meta'   => array( 'class'  => 'js-action-link addons' ),
 		);
 
 		$mstba_tb_items[ 'networkext_wpmigratedbpro_help' ] = array(
 			'parent' => $networkext_wpmigratedbpro,
 			'title'  => __( 'Help (Inline)', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'settings.php?page=wp-migrate-db-pro#help' ),
-			'meta'   => array(
-				'class'  => 'js-action-link help',
-				'target' => '',
-				'title'  => __( 'Help (Inline)', 'multisite-toolbar-additions' )
-			)
+			'meta'   => array( 'class'  => 'js-action-link help' ),
 		);
 
 		$mstba_tb_items[ 'networkext_wpmigratedbpro_support' ] = array(
 			'parent' => $networkext_wpmigratedbpro,
 			'title'  => _x( 'Support', 'Translators: Toolbar item', 'multisite-toolbar-additions' ),
 			'href'   => 'http://deliciousbrains.com/wp-migrate-db-pro/support/',
-			'meta'   => array(
-				'title' => _x( 'Support', 'Translators: Toolbar item', 'multisite-toolbar-additions' )
-			)
 		);
 
 }  // end-if multisite check
@@ -93,53 +74,34 @@ elseif ( current_user_can( 'update_core' ) ) {
 		'parent' => $siteextgroup,
 		'title'  => __( 'Migrate Database Pro', 'multisite-toolbar-additions' ),
 		'href'   => admin_url( 'tools.php?page=wp-migrate-db-pro#migrate' ),
-		'meta'   => array(
-			'class'  => 'js-action-link migrate',
-			'target' => '',
-			'title'  => __( 'Migrate Database Pro', 'multisite-toolbar-additions' )
-		)
+		'meta'   => array( 'class'  => 'js-action-link migrate' ),
 	);
 
 		$mstba_tb_items[ 'siteext_wpmigratedbpro_settings' ] = array(
 			'parent' => $siteext_wpmigratedbpro,
 			'title'  => __( 'Settings', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'tools.php?page=wp-migrate-db-pro#settings' ),
-			'meta'   => array(
-				'class'  => 'js-action-link settings',
-				'target' => '',
-				'title'  => __( 'Settings', 'multisite-toolbar-additions' )
-			)
+			'meta'   => array( 'class'  => 'js-action-link settings' ),
 		);
 
 		$mstba_tb_items[ 'siteext_wpmigratedbpro_addons' ] = array(
 			'parent' => $siteext_wpmigratedbpro,
 			'title'  => __( 'Add-Ons', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'tools.php?page=wp-migrate-db-pro#addons' ),
-			'meta'   => array(
-				'class'  => 'js-action-link addons',
-				'target' => '',
-				'title'  => __( 'Add-Ons', 'multisite-toolbar-additions' )
-			)
+			'meta'   => array( 'class'  => 'js-action-link addons' ),
 		);
 
 		$mstba_tb_items[ 'siteext_wpmigratedbpro_help' ] = array(
 			'parent' => $siteext_wpmigratedbpro,
 			'title'  => __( 'Help (Inline)', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'tools.php?page=wp-migrate-db-pro#help' ),
-			'meta'   => array(
-				'class'  => 'js-action-link help',
-				'target' => '',
-				'title'  => __( 'Help (Inline)', 'multisite-toolbar-additions' )
-			)
+			'meta'   => array( 'class'  => 'js-action-link help' ),
 		);
 
 		$mstba_tb_items[ 'siteext_wpmigratedbpro_support' ] = array(
 			'parent' => $siteext_wpmigratedbpro,
 			'title'  => _x( 'Support', 'Translators: Toolbar item', 'multisite-toolbar-additions' ),
 			'href'   => 'http://deliciousbrains.com/wp-migrate-db-pro/support/',
-			'meta'   => array(
-				'title' => _x( 'Support', 'Translators: Toolbar item', 'multisite-toolbar-additions' )
-			)
 		);
 
 }  // end-if ! multisite check

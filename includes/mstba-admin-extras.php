@@ -339,7 +339,6 @@ add_action( 'after_menu_locations_table', 'ddw_mstba_help_info_menu_locations' )
  * @since 1.7.0
  *
  * @uses ddw_mstba_string_super_admin_menu_location()
- * @uses ddw_mstba_string_restricted_admin_menu_location()
  */
 function ddw_mstba_help_info_menu_locations() {
 
@@ -350,15 +349,13 @@ function ddw_mstba_help_info_menu_locations() {
 		return;
 	}
 
-	$super_menu = ( defined( 'MSTBA_SUPER_ADMIN_NAV_MENU' ) && MSTBA_SUPER_ADMIN_NAV_MENU ) ? TRUE : FALSE;
-
 	$output = sprintf(
 		'<br />&nbsp;<p>' . __( 'The following menu locations above are only for Super Admins.', 'multisite-toolbar-additions' ) . ' ' . __( 'This is provided by the plugin %s.', 'multisite-toolbar-additions' ) . '</p>',
 		'<em>' . __( 'Multisite Toolbar Additions', 'multisite-toolbar-additions' ) . '</em>'
 	);
 
 	$output .= sprintf(
-		'<p>%s%s</p>',
+		'<p>%s</p>',
 		'&rarr; ' . ddw_mstba_string_super_admin_menu_location()
 	);
 

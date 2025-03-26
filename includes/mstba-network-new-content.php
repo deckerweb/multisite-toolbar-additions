@@ -117,11 +117,7 @@ function ddw_mstba_network_admin_new_content() {
 		'id'     => 'new-content',  
 		'title'  => $mstba_network_new_title,  
 		'href'   => network_admin_url( 'site-new.php' ),  
-		'meta'   => array(
-			'class'  => 'mstba-network-new-content',
-			'target' => '',
-			'title'  => _x( 'Add New - within Network', 'Translators: Network admin bar menu group label', 'multisite-toolbar-additions' )
-		)
+		'meta'   => array( 'class'  => 'mstba-network-new-content' ),
 	) );
 
 		/** Add more sub items */
@@ -129,22 +125,14 @@ function ddw_mstba_network_admin_new_content() {
 			'parent' => 'new-content', 
 			'id'     => 'new-content-site',  
 			'title'  => __( 'Website', 'multisite-toolbar-additions' ),  
-			'href'   => network_admin_url( 'site-new.php' ),  
-			'meta'   => array(
-				'target' => '',
-				'title'  => _x( 'Website or Blog', 'Translators: add new site/ blog', 'multisite-toolbar-additions' )
-			)
+			'href'   => network_admin_url( 'site-new.php' ),
 		) );
 
 		$wp_admin_bar->add_node( array(
 			'parent' => 'new-content', 
 			'id'     => 'new-content-network-user',  
 			'title'  => __( 'User (Network)', 'multisite-toolbar-additions' ),  
-			'href'   => network_admin_url( 'user-new.php' ),  
-			'meta'   => array(
-				'target' => '',
-				'title'  => _x( 'User in Network', 'Translators: add new user via network admin', 'multisite-toolbar-additions' )
-			)
+			'href'   => network_admin_url( 'user-new.php' ),
 		) );
 
 }  // end function

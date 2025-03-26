@@ -52,10 +52,6 @@ function ddw_mstba_remove_network_items() {
 		'parent' => 'network-admin-d',
 		'title'  => __( 'Network Settings', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'settings.php' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Network Settings', 'multisite-toolbar-additions' )
-		)
 	);
 
 		/** Sites > Dashboard > Check for Updates */
@@ -63,10 +59,6 @@ function ddw_mstba_remove_network_items() {
 			'parent' => 'network-admin-d',
 			'title'  => __( 'Check for Updates', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'update-core.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Check for Updates', 'multisite-toolbar-additions' )
-			)
 		);
 
 		/** Sites > Dashboard > Update Sites */
@@ -74,10 +66,6 @@ function ddw_mstba_remove_network_items() {
 			'parent' => 'network-admin-d',
 			'title'  => __( 'Updates all Sites', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'upgrade.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => _x( 'Updates all Sites', 'Translators: For the tooltip', 'multisite-toolbar-additions' )
-			)
 		);
 
 	/** Sites > Add Site */
@@ -85,10 +73,6 @@ function ddw_mstba_remove_network_items() {
 		'parent' => 'network-admin-s',
 		'title'  => __( 'Add Site', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'site-new.php' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Add Site', 'multisite-toolbar-additions' )
-		)
 	);
 
 	/** Users > Add User */
@@ -96,10 +80,6 @@ function ddw_mstba_remove_network_items() {
 		'parent' => 'network-admin-u',
 		'title'  => __( 'Add User', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'user-new.php' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Add User', 'multisite-toolbar-additions' )
-		)
 	);
 
 	/** Users > Super Admins */
@@ -107,10 +87,6 @@ function ddw_mstba_remove_network_items() {
 		'parent' => 'network-admin-u',
 		'title'  => __( 'Super Admins', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'users.php?role=super' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Super Admins', 'multisite-toolbar-additions' )
-		)
 	);
 
 	/** Manage Network > Network wide plugins */
@@ -118,10 +94,6 @@ function ddw_mstba_remove_network_items() {
 		'parent' => 'network-admin',
 		'title'  => __( 'Network Plugins', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'plugins.php' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Network Plugins', 'multisite-toolbar-additions' )
-		)
 	);
 
 		/** Manage Network > Network wide plugins > Install: Search */
@@ -129,10 +101,6 @@ function ddw_mstba_remove_network_items() {
 			'parent' => $networkplugins,
 			'title'  => __( 'Install Plugins: Search', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'plugin-install.php?tab=dashboard' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Install Plugins - Search on WordPress.org', 'multisite-toolbar-additions' )
-			)
 		);
 
 		/** Manage Network > Network wide plugins > Install: ZIP upload */
@@ -140,10 +108,6 @@ function ddw_mstba_remove_network_items() {
 			'parent' => $networkplugins,
 			'title'  => __( 'Install Plugins: Upload', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'plugin-install.php?tab=upload' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Install Plugins - Upload ZIP file', 'multisite-toolbar-additions' )
-			)
 		);
 
 		/** Manage Network > Network wide plugins > Install: Favorites */
@@ -151,10 +115,6 @@ function ddw_mstba_remove_network_items() {
 			'parent' => $networkplugins,
 			'title'  => __( 'Install Plugins: Favorites', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'plugin-install.php?tab=favorites' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Install Plugins - Favorites (via WordPress.org)', 'multisite-toolbar-additions' )
-			)
 		);
 
 	/** Manage Network > Network wide themes */
@@ -162,10 +122,6 @@ function ddw_mstba_remove_network_items() {
 		'parent' => 'network-admin',
 		'title'  => __( 'Network Themes', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'themes.php' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Network Themes', 'multisite-toolbar-additions' )
-		)
 	);
 
 		/** Manage Network > Network wide themes > Install: Search */
@@ -173,10 +129,6 @@ function ddw_mstba_remove_network_items() {
 			'parent' => $networkthemes,
 			'title'  => __( 'Install Themes: Search', 'multisite-toolbar-additions' ),
 			'href'   => ddw_mstba_theme_install_link(),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Install Themes - Search on WordPress.org', 'multisite-toolbar-additions' )
-			)
 		);
 
 		/** Manage Network > Network wide themes > Install: ZIP upload */
@@ -184,10 +136,6 @@ function ddw_mstba_remove_network_items() {
 			'parent' => $networkthemes,
 			'title'  => __( 'Install Themes: Upload', 'multisite-toolbar-additions' ),
 			'href'   => ddw_mstba_theme_upload_link(),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Install Themes - Upload ZIP file', 'multisite-toolbar-additions' )
-			)
 		);
 
 	/** Manage Network > Network Theme Editor */
@@ -197,10 +145,6 @@ function ddw_mstba_remove_network_items() {
 			'parent' => 'network-admin',
 			'title'  => __( 'Network Theme Editor', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'theme-editor.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Network Theme Editor', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end-if cap check
@@ -223,8 +167,5 @@ function ddw_mstba_remove_network_items() {
 		'parent' => 'network-admin',
 		'title'  => __( 'Visit Network', 'multisite-toolbar-additions' ),
 		'href'   => network_home_url(),
-		'meta'   => array(
-			'target' => '_blank',
-			'title'  => __( 'Visit Network', 'multisite-toolbar-additions' )
-		)
+		'meta'   => array( 'target' => '_blank' ),
 	);

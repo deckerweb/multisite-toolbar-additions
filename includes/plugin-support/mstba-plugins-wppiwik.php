@@ -43,10 +43,6 @@ if ( function_exists( 'is_plugin_active_for_network' ) && is_plugin_active_for_n
 		'parent' => $networkextgroup,
 		'title'  => __( 'WP-Piwik Statistics', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'index.php?page=wp-piwik_stats' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'WP-Piwik Statistics', 'multisite-toolbar-additions' )
-		)
 	);
 
 	/** Add the settings items */
@@ -56,30 +52,18 @@ if ( function_exists( 'is_plugin_active_for_network' ) && is_plugin_active_for_n
 			'parent' => $networkext_wppiwik,
 			'title'  => __( 'Settings', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'settings.php?page=wp-piwik/wp-piwik.php&tab=piwik' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Settings', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'networkext_wppiwik_tracking' ] = array(
 			'parent' => $networkext_wppiwik,
 			'title'  => __( 'Tracking Settings', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'settings.php?page=wp-piwik/wp-piwik.php&tab=tracking' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Tracking Settings', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'networkext_wppiwik_views' ] = array(
 			'parent' => $networkext_wppiwik,
 			'title'  => __( 'Views Settings', 'multisite-toolbar-additions' ),
 			'href'   => network_admin_url( 'settings.php?page=wp-piwik/wp-piwik.php&tab=views' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Views Settings', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end-if cap check
@@ -89,10 +73,6 @@ if ( function_exists( 'is_plugin_active_for_network' ) && is_plugin_active_for_n
 		'parent' => $networkext_wppiwik,
 		'title'  => _x( 'Support', 'Translators: Toolbar item', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'settings.php?page=wp-piwik/wp-piwik.php&tab=support' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => _x( 'Support', 'Translators: Toolbar item', 'multisite-toolbar-additions' )
-		)
 	);
 
 }  // end-if multisite check
@@ -106,10 +86,6 @@ elseif ( ! is_plugin_active_for_network( 'wp-piwik/wp-piwik.php' ) ) {
 		'parent' => $siteextgroup,
 		'title'  => __( 'WP-Piwik Statistics', 'multisite-toolbar-additions' ),
 		'href'   => admin_url( 'index.php?page=wp-piwik_stats' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'WP-Piwik Statistics', 'multisite-toolbar-additions' )
-		)
 	);
 
 	/** Add the settings items */
@@ -119,30 +95,18 @@ elseif ( ! is_plugin_active_for_network( 'wp-piwik/wp-piwik.php' ) ) {
 			'parent' => $siteext_wppiwik,
 			'title'  => __( 'Settings', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'options-general.php?page=wp-piwik/wp-piwik.php&tab=piwik' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Settings', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'siteext_wppiwik_tracking' ] = array(
 			'parent' => $siteext_wppiwik,
 			'title'  => __( 'Tracking Settings', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'options-general.php?page=wp-piwik/wp-piwik.php&tab=tracking' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Tracking Settings', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'siteext_wppiwik_views' ] = array(
 			'parent' => $siteext_wppiwik,
 			'title'  => __( 'Views Settings', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'options-general.php?page=wp-piwik/wp-piwik.php&tab=views' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Views Settings', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end-if cap check
@@ -152,10 +116,6 @@ elseif ( ! is_plugin_active_for_network( 'wp-piwik/wp-piwik.php' ) ) {
 		'parent' => $siteext_wppiwik,
 		'title'  => _x( 'Support', 'Translators: Toolbar item', 'multisite-toolbar-additions' ),
 		'href'   => admin_url( 'options-general.php?page=wp-piwik/wp-piwik.php&tab=support' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => _x( 'Support', 'Translators: Toolbar item', 'multisite-toolbar-additions' )
-		)
 	);
 
 }  // end-if ! multisite check
@@ -167,10 +127,6 @@ if ( current_user_can( 'activate_plugins' ) && get_option( 'wp-piwik_global-sett
 		'parent' => 'wp-piwik_stats',
 		'title'  => __( 'WP-Piwik Settings', 'multisite-toolbar-additions' ),
 		'href'   => $mstba_wppiwik_aurl_slug,
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'WP-Piwik Settings', 'multisite-toolbar-additions' )
-		)
 	);
 
 }  // end-if

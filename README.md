@@ -298,6 +298,8 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 ### 🎉 3.1.0 - 2025-??
 * New: Show Admin Bar also in Block Editor full screen mode
+* New: Further cleanup of unneeded old(er) stuff
+* Update: `.pot` file, plus packaged German translations
 
 
 ### 🎉 3.0.0 - March 2025

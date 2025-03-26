@@ -30,28 +30,16 @@ $mstba_tb_items[ 'networkext_wpmudomainmapping' ] = array(
 	'parent' => $networkextgroup,
 	'title'  => __( 'Domain Mapping', 'multisite-toolbar-additions' ),
 	'href'   => network_admin_url( 'settings.php?page=dm_domains_admin' ),
-	'meta'   => array(
-		'target' => '',
-		'title'  => __( 'Domain Mapping', 'multisite-toolbar-additions' )
-	)
 );
 
 	$mstba_tb_items[ 'networkext_wpmudomainmapping_settings' ] = array(
 		'parent' => $networkext_wpmudomainmapping,
 		'title'  => __( 'Settings', 'multisite-toolbar-additions' ),
 		'href'   => network_admin_url( 'settings.php?page=dm_admin_page' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Settings', 'multisite-toolbar-additions' )
-		)
 	);
 
 	$mstba_tb_items[ 'networkext_wpmudomainmapping_support' ] = array(
 		'parent' => $networkext_wpmudomainmapping,
 		'title'  => _x( 'Support', 'Translators: Toolbar item', 'multisite-toolbar-additions' ),
 		'href'   => 'http://wordpress.org/support/plugin/wordpress-mu-domain-mapping',
-		'meta'   => array(
-			'target' => '',
-			'title'  => _x( 'Support', 'Translators: Toolbar item', 'multisite-toolbar-additions' )
-		)
 	);

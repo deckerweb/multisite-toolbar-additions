@@ -33,30 +33,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' => $sitegroup,
 			'title'  => __( 'Widgets', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'widgets.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Widgets', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'navmenus' ] = array(
 			'parent' => $sitegroup,
 			'title'  => __( 'Nav Menus', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'nav-menus.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Nav Menus', 'multisite-toolbar-additions' )
-			)
 		);
 
 		$mstba_tb_items[ 'mcbase' ] = array(
 			'parent' => $sitegroup,
 			'title'  => __( 'Manage Content', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'edit.php?post_type=page' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Manage Content', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end if is_admin() check
@@ -65,10 +53,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		'parent' => is_admin() ? $navmenus : 'menus',
 		'title'  => __( 'Add new Menu', 'multisite-toolbar-additions' ),
 		'href'   => admin_url( 'nav-menus.php?action=edit&menu=0' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Add new Menu', 'multisite-toolbar-additions' )
-		)
 	);
 
 	if ( ! is_network_admin() ) {
@@ -77,10 +61,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' => 'new-content',
 			'title'  => __( 'Nav Menu', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'nav-menus.php?action=edit&menu=0' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Add new Nav Menu', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end if
@@ -89,50 +69,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 		'parent' => is_admin() ? $navmenus : 'menus',
 		'title'  => __( 'Menu Locations', 'multisite-toolbar-additions' ),
 		'href'   => admin_url( 'nav-menus.php?action=locations' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => _x( 'Menu Locations', 'Translators: For the tooltip', 'multisite-toolbar-additions' )
-		)
 	);
 
 	$mstba_tb_items[ 'edit-pages' ] = array(
 		'parent' => is_admin() ? $mcbase : $sitegroup,
 		'title'  => __( 'Edit Pages', 'multisite-toolbar-additions' ),
 		'href'   => admin_url( 'edit.php?post_type=page' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Edit Pages', 'multisite-toolbar-additions' )
-		)
 	);
 
 	$mstba_tb_items[ 'edit-posts' ] = array(
 		'parent' => is_admin() ? $mcbase : $sitegroup,
 		'title'  => __( 'Edit Posts', 'multisite-toolbar-additions' ),
 		'href'   => admin_url( 'edit.php' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Edit Posts', 'multisite-toolbar-additions' )
-		)
 	);
 
 	$mstba_tb_items[ 'medialibrary' ] = array(
 		'parent' => is_admin() ? $mcbase : $sitegroup,
 		'title'  => __( 'Media Library', 'multisite-toolbar-additions' ),
 		'href'   => admin_url( 'upload.php' ),
-		'meta'   => array(
-			'target' => '',
-			'title'  => __( 'Media Library', 'multisite-toolbar-additions' )
-		)
 	);
 
+		$mstba_tb_items[ 'media-list' ] = array(
+			'parent' => $medialibrary,
+			'title'  => __( 'Media Listing', 'multisite-toolbar-additions' ),
+			'href'   => admin_url( 'upload.php?mode=list' ),
+		);
+	
 		$mstba_tb_items[ 'media-new' ] = array(
 			'parent' => $medialibrary,
 			'title'  => __( 'Upload File(s)', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'media-new.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Upload File(s)', 'multisite-toolbar-additions' )
-			)
 		);
 
 
@@ -143,10 +109,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' => ! is_admin() ? 'themes' : $sitegroup,
 			'title'  => __( 'Theme Editor', 'multisite-toolbar-additions' ),
 			'href'   => is_multisite() ? network_admin_url( 'theme-editor.php?file=style.css&amp;theme=' . get_stylesheet() ) : admin_url( 'theme-editor.php?file=style.css&amp;theme=' . get_stylesheet() ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Theme Editor', 'multisite-toolbar-additions' )
-			)
 		);
 
 		if ( is_admin() ) {
@@ -155,10 +117,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				'parent' => $editthemes,
 				'title'  => __( 'Customizer', 'multisite-toolbar-additions' ),
 				'href'   => admin_url( 'customize.php' ),
-				'meta'   => array(
-					'target' => '',
-					'title'  => __( 'Customizer', 'multisite-toolbar-additions' )
-				)
 			);
 
 		}  // end if
@@ -170,10 +128,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' => $sitegroup,
 			'title'  => __( 'Theme Customizer', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'customize.php' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Theme Customizer', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end if cap/ is_admin() check
@@ -185,10 +139,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' =>  ! is_admin() ? 'themes' : $editthemes,
 			'title'  => __( 'Custom Background', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'themes.php?page=custom-background' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Custom Background', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end if
@@ -200,10 +150,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'parent' => ! is_admin() ? 'themes' : $editthemes,
 			'title'  => __( 'Custom Header', 'multisite-toolbar-additions' ),
 			'href'   => admin_url( 'themes.php?page=custom-header' ),
-			'meta'   => array(
-				'target' => '',
-				'title'  => __( 'Custom Header', 'multisite-toolbar-additions' )
-			)
 		);
 
 	}  // end if
