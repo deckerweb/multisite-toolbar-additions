@@ -39,9 +39,7 @@
  *
  * @since 1.4.0
  */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit( 'Sorry, you are not allowed to access this file directly.' );
-}
+if ( ! defined( 'ABSPATH' ) ) exit( 'Sorry, you are not allowed to access this file directly.' );
 
 
 /**
