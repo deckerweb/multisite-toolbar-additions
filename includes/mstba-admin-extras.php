@@ -112,7 +112,7 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 	if ( ! current_user_can( 'install_plugins' ) ) {
 		return $mstba_links;
 	}
-
+	
 	/** List additional links only for this plugin */
 	if ( $mstba_file === MSTBA_PLUGIN_BASEDIR . 'multisite-toolbar-additions.php' ) {
 
@@ -478,6 +478,7 @@ if ( ! function_exists( 'ddw_wp_site_health_remove_percentage' ) ) :
 	}  // end function
 
 endif;
+
 
 /**
  * Get specific Admin Color scheme colors we need. Covers all 9 default

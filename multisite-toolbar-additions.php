@@ -3,7 +3,7 @@
  * Plugin Name:  Multisite Toolbar Additions
  * Plugin URI:   https://github.com/deckerweb/multisite-toolbar-additions
  * Description:  This plugin adds a lot of useful (super) admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Also comes with extended support for third-party plugins!
- * Version:      3.0.0
+ * Version:      3.1.0
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
  * License:      GPL-2.0-or-later
@@ -14,7 +14,7 @@
  * Requires WP:  6.7
  * Requires PHP: 7.4
  *
- * Copyright (c) 2012-2025 David Decker - DECKERWEB
+ * Copyright: © 2012-2025 David Decker - DECKERWEB
  *
  *     This file is part of Multisite Toolbar Additions,
  *     a plugin for WordPress.
@@ -50,7 +50,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'MSTBA_PLUGIN_VERSION', '3.0.0' );
+$ddw_mstba_plugin_data = get_file_data( __FILE__, [ 'Version' => 'Version' ] );
+define( 'MSTBA_PLUGIN_VERSION', $ddw_mstba_plugin_data[ 'Version' ] );	// '3.1.0'
 
 /** Plugin directory */
 define( 'MSTBA_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -132,18 +133,10 @@ function ddw_mstba_init() {
 	/** Include "Nav Menus" items support */
 	require_once( MSTBA_PLUGIN_DIR . 'includes/mstba-items-navmenus.php' );
 
-	if ( is_multisite() ) {
-
-		require_once( MSTBA_PLUGIN_DIR . 'includes/mstba-network-admin-additions.php' );
-
-	}  // end if
+	if ( is_multisite() ) require_once( MSTBA_PLUGIN_DIR . 'includes/mstba-network-admin-additions.php' );
 
 	/** Include admin helper functions */
-	if ( is_admin() ) {
-
-		require_once( MSTBA_PLUGIN_DIR . 'includes/mstba-admin-extras.php' );
-
-	}  // end if is_admin() check
+	if ( is_admin() ) require_once( MSTBA_PLUGIN_DIR . 'includes/mstba-admin-extras.php' );
 
 	/** Add "Custom Menu" menus page link to plugin page */
 	if ( ( is_admin() || is_network_admin() ) && current_user_can( 'edit_theme_options' ) ) {
