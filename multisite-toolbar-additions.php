@@ -64,6 +64,7 @@ add_action( 'plugins_loaded', 'ddw_mstba_helper_constants', 0 );
  *    unhookable if desired...
  *
  * @since 1.5.1
+ * @since 3.0.0 Removed restricted admin menu.
  */
 function ddw_mstba_helper_constants() {
 
@@ -78,10 +79,6 @@ function ddw_mstba_helper_constants() {
 
 	if ( ! defined( 'MSTBA_SUPER_ADMIN_NAV_MENU' ) ) {
 		define( 'MSTBA_SUPER_ADMIN_NAV_MENU', TRUE );
-	}
-
-	if ( ! defined( 'MSTBA_RESRICTED_ADMIN_NAV_MENU' ) ) {
-		define( 'MSTBA_RESRICTED_ADMIN_NAV_MENU', TRUE );
 	}
 
 	if ( ! defined( 'MSTBA_DISPLAY_NETWORK_EXTEND_GROUP' ) ) {

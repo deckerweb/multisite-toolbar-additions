@@ -125,14 +125,6 @@ function mstba_custom_position_super_admin_nav_menu() {
 ```
 
 
-### How do I use the custom Nav Menu for Site Admins for the toolbar? 
-The usage is identical as the Super Admin menu - see above 2 questions for instructions!
-
-Only difference: This Site Admins menu is only viewable by site admins but only Super Admins can setup and edit it!
-
-The filter for the hook priority here is called `mstba_filter_restricted_admin_nav_menu_priority` -- and works in the very same as above!
-
-
 ### How can I adjust the position of Network admin "+ New" section? 
 This could be easily done with the following example code that needs to be added to your theme's/ child theme's `functions.php` file or a functionality plugin. Try values between `1` and `100`:
 ```
@@ -194,12 +186,6 @@ define( 'MSTBA_DISPLAY_SUBSITE_ITEMS', FALSE );
  *    Disable Custom Nav Menu for Super Admins
  */
 define( 'MSTBA_SUPER_ADMIN_NAV_MENU', FALSE );
-
-/**
- * Multisite Toolbar Additions:
- *    Disable restricted Custom Nav Menu for Site Admins
- */
-define( 'MSTBA_RESRICTED_ADMIN_NAV_MENU', FALSE );
 
 /**
  * Multisite Toolbar Additions:
