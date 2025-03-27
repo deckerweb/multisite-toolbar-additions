@@ -576,15 +576,6 @@ function ddw_mstba_toolbar_additions() {
 										$siteext_backwpup,
 										$siteext_snapshot,
 										$siteext_snapshot_destinations,
-										$siteext_smartadmintweaks,
-										$siteext_smartcleanuptools,
-										$siteext_smartsecuritytools,
-											$siteext_smartsecuritytools_settings,
-											$siteext_smartsecuritytools_logs,
-										$siteext_smartooptimizer,
-										$siteext_simplesystinfo,
-										$siteext_smartcrontools,
-										$siteext_smarttabberwidget,
 										$siteext_rvgoptimizedb,
 										$siteext_hidemywp,
 										$siteext_p3profiler,
@@ -617,11 +608,10 @@ function ddw_mstba_toolbar_additions() {
 		$mstba_tb_item[ 'id' ] = $mstba_prefix . $mstba_menu_id;
 
 		/** Add meta target to each item where it's not already set, so links open in new window/tab */
-		if ( ! isset( $mstba_tb_item[ 'meta' ][ 'target' ] ) ) {
+		//if ( ! isset( $mstba_tb_item[ 'meta' ][ 'target' ] ) ) {
 
-			$mstba_tb_item[ 'meta' ][ 'target' ] = '_blank';
-
-		}  // end if
+			//$mstba_tb_item[ 'meta' ][ 'target' ] = '_blank';
+		//}
 
 		/** Add class to links that open up in a new window/tab */
 		if ( '_blank' === $mstba_tb_item[ 'meta' ][ 'target' ] ) {

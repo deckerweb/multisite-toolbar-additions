@@ -542,6 +542,7 @@ function ddw_mstba_get_scheme_colors() {
 }  // end function
 
 
+add_action( 'enqueue_block_editor_assets', 'ddw_mstba_adminbar_block_editor_fullscreen' );
 /**
  * Show the Admin Bar also in Block Editor full screen mode.
  *
