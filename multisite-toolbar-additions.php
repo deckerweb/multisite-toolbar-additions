@@ -605,10 +605,10 @@ function ddw_mstba_toolbar_additions() {
 		$mstba_tb_item[ 'id' ] = $mstba_prefix . $mstba_menu_id;
 
 		/** Add meta target to each item where it's not already set, so links open in new window/tab */
-		//if ( ! isset( $mstba_tb_item[ 'meta' ][ 'target' ] ) ) {
+		if ( ! isset( $mstba_tb_item[ 'meta' ][ 'target' ] ) ) {
 
-			//$mstba_tb_item[ 'meta' ][ 'target' ] = '_blank';
-		//}
+			$mstba_tb_item[ 'meta' ][ 'target' ] = '';
+		}
 
 		/** Add class to links that open up in a new window/tab */
 		if ( '_blank' === $mstba_tb_item[ 'meta' ][ 'target' ] ) {
