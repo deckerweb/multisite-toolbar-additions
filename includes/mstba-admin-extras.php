@@ -119,22 +119,22 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 		/* translators: Plugins page listing */
 		$mstba_links[] = ddw_mstba_get_info_link(
 			'url_snippets',
-			esc_html_x( 'Code Snippets', 'Plugins page listing', 'multisite-toolbar-additions' ),
-			'dashicons-before dashicons-editor-code'
+			'🔧 ' . esc_html_x( 'Code Snippets', 'Plugins page listing', 'multisite-toolbar-additions' ),
+			'code dddashicons-before dddashicons-editor-code'
 		);
 
 		/* translators: Plugins page listing */
 		$mstba_links[] = ddw_mstba_get_info_link(
 			'url_donate',
-			esc_html_x( 'Donate', 'Plugins page listing', 'multisite-toolbar-additions' ),
-			'button dashicons-before dashicons-thumbs-up'
+			'❤ ' . esc_html_x( 'Donate', 'Plugins page listing', 'multisite-toolbar-additions' ),
+			'button button-inline dddashicons-before dddashicons-thumbs-up'
 		);
 
 		/* translators: Plugins page listing */
 		$mstba_links[] = ddw_mstba_get_info_link(
 			'url_newsletter',
-			esc_html_x( 'Join our Newsletter', 'Plugins page listing', 'multisite-toolbar-additions' ),
-			'button-primary dashicons-before dashicons-awards'
+			'⚡ ' . esc_html_x( 'Join our Newsletter', 'Plugins page listing', 'multisite-toolbar-additions' ),
+			'button-primary dddashicons-before dddashicons-awards'
 		);
 
 	}  // end if plugin links
@@ -154,8 +154,7 @@ add_action( 'admin_enqueue_scripts', 'ddw_mstba_inline_styles_plugins_page', 20 
  *
  * @since 1.9.1
  * @since 2.0.1 Splitted into function; using wp_add_inline_style() from Core.
- *
- * @uses wp_add_inline_style()
+ * @since 3.1.0 Removed update styles.
  *
  * @global string $GLOBALS[ 'pagenow' ]
  */
@@ -174,24 +173,17 @@ function ddw_mstba_inline_styles_plugins_page() {
      */
     $inline_css = sprintf(
     	'
-        tr[data-plugin="%s"] .plugin-version-author-uri a.dashicons-before:before {
-			font-size: 17px;
-			margin-right: 2px;
-			opacity: .85;
-			vertical-align: sub;
-		}
-
-		.mstba-update-message p:before,
-		.update-message.notice p:empty,
-		.update-message.updating-message > p,
-		.update-message.notice-success > p,
-		.update-message.notice-error > p {
-			display: none !important;
-		}',
+			tr[data-plugin="%s"] .plugin-version-author-uri a.dashicons-before:before {
+				font-size: 17px;
+				margin-right: 2px;
+				opacity: .85;
+				vertical-align: sub;
+			}
+		',
 		$mstba_file
 	);
 
-    wp_add_inline_style( 'wp-admin', $inline_css );
+    //wp_add_inline_style( 'wp-admin', $inline_css );
 
 }  // end function
 
@@ -384,6 +376,8 @@ add_filter( 'debug_information', 'ddw_mstba_site_health_add_debug_info', 9 );
  */
 function ddw_mstba_site_health_add_debug_info( $debug_info ) {
 
+	//load_plugin_textdomain( 'multisite-toolbar-additions', FALSE, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
 	$string_undefined = esc_html_x( 'Undefined', 'Site Health Debug info', 'multisite-toolbar-additions' );
 	$string_enabled   = esc_html_x( 'Enabled', 'Site Health Debug info', 'multisite-toolbar-additions' );
 	$string_disabled  = esc_html_x( 'Disabled', 'Site Health Debug info', 'multisite-toolbar-additions' );
@@ -550,9 +544,7 @@ add_action( 'enqueue_block_editor_assets', 'ddw_mstba_adminbar_block_editor_full
  */
 function ddw_mstba_adminbar_block_editor_fullscreen() {
 	
-	if ( ! is_admin_bar_showing() ) {
-		return;
-	}
+	if ( ! is_admin_bar_showing() ) return;
 	
 	/**
 	 * Depending on user color scheme get proper bg color value for admin bar.
@@ -562,7 +554,7 @@ function ddw_mstba_adminbar_block_editor_fullscreen() {
 	
 	$bg_color = $admin_scheme[ $user_color_scheme ][ 'bg' ];
 	
-	$inline_css = sprintf(
+	$inline_css_block_editor = sprintf(
 		'
 			@media (min-width: 600px) {
 				body.is-fullscreen-mode .block-editor__container {
@@ -601,7 +593,27 @@ function ddw_mstba_adminbar_block_editor_fullscreen() {
 		sanitize_hex_color( $bg_color )
 	);
 	
-	wp_add_inline_style( 'wp-block-editor', $inline_css );
+	wp_add_inline_style( 'wp-block-editor', $inline_css_block_editor );
+	
+	$inline_css_edit_site = sprintf(
+		'
+			body.is-fullscreen-mode .edit-site {
+				top: var(--wp-admin--admin-bar--height);
+			}
+			
+			body.is-fullscreen-mode .edit-site-layout__canvas-container {
+				top: calc( var(--wp-admin--admin-bar--height) * -1 );
+			}
+			
+			.edit-site-editor__view-mode-toggle .edit-site-editor__view-mode-toggle-icon img,
+			.edit-site-editor__view-mode-toggle .edit-site-editor__view-mode-toggle-icon svg {
+					background: %s;
+			}
+		',
+		sanitize_hex_color( $bg_color )
+	);
+	
+	wp_add_inline_style( 'wp-edit-site', $inline_css_edit_site );
 	
 	add_action( 'admin_bar_menu', 'ddw_mstba_remove_adminbar_nodes', 999 );
 }

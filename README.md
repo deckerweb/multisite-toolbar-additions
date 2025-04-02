@@ -282,9 +282,12 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 ## Changelog 
 
-### 🎉 3.1.0 - 2025-??
+### 🎉 3.1.0 - 2025-04-??
 * New: Show Admin Bar also in Block Editor full screen mode
 * New: Further cleanup of unneeded old(er) stuff
+* New: This plugin itself installable and updateable via [Git Updater plugin](https://git-updater.com/)
+* New: Added support/integration for _Git Updater_ by Andy Fragen
+* New: Added support/integration for _DevKit Pro_ by DPlugins
 * Update: `.pot` file, plus packaged German translations
 
 
@@ -327,4 +330,6 @@ Enjoy using *Multisite Toolbar Additions*? **[Please consider making a donation]
 
 ---
 
-Copyright: © 2012–2025, David Decker – DECKERWEB.de
+Icon used in promo graphics: © Remix Icon
+
+Readme & Plugin Copyright: © 2012–2025, David Decker – DECKERWEB.de

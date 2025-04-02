@@ -536,8 +536,7 @@ add_action( 'admin_menu', 'ddw_mstba_add_installer_upload_pages', 999 );
 add_action( 'network_admin_menu', 'ddw_mstba_add_installer_upload_pages', 999 );
 /**
  * Optionally add admin sub menu item on "Appearance" for Theme ZIP Upload and
- *   on "Plugins" for Plugin ZIP Upload - but only when in Dev Mode (by Toolbar
- *   Extras).
+ *   on "Plugins" for Plugin ZIP Upload.
  *
  * @since 2.0.0
  *

@@ -1,20 +1,22 @@
 <?php # -*- coding: utf-8 -*-
 /**
- * Plugin Name:  Multisite Toolbar Additions
- * Plugin URI:   https://github.com/deckerweb/multisite-toolbar-additions
- * Description:  This plugin adds a lot of useful (super) admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Also comes with extended support for third-party plugins!
- * Version:      3.1.0
- * Author:       David Decker - DECKERWEB
- * Author URI:   https://deckerweb.de/
- * License:      GPL-2.0-or-later
- * License URI:  https://opensource.org/licenses/GPL-2.0
- * Text Domain:  multisite-toolbar-additions
- * Domain Path:  /languages/
- * Network:      true
- * Requires WP:  6.7
- * Requires PHP: 7.4
+ * Plugin Name:       Multisite Toolbar Additions
+ * Plugin URI:        https://github.com/deckerweb/multisite-toolbar-additions
+ * Description:       This plugin adds a lot of useful (super) admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Also comes with extended support for third-party plugins!
+ * Version:           3.1.0
+ * Author:            David Decker - DECKERWEB
+ * Author URI:        https://deckerweb.de/
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       multisite-toolbar-additions
+ * Domain Path:       /languages/
+ * Network:           true
+ * Requires WP:       6.7
+ * Requires PHP:      7.4
+ * GitHub Plugin URI: https://github.com/deckerweb/multisite-toolbar-additions
+ * GitHub Branch:     master
  *
- * Copyright: © 2012-2025 David Decker - DECKERWEB
+ * Copyright:         © 2012-2025 David Decker - DECKERWEB
  *
  *     This file is part of Multisite Toolbar Additions,
  *     a plugin for WordPress.
@@ -331,40 +333,18 @@ function ddw_mstba_toolbar_additions() {
 	$networkplugins = $mstba_prefix . 'networkplugins';				// sub level: network plugins
 	$networkthemes = $mstba_prefix . 'networkthemes';				// sub level: network themes
 	$networkextgroup = $mstba_prefix . 'networkextgroup';				// sub level: network extend group ("hook" place)
-		$networkext_wpsupercache = $mstba_prefix . 'networkext_wpsupercache';	// third level: wp super cache (network)
 		$networkext_wppiwik = $mstba_prefix . 'networkext_wppiwik';			// third level: wp-piwik (network)
-		$networkext_orgmessagenotifier = $mstba_prefix . 'networkext_orgmessagenotifier';	// third level: o.messg.not (network)
 		$networkext_codesnippets = $mstba_prefix . 'networkext_codesnippets';	// third level: code snippets (network)
-		$networkext_backwpup = $mstba_prefix . 'networkext_backwpup';		// third level: backwpup (network)
-		$networkext_snapshot = $mstba_prefix . 'networkext_snapshot';		// third level: snapshot (network)
-		$networkext_snapshot_destinations = $mstba_prefix . 'networkext_snapshot_destinations';	// third level: snapshot dest. (nw.)
-		$networkext_ubranding = $mstba_prefix . 'networkext_ubranding';		// third level: ultimate branding (network)
 		$networkext_msrobotstxt = $mstba_prefix . 'networkext_msrobotstxt';		// third level: ms robots.txt (network)
 		$networkext_wpmudomainmapping = $mstba_prefix . 'networkext_wpmudomainmapping';	// third level: wpmu domain mapping (network)
 		$networkext_wpmigratedbpro = $mstba_prefix . 'networkext_wpmigratedbpro';	// third level: wp migrate db pro (network)
-		$networkext_betterwpsecurity = $mstba_prefix . 'networkext_betterwpsecurity';	// third level: better wp security (network)
-		$networkext_ithemessecurity = $mstba_prefix . 'networkext_ithemessecurity';	// third level: ithemes security (network)
-		$networkext_ithemessecuritypro = $mstba_prefix . 'networkext_ithemessecuritypro';	// third level: ithemes security pro (network)
 		$networkext_wpmsar = $mstba_prefix . 'networkext_wpmsar';			// third level: wpms admin report (network)
 	$siteextgroup = $mstba_prefix . 'siteextgroup';					// sub level: site extend group ("hook" place)
-		$siteext_wpsupercache = $mstba_prefix . 'siteext_wpsupercache';		// third level: wp super cache (site)
 		$siteext_wppiwik = $mstba_prefix . 'siteext_wppiwik';				// third level: wp-piwik (site)
-		$siteext_wprcinstaller = $mstba_prefix . 'siteext_wprcinstaller';	// third level: wprc installer
 		$siteext_relevanssi = $mstba_prefix . 'siteext_relevanssi';			// third level: relevanssi/premium
 		$siteext_codesnippets = $mstba_prefix . 'siteext_codesnippets';		// third level: code snippets (site)
-		$siteext_backwpup = $mstba_prefix . 'siteext_backwpup';				// third level: backwpup (site)
-		$siteext_snapshot = $mstba_prefix . 'siteext_snapshot';				// third level: snapshot (site)
-		$siteext_snapshot_destinations = $mstba_prefix . 'siteext_snapshot_destinations';	// third level: snapshot dest. (si
-		$siteext_ubranding = $mstba_prefix . 'siteext_ubranding';			// third level: ultimate branding (site)
-		$siteext_wpoptimize = $mstba_prefix . 'siteext_wpoptimize';			// third level: wp-optimize (site)
-		$siteext_rvgoptimizedb = $mstba_prefix . 'siteext_rvgoptimizedb';	// third level: rvg optimize db (site)
-		$siteext_hidemywp = $mstba_prefix . 'siteext_hidemywp';				// third level: hide my wp (site)
-		$siteext_p3profiler = $mstba_prefix . 'siteext_p3profiler';				// third level: p3 profiler
 		$siteext_msrobotstxt = $mstba_prefix . 'siteext_msrobotstxt';		// third level: ms robots.txt (site)
 		$siteext_wpmigratedbpro = $mstba_prefix . 'siteext_wpmigratedbpro';	// third level: wp migrate db pro (site)
-		$siteext_betterwpsecurity = $mstba_prefix . 'siteext_betterwpsecurity';	// third level: better wp security (site)
-		$siteext_ithemessecurity = $mstba_prefix . 'siteext_ithemessecurity';	// third level: ithemes security (site)
-		$siteext_ithemessecuritypro = $mstba_prefix . 'siteext_ithemessecuritypro';	// third level: ithemes security pro (site)
 		$siteext_stream = $mstba_prefix . 'siteext_stream';					// third level: stream (site)
 	$sitegroup = $mstba_prefix . 'sitegroup';						// sub level: site group ("hook" place)
 		$widgets = $mstba_prefix . 'widgets';								// third level: widgets
@@ -460,23 +440,6 @@ function ddw_mstba_toolbar_additions() {
 				'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=upload' ) ),
 			);
 
-			$mstba_tb_items[ 'addnew_plugin_newest' ] = array(
-				'parent' => $addnew_plugin,
-				'title'  => __( 'Newest Plugins', 'multisite-toolbar-additions' ),
-				'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=new' ) ),
-			);
-
-			/** Plugin support: "Cleaner Plugin Installer" (by myself :) */
-			if ( defined( 'CLPINST_PLUGIN_BASEDIR' ) ) {
-
-				$mstba_tb_items[ 'addnew_plugin_topics' ] = array(
-					'parent' => $addnew_plugin,
-					'title'  => __( 'Topics, Use Cases, Tags', 'multisite-toolbar-additions' ),
-					'href'   => esc_url( network_admin_url( 'plugin-install.php?tab=topics' ) ),
-				);
-
-			}  // end if
-
 			$mstba_tb_items[ 'addnew_plugin_faves' ] = array(
 				'parent' => $addnew_plugin,
 				'title'  => __( 'Install Favorites', 'multisite-toolbar-additions' ),
@@ -550,37 +513,18 @@ function ddw_mstba_toolbar_additions() {
 									$networkplugins,
 									$networkthemes,
 									$networkextgroup,
-										$networkext_wpsupercache,
 										$networkext_wppiwik,
-										$networkext_orgmessagenotifier,
 										$networkext_codesnippets,
-										$networkext_backwpup,
-										$networkext_snapshot,
-										$networkext_snapshot_destinations,
 										$networkext_msrobotstxt,
 										$networkext_wpmudomainmapping,
 										$networkext_wpmigratedbpro,
-										$networkext_betterwpsecurity,
-										$networkext_ithemessecurity,
-										$networkext_ithemessecuritypro,
 										$networkext_wpmsar,
 									$siteextgroup,
-										$siteext_wpsupercache,
 										$siteext_wppiwik,
-										$siteext_wprcinstaller,
 										$siteext_relevanssi,
 										$siteext_codesnippets,
-										$siteext_backwpup,
-										$siteext_snapshot,
-										$siteext_snapshot_destinations,
-										$siteext_rvgoptimizedb,
-										$siteext_hidemywp,
-										$siteext_p3profiler,
 										$siteext_msrobotstxt,
 										$siteext_wpmigratedbpro,
-										$siteext_betterwpsecurity,
-										$siteext_ithemessecurity,
-										$siteext_ithemessecuritypro,
 										$siteext_stream,
 									$sitegroup,
 										$widgets,
@@ -840,3 +784,20 @@ function ddw_mstba_admin_style() {
 	<?php
 
 }  // end function
+
+
+/**
+  * Plugin Support: DevKit Pro (Premium, by DPlugins)
+  * @since 3.1.0
+  */
+if ( defined( 'DPDEVKIT_URL' ) ) {
+	require_once MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-devkitpro.php';
+}
+
+/**
+  * Plugin Support: Git Updater (free/Premium, by Andy Fragen)
+  * @since 3.1.0
+  */
+if ( class_exists( '\Fragen\Git_Updater\Plugin' ) ) {
+	require_once MSTBA_PLUGIN_DIR . 'includes/plugin-support/mstba-plugins-gitupdater.php';
+}

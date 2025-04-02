@@ -34,8 +34,7 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
  *
  * @since 1.0.0
  */
-
-
+	 
 	/**
 	 * WP-Piwik (free, by Andr&eacute; Br&auml;kling)
 	 *
@@ -51,7 +50,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 
 	/**
 	 * Code Snippets (free, by Shea Bunge)
-	 *
 	 * @since 1.1.0
 	 */
 	if ( class_exists( 'Code_Snippets' )
@@ -66,7 +64,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 
 	/**
 	 * WordPress MU Domain Mapping (free, by Donncha O Caoimh, Ron Rennick, Automatic Inc.)
-	 *
 	 * @since 1.4.0
 	 */
 	if ( is_multisite() && function_exists( 'dm_text_domain' ) && current_user_can( 'manage_options' ) ) {
@@ -79,9 +76,7 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 
 	/**
 	 * Multisite Robots.txt Manager (free, by tribalNerd)
-	 *
 	 * Note: Currently versions 0.4.x and former 0.3.x are supported.
-	 *
 	 * @since 1.4.0
 	 */
 	if ( is_multisite()
@@ -97,7 +92,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 	
 	/**
 	 * WP Migrate DB Pro (premium, by Delicious Brains (Brad Touesnard & Chris Aprea))
-	 *
 	 * @since 1.4.0
 	 */
 	if ( function_exists( 'wp_migrate_db_pro_init' ) ) {
@@ -116,7 +110,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 
 	/**
 	 * Stream (free, by X-Team)
-	 *
 	 * @since 1.7.0
 	 */
 	if ( class_exists( 'WP_Stream' )
@@ -131,7 +124,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
  
 	/**
 	 * Relevanssi & Relevanssi Premium (free & premium, by Mikko Saari, www.relevanssi.com)
-	 *
 	 * @since 1.1.0
 	 */
 	if ( function_exists( '_relevanssi_install' ) && current_user_can( 'manage_options' ) ) {
@@ -158,7 +150,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 
 	/**
 	 * Multisite Language Switcher (free, by Dennis Ploetner)
-	 *
 	 * @since 1.0.0
 	 */
 	if ( defined( 'MSLS_PLUGIN_VERSION' ) && current_user_can( 'manage_options' ) ) {
@@ -174,7 +165,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 
 	/**
 	 * White Label CMS (free, by www.videousermanuals.com)
-	 *
 	 * @since 1.1.0
 	 */
 	if ( function_exists( 'wlcms_check_for_login' ) && current_user_can( 'manage_options' ) ) {
@@ -190,7 +180,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 
 	/**
 	 * WordPress Multisite Admin Reports (free, by Joe Motacek)
-	 *
 	 * @since 1.7.0
 	 */
 	if ( is_multisite()
@@ -206,7 +195,6 @@ $mstba_multisite_check = is_multisite() ? _x( 'Site', 'Translators: For sitewide
 	
 	/**
 	 * WP Migrate DB (free, by Brad Touesnard)
-	 *
 	 * @since 1.4.0
 	 */
 	if ( class_exists( 'WP_Migrate_DB' ) && current_user_can( 'update_core' ) ) {

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Multisite Toolbar Additions\n"
-"POT-Creation-Date: 2025-03-26 22:38+0100\n"
-"PO-Revision-Date: 2025-03-26 22:39+0100\n"
+"POT-Creation-Date: 2025-04-02 14:10+0200\n"
+"PO-Revision-Date: 2025-04-02 14:11+0200\n"
 "Last-Translator: David Decker DECKERWEB.de <David Decker DECKERWEB.de>\n"
 "Language-Team: David Decker DECKERWEB.de\n"
 "Language: de_DE\n"
@@ -10,14 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: multisite-toolbar-additions.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -54,49 +53,49 @@ msgid "Join our Newsletter"
 msgstr "Newsletter jetzt!"
 
 #. Plugin Name of the plugin/theme
-#: includes/mstba-admin-extras.php:228 includes/mstba-admin-extras.php:280
-#: includes/mstba-admin-extras.php:354 includes/mstba-admin-extras.php:393
+#: includes/mstba-admin-extras.php:220 includes/mstba-admin-extras.php:272
+#: includes/mstba-admin-extras.php:346 includes/mstba-admin-extras.php:387
 #: includes/mstba-global-functions.php:112
 #: includes/mstba-global-functions.php:240
 msgid "Multisite Toolbar Additions"
 msgstr "Multisite Werkzeugleiste Zusätze"
 
-#: includes/mstba-admin-extras.php:280 includes/mstba-admin-extras.php:393
+#: includes/mstba-admin-extras.php:272 includes/mstba-admin-extras.php:387
 #: includes/mstba-global-functions.php:240
 msgid "Plugin"
 msgstr "Plugin"
 
-#: includes/mstba-admin-extras.php:290
+#: includes/mstba-admin-extras.php:282
 msgid "Important plugin links:"
 msgstr "Wichtige Plugin-Links:"
 
-#: includes/mstba-admin-extras.php:292
+#: includes/mstba-admin-extras.php:284
 msgid "Plugin website"
 msgstr "Plugin-Webseite"
 
-#: includes/mstba-admin-extras.php:294
+#: includes/mstba-admin-extras.php:286
 msgid "Code Snippets for Customization"
 msgstr "Codeschnipsel für Anpassungen"
 
-#: includes/mstba-admin-extras.php:294
+#: includes/mstba-admin-extras.php:286
 #: includes/plugin-support/mstba-plugins-codesnippets.php:75
 msgid "Code Snippets"
 msgstr "Codeschnipsel"
 
-#: includes/mstba-admin-extras.php:296
+#: includes/mstba-admin-extras.php:288
 msgid "Donate"
 msgstr "Spenden"
 
-#: includes/mstba-admin-extras.php:318
+#: includes/mstba-admin-extras.php:310
 #, php-format
 msgid "Special custom menu for %s"
 msgstr "Besonderes, benutzerdefiniertes Menü für %s"
 
-#: includes/mstba-admin-extras.php:319 includes/mstba-items-multisite.php:88
+#: includes/mstba-admin-extras.php:311 includes/mstba-items-multisite.php:88
 msgid "Super Admins"
 msgstr "Super-Administratoren"
 
-#: includes/mstba-admin-extras.php:322
+#: includes/mstba-admin-extras.php:314
 msgid ""
 "All menu items via a Custom Menu here - and at all other places in the "
 "Toolbar (a.k.a. Admin Bar) - are only visible and accessable for Super "
@@ -111,40 +110,40 @@ msgstr ""
 "WordPress-Installation (Single) sind dies alle Benutzer mit der "
 "Benutzerrolle 'Administrator'."
 
-#: includes/mstba-admin-extras.php:323
+#: includes/mstba-admin-extras.php:315
 msgid "Added Menu Location by the plugin - only for Super Admins:"
 msgstr "Vom Plugin hinzugefügte Menü-Position - nur für Super-Admins:"
 
-#: includes/mstba-admin-extras.php:323
+#: includes/mstba-admin-extras.php:315
 msgid "Multisite Toolbar Menu"
 msgstr "Multisite Werkzeugleiste Menü"
 
-#: includes/mstba-admin-extras.php:323
+#: includes/mstba-admin-extras.php:315
 msgid "How to use it?"
 msgstr "Wie wird es verwendet?"
 
-#: includes/mstba-admin-extras.php:325
+#: includes/mstba-admin-extras.php:317
 #, php-format
 msgid "Create a new menu, set a name like %s"
 msgstr "Ein neues Menü erstellen, einen Namen vergeben, zum Beispiel %s"
 
-#: includes/mstba-admin-extras.php:326
+#: includes/mstba-admin-extras.php:318
 msgid "Setup your links, might mostly be custom links, or any other..."
 msgstr ""
 "Links einrichten, werden vermutlich meist nur URLs sein, oder eben jeden "
 "anderen aus einer der Menüboxen unten..."
 
-#: includes/mstba-admin-extras.php:327
+#: includes/mstba-admin-extras.php:319
 msgid "Save the new menu to the plugin's menu location. That's it :)"
 msgstr ""
 "Das neue Menü dann speichern in der neuen Menü-Position des Plugins. Das ist "
 "alles :)"
 
-#: includes/mstba-admin-extras.php:329
+#: includes/mstba-admin-extras.php:321
 msgid "Please note:"
 msgstr "Bitte beachten:"
 
-#: includes/mstba-admin-extras.php:329
+#: includes/mstba-admin-extras.php:321
 msgid ""
 "Every parent item = one main toolbar entry! So best would be to only use one "
 "parent item and set all other items as children."
@@ -153,11 +152,11 @@ msgstr ""
 "nur ein Eltern-Element für das Toolbar-Menü zu verwenden und alle anderen "
 "Menüeinträge als Kind-Elemente."
 
-#: includes/mstba-admin-extras.php:329
+#: includes/mstba-admin-extras.php:321
 msgid "See also this screenshot."
 msgstr "Bitte auch diesen Screenshot beachten."
 
-#: includes/mstba-admin-extras.php:330
+#: includes/mstba-admin-extras.php:322
 msgid ""
 "Also, only Super Admins can edit this menu, all other users/ roles will be "
 "blocked!"
@@ -165,50 +164,50 @@ msgstr ""
 "Außerdem, nur Super-Administratoren können dieses Menü bearbeiten, alle "
 "anderen Benutzer/ -rollen werden blockiert!"
 
-#: includes/mstba-admin-extras.php:353
+#: includes/mstba-admin-extras.php:345
 msgid "The following menu locations above are only for Super Admins."
 msgstr ""
 "Die folgenden oben aufgelisteten Menüpositionen sind nur für "
 "Superadministratoren."
 
-#: includes/mstba-admin-extras.php:353
+#: includes/mstba-admin-extras.php:345
 #, php-format
 msgid "This is provided by the plugin %s."
 msgstr "Dies wird bereitgestellt durch das Plugin %s."
 
-#: includes/mstba-admin-extras.php:364
+#: includes/mstba-admin-extras.php:356
 msgid "See help tab on top right corner for more usage instructions."
 msgstr ""
 "Der Hilfe-Tab oben rechts bietet weitere Instruktionen zum Einsatz der Menüs."
 
-#: includes/mstba-admin-extras.php:387
+#: includes/mstba-admin-extras.php:381
 msgctxt "Site Health Debug info"
 msgid "Undefined"
 msgstr "Nicht definiert"
 
-#: includes/mstba-admin-extras.php:388
+#: includes/mstba-admin-extras.php:382
 msgctxt "Site Health Debug info"
 msgid "Enabled"
 msgstr "Erlaubt"
 
-#: includes/mstba-admin-extras.php:389
+#: includes/mstba-admin-extras.php:383
 msgctxt "Site Health Debug info"
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: includes/mstba-admin-extras.php:398
+#: includes/mstba-admin-extras.php:392
 msgid "Plugin version"
 msgstr "Plugin-Version"
 
-#: includes/mstba-admin-extras.php:402
+#: includes/mstba-admin-extras.php:396
 msgid "WordPress Install Type"
 msgstr "WordPress Installationstyp"
 
-#: includes/mstba-admin-extras.php:403
+#: includes/mstba-admin-extras.php:397
 msgid "Multisite install"
 msgstr "Multisite-Installation"
 
-#: includes/mstba-admin-extras.php:403
+#: includes/mstba-admin-extras.php:397
 msgid "Single Site install"
 msgstr "Einzelinstallation"
 
@@ -509,7 +508,7 @@ msgstr "Menüs"
 msgid "Manage Content"
 msgstr "Inhalte verwalten"
 
-#: includes/mstba-items-site-group.php:54 multisite-toolbar-additions.php:716
+#: includes/mstba-items-site-group.php:54 multisite-toolbar-additions.php:666
 msgid "Add new Menu"
 msgstr "Neues Menü erstellen"
 
@@ -517,7 +516,7 @@ msgstr "Neues Menü erstellen"
 msgid "Nav Menu"
 msgstr "Nav-Menü"
 
-#: includes/mstba-items-site-group.php:70 multisite-toolbar-additions.php:725
+#: includes/mstba-items-site-group.php:70 multisite-toolbar-additions.php:675
 msgid "Menu Locations"
 msgstr "Menüpositionen"
 
@@ -549,7 +548,7 @@ msgstr "Theme-Editor"
 msgid "Customizer"
 msgstr "Theme anpassen"
 
-#: includes/mstba-items-site-group.php:129 multisite-toolbar-additions.php:750
+#: includes/mstba-items-site-group.php:129 multisite-toolbar-additions.php:700
 msgid "Theme Customizer"
 msgstr "Theme anpassen"
 
@@ -670,27 +669,27 @@ msgctxt "Translators: For sitewide code snippets"
 msgid "Site"
 msgstr "Website:"
 
-#: includes/mstba-plugins.php:141
+#: includes/mstba-plugins.php:133
 msgid "Relevanssi Premium"
 msgstr "Relevanssi Premium"
 
-#: includes/mstba-plugins.php:141
+#: includes/mstba-plugins.php:133
 msgid "Relevanssi"
 msgstr "Relevanssi"
 
-#: includes/mstba-plugins.php:150
+#: includes/mstba-plugins.php:142
 msgid "User Searches"
 msgstr "Benutzer-Suchanfragen"
 
-#: includes/mstba-plugins.php:168
+#: includes/mstba-plugins.php:159
 msgid "Multisite Language Switcher"
 msgstr "Multisite Sprachwähler"
 
-#: includes/mstba-plugins.php:184
+#: includes/mstba-plugins.php:174
 msgid "White Label CMS"
 msgstr "White-Label-CMS"
 
-#: includes/mstba-plugins.php:216
+#: includes/mstba-plugins.php:204
 msgid "Migrate Database"
 msgstr "Datenbankmigration"
 
@@ -712,6 +711,28 @@ msgstr "Import"
 #: includes/plugin-support/mstba-plugins-codesnippets.php:99
 msgid "Code Snippet"
 msgstr "Codeschnipsel"
+
+#: includes/plugin-support/mstba-plugins-devkitpro.php:31
+#: includes/plugin-support/mstba-plugins-devkitpro.php:43
+#: includes/plugin-support/mstba-plugins-devkitpro.php:64
+#: includes/plugin-support/mstba-plugins-devkitpro.php:65
+msgid "via DevKit"
+msgstr "via DevKit"
+
+#: includes/plugin-support/mstba-plugins-gitupdater.php:31
+#: includes/plugin-support/mstba-plugins-gitupdater.php:61
+#: includes/plugin-support/mstba-plugins-gitupdater.php:82
+#: includes/plugin-support/mstba-plugins-gitupdater.php:83
+msgid "via Git Updater"
+msgstr "via Git Updater"
+
+#: includes/plugin-support/mstba-plugins-gitupdater.php:40
+msgid "Git Updater: GitHub Setup"
+msgstr "Git Updater: GitHub-Einrichtung"
+
+#: includes/plugin-support/mstba-plugins-gitupdater.php:49
+msgid "Git Updater: Additions"
+msgstr "Git Updater: Ergänzungen"
 
 #: includes/plugin-support/mstba-plugins-msrobotstxt.php:54
 msgid "Multisite Robots.txt Manager"
@@ -837,80 +858,72 @@ msgstr "Ansichts-Einstellungen"
 msgid "WP-Piwik Settings"
 msgstr "WP-Piwik Einstellungen"
 
-#: multisite-toolbar-additions.php:262
+#: multisite-toolbar-additions.php:261
 msgid "View Site"
 msgstr "Webseite aufrufen"
 
-#: multisite-toolbar-additions.php:280
+#: multisite-toolbar-additions.php:279
 msgid "View Website"
 msgstr "Webseite aufrufen"
 
-#: multisite-toolbar-additions.php:284
+#: multisite-toolbar-additions.php:283
 msgctxt "Translators: For the tooltip"
 msgid "View Website"
 msgstr "Webseite aufrufen (Frontend, Startseite)"
 
-#: multisite-toolbar-additions.php:450
+#: multisite-toolbar-additions.php:427
 msgid "Install Plugin"
 msgstr "Plugin installieren"
 
-#: multisite-toolbar-additions.php:456
+#: multisite-toolbar-additions.php:433
 msgid "Search Plugin Directory"
 msgstr "Pluginverzeichnis durchsuchen"
 
-#: multisite-toolbar-additions.php:462 multisite-toolbar-additions.php:504
+#: multisite-toolbar-additions.php:439 multisite-toolbar-additions.php:464
 msgid "Upload ZIP file"
 msgstr "ZIP-Datei hochladen"
 
-#: multisite-toolbar-additions.php:468
-msgid "Newest Plugins"
-msgstr "Neueste Plugins"
-
-#: multisite-toolbar-additions.php:477
-msgid "Topics, Use Cases, Tags"
-msgstr "Themen, Einsätze, Tags"
-
-#: multisite-toolbar-additions.php:485 multisite-toolbar-additions.php:516
+#: multisite-toolbar-additions.php:445 multisite-toolbar-additions.php:476
 msgid "Install Favorites"
 msgstr "Favoriten installieren"
 
-#: multisite-toolbar-additions.php:492
+#: multisite-toolbar-additions.php:452
 msgid "Install Theme"
 msgstr "Theme installieren"
 
-#: multisite-toolbar-additions.php:498
+#: multisite-toolbar-additions.php:458
 msgid "Search Theme Directory"
 msgstr "Themeverzeichnis durchsuchen"
 
-#: multisite-toolbar-additions.php:510
+#: multisite-toolbar-additions.php:470
 msgid "Newest Themes"
 msgstr "Neueste Themes"
 
-#: multisite-toolbar-additions.php:693 multisite-toolbar-additions.php:761
+#: multisite-toolbar-additions.php:643 multisite-toolbar-additions.php:711
 msgid "Site Settings"
 msgstr "Webseite: Einstellungen"
 
-#: multisite-toolbar-additions.php:701
+#: multisite-toolbar-additions.php:651
 msgid "Site Widgets"
 msgstr "Webseite: Widgets"
 
-#: multisite-toolbar-additions.php:709
+#: multisite-toolbar-additions.php:659
 msgid "Site Menus"
 msgstr "Webseite: Menüs"
 
-#: multisite-toolbar-additions.php:734
+#: multisite-toolbar-additions.php:684
 msgid "Site Plugins"
 msgstr "Webseite: Plugins"
 
-#: multisite-toolbar-additions.php:742
+#: multisite-toolbar-additions.php:692
 msgid "Site Themes"
 msgstr "Webseite: Themes"
 
-#: multisite-toolbar-additions.php:769
+#: multisite-toolbar-additions.php:719
 msgid "Site Tools"
 msgstr "Webseite: Werkzeuge"
 
-#: multisite-toolbar-additions.php:777
+#: multisite-toolbar-additions.php:727
 msgid "Visit Site"
 msgstr "Webseite aufrufen"
 
@@ -931,6 +944,12 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://deckerweb.de/"
 msgstr "https://deckerweb.de/"
+
+#~ msgid "Newest Plugins"
+#~ msgstr "Neueste Plugins"
+
+#~ msgid "Topics, Use Cases, Tags"
+#~ msgstr "Themen, Einsätze, Tags"
 
 #~ msgid "Restricted Site Admin Menu"
 #~ msgstr "Gesichertes Webseiten-Admin-Menü"
@@ -1053,8 +1072,8 @@ msgstr "https://deckerweb.de/"
 #~ msgstr "Neu hinzugefügte Plugins bei WordPress.org"
 
 #~ msgid ""
-#~ "Install Plugins - Curated Topics, Use Cases, Plugin Tags (via WordPress."
-#~ "org)"
+#~ "Install Plugins - Curated Topics, Use Cases, Plugin Tags (via "
+#~ "WordPress.org)"
 #~ msgstr "Plugins installieren - Favoriten (via WordPress.org)"
 
 #~ msgid "Install Theme - Search via WordPress.org"
@@ -1718,9 +1737,6 @@ msgstr "https://deckerweb.de/"
 
 #~ msgid "Quick Cache Options"
 #~ msgstr "Quick Cache Optionen"
-
-#~ msgid "Plugin Updater"
-#~ msgstr "Plugin-Updater"
 
 #~ msgid "Plugin Info"
 #~ msgstr "Plugin-Infos"
