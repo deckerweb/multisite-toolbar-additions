@@ -294,10 +294,10 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 ### 🎉 3.1.0 - 2025-04-??
 * New: Show Admin Bar also in Block Editor full screen mode
 * New: Further cleanup of unneeded old(er) stuff
-* New: This plugin itself installable and updateable via [Git Updater plugin](https://git-updater.com/)
+* New: Made this plugin itself installable and updateable via [Git Updater plugin](https://git-updater.com/) – improved compatibality
 * New: Added support/integration for _Git Updater_ by Andy Fragen
 * New: Added support/integration for _DevKit Pro_ by DPlugins
-* Update: `.pot` file, plus packaged German translations
+* Update: `.pot` file, plus packaged German translations, now including new `l10n.php` files!
 
 
 ### 🎉 3.0.0 - March 2025
