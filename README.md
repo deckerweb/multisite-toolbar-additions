@@ -4,6 +4,15 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 
 ![Multisite Toolbar Additions plugin banner](https://repository-images.githubusercontent.com/127668325/2a7279cf-2bd5-4743-9d2d-42b1555aa7f9)
 
+
+* Contributors: [David Decker](https://github.com/deckerweb), [contributors](https://github.com/deckerweb/multisite-toolbar-additions/graphs/contributors)
+* Tags: admin bar, toolbar, multisite, single site, site builder, administrators
+* Requires at least: 6.7
+* Requires PHP: 7.4
+* Stable tag: [master](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest)
+* Donate link: https://paypal.me/deckerweb
+* License: GPL v2 or later
+
 ---
 
 ## Support the Project
