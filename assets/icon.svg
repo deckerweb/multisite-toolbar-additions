@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 772 772" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,-1,-386,772)">
+        <rect x="0" y="0" width="1544" height="772" style="fill:url(#_Linear1);"/>
+    </g>
+    <g transform="matrix(1.48039,-0.231422,0.218176,1.39565,-329.03,260.931)">
+        <g transform="matrix(9.21715,0,0,8.0623,327.775,206.025)">
+            <path d="M21,3C21.552,3 22,3.448 22,4L22,20C22,20.552 21.552,21 21,21L3,21C2.448,21 2,20.552 2,20L2,4C2,3.448 2.448,3 3,3L21,3ZM20,5L4,5L4,19L20,19L20,5ZM18,7L18,9L6,9L6,7L18,7Z" style="fill:rgb(255,148,20);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(3.39101,-0.639445,0.724436,3.84172,383.387,277.764)">
+            <path d="M15.387,13.498L17.94,20.512L13.242,22.222L10.689,15.208L6.79,17.653L8.409,1.633L19.946,12.865L15.387,13.498ZM15.377,19.316L12.662,11.857L15.621,11.446L9.982,5.956L9.191,13.786L11.722,12.199L14.437,19.658L15.377,19.316Z" style="fill:white;fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-339.952,-123.475)">
+        <text x="441.64px" y="318px" style="font-family:'Futura-Bold', 'Futura', sans-serif;font-weight:700;font-size:125px;fill:rgb(255,148,20);">Mult<tspan x="741.14px 779.265px " y="318px 318px ">is</tspan>it<tspan x="928.89px " y="318px ">e</tspan></text>
+        <g transform="matrix(125,0,0,125,980.015,468)">
+        </g>
+        <text x="471.39px" y="468px" style="font-family:'Futura-Bold', 'Futura', sans-serif;font-weight:700;font-size:125px;fill:rgb(255,148,20);">T<tspan x="533.515px 621.015px " y="468px 468px ">oo</tspan>lbar</text>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1574.88,-779.72,-779.72,-1574.88,0,772)"><stop offset="0" style="stop-color:rgb(48,35,174);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(200,109,215);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
