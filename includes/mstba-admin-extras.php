@@ -120,21 +120,21 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 		$mstba_links[] = ddw_mstba_get_info_link(
 			'url_snippets',
 			'🔧 ' . esc_html_x( 'Code Snippets', 'Plugins page listing', 'multisite-toolbar-additions' ),
-			'code dddashicons-before dddashicons-editor-code'
+			'code'
 		);
 
 		/* translators: Plugins page listing */
 		$mstba_links[] = ddw_mstba_get_info_link(
 			'url_donate',
 			'❤ ' . esc_html_x( 'Donate', 'Plugins page listing', 'multisite-toolbar-additions' ),
-			'button button-inline dddashicons-before dddashicons-thumbs-up'
+			'button button-inline'
 		);
 
 		/* translators: Plugins page listing */
 		$mstba_links[] = ddw_mstba_get_info_link(
 			'url_newsletter',
 			'⚡ ' . esc_html_x( 'Join our Newsletter', 'Plugins page listing', 'multisite-toolbar-additions' ),
-			'button-primary dddashicons-before dddashicons-awards'
+			'button-primary'
 		);
 
 	}  // end if plugin links
@@ -144,46 +144,6 @@ function ddw_mstba_plugin_links( $mstba_links, $mstba_file ) {
 		'mstba_filter_plugin_links',
 		$mstba_links
 	);
-
-}  // end function
-
-
-add_action( 'admin_enqueue_scripts', 'ddw_mstba_inline_styles_plugins_page', 20 );
-/**
- * Add additional inline styles on the admin Plugins page.
- *
- * @since 1.9.1
- * @since 2.0.1 Splitted into function; using wp_add_inline_style() from Core.
- * @since 3.1.0 Removed update styles.
- *
- * @global string $GLOBALS[ 'pagenow' ]
- */
-function ddw_mstba_inline_styles_plugins_page() {
-
-	/** Bail early if not on plugins.php admin page */
-	if ( 'plugins.php' !== $GLOBALS[ 'pagenow' ] ) {
-		return;
-	}
-
-	$mstba_file = MSTBA_PLUGIN_BASEDIR . 'multisite-toolbar-additions.php';
-
-    /**
-     * For WordPress Admin Area
-     *   Style handle: 'wp-admin' (WordPress Core)
-     */
-    $inline_css = sprintf(
-    	'
-			tr[data-plugin="%s"] .plugin-version-author-uri a.dashicons-before:before {
-				font-size: 17px;
-				margin-right: 2px;
-				opacity: .85;
-				vertical-align: sub;
-			}
-		',
-		$mstba_file
-	);
-
-    //wp_add_inline_style( 'wp-admin', $inline_css );
 
 }  // end function
 
