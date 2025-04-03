@@ -15,7 +15,7 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 
 ---
 
-[Support Project](#support-the-project) | [Installation](#installation) | [Description](#description) | [Frequently Asked Questions](#frequently-asked-questions) | [Screenshots](#screenshots) | [Changelog](#changelog) | [Roadmap](#roadmap) | [Donate](#donate) | [Additonal Info](#additional-info)
+[Support Project](#support-the-project) | [Installation](#installation) | [Updates](#updates) | [Description](#description) | [Frequently Asked Questions](#frequently-asked-questions) | [Screenshots](#screenshots) | [Changelog](#changelog) | [Roadmap](#roadmap) | [Donate](#donate) | [Additonal Info](#additional-info)
 
 ---
 
@@ -38,14 +38,24 @@ Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through th
 1. **Download ZIP:** [**multisite-toolbar-additions.zip**](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest/download/multisite-toolbar-additions.zip)
 2. Upload via WordPress (Network) Plugins > Add New > Upload Plugin --> in _Multisite_ you can _activate network wide_!
 3. Look at your toolbar / admin bar within the "My Sites" menu and enjoy using the new links there :)
-4. If you want you could add a special custom Nav Menu via "Design > Menus" (best if using the main site of your Network for that) and assign it to the new "Multisite Toolbar Menu" menu location (only visible & accessable for Super Admins!).
-5. Go and manage your Multisite Network or just your single site :)
+4. If you want you could add a special custom Nav Menu via "Design > Menus" (best if using the main site of your Network for that) and assign it to the new "Multisite Toolbar Menu" menu location (only visible & accessible for (Super) Admins!).
+5. Go and manage your Multisite Network or just your Single Site :)
 
-**Note:** This plugin has NO settings page because I believe it's just not neccessarry. All customizing could be done via filters, constants and regular WordPress user roles & capabilities. As the plugin is only indended for a Super Admin (Network Admin) usage - that's the way to go. This way we can save the overhaul of an options panel/settings page, additional database requests, uninstall routines and such. End result: a lightweight system that just works and saves clicks & time :-).
+**Note:** This plugin has NO settings page because I believe it's just not necessary. All customizing could be done via filters, constants and regular WordPress user roles & capabilities. As the plugin is only indended for a Administrator and Super Admin (Network Admin) usage - that's the way to go. This way we can save the overhaul of an options panel/settings page, additional database requests, uninstall routines and such. End result: a lightweight system that just works and saves clicks & time :-).
 
 **Multisite install:** Of course, it's fully compatible
 
 **Single Site install:** The plugin WILL also working like a charm for regular non-Multisite installs - just without the network specific stuff. However, there's still A LOT (single) site specific stuff supported. So it's up to your use case :). -- I for myself use this plugin on each and every install because it SAVES ME A LOT OF CLICKS & TIME! ...and that was the very reason I've developed it, yeah :-)
+
+---
+
+## Updates 
+
+1) Alternative 1: Just download a new ZIP file (see above), upload and override existing version. Done.
+
+2) Alternative 2: Use the (free) [**_Git Updater_ plugin**](https://git-updater.com/) and get updates automatically.
+
+3) Alternative 3: Upcoming! – In future I will built-in our own deckerweb updater. This is currently being worked on for my plugins. Stay tuned!
 
 ---
 
