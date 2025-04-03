@@ -6,7 +6,7 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 
 
 * Contributors: [David Decker](https://github.com/deckerweb), [contributors](https://github.com/deckerweb/multisite-toolbar-additions/graphs/contributors)
-* Tags: admin bar, toolbar, multisite, single site, site builder, administrators
+* Tags: admin bar, toolbar, multisite, single site, site builder, administrators, super admin
 * Requires at least: 6.7
 * Requires PHP: 7.4
 * Stable tag: [master](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest)
@@ -328,14 +328,22 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 ---
 
+## Roadmap 
+
+The plan is to **further cleanup** the plugin if possible, and to bring it to **super stable state** where only maintenance updates are needed. Until the end of 2025 my goal is to transform all old code into a class-based approach if possible; at least reorganize everything and **make it easier to maintain** or to add new plugin support (in a very limited range, of course).
+
+The end goal for you as a user is to have an even better coded, super stable little helper plugin which requires (if ever) only a few small updates a year. That is the dream for my own job with all the sites I manage where _Multisite Toolbar Additions_ is installed everywhere.
+
+---
+
 ## Donate 
-Enjoy using *Multisite Toolbar Additions*? **[Please consider making a donation](https://www.paypal.me/deckerweb)** - every donation helps to support the project's continued development, maintenance and support.
+
+Enjoy using _Multisite Toolbar Additions_? **[Please consider making a donation](https://www.paypal.me/deckerweb)** - every donation helps to support the project's continued development, maintenance and support.
 **Thank you very much in advance for your support!**
 
 
 ## Additional Info 
-**Idea Behind / Philosophy:** Just a little lightweight plugin for all the Multisite Super Admins out there to make their daily network admin life a bit easier. I'll try to add more plugin support if it makes some sense. So stay tuned :).
-
+**Idea Behind / Philosophy:** Just a little lightweight plugin for all the (Multisite) Super Admins out there to make their daily (Network) Admin life a bit easier. I'll try to add more plugin support if it makes some sense. So stay tuned :).
 
 ---
 
