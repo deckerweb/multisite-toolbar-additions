@@ -51,7 +51,7 @@ Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through th
 
 ## Updates 
 
-1) Alternative 1: Just download a new ZIP file (see above), upload and override existing version. Done.
+1) Alternative 1: Just download a new [ZIP file](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest/download/multisite-toolbar-additions.zip) (see above), upload and override existing version. Done.
 
 2) Alternative 2: Use the (free) [**_Git Updater_ plugin**](https://git-updater.com/) and get updates automatically.
 
