@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Multisite Toolbar Additions\n"
-"POT-Creation-Date: 2025-04-02 14:10+0200\n"
+"POT-Creation-Date: 2025-04-03 13:51+0200\n"
 "PO-Revision-Date: 2018-04-01 21:58+0200\n"
 "Last-Translator: David Decker DECKERWEB.de\n"
 "Language-Team: David Decker DECKERWEB.de\n"
@@ -52,49 +52,49 @@ msgid "Join our Newsletter"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: includes/mstba-admin-extras.php:220 includes/mstba-admin-extras.php:272
-#: includes/mstba-admin-extras.php:346 includes/mstba-admin-extras.php:387
+#: includes/mstba-admin-extras.php:180 includes/mstba-admin-extras.php:232
+#: includes/mstba-admin-extras.php:306 includes/mstba-admin-extras.php:347
 #: includes/mstba-global-functions.php:112
 #: includes/mstba-global-functions.php:240
 msgid "Multisite Toolbar Additions"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:272 includes/mstba-admin-extras.php:387
+#: includes/mstba-admin-extras.php:232 includes/mstba-admin-extras.php:347
 #: includes/mstba-global-functions.php:240
 msgid "Plugin"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:282
+#: includes/mstba-admin-extras.php:242
 msgid "Important plugin links:"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:284
+#: includes/mstba-admin-extras.php:244
 msgid "Plugin website"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:286
+#: includes/mstba-admin-extras.php:246
 msgid "Code Snippets for Customization"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:286
+#: includes/mstba-admin-extras.php:246
 #: includes/plugin-support/mstba-plugins-codesnippets.php:75
 msgid "Code Snippets"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:288
+#: includes/mstba-admin-extras.php:248
 msgid "Donate"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:310
+#: includes/mstba-admin-extras.php:270
 #, php-format
 msgid "Special custom menu for %s"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:311 includes/mstba-items-multisite.php:88
+#: includes/mstba-admin-extras.php:271 includes/mstba-items-multisite.php:88
 msgid "Super Admins"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:314
+#: includes/mstba-admin-extras.php:274
 msgid ""
 "All menu items via a Custom Menu here - and at all other places in the "
 "Toolbar (a.k.a. Admin Bar) - are only visible and accessable for Super "
@@ -103,92 +103,92 @@ msgid ""
 "Administrator user role."
 msgstr ""
 
-#: includes/mstba-admin-extras.php:315
+#: includes/mstba-admin-extras.php:275
 msgid "Added Menu Location by the plugin - only for Super Admins:"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:315
+#: includes/mstba-admin-extras.php:275
 msgid "Multisite Toolbar Menu"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:315
+#: includes/mstba-admin-extras.php:275
 msgid "How to use it?"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:317
+#: includes/mstba-admin-extras.php:277
 #, php-format
 msgid "Create a new menu, set a name like %s"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:318
+#: includes/mstba-admin-extras.php:278
 msgid "Setup your links, might mostly be custom links, or any other..."
 msgstr ""
 
-#: includes/mstba-admin-extras.php:319
+#: includes/mstba-admin-extras.php:279
 msgid "Save the new menu to the plugin's menu location. That's it :)"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:321
+#: includes/mstba-admin-extras.php:281
 msgid "Please note:"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:321
+#: includes/mstba-admin-extras.php:281
 msgid ""
 "Every parent item = one main toolbar entry! So best would be to only use one "
 "parent item and set all other items as children."
 msgstr ""
 
-#: includes/mstba-admin-extras.php:321
+#: includes/mstba-admin-extras.php:281
 msgid "See also this screenshot."
 msgstr ""
 
-#: includes/mstba-admin-extras.php:322
+#: includes/mstba-admin-extras.php:282
 msgid ""
 "Also, only Super Admins can edit this menu, all other users/ roles will be "
 "blocked!"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:345
+#: includes/mstba-admin-extras.php:305
 msgid "The following menu locations above are only for Super Admins."
 msgstr ""
 
-#: includes/mstba-admin-extras.php:345
+#: includes/mstba-admin-extras.php:305
 #, php-format
 msgid "This is provided by the plugin %s."
 msgstr ""
 
-#: includes/mstba-admin-extras.php:356
+#: includes/mstba-admin-extras.php:316
 msgid "See help tab on top right corner for more usage instructions."
 msgstr ""
 
-#: includes/mstba-admin-extras.php:381
+#: includes/mstba-admin-extras.php:341
 msgctxt "Site Health Debug info"
 msgid "Undefined"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:382
+#: includes/mstba-admin-extras.php:342
 msgctxt "Site Health Debug info"
 msgid "Enabled"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:383
+#: includes/mstba-admin-extras.php:343
 msgctxt "Site Health Debug info"
 msgid "Disabled"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:392
+#: includes/mstba-admin-extras.php:352
 msgid "Plugin version"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:396
+#: includes/mstba-admin-extras.php:356
 msgid "WordPress Install Type"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:397
+#: includes/mstba-admin-extras.php:357
 msgid "Multisite install"
 msgstr ""
 
-#: includes/mstba-admin-extras.php:397
+#: includes/mstba-admin-extras.php:357
 msgid "Single Site install"
 msgstr ""
 
@@ -242,19 +242,19 @@ msgstr ""
 msgid "Upload Theme"
 msgstr ""
 
-#: includes/mstba-global-functions.php:564
+#: includes/mstba-global-functions.php:563
 msgid "Theme Installer - Upload Theme"
 msgstr ""
 
-#: includes/mstba-global-functions.php:565
+#: includes/mstba-global-functions.php:564
 msgid "Upload Theme ZIP"
 msgstr ""
 
-#: includes/mstba-global-functions.php:578
+#: includes/mstba-global-functions.php:577
 msgid "Plugin Installer - Upload Plugin"
 msgstr ""
 
-#: includes/mstba-global-functions.php:579
+#: includes/mstba-global-functions.php:578
 msgid "Upload Plugin ZIP"
 msgstr ""
 
@@ -487,7 +487,7 @@ msgstr ""
 msgid "Manage Content"
 msgstr ""
 
-#: includes/mstba-items-site-group.php:54 multisite-toolbar-additions.php:666
+#: includes/mstba-items-site-group.php:54 multisite-toolbar-additions.php:647
 msgid "Add new Menu"
 msgstr ""
 
@@ -495,7 +495,7 @@ msgstr ""
 msgid "Nav Menu"
 msgstr ""
 
-#: includes/mstba-items-site-group.php:70 multisite-toolbar-additions.php:675
+#: includes/mstba-items-site-group.php:70 multisite-toolbar-additions.php:656
 msgid "Menu Locations"
 msgstr ""
 
@@ -527,7 +527,7 @@ msgstr ""
 msgid "Customizer"
 msgstr ""
 
-#: includes/mstba-items-site-group.php:129 multisite-toolbar-additions.php:700
+#: includes/mstba-items-site-group.php:129 multisite-toolbar-additions.php:681
 msgid "Theme Customizer"
 msgstr ""
 
@@ -700,8 +700,8 @@ msgstr ""
 
 #: includes/plugin-support/mstba-plugins-gitupdater.php:31
 #: includes/plugin-support/mstba-plugins-gitupdater.php:61
-#: includes/plugin-support/mstba-plugins-gitupdater.php:82
 #: includes/plugin-support/mstba-plugins-gitupdater.php:83
+#: includes/plugin-support/mstba-plugins-gitupdater.php:84
 msgid "via Git Updater"
 msgstr ""
 
@@ -878,31 +878,31 @@ msgstr ""
 msgid "Newest Themes"
 msgstr ""
 
-#: multisite-toolbar-additions.php:643 multisite-toolbar-additions.php:711
+#: multisite-toolbar-additions.php:624 multisite-toolbar-additions.php:692
 msgid "Site Settings"
 msgstr ""
 
-#: multisite-toolbar-additions.php:651
+#: multisite-toolbar-additions.php:632
 msgid "Site Widgets"
 msgstr ""
 
-#: multisite-toolbar-additions.php:659
+#: multisite-toolbar-additions.php:640
 msgid "Site Menus"
 msgstr ""
 
-#: multisite-toolbar-additions.php:684
+#: multisite-toolbar-additions.php:665
 msgid "Site Plugins"
 msgstr ""
 
-#: multisite-toolbar-additions.php:692
+#: multisite-toolbar-additions.php:673
 msgid "Site Themes"
 msgstr ""
 
-#: multisite-toolbar-additions.php:719
+#: multisite-toolbar-additions.php:700
 msgid "Site Tools"
 msgstr ""
 
-#: multisite-toolbar-additions.php:727
+#: multisite-toolbar-additions.php:708
 msgid "Visit Site"
 msgstr ""
 
@@ -912,9 +912,9 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"This plugin adds a lot of useful (super) admin links to the WordPress "
-"Toolbar / Admin Bar in Multisite, Network and single site installs. Also "
-"comes with extended support for third-party plugins!"
+"This plugin adds a lot of useful (Super) Admin links to the WordPress Admin "
+"Bar / Toolbar in Multisite, Network and Single Site installs. Also comes "
+"with support for third-party plugins!"
 msgstr ""
 
 #. Author URI of the plugin/theme

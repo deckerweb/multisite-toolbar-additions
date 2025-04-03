@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Multisite Toolbar Additions
  * Plugin URI:        https://github.com/deckerweb/multisite-toolbar-additions
- * Description:       This plugin adds a lot of useful (super) admin links to the WordPress Toolbar / Admin Bar in Multisite, Network and single site installs. Also comes with extended support for third-party plugins!
+ * Description:       This plugin adds a lot of useful (Super) Admin links to the WordPress Admin Bar / Toolbar in Multisite, Network and Single Site installs. Also comes with support for third-party plugins!
  * Version:           3.1.0
  * Author:            David Decker - DECKERWEB
  * Author URI:        https://deckerweb.de/

@@ -15,6 +15,10 @@ Adds a lot useful admin links to the WordPress Toolbar / Admin Bar in Multisite,
 
 ---
 
+[Support Project](#support-the-project) | [Installation](#installation) | [Description](#description) | [Frequently Asked Questions](#frequently-asked-questions) | [Screenshots](#screenshots) | [Changelog](#changelog) | [Roadmap](#roadmap) | [Donate](#donate) | [Additonal Info](#additional-info)
+
+---
+
 ## Support the Project
 
 If you find this project helpful, consider showing your support by buying me a coffee! Your contribution helps me keep developing and improving this plugin.
@@ -28,7 +32,26 @@ Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through th
 
 ---
 
+## Installation 
+
+**Quick Install**
+1. **Download ZIP:** [**multisite-toolbar-additions.zip**](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest/download/multisite-toolbar-additions.zip)
+2. Upload via WordPress (Network) Plugins > Add New > Upload Plugin --> in _Multisite_ you can _activate network wide_!
+3. Look at your toolbar / admin bar within the "My Sites" menu and enjoy using the new links there :)
+4. If you want you could add a special custom Nav Menu via "Design > Menus" (best if using the main site of your Network for that) and assign it to the new "Multisite Toolbar Menu" menu location (only visible & accessable for Super Admins!).
+5. Go and manage your Multisite Network or just your single site :)
+
+**Note:** This plugin has NO settings page because I believe it's just not neccessarry. All customizing could be done via filters, constants and regular WordPress user roles & capabilities. As the plugin is only indended for a Super Admin (Network Admin) usage - that's the way to go. This way we can save the overhaul of an options panel/settings page, additional database requests, uninstall routines and such. End result: a lightweight system that just works and saves clicks & time :-).
+
+**Multisite install:** Of course, it's fully compatible
+
+**Single Site install:** The plugin WILL also working like a charm for regular non-Multisite installs - just without the network specific stuff. However, there's still A LOT (single) site specific stuff supported. So it's up to your use case :). -- I for myself use this plugin on each and every install because it SAVES ME A LOT OF CLICKS & TIME! ...and that was the very reason I've developed it, yeah :-)
+
+---
+
 ## Description 
+
+_Whoa, this plugin is **in its 13th year already**, would have never dreamed of this when I started dreaming of, developing and working with it in 2012. Thank you all!_ 👏
 
 > #### Quick Access to Super Admin Resources - Time Saver!
 > This **small and lightweight** plugin just adds some missed and **very useful admin links** to your Toolbar / Admin Bar in Multisite installs, and even regular single site installs.
@@ -77,23 +100,6 @@ Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through th
 * ["Relevanssi" (free)](https://wordpress.org/plugins/relevanssi/) and ["Relevanssi Premium" (premium)](https://www.relevanssi.com/) both by Mikko Saari
 * ["WP Migrate DB" (free, by Brad Touesnard)](https://wordpress.org/plugins/wp-migrate-db/)
 * ["Stream" (free, by X-Team)](https://wordpress.org/plugins/stream/)
-
----
-
-## Installation 
-
-**Quick Install**
-1. **Download ZIP:** [**multisite-toolbar-additions.zip**](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest/download/multisite-toolbar-additions.zip)
-2. Upload via WordPress (Network) Plugins > Add New > Upload Plugin --> in _Multisite_ you can _activate network wide_!
-3. Look at your toolbar / admin bar within the "My Sites" menu and enjoy using the new links there :)
-4. If you want you could add a special custom Nav Menu via "Design > Menus" (best if using the main site of your Network for that) and assign it to the new "Multisite Toolbar Menu" menu location (only visible & accessable for Super Admins!).
-5. Go and manage your Multisite Network or just your single site :)
-
-**Note:** This plugin has NO settings page because I believe it's just not neccessarry. All customizing could be done via filters, constants and regular WordPress user roles & capabilities. As the plugin is only indended for a Super Admin (Network Admin) usage - that's the way to go. This way we can save the overhaul of an options panel/settings page, additional database requests, uninstall routines and such. End result: a lightweight system that just works and saves clicks & time :-).
-
-**Multisite install:** Of course, it's fully compatible
-
-**Single Site install:** The plugin WILL also working like a charm for regular non-Multisite installs - just without the network specific stuff. However, there's still A LOT (single) site specific stuff supported. So it's up to your use case :). -- I for myself use this plugin on each and every install because it SAVES ME A LOT OF CLICKS & TIME! ...and that was the very reason I've developed it, yeah :-)
 
 ---
 
@@ -249,14 +255,14 @@ if ( ! is_admin() ) {
 ```
 
 
-**Final note:** I DON'T recommend to add customization code snippets to your main theme's/ child theme's `functions.php` file! **Please use a functionality plugin or an MU-plugin instead!** This way you can also use this better for Multisite environments. In general you are then more independent from theme/child theme changes etc. If you don't know how to create such a plugin yourself just use one of my recommended 'Code Snippets' plugins. Read & bookmark these Sites:
+**Final note:** I DON'T recommend to add customization code snippets to your main theme's/ child theme's `functions.php` file! **Please use a functionality plugin or an MU-plugin instead!** This way you can also use this better for Multisite environments. In general you are then more independent from theme/ child theme changes etc. If you don't know how to create such a plugin yourself just use one of my recommended 'Code Snippets' plugins:
 
 * _Code Snippets_ (free, .org plugin repo) / also _Code Snippets Pro_ (premium)
 * _FluentSnipperts_ (free, .org plugin repo)
 * _Advanced Scripts_ (premium)
 * _Scripts Organizer_ (premium)
 * _WPCodeBox_ (premium)
-* _WPCode_ (free, .org plugin repo)
+* _WPCode Lite_ (free, .org plugin repo) / also _WPCode Pro_ (premium)
 
 All the custom & branding stuff code above can also be found as a Gist on Github: https://gist.github.com/deckerweb/3498510 (you can also add your questions/ feedback there :)
 
@@ -291,7 +297,7 @@ All the custom & branding stuff code above can also be found as a Gist on Github
 
 ## Changelog 
 
-### 🎉 3.1.0 - 2025-04-??
+### 🎉 3.1.0 - 2025-04-03
 * New: Show Admin Bar also in Block Editor full screen mode
 * New: Further cleanup of unneeded old(er) stuff
 * New: Made this plugin itself installable and updateable via [Git Updater plugin](https://git-updater.com/) – improved compatibality
@@ -341,8 +347,10 @@ The end goal for you as a user is to have an even better coded, super stable lit
 Enjoy using _Multisite Toolbar Additions_? **[Please consider making a donation](https://www.paypal.me/deckerweb)** - every donation helps to support the project's continued development, maintenance and support.
 **Thank you very much in advance for your support!**
 
+---
 
 ## Additional Info 
+
 **Idea Behind / Philosophy:** Just a little lightweight plugin for all the (Multisite) Super Admins out there to make their daily (Network) Admin life a bit easier. I'll try to add more plugin support if it makes some sense. So stay tuned :).
 
 ---
