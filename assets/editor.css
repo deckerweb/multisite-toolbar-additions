@@ -1,0 +1,8 @@
+/* Retain WordPress's own account, navigation, colors and mobile toolbar behavior. */
+@media (min-width: 783px) {
+	body.is-fullscreen-mode #wpadminbar { display: block; }
+	body.is-fullscreen-mode .interface-interface-skeleton,
+	body.is-fullscreen-mode .block-editor__container {
+		top: var(--wp-admin--admin-bar--height, 32px);
+	}
+}

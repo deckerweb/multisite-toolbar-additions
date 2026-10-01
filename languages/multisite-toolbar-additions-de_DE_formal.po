@@ -1,1746 +1,627 @@
+# Multisite Toolbar Additions 4.0.0
+# Copyright (C) 2026 David Decker – DECKERWEB
+# This file is distributed under the GPL-2.0-or-later license.
 msgid ""
-msgstr ""
-"Project-Id-Version: Multisite Toolbar Additions\n"
-"POT-Creation-Date: 2025-04-03 13:53+0200\n"
-"PO-Revision-Date: 2025-04-03 13:53+0200\n"
-"Last-Translator: David Decker DECKERWEB.de <David Decker DECKERWEB.de>\n"
-"Language-Team: David Decker DECKERWEB.de\n"
-"Language: de_DE@formal\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: multisite-toolbar-additions.php\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+msgstr "Project-Id-Version: Multisite Toolbar Additions 4.0.0\nReport-Msgid-Bugs-To: https://github.com/deckerweb/multisite-toolbar-additions/issues\nPOT-Creation-Date: 2026-09-29 23:00+0200\nPO-Revision-Date: 2026-09-29 23:00+0200\nLast-Translator: DECKERWEB\nLanguage-Team: German\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: de_DE_formal\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: includes/mstba-admin-extras.php:66
-msgid "Setup a custom Toolbar menu"
-msgstr ""
-"Ein benutzerdefiniertes Menü für die Werkzeugleiste (Toolbar) einrichten"
-
-#: includes/mstba-admin-extras.php:67
-msgid "Custom Menu"
-msgstr "Eigenes Menü"
-
-#: includes/mstba-admin-extras.php:78
-msgid "Go to the Network Admin"
-msgstr "Zur Netzwerkverwaltung gehen"
-
-#: includes/mstba-admin-extras.php:79
-msgid "Network Admin"
-msgstr "Netzwerk-Admin"
-
-#: includes/mstba-admin-extras.php:122
-msgctxt "Plugins page listing"
-msgid "Code Snippets"
-msgstr "Code-Snippets"
-
-#: includes/mstba-admin-extras.php:129
-msgctxt "Plugins page listing"
-msgid "Donate"
-msgstr "Spenden"
-
-#: includes/mstba-admin-extras.php:136
-msgctxt "Plugins page listing"
-msgid "Join our Newsletter"
-msgstr "Newsletter jetzt!"
-
-#. Plugin Name of the plugin/theme
-#: includes/mstba-admin-extras.php:180 includes/mstba-admin-extras.php:232
-#: includes/mstba-admin-extras.php:306 includes/mstba-admin-extras.php:347
-#: includes/mstba-global-functions.php:112
-#: includes/mstba-global-functions.php:240
+#: src/Admin.php:29 src/Admin.php:83
 msgid "Multisite Toolbar Additions"
-msgstr "Multisite Werkzeugleiste Zusätze"
+msgstr "Multisite Toolbar Additions"
 
-#: includes/mstba-admin-extras.php:232 includes/mstba-admin-extras.php:347
-#: includes/mstba-global-functions.php:240
-msgid "Plugin"
-msgstr "Plugin"
+#: src/Admin.php:29 src/Admin.php:78
+msgid "Toolbar Additions"
+msgstr "Toolbar-Erweiterungen"
 
-#: includes/mstba-admin-extras.php:242
-msgid "Important plugin links:"
-msgstr "Wichtige Plugin-Links:"
-
-#: includes/mstba-admin-extras.php:244
-msgid "Plugin website"
-msgstr "Plugin-Webseite"
-
-#: includes/mstba-admin-extras.php:246
-msgid "Code Snippets for Customization"
-msgstr "Codeschnipsel für Anpassungen"
-
-#: includes/mstba-admin-extras.php:246
-#: includes/plugin-support/mstba-plugins-codesnippets.php:75
-msgid "Code Snippets"
-msgstr "Codeschnipsel"
-
-#: includes/mstba-admin-extras.php:248
-msgid "Donate"
-msgstr "Spenden"
-
-#: includes/mstba-admin-extras.php:270
-#, php-format
-msgid "Special custom menu for %s"
-msgstr "Besonderes, benutzerdefiniertes Menü für %s"
-
-#: includes/mstba-admin-extras.php:271 includes/mstba-items-multisite.php:88
-msgid "Super Admins"
-msgstr "Super-Administratoren"
-
-#: includes/mstba-admin-extras.php:274
-msgid ""
-"All menu items via a Custom Menu here - and at all other places in the "
-"Toolbar (a.k.a. Admin Bar) - are only visible and accessable for Super "
-"Admins. That means in a Multisite Environment all Admins who can manage the "
-"Network. In regular WordPress (single) installs these are users with the "
-"Administrator user role."
-msgstr ""
-"Alle Menüelemente von einem benutzerdefinierten Menü hier - sowie an alle "
-"anderen Stellen in der Werkzeugleiste (a.k.a. Adminbar) - sind nur sichtbar "
-"und erreichbar für Super-Admins. Das bedeutet in einer Multisite-Umgebung "
-"alle Administratoren, die das Netzwerk verwalten können. In einer regulären "
-"WordPress-Installation (Single) sind dies alle Benutzer mit der "
-"Benutzerrolle 'Administrator'."
-
-#: includes/mstba-admin-extras.php:275
-msgid "Added Menu Location by the plugin - only for Super Admins:"
-msgstr "Vom Plugin hinzugefügte Menü-Position - nur für Super-Admins:"
-
-#: includes/mstba-admin-extras.php:275
-msgid "Multisite Toolbar Menu"
-msgstr "Multisite Werkzeugleiste Menü"
-
-#: includes/mstba-admin-extras.php:275
-msgid "How to use it?"
-msgstr "Wie wird es verwendet?"
-
-#: includes/mstba-admin-extras.php:277
-#, php-format
-msgid "Create a new menu, set a name like %s"
-msgstr "Ein neues Menü erstellen, einen Namen vergeben, zum Beispiel %s"
-
-#: includes/mstba-admin-extras.php:278
-msgid "Setup your links, might mostly be custom links, or any other..."
-msgstr ""
-"Links einrichten, werden vermutlich meist nur URLs sein, oder eben jeden "
-"anderen aus einer der Menüboxen unten..."
-
-#: includes/mstba-admin-extras.php:279
-msgid "Save the new menu to the plugin's menu location. That's it :)"
-msgstr ""
-"Das neue Menü dann speichern in der neuen Menü-Position des Plugins. Das ist "
-"alles :)"
-
-#: includes/mstba-admin-extras.php:281
-msgid "Please note:"
-msgstr "Bitte beachten:"
-
-#: includes/mstba-admin-extras.php:281
-msgid ""
-"Every parent item = one main toolbar entry! So best would be to only use one "
-"parent item and set all other items as children."
-msgstr ""
-"Jedes Eltern-Menüelement = ein neuer Toolbar-Eintrag! Es ist also besser, "
-"nur ein Eltern-Element für das Toolbar-Menü zu verwenden und alle anderen "
-"Menüeinträge als Kind-Elemente."
-
-#: includes/mstba-admin-extras.php:281
-msgid "See also this screenshot."
-msgstr "Bitte auch diesen Screenshot beachten."
-
-#: includes/mstba-admin-extras.php:282
-msgid ""
-"Also, only Super Admins can edit this menu, all other users/ roles will be "
-"blocked!"
-msgstr ""
-"Außerdem, nur Super-Administratoren können dieses Menü bearbeiten, alle "
-"anderen Benutzer/ -rollen werden blockiert!"
-
-#: includes/mstba-admin-extras.php:305
-msgid "The following menu locations above are only for Super Admins."
-msgstr ""
-"Die folgenden oben aufgelisteten Menüpositionen sind nur für "
-"Superadministratoren."
-
-#: includes/mstba-admin-extras.php:305
-#, php-format
-msgid "This is provided by the plugin %s."
-msgstr "Dies wird bereitgestellt durch das Plugin %s."
-
-#: includes/mstba-admin-extras.php:316
-msgid "See help tab on top right corner for more usage instructions."
-msgstr ""
-"Der Hilfe-Tab oben rechts bietet weitere Instruktionen zum Einsatz der Menüs."
-
-#: includes/mstba-admin-extras.php:341
-msgctxt "Site Health Debug info"
-msgid "Undefined"
-msgstr "Nicht definiert"
-
-#: includes/mstba-admin-extras.php:342
-msgctxt "Site Health Debug info"
-msgid "Enabled"
-msgstr "Aktiviert"
-
-#: includes/mstba-admin-extras.php:343
-msgctxt "Site Health Debug info"
-msgid "Disabled"
-msgstr "Deaktiviert"
-
-#: includes/mstba-admin-extras.php:352
-msgid "Plugin version"
-msgstr "Plugin-Version"
-
-#: includes/mstba-admin-extras.php:356
-msgid "WordPress Install Type"
-msgstr "WordPress Installationstyp"
-
-#: includes/mstba-admin-extras.php:357
-msgid "Multisite install"
-msgstr "Multisite-Installation"
-
-#: includes/mstba-admin-extras.php:357
-msgid "Single Site install"
-msgstr "Einzelinstallation"
-
-#: includes/mstba-global-functions.php:85
-msgid "Guide"
-msgstr "Wegweiser"
-
-#: includes/mstba-global-functions.php:85
-msgid "Dashboard"
-msgstr "Dashboard"
-
-#: includes/mstba-global-functions.php:86
-msgctxt "Translators: For the tooltip"
-msgid "Guide (Main Site)"
-msgstr "Wegweiser (Haupt-Webseite)"
-
-#: includes/mstba-global-functions.php:86
-msgctxt "Translators: For the tooltip"
-msgid "Dashboard (Main Site)"
-msgstr "Dashboard (Haupt-Webseite)"
-
-#: includes/mstba-global-functions.php:111
-msgid "via Plugin"
-msgstr "via Plugin"
-
-#: includes/mstba-global-functions.php:113
-msgid "Multisite"
-msgstr "Multisite"
-
-#: includes/mstba-global-functions.php:113
-msgid "Site"
-msgstr "Webseite"
-
-#. translators: %s - Type of install/site: "Multisite" or "Site"
-#: includes/mstba-global-functions.php:120
-#: includes/mstba-global-functions.php:128
-#, php-format
-msgid "%s Toolbar Menu"
-msgstr "%s Werkzeugleiste Menü"
-
-#: includes/mstba-global-functions.php:236
-msgid "You have no sufficient permission to edit this special menu."
-msgstr ""
-"Sie haben keine ausreichende Berechtigung, um dieses besondere Menü "
-"bearbeiten zu können."
-
-#. Author of the plugin/theme
-#: includes/mstba-global-functions.php:379
-msgid "David Decker - DECKERWEB"
-msgstr "David Decker - DECKERWEB.de"
-
-#: includes/mstba-global-functions.php:479
-msgid "Upload Theme"
-msgstr "Theme hochladen"
-
-#: includes/mstba-global-functions.php:563
-msgid "Theme Installer - Upload Theme"
-msgstr "Them-Installer - Theme hochladen"
-
-#: includes/mstba-global-functions.php:564
-msgid "Upload Theme ZIP"
-msgstr "Theme-ZIP hochladen"
-
-#: includes/mstba-global-functions.php:577
-msgid "Plugin Installer - Upload Plugin"
-msgstr "Plugin-Installer - Plugin hochladen"
-
-#: includes/mstba-global-functions.php:578
-msgid "Upload Plugin ZIP"
-msgstr "Plugin-ZIP hochladen"
-
-#: includes/mstba-items-manage-content.php:34
-msgid "Landing Pages"
-msgstr "Landingseiten"
-
-#: includes/mstba-items-manage-content.php:35
-msgid "Products"
-msgstr "Produkte"
-
-#: includes/mstba-items-manage-content.php:36
-msgid "Portfolio Items"
-msgstr "Portfolio-Beiträge"
-
-#: includes/mstba-items-manage-content.php:37
-msgid "Events"
-msgstr "Termine"
-
-#: includes/mstba-items-manage-content.php:38
-msgid "Downloads"
-msgstr "Downloads"
-
-#: includes/mstba-items-manage-content.php:39
-msgid "Galleries"
-msgstr "Galerien"
-
-#: includes/mstba-items-manage-content.php:40
-msgid "Persons"
-msgstr "Personen"
-
-#: includes/mstba-items-manage-content.php:41
-msgid "Sermons"
-msgstr "Predigten"
-
-#: includes/mstba-items-manage-content.php:50
-msgid "News"
-msgstr "News"
-
-#: includes/mstba-items-manage-content.php:53
-msgid "Documents"
-msgstr "Dokumente"
-
-#: includes/mstba-items-manage-content.php:81
-msgid "Projects"
-msgstr "Projekte"
-
-#: includes/mstba-items-manage-content.php:117
-msgid "Sliders"
-msgstr "Slider"
-
-#: includes/mstba-items-manage-content.php:129
-msgid "Media Grid Items"
-msgstr "Medienraster-Elemente"
-
-#: includes/mstba-items-manage-content.php:154
-msgid "Listings"
-msgstr "Auflistungen"
-
-#: includes/mstba-items-manage-content.php:158
-msgid "Job Listings"
-msgstr "Job-Auflistungen"
-
-#: includes/mstba-items-manage-content.php:162
-msgid "Resumes"
-msgstr "Lebensläufe"
-
-#: includes/mstba-items-manage-content.php:166
-msgid "Tables"
-msgstr "Tabellen"
-
-#: includes/mstba-items-manage-content.php:172
-msgid "Content Boxes"
-msgstr "Inhaltsboxen"
-
-#: includes/mstba-items-manage-content.php:205
-#, php-format
-msgid "Edit %s"
-msgstr "%s bearbeiten"
-
-#: includes/mstba-items-multisite.php:53
-msgid "Network Settings"
-msgstr "Netzwerk-Einstellungen"
-
-#: includes/mstba-items-multisite.php:60
-msgid "Check for Updates"
-msgstr "Verfügbare Aktualisierungen"
-
-#: includes/mstba-items-multisite.php:67
-msgid "Updates all Sites"
-msgstr "Alle Webseiten aktualisieren"
-
-#: includes/mstba-items-multisite.php:74
-msgid "Add Site"
-msgstr "Webseite hinzufügen"
-
-#: includes/mstba-items-multisite.php:81
-msgid "Add User"
-msgstr "Benutzer hinzufügen"
-
-#: includes/mstba-items-multisite.php:95
-#: includes/mstba-network-admin-additions.php:65
-#: includes/mstba-network-admin-additions.php:66
+#: src/Admin.php:36 src/Admin.php:36 src/Shortcuts.php:37
 msgid "Network Plugins"
-msgstr "Netzwerkweite Plugins"
+msgstr "Netzwerk-Plugins"
 
-#: includes/mstba-items-multisite.php:102
-msgid "Install Plugins: Search"
-msgstr "Plugins installieren: Suche"
-
-#: includes/mstba-items-multisite.php:109
-msgid "Install Plugins: Upload"
-msgstr "Plugin-ZIP hochladen"
-
-#: includes/mstba-items-multisite.php:116
-msgid "Install Plugins: Favorites"
-msgstr "Plugins installieren: Favoriten"
-
-#: includes/mstba-items-multisite.php:123
-msgid "Network Themes"
-msgstr "Netzwerkweite Themes"
-
-#: includes/mstba-items-multisite.php:130
-msgid "Install Themes: Search"
-msgstr "Themes installieren: Suche"
-
-#: includes/mstba-items-multisite.php:137
-msgid "Install Themes: Upload"
-msgstr "Theme-ZIP hochladen"
-
-#: includes/mstba-items-multisite.php:146
-#: includes/mstba-network-admin-additions.php:77
-#: includes/mstba-network-admin-additions.php:78
-msgid "Network Theme Editor"
-msgstr "Netzwerk Theme-Editor"
-
-#: includes/mstba-items-multisite.php:168
-msgid "Visit Network"
-msgstr "Zum Netzwerk gehen"
-
-#: includes/mstba-items-navmenus.php:76
-msgid "Edit Menu:"
-msgstr "Menü bearbeiten:"
-
-#: includes/mstba-items-navmenus.php:132 includes/mstba-items-navmenus.php:144
-msgid "Toolbar Menu:"
-msgstr "Werkzeugleiste:"
-
-#: includes/mstba-items-resources.php:33
-msgid "PHP Coding Standards"
-msgstr "PHP Coding Standards"
-
-#: includes/mstba-items-resources.php:39
-msgid "CSS Coding Standards"
-msgstr "CSS Coding Standards"
-
-#: includes/mstba-items-resources.php:45
-msgid "JavaScript Coding Standards"
-msgstr "JavaScript Coding Standards"
-
-#: includes/mstba-items-resources.php:51
-msgid "HTML Coding Standards"
-msgstr "HTML Coding Standards"
-
-#: includes/mstba-items-resources.php:59
-msgid "Get Involved"
-msgstr "Jetzt mitmachen!"
-
-#: includes/mstba-items-resources.php:65
-msgid "Core Development Updates"
-msgstr "Core-Entwicklungsblog"
-
-#: includes/mstba-items-resources.php:71
-msgid "Core Components Development"
-msgstr "Core-Komponentenentwicklung"
-
-#: includes/mstba-items-resources.php:77
-msgid "Plugin Development"
-msgstr "Plugin-Entwicklung"
-
-#: includes/mstba-items-resources.php:83
-msgid "Theme Development"
-msgstr "Theme-Entwicklung"
-
-#: includes/mstba-items-resources.php:89
-msgid "Translations/ L10n"
-msgstr "Übersetzungen/ L10n"
-
-#: includes/mstba-items-resources.php:95
-msgid "Polyglots/ i18n"
-msgstr "Mehrsprachigkeit/ i18n"
-
-#: includes/mstba-items-resources.php:101
-msgid "GlotPress"
-msgstr "GlotPress Entwicklung"
-
-#: includes/mstba-items-resources.php:107
-msgid "Mobile Apps"
-msgstr "Mobile Applikationen"
-
-#: includes/mstba-items-resources.php:113
-msgid "UI Design"
-msgstr "UI-Design"
-
-#: includes/mstba-items-resources.php:119
-msgid "Accessibility"
-msgstr "Barrierefreiheit"
-
-#: includes/mstba-items-resources.php:125
-msgid "Help supporting"
-msgstr "Hilfe beim Support"
-
-#: includes/mstba-items-resources.php:131
-msgid "Help Make WordPress.org"
-msgstr "Helfen, WordPress.org zu bauen"
-
-#: includes/mstba-items-resources.php:138
-msgid "WordPress Answers (SE)"
-msgstr "WordPress-Antworten (SE)"
-
-#: includes/mstba-items-site-group.php:34
-msgid "Widgets"
-msgstr "Widgets"
-
-#: includes/mstba-items-site-group.php:40
-msgid "Nav Menus"
-msgstr "Menüs"
-
-#: includes/mstba-items-site-group.php:46
-msgid "Manage Content"
-msgstr "Inhalte verwalten"
-
-#: includes/mstba-items-site-group.php:54 multisite-toolbar-additions.php:647
-msgid "Add new Menu"
-msgstr "Neues Menü erstellen"
-
-#: includes/mstba-items-site-group.php:62
-msgid "Nav Menu"
-msgstr "Nav-Menü"
-
-#: includes/mstba-items-site-group.php:70 multisite-toolbar-additions.php:656
-msgid "Menu Locations"
-msgstr "Menüpositionen"
-
-#: includes/mstba-items-site-group.php:76
-msgid "Edit Pages"
-msgstr "Seiten bearbeiten"
-
-#: includes/mstba-items-site-group.php:82
-msgid "Edit Posts"
-msgstr "Beiträge bearbeiten"
-
-#: includes/mstba-items-site-group.php:88
-msgid "Media Library"
-msgstr "Mediathek"
-
-#: includes/mstba-items-site-group.php:94
-msgid "Media Listing"
-msgstr "Mediathek (Liste)"
-
-#: includes/mstba-items-site-group.php:100
-msgid "Upload File(s)"
-msgstr "Datei(en) hochladen"
-
-#: includes/mstba-items-site-group.php:110
-msgid "Theme Editor"
-msgstr "Theme-Editor"
-
-#: includes/mstba-items-site-group.php:118
-msgid "Customizer"
-msgstr "Theme anpassen"
-
-#: includes/mstba-items-site-group.php:129 multisite-toolbar-additions.php:681
-msgid "Theme Customizer"
-msgstr "Theme anpassen"
-
-#: includes/mstba-items-site-group.php:140
-msgid "Custom Background"
-msgstr "Hintergrund anpassen"
-
-#: includes/mstba-items-site-group.php:151
-msgid "Custom Header"
-msgstr "Kopfzeile anpassen"
-
-#: includes/mstba-items-site-group.php:161
-msgid "Pingdom Tools"
-msgstr "Pingdom-Werkzeuge"
-
-#: includes/mstba-items-site-group.php:164
-msgid "Pingdom Tools - Check Your URL"
-msgstr "Pingdom Tools - Überprüfen Sie Ihre URL"
-
-#: includes/mstba-items-site-group.php:170
-#: includes/mstba-items-site-group.php:173
-msgid "Google Page Speed"
-msgstr "Google Webseiten-Ladezeit"
-
-#: includes/mstba-items-site-plugins.php:31
-msgctxt "Translators: Site plugins"
-msgid "Plugins"
-msgstr "Plugins"
-
-#: includes/mstba-items-site-plugins.php:35
-msgctxt "Translators: For the tooltip"
-msgid "Plugins"
-msgstr "Plugins für diese Webseite"
-
-#: includes/mstba-items-site-plugins.php:43
-msgid "Updateable"
-msgstr "Aktualisierbar"
-
-#: includes/mstba-items-site-plugins.php:51
-msgid "Active"
-msgstr "Aktivierte"
-
-#: includes/mstba-items-site-plugins.php:57
-msgid "Recently Activated"
-msgstr "Kürzlich aktivierte"
-
-#: includes/mstba-items-site-plugins.php:63
-msgid "Inactive"
-msgstr "Deaktivierte"
-
-#: includes/mstba-items-site-plugins.php:69
-msgid "All Installed"
-msgstr "Alle Installierten"
-
-#: includes/mstba-items-site-plugins.php:80
-msgid "Must Use (MU)"
-msgstr "Must Use (MU)"
-
-#: includes/mstba-items-site-plugins.php:90
-msgid "Drop-ins"
-msgstr "Drop-ins"
-
-#: includes/mstba-items-widgets.php:35
-msgid "Widgets Customizer"
-msgstr "Widgets-Customizer"
-
-#: includes/mstba-items-widgets.php:51
-msgid "Genesis Simple Sidebars"
-msgstr "Genesis Einfache Sidebars"
-
-#: includes/mstba-items-widgets.php:67
-msgid "Go Sidebar Wizard"
-msgstr "Go Sidebar-Assistent"
-
-#: includes/mstba-items-widgets.php:73
-msgid "Custom Sidebars"
-msgstr "Eigene Sidebars"
-
-#: includes/mstba-items-widgets.php:89
-msgid "Widget Settings Export"
-msgstr "Widget-Einstellungen exportieren"
-
-#: includes/mstba-items-widgets.php:95
-msgid "Widget Settings Import"
-msgstr "Widget-Einstellungen importieren"
-
-#: includes/mstba-items-widgets.php:111
-msgid "Restrict Widgets"
-msgstr "Widgets beschränken"
-
-#: includes/mstba-network-admin-additions.php:40
-#: includes/mstba-network-admin-additions.php:41
-msgid "Add New"
-msgstr "Installieren"
-
-#: includes/mstba-network-new-content.php:111
-msgctxt "Translators: Network admin bar menu group label"
-msgid "New"
-msgstr "Neu"
-
-#: includes/mstba-network-new-content.php:112
-msgctxt ""
-"Translators: Additional mark for Multisite to differentiate from regular "
-"sites"
-msgid "MS"
-msgstr "MS"
-
-#: includes/mstba-network-new-content.php:127
-msgid "Website"
-msgstr "Webseite"
-
-#: includes/mstba-network-new-content.php:134
-msgid "User (Network)"
-msgstr "Benutzer (Netzwerk)"
-
-#: includes/mstba-plugins.php:29
-msgctxt "Translators: For sitewide code snippets"
-msgid "Site"
-msgstr "Website:"
-
-#: includes/mstba-plugins.php:133
-msgid "Relevanssi Premium"
-msgstr "Relevanssi Premium"
-
-#: includes/mstba-plugins.php:133
-msgid "Relevanssi"
-msgstr "Relevanssi"
-
-#: includes/mstba-plugins.php:142
-msgid "User Searches"
-msgstr "Benutzer-Suchanfragen"
-
-#: includes/mstba-plugins.php:159
-msgid "Multisite Language Switcher"
-msgstr "Multisite Sprachwähler"
-
-#: includes/mstba-plugins.php:174
-msgid "White Label CMS"
-msgstr "White-Label-CMS"
-
-#: includes/mstba-plugins.php:204
-msgid "Migrate Database"
-msgstr "Datenbankmigration"
-
-#: includes/plugin-support/mstba-plugins-codesnippets.php:36
-msgid "Network Code Snippets"
-msgstr "Netzwerk Codeschnipsel"
-
-#: includes/plugin-support/mstba-plugins-codesnippets.php:45
-#: includes/plugin-support/mstba-plugins-codesnippets.php:84
-msgid "Add new Snippet"
-msgstr "Neuer Codeschnipsel"
-
-#: includes/plugin-support/mstba-plugins-codesnippets.php:51
-#: includes/plugin-support/mstba-plugins-codesnippets.php:90
-msgid "Import"
-msgstr "Import"
-
-#: includes/plugin-support/mstba-plugins-codesnippets.php:60
-#: includes/plugin-support/mstba-plugins-codesnippets.php:99
-msgid "Code Snippet"
-msgstr "Codeschnipsel"
-
-#: includes/plugin-support/mstba-plugins-devkitpro.php:31
-#: includes/plugin-support/mstba-plugins-devkitpro.php:43
-#: includes/plugin-support/mstba-plugins-devkitpro.php:64
-#: includes/plugin-support/mstba-plugins-devkitpro.php:65
-msgid "via DevKit"
-msgstr "via DevKit"
-
-#: includes/plugin-support/mstba-plugins-gitupdater.php:31
-#: includes/plugin-support/mstba-plugins-gitupdater.php:61
-#: includes/plugin-support/mstba-plugins-gitupdater.php:83
-#: includes/plugin-support/mstba-plugins-gitupdater.php:84
-msgid "via Git Updater"
-msgstr "via Git Updater"
-
-#: includes/plugin-support/mstba-plugins-gitupdater.php:40
-msgid "Git Updater: GitHub Setup"
-msgstr "Git Updater: GitHub-Einrichtung"
-
-#: includes/plugin-support/mstba-plugins-gitupdater.php:49
-msgid "Git Updater: Additions"
-msgstr "Git Updater: Ergänzungen"
-
-#: includes/plugin-support/mstba-plugins-msrobotstxt.php:54
-msgid "Multisite Robots.txt Manager"
-msgstr "Multisite Robots.txt Manager"
-
-#: includes/plugin-support/mstba-plugins-msrobotstxt.php:60
-#: includes/plugin-support/mstba-plugins-msrobotstxt.php:83
-msgid "Presets/ Examples"
-msgstr "Vorgaben/ Beispiele"
-
-#: includes/plugin-support/mstba-plugins-msrobotstxt.php:66
-#: includes/plugin-support/mstba-plugins-msrobotstxt.php:89
-msgid "Help/ How to Use"
-msgstr "Hilfe/ Verwendung"
-
-#: includes/plugin-support/mstba-plugins-msrobotstxt.php:77
-msgid "Site Robots.txt Manager"
-msgstr "Webseite Robots.txt verwalten"
-
-#: includes/plugin-support/mstba-plugins-stream.php:31
-msgid "Activity Streams"
-msgstr "Aktivitätenaufzeichnungen"
-
-#: includes/plugin-support/mstba-plugins-stream.php:37
-msgid "View Streams"
-msgstr "Streams ansehen"
-
-#: includes/plugin-support/mstba-plugins-stream.php:43
-#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:43
-#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:82
-#: includes/plugin-support/mstba-plugins-wpmudomainmapping.php:37
-#: includes/plugin-support/mstba-plugins-wppiwik.php:53
-#: includes/plugin-support/mstba-plugins-wppiwik.php:96
-msgid "Settings"
-msgstr "Einstellungen"
-
-#: includes/plugin-support/mstba-plugins-stream.php:49
-msgid "Exclude Options"
-msgstr "Ausschließen-Optionen"
-
-#: includes/plugin-support/mstba-plugins-stream.php:55
-msgid "Extensions"
-msgstr "Erweiterungen"
-
-#: includes/plugin-support/mstba-plugins-stream.php:61
-msgid "Premium Membership &amp; Support"
-msgstr "Premium-Mitgliedschaft &amp; Support"
-
-#: includes/plugin-support/mstba-plugins-stream.php:67
-#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:61
-msgid "Development"
-msgstr "Entwicklung"
-
-#: includes/plugin-support/mstba-plugins-stream.php:73
-#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:67
-msgid "Support Forum"
-msgstr "Support-Forum"
-
-#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:36
-#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:75
-msgid "Migrate Database Pro"
-msgstr "Datenbankmigration Pro"
-
-#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:50
-#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:89
-msgid "Add-Ons"
-msgstr "Zusatzmodule"
-
-#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:57
-#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:96
-msgid "Help (Inline)"
-msgstr "Hilfe (Admin)"
-
-#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:64
-#: includes/plugin-support/mstba-plugins-wpmigratedbpro.php:103
-#: includes/plugin-support/mstba-plugins-wpmudomainmapping.php:43
-#: includes/plugin-support/mstba-plugins-wppiwik.php:74
-#: includes/plugin-support/mstba-plugins-wppiwik.php:117
-msgctxt "Translators: Toolbar item"
-msgid "Support"
-msgstr "Support"
-
-#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:31
-msgid "Admin Reports"
-msgstr "Admin-Berichte"
-
-#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:37
-msgid "Statistics Overview"
-msgstr "Statistikübersicht"
-
-#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:43
-msgid "Site Report"
-msgstr "Webseiten-Bericht"
-
-#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:49
-msgid "User Report"
-msgstr "Benutzer-Bericht"
-
-#: includes/plugin-support/mstba-plugins-wpmsadminreports.php:55
-msgid "Plugin Report"
-msgstr "Plugins-Bericht"
-
-#: includes/plugin-support/mstba-plugins-wpmudomainmapping.php:31
-msgid "Domain Mapping"
-msgstr "Domain-Mapping"
-
-#: includes/plugin-support/mstba-plugins-wppiwik.php:44
-#: includes/plugin-support/mstba-plugins-wppiwik.php:87
-msgid "WP-Piwik Statistics"
-msgstr "WP-Piwik Statistiken"
-
-#: includes/plugin-support/mstba-plugins-wppiwik.php:59
-#: includes/plugin-support/mstba-plugins-wppiwik.php:102
-msgid "Tracking Settings"
-msgstr "Tracking-Einstellungen"
-
-#: includes/plugin-support/mstba-plugins-wppiwik.php:65
-#: includes/plugin-support/mstba-plugins-wppiwik.php:108
-msgid "Views Settings"
-msgstr "Ansichts-Einstellungen"
-
-#: includes/plugin-support/mstba-plugins-wppiwik.php:128
-msgid "WP-Piwik Settings"
-msgstr "WP-Piwik Einstellungen"
-
-#: multisite-toolbar-additions.php:261
-msgid "View Site"
-msgstr "Webseite aufrufen"
-
-#: multisite-toolbar-additions.php:279
-msgid "View Website"
-msgstr "Webseite aufrufen"
-
-#: multisite-toolbar-additions.php:283
-msgctxt "Translators: For the tooltip"
-msgid "View Website"
-msgstr "Webseite aufrufen (Frontend, Startseite)"
-
-#: multisite-toolbar-additions.php:427
+#: src/Admin.php:37 src/Admin.php:37 src/Shortcuts.php:104
 msgid "Install Plugin"
 msgstr "Plugin installieren"
 
-#: multisite-toolbar-additions.php:433
-msgid "Search Plugin Directory"
-msgstr "Pluginverzeichnis durchsuchen"
+#: src/Admin.php:38 src/Admin.php:38 src/Shortcuts.php:38
+msgid "Network Themes"
+msgstr "Netzwerk-Themes"
 
-#: multisite-toolbar-additions.php:439 multisite-toolbar-additions.php:464
-msgid "Upload ZIP file"
+#: src/Admin.php:42
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: src/Admin.php:47
+msgid "You cannot change toolbar settings."
+msgstr "Keine Berechtigung zum Ändern der Toolbar-Einstellungen."
+
+#: src/Admin.php:78 src/Settings.php:84
+msgid "Choose an active website in this network."
+msgstr "Bitte eine aktive Website in diesem Netzwerk auswählen."
+
+#: src/Admin.php:78
+msgid "Back to settings"
+msgstr "Zurück zu den Einstellungen"
+
+#: src/Admin.php:84
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+#: src/Admin.php:85
+msgid "Use a WordPress menu as your toolbar. Its source is independent of the active theme."
+msgstr "Ein WordPress-Menü als Toolbar verwenden. Die Menüquelle ist unabhängig vom aktiven Theme."
+
+#: src/Admin.php:93 src/Admin.php:133
+msgid "Source website"
+msgstr "Website als Menüquelle"
+
+#: src/Admin.php:96
+msgid "Other website ID"
+msgstr "Andere Website-ID"
+
+#: src/Admin.php:97
+msgid "Load menus"
+msgstr "Menüs laden"
+
+#: src/Admin.php:97
+msgid "Choose a source website, then load its menus. Loading does not save your settings."
+msgstr "Bitte die Website auswählen und ihre Menüs laden. Dadurch werden noch keine Einstellungen gespeichert."
+
+#: src/Admin.php:101
+msgid "Your toolbar menu"
+msgstr "Eigenes Toolbar-Menü"
+
+#: src/Admin.php:102
+msgid "Show the custom toolbar menu"
+msgstr "Eigenes Toolbar-Menü anzeigen"
+
+#: src/Admin.php:104
+msgid "WordPress menu"
+msgstr "WordPress-Menü"
+
+#: src/Admin.php:105
+msgid "Use the existing toolbar menu location"
+msgstr "Bisherige Toolbar-Menüposition verwenden"
+
+#: src/Admin.php:107
+msgid "Create or edit menus"
+msgstr "Menüs erstellen oder bearbeiten"
+
+#: src/Admin.php:107
+msgid "Choose a menu directly to keep it through theme changes. The location option is provided for upgrades from 3.x."
+msgstr "Eine direkte Menüauswahl bleibt beim Theme-Wechsel erhalten. Die bisherige Menüposition dient dem Umstieg von Version 3.x."
+
+#: src/Admin.php:109 src/Admin.php:135
+msgid "Show in"
+msgstr "Anzeigen in"
+
+#: src/Admin.php:109
+msgid "Frontend and administration"
+msgstr "Website und Verwaltung"
+
+#: src/Admin.php:109
+msgid "Frontend only"
+msgstr "Nur auf der Website"
+
+#: src/Admin.php:109
+msgid "Administration only"
+msgstr "Nur in der Verwaltung"
+
+#: src/Admin.php:111
+msgid "Visible to"
+msgstr "Sichtbar für"
+
+#: src/Admin.php:111
+msgid "Super administrators only"
+msgstr "Nur Super-Administratoren"
+
+#: src/Admin.php:111
+msgid "Super administrators and website administrators"
+msgstr "Super-Administratoren und Website-Administratoren"
+
+#: src/Admin.php:111
+msgid "Visibility grants no permission to linked pages. Only super administrators may edit the shared toolbar menu."
+msgstr "Sichtbarkeit gewährt keine zusätzlichen Zugriffsrechte. Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeiten."
+
+#: src/Admin.php:113
+msgid "Position"
+msgstr "Position"
+
+#: src/Admin.php:113
+msgid "First on the left"
+msgstr "Links an erster Stelle"
+
+#: src/Admin.php:113
+msgid "Last on the left"
+msgstr "Links an letzter Stelle"
+
+#: src/Admin.php:113
+msgid "Before the following item"
+msgstr "Vor dem folgenden Eintrag"
+
+#: src/Admin.php:113
+msgid "After the following item"
+msgstr "Nach dem folgenden Eintrag"
+
+#: src/Admin.php:113
+msgid "On the right, beside the account menu"
+msgstr "Rechts neben dem Benutzerkonto"
+
+#: src/Admin.php:114
+msgid "Reference item"
+msgstr "Bezugseintrag"
+
+#: src/Admin.php:114
+msgid "WordPress logo"
+msgstr "WordPress-Logo"
+
+#: src/Admin.php:114
+msgid "My Sites"
+msgstr "Meine Websites"
+
+#: src/Admin.php:114
+msgid "Website name"
+msgstr "Website-Name"
+
+#: src/Admin.php:114
+msgid "Updates"
+msgstr "Aktualisierungen"
+
+#: src/Admin.php:114
+msgid "New content"
+msgstr "Neue Inhalte"
+
+#: src/Admin.php:114
+msgid "Comments"
+msgstr "Kommentare"
+
+#: src/Admin.php:114
+msgid "Used for before/after positions. If the item is absent, your menu appears last on the left."
+msgstr "Für die Position vor oder nach einem Eintrag. Fehlt dieser, erscheint das Menü links an letzter Stelle."
+
+#: src/Admin.php:115
+msgid "Child levels"
+msgstr "Untermenü-Ebenen"
+
+#: src/Admin.php:116
+msgid "All levels"
+msgstr "Alle Ebenen"
+
+#: src/Admin.php:117
+msgid "%d child level"
+msgid_plural "%d child levels"
+msgstr[0] "%d Untermenü-Ebene"
+msgstr[1] "%d Untermenü-Ebenen"
+
+#: src/Admin.php:119
+msgid "Counted from the original menu root. One means root entries plus their direct children. Grouping does not change this limit."
+msgstr "Gezählt ab der ursprünglichen Menüwurzel. Eine Ebene zeigt Haupteinträge und ihre direkten Untereinträge. Die Gruppierung verändert diese Grenze nicht."
+
+#: src/Admin.php:121
+msgid "Layout"
+msgstr "Darstellung"
+
+#: src/Admin.php:121
+msgid "Each root item in the toolbar"
+msgstr "Jeder Haupteintrag einzeln in der Toolbar"
+
+#: src/Admin.php:121
+msgid "Everything under one toolbar item"
+msgstr "Alles unter einem gemeinsamen Toolbar-Eintrag"
+
+#: src/Admin.php:122
+msgid "Group label"
+msgstr "Beschriftung des gemeinsamen Eintrags"
+
+#: src/Admin.php:123
+msgid "Useful shortcuts"
+msgstr "Nützliche Schnellzugriffe"
+
+#: src/Admin.php:123
+msgid "Shortcuts are shown only to administrators with permission for the destination."
+msgstr "Schnellzugriffe erscheinen nur für Administratoren mit den erforderlichen Zugriffsrechten."
+
+#: src/Admin.php:124
+msgid "Network administration and network New menu"
+msgstr "Netzwerkverwaltung und Netzwerk-Menü „Neu“"
+
+#: src/Admin.php:124
+msgid "Website administration, content types and Site Health"
+msgstr "Website-Verwaltung, Inhaltstypen und Website-Zustand"
+
+#: src/Admin.php:124
+msgid "Shortcuts for websites under My Sites"
+msgstr "Website-Schnellzugriffe unter „Meine Websites“"
+
+#: src/Admin.php:124
+msgid "Quick links to edit WordPress menus"
+msgstr "Schnellzugriffe zum Bearbeiten der WordPress-Menüs"
+
+#: src/Admin.php:124
+msgid "Detected plugin integrations"
+msgstr "Erkannte Plugin-Integrationen"
+
+#: src/Admin.php:124
+msgid "WordPress developer resources"
+msgstr "WordPress-Ressourcen für Entwickler"
+
+#: src/Admin.php:124
+msgid "Theme and plugin file editor shortcuts"
+msgstr "Schnellzugriffe auf Theme- und Plugin-Datei-Editoren"
+
+#: src/Admin.php:124
+msgid "Keep the toolbar visible in the fullscreen block editor"
+msgstr "Toolbar im Vollbildmodus des Block-Editors anzeigen"
+
+#: src/Admin.php:126
+msgid "Maximum websites with extra shortcuts"
+msgstr "Maximale Anzahl Websites mit zusätzlichen Schnellzugriffen"
+
+#: src/Admin.php:126
+msgid "Only websites already present in the toolbar are extended. Additional websites keep their normal WordPress links. File editors stay subject to WordPress security restrictions."
+msgstr "Nur bereits in der Toolbar vorhandene Websites erhalten zusätzliche Einträge. Weitere Websites behalten ihre normalen WordPress-Links. Datei-Editoren beachten die WordPress-Sicherheitsvorgaben."
+
+#: src/Admin.php:132
+msgid "Version"
+msgstr "Version"
+
+#: src/Admin.php:134
+msgid "Menu ID"
+msgstr "Menü-ID"
+
+#: src/Integrations.php:18
+msgid "Code Snippets"
+msgstr "Code Snippets"
+
+#: src/Integrations.php:19
+msgid "Network Code Snippets"
+msgstr "Netzwerk-Code-Snippets"
+
+#: src/Integrations.php:20
+msgid "Add Snippet"
+msgstr "Snippet hinzufügen"
+
+#: src/Integrations.php:21
+msgid "Add Network Snippet"
+msgstr "Netzwerk-Snippet hinzufügen"
+
+#: src/Integrations.php:27
+msgid "User Searches"
+msgstr "Suchanfragen"
+
+#: src/Integrations.php:30
+msgid "Activity Streams"
+msgstr "Aktivitätsprotokoll"
+
+#: src/Integrations.php:31
+msgid "Stream Settings"
+msgstr "Stream-Einstellungen"
+
+#: src/Integrations.php:34 src/Integrations.php:35
+msgid "Migrate Database"
+msgstr "Datenbank migrieren"
+
+#: src/Integrations.php:47
+msgid "Install via Git Updater"
+msgstr "Über Git Updater installieren"
+
+#: src/Integrations.php:48
+msgid "Install Theme via Git Updater"
+msgstr "Theme über Git Updater installieren"
+
+#: src/Integrations.php:63
+msgid "Export Widgets"
+msgstr "Widgets exportieren"
+
+#: src/Integrations.php:64
+msgid "Import Widgets"
+msgstr "Widgets importieren"
+
+#: src/MenuGuard.php:74 src/MenuGuard.php:92
+msgid "Only super administrators may edit the shared toolbar menu."
+msgstr "Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeiten."
+
+#: src/Plugin.php:23
+msgid "Toolbar Menu (legacy location)"
+msgstr "Toolbar-Menü (bisherige Menüposition)"
+
+#: src/Settings.php:94
+msgid "The selected menu does not exist on the source website. Load its menus and choose again."
+msgstr "Das ausgewählte Menü existiert nicht auf der Quellwebsite. Bitte ihre Menüs laden und erneut auswählen."
+
+#: src/Shortcuts.php:31
+msgid "Network Settings"
+msgstr "Netzwerkeinstellungen"
+
+#: src/Shortcuts.php:32
+msgid "Check for Updates"
+msgstr "Auf Aktualisierungen prüfen"
+
+#: src/Shortcuts.php:33
+msgid "Upgrade Network"
+msgstr "Netzwerk aktualisieren"
+
+#: src/Shortcuts.php:34
+msgid "Add Site"
+msgstr "Website hinzufügen"
+
+#: src/Shortcuts.php:35
+msgid "Add User"
+msgstr "Benutzer hinzufügen"
+
+#: src/Shortcuts.php:36
+msgid "Super Admins"
+msgstr "Super-Administratoren"
+
+#: src/Shortcuts.php:43
+msgid "New (Network)"
+msgstr "Neu (Netzwerk)"
+
+#: src/Shortcuts.php:45
+msgid "Website"
+msgstr "Website"
+
+#: src/Shortcuts.php:46
+msgid "User (Network)"
+msgstr "Benutzer (Netzwerk)"
+
+#: src/Shortcuts.php:49
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: src/Shortcuts.php:51 src/Shortcuts.php:98
+msgid "Toolbar Settings"
+msgstr "Toolbar-Einstellungen"
+
+#: src/Shortcuts.php:55
+msgid "Search Directory"
+msgstr "Verzeichnis durchsuchen"
+
+#: src/Shortcuts.php:56 src/Shortcuts.php:106
+msgid "Upload ZIP"
 msgstr "ZIP-Datei hochladen"
 
-#: multisite-toolbar-additions.php:445 multisite-toolbar-additions.php:476
-msgid "Install Favorites"
-msgstr "Favoriten installieren"
+#: src/Shortcuts.php:57
+msgid "Favorites"
+msgstr "Favoriten"
 
-#: multisite-toolbar-additions.php:452
+#: src/Shortcuts.php:64
+msgid "Manage Content"
+msgstr "Inhalte verwalten"
+
+#: src/Shortcuts.php:71
+msgid "Media Library"
+msgstr "Mediathek"
+
+#: src/Shortcuts.php:72
+msgid "Media Listing"
+msgstr "Medienliste"
+
+#: src/Shortcuts.php:73
+msgid "Upload Files"
+msgstr "Dateien hochladen"
+
+#: src/Shortcuts.php:75 src/Shortcuts.php:128
+msgid "Site Editor"
+msgstr "Website-Editor"
+
+#: src/Shortcuts.php:77 src/Shortcuts.php:130
+msgid "Customizer"
+msgstr "Customizer"
+
+#: src/Shortcuts.php:79 src/Shortcuts.php:131
+msgid "Widgets"
+msgstr "Widgets"
+
+#: src/Shortcuts.php:80
+msgid "Widgets Customizer"
+msgstr "Widget-Customizer"
+
+#: src/Shortcuts.php:82
+msgid "Custom Background"
+msgstr "Hintergrund"
+
+#: src/Shortcuts.php:82
+msgid "Custom Header"
+msgstr "Header"
+
+#: src/Shortcuts.php:86 src/Shortcuts.php:125
+msgid "WordPress Menus"
+msgstr "WordPress-Menüs"
+
+#: src/Shortcuts.php:87
+msgid "Add Menu"
+msgstr "Menü hinzufügen"
+
+#: src/Shortcuts.php:88
+msgid "Menu Locations"
+msgstr "Menüpositionen"
+
+#: src/Shortcuts.php:91
+msgid "Shared Toolbar Menu"
+msgstr "Gemeinsames Toolbar-Menü"
+
+#: src/Shortcuts.php:93
+msgid "Site Health"
+msgstr "Website-Zustand"
+
+#: src/Shortcuts.php:94
+msgid "Debug Information"
+msgstr "Debug-Informationen"
+
+#: src/Shortcuts.php:95
+msgid "Tools"
+msgstr "Werkzeuge"
+
+#: src/Shortcuts.php:96
+msgid "Export"
+msgstr "Exportieren"
+
+#: src/Shortcuts.php:97
+msgid "Import"
+msgstr "Importieren"
+
+#: src/Shortcuts.php:100
+msgid "Plugins"
+msgstr "Plugins"
+
+#: src/Shortcuts.php:101
+msgid "Themes"
+msgstr "Themes"
+
+#: src/Shortcuts.php:104
 msgid "Install Theme"
 msgstr "Theme installieren"
 
-#: multisite-toolbar-additions.php:458
-msgid "Search Theme Directory"
-msgstr "Themeverzeichnis durchsuchen"
+#: src/Shortcuts.php:109
+msgid "Theme File Editor"
+msgstr "Theme-Datei-Editor"
 
-#: multisite-toolbar-additions.php:470
-msgid "Newest Themes"
-msgstr "Neueste Themes"
+#: src/Shortcuts.php:110
+msgid "Plugin File Editor"
+msgstr "Plugin-Datei-Editor"
 
-#: multisite-toolbar-additions.php:624 multisite-toolbar-additions.php:692
+#: src/Shortcuts.php:122
 msgid "Site Settings"
-msgstr "Webseite: Einstellungen"
+msgstr "Website-Einstellungen"
 
-#: multisite-toolbar-additions.php:632
-msgid "Site Widgets"
-msgstr "Webseite: Widgets"
-
-#: multisite-toolbar-additions.php:640
-msgid "Site Menus"
-msgstr "Webseite: Menüs"
-
-#: multisite-toolbar-additions.php:665
+#: src/Shortcuts.php:123
 msgid "Site Plugins"
-msgstr "Webseite: Plugins"
+msgstr "Website-Plugins"
 
-#: multisite-toolbar-additions.php:673
+#: src/Shortcuts.php:124
 msgid "Site Themes"
-msgstr "Webseite: Themes"
+msgstr "Website-Themes"
 
-#: multisite-toolbar-additions.php:700
+#: src/Shortcuts.php:126
 msgid "Site Tools"
-msgstr "Webseite: Werkzeuge"
-
-#: multisite-toolbar-additions.php:708
-msgid "Visit Site"
-msgstr "Webseite aufrufen"
-
-#. Plugin URI of the plugin/theme
-msgid "https://github.com/deckerweb/multisite-toolbar-additions"
-msgstr "https://github.com/deckerweb/multisite-toolbar-additions"
-
-#. Description of the plugin/theme
-msgid ""
-"This plugin adds a lot of useful (Super) Admin links to the WordPress Admin "
-"Bar / Toolbar in Multisite, Network and Single Site installs. Also comes "
-"with support for third-party plugins!"
-msgstr ""
-"Dieses Plugin fügt der WordPress Adminbar bzw. Werkzeugleiste nützliche "
-"Admin-Links hinzu - innerhalb von Einzel-, Multisite- und Netzwerk-"
-"Installationen. Ebenfalls dabei: Unterstützung für einige Drittanbieter-"
-"Plugins!"
-
-#. Author URI of the plugin/theme
-msgid "https://deckerweb.de/"
-msgstr "https://deckerweb.de/"
-
-#~ msgid "Newest Plugins"
-#~ msgstr "Neueste Plugins"
-
-#~ msgid "Topics, Use Cases, Tags"
-#~ msgstr "Themen, Einsätze, Tags"
-
-#~ msgid "Restricted Site Admin Menu"
-#~ msgstr "Gesichertes Webseiten-Admin-Menü"
-
-#~ msgid "Toolbar"
-#~ msgstr "Werkzeugleiste"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Updates all Sites"
-#~ msgstr "Alle Webseiten im Netzwerk aktualisieren"
-
-#~ msgid "Install Plugins - Search on WordPress.org"
-#~ msgstr "Plugins installieren - Suche auf WordPress.org"
-
-#~ msgid "Install Plugins - Upload ZIP file"
-#~ msgstr "Plugins installieren - ZIP-Datei hochladen"
-
-#~ msgid "Install Plugins - Favorites (via WordPress.org)"
-#~ msgstr "Plugins installieren - Favoriten (via WordPress.org)"
-
-#~ msgid "Install Themes - Search on WordPress.org"
-#~ msgstr "Themes installieren - Suche auf WordPress.org"
-
-#~ msgid "Install Themes - Upload ZIP file"
-#~ msgstr "Themes installieren - ZIP-Datei hochladen"
-
-#~ msgid "Edit Super Admin Toolbar Menu:"
-#~ msgstr "Werkzeugleisten-Menü für Super-Admins bearbeiten:"
-
-#~ msgid "Edit Site Admin Toolbar Menu:"
-#~ msgstr "Werkzeugleisten-Menü für Webseiten-Admins bearbeiten:"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Get Involved"
-#~ msgstr "Jetzt mitmachen und WordPress weiter voranbringen!"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "WordPress Answers at StackExchange"
-#~ msgstr "WordPress-Antworten beim Dienst 'StackExchange'"
-
-#~ msgid "Add new Nav Menu"
-#~ msgstr "Neues Navigationsmenü hinzufügen"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Menu Locations"
-#~ msgstr "Menüpositionen & Zuordnung"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Updateable Only"
-#~ msgstr "Nur aktualisierbare Plugins anzeigen"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Active Only"
-#~ msgstr "Nur aktivierte Plugins anzeigen"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Recently Activated Only"
-#~ msgstr "Nur kürzlich aktivierte Plugins anzeigen (1 Woche)"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Inactive Only"
-#~ msgstr "Nur deaktivierte Plugins anzeigen"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "All Installed - Active and Inactive"
-#~ msgstr "Alle installierten Plugins - aktivierte und deaktivierte"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Must Use - MU Plugins"
-#~ msgstr "MU Plugins - Must Use"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Drop-ins - Special Plugins"
-#~ msgstr "Drop-ins - Spezial-Plugins/ Dateien"
-
-#~ msgctxt "Translators: Network admin bar menu group label"
-#~ msgid "Add New - within Network"
-#~ msgstr "Hinzufügen - Netzwerk-spezifisch"
-
-#~ msgctxt "Translators: add new site/ blog"
-#~ msgid "Website or Blog"
-#~ msgstr "Webseite bzw. Blog"
-
-#~ msgctxt "Translators: add new user via network admin"
-#~ msgid "User in Network"
-#~ msgstr "Benutzer im Netzwerk"
-
-#~ msgid "Maintenance Mode"
-#~ msgstr "Wartungsmodus"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Multisite Maintenance Mode"
-#~ msgstr "Multisite Wartungsmodus"
-
-#~ msgid "Add new Code Snippet"
-#~ msgstr "Neuen Codeschnipsel hinzufügen"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Multisite Robots.txt Manager"
-#~ msgstr "Multisite Robots.txt Manager"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Site Streams - Logged Activity"
-#~ msgstr "Webseiten-Streams - Protokollierte Aktivitäten"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "View Site (Main Site)"
-#~ msgstr "Webseite aufrufen (Haupt-Webseite)"
-
-#~ msgid "Install Plugin - Search via WordPress.org"
-#~ msgstr "Plugin installieren - Suche via WordPress.org"
-
-#~ msgid "Search WordPress.org Plugin Directory"
-#~ msgstr "WordPress.org Pluginverzeichnis durchsuchen"
-
-#~ msgid "Install Plugin - Upload ZIP file"
-#~ msgstr "Plugin installieren - ZIP-Datei hochladen"
-
-#~ msgid "Newest Plugins added on WordPress.org"
-#~ msgstr "Neu hinzugefügte Plugins bei WordPress.org"
-
-#~ msgid ""
-#~ "Install Plugins - Curated Topics, Use Cases, Plugin Tags (via "
-#~ "WordPress.org)"
-#~ msgstr "Plugins installieren - Favoriten (via WordPress.org)"
-
-#~ msgid "Install Theme - Search via WordPress.org"
-#~ msgstr "Theme installieren - Suche auf WordPress.org"
-
-#~ msgid "Search WordPress Theme Directory"
-#~ msgstr "WordPress.org Themeverzeichnis durchsuchen"
-
-#~ msgid "Install Theme - Upload ZIP file"
-#~ msgstr "Theme installieren - ZIP-Datei hochladen"
-
-#~ msgid "Newest Themes added on WordPress.org"
-#~ msgstr "Neu hinzugefügte Themes bei WordPress.org"
-
-#~ msgid "Install Theme - Favorites (via WordPress.org)"
-#~ msgstr "Theme installieren - Favoriten (via WordPress.org)"
-
-#~ msgctxt "Plugins page listing"
-#~ msgid "FAQ"
-#~ msgstr "FAQ - Häufige Fragen"
-
-#~ msgctxt "Plugins page listing"
-#~ msgid "Support"
-#~ msgstr "Support"
-
-#~ msgctxt "Plugins page listing"
-#~ msgid "Facebook Group"
-#~ msgstr "Facebook-Gruppe"
-
-#~ msgctxt "Plugins page listing"
-#~ msgid "Translations"
-#~ msgstr "Übersetzungen"
-
-#~ msgid "Other, recommended Multisite &amp; Toolbar plugins:"
-#~ msgstr "Weitere, empfohlene Plugins für Multisite &amp; Werkzeugleiste:"
-
-#~ msgid "Toolbar plugin series"
-#~ msgstr "Toolbar Plugin-Serie"
-
-#~ msgid "My Toolbar plugin series"
-#~ msgstr "Meine Toolbar-Plugin-Serie"
-
-#~ msgid "More plugins at WordPress.org"
-#~ msgstr "Noch mehr Plugins bei WordPress.org"
-
-#~ msgctxt "Translators: help tab info"
-#~ msgid "FAQ"
-#~ msgstr "FAQ - Häufige Fragen"
-
-#~ msgctxt "Translators: help tab info"
-#~ msgid "Support"
-#~ msgstr "Support"
-
-#~ msgid "Facebook Group"
-#~ msgstr "Facebook-Gruppe"
-
-#~ msgid "Translations"
-#~ msgstr "Übersetzungen"
-
-#, php-format
-#~ msgid "In Multisite: Special restricted custom menu for %s"
-#~ msgstr ""
-#~ "In Multisite: Besonderes, gesichertes benutzerdefiniertes Menü für %s"
-
-#~ msgid "Site Admins"
-#~ msgstr "Webseiten-Administratoren"
-
-#~ msgid ""
-#~ "This custom menu is almost identical to the custom menu for Super Admins "
-#~ "(see above), with two differences"
-#~ msgstr ""
-#~ "Dieses benutzerdefinierte Menü ist nahezu identisch mit für Super-"
-#~ "Administratoren (siehe oben), mit zwei Unterschieden"
-
-#~ msgid "Only Super Admins can setup and edit this menu"
-#~ msgstr "Nur Super-Administratoren können das Menü einrichten und bearbeiten"
-
-#~ msgid "Site Admins can see this menu but are not able to edit it"
-#~ msgstr ""
-#~ "Webseiten-Administratoren können das Menü sehen, aber nicht bearbeiten"
-
-#, php-format
-#~ msgid "%s only for Super Admins."
-#~ msgstr "%s nur für Super-Administratoren."
-
-#~ msgctxt "singular (non-Multisite)"
-#~ msgid "The following menu location above is"
-#~ msgstr "Die folgende oben aufgelistete Menüposition ist"
-
-#~ msgid "Genesis Plugins from the Plugin Directory"
-#~ msgstr "Genesis Plugins aus dem Pluginverzeichnis"
-
-#~ msgid "Genesis Plugins"
-#~ msgstr "Genesis Plugins"
-
-#~ msgctxt "Plugin installer: Tab name in installer toolbar"
-#~ msgid "Newest"
-#~ msgstr "Neueste"
-
-#~ msgctxt "Plugin card: plugin version"
-#~ msgid "Version:"
-#~ msgstr "Version:"
-
-#~ msgctxt "Plugin installer: Tab name in installer toolbar"
-#~ msgid "deckerweb Plugins"
-#~ msgstr "deckerweb Plugins"
-
-#~ msgctxt "Plugin installer: Page title"
-#~ msgid "deckerweb Plugins"
-#~ msgstr "deckerweb Plugins"
-
-#~ msgid ""
-#~ "Great helper tools for Site Builders to save time and get more productive"
-#~ msgstr ""
-#~ "Großartige Helferlein-Plugins für Site-Builder, um wertvolle Zeit zu "
-#~ "sparen und noch produktiver zu werden."
-
-#, php-format
-#~ msgid "You can use any of our free plugins or premium plugins from %s"
-#~ msgstr ""
-#~ "Sie können jedes unserer kostenlosen Plugins oder Premium-Plugins von %s "
-#~ "verwenden"
-
-#~ msgid "Join our Newsletter"
-#~ msgstr "Newsletter jetzt!"
-
-#~ msgid "Facebook User Group"
-#~ msgstr "Facebook-Nutzergruppe"
-
-#~ msgid "Organizational Messages"
-#~ msgstr "Organisatorische Mitteilungen"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Organizational Message Notifier for Users/ Admins"
-#~ msgstr "Organisatorische Mitteilungen für Benutzer/ Administratoren"
-
-#~ msgid "Create Messages"
-#~ msgstr "Nachrichten erstellen"
-
-#~ msgid "User Messages"
-#~ msgstr "Benutzer-Mitteilungen"
-
-#~ msgid "Login Security Solution"
-#~ msgstr "Anmelde-Sicherheit"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Login Security Solution"
-#~ msgstr "Anmelde-Sicherheit"
-
-#~ msgid "Blog Copier"
-#~ msgstr "Webseite duplizieren"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Blog Copier - Clone Website (Sub Site)"
-#~ msgstr "Webseite/ Blog duplizieren - Webseite (Sub-Seite) klonen"
-
-#~ msgid "Clone Site"
-#~ msgstr "Webseite duplizieren"
-
-#~ msgid "NS Cloner"
-#~ msgstr "NS Cloner"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "NS Cloner - Clone Website (Sub Site)"
-#~ msgstr "NS Cloner - Webseite (Sub-Seite) klonen"
-
-#~ msgid "NS Cloner Pro"
-#~ msgstr "NS Cloner Pro"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "NS Cloner Pro - Clone Website (Sub Sites)"
-#~ msgstr "NS Cloner Pro - Webseite (Sub-Seite) klonen"
-
-#~ msgid "Manage Repositories"
-#~ msgstr "Repositorien verwalten"
-
-#~ msgid "Add new Repository"
-#~ msgstr "Neues Repositorium hinzufügen"
-
-#~ msgid "Import/ Export"
-#~ msgstr "Import/ Export"
-
-#~ msgid "Toolbox Modules"
-#~ msgstr "Toolbox-Module"
-
-#~ msgid "Howdy Tweaks"
-#~ msgstr "Willkommens-Einstellungen"
-
-#~ msgid "Cachify Settings"
-#~ msgstr "Cachify Einstellungen"
-
-#~ msgid "Hyper Cache"
-#~ msgstr "Hyper Cache"
-
-#~ msgid "Hyper Cache Extended"
-#~ msgstr "Hyper Cache Extended"
-
-#~ msgid "Manage Translations"
-#~ msgstr "Übersetzungen verwalten"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Codestyling Localization - Manage Translations"
-#~ msgstr ""
-#~ "Codestyling Localization - Übersetzungen für Plugins, Themes bzw. die "
-#~ "WordPress-Basis verwalten"
-
-#~ msgid "Limit Login Attempts"
-#~ msgstr "Limit Login-Versuche"
-
-#~ msgid "Snitch Network Monitor"
-#~ msgstr "Snitch Netzwerkmonitor"
-
-#~ msgid "WP-Optimize (DB)"
-#~ msgstr "WP-Optimize (DB)"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Database Optimize via WP-Optimize"
-#~ msgstr "Datenbankoptimierung via WP-Optimize"
-
-#~ msgid "Info &amp; Credits"
-#~ msgstr "Info &amp; Credits"
-
-#~ msgid "Optimize Database"
-#~ msgstr "Datenbank optimieren"
-
-#~ msgid "Entire Network"
-#~ msgstr "Gesamtes Netzwerk"
-
-#~ msgctxt "Translators: for the tooltip"
-#~ msgid "Entire Network - User Bulk Actions"
-#~ msgstr "Gesamtes Netzwerk - Benutzer-Stapelverarbeitung"
-
-#~ msgid "Network Mass Email"
-#~ msgstr "Netzwerk E-Mail-Versand"
-
-#~ msgid "Tabify Edit Screens"
-#~ msgstr "Tabs für Bearbeiten-Ansichten"
-
-#~ msgid "BackWPup Jobs"
-#~ msgstr "BackWPup Aufträge"
-
-#~ msgid "Add new Job"
-#~ msgstr "Neuer Auftrag"
-
-#~ msgid "Job Working..."
-#~ msgstr "In Bearbeitung..."
-
-#~ msgid "Log Files"
-#~ msgstr "Protokolldateien"
-
-#~ msgid "Backups Archive"
-#~ msgstr "Datensicherungen"
-
-#~ msgid "Tools"
-#~ msgstr "Werkzeuge"
-
-#~ msgid "BackWPup Job"
-#~ msgstr "BackWPup Auftrag"
-
-#~ msgctxt "Translators: BackWPup v3.x plugin"
-#~ msgid "Dashboard"
-#~ msgstr "Dashboard"
-
-#~ msgid "About/ Info"
-#~ msgstr "Über/ Informationen"
-
-#~ msgid "About &amp; Backup Info"
-#~ msgstr "Über das Plugin &amp; Infos zu Datensicherungen"
-
-#~ msgid "Better WP Security"
-#~ msgstr "Bessere WP-Sicherheit"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Better WP Security - Dashboard"
-#~ msgstr "Bessere WordPress-Sicherheit - Übersicht"
-
-#~ msgid "Admin User"
-#~ msgstr "Admin-Benutzer"
-
-#~ msgid "Away Mode"
-#~ msgstr "Abwesenheitsmodus"
-
-#~ msgid "Ban Users"
-#~ msgstr "Benutzer sperren"
-
-#~ msgid "Content Directory"
-#~ msgstr "Inhaltsverzeichnis"
-
-#~ msgid "Database Backup"
-#~ msgstr "Datenbanksicherung"
-
-#~ msgid "Database Prefix"
-#~ msgstr "Datenbank-Präfix"
-
-#~ msgid "Hide Backend"
-#~ msgstr "Adminbereich verbergen"
-
-#~ msgid "Intrusion Detection"
-#~ msgstr "Intrusion-Entdeckung"
-
-#~ msgid "Login Limits"
-#~ msgstr "Login-Limits"
-
-#~ msgid "SSL/ HTTPS"
-#~ msgstr "SSL/ HTTPS"
-
-#~ msgid "System Tweaks"
-#~ msgstr "Systemoptimierungen"
-
-#~ msgid "View Logs"
-#~ msgstr "Protokolle ansehen"
-
-#~ msgid "Hide My WP"
-#~ msgstr "Hide My WP"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Hide My WP - Security & Branding Settings"
-#~ msgstr "Hide My WP - Sicherheits- und Branding-Einstellungen"
-
-#~ msgid "General Settings"
-#~ msgstr "Allgemeine Einstellungen"
-
-#~ msgid "Permalinks & URLs"
-#~ msgstr "Permalinks &amp; URLs"
-
-#~ msgid "iThemes Security"
-#~ msgstr "iThemes Security"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "iThemes Security - Dashboard"
-#~ msgstr "iThemes Security - Übersicht"
-
-#~ msgid "Advanced"
-#~ msgstr "Erweitert"
-
-#~ msgid "Backups"
-#~ msgstr "Datensicherungen"
-
-#~ msgctxt "Translators: for the tooltip"
-#~ msgid "Simple Basic Backups"
-#~ msgstr "Einfache Basis-Datensicherungen"
-
-#~ msgid "Logs"
-#~ msgstr "Protokolle"
-
-#~ msgid "Help"
-#~ msgstr "Hilfe"
-
-#~ msgid "iThemes Security Pro"
-#~ msgstr "iThemes Security Pro"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "iThemes Security Pro - Dashboard"
-#~ msgstr "iThemes Security Pro - Übersicht"
-
-#~ msgid "P3 Plugin Profiler"
-#~ msgstr "P3 Plugin-Profiler"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "P3 Plugin Performance Profiler"
-#~ msgstr "P3 Plugin-Performance-Profiler"
-
-#~ msgid "Current Scan"
-#~ msgstr "Aktueller Scan"
-
-#~ msgid "History"
-#~ msgstr "Historie/ Verlauf"
-
-#~ msgid "Help/ FAQ"
-#~ msgstr "Hilfe/ Häufige Fragen"
-
-#~ msgid "Network System Info"
-#~ msgstr "Netzwerk-Systeminfos"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Network System Info - Overview"
-#~ msgstr "Netzwerk-Systeminfos - Übersicht"
-
-#~ msgid "WordPress"
-#~ msgstr "WordPress"
-
-#~ msgid "WordPress Install Info"
-#~ msgstr "Info zur WordPress-Installation"
-
-#~ msgid "Database"
-#~ msgstr "Datenbank-Info"
-
-#~ msgid "PHP Info"
-#~ msgstr "PHP-Info"
-
-#~ msgid "MySQL Info"
-#~ msgstr "MySQL-Info"
-
-#~ msgid "About"
-#~ msgstr "Über das Plugin"
-
-#~ msgid "Site System Info"
-#~ msgstr "Webseite-Systeminfos"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Site System Info - Overview"
-#~ msgstr "Webseite-Systeminfos - Übersicht"
-
-#~ msgid "Smart Network Tweaks"
-#~ msgstr "Smarte Netzwerkoptimierung"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Smart Network Admin Tweaks"
-#~ msgstr "Smarte Optimierungen für Netzwerk-Adminbereich"
-
-#~ msgid "Updates Control"
-#~ msgstr "Aktualisierungen kontrollieren"
-
-#~ msgid "Global Settings"
-#~ msgstr "Globale Einstellungen"
-
-#~ msgid "Smart Admin Tweaks"
-#~ msgstr "Smarte Adminoptimierungen"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Smart Site Admin Tweaks"
-#~ msgstr "Smarte Optimierungen für den Webseiten-Adminbereich"
-
-#~ msgid "Global Tweaks"
-#~ msgstr "Globale Optimierungen"
-
-#~ msgid "General Tweaks"
-#~ msgstr "Allgemeine Tweaks"
-
-#~ msgid "Site Admin"
-#~ msgstr "Website-Admin"
-
-#~ msgid "Rewriter"
-#~ msgstr "Rewriter"
-
-#~ msgid "Media"
-#~ msgstr "Mediathek"
-
-#~ msgid "Posts"
-#~ msgstr "Beiträge/ Seiten"
-
-#~ msgid "Header"
-#~ msgstr "Kopfzeile (Header)"
-
-#~ msgid "Smart Network Cleanup"
-#~ msgstr "Smartes Netzwerk-Aufräumen"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Smart Network Cleanup Tools"
-#~ msgstr "Smarte Netzwerk-Aufräumwerkzeuge"
-
-#~ msgid "Cleanup Tools"
-#~ msgstr "Säuberungs-Werkzeuge"
-
-#~ msgid "Reset Tools"
-#~ msgstr "Zurücksetzen-Werkzeuge"
-
-#~ msgid "Scheduler"
-#~ msgstr "Zeitplanung"
-
-#~ msgid "Statistics"
-#~ msgstr "Statistiken"
-
-#~ msgid "Smart Site Cleanup"
-#~ msgstr "Smartes Webseite-Aufräumen"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Smart Site Cleanup Tools"
-#~ msgstr "Smarte Webseite-Aufräumwerkzeuge"
-
-#~ msgid "Removal Tools"
-#~ msgstr "Entfernungs-Werkzeuge"
-
-#~ msgid "Smart CRON Tools"
-#~ msgstr "Smarte Cron-Werkzeuge"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Smart CRON Tools - List of Jobs"
-#~ msgstr "Smarte Cron-Werkzeuge - Liste der Aufträge"
-
-#~ msgid "Schedules"
-#~ msgstr "Zeitplanung"
-
-#~ msgid "Smart Network Options Optimizer"
-#~ msgstr "Netzwerkoptionen optimieren"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Smart Network Options Optimizer - Tracer"
-#~ msgstr "Smarter Netzwerk-Optionen-Optimierer - Tracer (Aufspürwerkzeug)"
-
-#~ msgid "Analyze"
-#~ msgstr "Analysieren"
-
-#~ msgid "Smart Site Options Optimizer"
-#~ msgstr "Webseiteoptionen optimieren"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Smarte Site Options Optimizer - Tracer"
-#~ msgstr "Smarter Webseiten-Optionen-Optimierer - Tracer (Aufspürwerkzeug)"
-
-#~ msgid "Auto Load"
-#~ msgstr "Auto Load"
-
-#~ msgid "Smart Network Security"
-#~ msgstr "Smarte Netzwerk-Sicherheit"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Smart Network Security Tools"
-#~ msgstr "Smarte Netzwerk-Sicherheit - Werkzeuge"
-
-#~ msgid "Live Monitor"
-#~ msgstr "Live-Monitor"
-
-#~ msgid "Sucuri Scanner"
-#~ msgstr "Sucuri-Scanner"
-
-#~ msgid "Security Advisor"
-#~ msgstr "Sicherheitsempfehlungen"
-
-#~ msgid ".htaccess Tweaks"
-#~ msgstr ".htaccess Optimierungen"
-
-#~ msgid "Various Tools"
-#~ msgstr "Verschiedene Werkzeuge"
-
-#~ msgid "Log Analyzing"
-#~ msgstr "Protokolle analysieren"
-
-#~ msgid "Banned IPs"
-#~ msgstr "Gesperrte IPs"
-
-#~ msgid "Login Limit"
-#~ msgstr "Login-Limits"
-
-#~ msgid "Smart Site Security"
-#~ msgstr "Smarte Webseite-Sicherheit"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Smart Site Security Tools"
-#~ msgstr "Smarte Webseite-Sicherheit - Werkzeuge"
-
-#~ msgid "VirusTotal Scanner"
-#~ msgstr "VirusTotal-Scanner"
-
-#~ msgid "Smart Tabber Widget"
-#~ msgstr "Smartes Tab-Widget"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Smart Tabber Widget - Settings"
-#~ msgstr "Smartes Tab-Widget - Einstellungen"
-
-#~ msgid "Style Builder"
-#~ msgstr "Stile bearbeiten"
-
-#~ msgid "Create new Style"
-#~ msgstr "Neuen Stil erstellen"
-
-#~ msgid "Export/ Import"
-#~ msgstr "Export/ Import"
-
-#~ msgid "All Snapshots"
-#~ msgstr "Alle Datensicherungen"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "All Snapshots"
-#~ msgstr "Alle Datensicherungen (Snapshots)"
-
-#~ msgid "Add new"
-#~ msgstr "Neue Datensicherung"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Add new Snapshot for Backup"
-#~ msgstr "Neuen Schnappschuss zur Datensicherung hinzufügen"
-
-#~ msgid "Destinations"
-#~ msgstr "Ziele"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Backup Destinations"
-#~ msgstr "Ziele für die Datensicherung"
-
-#~ msgid "Amazon S3"
-#~ msgstr "Amazon S3"
-
-#~ msgid "Dropbox"
-#~ msgstr "Dropbox"
-
-#~ msgid "FTP/sFTP"
-#~ msgstr "FTP/sFTP"
-
-#~ msgid "Google Drive"
-#~ msgstr "Google Drive"
-
-#~ msgid "GreenQloud Storage"
-#~ msgstr "GreenQloud Speicher"
-
-#~ msgid "Snapshots Scan/ Import"
-#~ msgstr "Snapshots Scannen/ Import"
-
-#~ msgid "New Snapshot"
-#~ msgstr "Neue Datensicherung"
-
-#~ msgid "Ultimate Branding"
-#~ msgstr "Ultimate Branding"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "Ultimate Branding Dashboard"
-#~ msgstr "Ultimate Branding Verwaltung"
-
-#~ msgid "Images"
-#~ msgstr "Bilder"
-
-#~ msgid "From Email"
-#~ msgstr "E-Mail-Absender"
-
-#~ msgid "Admin Bar"
-#~ msgstr "Adminbar"
-
-#~ msgid "Help Content"
-#~ msgstr "Hilfe-Inhalte"
-
-#~ msgid "Footer Content"
-#~ msgstr "Fußzeilen-Inhalt"
-
-#~ msgid "Header Content"
-#~ msgstr "Kopfzeilen-Inhalt"
-
-#~ msgid "Site Generator"
-#~ msgstr "Webseite-Generator"
-
-#~ msgid "Permalinks Menu"
-#~ msgstr "Permalinks-Menü"
-
-#~ msgid "Text Change"
-#~ msgstr "Textänderungen"
-
-#~ msgid "CSS"
-#~ msgstr "CSS"
-
-#~ msgid "WP Super Cache"
-#~ msgstr "WP Super Cache"
-
-#~ msgid "CDN"
-#~ msgstr "CDN"
-
-#~ msgctxt "Translators: For the tooltip"
-#~ msgid "CDN (Content Delivery Network)"
-#~ msgstr "CDN (Content Delivery Network)"
-
-#~ msgid "Contents"
-#~ msgstr "Inhalte"
-
-#~ msgid "Preload"
-#~ msgstr "Vorab laden"
-
-#~ msgid "Plugins"
-#~ msgstr "Plugins"
-
-#~ msgid "Debug"
-#~ msgstr "Debugging"
-
-#~ msgid "Quick Cache Options"
-#~ msgstr "Quick Cache Optionen"
-
-#~ msgid "Plugin Info"
-#~ msgstr "Plugin-Infos"
-
-#~ msgid "Connectors"
-#~ msgstr "Verbindungen"
+msgstr "Website-Werkzeuge"
+
+#: src/Shortcuts.php:139
+msgid "Developer Resources"
+msgstr "Entwickler-Ressourcen"
+
+#: src/Shortcuts.php:141
+msgid "Plugin Handbook"
+msgstr "Plugin-Handbuch"
+
+#: src/Shortcuts.php:142
+msgid "Theme Handbook"
+msgstr "Theme-Handbuch"
+
+#: src/Shortcuts.php:143
+msgid "Block Editor Handbook"
+msgstr "Block-Editor-Handbuch"
+
+#: src/Shortcuts.php:144
+msgid "Coding Standards"
+msgstr "Programmierstandards"
+
+#: src/Shortcuts.php:145
+msgid "Get Involved"
+msgstr "Mitwirken"
+
+#: src/Admin.php:122
+msgid "Leave empty to use the selected menu’s name. A custom label overrides it."
+msgstr "Leer lassen, um den Namen des ausgewählten Menüs zu übernehmen. Eine eigene Beschriftung hat Vorrang."
+
+#: src/Admin.php
+msgid "Upload Plugin ZIP"
+msgstr "Plugin-ZIP hochladen"
+
+#: src/Admin.php
+msgid "Upload Theme ZIP"
+msgstr "Theme-ZIP hochladen"
+
+#: src/Admin.php
+msgid "Show Plugins under New in the toolbar"
+msgstr "Plugins unter „+ Neu“ in der Toolbar anzeigen"
+
+#: src/Admin.php
+msgid "Show Themes under New in the toolbar"
+msgstr "Themes unter „+ Neu“ in der Toolbar anzeigen"
+
+#: src/Admin.php
+msgid "Show the plugin ZIP upload submenu"
+msgstr "Untermenü „Plugin-ZIP hochladen“ anzeigen"
+
+#: src/Admin.php
+msgid "Show the theme ZIP upload submenu"
+msgstr "Untermenü „Theme-ZIP hochladen“ anzeigen"
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Toolbar settings"
+msgstr "Toolbar-Einstellungen"
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Settings sections"
+msgstr "Einstellungsbereiche"
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Plugin information"
+msgstr "Über das Plugin"
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Plugin website"
+msgstr "Plugin-Website"
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Close"
+msgstr "Schließen"
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Changelog"
+msgstr "Changelog"
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar."
+msgstr "Nützliche Netzwerk- und Website-Verknüpfungen sowie ein konfigurierbares WordPress-Menü in der Toolbar."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "The update filesystem is unavailable. Please try again."
+msgstr "Das Dateisystem für Updates ist nicht verfügbar. Bitte erneut versuchen."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "The GitHub package does not contain the Multisite Toolbar Additions plugin file."
+msgstr "Das GitHub-Paket enthält die Plugin-Datei von Multisite Toolbar Additions nicht."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "The GitHub package could not be prepared. The installed version has been kept."
+msgstr "Das GitHub-Paket konnte nicht vorbereitet werden. Die installierte Version bleibt erhalten."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "The update package could not be checked."
+msgstr "Das Update-Paket konnte nicht geprüft werden."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "The package identity or version does not match a newer Multisite Toolbar Additions release."
+msgstr "Paketidentität oder Version passen nicht zu einem neueren Release von Multisite Toolbar Additions."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "The package version differs from the offered update. Please check for updates again."
+msgstr "Die Paketversion weicht vom angebotenen Update ab. Bitte erneut nach Updates suchen."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "The update package has missing or invalid WordPress/PHP requirements."
+msgstr "Die WordPress-/PHP-Anforderungen im Update-Paket fehlen oder sind ungültig."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "This release requires a newer WordPress or PHP version. The installed version has been kept."
+msgstr "Dieses Release benötigt eine neuere WordPress- oder PHP-Version. Die installierte Version bleibt erhalten."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Could not access the update filesystem."
+msgstr "Auf das Update-Dateisystem konnte nicht zugegriffen werden."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "GitHub release does not contain the plugin main file."
+msgstr "Das GitHub-Release enthält die Hauptdatei des Plugins nicht."
+
+#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Could not prepare the GitHub release package."
+msgstr "Das GitHub-Release-Paket konnte nicht vorbereitet werden."
+
+#: src/PageChrome.php
+msgid "Many sites. One move."
+msgstr "Viele Sites. Ein Handgriff."

@@ -1,0 +1,27 @@
+/* WordPress hides non-Core top-level items on mobile; retain this menu explicitly. */
+@media screen and (max-width: 782px) {
+	#wpadminbar li.mstba-root { display: block; }
+	#wpadminbar li.mstba-root > .ab-item {
+		max-width: 8rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	/* Expand downwards on touch screens instead of opening flyouts off screen. */
+	#wpadminbar li.mstba-root > .ab-sub-wrapper {
+		position: fixed;
+		top: 46px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		max-height: calc(100vh - 46px);
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	#wpadminbar li.mstba-root .ab-sub-wrapper .ab-sub-wrapper {
+		position: static;
+		margin: 0 0 0 12px;
+		min-width: 0;
+		box-shadow: none;
+	}
+}

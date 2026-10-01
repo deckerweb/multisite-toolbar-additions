@@ -1,0 +1,24 @@
+/* Daily Scripture / Brand Admin Schemes visual language, scoped to this page. */
+.mstba-settings{max-width:1150px;color:#202b36}
+.mstba-settings .mstba-header{display:flex;align-items:center;gap:24px;background:#f6f3e9;border:1px solid #e2e4d9;border-radius:14px;padding:28px 32px;margin:22px 0 16px}
+.mstba-header>.mstba-brand-icon{display:block;flex:none;width:72px;height:72px}
+.mstba-header h1{font-size:clamp(24px,2.5vw,34px);line-height:1.2;padding:0;margin:8px 0 12px;font-weight:650;color:#183b43}
+.mstba-header p{font-size:15px;line-height:1.6;margin:0}
+.mstba-header .mstba-eyebrow{font-size:11px;letter-spacing:.12em;font-weight:700;color:#35616a;text-transform:uppercase}
+.mstba-nav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 24px}
+.mstba-nav a{padding:9px 14px;border:1px solid #ccd5d9;border-radius:20px;text-decoration:none;font-weight:600;background:#fff;color:#245c73}
+.mstba-settings a:focus-visible{outline:2px solid #245c73;outline-offset:3px}
+.mstba-panel{background:#fff;border:1px solid #d5dce0;border-radius:12px;padding:24px;margin:20px 0;box-shadow:0 1px 2px #00000008;scroll-margin-top:60px}
+.mstba-panel h2{margin:0 0 18px;font-size:19px;color:#183b43}
+.mstba-panel .form-table th{width:190px;padding:18px 12px 18px 0}
+.mstba-panel .form-table td{padding:18px 0}
+.mstba-panel .form-table tr+tr{border-top:1px solid #eef1f2}
+.mstba-settings .description{color:#52626d;line-height:1.6;max-width:85ch}
+.mstba-checkbox{padding:12px 14px;background:#f6f8f9;border:1px solid #e2e8ea;border-radius:7px}
+.mstba-checkbox label{display:flex;align-items:center;gap:8px;font-weight:500;line-height:1.6}
+.mstba-checkbox input[type=checkbox]{margin:0;flex:none}
+.mstba-save{display:flex;justify-content:flex-end}
+.mstba-save .submit{margin:0;padding:0}
+.mstba-settings select,.mstba-settings input.regular-text{max-width:100%}
+@media(max-width:782px){.mstba-settings .mstba-header{padding:20px;gap:16px}.mstba-panel{padding:18px}.mstba-panel .form-table th{padding-bottom:4px;width:auto}.mstba-panel .form-table td{padding:8px 0 18px}.mstba-panel .button{margin-top:8px}.mstba-checkbox label{align-items:flex-start}}
+@media(max-width:480px){.mstba-settings .mstba-header{align-items:flex-start}.mstba-header>.mstba-brand-icon{width:48px;height:48px}.mstba-header h1{font-size:24px}.mstba-settings .mstba-nav a{flex:1;text-align:center}}

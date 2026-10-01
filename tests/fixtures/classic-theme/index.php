@@ -1,0 +1,2 @@
+<?php
+// Disposable test fixture.

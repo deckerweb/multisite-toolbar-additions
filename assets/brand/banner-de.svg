@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1544" height="500" viewBox="0 0 1544 500" role="img" aria-labelledby="title desc"><title id="title">Multisite Toolbar Additions</title><desc id="desc">Viele Sites. Ein Handgriff. The Launch Rail connects network, websites and tools.</desc>
+<rect width="1544" height="500" fill="#f6f3e9"/><path d="M0 474H1544" stroke="#e4e7da" stroke-width="2"/>
+<g font-family="Arial, Helvetica, sans-serif"><g transform="translate(62 51) scale(.22)"><rect width="256" height="256" rx="58" fill="#123640"/>
+<path d="M72 98v45q0 18 18 18h31M124 99v70" fill="none" stroke="#b9eed9" stroke-width="12" stroke-linecap="round"/>
+<rect x="38" y="50" width="180" height="62" rx="18" fill="#f6f3e9"/>
+<rect x="52" y="65" width="36" height="32" rx="8" fill="#123640"/>
+<rect x="99" y="65" width="36" height="32" rx="8" fill="#123640"/>
+<rect x="146" y="65" width="58" height="32" rx="8" fill="#b9eed9"/>
+<rect x="45" y="155" width="48" height="43" rx="11" fill="#b9eed9"/>
+<path d="M58 170h21" stroke="#123640" stroke-width="5" stroke-linecap="round"/>
+<rect x="104" y="155" width="44" height="43" rx="11" fill="#f6f3e9"/>
+<path d="M116 170h19" stroke="#123640" stroke-width="5" stroke-linecap="round"/>
+<path d="m158 141 69-20-20 69-18-19-21 21-16-16 21-21Z" fill="#fa815f"/>
+</g><text x="140" y="85" fill="#41626a" font-size="16" font-weight="700" letter-spacing="2.6">DECKERWEB / TOOLBAR-WERKZEUGE</text>
+<text x="62" y="201" fill="#123640" font-size="72" font-weight="800" letter-spacing="-2.6">Multisite</text><text x="62" y="278" fill="#123640" font-size="72" font-weight="800" letter-spacing="-2.6">Toolbar Additions</text>
+<path d="M66 304h111" stroke="#fa815f" stroke-width="7" stroke-linecap="round"/><text x="62" y="363" fill="#41626a" font-size="32" letter-spacing="-.4">Viele Sites. Ein Handgriff.</text>
+<text x="62" y="444" fill="#41626a" font-size="13" font-weight="700" letter-spacing="2.2">WORDPRESS · SINGLE SITE + MULTISITE</text>
+<rect x="889" y="37" width="592" height="426" rx="62" fill="#123640"/>
+<path d="M913 372c118-286 324-378 526-209M926 415c195-213 352-246 539-152" fill="none" stroke="#b9eed9" stroke-width="2" opacity=".12"/>
+<path d="M1007 215v50q0 22 22 22M1178 215v106M1345 212v65" fill="none" stroke="#b9eed9" stroke-width="6" stroke-linecap="round"/>
+<rect x="950" y="127" width="472" height="94" rx="25" fill="#f6f3e9"/>
+<rect x="970" y="149" width="102" height="50" rx="13" fill="#123640"/>
+<rect x="1090" y="149" width="134" height="50" rx="13" fill="#123640"/>
+<rect x="1243" y="149" width="155" height="50" rx="13" fill="#b9eed9"/>
+<circle cx="993" cy="174" r="6" fill="#b9eed9"/><path d="M1012 174h35M1111 174h88M1267 174h106" stroke="#b9eed9" stroke-width="7" stroke-linecap="round"/><path d="M1267 174h106" stroke="#123640" stroke-width="7" stroke-linecap="round"/>
+<g><rect x="957" y="288" width="120" height="89" rx="17" fill="#b9eed9"/><path d="M973 309h88" stroke="#123640" stroke-width="5" stroke-linecap="round"/><rect x="973" y="324" width="26" height="21" rx="5" fill="#123640" opacity=".2"/><path d="M1009 329h52M1009 341h40" stroke="#123640" stroke-width="4" stroke-linecap="round" opacity=".35"/><text x="973" y="363" font-size="11" font-weight="700" letter-spacing="1.2" fill="#123640">NETZWERK</text></g><g><rect x="1120" y="322" width="116" height="89" rx="17" fill="#f6f3e9"/><path d="M1136 343h84" stroke="#123640" stroke-width="5" stroke-linecap="round"/><rect x="1136" y="358" width="26" height="21" rx="5" fill="#123640" opacity=".2"/><path d="M1172 363h48M1172 375h36" stroke="#123640" stroke-width="4" stroke-linecap="round" opacity=".35"/><text x="1136" y="397" font-size="11" font-weight="700" letter-spacing="1.2" fill="#123640">SITES</text></g><g><rect x="1284" y="278" width="120" height="89" rx="17" fill="#fa815f"/><path d="M1300 299h88" stroke="#123640" stroke-width="5" stroke-linecap="round"/><rect x="1300" y="314" width="26" height="21" rx="5" fill="#123640" opacity=".2"/><path d="M1336 319h52M1336 331h40" stroke="#123640" stroke-width="4" stroke-linecap="round" opacity=".35"/><text x="1300" y="353" font-size="11" font-weight="700" letter-spacing="1.2" fill="#123640">TOOLS</text></g>
+<path d="m1358 114 128-36-36 128-33-34-40 40-29-29 40-40Z" fill="#fa815f"/>
+<circle cx="931" cy="81" r="6" fill="#fa815f"/><circle cx="1424" cy="424" r="6" fill="#b9eed9"/>
+</g></svg>

@@ -1,0 +1,13 @@
+/* DECKERWEB Admin Footer v1; shared presentation. */
+.ddw-admin-footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 28px;margin:32px 0 16px;padding:20px 0;border-top:1px solid #ccd5d9;color:#52626d;font-size:13px;line-height:1.6}
+.ddw-admin-footer strong{color:#245c73;margin-inline-end:8px}
+.ddw-admin-footer p{font-size:13px;margin:4px 0 0}
+.ddw-admin-footer>div:last-child{display:flex;flex-wrap:wrap;gap:8px 20px}
+.ddw-admin-footer a{color:#245c73;text-underline-offset:3px}
+.ddw-admin-footer a:focus-visible{outline:2px solid #245c73;outline-offset:3px}
+.ddw-document-dialog{box-sizing:border-box;width:min(880px,calc(100% - 32px));max-height:85vh;padding:0;border:1px solid #dcdcde;border-radius:12px;background:#fff;color:#1d2327;box-shadow:0 20px 80px #0004}
+.ddw-document-dialog::backdrop{background:#0006}
+.ddw-document-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 24px;border-bottom:1px solid #dcdcde}
+.ddw-document-header h2{margin:0;font-size:20px}
+.ddw-document-dialog pre{box-sizing:border-box;max-height:calc(85vh - 90px);overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;padding:24px;font:13px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace}
+@media(max-width:600px){.ddw-admin-footer{display:block}.ddw-admin-footer>div:last-child{margin-top:12px}.ddw-document-header,.ddw-document-dialog pre{padding:16px}}
