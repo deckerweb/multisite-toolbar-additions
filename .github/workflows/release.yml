@@ -36,6 +36,7 @@ jobs:
           for tracked in subprocess.check_output(['git','ls-files','-z']).decode().split('\0'):
               if tracked and tracked not in expected:
                   (root/tracked).unlink(missing_ok=True)
+          subprocess.run(['git','restore','--source=HEAD','--','.github/workflows'],check=True)
           PYTHON
       - uses: shivammathur/setup-php@v2
         with:
@@ -73,6 +74,7 @@ jobs:
           for tracked in subprocess.check_output(['git','ls-files','-z']).decode().split('\0'):
               if tracked and tracked not in expected:
                   (root/tracked).unlink(missing_ok=True)
+          subprocess.run(['git','restore','--source=HEAD','--','.github/workflows'],check=True)
           PYTHON
       - name: Commit complete release source
         run: |
@@ -81,14 +83,3 @@ jobs:
           git add -A
           git commit -m 'Release 4.0.0' -m 'Import the locally verified plugin rewrite, Updater V2, shared Library 0.2.0 and bilingual documentation.'
           git push origin HEAD:master
-      - name: Build reproducible packages
-        run: python3 tools/package.py dist
-      - name: Publish stable release
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          if gh release view v4.0.0 >/dev/null 2>&1; then
-            echo 'Release already exists; refusing to replace it.'
-            exit 1
-          fi
-          gh release create v4.0.0 dist/multisite-toolbar-additions-4.0.0.zip dist/multisite-toolbar-additions-4.0.0-source.zip dist/SHA256SUMS --target "$(git rev-parse HEAD)" --title 'Multisite Toolbar Additions 4.0.0' --notes-file RELEASE-NOTES.md --latest
