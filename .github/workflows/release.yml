@@ -1,0 +1,94 @@
+name: Import and publish verified 4.0.0
+on:
+  push:
+    branches: [master]
+    paths: ['.github/workflows/release.yml']
+permissions:
+  contents: read
+jobs:
+  validate:
+    if: github.repository == 'deckerweb/multisite-toolbar-additions'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.2', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import checksum-verified source tree
+        run: |
+          python3 - <<'PYTHON'
+          from pathlib import Path, PurePosixPath
+          import hashlib, subprocess, zipfile
+          root=Path.cwd()
+          package=root/'multisite-toolbar-additions-4.0.0-source.zip'
+          assert hashlib.sha256(package.read_bytes()).hexdigest() == 'b293b0f2cb0fd2c6bf9a12ec752a755b42e5e40cafbd073d1cfb21b2be1b01ad', 'Source archive checksum mismatch'
+          expected=set()
+          with zipfile.ZipFile(package) as archive:
+              assert archive.testzip() is None
+              for entry in archive.infolist():
+                  rel=PurePosixPath(entry.filename).relative_to('multisite-toolbar-additions')
+                  assert rel.parts and '..' not in rel.parts and '.git' not in rel.parts
+                  assert (entry.external_attr >> 16) & 0o170000 != 0o120000, 'Symlink not allowed'
+                  expected.add(rel.as_posix())
+                  target=root/str(rel)
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(archive.read(entry))
+          for tracked in subprocess.check_output(['git','ls-files','-z']).decode().split('\0'):
+              if tracked and tracked not in expected:
+                  (root/tracked).unlink(missing_ok=True)
+          PYTHON
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - run: find src includes tests -name '*.php' -print0 | xargs -0 -n1 php -l
+      - run: php -l multisite-toolbar-additions.php
+      - run: php tests/unit.php
+  publish:
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import checksum-verified source tree
+        run: |
+          python3 - <<'PYTHON'
+          from pathlib import Path, PurePosixPath
+          import hashlib, subprocess, zipfile
+          root=Path.cwd()
+          package=root/'multisite-toolbar-additions-4.0.0-source.zip'
+          assert hashlib.sha256(package.read_bytes()).hexdigest() == 'b293b0f2cb0fd2c6bf9a12ec752a755b42e5e40cafbd073d1cfb21b2be1b01ad', 'Source archive checksum mismatch'
+          expected=set()
+          with zipfile.ZipFile(package) as archive:
+              assert archive.testzip() is None
+              for entry in archive.infolist():
+                  rel=PurePosixPath(entry.filename).relative_to('multisite-toolbar-additions')
+                  assert rel.parts and '..' not in rel.parts and '.git' not in rel.parts
+                  assert (entry.external_attr >> 16) & 0o170000 != 0o120000, 'Symlink not allowed'
+                  expected.add(rel.as_posix())
+                  target=root/str(rel)
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(archive.read(entry))
+          for tracked in subprocess.check_output(['git','ls-files','-z']).decode().split('\0'):
+              if tracked and tracked not in expected:
+                  (root/tracked).unlink(missing_ok=True)
+          PYTHON
+      - name: Commit complete release source
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Release 4.0.0' -m 'Import the locally verified plugin rewrite, Updater V2, shared Library 0.2.0 and bilingual documentation.'
+          git push origin HEAD:master
+      - name: Build reproducible packages
+        run: python3 tools/package.py dist
+      - name: Publish stable release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v4.0.0 >/dev/null 2>&1; then
+            echo 'Release already exists; refusing to replace it.'
+            exit 1
+          fi
+          gh release create v4.0.0 dist/multisite-toolbar-additions-4.0.0.zip dist/multisite-toolbar-additions-4.0.0-source.zip dist/SHA256SUMS --target "$(git rev-parse HEAD)" --title 'Multisite Toolbar Additions 4.0.0' --notes-file RELEASE-NOTES.md --latest
