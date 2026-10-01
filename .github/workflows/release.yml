@@ -1,5 +1,6 @@
 name: Import and publish verified 4.0.0
 on:
+  workflow_dispatch:
   push:
     branches: [master]
     paths: ['.github/workflows/release.yml']
