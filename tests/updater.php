@@ -20,7 +20,7 @@ $before = get_site_transient( $cache );
 $updater = new Updater( MSTBA_PLUGIN_FILE, $repo, 'Multisite Toolbar Additions', 'Description', $guard_artwork = (new GitHubUpdates())->artwork() );
 $guard = new GitHubUpdates();
 $requests = 0;
-$data = [ 'tag_name' => 'v4.0.1', 'body' => '<script>unsafe</script>', 'assets' => [ [ 'name' => 'multisite-toolbar-additions-4.0.1.zip', 'state' => 'uploaded', 'browser_download_url' => $repo . '/releases/download/v4.0.1/multisite-toolbar-additions-4.0.1.zip' ] ] ];
+$data = [ 'tag_name' => 'v4.1.1', 'body' => '<script>unsafe</script>', 'assets' => [ [ 'name' => 'multisite-toolbar-additions-4.1.1.zip', 'state' => 'uploaded', 'browser_download_url' => $repo . '/releases/download/v4.1.1/multisite-toolbar-additions-4.1.1.zip' ] ] ];
 $mock = static function ( $pre, $args, $url ) use ( &$requests, &$data, $api ) {
 	if ( $url !== $api ) { return new WP_Error( 'unexpected_http', 'Tests must not access the network.' ); }
 	++$requests;
@@ -33,7 +33,7 @@ $headers = get_plugin_data( MSTBA_PLUGIN_FILE, false, false );
 delete_site_transient( $cache );
 check_update( $updater->update( false, $headers, 'other/other.php', [] ) === false && $requests === 0, 'Other plugins do not trigger requests' );
 $offer = $updater->update( false, $headers, $file, [] );
-check_update( $offer['version'] === '4.0.1' && str_contains( $offer['package'], '/releases/download/' ), 'Stable installable release asset offered' );
+check_update( $offer['version'] === '4.1.1' && str_contains( $offer['package'], '/releases/download/' ), 'Stable installable release asset offered' );
 $updater->update( false, $headers, $file, [] );
 check_update( $requests === 1, 'Release metadata reused from cache' );
 $info = $updater->information( false, 'plugin_information', (object) [ 'slug' => 'multisite-toolbar-additions' ] );
@@ -52,7 +52,7 @@ $args = $guard->request_limits( [], $api );
 check_update( $args['timeout'] === 6 && $args['reject_unsafe_urls'], 'Repository request limits' );
 check_update( $guard->request_limits( [ 'timeout' => 42 ], 'https://example.com/' ) === [ 'timeout' => 42 ], 'Other HTTP requests untouched' );
 
-$cached_offer = (object) [ 'last_checked' => 123, 'response' => [ $file => (object) [ 'new_version' => '4.0.1' ], 'other/plugin.php' => (object) [ 'new_version' => '2.0.0' ] ] ];
+$cached_offer = (object) [ 'last_checked' => 123, 'response' => [ $file => (object) [ 'new_version' => '4.1.1' ], 'other/plugin.php' => (object) [ 'new_version' => '2.0.0' ] ] ];
 $decorated = $updater->cached_icons( $cached_offer );
 check_update( isset( $decorated->response[$file]->icons['svg'] ) && !isset($cached_offer->response[$file]->icons) && $decorated->last_checked===123, 'V2 repairs cached icons without mutating the stored offer' );
 check_update( $decorated->response['other/plugin.php'] === $cached_offer->response['other/plugin.php'], 'Other cached offers remain untouched' );
@@ -61,13 +61,13 @@ $old_fs = $GLOBALS['wp_filesystem'] ?? null;
 $GLOBALS['wp_filesystem'] = new WP_Filesystem_Direct( null );
 $directory = sys_get_temp_dir() . '/mstba-package-' . wp_generate_uuid4(); mkdir( $directory );
 $main = $directory . '/' . basename( MSTBA_PLUGIN_FILE );
-$candidate = "<?php\n/*\nPlugin Name: Multisite Toolbar Additions\nVersion: 4.0.1\nUpdate URI: $repo\nRequires PHP: 8.2\nRequires at least: 6.7\n*/\n";
+$candidate = "<?php\n/*\nPlugin Name: Multisite Toolbar Additions\nVersion: 4.1.1\nUpdate URI: $repo\nRequires PHP: 8.2\nRequires at least: 6.7\n*/\n";
 $context = [ 'plugin' => $file, 'type' => 'plugin', 'action' => 'update' ];
 $old_updates = get_site_transient( 'update_plugins' );
-set_site_transient( 'update_plugins', (object) [ 'response' => [ $file => (object) [ 'new_version' => '4.0.1' ] ] ] );
+set_site_transient( 'update_plugins', (object) [ 'response' => [ $file => (object) [ 'new_version' => '4.1.1' ] ] ] );
 file_put_contents( $main, $candidate );
 check_update( $guard->validate_source( $directory, '', null, $context ) === $directory, 'Matching compatible candidate accepted' );
-file_put_contents( $main, str_replace( 'Version: 4.0.1', 'Version: 4.0.2', $candidate ) );
+file_put_contents( $main, str_replace( 'Version: 4.1.1', 'Version: 4.1.2', $candidate ) );
 check_update( $guard->validate_source( $directory, '', null, $context )->get_error_code() === 'mstba_update_version', 'Version must match the offered update' );
 file_put_contents( $main, str_replace( 'Requires PHP: 8.2', 'Requires PHP: 99.0', $candidate ) );
 check_update( $guard->validate_source( $directory, '', null, $context )->get_error_code() === 'mstba_update_compatibility', 'Incompatible PHP candidate rejected' );
@@ -78,7 +78,7 @@ check_update( $guard->validate_source( $directory, '', null, $context )->get_err
 check_update( $guard->validate_source( $directory, '', null, [ 'plugin' => 'other/other.php' ] ) === $directory, 'Other plugin packages untouched' );
 // Core bulk calls omit type/action for each package. Reject spoofed or conflicting contexts.
 $bulk = new Plugin_Upgrader(); $bulk->bulk = true;
-file_put_contents( $main, str_replace( 'Version: 4.0.1', 'Version: 4.0.2', $candidate ) );
+file_put_contents( $main, str_replace( 'Version: 4.1.1', 'Version: 4.1.2', $candidate ) );
 check_update( is_wp_error( $guard->validate_source( $directory, '', $bulk, [ 'plugin' => $file ] ) ), 'Bulk candidate version checked before replacement' );
 file_put_contents( $main, $candidate );
 check_update( $guard->validate_source( $directory, '', $bulk, [ 'plugin' => $file ] ) === $directory, 'Valid bulk candidate accepted' );

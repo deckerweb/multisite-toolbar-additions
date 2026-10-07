@@ -6,17 +6,21 @@
 
 **Viele Sites. Ein Handgriff.**
 
-Ein konfigurierbares WordPress-Menü in der Toolbar mit nützlichen Website- und Netzwerk-Verknüpfungen. Teil von QuickNav; für Einzel-Websites und Multisite-Netzwerke.
+**Für einzelne WordPress-Websites und Multisite-Netzwerke. Beide werden seit 2012 unterstützt.**
 
-**Version 4.0.0 · WordPress 6.7+ · PHP 8.2+**
+Dein WordPress-Menü in der Toolbar – ergänzt um praktische Schnellzugriffe für die Verwaltung. Teil der QuickNav-Serie.
 
-Noch nicht veröffentlichte Vorbereitung für 4.1.0 auf Grundlage von 4.0.0: gemeinsame Leitstand-Verlinkung, eigene Plugin-/Theme-ZIP-Seiten, schreibfreie Menüvorschau und Hinweise zu den wirksamen Einstellungen. Beide ZIP-Admin-Untermenüs sind jetzt standardmäßig aktiv; der Theme-Eintrag unter Neu bleibt optional und standardmäßig aus. Die veröffentlichte 4.0.0-ZIP bleibt unverändert. Die beim Scrollen erreichbare Speichern-Leiste zeigt ungespeicherte Änderungen und warnt vor dem Verlassen; die Toolbar-Vorschau steht jetzt vor der Übersicht der wirksamen Einstellungen. Upload-Seiten trennen jetzt Auswahl, Prüfung und Installation; eine Bestätigung schaltet die passende Installationsaktion unter dem Ergebnis frei. Der Uploader-Wechsel ist ein dezenter Textlink.
+Multisite Toolbar Additions habe ich 2012 für meinen eigenen Bedarf entwickelt. Seitdem gehört es zu jeder meiner privaten und Kundeninstallationen und ist bis heute eines meiner liebsten Helferplugins für den WordPress-Alltag.
+
+**Version 4.1.0 · WordPress 6.7+ · PHP 8.2+**
+
+
 
 [English](README.md) · [Deutsch](README-de.md) · [Download](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest) · [Fragen nach Themen](https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-Deutsch)
 
 ## Inhalt
 
-[Auf einen Blick](#auf-einen-blick) · [Installation und erste Schritte](#installation-und-erste-schritte) · [Hauptfunktionen](#hauptfunktionen) · [FAQ](#faq) · [Changelog](#changelog) · [Über das Projekt](#über-das-projekt) · [Hilfe und Sicherheit](#hilfe-und-sicherheit) · [Lizenz und Herkunft](#lizenz-und-herkunft)
+[Auf einen Blick](#auf-einen-blick) · [Installation und erste Schritte](#installation-und-erste-schritte) · [Hauptfunktionen](#hauptfunktionen) · [FAQ](#faq) · [Screenshots](#screenshots) · [Changelog](#changelog) · [Über das Projekt](#über-das-projekt) · [Hilfe und Sicherheit](#hilfe-und-sicherheit) · [Lizenz und Herkunft](#lizenz-und-herkunft)
 
 ## Auf einen Blick
 
@@ -59,6 +63,10 @@ Prüfe die Menüstruktur mit ausgewählter Tiefe und Gruppierung ohne Speichern.
 
 ## FAQ
 
+### Ist Multisite erforderlich?
+
+Nein. Einzelne WordPress-Websites und Multisite-Netzwerke werden beide seit der ersten Veröffentlichung 2012 unterstützt. Auch auf einer einzelnen Website sind das konfigurierbare Toolbar-Menü, Plugin-/Theme-ZIP-Uploader, Menüvorschau und Einstellungen nutzbar. In Multisite kommen Netzwerkverwaltung und gemeinsame Menüs hinzu.
+
 ### Wie wähle ich das Toolbar-Menü?
 
 Erstelle ein normales Navigationsmenü und wähle Quellwebsite und Menü in den Einstellungen. Netzwerkaktivierung verwendet standardmäßig die Haupt-Website; Einzelaktivierung die aktive Website. Aktiviere das Plugin auf der Quellwebsite oder netzwerkweit, damit der Schutz des gemeinsamen Menüs greifen kann. Die alte Menüposition mstba_menu bleibt als Rückfalllösung erhalten.
@@ -83,19 +91,35 @@ Der mitgelieferte deckerweb Updater 2.1.0 prüft dieses festgelegte öffentliche
 
 Deaktivierung erhält alle Einstellungen und WordPress-Menüs. Deinstallation leert den Updatecache dieses Plugins. Toolbar-Einstellungen bleiben erhalten, sofern die Löschoption für die jeweilige Website oder das Netzwerk nicht aktiviert wurde. Bei physischer Entfernung wird die eigene Entscheidung jedes Netzwerks berücksichtigt. Die gemeinsame Library wird erst beim letzten installierten Host bereinigt, auch deaktivierte Hosts zählen; ihre Löschoption ist unabhängig. Installierte Plugins, Navigationsmenüs und fremde Inhalte bleiben erhalten.
 
-### Kontaktiert die Library auf jeder Seite GitHub?
-
-Nein. Mitgelieferter Katalog und Grafiken funktionieren lokal. Angeforderte Paket-Downloads kontaktieren die festgelegten Hosts. Der optionale Online-Katalog ist standardmäßig deaktiviert und verwendet Cache und Wiederholungsabstände.
-
 [Fragen nach Themen](https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-Deutsch)
+
+## Screenshots
+
+![Einstellungen auf einer einzelnen WordPress-Website: Toolbar-Menü, Sichtbarkeit, Position und Tiefe.](assets/screenshots/settings-de.png)
+
+Einstellungen auf einer einzelnen WordPress-Website: Toolbar-Menü, Sichtbarkeit, Position und Tiefe.
+
+![Toolbar-Menüvorschau und wirksame Einstellungen auf einer einzelnen WordPress-Website.](assets/screenshots/preview-de.png)
+
+Toolbar-Menüvorschau und wirksame Einstellungen auf einer einzelnen WordPress-Website.
 
 ## Changelog
 
-### Noch nicht veröffentlicht
 
-- **Verbessert:** Aktualisiert die gemeinsame Library auf 0.6.0 und den Updater auf 2.1.0; verbessert die deutsche Dokumentation und den lesbaren lokalen Änderungsverlauf.
-- **Behoben:** Prüft Updatepakete auch bei Sammelupdates und erhält vorhandene Daten bei Deaktivierung und standardmäßiger Deinstallation.
-- **Sonstiges:** Einzelaktivierung ist in Multisite mit durch Super-Administratoren verwalteten Netzwerkeinstellungen verfügbar.
+### 4.1.0 · 2026-10-07
+
+- **Neu:** Eigene Plugin- und Theme-ZIP-Seiten bieten Drag-and-drop, Paketvorschau und ausdrückliche Installationsbestätigung. Aktive Leitstand-Uploader werden ohne doppelte Seiten verwendet.
+- **Neu:** Menüstruktur, Gruppierung und Kindebenen lassen sich ohne Speichern prüfen; die Übersicht zeigt wirksame Einstellungen, verwendete Uploader und Hinweise zu fehlenden Menüquellen oder Toolbar-Bezugseinträgen.
+- **Verbessert:** Eine beim Scrollen erreichbare Speichern-Leiste warnt vor dem Verlust ungespeicherter Änderungen. Das Feld für die gemeinsame Menübeschriftung ist größer.
+- **Verbessert:** Beide ZIP-Admin-Untermenüs sind standardmäßig aktiv; der bisher ausgeschaltete Theme-Untermenü-Standard wird einmalig ersetzt. Spätere ausdrückliche Schalterentscheidungen bleiben erhalten. Der separate Theme-Eintrag unter Neu bleibt standardmäßig aus.
+- **Verbessert:** Plugins und Themes stehen im Website-Toolbar-Menü direkt nacheinander, auch in Multisite. Einzelaktivierung wird mit durch Super-Administratoren verwalteten Netzwerkeinstellungen unterstützt.
+- **Verbessert:** Gemeinsame Komponenten auf Library 0.6.0 und Updater 2.1.0 aktualisiert, mit deutschen Du-/Sie-Übersetzungen und lesbarem lokalem Änderungsverlauf.
+- **Behoben:** Vertauschte Plugin-/Theme-ZIPs werden mit einem Hinweis zum passenden Uploader erkannt. Neue Theme-Pakete können vor ihrer ersten Installation korrekt angezeigt werden.
+- **Behoben:** Identität, Version und Anforderungen von Updatepaketen werden auch bei Sammelupdates geprüft; das Speichern erfordert authentifizierte POST-Anfragen.
+- **Behoben:** Toolbar-Funktionen bleiben bei unvollständigen gemeinsamen Komponenten verfügbar; fehlerhafte Integrationseinträge werden sicher übersprungen und die letzte Position bleibt auch nach späten Toolbar-Ergänzungen erhalten.
+- **Behoben:** Lokale CSS- und JavaScript-Dateien werden bei geänderten Paketinhalten neu geladen, auch beim Austausch derselben Version.
+- **Sonstiges:** Deaktivierung erhält Daten. Deinstallation leert eigene Update-Caches; das Löschen der Toolbar-Einstellungen bleibt optional und standardmäßig aus. WordPress-Menüs und Daten anderer Plugins bleiben erhalten.
+- **Sonstiges:** Unterstützung für einzelne WordPress-Websites und Multisite-Netzwerke in der gesamten Dokumentation deutlicher herausgestellt.
 
 ### 4.0.0 · 2026-10-01
 
@@ -136,12 +160,6 @@ Nein. Mitgelieferter Katalog und Grafiken funktionieren lokal. Angeforderte Pake
 ### 1.9.4 · 2018-11-03
 
 - **Verbessert:** Die Empfehlungs-Library 1.2.0 verbessert die Installer-Darstellung und Dark-Mode-Kompatibilität.
-
-### 1.9.3 · 2018-10-01
-
-- **Neu:** Eine Facebook-Gruppe bietet Unterstützung für DECKERWEB Plugins.
-- **Verbessert:** Die Empfehlungs-Library 1.1.0 verbessert Upload-Bereiche und Plugin-Karten einschließlich sichtbarer Versionsnummern.
-- **Verbessert:** Deutsche Übersetzungen wurden aktualisiert.
 
 [Vollständiger Verlauf](docs/CHANGELOG-de.md)
 

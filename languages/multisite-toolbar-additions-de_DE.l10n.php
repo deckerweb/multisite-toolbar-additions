@@ -1,7 +1,7 @@
 <?php
 // Generated from the accompanying PO catalog.
 return array (
-  'project-id-version' => 'Multisite Toolbar Additions 4.0.0',
+  'project-id-version' => 'Multisite Toolbar Additions 4.1.0',
   'report-msgid-bugs-to' => 'https://github.com/deckerweb/multisite-toolbar-additions/issues',
   'po-revision-date' => '2026-10-07 12:00+0200',
   'last-translator' => 'David Decker – DECKERWEB',
@@ -76,6 +76,7 @@ return array (
     'Comments' => 'Kommentare',
     'Commerce' => 'Commerce',
     'Compatible additions only' => 'Nur passende Ergänzungen',
+    'Configurable WordPress toolbar menus and practical shortcuts for single sites and Multisite networks.' => 'Konfigurierbare WordPress-Toolbar-Menüs und praktische Schnellzugriffe für einzelne Websites und Multisite-Netzwerke.',
     'Confirm the package below, then choose Install now.' => 'Bestätige das Paket unten und klicke anschließend auf Jetzt installieren.',
     'Content' => 'Inhalte',
     'Continue with native WordPress checks' => 'Mit den WordPress-Prüfungen fortfahren',

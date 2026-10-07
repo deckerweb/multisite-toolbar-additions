@@ -1,6 +1,6 @@
 # Copyright © 2012–2026 David Decker – DECKERWEB. GPL-2.0-or-later.
 msgid ""
-msgstr "Project-Id-Version: Multisite Toolbar Additions 4.0.0\nReport-Msgid-Bugs-To: https://github.com/deckerweb/multisite-toolbar-additions/issues\nPOT-Creation-Date: 2026-10-07 12:00+0200\nPO-Revision-Date: 2026-10-07 12:00+0200\nLast-Translator: David Decker – DECKERWEB\nLanguage-Team: German\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+msgstr "Project-Id-Version: Multisite Toolbar Additions 4.1.0\nReport-Msgid-Bugs-To: https://github.com/deckerweb/multisite-toolbar-additions/issues\nPOT-Creation-Date: 2026-10-07 12:00+0200\nPO-Revision-Date: 2026-10-07 12:00+0200\nLast-Translator: David Decker – DECKERWEB\nLanguage-Team: German\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
 
 msgid "%d child level"
 msgid_plural "%d child levels"
@@ -191,6 +191,9 @@ msgid "Commerce"
 msgstr ""
 
 msgid "Compatible additions only"
+msgstr ""
+
+msgid "Configurable WordPress toolbar menus and practical shortcuts for single sites and Multisite networks."
 msgstr ""
 
 msgid "Confirm the package below, then choose Install now."

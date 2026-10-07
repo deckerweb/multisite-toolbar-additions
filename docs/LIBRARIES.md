@@ -2,6 +2,8 @@
 
 [English](LIBRARIES.md) · [Deutsch](LIBRARIES-de.md)
 
+For single WordPress sites and Multisite networks. Both have been supported since 2012.
+
 ## deckerweb Library 0.6.0
 
 Pinned unchanged runtime from [deckerweb-plugin-library, v0.6.0](https://github.com/deckerweb/deckerweb-plugin-library/tree/v0.6.0/lib), GPL-2.0-or-later, David Decker. The highest compatible host is elected under bootstrap protocol 2. Local catalogs/icons work without requests. Online mode is optional and initially disabled; the prefilled source is the public raw GitHub catalog. Shared settings belong to the network in Multisite. A participating network-activated host is needed to serve the catalog and settings inside Network Admin. Host translations take precedence; Library messages merge into that host domain.

@@ -6,17 +6,21 @@
 
 **Many sites. One move.**
 
-A configurable WordPress menu in the toolbar, with useful website and network shortcuts. Part of QuickNav; available on individual sites and Multisite networks.
+**For single WordPress sites and Multisite networks. Both have been supported since 2012.**
 
-**Version 4.0.0 · WordPress 6.7+ · PHP 8.2+**
+Put your WordPress menu in the toolbar, alongside practical administration shortcuts. Part of the QuickNav family.
 
-Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing, dedicated plugin/theme ZIP pages, read-only menu preview and effective-settings diagnostics. Both ZIP admin submenu links are now enabled by default; the Theme addition under New remains optional and off by default. The released 4.0.0 ZIP is unchanged. The sticky save bar reports unsaved changes and warns before leaving; the toolbar-style preview now appears before the effective-settings summary. Upload pages now separate choosing, reviewing and installing; confirmation unlocks a type-specific installation action beneath the result. Switching uploaders is a quiet text link.
+I created Multisite Toolbar Additions in 2012 for my own needs. Since then, it has been part of every personal and client WordPress installation I manage, and it remains one of my favorite everyday helper plugins.
+
+**Version 4.1.0 · WordPress 6.7+ · PHP 8.2+**
+
+
 
 [English](README.md) · [Deutsch](README-de.md) · [Download](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest) · [FAQ by topic](https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-English)
 
 ## Contents
 
-[At a glance](#at-a-glance) · [Installation and first steps](#installation-and-first-steps) · [Main features](#main-features) · [FAQ](#faq) · [Changelog](#changelog) · [Project](#project) · [Support and security](#support-and-security) · [License and credits](#license-and-credits)
+[At a glance](#at-a-glance) · [Installation and first steps](#installation-and-first-steps) · [Main features](#main-features) · [FAQ](#faq) · [Screenshots](#screenshots) · [Changelog](#changelog) · [Project](#project) · [Support and security](#support-and-security) · [License and credits](#license-and-credits)
 
 ## At a glance
 
@@ -59,6 +63,10 @@ Inspect the menu structure with the selected depth and grouping without saving. 
 
 ## FAQ
 
+### Is Multisite required?
+
+No. Single WordPress sites and Multisite networks have both been supported since the first release in 2012. On a single site, you can use the configurable toolbar menu, plugin/theme ZIP uploaders, menu preview and settings. Multisite adds network administration and shared-menu features.
+
 ### How do I select my toolbar menu?
 
 Create a normal navigation menu and select its source site and menu in the settings. Network activation defaults to the main website; site-only activation defaults to the active website. Activate the plugin on the source website or across the network so that shared-menu protection can run. The legacy mstba_menu location remains a fallback.
@@ -83,19 +91,35 @@ The bundled deckerweb Updater 2.1.0 checks this fixed public repository and cach
 
 Deactivation keeps all settings and WordPress menus. Uninstall clears this plugin’s update cache. Toolbar settings are retained unless the deletion option is enabled for that site or network. On physical removal every network’s own choice is respected. Shared Library cleanup runs only after its last installed host is removed, including inactive hosts; its own deletion option is separate. Installed plugins, navigation menus and foreign content remain untouched.
 
-### Does the library contact GitHub on every page?
-
-No. Its bundled catalog and artwork work locally. Package downloads contact their declared hosts when requested. Optional online catalog retrieval is disabled by default and uses caching and backoff when enabled.
-
 [FAQ by topic](https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-English)
+
+## Screenshots
+
+![Settings on a single WordPress site: toolbar menu, visibility, position and depth.](assets/screenshots/settings-en.png)
+
+Settings on a single WordPress site: toolbar menu, visibility, position and depth.
+
+![Toolbar-style menu preview and effective settings on a single WordPress site.](assets/screenshots/preview-en.png)
+
+Toolbar-style menu preview and effective settings on a single WordPress site.
 
 ## Changelog
 
-### Unreleased
 
-- **Improved:** Updates the shared Library to 0.6.0 and Updater to 2.1.0; improves German documentation and readable local release history.
-- **Fixed:** Checks candidate packages in bulk updates and preserves existing data during deactivation and default uninstall.
-- **Misc:** Site-only activation is available in Multisite for super-administrator-managed network settings.
+### 4.1.0 · 2026-10-07
+
+- **New:** Dedicated plugin and theme ZIP upload pages include drag-and-drop, package previews and explicit installation confirmation. Active Leitstand uploaders are reused without duplicate pages.
+- **New:** Preview menu structure, grouping and child levels without saving; see effective settings, active uploaders and explanations for missing menu sources or toolbar reference items.
+- **Improved:** A sticky save bar keeps saving accessible and warns before discarding unsaved changes. The group-label field is larger.
+- **Improved:** Both ZIP admin submenu links are enabled by default; the previous hidden Theme submenu default transitions once. Later explicit choices remain respected. The separate Theme addition under New remains off by default.
+- **Improved:** Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Site-only activation is supported with super-administrator-managed network settings.
+- **Improved:** Update shared components to Library 0.6.0 and Updater 2.1.0, with informal/formal German host translations and readable local release history.
+- **Fixed:** Recognize plugin/theme ZIP type mismatches and link to the correct uploader. New theme packages preview correctly before their first installation.
+- **Fixed:** Validate candidate identity, version and requirements in bulk updates; require authenticated POST requests when saving settings.
+- **Fixed:** Keep toolbar features available when an embedded component is incomplete; safely ignore malformed integration entries and preserve last-position ordering after late toolbar additions.
+- **Fixed:** Refresh local CSS and JavaScript when package contents change, including same-version replacements.
+- **Misc:** Deactivation preserves data. Uninstall clears own update caches; deleting toolbar settings remains optional and off by default. WordPress menus and other plugin data are retained.
+- **Misc:** Clarify support for single WordPress sites and Multisite networks throughout the documentation.
 
 ### 4.0.0 · 2026-10-01
 
@@ -136,12 +160,6 @@ No. Its bundled catalog and artwork work locally. Package downloads contact thei
 ### 1.9.4 · 2018-11-03
 
 - **Improved:** Recommendations library 1.2.0 improves installer styles and Dark Mode compatibility.
-
-### 1.9.3 · 2018-10-01
-
-- **New:** A Facebook group provides community support for DECKERWEB plugins.
-- **Improved:** Recommendations library 1.1.0 improves upload areas and plugin cards, including visible version numbers.
-- **Improved:** German translations were updated.
 
 [Full history](docs/CHANGELOG.md)
 

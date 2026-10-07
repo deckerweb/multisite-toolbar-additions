@@ -2,9 +2,13 @@
 
 [English](English.md) · [Deutsch](Deutsch.md) · [FAQ by topic](FAQ-English.md) · [Home](Home.md)
 
-A configurable WordPress menu in the toolbar, with useful website and network shortcuts. Part of QuickNav; available on individual sites and Multisite networks.
+**For single WordPress sites and Multisite networks. Both have been supported since 2012.**
 
-Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing, dedicated plugin/theme ZIP pages, read-only menu preview and effective-settings diagnostics. Both ZIP admin submenu links are now enabled by default; the Theme addition under New remains optional and off by default. The released 4.0.0 ZIP is unchanged. The sticky save bar reports unsaved changes and warns before leaving; the toolbar-style preview now appears before the effective-settings summary. Upload pages now separate choosing, reviewing and installing; confirmation unlocks a type-specific installation action beneath the result. Switching uploaders is a quiet text link.
+Put your WordPress menu in the toolbar, alongside practical administration shortcuts. Part of the QuickNav family.
+
+I created Multisite Toolbar Additions in 2012 for my own needs. Since then, it has been part of every personal and client WordPress installation I manage, and it remains one of my favorite everyday helper plugins.
+
+
 
 ## Installation and first steps
 

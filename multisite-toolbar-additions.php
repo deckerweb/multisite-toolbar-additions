@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Multisite Toolbar Additions
  * Plugin URI: https://github.com/deckerweb/multisite-toolbar-additions
- * Description: Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar.
- * Version: 4.0.0
+ * Description: Configurable WordPress toolbar menus and practical shortcuts for single sites and Multisite networks.
+ * Version: 4.1.0
  * Requires at least: 6.7
  * Requires PHP: 8.2
  * Author: David Decker – DECKERWEB
@@ -20,7 +20,7 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-define( 'MSTBA_PLUGIN_VERSION', '4.0.0' );
+define( 'MSTBA_PLUGIN_VERSION', '4.1.0' );
 define( 'MSTBA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'MSTBA_PLUGIN_FILE', __FILE__ );
 

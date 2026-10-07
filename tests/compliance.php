@@ -65,6 +65,10 @@ try {
  $nodes = $GLOBALS['wp_admin_bar']->get_nodes();
  compliance_check( array_key_last( $nodes ) === 'mstba_' . $item, 'Last position survives late third-party root registration' );
 } finally { wp_delete_nav_menu( $menu ); $settings->save( $previous ); }
+// Formal Admin documentation must not fall back to informal public readme instructions.
+$formal_locale = static function () { return 'de_DE_formal'; };
+add_filter( 'pre_determine_locale', $formal_locale );
+try { ob_start(); Deckerweb\MultisiteToolbar\PageChrome::footer(); $formal_html = ob_get_clean(); compliance_check( str_contains( $formal_html, 'Wählen Sie' ) && ! str_contains( $formal_html, 'Wähle Quellwebsite' ), 'Formal footer documentation uses Sie instructions' ); } finally { remove_filter( 'pre_determine_locale', $formal_locale ); }
 // Host documentation coverage is independent of the component's historical reports.
 foreach ( glob( MSTBA_PLUGIN_DIR . 'src/*.php' ) as $path ) {
  $class = 'Deckerweb\\MultisiteToolbar\\' . basename( $path, '.php' );

@@ -4,8 +4,8 @@
 
 **Many sites. One move. · Viele Sites. Ein Handgriff.**
 
-A configurable toolbar menu with site/network shortcuts. Choose a language for setup, menu positioning, ZIP uploads, permissions and updates.
-Ein konfigurierbares Toolbar-Menü mit Website-/Netzwerk-Verknüpfungen. Wähle eine Sprache für Einrichtung, Menüposition, ZIP-Uploads, Berechtigungen und Updates.
+For single WordPress sites and Multisite networks — both supported since 2012. A configurable toolbar menu with site/network shortcuts. Choose a language for setup, menu positioning, ZIP uploads, permissions and updates.
+Für einzelne WordPress-Websites und Multisite-Netzwerke — beide seit 2012 unterstützt. Ein konfigurierbares Toolbar-Menü mit Website-/Netzwerk-Verknüpfungen. Wähle eine Sprache für Einrichtung, Menüposition, ZIP-Uploads, Berechtigungen und Updates.
 
 | English | Deutsch |
 | --- | --- |

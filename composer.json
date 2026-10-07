@@ -1,9 +1,17 @@
 {
   "name": "deckerweb/multisite-toolbar-additions",
-  "description": "Configurable WordPress toolbar menus and multisite administration shortcuts.",
+  "description": "Configurable WordPress toolbar menus and administration shortcuts for single sites and Multisite networks.",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
-  "require": { "php": ">=8.2" },
-  "autoload": { "psr-4": { "Deckerweb\\MultisiteToolbar\\": "src/" } },
-  "scripts": { "test": "php tests/unit.php" }
+  "require": {
+    "php": ">=8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Deckerweb\\MultisiteToolbar\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": "php tests/unit.php"
+  }
 }

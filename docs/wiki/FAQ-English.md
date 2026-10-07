@@ -2,11 +2,13 @@
 
 [English](FAQ-English.md) · [Deutsch](FAQ-Deutsch.md) · [Home](Home.md)
 
+For single WordPress sites and Multisite networks. Both have been supported since 2012.
+
 ## Getting started
 
 ### Is Multisite required?
 
-No. The plugin works on individual WordPress sites and Multisite networks. Network shortcuts appear only where applicable.
+No. Single WordPress sites and Multisite networks have both been supported since the first release in 2012. On a single site, you can use the configurable toolbar menu, plugin/theme ZIP uploaders, menu preview and settings. Multisite adds network administration and shared-menu features.
 
 ### Where are the settings?
 

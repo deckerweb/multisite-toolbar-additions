@@ -2,6 +2,21 @@
 
 [English](CHANGELOG.md) · [Deutsch](CHANGELOG-de.md)
 
+### 4.1.0 · 2026-10-07
+
+- **New:** Dedicated plugin and theme ZIP upload pages include drag-and-drop, package previews and explicit installation confirmation. Active Leitstand uploaders are reused without duplicate pages.
+- **New:** Preview menu structure, grouping and child levels without saving; see effective settings, active uploaders and explanations for missing menu sources or toolbar reference items.
+- **Improved:** A sticky save bar keeps saving accessible and warns before discarding unsaved changes. The group-label field is larger.
+- **Improved:** Both ZIP admin submenu links are enabled by default; the previous hidden Theme submenu default transitions once. Later explicit choices remain respected. The separate Theme addition under New remains off by default.
+- **Improved:** Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Site-only activation is supported with super-administrator-managed network settings.
+- **Improved:** Update shared components to Library 0.6.0 and Updater 2.1.0, with informal/formal German host translations and readable local release history.
+- **Fixed:** Recognize plugin/theme ZIP type mismatches and link to the correct uploader. New theme packages preview correctly before their first installation.
+- **Fixed:** Validate candidate identity, version and requirements in bulk updates; require authenticated POST requests when saving settings.
+- **Fixed:** Keep toolbar features available when an embedded component is incomplete; safely ignore malformed integration entries and preserve last-position ordering after late toolbar additions.
+- **Fixed:** Refresh local CSS and JavaScript when package contents change, including same-version replacements.
+- **Misc:** Deactivation preserves data. Uninstall clears own update caches; deleting toolbar settings remains optional and off by default. WordPress menus and other plugin data are retained.
+- **Misc:** Clarify support for single WordPress sites and Multisite networks throughout the documentation.
+
 ### 4.0.0 · 2026-10-01
 
 - **New:** Configure the source menu, audience, frontend/admin visibility, position, grouping and child levels.
@@ -63,10 +78,6 @@
 ### 1.9.0 · 2018-04-01
 
 - **Improved:** Security, administration links, translations and plugin artwork were updated; dead links were removed.
-
-### 1.8.0 · 2014-10-20
-
-- **Misc:** Private development versions 1.7.1–1.8.0 were not released publicly.
 
 ### 1.7.0 · 2014-03-04
 

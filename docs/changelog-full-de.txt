@@ -1,3 +1,18 @@
+= 4.1.0 · 2026-10-07 =
+
+* Neu: Eigene Plugin- und Theme-ZIP-Seiten bieten Drag-and-drop, Paketvorschau und ausdrückliche Installationsbestätigung. Aktive Leitstand-Uploader werden ohne doppelte Seiten verwendet.
+* Neu: Menüstruktur, Gruppierung und Kindebenen lassen sich ohne Speichern prüfen; die Übersicht zeigt wirksame Einstellungen, verwendete Uploader und Hinweise zu fehlenden Menüquellen oder Toolbar-Bezugseinträgen.
+* Verbessert: Eine beim Scrollen erreichbare Speichern-Leiste warnt vor dem Verlust ungespeicherter Änderungen. Das Feld für die gemeinsame Menübeschriftung ist größer.
+* Verbessert: Beide ZIP-Admin-Untermenüs sind standardmäßig aktiv; der bisher ausgeschaltete Theme-Untermenü-Standard wird einmalig ersetzt. Spätere ausdrückliche Schalterentscheidungen bleiben erhalten. Der separate Theme-Eintrag unter Neu bleibt standardmäßig aus.
+* Verbessert: Plugins und Themes stehen im Website-Toolbar-Menü direkt nacheinander, auch in Multisite. Einzelaktivierung wird mit durch Super-Administratoren verwalteten Netzwerkeinstellungen unterstützt.
+* Verbessert: Gemeinsame Komponenten auf Library 0.6.0 und Updater 2.1.0 aktualisiert, mit deutschen Du-/Sie-Übersetzungen und lesbarem lokalem Änderungsverlauf.
+* Behoben: Vertauschte Plugin-/Theme-ZIPs werden mit einem Hinweis zum passenden Uploader erkannt. Neue Theme-Pakete können vor ihrer ersten Installation korrekt angezeigt werden.
+* Behoben: Identität, Version und Anforderungen von Updatepaketen werden auch bei Sammelupdates geprüft; das Speichern erfordert authentifizierte POST-Anfragen.
+* Behoben: Toolbar-Funktionen bleiben bei unvollständigen gemeinsamen Komponenten verfügbar; fehlerhafte Integrationseinträge werden sicher übersprungen und die letzte Position bleibt auch nach späten Toolbar-Ergänzungen erhalten.
+* Behoben: Lokale CSS- und JavaScript-Dateien werden bei geänderten Paketinhalten neu geladen, auch beim Austausch derselben Version.
+* Sonstiges: Deaktivierung erhält Daten. Deinstallation leert eigene Update-Caches; das Löschen der Toolbar-Einstellungen bleibt optional und standardmäßig aus. WordPress-Menüs und Daten anderer Plugins bleiben erhalten.
+* Sonstiges: Unterstützung für einzelne WordPress-Websites und Multisite-Netzwerke in der gesamten Dokumentation deutlicher herausgestellt.
+
 = 4.0.0 · 2026-10-01 =
 
 * Neu: Menüquelle, Zielgruppe, Frontend-/Admin-Anzeige, Position, Gruppierung und Kindebenen sind einstellbar.
@@ -59,10 +74,6 @@
 = 1.9.0 · 2018-04-01 =
 
 * Verbessert: Sicherheit, Verwaltungslinks, Übersetzungen und Plugin-Grafiken wurden aktualisiert; ungültige Links wurden entfernt.
-
-= 1.8.0 · 2014-10-20 =
-
-* Sonstiges: Die privaten Entwicklungsstände 1.7.1–1.8.0 wurden nicht öffentlich veröffentlicht.
 
 = 1.7.0 · 2014-03-04 =
 

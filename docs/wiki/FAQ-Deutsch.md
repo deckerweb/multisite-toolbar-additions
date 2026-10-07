@@ -2,11 +2,13 @@
 
 [English](FAQ-English.md) · [Deutsch](FAQ-Deutsch.md) · [Home](Home.md)
 
+Für einzelne WordPress-Websites und Multisite-Netzwerke. Beide werden seit 2012 unterstützt.
+
 ## Einstieg
 
 ### Ist Multisite erforderlich?
 
-Nein. Das Plugin funktioniert auf einzelnen WordPress-Websites und in Multisite-Netzwerken. Netzwerk-Verknüpfungen erscheinen nur dort, wo sie sinnvoll sind.
+Nein. Einzelne WordPress-Websites und Multisite-Netzwerke werden beide seit der ersten Veröffentlichung 2012 unterstützt. Auch auf einer einzelnen Website sind das konfigurierbare Toolbar-Menü, Plugin-/Theme-ZIP-Uploader, Menüvorschau und Einstellungen nutzbar. In Multisite kommen Netzwerkverwaltung und gemeinsame Menüs hinzu.
 
 ### Wo finde ich die Einstellungen?
 

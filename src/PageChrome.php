@@ -46,16 +46,17 @@ final class PageChrome {
 		if ( ! class_exists( '\Deckerweb\AdminFooter\V1\Footer' ) ) { require_once MSTBA_PLUGIN_DIR . 'includes/deckerweb-admin-footer-v1.php'; }
 		require_once MSTBA_PLUGIN_DIR . 'includes/deckerweb-changelog-v1.php';
 		$repo = 'https://github.com/deckerweb/multisite-toolbar-additions';
-		$file = determine_locale() === 'de_DE' || determine_locale() === 'de_DE_formal' ? 'readme-de.txt' : 'readme.txt';
+		$german = in_array( determine_locale(), [ 'de_DE', 'de_DE_formal' ], true );
+		$file = 'de_DE_formal' === determine_locale() ? 'readme-de-formal.txt' : ( $german ? 'readme-de.txt' : 'readme.txt' );
 		$path = MSTBA_PLUGIN_DIR . $file;
 		$text = is_readable( $path ) ? file_get_contents( $path ) : '';
 		$text = is_string( $text ) ? $text : '';
-		$changelog_file = $file === 'readme-de.txt' ? 'docs/changelog-de.txt' : 'docs/changelog.txt';
+		$changelog_file = $german ? 'docs/changelog-de.txt' : 'docs/changelog.txt';
 		$changelog_path = MSTBA_PLUGIN_DIR . $changelog_file;
 		$full_changes = is_readable( $changelog_path ) ? file_get_contents( $changelog_path ) : '';
 		$changes = preg_match( '/^== Changelog ==\s*\R(.*?)(?=^== [^\r\n]+ ==\s*$|\z)/ms', $text, $match ) ? trim( $match[1] ) : '';
 		if ( is_string( $full_changes ) && $full_changes !== '' ) { $changes = trim( $full_changes ); }
-		$guide = $file === 'readme-de.txt' ? 'Deutsch' : 'English';
+		$guide = $german ? 'Deutsch' : 'English';
 		\Deckerweb\AdminFooter\V1\StructuredFooter::render( [
 			'id' => 'mstba', 'name' => 'Multisite Toolbar Additions', 'version' => MSTBA_PLUGIN_VERSION,
 			'version_label' => __( 'Version', 'multisite-toolbar-additions' ), 'about' => __( 'Plugin information', 'multisite-toolbar-additions' ),

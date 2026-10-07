@@ -1,10 +1,76 @@
 {
-  "version": "4.0.0",
+  "version": "4.1.0",
   "working_tree": {
-    "en": "Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing, dedicated plugin/theme ZIP pages, read-only menu preview and effective-settings diagnostics. Both ZIP admin submenu links are now enabled by default; the Theme addition under New remains optional and off by default. The released 4.0.0 ZIP is unchanged. The sticky save bar reports unsaved changes and warns before leaving; the toolbar-style preview now appears before the effective-settings summary. Upload pages now separate choosing, reviewing and installing; confirmation unlocks a type-specific installation action beneath the result. Switching uploaders is a quiet text link.",
-    "de": "Noch nicht veröffentlichte Vorbereitung für 4.1.0 auf Grundlage von 4.0.0: gemeinsame Leitstand-Verlinkung, eigene Plugin-/Theme-ZIP-Seiten, schreibfreie Menüvorschau und Hinweise zu den wirksamen Einstellungen. Beide ZIP-Admin-Untermenüs sind jetzt standardmäßig aktiv; der Theme-Eintrag unter Neu bleibt optional und standardmäßig aus. Die veröffentlichte 4.0.0-ZIP bleibt unverändert. Die beim Scrollen erreichbare Speichern-Leiste zeigt ungespeicherte Änderungen und warnt vor dem Verlassen; die Toolbar-Vorschau steht jetzt vor der Übersicht der wirksamen Einstellungen. Upload-Seiten trennen jetzt Auswahl, Prüfung und Installation; eine Bestätigung schaltet die passende Installationsaktion unter dem Ergebnis frei. Der Uploader-Wechsel ist ein dezenter Textlink."
+    "en": "",
+    "de": ""
   },
   "releases": [
+    {
+      "version": "4.1.0",
+      "date": "2026-10-07",
+      "items": [
+        {
+          "category": "New",
+          "en": "Dedicated plugin and theme ZIP upload pages include drag-and-drop, package previews and explicit installation confirmation. Active Leitstand uploaders are reused without duplicate pages.",
+          "de": "Eigene Plugin- und Theme-ZIP-Seiten bieten Drag-and-drop, Paketvorschau und ausdrückliche Installationsbestätigung. Aktive Leitstand-Uploader werden ohne doppelte Seiten verwendet."
+        },
+        {
+          "category": "New",
+          "en": "Preview menu structure, grouping and child levels without saving; see effective settings, active uploaders and explanations for missing menu sources or toolbar reference items.",
+          "de": "Menüstruktur, Gruppierung und Kindebenen lassen sich ohne Speichern prüfen; die Übersicht zeigt wirksame Einstellungen, verwendete Uploader und Hinweise zu fehlenden Menüquellen oder Toolbar-Bezugseinträgen."
+        },
+        {
+          "category": "Improved",
+          "en": "A sticky save bar keeps saving accessible and warns before discarding unsaved changes. The group-label field is larger.",
+          "de": "Eine beim Scrollen erreichbare Speichern-Leiste warnt vor dem Verlust ungespeicherter Änderungen. Das Feld für die gemeinsame Menübeschriftung ist größer."
+        },
+        {
+          "category": "Improved",
+          "en": "Both ZIP admin submenu links are enabled by default; the previous hidden Theme submenu default transitions once. Later explicit choices remain respected. The separate Theme addition under New remains off by default.",
+          "de": "Beide ZIP-Admin-Untermenüs sind standardmäßig aktiv; der bisher ausgeschaltete Theme-Untermenü-Standard wird einmalig ersetzt. Spätere ausdrückliche Schalterentscheidungen bleiben erhalten. Der separate Theme-Eintrag unter Neu bleibt standardmäßig aus."
+        },
+        {
+          "category": "Improved",
+          "en": "Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Site-only activation is supported with super-administrator-managed network settings.",
+          "de": "Plugins und Themes stehen im Website-Toolbar-Menü direkt nacheinander, auch in Multisite. Einzelaktivierung wird mit durch Super-Administratoren verwalteten Netzwerkeinstellungen unterstützt."
+        },
+        {
+          "category": "Improved",
+          "en": "Update shared components to Library 0.6.0 and Updater 2.1.0, with informal/formal German host translations and readable local release history.",
+          "de": "Gemeinsame Komponenten auf Library 0.6.0 und Updater 2.1.0 aktualisiert, mit deutschen Du-/Sie-Übersetzungen und lesbarem lokalem Änderungsverlauf."
+        },
+        {
+          "category": "Fixed",
+          "en": "Recognize plugin/theme ZIP type mismatches and link to the correct uploader. New theme packages preview correctly before their first installation.",
+          "de": "Vertauschte Plugin-/Theme-ZIPs werden mit einem Hinweis zum passenden Uploader erkannt. Neue Theme-Pakete können vor ihrer ersten Installation korrekt angezeigt werden."
+        },
+        {
+          "category": "Fixed",
+          "en": "Validate candidate identity, version and requirements in bulk updates; require authenticated POST requests when saving settings.",
+          "de": "Identität, Version und Anforderungen von Updatepaketen werden auch bei Sammelupdates geprüft; das Speichern erfordert authentifizierte POST-Anfragen."
+        },
+        {
+          "category": "Fixed",
+          "en": "Keep toolbar features available when an embedded component is incomplete; safely ignore malformed integration entries and preserve last-position ordering after late toolbar additions.",
+          "de": "Toolbar-Funktionen bleiben bei unvollständigen gemeinsamen Komponenten verfügbar; fehlerhafte Integrationseinträge werden sicher übersprungen und die letzte Position bleibt auch nach späten Toolbar-Ergänzungen erhalten."
+        },
+        {
+          "category": "Fixed",
+          "en": "Refresh local CSS and JavaScript when package contents change, including same-version replacements.",
+          "de": "Lokale CSS- und JavaScript-Dateien werden bei geänderten Paketinhalten neu geladen, auch beim Austausch derselben Version."
+        },
+        {
+          "category": "Misc",
+          "en": "Deactivation preserves data. Uninstall clears own update caches; deleting toolbar settings remains optional and off by default. WordPress menus and other plugin data are retained.",
+          "de": "Deaktivierung erhält Daten. Deinstallation leert eigene Update-Caches; das Löschen der Toolbar-Einstellungen bleibt optional und standardmäßig aus. WordPress-Menüs und Daten anderer Plugins bleiben erhalten."
+        },
+        {
+          "category": "Misc",
+          "en": "Clarify support for single WordPress sites and Multisite networks throughout the documentation.",
+          "de": "Unterstützung für einzelne WordPress-Websites und Multisite-Netzwerke in der gesamten Dokumentation deutlicher herausgestellt."
+        }
+      ]
+    },
     {
       "version": "4.0.0",
       "date": "2026-10-01",
@@ -226,17 +292,6 @@
       ]
     },
     {
-      "version": "1.8.0",
-      "date": "2014-10-20",
-      "items": [
-        {
-          "category": "Misc",
-          "en": "Private development versions 1.7.1–1.8.0 were not released publicly.",
-          "de": "Die privaten Entwicklungsstände 1.7.1–1.8.0 wurden nicht öffentlich veröffentlicht."
-        }
-      ]
-    },
-    {
       "version": "1.7.0",
       "date": "2014-03-04",
       "items": [
@@ -432,11 +487,11 @@
       "group": "setup",
       "en": {
         "question": "Is Multisite required?",
-        "answer": "No. The plugin works on individual WordPress sites and Multisite networks. Network shortcuts appear only where applicable."
+        "answer": "No. Single WordPress sites and Multisite networks have both been supported since the first release in 2012. On a single site, you can use the configurable toolbar menu, plugin/theme ZIP uploaders, menu preview and settings. Multisite adds network administration and shared-menu features."
       },
       "de": {
         "question": "Ist Multisite erforderlich?",
-        "answer": "Nein. Das Plugin funktioniert auf einzelnen WordPress-Websites und in Multisite-Netzwerken. Netzwerk-Verknüpfungen erscheinen nur dort, wo sie sinnvoll sind."
+        "answer": "Nein. Einzelne WordPress-Websites und Multisite-Netzwerke werden beide seit der ersten Veröffentlichung 2012 unterstützt. Auch auf einer einzelnen Website sind das konfigurierbare Toolbar-Menü, Plugin-/Theme-ZIP-Uploader, Menüvorschau und Einstellungen nutzbar. In Multisite kommen Netzwerkverwaltung und gemeinsame Menüs hinzu."
       }
     },
     {
@@ -671,23 +726,7 @@
       }
     }
   ],
-  "unreleased": [
-    {
-      "category": "Improved",
-      "en": "Updates the shared Library to 0.6.0 and Updater to 2.1.0; improves German documentation and readable local release history.",
-      "de": "Aktualisiert die gemeinsame Library auf 0.6.0 und den Updater auf 2.1.0; verbessert die deutsche Dokumentation und den lesbaren lokalen Änderungsverlauf."
-    },
-    {
-      "category": "Fixed",
-      "en": "Checks candidate packages in bulk updates and preserves existing data during deactivation and default uninstall.",
-      "de": "Prüft Updatepakete auch bei Sammelupdates und erhält vorhandene Daten bei Deaktivierung und standardmäßiger Deinstallation."
-    },
-    {
-      "category": "Misc",
-      "en": "Site-only activation is available in Multisite for super-administrator-managed network settings.",
-      "de": "Einzelaktivierung ist in Multisite mit durch Super-Administratoren verwalteten Netzwerkeinstellungen verfügbar."
-    }
-  ],
+  "unreleased": [],
   "features": {
     "en": [
       [
@@ -743,8 +782,8 @@
     ]
   },
   "intro": {
-    "en": "A configurable WordPress menu in the toolbar, with useful website and network shortcuts. Part of QuickNav; available on individual sites and Multisite networks.",
-    "de": "Ein konfigurierbares WordPress-Menü in der Toolbar mit nützlichen Website- und Netzwerk-Verknüpfungen. Teil von QuickNav; für Einzel-Websites und Multisite-Netzwerke."
+    "en": "Put your WordPress menu in the toolbar, alongside practical administration shortcuts. Part of the QuickNav family.",
+    "de": "Dein WordPress-Menü in der Toolbar – ergänzt um praktische Schnellzugriffe für die Verwaltung. Teil der QuickNav-Serie."
   },
   "install": {
     "en": "Requires WordPress 6.7+ and PHP 8.2+. Install the released ZIP via Plugins → Add New → Upload Plugin. Open Settings → Toolbar Additions. For Multisite network activation, use Network Admin → Settings → Toolbar Additions. Site-only activation uses the active site’s settings page and still requires a super administrator for network settings. The optional catalog installer needs PHP ZipArchive. Review custom 3.x snippets before a major upgrade.",
@@ -771,5 +810,25 @@
       "technical": "Kompatibilität und Fehlersuche",
       "support": "Hilfe und Sicherheit"
     }
-  }
+  },
+  "about_history": {
+    "de": "Multisite Toolbar Additions habe ich 2012 für meinen eigenen Bedarf entwickelt. Seitdem gehört es zu jeder meiner privaten und Kundeninstallationen und ist bis heute eines meiner liebsten Helferplugins für den WordPress-Alltag.",
+    "en": "I created Multisite Toolbar Additions in 2012 for my own needs. Since then, it has been part of every personal and client WordPress installation I manage, and it remains one of my favorite everyday helper plugins."
+  },
+  "scope": {
+    "en": "For single WordPress sites and Multisite networks. Both have been supported since 2012.",
+    "de": "Für einzelne WordPress-Websites und Multisite-Netzwerke. Beide werden seit 2012 unterstützt."
+  },
+  "screenshots": [
+    {
+      "file": "settings",
+      "en": "Settings on a single WordPress site: toolbar menu, visibility, position and depth.",
+      "de": "Einstellungen auf einer einzelnen WordPress-Website: Toolbar-Menü, Sichtbarkeit, Position und Tiefe."
+    },
+    {
+      "file": "preview",
+      "en": "Toolbar-style menu preview and effective settings on a single WordPress site.",
+      "de": "Toolbar-Menüvorschau und wirksame Einstellungen auf einer einzelnen WordPress-Website."
+    }
+  ]
 }

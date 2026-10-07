@@ -2,6 +2,8 @@
 
 [English](LIBRARIES.md) · [Deutsch](LIBRARIES-de.md)
 
+Für einzelne WordPress-Websites und Multisite-Netzwerke. Beide werden seit 2012 unterstützt.
+
 ## deckerweb Library 0.6.0
 
 Unveränderte Laufzeit aus [deckerweb-plugin-library, v0.6.0](https://github.com/deckerweb/deckerweb-plugin-library/tree/v0.6.0/lib), GPL-2.0-or-later, David Decker. Bootstrap-Protokoll 2 wählt den höchsten kompatiblen Host. Lokale Kataloge/Icons benötigen keine Abfrage. Online ist optional und anfangs deaktiviert; die voreingestellte Quelle ist der öffentliche Raw-GitHub-Katalog. Gemeinsame Einstellungen gehören in Multisite zum Netzwerk. Ein netzwerkweit aktivierter teilnehmender Host wird benötigt, um Katalog und Einstellungen in der Netzwerkverwaltung bereitzustellen. Host-Übersetzungen haben Vorrang; Library-Texte werden in dieselbe Host-Textdomain geladen.
