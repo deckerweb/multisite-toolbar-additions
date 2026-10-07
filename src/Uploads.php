@@ -127,10 +127,13 @@ final class Uploads {
 		wp_localize_script( 'mstba-upload', 'mstbaUpload', [ 'ajax' => admin_url( 'admin-ajax.php' ), 'nonce' => wp_create_nonce( 'mstba_zip_preview' ), 'type' => $type, 'labels' => [
 			'invalid' => __( 'Choose one non-empty ZIP file within the upload limit.', 'multisite-toolbar-additions' ),
 			'check' => __( 'Check ZIP', 'multisite-toolbar-additions' ), 'busy' => __( 'Checking ZIP…', 'multisite-toolbar-additions' ),
-			'install' => __( 'Upload and install', 'multisite-toolbar-additions' ), 'remove' => __( 'Remove selected file', 'multisite-toolbar-additions' ),
+			'install' => 'plugin' === $type ? __( 'Install plugin now', 'multisite-toolbar-additions' ) : __( 'Install theme now', 'multisite-toolbar-additions' ), 'remove' => __( 'Remove selected file', 'multisite-toolbar-additions' ),
 			'failure' => __( 'The preview is unavailable. No files have been installed.', 'multisite-toolbar-additions' ),
 			'native' => __( 'Continue with native WordPress checks', 'multisite-toolbar-additions' ),
-			'review' => __( 'I reviewed the package details.', 'multisite-toolbar-additions' ),
+			'review' => __( 'I checked these package details and want to install this ZIP.', 'multisite-toolbar-additions' ),
+			'ready' => __( 'Package preview ready. Nothing has been installed yet.', 'multisite-toolbar-additions' ),
+			'next' => __( 'Confirm the package below, then choose Install now.', 'multisite-toolbar-additions' ),
+			'result' => __( '2. Review the package', 'multisite-toolbar-additions' ),
 		] ] );
 	}
 	/**
@@ -145,14 +148,15 @@ final class Uploads {
 		echo '<div class="wrap mstba-upload"><h1>' . esc_html( self::title( $type ) ) . '</h1><section class="mstba-upload-card">';
 		echo '<p>' . esc_html__( 'Choose the installable ZIP from the provider. WordPress checks the package and confirms replacement of an existing version.', 'multisite-toolbar-additions' ) . '</p>';
 		if ( is_multisite() ) { echo '<p>' . esc_html__( 'Files are shared by the entire Multisite installation. Replacing them can affect every website and network using this extension.', 'multisite-toolbar-additions' ) . '</p>'; }
-		echo '<p>' . esc_html__( 'The preview reads package metadata without extracting or running files. It is not a malware scan or compatibility guarantee. Installation sends the selected file to WordPress again.', 'multisite-toolbar-additions' ) . '</p>';
+		echo '<details class="mstba-upload-help"><summary>' . esc_html__( 'What is checked before installation?', 'multisite-toolbar-additions' ) . '</summary><p>' . esc_html__( 'The preview reads package metadata without extracting or running files. It is not a malware scan or compatibility guarantee. Installation sends the selected file to WordPress again.', 'multisite-toolbar-additions' ) . '</p></details>';
+		echo '<ol class="mstba-upload-steps"><li>' . esc_html__( '1. Choose ZIP', 'multisite-toolbar-additions' ) . '</li><li>' . esc_html__( '2. Review package', 'multisite-toolbar-additions' ) . '</li><li>' . esc_html__( '3. Install', 'multisite-toolbar-additions' ) . '</li></ol>';
 		echo '<form method="post" enctype="multipart/form-data" action="' . esc_url( $action ) . '">';
 		wp_nonce_field( $type . '-upload' );
 		echo '<div class="mstba-upload-drop" data-limit="' . esc_attr( wp_max_upload_size() ) . '"><label for="mstba-package"><strong>' . esc_html__( 'Drop one ZIP file here', 'multisite-toolbar-additions' ) . '</strong></label><input id="mstba-package" type="file" name="' . esc_attr( $type . 'zip' ) . '" accept=".zip" required aria-describedby="mstba-upload-limit mstba-upload-status"><p id="mstba-upload-status" role="status" aria-live="polite"></p></div>';
-		echo '<p id="mstba-upload-limit">' . esc_html( sprintf( __( 'Maximum file size: %s. One ZIP package per upload.', 'multisite-toolbar-additions' ), size_format( wp_max_upload_size() ) ) ) . '</p><button class="button button-primary" type="submit" name="install-' . esc_attr( $type ) . '-submit">' . esc_html__( 'Upload and install', 'multisite-toolbar-additions' ) . '</button><section class="mstba-upload-preview" hidden aria-live="polite"></section></form>';
+		echo '<p id="mstba-upload-limit">' . esc_html( sprintf( __( 'Maximum file size: %s. One ZIP package per upload.', 'multisite-toolbar-additions' ), size_format( wp_max_upload_size() ) ) ) . '</p><button class="button button-primary" type="submit" name="install-' . esc_attr( $type ) . '-submit">' . esc_html( 'plugin' === $type ? __( 'Install plugin now', 'multisite-toolbar-additions' ) : __( 'Install theme now', 'multisite-toolbar-additions' ) ) . '</button><section class="mstba-upload-preview" hidden aria-live="polite"></section></form>';
 		echo '<noscript><p>' . esc_html__( 'Without JavaScript, WordPress performs the upload and its native checks directly.', 'multisite-toolbar-additions' ) . '</p></noscript><p><a href="' . esc_url( is_multisite() ? network_admin_url( $type . 's.php' ) : admin_url( $type . 's.php' ) ) . '">' . esc_html__( 'Manage installed extensions', 'multisite-toolbar-additions' ) . '</a></p></section>';
 		$other = 'plugin' === $type ? 'theme' : 'plugin';
-		if ( self::allowed( $other ) ) { echo '<p><a class="button" href="' . esc_url( self::url( $other ) ) . '">' . esc_html( self::title( $other ) ) . '</a></p>'; }
+		if ( self::allowed( $other ) ) { echo '<p class="mstba-upload-switch">' . esc_html__( 'Need the other uploader?', 'multisite-toolbar-additions' ) . ' <a href="' . esc_url( self::url( $other ) ) . '">' . esc_html( 'theme' === $other ? __( 'Switch to theme uploader', 'multisite-toolbar-additions' ) : __( 'Switch to plugin uploader', 'multisite-toolbar-additions' ) ) . '</a></p>'; }
 		PageChrome::footer();
 		echo '</div>';
 	}
@@ -213,12 +217,12 @@ final class Uploads {
 		} catch ( \Throwable $exception ) { return new \WP_Error( 'package', $error ); }
 		finally { $archive->close(); }
 		require_once ABSPATH . 'wp-admin/includes/plugin.php';
-		$installed = 'theme' === $type ? wp_get_theme( $data['slug'] )->get( 'Version' ) : ( get_plugins()[ $data['file'] ]['Version'] ?? '' );
-		$rows = [ __( 'Package name', 'multisite-toolbar-additions' ) => $data['name'], __( 'Target folder', 'multisite-toolbar-additions' ) => $data['slug'], __( 'ZIP version', 'multisite-toolbar-additions' ) => $data['version'], __( 'Installed version', 'multisite-toolbar-additions' ) => $installed ];
+		$installed = (string) ( 'theme' === $type ? wp_get_theme( $data['slug'] )->get( 'Version' ) : ( get_plugins()[ $data['file'] ]['Version'] ?? '' ) );
+		$rows = [ __( 'Package name', 'multisite-toolbar-additions' ) => $data['name'], __( 'Target folder', 'multisite-toolbar-additions' ) => $data['slug'], __( 'ZIP version', 'multisite-toolbar-additions' ) => $data['version'], __( 'Installed version', 'multisite-toolbar-additions' ) => $installed ?: __( 'Not installed', 'multisite-toolbar-additions' ) ];
 		foreach ( [ 'wp' => get_bloginfo( 'version' ), 'php' => PHP_VERSION ] as $key => $current ) {
 			$required = $data[ $key ];
 			$state = $required && preg_match( '/^[0-9]+(?:\.[0-9]+){0,3}$/D', $required ) ? ( version_compare( $current, $required, '>=' ) ? __( 'Requirement met', 'multisite-toolbar-additions' ) : __( 'Requirement not met', 'multisite-toolbar-additions' ) ) : __( 'Unknown / not declared', 'multisite-toolbar-additions' );
-			$rows[ 'wp' === $key ? 'WordPress' : 'PHP' ] = $required . ' · ' . $current . ' · ' . $state;
+			$rows[ 'wp' === $key ? 'WordPress' : 'PHP' ] = sprintf( __( 'Required: %1$s · Current: %2$s · %3$s', 'multisite-toolbar-additions' ), $required ?: __( 'Unknown / not declared', 'multisite-toolbar-additions' ), $current, $state );
 		}
 		if ( $installed && $data['version'] && preg_match( '/^[0-9]+(?:\.[0-9]+){0,3}$/D', $installed ) && preg_match( '/^[0-9]+(?:\.[0-9]+){0,3}$/D', $data['version'] ) ) {
 			$rows[ __( 'Version comparison', 'multisite-toolbar-additions' ) ] = version_compare( $data['version'], $installed, '<' ) ? __( 'Lower version — possible downgrade', 'multisite-toolbar-additions' ) : ( version_compare( $data['version'], $installed, '=' ) ? __( 'Same version — files may still differ', 'multisite-toolbar-additions' ) : __( 'Higher version', 'multisite-toolbar-additions' ) );

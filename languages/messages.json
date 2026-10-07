@@ -19,6 +19,22 @@
     "de_DE": "%s unterstützt nur die Aktivierung je Website.",
     "de_DE_formal": "%s unterstützt nur die Aktivierung je Website."
   },
+  "1. Choose ZIP": {
+    "de_DE": "1. ZIP auswählen",
+    "de_DE_formal": "1. ZIP auswählen"
+  },
+  "2. Review package": {
+    "de_DE": "2. Paket prüfen",
+    "de_DE_formal": "2. Paket prüfen"
+  },
+  "2. Review the package": {
+    "de_DE": "2. Paket prüfen",
+    "de_DE_formal": "2. Paket prüfen"
+  },
+  "3. Install": {
+    "de_DE": "3. Installieren",
+    "de_DE_formal": "3. Installieren"
+  },
   "A legacy constant controls whether this menu is enabled. Changing the checkbox cannot override it.": {
     "de_DE": "Eine bisherige Konstante steuert, ob dieses Menü aktiviert ist. Der Schalter kann sie nicht überschreiben.",
     "de_DE_formal": "Eine bisherige Konstante steuert, ob dieses Menü aktiviert ist. Der Schalter kann sie nicht überschreiben."
@@ -230,6 +246,10 @@
   "Compatible additions only": {
     "de_DE": "Nur passende Ergänzungen",
     "de_DE_formal": "Nur passende Ergänzungen"
+  },
+  "Confirm the package below, then choose Install now.": {
+    "de_DE": "Bestätige das Paket unten und klicke anschließend auf Jetzt installieren.",
+    "de_DE_formal": "Bestätigen Sie das Paket unten und klicken Sie anschließend auf Jetzt installieren."
   },
   "Content": {
     "de_DE": "Inhalte",
@@ -451,6 +471,10 @@
     "de_DE": "Höhere Version",
     "de_DE_formal": "Höhere Version"
   },
+  "I checked these package details and want to install this ZIP.": {
+    "de_DE": "Ich habe diese Paketdetails geprüft und möchte diese ZIP installieren.",
+    "de_DE_formal": "Ich habe diese Paketdetails geprüft und möchte diese ZIP installieren."
+  },
   "I reviewed the package details.": {
     "de_DE": "Ich habe die Paketdetails geprüft.",
     "de_DE_formal": "Ich habe die Paketdetails geprüft."
@@ -490,6 +514,14 @@
   "Install now": {
     "de_DE": "Jetzt installieren",
     "de_DE_formal": "Jetzt installieren"
+  },
+  "Install plugin now": {
+    "de_DE": "Plugin jetzt installieren",
+    "de_DE_formal": "Plugin jetzt installieren"
+  },
+  "Install theme now": {
+    "de_DE": "Theme jetzt installieren",
+    "de_DE_formal": "Theme jetzt installieren"
   },
   "Install via Git Updater": {
     "de_DE": "Über Git Updater installieren",
@@ -759,6 +791,10 @@
     "de_DE": "Meine Websites",
     "de_DE_formal": "Meine Websites"
   },
+  "Need the other uploader?": {
+    "de_DE": "Benötigst du den anderen Uploader?",
+    "de_DE_formal": "Benötigen Sie den anderen Uploader?"
+  },
   "Network Code Snippets": {
     "de_DE": "Netzwerk-Code-Snippets",
     "de_DE_formal": "Netzwerk-Code-Snippets"
@@ -895,6 +931,10 @@
     "de_DE": "Paketname",
     "de_DE_formal": "Paketname"
   },
+  "Package preview ready. Nothing has been installed yet.": {
+    "de_DE": "Paketvorschau bereit. Es wurde noch nichts installiert.",
+    "de_DE_formal": "Paketvorschau bereit. Es wurde noch nichts installiert."
+  },
   "Parent theme": {
     "de_DE": "Eltern-Theme",
     "de_DE_formal": "Eltern-Theme"
@@ -1006,6 +1046,10 @@
   "Repository & documentation": {
     "de_DE": "Repository & Dokumentation",
     "de_DE_formal": "Repository & Dokumentation"
+  },
+  "Required: %1$s · Current: %2$s · %3$s": {
+    "de_DE": "Benötigt: %1$s · Aktuell: %2$s · %3$s",
+    "de_DE_formal": "Benötigt: %1$s · Aktuell: %2$s · %3$s"
   },
   "Requirement met": {
     "de_DE": "Anforderung erfüllt",
@@ -1210,6 +1254,14 @@
   "Super administrators only": {
     "de_DE": "Nur Super-Administratoren",
     "de_DE_formal": "Nur Super-Administratoren"
+  },
+  "Switch to plugin uploader": {
+    "de_DE": "Zum Plugin-Uploader wechseln",
+    "de_DE_formal": "Zum Plugin-Uploader wechseln"
+  },
+  "Switch to theme uploader": {
+    "de_DE": "Zum Theme-Uploader wechseln",
+    "de_DE_formal": "Zum Theme-Uploader wechseln"
   },
   "Target folder": {
     "de_DE": "Zielordner",
@@ -1578,6 +1630,10 @@
   "Wednesday": {
     "de_DE": "Mittwoch",
     "de_DE_formal": "Mittwoch"
+  },
+  "What is checked before installation?": {
+    "de_DE": "Was wird vor der Installation geprüft?",
+    "de_DE_formal": "Was wird vor der Installation geprüft?"
   },
   "Widgets": {
     "de_DE": "Widgets",

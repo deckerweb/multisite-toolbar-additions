@@ -9,10 +9,11 @@
   const submit = form.querySelector('[type=submit]'), panel = form.querySelector('.mstba-upload-preview');
   const remove = document.createElement('button');
   remove.type = 'button'; remove.className = 'button'; remove.textContent = labels.remove; remove.hidden = true; zone.append(remove);
+  const actionAnchor = document.createComment('ZIP check action'); submit.before(actionAnchor);
   let controller = null, revision = 0, reviewedFile = null, review = null, bypass = false;
   const reset = () => {
    revision++; controller?.abort(); controller = null; reviewedFile = null; review = null; bypass = false;
-   panel.replaceChildren(); panel.hidden = true; panel.removeAttribute('aria-busy'); submit.disabled = false; submit.textContent = labels.check;
+   actionAnchor.after(submit); panel.replaceChildren(); panel.hidden = true; panel.removeAttribute('aria-busy'); submit.disabled = false; submit.textContent = labels.check;
   };
   const valid = () => {
    const files = input.files;
@@ -21,7 +22,7 @@
    status.textContent = files.length ? (ok ? files[0].name + ' · ' + new Intl.NumberFormat(document.documentElement.lang || undefined).format(files[0].size) + ' B' : labels.invalid) : '';
    remove.hidden = !files.length; return ok;
   };
-  input.addEventListener('change', () => { reset(); valid(); });
+  input.addEventListener('change', () => { reset(); submit.disabled = !valid(); });
   remove.addEventListener('click', () => { input.value = ''; input.dispatchEvent(new Event('change')); input.focus(); });
   zone.addEventListener('dragover', event => { event.preventDefault(); zone.classList.add('is-dragging'); });
   zone.addEventListener('dragleave', () => zone.classList.remove('is-dragging'));
@@ -35,11 +36,11 @@
   form.addEventListener('reset', event => queueMicrotask(() => { if (!event.defaultPrevented) { reset(); valid(); } }));
   const focusPanel = () => { panel.hidden = false; panel.tabIndex = -1; panel.focus(); };
   const fallback = message => {
-   panel.replaceChildren(); const p = document.createElement('p'); p.textContent = message || labels.failure; panel.append(p);
+   actionAnchor.after(submit); submit.disabled = false; panel.replaceChildren(); const p = document.createElement('p'); p.textContent = message || labels.failure; panel.append(p);
    const button = document.createElement('button'); button.type = 'button'; button.className = 'button'; button.textContent = labels.native;
    button.addEventListener('click', () => { bypass = true; if (review) review.required = false; form.requestSubmit(submit); }); panel.append(button); focusPanel();
   };
-  submit.textContent = labels.check;
+  submit.textContent = labels.check; submit.disabled = !valid();
   form.addEventListener('submit', async event => {
    if (event.defaultPrevented) return;
    if (!valid()) { event.preventDefault(); input.reportValidity(); return; }
@@ -66,11 +67,15 @@
      if (typeof value !== 'string') throw new Error('value');
      const dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = key; dd.textContent = value || '—'; dl.append(dt, dd);
     }
-    panel.replaceChildren(dl); review = document.createElement('input'); review.type = 'checkbox'; review.required = true;
-    const label = document.createElement('label'); label.append(review, document.createTextNode(' ' + labels.review)); panel.append(label);
+    const heading = document.createElement('h2'); heading.textContent = labels.result;
+    const ready = document.createElement('p'); ready.className = 'mstba-upload-ready'; ready.textContent = labels.ready;
+    const next = document.createElement('p'); next.textContent = labels.next;
+    panel.replaceChildren(heading,ready,dl,next); review = document.createElement('input'); review.type = 'checkbox'; review.required = true;
+    const label = document.createElement('label'); label.className = 'mstba-upload-confirm'; label.append(review, document.createTextNode(' ' + labels.review)); panel.append(label);
+    review.addEventListener('change',()=>{submit.disabled=!review.checked;}); panel.append(submit);
     reviewedFile = file; submit.textContent = labels.install; status.textContent = ''; focusPanel();
    } catch (_) { if (revision === current) fallback(labels.failure); }
-   finally { clearTimeout(timeout); if (revision === current) { panel.removeAttribute('aria-busy'); submit.disabled = false; if (!reviewedFile) submit.textContent = labels.check; } }
+   finally { clearTimeout(timeout); if (revision === current) { panel.removeAttribute('aria-busy'); submit.disabled = reviewedFile ? !review.checked : false; if (!reviewedFile) submit.textContent = labels.check; } }
   });
  });
 })();

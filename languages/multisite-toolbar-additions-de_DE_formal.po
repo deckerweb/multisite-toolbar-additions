@@ -19,6 +19,18 @@ msgstr "%s muss zuerst netzwerkweit aktiviert werden."
 msgid "%s supports activation per site only."
 msgstr "%s unterstützt nur die Aktivierung je Website."
 
+msgid "1. Choose ZIP"
+msgstr "1. ZIP auswählen"
+
+msgid "2. Review package"
+msgstr "2. Paket prüfen"
+
+msgid "2. Review the package"
+msgstr "2. Paket prüfen"
+
+msgid "3. Install"
+msgstr "3. Installieren"
+
 msgid "A legacy constant controls whether this menu is enabled. Changing the checkbox cannot override it."
 msgstr "Eine bisherige Konstante steuert, ob dieses Menü aktiviert ist. Der Schalter kann sie nicht überschreiben."
 
@@ -177,6 +189,9 @@ msgstr "Commerce"
 
 msgid "Compatible additions only"
 msgstr "Nur passende Ergänzungen"
+
+msgid "Confirm the package below, then choose Install now."
+msgstr "Bestätigen Sie das Paket unten und klicken Sie anschließend auf Jetzt installieren."
 
 msgid "Content"
 msgstr "Inhalte"
@@ -343,6 +358,9 @@ msgstr "Katalog ausblenden"
 msgid "Higher version"
 msgstr "Höhere Version"
 
+msgid "I checked these package details and want to install this ZIP."
+msgstr "Ich habe diese Paketdetails geprüft und möchte diese ZIP installieren."
+
 msgid "I reviewed the package details."
 msgstr "Ich habe die Paketdetails geprüft."
 
@@ -372,6 +390,12 @@ msgstr "deckerweb-Plugin installieren"
 
 msgid "Install now"
 msgstr "Jetzt installieren"
+
+msgid "Install plugin now"
+msgstr "Plugin jetzt installieren"
+
+msgid "Install theme now"
+msgstr "Theme jetzt installieren"
 
 msgid "Install via Git Updater"
 msgstr "Über Git Updater installieren"
@@ -574,6 +598,9 @@ msgstr "Multisite Toolbar Additions"
 msgid "My Sites"
 msgstr "Meine Websites"
 
+msgid "Need the other uploader?"
+msgstr "Benötigen Sie den anderen Uploader?"
+
 msgid "Network Code Snippets"
 msgstr "Netzwerk-Code-Snippets"
 
@@ -676,6 +703,9 @@ msgstr "Eine POST-Anfrage ist erforderlich."
 msgid "Package name"
 msgstr "Paketname"
 
+msgid "Package preview ready. Nothing has been installed yet."
+msgstr "Paketvorschau bereit. Es wurde noch nichts installiert."
+
 msgid "Parent theme"
 msgstr "Eltern-Theme"
 
@@ -759,6 +789,9 @@ msgstr "Ausgewählte Datei entfernen"
 
 msgid "Repository & documentation"
 msgstr "Repository & Dokumentation"
+
+msgid "Required: %1$s · Current: %2$s · %3$s"
+msgstr "Benötigt: %1$s · Aktuell: %2$s · %3$s"
 
 msgid "Requirement met"
 msgstr "Anforderung erfüllt"
@@ -912,6 +945,12 @@ msgstr "Super-Administratoren und Website-Administratoren"
 
 msgid "Super administrators only"
 msgstr "Nur Super-Administratoren"
+
+msgid "Switch to plugin uploader"
+msgstr "Zum Plugin-Uploader wechseln"
+
+msgid "Switch to theme uploader"
+msgstr "Zum Theme-Uploader wechseln"
 
 msgid "Target folder"
 msgstr "Zielordner"
@@ -1188,6 +1227,9 @@ msgstr "Mi"
 
 msgid "Wednesday"
 msgstr "Mittwoch"
+
+msgid "What is checked before installation?"
+msgstr "Was wird vor der Installation geprüft?"
 
 msgid "Widgets"
 msgstr "Widgets"

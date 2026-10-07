@@ -19,6 +19,18 @@ msgstr ""
 msgid "%s supports activation per site only."
 msgstr ""
 
+msgid "1. Choose ZIP"
+msgstr ""
+
+msgid "2. Review package"
+msgstr ""
+
+msgid "2. Review the package"
+msgstr ""
+
+msgid "3. Install"
+msgstr ""
+
 msgid "A legacy constant controls whether this menu is enabled. Changing the checkbox cannot override it."
 msgstr ""
 
@@ -176,6 +188,9 @@ msgid "Commerce"
 msgstr ""
 
 msgid "Compatible additions only"
+msgstr ""
+
+msgid "Confirm the package below, then choose Install now."
 msgstr ""
 
 msgid "Content"
@@ -343,6 +358,9 @@ msgstr ""
 msgid "Higher version"
 msgstr ""
 
+msgid "I checked these package details and want to install this ZIP."
+msgstr ""
+
 msgid "I reviewed the package details."
 msgstr ""
 
@@ -371,6 +389,12 @@ msgid "Install deckerweb plugin"
 msgstr ""
 
 msgid "Install now"
+msgstr ""
+
+msgid "Install plugin now"
+msgstr ""
+
+msgid "Install theme now"
 msgstr ""
 
 msgid "Install via Git Updater"
@@ -574,6 +598,9 @@ msgstr ""
 msgid "My Sites"
 msgstr ""
 
+msgid "Need the other uploader?"
+msgstr ""
+
 msgid "Network Code Snippets"
 msgstr ""
 
@@ -676,6 +703,9 @@ msgstr ""
 msgid "Package name"
 msgstr ""
 
+msgid "Package preview ready. Nothing has been installed yet."
+msgstr ""
+
 msgid "Parent theme"
 msgstr ""
 
@@ -758,6 +788,9 @@ msgid "Remove selected file"
 msgstr ""
 
 msgid "Repository & documentation"
+msgstr ""
+
+msgid "Required: %1$s · Current: %2$s · %3$s"
 msgstr ""
 
 msgid "Requirement met"
@@ -911,6 +944,12 @@ msgid "Super administrators and website administrators"
 msgstr ""
 
 msgid "Super administrators only"
+msgstr ""
+
+msgid "Switch to plugin uploader"
+msgstr ""
+
+msgid "Switch to theme uploader"
 msgstr ""
 
 msgid "Target folder"
@@ -1187,6 +1226,9 @@ msgid "Wed"
 msgstr ""
 
 msgid "Wednesday"
+msgstr ""
+
+msgid "What is checked before installation?"
 msgstr ""
 
 msgid "Widgets"

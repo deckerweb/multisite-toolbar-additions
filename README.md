@@ -10,7 +10,7 @@ A configurable WordPress menu in the toolbar, with useful website and network sh
 
 **Version 4.0.0 · WordPress 6.7+ · PHP 8.2+**
 
-Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing, dedicated plugin/theme ZIP pages, read-only menu preview and effective-settings diagnostics. Both ZIP admin submenu links are now enabled by default; the Theme addition under New remains optional and off by default. The released 4.0.0 ZIP is unchanged. The sticky save bar reports unsaved changes and warns before leaving; the toolbar-style preview now appears before the effective-settings summary.
+Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing, dedicated plugin/theme ZIP pages, read-only menu preview and effective-settings diagnostics. Both ZIP admin submenu links are now enabled by default; the Theme addition under New remains optional and off by default. The released 4.0.0 ZIP is unchanged. The sticky save bar reports unsaved changes and warns before leaving; the toolbar-style preview now appears before the effective-settings summary. Upload pages now separate choosing, reviewing and installing; confirmation unlocks a type-specific installation action beneath the result. Switching uploaders is a quiet text link.
 
 [English](README.md) · [Deutsch](README-de.md) · [Download](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest) · [FAQ by topic](https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-English)
 

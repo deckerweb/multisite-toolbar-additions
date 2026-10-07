@@ -30,7 +30,7 @@ try {
   package_fixture( $temp, $files ); upload_check( is_wp_error( Uploads::inspect( $temp, 'plugin' ) ), 'Reject ' . $label );
  }
  package_fixture( $temp, [ 'sample/style.css' => "/* Theme Name: Sample\nVersion: 2.0\nTemplate: twentytwentyfour\n*/" ] );
- upload_check( ! is_wp_error( Uploads::inspect( $temp, 'theme' ) ), 'Child theme metadata' );
+ $theme_preview=Uploads::inspect( $temp, 'theme' ); upload_check( ! is_wp_error( $theme_preview ), 'Child theme metadata' ); upload_check( count(array_filter($theme_preview['rows'],'is_string'))===count($theme_preview['rows']),'New theme preview values are strings');
  $user = wp_insert_user( [ 'user_login' => 'upload-editor-' . wp_generate_uuid4(), 'user_pass' => wp_generate_password(), 'role' => 'editor' ] );
  wp_set_current_user( $user ); upload_check( ! Uploads::allowed( 'plugin' ) && is_wp_error( Uploads::inspect( $temp, 'theme' ) ), 'Unauthorized inspection rejected' ); wp_set_current_user( 1 );
  // A request-local mock covers ownership and exclusions without copying private implementation.
