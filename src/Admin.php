@@ -219,7 +219,8 @@ static function () { return wp_get_nav_menus(); } ) : [];
 			if ( $large ) { echo ' <label for="mstba-source-id">' . esc_html__( 'Other website ID', 'multisite-toolbar-additions' ) . '</label> <input id="mstba-source-id" name="source_id" type="number" min="1" class="small-text">'; }
 			echo ' <button class="button">' . esc_html__( 'Load menus', 'multisite-toolbar-additions' ) . '</button><p class="description">' . esc_html__( 'Choose a source website, then load its menus. Loading does not save your settings.', 'multisite-toolbar-additions' ) . '</p></form>';
 		}
-		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"><input type="hidden" name="action" value="mstba_save"><input type="hidden" name="mstba[source_site]" value="' . esc_attr( $source ) . '">';
+		echo '<div class="mstba-sticky-save"><div><strong>' . esc_html__( 'Toolbar settings', 'multisite-toolbar-additions' ) . '</strong><span id="mstba-unsaved-status" role="status" aria-live="polite">' . esc_html__( 'All changes saved', 'multisite-toolbar-additions' ) . '</span></div><div class="mstba-save-actions"><button type="submit" form="mstba-settings-form" class="button button-primary" id="mstba-top-save">' . esc_html__( 'Save all changes', 'multisite-toolbar-additions' ) . '</button><button type="button" class="button" id="mstba-reload" hidden>' . esc_html__( 'Reload page', 'multisite-toolbar-additions' ) . '</button></div></div>';
+		echo '<form id="mstba-settings-form" data-source-changed="' . ( $source !== $this->settings->source() ? '1' : '0' ) . '" method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"><input type="hidden" name="action" value="mstba_save"><input type="hidden" name="mstba[source_site]" value="' . esc_attr( $source ) . '">';
 		wp_nonce_field( 'mstba_save' );
 		echo '<section class="mstba-panel" id="mstba-menu-panel"><h2>' . esc_html__( 'Your toolbar menu', 'multisite-toolbar-additions' ) . '</h2>';
 		$this->checkbox( 'enabled', __( 'Show the custom toolbar menu', 'multisite-toolbar-additions' ) );
@@ -274,7 +275,7 @@ function () { echo '<input class="regular-text" id="mstba-label" name="mstba[lab
 		}
 		echo '</section><section class="mstba-panel" id="mstba-data-panel"><h2>' . esc_html__( 'Stored data', 'multisite-toolbar-additions' ) . '</h2>';
 		$this->checkbox( 'delete_data', __( 'Delete this plugin’s settings when uninstalling', 'multisite-toolbar-additions' ) );
-		echo '<p class="description">' . esc_html__( 'Off by default. Deactivation keeps your data. Uninstall always clears this plugin’s update cache. This option deletes toolbar settings for this site or network; WordPress menus, installed plugins and shared Library data are not deleted by it.', 'multisite-toolbar-additions' ) . '</p></section><div class="mstba-save">'; submit_button(); echo '</div></form>';
+		echo '<p class="description">' . esc_html__( 'Off by default. Deactivation keeps your data. Uninstall always clears this plugin’s update cache. This option deletes toolbar settings for this site or network; WordPress menus, installed plugins and shared Library data are not deleted by it.', 'multisite-toolbar-additions' ) . '</p></section><p class="description">' . esc_html__( 'Use Save all changes in the bar above to apply your settings.', 'multisite-toolbar-additions' ) . '</p></form>';
 		MenuPreview::render( $this->settings );
 		PageChrome::footer();
 		echo '</div>';

@@ -1,8 +1,8 @@
 {
   "version": "4.0.0",
   "working_tree": {
-    "en": "Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing, dedicated plugin/theme ZIP pages, read-only menu preview and effective-settings diagnostics. Both ZIP admin submenu links are now enabled by default; the Theme addition under New remains optional and off by default. The released 4.0.0 ZIP is unchanged.",
-    "de": "Noch nicht veröffentlichte Vorbereitung für 4.1.0 auf Grundlage von 4.0.0: gemeinsame Leitstand-Verlinkung, eigene Plugin-/Theme-ZIP-Seiten, schreibfreie Menüvorschau und Hinweise zu den wirksamen Einstellungen. Beide ZIP-Admin-Untermenüs sind jetzt standardmäßig aktiv; der Theme-Eintrag unter Neu bleibt optional und standardmäßig aus. Die veröffentlichte 4.0.0-ZIP bleibt unverändert."
+    "en": "Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing, dedicated plugin/theme ZIP pages, read-only menu preview and effective-settings diagnostics. Both ZIP admin submenu links are now enabled by default; the Theme addition under New remains optional and off by default. The released 4.0.0 ZIP is unchanged. The sticky save bar reports unsaved changes and warns before leaving; the toolbar-style preview now appears before the effective-settings summary.",
+    "de": "Noch nicht veröffentlichte Vorbereitung für 4.1.0 auf Grundlage von 4.0.0: gemeinsame Leitstand-Verlinkung, eigene Plugin-/Theme-ZIP-Seiten, schreibfreie Menüvorschau und Hinweise zu den wirksamen Einstellungen. Beide ZIP-Admin-Untermenüs sind jetzt standardmäßig aktiv; der Theme-Eintrag unter Neu bleibt optional und standardmäßig aus. Die veröffentlichte 4.0.0-ZIP bleibt unverändert. Die beim Scrollen erreichbare Speichern-Leiste zeigt ungespeicherte Änderungen und warnt vor dem Verlassen; die Toolbar-Vorschau steht jetzt vor der Übersicht der wirksamen Einstellungen."
   },
   "releases": [
     {
@@ -663,11 +663,11 @@
       "group": "menus",
       "en": {
         "question": "Does the menu preview save changes?",
-        "answer": "No. It shows saved settings without JavaScript. With JavaScript, changing a menu control updates a signed read-only preview of unsaved values. Only Save changes persists settings. Preview entries do not navigate to destinations. The preview shows up to 200 entries without limiting the actual toolbar menu. The anchor check describes the current page, not all frontend or administration contexts."
+        "answer": "No. It shows saved settings without JavaScript. With JavaScript, changing a menu control updates a signed read-only preview of unsaved values. Only Save changes persists settings. Preview entries do not navigate to destinations. The preview shows up to 200 entries without limiting the actual toolbar menu. The anchor check describes the current page, not all frontend or administration contexts. Use Save all changes in the sticky bar to apply settings. Changed form values are marked, and leaving or reloading warns before discarding them. Reverting edits clears the warning. The simplified dark toolbar model has keyboard-accessible expandable groups; the effective-settings summary follows it."
       },
       "de": {
         "question": "Speichert die Menüvorschau Änderungen?",
-        "answer": "Nein. Ohne JavaScript zeigt sie die gespeicherten Einstellungen. Mit JavaScript aktualisiert eine Änderung an den Menüfeldern eine signierte, schreibfreie Vorschau noch nicht gespeicherter Werte. Erst Änderungen speichern sichert die Einstellungen. Vorschau-Einträge führen nicht zu den verlinkten Zielen. Die Vorschau zeigt bis zu 200 Einträge, ohne das tatsächliche Toolbar-Menü zu begrenzen. Die Prüfung des Bezugseintrags gilt für die aktuelle Seite, nicht für sämtliche Frontend- oder Adminansichten."
+        "answer": "Nein. Ohne JavaScript zeigt sie die gespeicherten Einstellungen. Mit JavaScript aktualisiert eine Änderung an den Menüfeldern eine signierte, schreibfreie Vorschau noch nicht gespeicherter Werte. Erst Änderungen speichern sichert die Einstellungen. Vorschau-Einträge führen nicht zu den verlinkten Zielen. Die Vorschau zeigt bis zu 200 Einträge, ohne das tatsächliche Toolbar-Menü zu begrenzen. Die Prüfung des Bezugseintrags gilt für die aktuelle Seite, nicht für sämtliche Frontend- oder Adminansichten. Mit Alle Änderungen speichern in der beim Scrollen erreichbaren Leiste übernimmst du die Einstellungen. Geänderte Formularwerte werden markiert; beim Verlassen oder Neuladen wird vor dem Verwerfen gewarnt. Zurückgenommene Änderungen löschen die Warnung. Das vereinfachte dunkle Toolbar-Modell besitzt per Tastatur aufklappbare Gruppen; die Übersicht der wirksamen Einstellungen folgt danach."
       }
     }
   ],

@@ -67,6 +67,9 @@ msgstr ""
 msgid "All"
 msgstr ""
 
+msgid "All changes saved"
+msgstr ""
+
 msgid "All levels"
 msgstr ""
 
@@ -241,6 +244,9 @@ msgstr ""
 msgid "Disabled"
 msgstr ""
 
+msgid "Discard unsaved changes and reload the page?"
+msgstr ""
+
 msgid "Discover more plugins by deckerweb"
 msgstr ""
 
@@ -257,6 +263,9 @@ msgid "Drop one ZIP file here"
 msgstr ""
 
 msgid "Each root item in the toolbar"
+msgstr ""
+
+msgid "Effective settings"
 msgstr ""
 
 msgid "Enabled"
@@ -742,6 +751,9 @@ msgstr ""
 msgid "Release must contain exactly the approved plugin directory."
 msgstr ""
 
+msgid "Reload page"
+msgstr ""
+
 msgid "Remove selected file"
 msgstr ""
 
@@ -779,6 +791,9 @@ msgid "Sat"
 msgstr ""
 
 msgid "Saturday"
+msgstr ""
+
+msgid "Save all changes"
 msgstr ""
 
 msgid "Save settings"
@@ -845,6 +860,9 @@ msgid "Show the theme ZIP upload submenu"
 msgstr ""
 
 msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
+msgstr ""
+
+msgid "Simplified toolbar preview. Expand entries to explore their children; destination links are not opened."
 msgstr ""
 
 msgid "Site Editor"
@@ -1042,6 +1060,9 @@ msgstr ""
 msgid "Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates."
 msgstr ""
 
+msgid "Toolbar preview"
+msgstr ""
+
 msgid "Toolbar settings"
 msgstr ""
 
@@ -1067,6 +1088,9 @@ msgid "Unknown / not declared"
 msgstr ""
 
 msgid "Unsafe archive path."
+msgstr ""
+
+msgid "Unsaved changes"
 msgstr ""
 
 msgid "Untrusted release URL."
@@ -1103,6 +1127,9 @@ msgid "Upload plugin ZIP"
 msgstr ""
 
 msgid "Upload theme ZIP"
+msgstr ""
+
+msgid "Use Save all changes in the bar above to apply your settings."
 msgstr ""
 
 msgid "Use a WordPress menu as your toolbar. Its source is independent of the active theme."

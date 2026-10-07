@@ -10,7 +10,7 @@ Ein konfigurierbares WordPress-Menü in der Toolbar mit nützlichen Website- und
 
 **Version 4.0.0 · WordPress 6.7+ · PHP 8.2+**
 
-Noch nicht veröffentlichte Vorbereitung für 4.1.0 auf Grundlage von 4.0.0: gemeinsame Leitstand-Verlinkung, eigene Plugin-/Theme-ZIP-Seiten, schreibfreie Menüvorschau und Hinweise zu den wirksamen Einstellungen. Beide ZIP-Admin-Untermenüs sind jetzt standardmäßig aktiv; der Theme-Eintrag unter Neu bleibt optional und standardmäßig aus. Die veröffentlichte 4.0.0-ZIP bleibt unverändert.
+Noch nicht veröffentlichte Vorbereitung für 4.1.0 auf Grundlage von 4.0.0: gemeinsame Leitstand-Verlinkung, eigene Plugin-/Theme-ZIP-Seiten, schreibfreie Menüvorschau und Hinweise zu den wirksamen Einstellungen. Beide ZIP-Admin-Untermenüs sind jetzt standardmäßig aktiv; der Theme-Eintrag unter Neu bleibt optional und standardmäßig aus. Die veröffentlichte 4.0.0-ZIP bleibt unverändert. Die beim Scrollen erreichbare Speichern-Leiste zeigt ungespeicherte Änderungen und warnt vor dem Verlassen; die Toolbar-Vorschau steht jetzt vor der Übersicht der wirksamen Einstellungen.
 
 [English](README.md) · [Deutsch](README-de.md) · [Download](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest) · [Fragen nach Themen](https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-Deutsch)
 

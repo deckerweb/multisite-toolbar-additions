@@ -40,7 +40,7 @@ Yes. The plugin respects WordPress’s user-profile preference for displaying th
 
 ### Does the menu preview save changes?
 
-No. It shows saved settings without JavaScript. With JavaScript, changing a menu control updates a signed read-only preview of unsaved values. Only Save changes persists settings. Preview entries do not navigate to destinations. The preview shows up to 200 entries without limiting the actual toolbar menu. The anchor check describes the current page, not all frontend or administration contexts.
+No. It shows saved settings without JavaScript. With JavaScript, changing a menu control updates a signed read-only preview of unsaved values. Only Save changes persists settings. Preview entries do not navigate to destinations. The preview shows up to 200 entries without limiting the actual toolbar menu. The anchor check describes the current page, not all frontend or administration contexts. Use Save all changes in the sticky bar to apply settings. Changed form values are marked, and leaving or reloading warns before discarding them. Reverting edits clears the warning. The simplified dark toolbar model has keyboard-accessible expandable groups; the effective-settings summary follows it.
 
 ## Multisite and permissions
 

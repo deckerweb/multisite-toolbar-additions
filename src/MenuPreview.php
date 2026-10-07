@@ -22,6 +22,12 @@ final class MenuPreview {
 			'anchor' => __( 'The reference item is missing on this page. The menu will appear last on the left here.', 'multisite-toolbar-additions' ),
 			'anchorScope' => __( 'Position checks describe this page only. Frontend and other admin pages can have different toolbar items.', 'multisite-toolbar-additions' ),
 			'level' => __( 'Level %d', 'multisite-toolbar-additions' ),
+			'saved' => __( 'All changes saved', 'multisite-toolbar-additions' ),
+			'unsaved' => __( 'Unsaved changes', 'multisite-toolbar-additions' ),
+			'discard' => __( 'Discard unsaved changes and reload the page?', 'multisite-toolbar-additions' ),
+			'preview' => __( 'Toolbar preview', 'multisite-toolbar-additions' ),
+			'summary' => __( 'Effective settings', 'multisite-toolbar-additions' ),
+			'model' => __( 'Simplified toolbar preview. Expand entries to explore their children; destination links are not opened.', 'multisite-toolbar-additions' ),
 		] ];
 	}
 	/**
@@ -92,17 +98,39 @@ final class MenuPreview {
 		if ( ! current_user_can( Settings::capability() ) ) { return; }
 		$data = self::snapshot( $settings );
 		echo '<section class="mstba-panel" id="mstba-preview" aria-labelledby="mstba-preview-heading"><h2 id="mstba-preview-heading">' . esc_html__( 'Menu preview and effective settings', 'multisite-toolbar-additions' ) . '</h2><p class="description">' . esc_html__( 'This view describes the saved settings. The preview does not change your menu, grant access to destinations, or override personal toolbar visibility.', 'multisite-toolbar-additions' ) . '</p><p id="mstba-preview-status" role="status" aria-live="polite"></p><div id="mstba-preview-content">';
-		echo '<dl class="mstba-summary">';
-		foreach ( $data['summary'] as $label => $value ) { echo '<dt>' . esc_html( $label ) . '</dt><dd>' . esc_html( $value ) . '</dd>'; }
-		echo '</dl><ul class="mstba-preview-warnings">';
+		echo '<h3>' . esc_html__( 'Toolbar preview', 'multisite-toolbar-additions' ) . '</h3>';
+		self::model( $data );
+		echo '<ul class="mstba-preview-warnings">';
 		foreach ( $data['warnings'] as $warning ) { echo '<li>' . esc_html( $warning ) . '</li>'; }
-		echo '</ul>';
-		if ( $data['group'] ) { echo '<h3>' . esc_html( $data['group'] ) . '</h3>'; }
-		echo '<ul class="mstba-preview-tree">';
-		foreach ( $data['rows'] as $row ) { echo '<li style="--mstba-level:' . min( 4, $row['depth'] ) . '"><span>' . esc_html( $row['title'] ) . '</span> <small>' . esc_html( sprintf( __( 'Level %d', 'multisite-toolbar-additions' ), $row['depth'] ) ) . '</small></li>'; }
-		echo '</ul></div><p id="mstba-anchor-status"></p><p class="description">' . esc_html__( 'Position checks describe this page only. Frontend and other admin pages can have different toolbar items.', 'multisite-toolbar-additions' ) . '</p></section>';
+		echo '</ul><h3>' . esc_html__( 'Effective settings', 'multisite-toolbar-additions' ) . '</h3><dl class="mstba-summary">';
+		foreach ( $data['summary'] as $label => $value ) { echo '<dt>' . esc_html( $label ) . '</dt><dd>' . esc_html( $value ) . '</dd>'; }
+		echo '</dl></div><p id="mstba-anchor-status"></p><p class="description">' . esc_html__( 'Position checks describe this page only. Frontend and other admin pages can have different toolbar items.', 'multisite-toolbar-additions' ) . '</p></section>';
 		wp_add_inline_script( 'mstba-settings', 'window.mstbaSavedPreview = ' . wp_json_encode( [ 'position' => $data['position'], 'anchor' => $data['anchor'] ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT ) . ';', 'before' );
 	}
+	/**
+	 * Print a keyboard-accessible native-looking toolbar model without destination links.
+	 * @param array $data Validated snapshot rows and grouping label.
+	 * @return void
+	 */
+	private static function model( array $data ): void {
+		echo '<div class="mstba-toolbar-model' . ( 'right' === $data['position'] ? ' mstba-model-right' : '' ) . '"><p class="mstba-model-note">' . esc_html__( 'Simplified toolbar preview. Expand entries to explore their children; destination links are not opened.', 'multisite-toolbar-additions' ) . '</p>';
+		if ( $data['group'] ) { echo '<details class="mstba-model-group" open><summary>' . esc_html( $data['group'] ) . '</summary>'; }
+		echo '<ul class="mstba-preview-tree' . ( $data['group'] ? '' : ' mstba-model-roots' ) . '">';
+		$stack = [];
+		foreach ( $data['rows'] as $index => $row ) {
+			while ( $stack && end( $stack ) >= $row['depth'] ) { array_pop( $stack ); echo '</ul></details></li>'; }
+			$has_children = isset( $data['rows'][ $index + 1 ] ) && $data['rows'][ $index + 1 ]['depth'] > $row['depth'];
+			echo '<li style="--mstba-level:' . min( 4, $row['depth'] ) . '">';
+			$title = esc_html( $row['title'] ) . '<span class="screen-reader-text"> · ' . esc_html( sprintf( __( 'Level %d', 'multisite-toolbar-additions' ), $row['depth'] ) ) . '</span>';
+			if ( $has_children ) { echo '<details open><summary>' . $title . '</summary><ul>'; $stack[] = $row['depth']; }
+			else { echo '<span class="mstba-model-label">' . $title . '</span></li>'; }
+		}
+		while ( $stack ) { array_pop( $stack ); echo '</ul></details></li>'; }
+		echo '</ul>';
+		if ( $data['group'] ) { echo '</details>'; }
+		echo '</div>';
+	}
+
 	/**
 	 * Validate a signed read-only POST and return a transient preview without saving settings.
 	 * @return void

@@ -67,6 +67,9 @@ msgstr "Nach dem folgenden Eintrag"
 msgid "All"
 msgstr "Alle"
 
+msgid "All changes saved"
+msgstr "Alle Änderungen gespeichert"
+
 msgid "All levels"
 msgstr "Alle Ebenen"
 
@@ -241,6 +244,9 @@ msgstr "Entwickler-Ressourcen"
 msgid "Disabled"
 msgstr "Deaktiviert"
 
+msgid "Discard unsaved changes and reload the page?"
+msgstr "Ungespeicherte Änderungen verwerfen und die Seite neu laden?"
+
 msgid "Discover more plugins by deckerweb"
 msgstr "Weitere Plugins von deckerweb entdecken"
 
@@ -258,6 +264,9 @@ msgstr "Ziehe eine ZIP-Datei hierher"
 
 msgid "Each root item in the toolbar"
 msgstr "Jeder Haupteintrag einzeln in der Toolbar"
+
+msgid "Effective settings"
+msgstr "Wirksame Einstellungen"
 
 msgid "Enabled"
 msgstr "Aktiviert"
@@ -742,6 +751,9 @@ msgstr "Release in Vorbereitung"
 msgid "Release must contain exactly the approved plugin directory."
 msgstr "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
 
+msgid "Reload page"
+msgstr "Seite neu laden"
+
 msgid "Remove selected file"
 msgstr "Ausgewählte Datei entfernen"
 
@@ -780,6 +792,9 @@ msgstr "Sa"
 
 msgid "Saturday"
 msgstr "Samstag"
+
+msgid "Save all changes"
+msgstr "Alle Änderungen speichern"
 
 msgid "Save settings"
 msgstr "Einstellungen speichern"
@@ -846,6 +861,9 @@ msgstr "Untermenü „Theme-ZIP hochladen“ anzeigen"
 
 msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
 msgstr "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar."
+
+msgid "Simplified toolbar preview. Expand entries to explore their children; destination links are not opened."
+msgstr "Vereinfachte Toolbar-Vorschau. Klappe Einträge auf, um ihre Untermenüs zu prüfen; verlinkte Zielseiten werden nicht geöffnet."
 
 msgid "Site Editor"
 msgstr "Website-Editor"
@@ -1042,6 +1060,9 @@ msgstr "Toolbar-Einstellungen"
 msgid "Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates."
 msgstr "Die Toolbar-Funktionen bleiben verfügbar. Installiere das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen."
 
+msgid "Toolbar preview"
+msgstr "Toolbar-Vorschau"
+
 msgid "Toolbar settings"
 msgstr "Toolbar-Einstellungen"
 
@@ -1068,6 +1089,9 @@ msgstr "Unbekannt / nicht angegeben"
 
 msgid "Unsafe archive path."
 msgstr "Unsicherer Archivpfad."
+
+msgid "Unsaved changes"
+msgstr "Ungespeicherte Änderungen"
 
 msgid "Untrusted release URL."
 msgstr "Nicht vertrauenswürdige Release-URL."
@@ -1104,6 +1128,9 @@ msgstr "Plugin-ZIP hochladen"
 
 msgid "Upload theme ZIP"
 msgstr "Theme-ZIP hochladen"
+
+msgid "Use Save all changes in the bar above to apply your settings."
+msgstr "Verwende „Alle Änderungen speichern“ in der Leiste oben, um deine Einstellungen zu übernehmen."
 
 msgid "Use a WordPress menu as your toolbar. Its source is independent of the active theme."
 msgstr "Ein WordPress-Menü als Toolbar verwenden. Die Menüquelle ist unabhängig vom aktiven Theme."

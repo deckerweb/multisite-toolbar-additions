@@ -15,7 +15,7 @@ WordPress menus and useful administration shortcuts in the toolbar.
 
 A configurable WordPress menu in the toolbar, with useful website and network shortcuts. Part of QuickNav; available on individual sites and Multisite networks.
 
-Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing, dedicated plugin/theme ZIP pages, read-only menu preview and effective-settings diagnostics. Both ZIP admin submenu links are now enabled by default; the Theme addition under New remains optional and off by default. The released 4.0.0 ZIP is unchanged.
+Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing, dedicated plugin/theme ZIP pages, read-only menu preview and effective-settings diagnostics. Both ZIP admin submenu links are now enabled by default; the Theme addition under New remains optional and off by default. The released 4.0.0 ZIP is unchanged. The sticky save bar reports unsaved changes and warns before leaving; the toolbar-style preview now appears before the effective-settings summary.
 
 * Select a source site and menu independently of your theme. Keep root entries separate or group them under the menu’s name. A custom label is optional.
 * Choose first/last, before/after a reference item or the right side. Show the menu on the frontend, in administration or both. Choose one to ten child levels, or all. Missing references fall back to the end.

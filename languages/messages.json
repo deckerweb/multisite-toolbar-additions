@@ -83,6 +83,10 @@
     "de_DE": "Alle",
     "de_DE_formal": "Alle"
   },
+  "All changes saved": {
+    "de_DE": "Alle Änderungen gespeichert",
+    "de_DE_formal": "Alle Änderungen gespeichert"
+  },
   "All levels": {
     "de_DE": "Alle Ebenen",
     "de_DE_formal": "Alle Ebenen"
@@ -315,6 +319,10 @@
     "de_DE": "Deaktiviert",
     "de_DE_formal": "Deaktiviert"
   },
+  "Discard unsaved changes and reload the page?": {
+    "de_DE": "Ungespeicherte Änderungen verwerfen und die Seite neu laden?",
+    "de_DE_formal": "Ungespeicherte Änderungen verwerfen und die Seite neu laden?"
+  },
   "Discover more plugins by deckerweb": {
     "de_DE": "Weitere Plugins von deckerweb entdecken",
     "de_DE_formal": "Weitere Plugins von deckerweb entdecken"
@@ -338,6 +346,10 @@
   "Each root item in the toolbar": {
     "de_DE": "Jeder Haupteintrag einzeln in der Toolbar",
     "de_DE_formal": "Jeder Haupteintrag einzeln in der Toolbar"
+  },
+  "Effective settings": {
+    "de_DE": "Wirksame Einstellungen",
+    "de_DE_formal": "Wirksame Einstellungen"
   },
   "Enabled": {
     "de_DE": "Aktiviert",
@@ -983,6 +995,10 @@
     "de_DE": "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten.",
     "de_DE_formal": "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
   },
+  "Reload page": {
+    "de_DE": "Seite neu laden",
+    "de_DE_formal": "Seite neu laden"
+  },
   "Remove selected file": {
     "de_DE": "Ausgewählte Datei entfernen",
     "de_DE_formal": "Ausgewählte Datei entfernen"
@@ -1034,6 +1050,10 @@
   "Saturday": {
     "de_DE": "Samstag",
     "de_DE_formal": "Samstag"
+  },
+  "Save all changes": {
+    "de_DE": "Alle Änderungen speichern",
+    "de_DE_formal": "Alle Änderungen speichern"
   },
   "Save settings": {
     "de_DE": "Einstellungen speichern",
@@ -1122,6 +1142,10 @@
   "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible.": {
     "de_DE": "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar.",
     "de_DE_formal": "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar."
+  },
+  "Simplified toolbar preview. Expand entries to explore their children; destination links are not opened.": {
+    "de_DE": "Vereinfachte Toolbar-Vorschau. Klappe Einträge auf, um ihre Untermenüs zu prüfen; verlinkte Zielseiten werden nicht geöffnet.",
+    "de_DE_formal": "Vereinfachte Toolbar-Vorschau. Klappen Sie Einträge auf, um ihre Untermenüs zu prüfen; verlinkte Zielseiten werden nicht geöffnet."
   },
   "Site Editor": {
     "de_DE": "Website-Editor",
@@ -1383,6 +1407,10 @@
     "de_DE": "Die Toolbar-Funktionen bleiben verfügbar. Installiere das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen.",
     "de_DE_formal": "Die Toolbar-Funktionen bleiben verfügbar. Installieren Sie das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen."
   },
+  "Toolbar preview": {
+    "de_DE": "Toolbar-Vorschau",
+    "de_DE_formal": "Toolbar-Vorschau"
+  },
   "Toolbar settings": {
     "de_DE": "Toolbar-Einstellungen",
     "de_DE_formal": "Toolbar-Einstellungen"
@@ -1418,6 +1446,10 @@
   "Unsafe archive path.": {
     "de_DE": "Unsicherer Archivpfad.",
     "de_DE_formal": "Unsicherer Archivpfad."
+  },
+  "Unsaved changes": {
+    "de_DE": "Ungespeicherte Änderungen",
+    "de_DE_formal": "Ungespeicherte Änderungen"
   },
   "Untrusted release URL.": {
     "de_DE": "Nicht vertrauenswürdige Release-URL.",
@@ -1466,6 +1498,10 @@
   "Upload theme ZIP": {
     "de_DE": "Theme-ZIP hochladen",
     "de_DE_formal": "Theme-ZIP hochladen"
+  },
+  "Use Save all changes in the bar above to apply your settings.": {
+    "de_DE": "Verwende „Alle Änderungen speichern“ in der Leiste oben, um deine Einstellungen zu übernehmen.",
+    "de_DE_formal": "Verwenden Sie „Alle Änderungen speichern“ in der Leiste oben, um Ihre Einstellungen zu übernehmen."
   },
   "Use a WordPress menu as your toolbar. Its source is independent of the active theme.": {
     "de_DE": "Ein WordPress-Menü als Toolbar verwenden. Die Menüquelle ist unabhängig vom aktiven Theme.",

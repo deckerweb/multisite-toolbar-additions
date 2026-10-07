@@ -40,7 +40,7 @@ Ja. Das Plugin berücksichtigt die WordPress-Profiloption zur Anzeige der Toolba
 
 ### Speichert die Menüvorschau Änderungen?
 
-Nein. Ohne JavaScript zeigt sie die gespeicherten Einstellungen. Mit JavaScript aktualisiert eine Änderung an den Menüfeldern eine signierte, schreibfreie Vorschau noch nicht gespeicherter Werte. Erst Änderungen speichern sichert die Einstellungen. Vorschau-Einträge führen nicht zu den verlinkten Zielen. Die Vorschau zeigt bis zu 200 Einträge, ohne das tatsächliche Toolbar-Menü zu begrenzen. Die Prüfung des Bezugseintrags gilt für die aktuelle Seite, nicht für sämtliche Frontend- oder Adminansichten.
+Nein. Ohne JavaScript zeigt sie die gespeicherten Einstellungen. Mit JavaScript aktualisiert eine Änderung an den Menüfeldern eine signierte, schreibfreie Vorschau noch nicht gespeicherter Werte. Erst Änderungen speichern sichert die Einstellungen. Vorschau-Einträge führen nicht zu den verlinkten Zielen. Die Vorschau zeigt bis zu 200 Einträge, ohne das tatsächliche Toolbar-Menü zu begrenzen. Die Prüfung des Bezugseintrags gilt für die aktuelle Seite, nicht für sämtliche Frontend- oder Adminansichten. Mit Alle Änderungen speichern in der beim Scrollen erreichbaren Leiste übernimmst du die Einstellungen. Geänderte Formularwerte werden markiert; beim Verlassen oder Neuladen wird vor dem Verwerfen gewarnt. Zurückgenommene Änderungen löschen die Warnung. Das vereinfachte dunkle Toolbar-Modell besitzt per Tastatur aufklappbare Gruppen; die Übersicht der wirksamen Einstellungen folgt danach.
 
 ## Multisite und Berechtigungen
 
