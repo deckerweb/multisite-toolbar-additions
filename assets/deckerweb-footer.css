@@ -9,5 +9,10 @@
 .ddw-document-dialog::backdrop{background:#0006}
 .ddw-document-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 24px;border-bottom:1px solid #dcdcde}
 .ddw-document-header h2{margin:0;font-size:20px}
-.ddw-document-dialog pre{box-sizing:border-box;max-height:calc(85vh - 90px);overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;padding:24px;font:13px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace}
-@media(max-width:600px){.ddw-admin-footer{display:block}.ddw-admin-footer>div:last-child{margin-top:12px}.ddw-document-header,.ddw-document-dialog pre{padding:16px}}
+.ddw-document-content{box-sizing:border-box;max-height:calc(85vh - 90px);overflow:auto;overflow-wrap:anywhere;margin:0;padding:24px;font:14px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+@media(max-width:600px){.ddw-admin-footer{display:block}.ddw-admin-footer>div:last-child{margin-top:12px}.ddw-document-header,.ddw-document-content{padding:16px}}
+
+.ddw-changelog-release+.ddw-changelog-release{border-top:1px solid #dcdcde;padding-top:20px;margin-top:24px}
+.ddw-changelog-version{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.ddw-changelog-version h3{margin:0;font-size:18px}.ddw-changelog-version span{color:#52626d}
+.ddw-changelog-entries{list-style:none;padding:0}.ddw-changelog-entries li{display:flex;align-items:baseline;gap:10px;margin:12px 0}.ddw-changelog-badge{flex:none;min-width:76px;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:600;color:#1d2327;background:#edf0f2}.ddw-changelog-new{background:#e4f3e8;color:#1c5930}.ddw-changelog-improved{background:#e5edf9;color:#21466d}.ddw-changelog-fixed{background:#fff1dc;color:#6a470c}.ddw-changelog-misc{background:#eeebf5;color:#4b386b}
+@media(max-width:600px){.ddw-changelog-entries li{display:block}.ddw-changelog-badge{display:inline-block;margin-inline-end:8px}}

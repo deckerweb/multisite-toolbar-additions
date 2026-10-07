@@ -1,7 +1,7 @@
 <?php
 /**
  * Multisite Toolbar Additions.
- * Copyright (c) 2012–2026 David Decker – DECKERWEB.
+ * Copyright © 2012–2026 David Decker – DECKERWEB.
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 namespace Deckerweb\MultisiteToolbar;
@@ -10,6 +10,12 @@ defined( 'ABSPATH' ) || exit;
 
 /** Compact registry: loaded only for eligible users when integrations are enabled. */
 final class Integrations {
+	/**
+	 * Add capability-checked shortcuts for detected integrations and custom hooks.
+	 *
+	 * @param \WP_Admin_Bar $bar Toolbar instance receiving public nodes.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function render( $bar ) {
 		$site = $bar->get_node( 'site-name' ) ? 'site-name' : false;
 		$network = $bar->get_node( 'network-admin' ) ? 'network-admin' : false;
@@ -56,7 +62,7 @@ final class Integrations {
 			$links[] = [ 'robots', 'Multisite Robots.txt', 'settings.php?page=' . ( $modern ? 'msrtm-network.php&tab=settings' : 'ms_robotstxt.php&tab=robotstxt_settings' ), 'manage_network_options', true ];
 			$links[] = [ 'site-robots', 'Multisite Robots.txt', 'options-general.php?page=' . ( $modern ? 'msrtm-website.php&tab=settings' : 'ms_robotstxt.php&tab=robotstxt_settings' ), 'manage_options', false ];
 		}
-		if ( defined( 'MCMVC_REQUIRED_WP_VERSION' ) ) { $links[] = [ 'reports', 'Network Reports', 'admin.php?page=wpms_admin_reports', 'manage_network', false ]; }
+		if ( defined( 'MCMVC_REQUIRED_WP_VERSION' ) ) { $links[] = [ 'reports', __( 'Network Reports', 'multisite-toolbar-additions' ), 'admin.php?page=wpms_admin_reports', 'manage_network', false ]; }
 		if ( defined( 'SS_SETTINGS_FIELD' ) && 'genesis' === basename( get_template_directory() ) ) { $links[] = [ 'sidebars', 'Genesis Simple Sidebars', 'admin.php?page=simple-sidebars', 'edit_theme_options', false ]; }
 		if ( defined( 'GW_GO_SBWIZARD_VER' ) ) { $links[] = [ 'sidebar-wizard', 'Go Sidebar Wizard', 'admin.php?page=go-sbwizard', 'edit_pages', false ]; }
 		if ( class_exists( 'Widget_Data' ) ) {
@@ -64,8 +70,18 @@ final class Integrations {
 			$links[] = [ 'widget-import', __( 'Import Widgets', 'multisite-toolbar-additions' ), 'tools.php?page=widget-settings-import', 'edit_theme_options', false ];
 		}
 		if ( class_exists( 'RestrictWidgets' ) ) { $links[] = [ 'restrict-widgets', 'Restrict Widgets', 'widgets.php#widgets-options', 'manage_widgets', false ]; }
+		/**
+		 * Filter detected integration destinations before capability checks.
+		 *
+		 * Return a list of [ID, label, relative admin path, capability, network flag].
+		 * @since 4.0.0 Class-based integration registry.
+		 * @param array $links Destinations to amend and return; invalid rows are ignored.
+		 */
 		$links = apply_filters( 'mstba_integration_links', $links );
-		foreach ( $links as [ $id, $label, $path, $cap, $is_network ] ) {
+		foreach ( is_array( $links ) ? $links : [] as $link ) {
+			if ( ! is_array( $link ) || count( $link ) !== 5 ) { continue; }
+			[ $id, $label, $path, $cap, $is_network ] = array_values( $link );
+			if ( ! is_string( $id ) || ! is_string( $label ) || ! is_string( $path ) || ! is_string( $cap ) || ! is_bool( $is_network ) ) { continue; }
 			$parent = $is_network ? $network : $site;
 			if ( ! $parent || ! current_user_can( $cap ) ) { continue; }
 			$group = $is_network ? 'ddw-mstba-networkextgroup' : 'ddw-mstba-siteextgroup';
@@ -76,9 +92,30 @@ final class Integrations {
 		}
 		if ( $site && ( ! defined( 'MSTBA_DISPLAY_SITE_EXTEND_GROUP' ) || MSTBA_DISPLAY_SITE_EXTEND_GROUP ) ) {
 			$bar->add_group( [ 'id' => 'ddw-mstba-siteextgroup', 'parent' => $site ] );
+			/**
+			 * Add custom site nodes to the prepared integration group.
+			 *
+			 * @since 1.5.0
+			 * @since 4.0.0 The toolbar instance is supplied as an argument.
+			 * @param \WP_Admin_Bar $bar Toolbar to extend with permission-checked nodes.
+			 */
 			do_action( 'mstba_custom_site_items', $bar );
 		}
-		if ( $network && ( ! defined( 'MSTBA_DISPLAY_NETWORK_EXTEND_GROUP' ) || MSTBA_DISPLAY_NETWORK_EXTEND_GROUP ) ) { $bar->add_group( [ 'id' => 'ddw-mstba-networkextgroup', 'parent' => $network ] ); do_action( 'mstba_custom_network_items', $bar ); }
-		do_action( 'mstba_custom_plugin_items', $bar );
+		if ( $network && ( ! defined( 'MSTBA_DISPLAY_NETWORK_EXTEND_GROUP' ) || MSTBA_DISPLAY_NETWORK_EXTEND_GROUP ) ) { $bar->add_group( [ 'id' => 'ddw-mstba-networkextgroup', 'parent' => $network ] ); /**
+			 * Add custom network nodes to the prepared integration group.
+			 *
+			 * @since 1.1.0
+			 * @since 4.0.0 The toolbar instance is supplied as an argument.
+			 * @param \WP_Admin_Bar $bar Toolbar to extend with permission-checked nodes.
+			 */
+			do_action( 'mstba_custom_network_items', $bar ); }
+		/**
+			 * Add custom plugin destinations without bypassing WordPress permissions.
+			 *
+			 * @since 1.1.0
+			 * @since 4.0.0 The toolbar instance is supplied as an argument.
+			 * @param \WP_Admin_Bar $bar Toolbar to extend with permission-checked nodes.
+			 */
+			do_action( 'mstba_custom_plugin_items', $bar );
 	}
 }

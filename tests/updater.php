@@ -6,6 +6,7 @@ require $argv[1];
 require_once ABSPATH . 'wp-admin/includes/admin.php';
 require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
 require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
+require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
 
 use Deckerweb\MultisiteToolbar\GitHubUpdates;
 use Deckerweb\GitHubReleaseUpdater\V2\Updater;
@@ -75,6 +76,20 @@ check_update( $guard->validate_source( $directory, '', null, $context )->get_err
 file_put_contents( $main, str_replace( 'Plugin Name: Multisite Toolbar Additions', 'Plugin Name: Other', $candidate ) );
 check_update( $guard->validate_source( $directory, '', null, $context )->get_error_code() === 'mstba_update_identity', 'Wrong plugin identity rejected' );
 check_update( $guard->validate_source( $directory, '', null, [ 'plugin' => 'other/other.php' ] ) === $directory, 'Other plugin packages untouched' );
+// Core bulk calls omit type/action for each package. Reject spoofed or conflicting contexts.
+$bulk = new Plugin_Upgrader(); $bulk->bulk = true;
+file_put_contents( $main, str_replace( 'Version: 4.0.1', 'Version: 4.0.2', $candidate ) );
+check_update( is_wp_error( $guard->validate_source( $directory, '', $bulk, [ 'plugin' => $file ] ) ), 'Bulk candidate version checked before replacement' );
+file_put_contents( $main, $candidate );
+check_update( $guard->validate_source( $directory, '', $bulk, [ 'plugin' => $file ] ) === $directory, 'Valid bulk candidate accepted' );
+check_update( !$guard->update_context( null, [ 'plugin' => $file ] ), 'Missing context cannot impersonate a bulk upgrader' );
+check_update( !$guard->update_context( $bulk, [ 'plugin' => $file, 'type' => 'theme' ] ), 'Conflicting bulk type rejected' );
+check_update( !$guard->update_context( $bulk, [ 'plugin' => $file, 'action' => 'install' ] ), 'Conflicting bulk action rejected' );
+check_update( !$guard->update_context( $bulk, [ 'plugin' => 'other/plugin.php' ] ), 'Other bulk plugin is untouched' );
+file_put_contents( $main, str_replace( 'Plugin Name: Multisite Toolbar Additions', 'Plugin Name: Other', $candidate ) );
+check_update( is_wp_error( $guard->validate_source( $directory, '', $bulk, [ 'plugin' => $file ] ) ), 'Wrong identity rejected in Core bulk path' );
+file_put_contents( $main, str_replace( 'Requires at least: 6.7', 'Requires at least: 99.0', $candidate ) );
+check_update( is_wp_error( $guard->validate_source( $directory, '', $bulk, [ 'plugin' => $file ] ) ), 'Incompatible bulk platform rejected' );
 unlink( $main ); rmdir( $directory ); $GLOBALS['wp_filesystem'] = $old_fs;
 if ( false === $old_updates ) { delete_site_transient( 'update_plugins' ); } else { set_site_transient( 'update_plugins', $old_updates ); }
 if ( false === $before ) { delete_site_transient( $cache ); } else { set_site_transient( $cache, $before ); }

@@ -1,627 +1,1025 @@
-# Multisite Toolbar Additions 4.0.0
-# Copyright (C) 2026 David Decker – DECKERWEB
-# This file is distributed under the GPL-2.0-or-later license.
+# Copyright © 2012–2026 David Decker – DECKERWEB. GPL-2.0-or-later.
 msgid ""
-msgstr "Project-Id-Version: Multisite Toolbar Additions 4.0.0\nReport-Msgid-Bugs-To: https://github.com/deckerweb/multisite-toolbar-additions/issues\nPOT-Creation-Date: 2026-09-29 23:00+0200\nPO-Revision-Date: 2026-09-29 23:00+0200\nLast-Translator: DECKERWEB\nLanguage-Team: German\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: de_DE_formal\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: Multisite Toolbar Additions 4.0.0\nReport-Msgid-Bugs-To: https://github.com/deckerweb/multisite-toolbar-additions/issues\nPOT-Creation-Date: 2026-10-07 12:00+0200\nPO-Revision-Date: 2026-10-07 12:00+0200\nLast-Translator: David Decker – DECKERWEB\nLanguage-Team: German\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: de_DE_formal\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/Admin.php:29 src/Admin.php:83
-msgid "Multisite Toolbar Additions"
-msgstr "Multisite Toolbar Additions"
-
-#: src/Admin.php:29 src/Admin.php:78
-msgid "Toolbar Additions"
-msgstr "Toolbar-Erweiterungen"
-
-#: src/Admin.php:36 src/Admin.php:36 src/Shortcuts.php:37
-msgid "Network Plugins"
-msgstr "Netzwerk-Plugins"
-
-#: src/Admin.php:37 src/Admin.php:37 src/Shortcuts.php:104
-msgid "Install Plugin"
-msgstr "Plugin installieren"
-
-#: src/Admin.php:38 src/Admin.php:38 src/Shortcuts.php:38
-msgid "Network Themes"
-msgstr "Netzwerk-Themes"
-
-#: src/Admin.php:42
-msgid "Settings"
-msgstr "Einstellungen"
-
-#: src/Admin.php:47
-msgid "You cannot change toolbar settings."
-msgstr "Keine Berechtigung zum Ändern der Toolbar-Einstellungen."
-
-#: src/Admin.php:78 src/Settings.php:84
-msgid "Choose an active website in this network."
-msgstr "Bitte eine aktive Website in diesem Netzwerk auswählen."
-
-#: src/Admin.php:78
-msgid "Back to settings"
-msgstr "Zurück zu den Einstellungen"
-
-#: src/Admin.php:84
-msgid "Settings saved."
-msgstr "Einstellungen gespeichert."
-
-#: src/Admin.php:85
-msgid "Use a WordPress menu as your toolbar. Its source is independent of the active theme."
-msgstr "Ein WordPress-Menü als Toolbar verwenden. Die Menüquelle ist unabhängig vom aktiven Theme."
-
-#: src/Admin.php:93 src/Admin.php:133
-msgid "Source website"
-msgstr "Website als Menüquelle"
-
-#: src/Admin.php:96
-msgid "Other website ID"
-msgstr "Andere Website-ID"
-
-#: src/Admin.php:97
-msgid "Load menus"
-msgstr "Menüs laden"
-
-#: src/Admin.php:97
-msgid "Choose a source website, then load its menus. Loading does not save your settings."
-msgstr "Bitte die Website auswählen und ihre Menüs laden. Dadurch werden noch keine Einstellungen gespeichert."
-
-#: src/Admin.php:101
-msgid "Your toolbar menu"
-msgstr "Eigenes Toolbar-Menü"
-
-#: src/Admin.php:102
-msgid "Show the custom toolbar menu"
-msgstr "Eigenes Toolbar-Menü anzeigen"
-
-#: src/Admin.php:104
-msgid "WordPress menu"
-msgstr "WordPress-Menü"
-
-#: src/Admin.php:105
-msgid "Use the existing toolbar menu location"
-msgstr "Bisherige Toolbar-Menüposition verwenden"
-
-#: src/Admin.php:107
-msgid "Create or edit menus"
-msgstr "Menüs erstellen oder bearbeiten"
-
-#: src/Admin.php:107
-msgid "Choose a menu directly to keep it through theme changes. The location option is provided for upgrades from 3.x."
-msgstr "Eine direkte Menüauswahl bleibt beim Theme-Wechsel erhalten. Die bisherige Menüposition dient dem Umstieg von Version 3.x."
-
-#: src/Admin.php:109 src/Admin.php:135
-msgid "Show in"
-msgstr "Anzeigen in"
-
-#: src/Admin.php:109
-msgid "Frontend and administration"
-msgstr "Website und Verwaltung"
-
-#: src/Admin.php:109
-msgid "Frontend only"
-msgstr "Nur auf der Website"
-
-#: src/Admin.php:109
-msgid "Administration only"
-msgstr "Nur in der Verwaltung"
-
-#: src/Admin.php:111
-msgid "Visible to"
-msgstr "Sichtbar für"
-
-#: src/Admin.php:111
-msgid "Super administrators only"
-msgstr "Nur Super-Administratoren"
-
-#: src/Admin.php:111
-msgid "Super administrators and website administrators"
-msgstr "Super-Administratoren und Website-Administratoren"
-
-#: src/Admin.php:111
-msgid "Visibility grants no permission to linked pages. Only super administrators may edit the shared toolbar menu."
-msgstr "Sichtbarkeit gewährt keine zusätzlichen Zugriffsrechte. Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeiten."
-
-#: src/Admin.php:113
-msgid "Position"
-msgstr "Position"
-
-#: src/Admin.php:113
-msgid "First on the left"
-msgstr "Links an erster Stelle"
-
-#: src/Admin.php:113
-msgid "Last on the left"
-msgstr "Links an letzter Stelle"
-
-#: src/Admin.php:113
-msgid "Before the following item"
-msgstr "Vor dem folgenden Eintrag"
-
-#: src/Admin.php:113
-msgid "After the following item"
-msgstr "Nach dem folgenden Eintrag"
-
-#: src/Admin.php:113
-msgid "On the right, beside the account menu"
-msgstr "Rechts neben dem Benutzerkonto"
-
-#: src/Admin.php:114
-msgid "Reference item"
-msgstr "Bezugseintrag"
-
-#: src/Admin.php:114
-msgid "WordPress logo"
-msgstr "WordPress-Logo"
-
-#: src/Admin.php:114
-msgid "My Sites"
-msgstr "Meine Websites"
-
-#: src/Admin.php:114
-msgid "Website name"
-msgstr "Website-Name"
-
-#: src/Admin.php:114
-msgid "Updates"
-msgstr "Aktualisierungen"
-
-#: src/Admin.php:114
-msgid "New content"
-msgstr "Neue Inhalte"
-
-#: src/Admin.php:114
-msgid "Comments"
-msgstr "Kommentare"
-
-#: src/Admin.php:114
-msgid "Used for before/after positions. If the item is absent, your menu appears last on the left."
-msgstr "Für die Position vor oder nach einem Eintrag. Fehlt dieser, erscheint das Menü links an letzter Stelle."
-
-#: src/Admin.php:115
-msgid "Child levels"
-msgstr "Untermenü-Ebenen"
-
-#: src/Admin.php:116
-msgid "All levels"
-msgstr "Alle Ebenen"
-
-#: src/Admin.php:117
 msgid "%d child level"
 msgid_plural "%d child levels"
-msgstr[0] "%d Untermenü-Ebene"
-msgstr[1] "%d Untermenü-Ebenen"
+msgstr[0] "%d Kindebene"
+msgstr[1] "%d Kindebenen"
 
-#: src/Admin.php:119
-msgid "Counted from the original menu root. One means root entries plus their direct children. Grouping does not change this limit."
-msgstr "Gezählt ab der ursprünglichen Menüwurzel. Eine Ebene zeigt Haupteinträge und ihre direkten Untereinträge. Die Gruppierung verändert diese Grenze nicht."
+msgid "%s is installed but inactive. Activate it first."
+msgstr "%s ist installiert, aber inaktiv. Bitte zuerst aktivieren."
 
-#: src/Admin.php:121
-msgid "Layout"
-msgstr "Darstellung"
+msgid "%s is missing. Install and activate it first."
+msgstr "%s fehlt. Bitte zuerst installieren und aktivieren."
 
-#: src/Admin.php:121
-msgid "Each root item in the toolbar"
-msgstr "Jeder Haupteintrag einzeln in der Toolbar"
+msgid "%s must be network activated first."
+msgstr "%s muss zuerst netzwerkweit aktiviert werden."
 
-#: src/Admin.php:121
-msgid "Everything under one toolbar item"
-msgstr "Alles unter einem gemeinsamen Toolbar-Eintrag"
+msgid "%s supports activation per site only."
+msgstr "%s unterstützt nur die Aktivierung je Website."
 
-#: src/Admin.php:122
-msgid "Group label"
-msgstr "Beschriftung des gemeinsamen Eintrags"
+msgid "Activate"
+msgstr "Aktivieren"
 
-#: src/Admin.php:123
-msgid "Useful shortcuts"
-msgstr "Nützliche Schnellzugriffe"
+msgid "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme."
+msgstr "Bricks QuickNav bitte je Website aktivieren, nachdem das Bricks-Theme oder ein Child-Theme ausgewählt wurde."
 
-#: src/Admin.php:123
-msgid "Shortcuts are shown only to administrators with permission for the destination."
-msgstr "Schnellzugriffe erscheinen nur für Administratoren mit den erforderlichen Zugriffsrechten."
-
-#: src/Admin.php:124
-msgid "Network administration and network New menu"
-msgstr "Netzwerkverwaltung und Netzwerk-Menü „Neu“"
-
-#: src/Admin.php:124
-msgid "Website administration, content types and Site Health"
-msgstr "Website-Verwaltung, Inhaltstypen und Website-Zustand"
-
-#: src/Admin.php:124
-msgid "Shortcuts for websites under My Sites"
-msgstr "Website-Schnellzugriffe unter „Meine Websites“"
-
-#: src/Admin.php:124
-msgid "Quick links to edit WordPress menus"
-msgstr "Schnellzugriffe zum Bearbeiten der WordPress-Menüs"
-
-#: src/Admin.php:124
-msgid "Detected plugin integrations"
-msgstr "Erkannte Plugin-Integrationen"
-
-#: src/Admin.php:124
-msgid "WordPress developer resources"
-msgstr "WordPress-Ressourcen für Entwickler"
-
-#: src/Admin.php:124
-msgid "Theme and plugin file editor shortcuts"
-msgstr "Schnellzugriffe auf Theme- und Plugin-Datei-Editoren"
-
-#: src/Admin.php:124
-msgid "Keep the toolbar visible in the fullscreen block editor"
-msgstr "Toolbar im Vollbildmodus des Block-Editors anzeigen"
-
-#: src/Admin.php:126
-msgid "Maximum websites with extra shortcuts"
-msgstr "Maximale Anzahl Websites mit zusätzlichen Schnellzugriffen"
-
-#: src/Admin.php:126
-msgid "Only websites already present in the toolbar are extended. Additional websites keep their normal WordPress links. File editors stay subject to WordPress security restrictions."
-msgstr "Nur bereits in der Toolbar vorhandene Websites erhalten zusätzliche Einträge. Weitere Websites behalten ihre normalen WordPress-Links. Datei-Editoren beachten die WordPress-Sicherheitsvorgaben."
-
-#: src/Admin.php:132
-msgid "Version"
-msgstr "Version"
-
-#: src/Admin.php:134
-msgid "Menu ID"
-msgstr "Menü-ID"
-
-#: src/Integrations.php:18
-msgid "Code Snippets"
-msgstr "Code Snippets"
-
-#: src/Integrations.php:19
-msgid "Network Code Snippets"
-msgstr "Netzwerk-Code-Snippets"
-
-#: src/Integrations.php:20
-msgid "Add Snippet"
-msgstr "Snippet hinzufügen"
-
-#: src/Integrations.php:21
-msgid "Add Network Snippet"
-msgstr "Netzwerk-Snippet hinzufügen"
-
-#: src/Integrations.php:27
-msgid "User Searches"
-msgstr "Suchanfragen"
-
-#: src/Integrations.php:30
 msgid "Activity Streams"
 msgstr "Aktivitätsprotokoll"
 
-#: src/Integrations.php:31
-msgid "Stream Settings"
-msgstr "Stream-Einstellungen"
-
-#: src/Integrations.php:34 src/Integrations.php:35
-msgid "Migrate Database"
-msgstr "Datenbank migrieren"
-
-#: src/Integrations.php:47
-msgid "Install via Git Updater"
-msgstr "Über Git Updater installieren"
-
-#: src/Integrations.php:48
-msgid "Install Theme via Git Updater"
-msgstr "Theme über Git Updater installieren"
-
-#: src/Integrations.php:63
-msgid "Export Widgets"
-msgstr "Widgets exportieren"
-
-#: src/Integrations.php:64
-msgid "Import Widgets"
-msgstr "Widgets importieren"
-
-#: src/MenuGuard.php:74 src/MenuGuard.php:92
-msgid "Only super administrators may edit the shared toolbar menu."
-msgstr "Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeiten."
-
-#: src/Plugin.php:23
-msgid "Toolbar Menu (legacy location)"
-msgstr "Toolbar-Menü (bisherige Menüposition)"
-
-#: src/Settings.php:94
-msgid "The selected menu does not exist on the source website. Load its menus and choose again."
-msgstr "Das ausgewählte Menü existiert nicht auf der Quellwebsite. Bitte ihre Menüs laden und erneut auswählen."
-
-#: src/Shortcuts.php:31
-msgid "Network Settings"
-msgstr "Netzwerkeinstellungen"
-
-#: src/Shortcuts.php:32
-msgid "Check for Updates"
-msgstr "Auf Aktualisierungen prüfen"
-
-#: src/Shortcuts.php:33
-msgid "Upgrade Network"
-msgstr "Netzwerk aktualisieren"
-
-#: src/Shortcuts.php:34
-msgid "Add Site"
-msgstr "Website hinzufügen"
-
-#: src/Shortcuts.php:35
-msgid "Add User"
-msgstr "Benutzer hinzufügen"
-
-#: src/Shortcuts.php:36
-msgid "Super Admins"
-msgstr "Super-Administratoren"
-
-#: src/Shortcuts.php:43
-msgid "New (Network)"
-msgstr "Neu (Netzwerk)"
-
-#: src/Shortcuts.php:45
-msgid "Website"
-msgstr "Website"
-
-#: src/Shortcuts.php:46
-msgid "User (Network)"
-msgstr "Benutzer (Netzwerk)"
-
-#: src/Shortcuts.php:49
-msgid "Dashboard"
-msgstr "Dashboard"
-
-#: src/Shortcuts.php:51 src/Shortcuts.php:98
-msgid "Toolbar Settings"
-msgstr "Toolbar-Einstellungen"
-
-#: src/Shortcuts.php:55
-msgid "Search Directory"
-msgstr "Verzeichnis durchsuchen"
-
-#: src/Shortcuts.php:56 src/Shortcuts.php:106
-msgid "Upload ZIP"
-msgstr "ZIP-Datei hochladen"
-
-#: src/Shortcuts.php:57
-msgid "Favorites"
-msgstr "Favoriten"
-
-#: src/Shortcuts.php:64
-msgid "Manage Content"
-msgstr "Inhalte verwalten"
-
-#: src/Shortcuts.php:71
-msgid "Media Library"
-msgstr "Mediathek"
-
-#: src/Shortcuts.php:72
-msgid "Media Listing"
-msgstr "Medienliste"
-
-#: src/Shortcuts.php:73
-msgid "Upload Files"
-msgstr "Dateien hochladen"
-
-#: src/Shortcuts.php:75 src/Shortcuts.php:128
-msgid "Site Editor"
-msgstr "Website-Editor"
-
-#: src/Shortcuts.php:77 src/Shortcuts.php:130
-msgid "Customizer"
-msgstr "Customizer"
-
-#: src/Shortcuts.php:79 src/Shortcuts.php:131
-msgid "Widgets"
-msgstr "Widgets"
-
-#: src/Shortcuts.php:80
-msgid "Widgets Customizer"
-msgstr "Widget-Customizer"
-
-#: src/Shortcuts.php:82
-msgid "Custom Background"
-msgstr "Hintergrund"
-
-#: src/Shortcuts.php:82
-msgid "Custom Header"
-msgstr "Header"
-
-#: src/Shortcuts.php:86 src/Shortcuts.php:125
-msgid "WordPress Menus"
-msgstr "WordPress-Menüs"
-
-#: src/Shortcuts.php:87
 msgid "Add Menu"
 msgstr "Menü hinzufügen"
 
-#: src/Shortcuts.php:88
-msgid "Menu Locations"
-msgstr "Menüpositionen"
+msgid "Add Network Snippet"
+msgstr "Netzwerk-Snippet hinzufügen"
 
-#: src/Shortcuts.php:91
-msgid "Shared Toolbar Menu"
-msgstr "Gemeinsames Toolbar-Menü"
+msgid "Add Site"
+msgstr "Website hinzufügen"
 
-#: src/Shortcuts.php:93
-msgid "Site Health"
-msgstr "Website-Zustand"
+msgid "Add Snippet"
+msgstr "Snippet hinzufügen"
 
-#: src/Shortcuts.php:94
-msgid "Debug Information"
-msgstr "Debug-Informationen"
+msgid "Add User"
+msgstr "Benutzer hinzufügen"
 
-#: src/Shortcuts.php:95
-msgid "Tools"
-msgstr "Werkzeuge"
+msgid "Admin"
+msgstr "Administration"
 
-#: src/Shortcuts.php:96
-msgid "Export"
-msgstr "Exportieren"
+msgid "Administration only"
+msgstr "Nur in der Verwaltung"
 
-#: src/Shortcuts.php:97
-msgid "Import"
-msgstr "Importieren"
+msgid "After the following item"
+msgstr "Nach dem folgenden Eintrag"
 
-#: src/Shortcuts.php:100
-msgid "Plugins"
-msgstr "Plugins"
+msgid "All"
+msgstr "Alle"
 
-#: src/Shortcuts.php:101
-msgid "Themes"
-msgstr "Themes"
+msgid "All levels"
+msgstr "Alle Ebenen"
 
-#: src/Shortcuts.php:104
-msgid "Install Theme"
-msgstr "Theme installieren"
+msgid "Already active"
+msgstr "Bereits aktiv"
 
-#: src/Shortcuts.php:109
-msgid "Theme File Editor"
-msgstr "Theme-Datei-Editor"
+msgid "Apr"
+msgstr "Apr"
 
-#: src/Shortcuts.php:110
-msgid "Plugin File Editor"
-msgstr "Plugin-Datei-Editor"
+msgid "April"
+msgstr "April"
 
-#: src/Shortcuts.php:122
-msgid "Site Settings"
-msgstr "Website-Einstellungen"
+msgid "Archive contains too many files."
+msgstr "Das Archiv enthält zu viele Dateien."
 
-#: src/Shortcuts.php:123
-msgid "Site Plugins"
-msgstr "Website-Plugins"
+msgid "Archive symlinks are not permitted."
+msgstr "Symbolische Verknüpfungen sind im Archiv nicht erlaubt."
 
-#: src/Shortcuts.php:124
-msgid "Site Themes"
-msgstr "Website-Themes"
+msgid "As of "
+msgstr "Stand: "
 
-#: src/Shortcuts.php:126
-msgid "Site Tools"
-msgstr "Website-Werkzeuge"
+msgid "Aug"
+msgstr "Aug"
 
-#: src/Shortcuts.php:139
-msgid "Developer Resources"
-msgstr "Entwickler-Ressourcen"
+msgid "August"
+msgstr "August"
 
-#: src/Shortcuts.php:141
-msgid "Plugin Handbook"
-msgstr "Plugin-Handbuch"
+msgid "Back to deckerweb"
+msgstr "Zurück zu deckerweb"
 
-#: src/Shortcuts.php:142
-msgid "Theme Handbook"
-msgstr "Theme-Handbuch"
+msgid "Back to settings"
+msgstr "Zurück zu den Einstellungen"
 
-#: src/Shortcuts.php:143
+msgid "Before the following item"
+msgstr "Vor dem folgenden Eintrag"
+
 msgid "Block Editor Handbook"
 msgstr "Block-Editor-Handbuch"
 
-#: src/Shortcuts.php:144
-msgid "Coding Standards"
-msgstr "Programmierstandards"
+msgid "Builder"
+msgstr "Builder"
 
-#: src/Shortcuts.php:145
-msgid "Get Involved"
-msgstr "Mitwirken"
+msgid "Cannot create temporary file."
+msgstr "Temporäre Datei konnte nicht erstellt werden."
 
-#: src/Admin.php:122
-msgid "Leave empty to use the selected menu’s name. A custom label overrides it."
-msgstr "Leer lassen, um den Namen des ausgewählten Menüs zu übernehmen. Eine eigene Beschriftung hat Vorrang."
+msgid "Cannot create verified archive."
+msgstr "Geprüftes Archiv konnte nicht erstellt werden."
 
-#: src/Admin.php
-msgid "Upload Plugin ZIP"
-msgstr "Plugin-ZIP hochladen"
+msgid "Cannot finalize archive."
+msgstr "Archiv konnte nicht abgeschlossen werden."
 
-#: src/Admin.php
-msgid "Upload Theme ZIP"
-msgstr "Theme-ZIP hochladen"
+msgid "Cannot normalize archive."
+msgstr "Archiv konnte nicht aufbereitet werden."
 
-#: src/Admin.php
-msgid "Show Plugins under New in the toolbar"
-msgstr "Plugins unter „+ Neu“ in der Toolbar anzeigen"
+msgid "Cannot read archive entry."
+msgstr "Archiveintrag konnte nicht gelesen werden."
 
-#: src/Admin.php
-msgid "Show Themes under New in the toolbar"
-msgstr "Themes unter „+ Neu“ in der Toolbar anzeigen"
+msgid "Catalog URL"
+msgstr "Katalog-URL"
 
-#: src/Admin.php
-msgid "Show the plugin ZIP upload submenu"
-msgstr "Untermenü „Plugin-ZIP hochladen“ anzeigen"
-
-#: src/Admin.php
-msgid "Show the theme ZIP upload submenu"
-msgstr "Untermenü „Theme-ZIP hochladen“ anzeigen"
-
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "Toolbar settings"
-msgstr "Toolbar-Einstellungen"
-
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "Settings sections"
-msgstr "Einstellungsbereiche"
-
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "Plugin information"
-msgstr "Über das Plugin"
-
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "Plugin website"
-msgstr "Plugin-Website"
-
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "Close"
-msgstr "Schließen"
-
-#: src/PageChrome.php src/GitHubUpdates.php
 msgid "Changelog"
 msgstr "Changelog"
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "Documentation"
-msgstr "Dokumentation"
+msgid "Check for Updates"
+msgstr "Auf Aktualisierungen prüfen"
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar."
-msgstr "Nützliche Netzwerk- und Website-Verknüpfungen sowie ein konfigurierbares WordPress-Menü in der Toolbar."
+msgid "Child levels"
+msgstr "Untermenü-Ebenen"
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "The update filesystem is unavailable. Please try again."
-msgstr "Das Dateisystem für Updates ist nicht verfügbar. Bitte erneut versuchen."
+msgid "Choose a menu directly to keep it through theme changes. The location option is provided for upgrades from 3.x."
+msgstr "Eine direkte Menüauswahl bleibt beim Theme-Wechsel erhalten. Die bisherige Menüposition dient dem Umstieg von Version 3.x."
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "The GitHub package does not contain the Multisite Toolbar Additions plugin file."
-msgstr "Das GitHub-Paket enthält die Plugin-Datei von Multisite Toolbar Additions nicht."
+msgid "Choose a source website, then load its menus. Loading does not save your settings."
+msgstr "Bitte die Website auswählen und ihre Menüs laden. Dadurch werden noch keine Einstellungen gespeichert."
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "The GitHub package could not be prepared. The installed version has been kept."
-msgstr "Das GitHub-Paket konnte nicht vorbereitet werden. Die installierte Version bleibt erhalten."
+msgid "Choose an active website in this network."
+msgstr "Bitte eine aktive Website in diesem Netzwerk auswählen."
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "The update package could not be checked."
-msgstr "Das Update-Paket konnte nicht geprüft werden."
+msgid "Close"
+msgstr "Schließen"
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "The package identity or version does not match a newer Multisite Toolbar Additions release."
-msgstr "Paketidentität oder Version passen nicht zu einem neueren Release von Multisite Toolbar Additions."
+msgid "Code Snippets"
+msgstr "Code Snippets"
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "The package version differs from the offered update. Please check for updates again."
-msgstr "Die Paketversion weicht vom angebotenen Update ab. Bitte erneut nach Updates suchen."
+msgid "Coding Standards"
+msgstr "Programmierstandards"
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "The update package has missing or invalid WordPress/PHP requirements."
-msgstr "Die WordPress-/PHP-Anforderungen im Update-Paket fehlen oder sind ungültig."
+msgid "Comments"
+msgstr "Kommentare"
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "This release requires a newer WordPress or PHP version. The installed version has been kept."
-msgstr "Dieses Release benötigt eine neuere WordPress- oder PHP-Version. Die installierte Version bleibt erhalten."
+msgid "Commerce"
+msgstr "Commerce"
 
-#: src/PageChrome.php src/GitHubUpdates.php
+msgid "Compatible additions only"
+msgstr "Nur passende Ergänzungen"
+
+msgid "Content"
+msgstr "Inhalte"
+
 msgid "Could not access the update filesystem."
-msgstr "Auf das Update-Dateisystem konnte nicht zugegriffen werden."
+msgstr "Auf das Dateisystem für das Update konnte nicht zugegriffen werden."
 
-#: src/PageChrome.php src/GitHubUpdates.php
-msgid "GitHub release does not contain the plugin main file."
-msgstr "Das GitHub-Release enthält die Hauptdatei des Plugins nicht."
+msgid "Could not create the update download file."
+msgstr "Die Datei für den Update-Download konnte nicht erstellt werden."
 
-#: src/PageChrome.php src/GitHubUpdates.php
 msgid "Could not prepare the GitHub release package."
 msgstr "Das GitHub-Release-Paket konnte nicht vorbereitet werden."
 
-#: src/PageChrome.php
+msgid "Counted from the original menu root. One means root entries plus their direct children. Grouping does not change this limit."
+msgstr "Gezählt ab der ursprünglichen Menüwurzel. Eine Ebene zeigt Haupteinträge und ihre direkten Untereinträge. Die Gruppierung verändert diese Grenze nicht."
+
+msgid "Create or edit menus"
+msgstr "Menüs erstellen oder bearbeiten"
+
+msgid "Custom Background"
+msgstr "Hintergrund"
+
+msgid "Custom Header"
+msgstr "Header"
+
+msgid "Customizer"
+msgstr "Customizer"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Debug Information"
+msgstr "Debug-Informationen"
+
+msgid "Dec"
+msgstr "Dez"
+
+msgid "December"
+msgstr "Dezember"
+
+msgid "Delete Library settings when removing the last host plugin"
+msgstr "Library-Einstellungen beim Entfernen des letzten Host-Plugins ebenfalls löschen"
+
+msgid "Delete this plugin’s settings when uninstalling"
+msgstr "Einstellungen dieses Plugins bei Deinstallation löschen"
+
+msgid "Details & requirements"
+msgstr "Details & Voraussetzungen"
+
+msgid "Detected plugin integrations"
+msgstr "Erkannte Plugin-Integrationen"
+
+msgid "Developer Resources"
+msgstr "Entwickler-Ressourcen"
+
+msgid "Discover more plugins by deckerweb"
+msgstr "Weitere Plugins von deckerweb entdecken"
+
+msgid "Dismiss permanently"
+msgstr "Dauerhaft schließen"
+
+msgid "Documentation"
+msgstr "Dokumentation"
+
+msgid "Done. The plugin is active."
+msgstr "Erledigt. Das Plugin ist aktiv."
+
+msgid "Each root item in the toolbar"
+msgstr "Jeder Haupteintrag einzeln in der Toolbar"
+
+msgid "Enter a catalog URL first."
+msgstr "Bitte zuerst eine Katalog-URL eintragen."
+
+msgid "Everything under one toolbar item"
+msgstr "Alles unter einem gemeinsamen Toolbar-Eintrag"
+
+msgid "Expanded archive is too large."
+msgstr "Das entpackte Archiv ist zu groß."
+
+msgid "Export"
+msgstr "Exportieren"
+
+msgid "Export Widgets"
+msgstr "Widgets exportieren"
+
+msgid "F j, Y"
+msgstr "j. F Y"
+
+msgid "Favorites"
+msgstr "Favoriten"
+
+msgid "Feb"
+msgstr "Feb"
+
+msgid "February"
+msgstr "Februar"
+
+msgid "Filter"
+msgstr "Filtern"
+
+msgid "First on the left"
+msgstr "Links an erster Stelle"
+
+msgid "Fits my installation"
+msgstr "Passt zu meiner Installation"
+
+msgid "Fixed"
+msgstr "Behoben"
+
+msgid "Fri"
+msgstr "Fr"
+
+msgid "Friday"
+msgstr "Freitag"
+
+msgid "Frontend and administration"
+msgstr "Website und Verwaltung"
+
+msgid "Frontend only"
+msgstr "Nur auf der Website"
+
+msgid "Get Involved"
+msgstr "Mitwirken"
+
+msgid "GitHub Stars"
+msgstr "GitHub-Sterne"
+
+msgid "GitHub release does not contain the plugin main file."
+msgstr "Der GitHub-Release enthält nicht die Hauptdatei des Plugins."
+
+msgid "Group label"
+msgstr "Beschriftung des gemeinsamen Eintrags"
+
+msgid "Hide catalog"
+msgstr "Katalog ausblenden"
+
+msgid "Import"
+msgstr "Importieren"
+
+msgid "Import Widgets"
+msgstr "Widgets importieren"
+
+msgid "Improved"
+msgstr "Verbessert"
+
+msgid "Install Plugin"
+msgstr "Plugin installieren"
+
+msgid "Install Theme"
+msgstr "Theme installieren"
+
+msgid "Install Theme via Git Updater"
+msgstr "Theme über Git Updater installieren"
+
+msgid "Install and activate this plugin in the network admin."
+msgstr "Dieses Plugin bitte im Netzwerk-Admin installieren und aktivieren."
+
+msgid "Install deckerweb plugin"
+msgstr "deckerweb-Plugin installieren"
+
+msgid "Install now"
+msgstr "Jetzt installieren"
+
+msgid "Install via Git Updater"
+msgstr "Über Git Updater installieren"
+
+msgid "Installed"
+msgstr "Installiert"
+
+msgid "Installed: "
+msgstr "Installiert: "
+
+msgid "Invalid GitHub repository URL."
+msgstr "Ungültige GitHub-Repository-URL."
+
+msgid "Invalid ZIP archive."
+msgstr "Ungültiges ZIP-Archiv."
+
+msgid "Invalid approval flag."
+msgstr "Ungültige Freigabeangabe."
+
+msgid "Invalid authentication provider."
+msgstr "Ungültiger Authentifizierungsanbieter."
+
+msgid "Invalid catalog field: "
+msgstr "Ungültiges Katalogfeld: "
+
+msgid "Invalid catalog revision."
+msgstr "Ungültiger Katalogstand."
+
+msgid "Invalid catalog schema."
+msgstr "Ungültiges Katalogformat."
+
+msgid "Invalid catalog timestamp."
+msgstr "Ungültiger Katalogzeitpunkt."
+
+msgid "Invalid dependencies."
+msgstr "Ungültige Abhängigkeiten."
+
+msgid "Invalid dependency URL."
+msgstr "Ungültige URL einer Abhängigkeit."
+
+msgid "Invalid dependency metadata."
+msgstr "Ungültige Angaben zu Abhängigkeiten."
+
+msgid "Invalid display field."
+msgstr "Ungültiges Anzeigefeld."
+
+msgid "Invalid icon color."
+msgstr "Ungültige Icon-Farbe."
+
+msgid "Invalid icon label."
+msgstr "Ungültiges Icon-Kürzel."
+
+msgid "Invalid identity or release metadata."
+msgstr "Ungültige Plugin- oder Release-Angaben."
+
+msgid "Invalid local icon."
+msgstr "Ungültiges lokales Icon."
+
+msgid "Invalid network policy."
+msgstr "Ungültige Netzwerkregel."
+
+msgid "Invalid network requirement."
+msgstr "Ungültige Netzwerkanforderung."
+
+msgid "Invalid platform version."
+msgstr "Ungültige Plattformversion."
+
+msgid "Invalid plugin series."
+msgstr "Ungültige Plugin-Serie."
+
+msgid "Invalid star count."
+msgstr "Ungültige Anzahl der GitHub-Sterne."
+
+msgid "Invalid stars date."
+msgstr "Ungültiges Datum der GitHub-Sterne."
+
+msgid "Jan"
+msgstr "Jan"
+
+msgid "January"
+msgstr "Januar"
+
+msgid "Jul"
+msgstr "Jul"
+
+msgid "July"
+msgstr "Juli"
+
+msgid "Jun"
+msgstr "Jun"
+
+msgid "June"
+msgstr "Juni"
+
+msgid "Keep the toolbar visible in the fullscreen block editor"
+msgstr "Toolbar im Vollbildmodus des Block-Editors anzeigen"
+
+msgid "Last on the left"
+msgstr "Links an letzter Stelle"
+
+msgid "Layout"
+msgstr "Darstellung"
+
+msgid "Leave empty to use the selected menu’s name. A custom label overrides it."
+msgstr "Leer lassen, um den Namen des ausgewählten Menüs zu übernehmen. Eine eigene Beschriftung hat Vorrang."
+
+msgid "Library"
+msgstr "Library"
+
+msgid "Library changelog"
+msgstr "Library-Änderungsverlauf"
+
+msgid "Library settings"
+msgstr "Library-Einstellungen"
+
+msgid "Library settings saved."
+msgstr "Library-Einstellungen gespeichert."
+
+msgid "Load menus"
+msgstr "Menüs laden"
+
+msgid "Manage Content"
+msgstr "Inhalte verwalten"
+
+msgid "Manage installed plugins"
+msgstr "Installierte Plugins verwalten"
+
 msgid "Many sites. One move."
 msgstr "Viele Sites. Ein Handgriff."
+
+msgid "Mar"
+msgstr "Mär"
+
+msgid "March"
+msgstr "März"
+
+msgid "Maximum websites with extra shortcuts"
+msgstr "Maximale Anzahl Websites mit zusätzlichen Schnellzugriffen"
+
+msgid "May"
+msgstr "Mai"
+
+msgid "Media Library"
+msgstr "Mediathek"
+
+msgid "Media Listing"
+msgstr "Medienliste"
+
+msgid "Menu ID"
+msgstr "Menü-ID"
+
+msgid "Menu Locations"
+msgstr "Menüpositionen"
+
+msgid "Migrate Database"
+msgstr "Datenbank migrieren"
+
+msgid "Misc"
+msgstr "Sonstiges"
+
+msgid "Missing display text."
+msgstr "Anzeigetext fehlt."
+
+msgid "Missing plugin header."
+msgstr "Plugin-Header fehlt."
+
+msgid "Mon"
+msgstr "Mo"
+
+msgid "Monday"
+msgstr "Montag"
+
+msgid "More by deckerweb"
+msgstr "Mehr von deckerweb"
+
+msgid "Multisite"
+msgstr "Multisite"
+
+msgid "Multisite Toolbar Additions"
+msgstr "Multisite Toolbar Additions"
+
+msgid "My Sites"
+msgstr "Meine Websites"
+
+msgid "Network Code Snippets"
+msgstr "Netzwerk-Code-Snippets"
+
+msgid "Network Plugins"
+msgstr "Netzwerk-Plugins"
+
+msgid "Network Reports"
+msgstr "Netzwerk-Berichte"
+
+msgid "Network Settings"
+msgstr "Netzwerkeinstellungen"
+
+msgid "Network Themes"
+msgstr "Netzwerk-Themes"
+
+msgid "Network activate"
+msgstr "Netzwerkweit aktivieren"
+
+msgid "Network administration and network New menu"
+msgstr "Netzwerkverwaltung und Netzwerk-Menü „Neu“"
+
+msgid "Network permission denied."
+msgstr "Keine Berechtigung für das Netzwerk."
+
+msgid "New"
+msgstr "Neu"
+
+msgid "New (Network)"
+msgstr "Neu (Netzwerk)"
+
+msgid "New content"
+msgstr "Neue Inhalte"
+
+msgid "No approved plugins match this selection."
+msgstr "Keine freigegebenen Plugins passen zu dieser Auswahl."
+
+msgid "Nov"
+msgstr "Nov"
+
+msgid "November"
+msgstr "November"
+
+msgid "Oct"
+msgstr "Okt"
+
+msgid "October"
+msgstr "Oktober"
+
+msgid "Off by default. Applies only when no other host is installed, including inactive hosts. Removes Library settings, installation records and introduction status. Installed plugins, their content and other plugin settings remain unchanged. Network data is shared across sites."
+msgstr "Standardmäßig ausgeschaltet. Gilt nur, wenn kein weiterer Host installiert ist, auch kein deaktivierter. Entfernt Library-Einstellungen, Installationszuordnung und den Status des Einführungshinweises. Installierte Plugins, deren Inhalte und Einstellungen anderer Plugins bleiben erhalten. Netzwerkdaten werden gemeinsam von den Websites genutzt."
+
+msgid "Off by default. Deactivation keeps your data. Uninstall always clears this plugin’s update cache. This option deletes toolbar settings for this site or network; WordPress menus, installed plugins and shared Library data are not deleted by it."
+msgstr "Standardmäßig aus. Deaktivierung erhält Ihre Daten. Deinstallation leert immer den Updatecache dieses Plugins. Diese Option löscht Toolbar-Einstellungen für diese Website bzw. das Netzwerk; WordPress-Menüs, installierte Plugins und gemeinsame Library-Daten werden dadurch nicht gelöscht."
+
+msgid "On the right, beside the account menu"
+msgstr "Rechts neben dem Benutzerkonto"
+
+msgid "Online catalog"
+msgstr "Online-Katalog"
+
+msgid "Only HTTPS on raw.githubusercontent.com/deckerweb. The server receives the requesting IP address. GitHub is contacted when installing a release."
+msgstr "Nur HTTPS auf raw.githubusercontent.com/deckerweb. Der Server sieht die anfragende IP-Adresse. Beim Installieren eines Releases wird GitHub kontaktiert."
+
+msgid "Only approved releases"
+msgstr "Nur freigegebene Releases"
+
+msgid "Only super administrators may edit the shared toolbar menu."
+msgstr "Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeiten."
+
+msgid "Only websites already present in the toolbar are extended. Additional websites keep their normal WordPress links. File editors stay subject to WordPress security restrictions."
+msgstr "Nur bereits in der Toolbar vorhandene Websites erhalten zusätzliche Einträge. Weitere Websites behalten ihre normalen WordPress-Links. Datei-Editoren beachten die WordPress-Sicherheitsvorgaben."
+
+msgid "Open catalog"
+msgstr "Katalog öffnen"
+
+msgid "Optional. The bundled catalog works immediately. Catalog requests are cached for 24 hours. No site URL, plugin list or usage data is sent."
+msgstr "Optional. Der mitgelieferte Katalog funktioniert sofort. Katalogabfragen werden 24 Stunden zwischengespeichert. Keine Website-URL, Plugin-Liste oder Nutzungsdaten werden übertragen."
+
+msgid "Other website ID"
+msgstr "Andere Website-ID"
+
+msgid "PHP ZIP support is required."
+msgstr "PHP-ZIP-Unterstützung wird benötigt."
+
+msgid "POST required."
+msgstr "Eine POST-Anfrage ist erforderlich."
+
+msgid "Permission denied."
+msgstr "Keine Berechtigung."
+
+msgid "Planned: "
+msgstr "Geplant: "
+
+msgid "Plugin File Editor"
+msgstr "Plugin-Datei-Editor"
+
+msgid "Plugin Handbook"
+msgstr "Plugin-Handbuch"
+
+msgid "Plugin identity or version does not match the catalog."
+msgstr "Plugin oder Version stimmt nicht mit dem Katalog überein."
+
+msgid "Plugin information"
+msgstr "Über das Plugin"
+
+msgid "Plugin is not installed."
+msgstr "Das Plugin ist nicht installiert."
+
+msgid "Plugin series"
+msgstr "Plugin-Serien"
+
+msgid "Plugin website"
+msgstr "Plugin-Website"
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "Position"
+msgstr "Position"
+
+msgid "Private mode must be boolean."
+msgstr "Der Private-Modus muss ein boolescher Wert sein."
+
+msgid "Product website"
+msgstr "Produktwebsite"
+
+msgid "Quick links to edit WordPress menus"
+msgstr "Schnellzugriffe zum Bearbeiten der WordPress-Menüs"
+
+msgid "Reference item"
+msgstr "Bezugseintrag"
+
+msgid "Refresh catalog"
+msgstr "Katalog aktualisieren"
+
+msgid "Release 1.0.0 is being prepared. Installation will be available after package verification."
+msgstr "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar."
+
+msgid "Release checksum is verified before installation. Activation is a separate step."
+msgstr "Vor der Installation wird die Release-Prüfsumme geprüft. Die Aktivierung erfolgt separat."
+
+msgid "Release in preparation"
+msgstr "Release in Vorbereitung"
+
+msgid "Release must contain exactly the approved plugin directory."
+msgstr "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
+
+msgid "Repository & documentation"
+msgstr "Repository & Dokumentation"
+
+msgid "Requirements shown are preliminary until the stable release is verified."
+msgstr "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig."
+
+msgid "Requires PHP %s or newer."
+msgstr "Benötigt PHP %s oder neuer."
+
+msgid "Requires WordPress %s or newer."
+msgstr "Benötigt WordPress %s oder neuer."
+
+msgid "Requires a WordPress Multisite network."
+msgstr "Benötigt ein WordPress-Multisite-Netzwerk."
+
+msgid "Reset filters"
+msgstr "Filter zurücksetzen"
+
+msgid "Retrieve approved catalog updates online"
+msgstr "Katalogfreigaben online aktualisieren"
+
+msgid "Sat"
+msgstr "Sa"
+
+msgid "Saturday"
+msgstr "Samstag"
+
+msgid "Save settings"
+msgstr "Einstellungen speichern"
+
+msgid "Scripts"
+msgstr "Scripte"
+
+msgid "Search Directory"
+msgstr "Verzeichnis durchsuchen"
+
+msgid "Search this catalog"
+msgstr "Diesen Katalog durchsuchen"
+
+msgid "See the release on GitHub."
+msgstr "Sehen Sie sich den Release auf GitHub an."
+
+msgid "Selected by deckerweb · Installed from GitHub releases"
+msgstr "Von deckerweb ausgewählt · Installation aus GitHub-Releases"
+
+msgid "Sep"
+msgstr "Sep"
+
+msgid "September"
+msgstr "September"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+msgid "Settings sections"
+msgstr "Einstellungsbereiche"
+
+msgid "Shared Toolbar Menu"
+msgstr "Gemeinsames Toolbar-Menü"
+
+msgid "Shortcuts are shown only to administrators with permission for the destination."
+msgstr "Schnellzugriffe erscheinen nur für Administratoren mit den erforderlichen Zugriffsrechten."
+
+msgid "Shortcuts for websites under My Sites"
+msgstr "Website-Schnellzugriffe unter „Meine Websites“"
+
+msgid "Show Plugins under New in the toolbar"
+msgstr "Plugins unter „+ Neu“ in der Toolbar anzeigen"
+
+msgid "Show Themes under New in the toolbar"
+msgstr "Themes unter „+ Neu“ in der Toolbar anzeigen"
+
+msgid "Show deckerweb under Add Plugins"
+msgstr "deckerweb unter „Plugins hinzufügen“ anzeigen"
+
+msgid "Show in"
+msgstr "Anzeigen in"
+
+msgid "Show the custom toolbar menu"
+msgstr "Eigenes Toolbar-Menü anzeigen"
+
+msgid "Show the plugin ZIP upload submenu"
+msgstr "Untermenü „Plugin-ZIP hochladen“ anzeigen"
+
+msgid "Show the theme ZIP upload submenu"
+msgstr "Untermenü „Theme-ZIP hochladen“ anzeigen"
+
+msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
+msgstr "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar."
+
+msgid "Site Editor"
+msgstr "Website-Editor"
+
+msgid "Site Health"
+msgstr "Website-Zustand"
+
+msgid "Site Plugins"
+msgstr "Website-Plugins"
+
+msgid "Site Settings"
+msgstr "Website-Einstellungen"
+
+msgid "Site Themes"
+msgstr "Website-Themes"
+
+msgid "Site Tools"
+msgstr "Website-Werkzeuge"
+
+msgid "Small plugins. Practical improvements."
+msgstr "Kleine Plugins. Konkrete Verbesserungen."
+
+msgid "Source website"
+msgstr "Website als Menüquelle"
+
+msgid "Source: GitHub"
+msgstr "Quelle: GitHub"
+
+msgid "Stored data"
+msgstr "Gespeicherte Daten"
+
+msgid "Stream Settings"
+msgstr "Stream-Einstellungen"
+
+msgid "Sun"
+msgstr "So"
+
+msgid "Sunday"
+msgstr "Sonntag"
+
+msgid "Super Admins"
+msgstr "Super-Administratoren"
+
+msgid "Super administrators and website administrators"
+msgstr "Super-Administratoren und Website-Administratoren"
+
+msgid "Super administrators only"
+msgstr "Nur Super-Administratoren"
+
+msgid "The GitHub package could not be prepared. The installed version has been kept."
+msgstr "Das GitHub-Paket konnte nicht vorbereitet werden. Die installierte Version bleibt erhalten."
+
+msgid "The GitHub package does not contain the Multisite Toolbar Additions plugin file."
+msgstr "Das GitHub-Paket enthält die Plugin-Datei von Multisite Toolbar Additions nicht."
+
+msgid "The GitHub release could not be downloaded."
+msgstr "Das GitHub-Release konnte nicht heruntergeladen werden."
+
+msgid "The approved release changed. Refresh updates first."
+msgstr "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren."
+
+msgid "The approved release could not be verified."
+msgstr "Der freigegebene Release konnte nicht geprüft werden."
+
+msgid "The catalog URL is not an allowed first-party HTTPS endpoint."
+msgstr "Die Katalog-URL ist keine erlaubte eigene HTTPS-Quelle."
+
+msgid "The catalog could not be verified. Please try again later."
+msgstr "Der Katalog konnte nicht geprüft werden. Bitte später erneut versuchen."
+
+msgid "The catalog is disabled."
+msgstr "Der Katalog ist deaktiviert."
+
+msgid "The catalog is hidden."
+msgstr "Der Katalog ist ausgeblendet."
+
+msgid "The online catalog is unavailable. Showing cached or bundled entries; online approval is checked again before installation."
+msgstr "Der Online-Katalog ist nicht erreichbar. Angezeigt wird der gespeicherte oder mitgelieferte Katalog; vor der Installation wird die Online-Freigabe erneut geprüft."
+
+msgid "The online catalog source is not trusted."
+msgstr "Die Online-Katalogquelle ist nicht vertrauenswürdig."
+
+msgid "The package identity or version does not match a newer Multisite Toolbar Additions release."
+msgstr "Paketidentität oder Version passen nicht zu einem neueren Release von Multisite Toolbar Additions."
+
+msgid "The package version differs from the offered update. Please check for updates again."
+msgstr "Die Paketversion weicht vom angebotenen Update ab. Bitte erneut nach Updates suchen."
+
+msgid "The plugin must be installed in a stable slug directory."
+msgstr "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein."
+
+msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
+msgstr "Das private Update konnte nicht autorisiert werden. Prüfen Sie die Repository-Zugangsdaten und suchen Sie erneut nach Updates."
+
+msgid "The private update download failed. Check credentials and try again."
+msgstr "Der Download des privaten Updates ist fehlgeschlagen. Prüfen Sie die Zugangsdaten und versuchen Sie es erneut."
+
+msgid "The release checksum does not match. Installation stopped."
+msgstr "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt."
+
+msgid "The selected menu does not exist on the source website. Load its menus and choose again."
+msgstr "Das ausgewählte Menü existiert nicht auf der Quellwebsite. Bitte ihre Menüs laden und erneut auswählen."
+
+msgid "The update filesystem is unavailable. Please try again."
+msgstr "Das Dateisystem für Updates ist nicht verfügbar. Bitte erneut versuchen."
+
+msgid "The update package could not be checked."
+msgstr "Das Update-Paket konnte nicht geprüft werden."
+
+msgid "The update package has missing or invalid WordPress/PHP requirements."
+msgstr "Die WordPress-/PHP-Anforderungen im Update-Paket fehlen oder sind ungültig."
+
+msgid "Theme File Editor"
+msgstr "Theme-Datei-Editor"
+
+msgid "Theme Handbook"
+msgstr "Theme-Handbuch"
+
+msgid "Theme and plugin file editor shortcuts"
+msgstr "Schnellzugriffe auf Theme- und Plugin-Datei-Editoren"
+
+msgid "Themes"
+msgstr "Themes"
+
+msgid "This catalog requires a newer Library."
+msgstr "Dieser Katalog benötigt eine neuere Library."
+
+msgid "This plugin directory already exists. Use the installed plugin; it will not be overwritten."
+msgstr "Dieses Plugin-Verzeichnis existiert bereits. Bitte das installierte Plugin verwenden; es wird nicht überschrieben."
+
+msgid "This release is no longer approved."
+msgstr "Dieses Release ist nicht mehr freigegeben."
+
+msgid "This release is not approved."
+msgstr "Dieses Release ist nicht freigegeben."
+
+msgid "This release requires a newer WordPress or PHP version. The installed version has been kept."
+msgstr "Dieses Release benötigt eine neuere WordPress- oder PHP-Version. Die installierte Version bleibt erhalten."
+
+msgid "Thu"
+msgstr "Do"
+
+msgid "Thursday"
+msgstr "Donnerstag"
+
+msgid "Toolbar Additions"
+msgstr "Toolbar-Erweiterungen"
+
+msgid "Toolbar Menu (legacy location)"
+msgstr "Toolbar-Menü (bisherige Menüposition)"
+
+msgid "Toolbar Settings"
+msgstr "Toolbar-Einstellungen"
+
+msgid "Toolbar settings"
+msgstr "Toolbar-Einstellungen"
+
+msgid "Tools"
+msgstr "Werkzeuge"
+
+msgid "Tue"
+msgstr "Di"
+
+msgid "Tuesday"
+msgstr "Dienstag"
+
+msgid "Unsafe archive path."
+msgstr "Unsicherer Archivpfad."
+
+msgid "Untrusted release URL."
+msgstr "Nicht vertrauenswürdige Release-URL."
+
+msgid "Update %1$s to version %2$s or newer."
+msgstr "%1$s bitte auf Version %2$s oder neuer aktualisieren."
+
+msgid "Updates"
+msgstr "Aktualisierungen"
+
+msgid "Upgrade Network"
+msgstr "Netzwerk aktualisieren"
+
+msgid "Upload Files"
+msgstr "Dateien hochladen"
+
+msgid "Upload Plugin ZIP"
+msgstr "Plugin-ZIP hochladen"
+
+msgid "Upload Theme ZIP"
+msgstr "Theme-ZIP hochladen"
+
+msgid "Upload ZIP"
+msgstr "ZIP-Datei hochladen"
+
+msgid "Use a WordPress menu as your toolbar. Its source is independent of the active theme."
+msgstr "Ein WordPress-Menü als Toolbar verwenden. Die Menüquelle ist unabhängig vom aktiven Theme."
+
+msgid "Use the existing toolbar menu location"
+msgstr "Bisherige Toolbar-Menüposition verwenden"
+
+msgid "Use the settings form to save changes."
+msgstr "Verwenden Sie das Einstellungsformular zum Speichern."
+
+msgid "Used for before/after positions. If the item is absent, your menu appears last on the left."
+msgstr "Für die Position vor oder nach einem Eintrag. Fehlt dieser, erscheint das Menü links an letzter Stelle."
+
+msgid "Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar."
+msgstr "Nützliche Netzwerk- und Website-Verknüpfungen sowie ein konfigurierbares WordPress-Menü in der Toolbar."
+
+msgid "Useful shortcuts"
+msgstr "Nützliche Schnellzugriffe"
+
+msgid "User (Network)"
+msgstr "Benutzer (Netzwerk)"
+
+msgid "User Searches"
+msgstr "Suchanfragen"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "View plugins"
+msgstr "Plugins ansehen"
+
+msgid "Visibility"
+msgstr "Sichtbarkeit"
+
+msgid "Visibility grants no permission to linked pages. Only super administrators may edit the shared toolbar menu."
+msgstr "Sichtbarkeit gewährt keine zusätzlichen Zugriffsrechte. Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeiten."
+
+msgid "Visible to"
+msgstr "Sichtbar für"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Website administration, content types and Site Health"
+msgstr "Website-Verwaltung, Inhaltstypen und Website-Zustand"
+
+msgid "Website name"
+msgstr "Website-Name"
+
+msgid "Wed"
+msgstr "Mi"
+
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+msgid "Widgets"
+msgstr "Widgets"
+
+msgid "Widgets Customizer"
+msgstr "Widget-Customizer"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress Menus"
+msgstr "WordPress-Menüs"
+
+msgid "WordPress developer resources"
+msgstr "WordPress-Ressourcen für Entwickler"
+
+msgid "WordPress logo"
+msgstr "WordPress-Logo"
+
+msgid "WordPress menu"
+msgstr "WordPress-Menü"
+
+msgid "You already use one of my plugins. Find selected additions in the deckerweb tab."
+msgstr "Sie nutzen bereits ein Plugin von mir. Ausgewählte Ergänzungen finden Sie im deckerweb-Tab."
+
+msgid "You cannot change toolbar settings."
+msgstr "Keine Berechtigung zum Ändern der Toolbar-Einstellungen."
+
+msgid "Your toolbar menu"
+msgstr "Eigenes Toolbar-Menü"
+
+msgid "Network-activate this plugin or activate it on the source website before selecting that menu."
+msgstr "Aktivieren Sie dieses Plugin netzwerkweit oder auf der Quellwebsite, bevor Sie deren Menü auswählen."
+
+msgid "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin."
+msgstr "Bei dieser Einzelaktivierung verwalten Sie die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktivieren Sie das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen."
+
+msgid "Reinstall the complete plugin package to restore the shared Library. Toolbar features remain available."
+msgstr "Installieren Sie das vollständige Plugin-Paket erneut, um die gemeinsame Library wiederherzustellen. Die Toolbar-Funktionen bleiben verfügbar."
+
+msgid "Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates."
+msgstr "Die Toolbar-Funktionen bleiben verfügbar. Installieren Sie das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen."

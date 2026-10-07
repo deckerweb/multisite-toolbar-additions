@@ -1,0 +1,121 @@
+= 4.0.0 · 2026-10-01 =
+
+* Neu: Menüquelle, Zielgruppe, Frontend-/Admin-Anzeige, Position, Gruppierung und Kindebenen sind einstellbar.
+* Neu: Plugin- und Theme-Verknüpfungen haben getrennte Schalter; Plugins sind standardmäßig aktiviert, Themes deaktiviert.
+* Neu: Theme-ZIPs lassen sich auf einer eigenen Seite mit dem WordPress-Installer auch netzwerkweit installieren.
+* Neu: Die mitgelieferte deckerweb Library 0.2.0 bietet freigegebene Plugins mit Paket- und Abhängigkeitsprüfung.
+* Verbessert: Menüdaten werden pro Anfrage wiederverwendet; zusätzliche Website-Verknüpfungen sind für große Netzwerke begrenzt.
+* Verbessert: Plugin- und Theme-Einträge stehen unter Neu am Ende; eine leere Gruppenbeschriftung übernimmt den WordPress-Menünamen.
+* Verbessert: Lokale Dokumentation, Update-Grafiken und ein gemeinsamer Footer sind auf Englisch und Deutsch verfügbar.
+* Behoben: Gemeinsame Menüs sind gegen unberechtigte Änderungen im klassischen Admin, per REST und im Customizer geschützt; Menüausgaben und Einstellungen werden geprüft.
+* Behoben: Zwischengespeicherte WordPress-Updateangebote behalten die eigenen Plugin-Icons.
+* Sonstiges: Benötigt WordPress 6.7 und PHP 8.2. Deutsche Sprachdateien mit Du- und Sie-Anrede sind enthalten.
+
+= 3.1.0 · 2025-04-03 =
+
+* Neu: Die Toolbar bleibt im Vollbildmodus des Block-Editors verfügbar.
+* Neu: Verknüpfungen für Git Updater und DevKit Pro werden unterstützt; Git Updater kann dieses Plugin installieren und aktualisieren.
+* Verbessert: Deutsche Sprachdateien enthalten native PHP-Übersetzungskataloge.
+
+= 3.0.0 · 2025-03 =
+
+* Verbessert: Die Verwaltungsverknüpfungen verwenden eine kleinere Auswahl aktueller Integrationen.
+* Sonstiges: Das eingeschränkte Website-Administrator-Menü, veraltete Integrationen und die frühere Empfehlungs-Library wurden entfernt; das gemeinsame Super-Administrator-Menü bleibt erhalten.
+* Sonstiges: Der Vertrieb wechselte von WordPress.org zur direkten ZIP-Installation und GitHub.
+
+= 2.0.1 · 2019-09-23 =
+
+* Verbessert: Die Empfehlungs-Library 1.5.0 speichert Daten zwischen und vermeidet wiederholte Abfragen.
+
+= 2.0.0 · 2019-05-04 =
+
+* Neu: Eigene Plugin-/Theme-ZIP-Seiten und Installer-Verknüpfungen sind verfügbar.
+* Neu: Der Website-Zustand enthält Plugin-Diagnosen unter WordPress ab 5.2.
+* Neu: Ein Newsletter für DECKERWEB Plugins ist verfügbar.
+* Verbessert: Die Empfehlungs-Library 1.4.0 und deutsche Du-/Sie-Übersetzungen wurden aktualisiert.
+
+= 1.9.4 · 2018-11-03 =
+
+* Verbessert: Die Empfehlungs-Library 1.2.0 verbessert die Installer-Darstellung und Dark-Mode-Kompatibilität.
+
+= 1.9.3 · 2018-10-01 =
+
+* Neu: Eine Facebook-Gruppe bietet Unterstützung für DECKERWEB Plugins.
+* Verbessert: Die Empfehlungs-Library 1.1.0 verbessert Upload-Bereiche und Plugin-Karten einschließlich sichtbarer Versionsnummern.
+* Verbessert: Deutsche Übersetzungen wurden aktualisiert.
+
+= 1.9.2 · 2018-09-08 =
+
+* Neu: Plugin-Updateinformationen erscheinen in der Übersicht installierter Plugins.
+* Verbessert: Empfehlungen und deutsche Übersetzungen wurden aktualisiert.
+* Behoben: Super-Administrator-Verknüpfungen, Admin-Darstellung und eine Textdomain wurden korrigiert.
+
+= 1.9.1 · 2018-08-22 =
+
+* Neu: Deutsche Du-/Sie-Sprachpakete, Composer-Metadaten und eine GitHub-Readme sind enthalten.
+* Behoben: Ein schwerwiegender Fehler in der Netzwerkverwaltung wurde behoben.
+* Sonstiges: Die Unterstützung des eingestellten Plugins Quick Cache wurde entfernt.
+
+= 1.9.0 · 2018-04-01 =
+
+* Verbessert: Sicherheit, Verwaltungslinks, Übersetzungen und Plugin-Grafiken wurden aktualisiert; ungültige Links wurden entfernt.
+
+= 1.8.0 · 2014-10-20 =
+
+* Sonstiges: Die privaten Entwicklungsstände 1.7.1–1.8.0 wurden nicht öffentlich veröffentlicht.
+
+= 1.7.0 · 2014-03-04 =
+
+* Neu: Bearbeitbare Menüs, ein eingeschränktes Website-Administrator-Menü und Verknüpfungen für Netzwerk-Plugins und den Theme-Editor sind verfügbar.
+* Neu: Gemeinsame Menüs sind vor Änderungen durch gewöhnliche Administratoren geschützt; Stream, Snitch und WPMS Admin Reports werden unterstützt.
+* Verbessert: Die WP-Migrate-DB-Pro-Integration und deutsche Übersetzungen wurden aktualisiert; veraltete Darstellung für WordPress vor 3.8 wurde entfernt.
+* Behoben: Doppelte Plugin-/Theme-Einträge im Netzwerk wurden behoben.
+
+= 1.6.1 · 2013-12-08 =
+
+* Behoben: Die Verfügbarkeitsprüfung einer Multisite-Funktion wurde korrigiert.
+
+= 1.6.0 · 2013-12-07 =
+
+* Neu: Verknüpfungen für Smart Security Tools und Better WP Security werden unterstützt.
+* Verbessert: Netzwerk-Neu-Menü, Quick-Cache-Integration und deutsche Übersetzungen wurden aktualisiert.
+* Behoben: Website-Ansichtslinks und doppelte Plugin-/Theme-Einträge im Netzwerk wurden korrigiert.
+
+= 1.5.0 · 2013-11-21 =
+
+* Neu: Website-Dashboards verlinken den Plugin-Installer; Genesis Simple Sidebars und Smart Tabber Widget werden unterstützt.
+* Verbessert: MP6-Admin-Darstellung, Integrationen und deutsche Übersetzungen wurden aktualisiert.
+* Behoben: Links für Menüpositionen und Google PageSpeed sowie Konstantenprüfungen wurden korrigiert.
+* Sonstiges: Die Aktivierung in Multisite wurde auf Netzwerkaktivierung beschränkt.
+
+= 1.4.0 · 2013-05-07 =
+
+* Neu: Eigene Menüpriorität, Widgets-/Menü-/Customizer-Links, das Netzwerk-Neu-Menü und Plugin-Links für Einzel-Websites sind verfügbar.
+* Neu: Website-Ansichtslinks enthalten Werkzeuge von Pingdom und Google PageSpeed.
+* Neu: Zusätzliche Integrationen: Smart Options Optimizer, Simple System Info, Hide My WP, Widget Settings Importer/Exporter, Tabify Edit Screen, Restrict Widgets, P3, Blog Copier, NS Cloner, Codestyling Localization, WP Migrate DB, Multisite Robots.txt Manager, Domain Mapping und Go Sidebar Wizard.
+* Verbessert: Bestehende Integrationen, Ladeverhalten, deutsche Übersetzungen und Hilfe wurden aktualisiert.
+
+= 1.3.0 · 2013-03-21 =
+
+* Neu: Plugin- und Theme-Verknüpfungen für Installation, Upload und Suche erscheinen unter Neu; Smart Cleanup Tools, Smart Admin Tweaks und Optimize Database after Deleting Revisions werden unterstützt.
+* Verbessert: Netzwerk-Navigation, Snapshot-Speicherlinks, BackWPup-3.x-Integration und deutsche Übersetzungen wurden aktualisiert.
+
+= 1.2.0 · 2012-11-27 =
+
+* Neu: Snapshot, Ultimate Branding und Login Security Solution werden unterstützt; die Netzwerkverwaltung verlinkt das Dashboard der Haupt-Website.
+* Verbessert: Deutsche Übersetzungen wurden aktualisiert.
+
+= 1.1.1 · 2012-10-05 =
+
+* Behoben: Der Einstellungslink für Multisite Language Switcher wurde korrigiert.
+
+= 1.1.0 · 2012-09-18 =
+
+* Neu: Integrationen umfassen User Management Tools, Network Mass Email, Organizational Message Notifier, Multisite Language Switcher, Code Snippets, Code With WP Code Snippets, BackWPup, Toolbox Modules und Relevanssi.
+* Neu: Eigene Toolbar-Menüs unterstützen CSS-Klassen.
+* Verbessert: Integrationscode wird nur bei Bedarf geladen; Übersetzungen wurden aktualisiert und Screenshots aus dem Plugin-Paket ausgelagert.
+* Sonstiges: Ab dieser Veröffentlichung werden dreiteilige Versionsnummern verwendet.
+
+= 1.0.0 · 2012-08-28 =
+
+* Neu: Erstveröffentlichung mit vier Multisite- und sieben Website-Integrationen.

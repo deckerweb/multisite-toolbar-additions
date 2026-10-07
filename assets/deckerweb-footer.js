@@ -9,7 +9,7 @@
 			event.preventDefault();
 			opener = button;
 			dialog.showModal();
-			dialog.querySelector('pre').scrollTop = 0;
+			dialog.querySelector('.ddw-document-content').scrollTop = 0;
 		});
 	});
 	document.querySelectorAll('.ddw-document-dialog').forEach(dialog => {

@@ -13,12 +13,68 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 /**
- * Connects one public GitHub repository to WordPress plugin update APIs.
+ * Connects one public or private GitHub repository to WordPress plugin update APIs.
  *
  * API v2 is intended to be copied into several plugins without class collisions.
- * It never turns on automatic updates or handles private repository credentials.
+ * It never turns on automatic updates. Private credentials come from an optional provider.
  */
+interface AuthProvider {
+	/**
+	 * Return a credential for this exact repository without logging or persisting it.
+	 *
+	 * @param string $repository Exact repository URL for authorization.
+	 * @return string|null
+	 */
+	public function token( string $repository ): ?string;
+}
+
+/** Read an installation-managed secret; the distributable contains only its variable name. */
+final class EnvironmentAuthProvider implements AuthProvider {
+	private string $repository;
+	private string $variable;
+	/**
+	 * Bind an environment variable to one exact repository without reading its secret.
+	 *
+	 * @param string $repository Exact authorized repository URL.
+	 * @param string $variable Installation-managed uppercase environment variable name.
+	 * @return void
+	 */
+	public function __construct( string $repository, string $variable ) {
+		if ( ! preg_match( '/^[A-Z][A-Z0-9_]*$/D', $variable ) ) {
+			throw new \InvalidArgumentException( 'Invalid secret variable name.' );
+		}
+		$this->repository = rtrim( $repository, '/' );
+		$this->variable = $variable;
+	}
+	/**
+	 * Read the configured runtime credential only for its authorized repository.
+	 *
+	 * @param string $repository Exact repository URL for authorization.
+	 * @return string|null
+	 */
+	public function token( string $repository ): ?string {
+		if ( $repository !== $this->repository ) { return null; }
+		$value = getenv( $this->variable );
+		return is_string( $value ) && '' !== $value ? $value : null;
+	}
+	/**
+	 * Return provider identity without exposing its credential or variable value.
+	 *
+	 * @return array
+	 */
+	public function __debugInfo(): array { return array( 'provider' => 'environment' ); }
+}
+
+/** Manage one repository’s cached update offers, artwork and validated download context. */
 final class Updater {
+	public const IMPLEMENTATION_VERSION = '2.1.0';
+	public const SUPPORTS_PRIVATE_REPOSITORIES = true;
+	public const SUPPORTS_HOST_TRANSLATIONS = true;
+	/** Host-owned translator, evaluated in the current locale at output time. */
+	private ?\Closure $translate;
+	private bool $private;
+	private ?AuthProvider $auth;
+
 	/**
 	 * WordPress plugin basename, for example slug/slug.php.
 	 *
@@ -77,24 +133,33 @@ final class Updater {
 	 * Validate the installed plugin basename and repository identity.
 	 *
 	 * @param string $main_file Absolute path to the main plugin file.
-	 * @param string $repository_url Public https://github.com/owner/repository URL.
+	 * @param string $repository_url https://github.com/owner/repository URL.
 	 * @param string $name Plugin display name.
 	 * @param string $description Short description for update details.
 	 * @param array  $artwork Optional icons (svg, 1x, 2x, default) and banners (low, high) URL maps.
+	 * @param array  $options Optional private boolean, auth AuthProvider and translate callable(string):string. Public defaults remain compatible.
+	 * @return void
 	 * @throws \InvalidArgumentException If the slug or repository URL is invalid.
 	 */
-	public function __construct( string $main_file, string $repository_url, string $name, string $description, array $artwork = array() ) {
+	public function __construct( string $main_file, string $repository_url, string $name, string $description, array $artwork = array(), array $options = array() ) {
+		if ( isset( $options['translate'] ) && ! is_callable( $options['translate'] ) ) { throw new \InvalidArgumentException( 'Invalid host translator.' ); }
+		$this->translate = isset( $options['translate'] ) ? \Closure::fromCallable( $options['translate'] ) : null;
+		if ( isset( $options['private'] ) && ! is_bool( $options['private'] ) ) { throw new \InvalidArgumentException( $this->text( 'Private mode must be boolean.' ) ); }
+		if ( isset( $options['auth'] ) && ! $options['auth'] instanceof AuthProvider ) { throw new \InvalidArgumentException( $this->text( 'Invalid authentication provider.' ) ); }
+		$this->private = $options['private'] ?? false;
+		$this->auth = $options['auth'] ?? null;
 		$this->file = \plugin_basename( $main_file );
 		$this->slug = \dirname( $this->file );
 		if ( '.' === $this->slug || ! \preg_match( '/^[a-z0-9_-]+$/D', $this->slug ) ) {
-			throw new \InvalidArgumentException( 'The plugin must be installed in a stable slug directory.' );
+			throw new \InvalidArgumentException( $this->text( 'The plugin must be installed in a stable slug directory.' ) );
 		}
 		if ( ! \preg_match( '~^https://github\.com/([A-Za-z0-9-]+)/([A-Za-z0-9._-]+)/?$~D', $repository_url, $matches ) ) {
-			throw new \InvalidArgumentException( 'Invalid public GitHub repository URL.' );
+			throw new \InvalidArgumentException( $this->text( 'Invalid GitHub repository URL.' ) );
 		}
 		$this->repo        = 'https://github.com/' . $matches[1] . '/' . $matches[2];
 		$this->api         = 'https://api.github.com/repos/' . $matches[1] . '/' . $matches[2];
 		$this->cache       = 'ddw_ghru_' . \substr( \md5( $this->repo ), 0, 24 );
+		if ( $this->private ) { $this->cache .= '_private'; }
 		$this->name        = $name;
 		$this->description = $description;
 		$this->icons       = $this->artwork_urls( $artwork['icons'] ?? array(), array( 'svg', '1x', '2x', 'default' ) );
@@ -150,12 +215,15 @@ final class Updater {
 	}
 
 	/**
-	 * Register the update, information, and extracted archive hooks.
+	 * Register public/private update, details, artwork and package hooks once per host instance.
+	 *
+	 * @return void
 	 */
 	public function register(): void {
 		\add_filter( 'update_plugins_github.com', array( $this, 'update' ), 10, 4 );
 		\add_filter( 'site_transient_update_plugins', array( $this, 'cached_icons' ) );
 		\add_filter( 'plugins_api', array( $this, 'information' ), 20, 3 );
+		if ( $this->private ) { \add_filter( 'upgrader_pre_download', array( $this, 'download' ), 10, 4 ); }
 		\add_filter( 'upgrader_source_selection', array( $this, 'select_source' ), 20, 4 );
 	}
 
@@ -166,6 +234,8 @@ final class Updater {
 	 * @return array{version:string,package:string,notes:string,published:string}|null
 	 */
 	private function release(): ?array {
+		$auth_headers = $this->auth_headers();
+		if ( $this->private && null === $auth_headers ) { return null; }
 		$cached = \get_site_transient( $this->cache );
 		if ( \is_array( $cached ) ) {
 			return ! empty( $cached['failed'] ) ? null : $cached;
@@ -174,12 +244,15 @@ final class Updater {
 			$this->api . '/releases/latest',
 			array(
 				'timeout'     => 6,
-				'redirection' => 2,
-				'headers'     => array(
+				'redirection' => $this->private ? 0 : 2,
+				'sslverify' => true,
+				'reject_unsafe_urls' => true,
+				'limit_response_size' => 512 * 1024,
+				'headers'     => array_merge( $auth_headers ?? array(), array(
 					'Accept'               => 'application/vnd.github+json',
 					'User-Agent'           => 'DECKERWEB-WordPress-GitHub-Release-Updater',
 					'X-GitHub-Api-Version' => '2022-11-28',
-				),
+				) ),
 			)
 		);
 		if ( \is_wp_error( $response ) || \wp_remote_retrieve_response_code( $response ) !== 200 ) {
@@ -202,6 +275,11 @@ final class Updater {
 			if ( $asset_name !== $this->slug . '.zip' && $asset_name !== $this->slug . '-' . $version . '.zip' ) {
 				continue;
 			}
+			if ( $this->private ) {
+				$url = $asset['url'] ?? '';
+				if ( is_string( $url ) && preg_match( '~^' . preg_quote( $this->api, '~' ) . '/releases/assets/[1-9][0-9]*$~D', $url ) ) { $package = $url; break; }
+				continue;
+			}
 			$url = \is_string( $asset['browser_download_url'] ?? null ) ? $asset['browser_download_url'] : '';
 			if ( \strpos( $url, $this->repo . '/releases/download/' ) === 0 ) {
 				$package = $url;
@@ -210,7 +288,7 @@ final class Updater {
 		}
 		if ( ! $package ) {
 			$url = \is_string( $data['zipball_url'] ?? null ) ? $data['zipball_url'] : '';
-			if ( \strpos( $url, $this->api . '/zipball/' ) === 0 ) {
+			if ( \strpos( $url, $this->api . '/zipball/' ) === 0 && ( ! $this->private || $url === $this->api . '/zipball/' . rawurlencode( $data['tag_name'] ) ) ) {
 				$package = $url;
 			}
 		}
@@ -226,6 +304,101 @@ final class Updater {
 		);
 		\set_site_transient( $this->cache, $release, 30 * MINUTE_IN_SECONDS );
 		return $release;
+	}
+
+	/**
+	 * Evaluate the host translator in the current locale; safely preserve source text on failure.
+	 *
+	 * @param string $message English component source message.
+	 * @return string
+	 */
+	private function text( string $message ): string {
+		if ( null === $this->translate ) { return $message; }
+		try { $translated = ( $this->translate )( $message ); }
+		catch ( \Throwable $error ) { return $message; }
+		return is_string( $translated ) && '' !== trim( $translated ) ? $translated : $message;
+	}
+
+	/**
+	 * Return repository/version diagnostics without exposing the authentication provider.
+	 *
+	 * @return array
+	 */
+	public function __debugInfo(): array { return array( 'repository' => $this->repo, 'private' => $this->private, 'version' => self::IMPLEMENTATION_VERSION ); }
+
+	/**
+	 * Delete this repository’s metadata transient after configuration or credential changes.
+	 *
+	 * @return void
+	 */
+	public function clear_cache(): void { \delete_site_transient( $this->cache ); }
+
+	/**
+	 * Create repository authorization headers without exposing credentials on failure.
+	 *
+	 * @return array|null
+	 */
+	private function auth_headers(): ?array {
+		if ( ! $this->private ) { return array(); }
+		try { $token = $this->auth ? $this->auth->token( $this->repo ) : null; }
+		catch ( \Throwable $error ) { return null; }
+		if ( ! is_string( $token ) || ! preg_match( '/^[A-Za-z0-9_]+$/D', $token ) ) { return null; }
+		return array( 'Authorization' => 'Bearer ' . $token );
+	}
+
+	/**
+	 * Match this plugin’s update, including Core’s per-item bulk context.
+	 *
+	 * @param mixed $upgrader Core upgrader; bulk requires an actual Plugin_Upgrader.
+	 * @param array $context Per-package hook context; explicit conflicting fields are rejected.
+	 * @return bool
+	 */
+	private function is_update_context( $upgrader, array $context ): bool {
+		if ( ( $context['plugin'] ?? '' ) !== $this->file || ( isset( $context['type'] ) && 'plugin' !== $context['type'] ) || ( isset( $context['action'] ) && 'update' !== $context['action'] ) ) { return false; }
+		if ( isset( $context['type'], $context['action'] ) ) { return true; }
+		return $upgrader instanceof \Plugin_Upgrader && true === $upgrader->bulk;
+	}
+
+	/**
+	 * Stream this host’s private offered package into a temporary file without forwarding credentials to redirect hosts.
+	 *
+	 * @param mixed $reply Earlier download result; a handled result is preserved.
+	 * @param string $package Offered package URL to match to repository metadata.
+	 * @param mixed $upgrader Core upgrader supplying the current package context.
+	 * @param array $hook_extra Per-package update context for this host.
+	 * @return mixed
+	 */
+	public function download( $reply, $package, $upgrader, $hook_extra ) {
+		if ( ! $this->private || false !== $reply || ! $this->is_update_context( $upgrader, $hook_extra ) ) { return $reply; }
+		$release = $this->release();
+		$headers = $this->auth_headers();
+		if ( ! $release || null === $headers || $package !== $release['package'] || ! preg_match( '~^' . preg_quote( $this->api, '~' ) . '/(?:releases/assets/[1-9][0-9]*|zipball/v?[0-9A-Za-z.-]+)$~D', $package ) ) {
+			return new \WP_Error( 'ddw_ghru_private', $this->text( 'The private update could not be authorized. Check the repository credentials and refresh updates.' ) );
+		}
+		$file = \wp_tempnam( $this->slug . '.zip' );
+		if ( ! $file ) { return new \WP_Error( 'ddw_ghru_temp', $this->text( 'Could not create the update download file.' ) ); }
+		$headers['Accept'] = strpos( $package, $this->api . '/zipball/' ) === 0 ? 'application/vnd.github+json' : 'application/octet-stream';
+		$headers['User-Agent'] = 'DECKERWEB-WordPress-GitHub-Release-Updater';
+		$headers['X-GitHub-Api-Version'] = '2022-11-28';
+		$url = $package;
+		try {
+			for ( $hop = 0; $hop < 4; ++$hop ) {
+				$response = \wp_safe_remote_get( $url, array( 'timeout' => 300, 'redirection' => 0, 'sslverify' => true, 'reject_unsafe_urls' => true, 'stream' => true, 'filename' => $file, 'headers' => $headers ) );
+				if ( \is_wp_error( $response ) ) { break; }
+				$code = \wp_remote_retrieve_response_code( $response );
+				clearstatcache( true, $file );
+				if ( 200 === $code && is_file( $file ) && filesize( $file ) > 0 ) { return $file; }
+				if ( ! in_array( $code, array( 301, 302, 303, 307, 308 ), true ) ) { break; }
+				$next = \wp_remote_retrieve_header( $response, 'location' );
+				$parts = is_string( $next ) ? \wp_parse_url( $next ) : false;
+				if ( ! is_array( $parts ) || ( $parts['scheme'] ?? '' ) !== 'https' || ! in_array( $parts['host'] ?? '', array( 'codeload.github.com', 'release-assets.githubusercontent.com', 'objects.githubusercontent.com' ), true ) || isset( $parts['user'] ) || isset( $parts['pass'] ) || isset( $parts['port'] ) || isset( $parts['fragment'] ) || preg_match( '/[\x00-\x20\x7f]/', $next ) ) { break; }
+				$url = $next;
+				$headers = array( 'Accept' => 'application/octet-stream', 'User-Agent' => 'DECKERWEB-WordPress-GitHub-Release-Updater' );
+				file_put_contents( $file, '' );
+			}
+		} catch ( \Throwable $error ) { /* Do not return HTTP/provider exception data. */ }
+		\wp_delete_file( $file );
+		return new \WP_Error( 'ddw_ghru_download', $this->text( 'The private update download failed. Check credentials and try again.' ) );
 	}
 
 	/**
@@ -287,7 +460,7 @@ final class Updater {
 			'banners'        => $this->banners,
 			'sections'       => array(
 				'description' => \esc_html( $this->description ),
-				'changelog'   => \wpautop( \esc_html( ! empty( $release['notes'] ) ? $release['notes'] : 'See the release on GitHub.' ) ),
+				'changelog'   => \wpautop( \esc_html( ! empty( $release['notes'] ) ? $release['notes'] : $this->text( 'See the release on GitHub.' ) ) ),
 			),
 		);
 	}
@@ -302,12 +475,12 @@ final class Updater {
 	 * @return mixed Valid source directory or WP_Error.
 	 */
 	public function select_source( $source, $remote_source, $upgrader, $hook_extra ) {
-		if ( \is_wp_error( $source ) || ! \is_string( $source ) || ( $hook_extra['plugin'] ?? '' ) !== $this->file || ( $hook_extra['type'] ?? '' ) !== 'plugin' || ( $hook_extra['action'] ?? '' ) !== 'update' ) {
+		if ( \is_wp_error( $source ) || ! \is_string( $source ) || ! $this->is_update_context( $upgrader, $hook_extra ) ) {
 			return $source;
 		}
 		global $wp_filesystem;
 		if ( ! $wp_filesystem ) {
-			return new \WP_Error( 'ddw_ghru_filesystem', 'Could not access the update filesystem.' );
+			return new \WP_Error( 'ddw_ghru_filesystem', $this->text( 'Could not access the update filesystem.' ) );
 		}
 		$root = \untrailingslashit( $source );
 		$main = \basename( $this->file );
@@ -317,14 +490,14 @@ final class Updater {
 			return \trailingslashit( $root . '/' . $this->slug );
 		}
 		if ( ! $wp_filesystem->is_file( $root . '/' . $main ) ) {
-			return new \WP_Error( 'ddw_ghru_archive', 'GitHub release does not contain the plugin main file.' );
+			return new \WP_Error( 'ddw_ghru_archive', $this->text( 'GitHub release does not contain the plugin main file.' ) );
 		}
 		$target = \dirname( $root ) . '/' . $this->slug;
 		if ( $root === $target ) {
 			return $source;
 		}
 		if ( $wp_filesystem->exists( $target ) || ! $wp_filesystem->move( $root, $target, false ) ) {
-			return new \WP_Error( 'ddw_ghru_rename', 'Could not prepare the GitHub release package.' );
+			return new \WP_Error( 'ddw_ghru_rename', $this->text( 'Could not prepare the GitHub release package.' ) );
 		}
 		return \trailingslashit( $target );
 	}

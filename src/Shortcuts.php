@@ -1,7 +1,7 @@
 <?php
 /**
  * Multisite Toolbar Additions.
- * Copyright (c) 2012–2026 David Decker – DECKERWEB.
+ * Copyright © 2012–2026 David Decker – DECKERWEB.
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 namespace Deckerweb\MultisiteToolbar;
@@ -11,11 +11,27 @@ defined( 'ABSPATH' ) || exit;
 /** Build only permitted destinations; leave Core's existing nodes intact. */
 final class Shortcuts {
 	private $settings;
+	/**
+	 * Store the services used by this instance without persistent writes.
+	 *
+	 * @param Settings $settings Current site/network setting service.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function __construct( Settings $settings ) { $this->settings = $settings; }
+	/**
+	 * Register eligible shortcut rendering and late New-menu ordering.
+	 *
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function register() {
 		add_action( 'admin_bar_menu', [ $this, 'render' ], 100 );
 		add_action( 'wp_before_admin_bar_render', [ $this, 'new_last' ], PHP_INT_MAX );
 	}
+	/**
+	 * Place this plugin’s Plugin/Theme additions after other New-menu entries.
+	 *
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function new_last() {
 		global $wp_admin_bar;
 		if ( ! $wp_admin_bar ) { return; }
@@ -24,10 +40,28 @@ final class Shortcuts {
 			if ( $node ) { $wp_admin_bar->remove_node( $id ); $wp_admin_bar->add_node( (array) $node ); }
 		}
 	}
+	/**
+	 * Add one escaped destination only when its capability is available.
+	 *
+	 * @param \WP_Admin_Bar $bar Toolbar instance receiving public nodes.
+	 * @param int|string $id Menu, item or setting identifier for this operation.
+	 * @param string|false $parent Destination parent node ID or root.
+	 * @param string $title Translated node title; escaped on output.
+	 * @param string $url Destination URL; escaped on output.
+	 * @param string $cap Requested capability.
+	 * @param bool $external Whether the link opens a protected separate window.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	private function link( $bar, $id, $parent, $title, $url, $cap = 'manage_options', $external = false ) {
 		if ( ! current_user_can( $cap ) || ( $parent && ! $bar->get_node( $parent ) ) ) { return; }
 		$bar->add_node( [ 'id' => 'ddw-mstba-' . $id, 'parent' => $parent, 'title' => esc_html( $title ), 'href' => esc_url( $url ), 'meta' => $external ? [ 'target' => '_blank', 'rel' => 'noopener noreferrer' ] : [] ] );
 	}
+	/**
+	 * Render enabled administration shortcuts for eligible administrators.
+	 *
+	 * @param \WP_Admin_Bar $bar Toolbar instance receiving public nodes.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function render( $bar ) {
 		if ( ! is_user_logged_in() || ! is_admin_bar_showing() || ( is_multisite() ? ! is_super_admin() : ! current_user_can( 'manage_options' ) ) ) { return; }
 		if ( is_multisite() && $this->settings->get( 'network_links' ) ) { $this->network( $bar ); }
@@ -37,6 +71,12 @@ final class Shortcuts {
 		$this->new_items( $bar );
 		if ( $this->settings->get( 'resources' ) ) { $this->resources( $bar ); }
 	}
+	/**
+	 * Add network destinations and the optional network New menu.
+	 *
+	 * @param \WP_Admin_Bar $bar Toolbar instance receiving public nodes.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	private function network( $bar ) {
 		if ( ! $bar->get_node( 'network-admin' ) ) { return; }
 		foreach ( [
@@ -50,6 +90,14 @@ final class Shortcuts {
 			[ 'networkthemes', 'network-admin', __( 'Network Themes', 'multisite-toolbar-additions' ), 'themes.php', 'manage_network_themes' ],
 		] as [ $id, $parent, $label, $path, $cap ] ) { $this->link( $bar, $id, $parent, $label, network_admin_url( $path ), $cap ); }
 		$this->installers( $bar, 'ddw-mstba-networkplugins', 'ddw-mstba-networkthemes', 'network-' );
+		/**
+		 * Filter whether the network administration New menu is added.
+		 *
+		 * Return false to hide this group; destination capabilities still apply.
+		 * @since 1.4.0
+		 * @since 4.0.0 The default value is a boolean.
+		 * @param bool $display Whether the group is displayed; return the desired state.
+		 */
 		if ( is_network_admin() && (bool) apply_filters( 'mstba_filter_display_network_new_content', true ) ) {
 			if ( ! $bar->get_node( 'new-content' ) ) {
 				$bar->add_node( [ 'id' => 'new-content', 'title' => '<span class="ab-icon" aria-hidden="true"></span><span class="ab-label">' . esc_html__( 'New (Network)', 'multisite-toolbar-additions' ) . '</span>', 'href' => network_admin_url( 'site-new.php' ) ] );
@@ -62,6 +110,15 @@ final class Shortcuts {
 		}
 		$this->link( $bar, 'settings', 'network-admin', __( 'Toolbar Settings', 'multisite-toolbar-additions' ), Admin::url(), Settings::capability() );
 	}
+	/**
+	 * Add permission-checked installer and ZIP upload links.
+	 *
+	 * @param \WP_Admin_Bar $bar Toolbar instance receiving public nodes.
+	 * @param string $plugins Parent node for plugin installer entries.
+	 * @param string $themes Parent node for theme installer entries.
+	 * @param string $prefix Unique prefix for installer node identifiers.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	private function installers( $bar, $plugins, $themes, $prefix = '' ) {
 		foreach ( [ [ $plugins, 'plugin', 'install_plugins' ], [ $themes, 'theme', 'install_themes' ] ] as [ $parent, $type, $cap ] ) {
 			$this->link( $bar, $prefix . $type . '-search', $parent, __( 'Search Directory', 'multisite-toolbar-additions' ), network_admin_url( $type . '-install.php' ), $cap );
@@ -69,6 +126,12 @@ final class Shortcuts {
 			$this->link( $bar, $prefix . $type . '-favorites', $parent, __( 'Favorites', 'multisite-toolbar-additions' ), network_admin_url( $type . '-install.php?' . ( 'theme' === $type ? 'browse' : 'tab' ) . '=favorites' ), $cap );
 		}
 	}
+	/**
+	 * Add site, content, theme and optional editor destinations.
+	 *
+	 * @param \WP_Admin_Bar $bar Toolbar instance receiving public nodes.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	private function site( $bar ) {
 		if ( ! $bar->get_node( 'site-name' ) ) { return; }
 		$root = 'ddw-mstba-sitegroup';
@@ -118,6 +181,12 @@ final class Shortcuts {
 			$this->link( $bar, 'editplugins', $root, __( 'Plugin File Editor', 'multisite-toolbar-additions' ), network_admin_url( 'plugin-editor.php' ), 'edit_plugins' );
 		}
 	}
+	/**
+	 * Add independently enabled Plugin/Theme entries under New.
+	 *
+	 * @param \WP_Admin_Bar $bar Toolbar instance receiving public nodes.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	private function new_items( $bar ) {
 		foreach ( [ 'addnew_plugin' => [ 'plugin', 'install_plugins', __( 'Install Plugin', 'multisite-toolbar-additions' ) ], 'addnew_theme' => [ 'theme', 'install_themes', __( 'Install Theme', 'multisite-toolbar-additions' ) ] ] as $id => [ $type, $cap, $label ] ) {
 			if ( ! $this->settings->get( 'new_' . ( 'plugin' === $type ? 'plugins' : 'themes' ) ) ) { continue; }
@@ -126,6 +195,12 @@ final class Shortcuts {
 		}
 	}
 
+	/**
+	 * Extend only the bounded sites already listed under My Sites.
+	 *
+	 * @param \WP_Admin_Bar $bar Toolbar instance receiving public nodes.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	private function subsites( $bar ) {
 		$count = 0;
 		foreach ( (array) $bar->get_nodes() as $node ) {
@@ -133,7 +208,10 @@ final class Shortcuts {
 			if ( ++$count > (int) $this->settings->get( 'subsite_limit' ) ) { break; }
 			$id = (int) $match[1];
 			// Resolve theme and capabilities in the destination site, then always restore context.
-			MenuRepository::on_site( $id, function () use ( $bar, $node, $id ) {
+			MenuRepository::on_site( $id, /** Add authorized shortcuts on the selected site; the caller restores the original site.
+ * @return void No return value.
+ */
+function () use ( $bar, $node, $id ) {
 				foreach ( [
 					[ 'settings', 'options-general.php', __( 'Site Settings', 'multisite-toolbar-additions' ), 'manage_options' ],
 					[ 'plugins', 'plugins.php', __( 'Site Plugins', 'multisite-toolbar-additions' ), 'activate_plugins' ],
@@ -149,6 +227,12 @@ final class Shortcuts {
 			} );
 		}
 	}
+	/**
+	 * Add optional public WordPress documentation destinations.
+	 *
+	 * @param \WP_Admin_Bar $bar Toolbar instance receiving public nodes.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	private function resources( $bar ) {
 		$parent = $bar->get_node( 'wp-logo-external' ) ? 'wp-logo-external' : '';
 		if ( ! $parent ) { return; }

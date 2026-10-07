@@ -4,18 +4,19 @@
  * Plugin URI: https://github.com/deckerweb/multisite-toolbar-additions
  * Description: Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar.
  * Version: 4.0.0
- * Author: David Decker - DECKERWEB
- * Author URI: https://deckerweb.de/
- * License: GPL-2.0-or-later
+ * Requires at least: 6.7
+ * Requires PHP: 8.2
+ * Author: David Decker – DECKERWEB
+ * Author URI: https://github.com/deckerweb
+ * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: multisite-toolbar-additions
  * Domain Path: /languages/
- * Network: true
- * Requires at least: 6.7
- * Requires PHP: 8.2
  * Update URI: https://github.com/deckerweb/multisite-toolbar-additions
  * GitHub Plugin URI: https://github.com/deckerweb/multisite-toolbar-additions
- * GitHub Branch: master
+ *
+ * Copyright © 2012–2026 David Decker – DECKERWEB.
+ * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -23,7 +24,11 @@ define( 'MSTBA_PLUGIN_VERSION', '4.0.0' );
 define( 'MSTBA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'MSTBA_PLUGIN_FILE', __FILE__ );
 
-spl_autoload_register( static function ( $class ) {
+spl_autoload_register( /** Autoload only one valid class from the plugin’s fixed source directory.
+ * @param string $class Requested fully qualified class name.
+ * @return void No return value.
+ */
+static function ( $class ) {
 	$prefix = 'Deckerweb\\MultisiteToolbar\\';
 	if ( 0 !== strpos( $class, $prefix ) ) {
 		return;
@@ -37,9 +42,19 @@ spl_autoload_register( static function ( $class ) {
 	}
 } );
 // Shared library elects one implementation after every selected host has loaded.
-require_once MSTBA_PLUGIN_DIR . 'includes/deckerweb-plugin-library/bootstrap.php';
-deckerweb_library_register( MSTBA_PLUGIN_FILE, [], MSTBA_PLUGIN_DIR . 'includes/deckerweb-plugin-library' );
+try {
+	$mstba_library_bootstrap = MSTBA_PLUGIN_DIR . 'includes/deckerweb-plugin-library/bootstrap.php';
+	if ( ! is_readable( $mstba_library_bootstrap ) ) { throw new \RuntimeException( 'Missing Library bootstrap.' ); }
+	require_once $mstba_library_bootstrap;
+	if ( ! function_exists( 'deckerweb_library_register_v2' ) ) { throw new \RuntimeException( 'Missing Library registration.' ); }
+	deckerweb_library_register_v2( MSTBA_PLUGIN_FILE, [], MSTBA_PLUGIN_DIR . 'includes/deckerweb-plugin-library' );
+} catch ( \Throwable $error ) {
+	$GLOBALS['mstba_library_unavailable'] = true;
+}
 
-add_action( 'plugins_loaded', static function () {
+add_action( 'plugins_loaded', /** Run the scoped WordPress callback without persisting settings.
+ * @return void No return value.
+ */
+static function () {
 	( new Deckerweb\MultisiteToolbar\Plugin() )->register();
 } );

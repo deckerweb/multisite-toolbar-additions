@@ -16,24 +16,35 @@ final class GitHubUpdates {
 
 	/** Register after WordPress initializes translations. @return void */
 	public function register(): void {
-		add_action( 'init', array( $this, 'boot' ) );
+		add_action( 'init', array( $this, 'boot' ), 20 );
 	}
 
 	/** Load the shared versioned class once, including beside other deckerweb plugins. @return void */
 	public function boot(): void {
 		if ( ! class_exists( '\Deckerweb\GitHubReleaseUpdater\V2\Updater' ) ) {
-			require_once MSTBA_PLUGIN_DIR . 'includes/deckerweb-github-release-updater-v2.php';
+			try {
+				$path = MSTBA_PLUGIN_DIR . 'includes/deckerweb-github-release-updater-v2.php';
+				if ( ! is_readable( $path ) ) { throw new \RuntimeException( 'Missing updater.' ); }
+				require_once $path;
+			} catch ( \Throwable $error ) {
+				add_action( 'admin_notices', [ $this, 'unavailable_notice' ] );
+				add_action( 'network_admin_notices', [ $this, 'unavailable_notice' ] );
+				return;
+			}
 		}
 		try {
 			$updater = new \Deckerweb\GitHubReleaseUpdater\V2\Updater(
 				MSTBA_PLUGIN_FILE,
 				self::REPOSITORY,
 				'Multisite Toolbar Additions',
-				'Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar.',
-				$this->artwork()
+				__( 'Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar.', 'multisite-toolbar-additions' ),
+				$this->artwork(),
+				defined( '\\Deckerweb\\GitHubReleaseUpdater\\V2\\Updater::SUPPORTS_HOST_TRANSLATIONS' ) && is_readable( MSTBA_PLUGIN_DIR . 'includes/updater-translations.php' ) ? [ 'translate' => require MSTBA_PLUGIN_DIR . 'includes/updater-translations.php' ] : []
 			);
 		} catch ( \InvalidArgumentException $error ) {
-			// An unsupported installation directory must not break verse rendering.
+			// An unsupported installation directory must not break toolbar rendering.
+			add_action( 'admin_notices', [ $this, 'unavailable_notice' ] );
+			add_action( 'network_admin_notices', [ $this, 'unavailable_notice' ] );
 			return;
 		}
 		$updater->register();
@@ -41,7 +52,11 @@ final class GitHubUpdates {
 		add_filter( 'upgrader_source_selection', array( $this, 'validate_source' ), 30, 4 );
 	}
 
-	/** Use the packaged identity in Core's plugin details and update screens. */
+	/**
+	 * Provide packaged icons and language-appropriate update banners.
+	 *
+	 * @return array Result described above; unrelated hook values remain unchanged.
+	 */
 	public function artwork(): array {
 		$base = plugins_url( 'assets/brand/', MSTBA_PLUGIN_FILE );
 		$language = 1 === preg_match( '/^de(?:_|$)/i', determine_locale() ) ? 'de' : 'en';
@@ -79,7 +94,7 @@ final class GitHubUpdates {
 	 * @return mixed Original source or localized WP_Error.
 	 */
 	public function validate_source( $source, $remote_source, $upgrader, array $hook_extra ) {
-		if ( ( $hook_extra['plugin'] ?? '' ) !== plugin_basename( MSTBA_PLUGIN_FILE ) || ( $hook_extra['type'] ?? '' ) !== 'plugin' || ( $hook_extra['action'] ?? '' ) !== 'update' ) {
+		if ( ! $this->update_context( $upgrader, $hook_extra ) ) {
 			return $source;
 		}
 		if ( is_wp_error( $source ) ) {
@@ -125,4 +140,31 @@ final class GitHubUpdates {
 		}
 		return $source;
 	}
+	/**
+	 * Match this plugin's individual, automatic or Core bulk update context.
+	 *
+	 * @param mixed $upgrader Current upgrader; bulk requires Plugin_Upgrader.
+	 * @param array $context Hook context; conflicting type/action are rejected.
+	 * @return bool Whether candidate validation belongs to this plugin update.
+	 */
+	public function update_context( $upgrader, array $context ): bool {
+		if ( ( $context['plugin'] ?? '' ) !== plugin_basename( MSTBA_PLUGIN_FILE )
+			|| ( isset( $context['type'] ) && 'plugin' !== $context['type'] )
+			|| ( isset( $context['action'] ) && 'update' !== $context['action'] ) ) {
+			return false;
+		}
+		return isset( $context['type'], $context['action'] )
+			|| ( $upgrader instanceof \Plugin_Upgrader && true === $upgrader->bulk );
+	}
+
+	/**
+	 * Explain an incomplete updater to users who can repair plugin installations.
+	 *
+	 * @return void
+	 */
+	public function unavailable_notice(): void {
+		if ( ! current_user_can( 'update_plugins' ) ) { return; }
+		echo '<div class="notice notice-warning"><p>' . esc_html__( 'Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates.', 'multisite-toolbar-additions' ) . '</p></div>';
+	}
+
 }

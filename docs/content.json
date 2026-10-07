@@ -1,0 +1,756 @@
+{
+  "version": "4.0.0",
+  "working_tree": {
+    "en": "Unpublished maintenance changes based on 4.0.0. The released 4.0.0 ZIP is unchanged.",
+    "de": "Noch nicht veröffentlichte Wartungsänderungen auf Grundlage von 4.0.0. Die veröffentlichte 4.0.0-ZIP bleibt unverändert."
+  },
+  "releases": [
+    {
+      "version": "4.0.0",
+      "date": "2026-10-01",
+      "items": [
+        {
+          "category": "New",
+          "en": "Configure the source menu, audience, frontend/admin visibility, position, grouping and child levels.",
+          "de": "Menüquelle, Zielgruppe, Frontend-/Admin-Anzeige, Position, Gruppierung und Kindebenen sind einstellbar."
+        },
+        {
+          "category": "New",
+          "en": "Plugin and Theme shortcuts have separate switches; Plugins are enabled and Themes disabled by default.",
+          "de": "Plugin- und Theme-Verknüpfungen haben getrennte Schalter; Plugins sind standardmäßig aktiviert, Themes deaktiviert."
+        },
+        {
+          "category": "New",
+          "en": "Upload theme ZIPs through a dedicated page using the WordPress installer, including network installation.",
+          "de": "Theme-ZIPs lassen sich auf einer eigenen Seite mit dem WordPress-Installer auch netzwerkweit installieren."
+        },
+        {
+          "category": "New",
+          "en": "The bundled deckerweb Library 0.2.0 offers approved plugins with package and dependency checks.",
+          "de": "Die mitgelieferte deckerweb Library 0.2.0 bietet freigegebene Plugins mit Paket- und Abhängigkeitsprüfung."
+        },
+        {
+          "category": "Improved",
+          "en": "Menu data is reused per request; additional website shortcuts are limited for large networks.",
+          "de": "Menüdaten werden pro Anfrage wiederverwendet; zusätzliche Website-Verknüpfungen sind für große Netzwerke begrenzt."
+        },
+        {
+          "category": "Improved",
+          "en": "Plugin and Theme entries appear last under New; an empty group label follows the WordPress menu name.",
+          "de": "Plugin- und Theme-Einträge stehen unter Neu am Ende; eine leere Gruppenbeschriftung übernimmt den WordPress-Menünamen."
+        },
+        {
+          "category": "Improved",
+          "en": "Local documentation, update artwork and a shared footer are available in English and German.",
+          "de": "Lokale Dokumentation, Update-Grafiken und ein gemeinsamer Footer sind auf Englisch und Deutsch verfügbar."
+        },
+        {
+          "category": "Fixed",
+          "en": "Shared menus are protected from unauthorized classic, REST and Customizer changes; menu output and settings are validated.",
+          "de": "Gemeinsame Menüs sind gegen unberechtigte Änderungen im klassischen Admin, per REST und im Customizer geschützt; Menüausgaben und Einstellungen werden geprüft."
+        },
+        {
+          "category": "Fixed",
+          "en": "Cached WordPress update offers retain the plugin’s own icons.",
+          "de": "Zwischengespeicherte WordPress-Updateangebote behalten die eigenen Plugin-Icons."
+        },
+        {
+          "category": "Misc",
+          "en": "Requires WordPress 6.7 and PHP 8.2. German informal and formal language resources are included.",
+          "de": "Benötigt WordPress 6.7 und PHP 8.2. Deutsche Sprachdateien mit Du- und Sie-Anrede sind enthalten."
+        }
+      ]
+    },
+    {
+      "version": "3.1.0",
+      "date": "2025-04-03",
+      "items": [
+        {
+          "category": "New",
+          "en": "The toolbar remains available in the fullscreen block editor.",
+          "de": "Die Toolbar bleibt im Vollbildmodus des Block-Editors verfügbar."
+        },
+        {
+          "category": "New",
+          "en": "Git Updater and DevKit Pro shortcuts are supported; Git Updater can install and update this plugin.",
+          "de": "Verknüpfungen für Git Updater und DevKit Pro werden unterstützt; Git Updater kann dieses Plugin installieren und aktualisieren."
+        },
+        {
+          "category": "Improved",
+          "en": "German language resources include native PHP translation catalogs.",
+          "de": "Deutsche Sprachdateien enthalten native PHP-Übersetzungskataloge."
+        }
+      ]
+    },
+    {
+      "version": "3.0.0",
+      "date": "2025-03",
+      "items": [
+        {
+          "category": "Improved",
+          "en": "Administration shortcuts use a smaller set of current integrations.",
+          "de": "Die Verwaltungsverknüpfungen verwenden eine kleinere Auswahl aktueller Integrationen."
+        },
+        {
+          "category": "Misc",
+          "en": "The restricted website-administrator menu, obsolete integrations and the former recommendations library were removed; the shared super-administrator menu remains.",
+          "de": "Das eingeschränkte Website-Administrator-Menü, veraltete Integrationen und die frühere Empfehlungs-Library wurden entfernt; das gemeinsame Super-Administrator-Menü bleibt erhalten."
+        },
+        {
+          "category": "Misc",
+          "en": "Distribution moved from WordPress.org to direct ZIP installation and GitHub.",
+          "de": "Der Vertrieb wechselte von WordPress.org zur direkten ZIP-Installation und GitHub."
+        }
+      ]
+    },
+    {
+      "version": "2.0.1",
+      "date": "2019-09-23",
+      "items": [
+        {
+          "category": "Improved",
+          "en": "The recommendations library 1.5.0 caches data to reduce repeated requests.",
+          "de": "Die Empfehlungs-Library 1.5.0 speichert Daten zwischen und vermeidet wiederholte Abfragen."
+        }
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "date": "2019-05-04",
+      "items": [
+        {
+          "category": "New",
+          "en": "Dedicated plugin/theme ZIP upload pages and installer shortcuts are available.",
+          "de": "Eigene Plugin-/Theme-ZIP-Seiten und Installer-Verknüpfungen sind verfügbar."
+        },
+        {
+          "category": "New",
+          "en": "Site Health includes plugin diagnostics on WordPress 5.2 or newer.",
+          "de": "Der Website-Zustand enthält Plugin-Diagnosen unter WordPress ab 5.2."
+        },
+        {
+          "category": "New",
+          "en": "A DECKERWEB plugin newsletter is available.",
+          "de": "Ein Newsletter für DECKERWEB Plugins ist verfügbar."
+        },
+        {
+          "category": "Improved",
+          "en": "Recommendations library 1.4.0 and German Du/Sie translations were updated.",
+          "de": "Die Empfehlungs-Library 1.4.0 und deutsche Du-/Sie-Übersetzungen wurden aktualisiert."
+        }
+      ]
+    },
+    {
+      "version": "1.9.4",
+      "date": "2018-11-03",
+      "items": [
+        {
+          "category": "Improved",
+          "en": "Recommendations library 1.2.0 improves installer styles and Dark Mode compatibility.",
+          "de": "Die Empfehlungs-Library 1.2.0 verbessert die Installer-Darstellung und Dark-Mode-Kompatibilität."
+        }
+      ]
+    },
+    {
+      "version": "1.9.3",
+      "date": "2018-10-01",
+      "items": [
+        {
+          "category": "New",
+          "en": "A Facebook group provides community support for DECKERWEB plugins.",
+          "de": "Eine Facebook-Gruppe bietet Unterstützung für DECKERWEB Plugins."
+        },
+        {
+          "category": "Improved",
+          "en": "Recommendations library 1.1.0 improves upload areas and plugin cards, including visible version numbers.",
+          "de": "Die Empfehlungs-Library 1.1.0 verbessert Upload-Bereiche und Plugin-Karten einschließlich sichtbarer Versionsnummern."
+        },
+        {
+          "category": "Improved",
+          "en": "German translations were updated.",
+          "de": "Deutsche Übersetzungen wurden aktualisiert."
+        }
+      ]
+    },
+    {
+      "version": "1.9.2",
+      "date": "2018-09-08",
+      "items": [
+        {
+          "category": "New",
+          "en": "Plugin update information appears on the installed Plugins overview.",
+          "de": "Plugin-Updateinformationen erscheinen in der Übersicht installierter Plugins."
+        },
+        {
+          "category": "Improved",
+          "en": "Recommendations and German translations were updated.",
+          "de": "Empfehlungen und deutsche Übersetzungen wurden aktualisiert."
+        },
+        {
+          "category": "Fixed",
+          "en": "Super-administrator links, administration styles and a translation domain were corrected.",
+          "de": "Super-Administrator-Verknüpfungen, Admin-Darstellung und eine Textdomain wurden korrigiert."
+        }
+      ]
+    },
+    {
+      "version": "1.9.1",
+      "date": "2018-08-22",
+      "items": [
+        {
+          "category": "New",
+          "en": "German informal/formal language packs, Composer metadata and a GitHub readme are included.",
+          "de": "Deutsche Du-/Sie-Sprachpakete, Composer-Metadaten und eine GitHub-Readme sind enthalten."
+        },
+        {
+          "category": "Fixed",
+          "en": "A fatal error in network administration was corrected.",
+          "de": "Ein schwerwiegender Fehler in der Netzwerkverwaltung wurde behoben."
+        },
+        {
+          "category": "Misc",
+          "en": "Support for the discontinued Quick Cache plugin was removed.",
+          "de": "Die Unterstützung des eingestellten Plugins Quick Cache wurde entfernt."
+        }
+      ]
+    },
+    {
+      "version": "1.9.0",
+      "date": "2018-04-01",
+      "items": [
+        {
+          "category": "Improved",
+          "en": "Security, administration links, translations and plugin artwork were updated; dead links were removed.",
+          "de": "Sicherheit, Verwaltungslinks, Übersetzungen und Plugin-Grafiken wurden aktualisiert; ungültige Links wurden entfernt."
+        }
+      ]
+    },
+    {
+      "version": "1.8.0",
+      "date": "2014-10-20",
+      "items": [
+        {
+          "category": "Misc",
+          "en": "Private development versions 1.7.1–1.8.0 were not released publicly.",
+          "de": "Die privaten Entwicklungsstände 1.7.1–1.8.0 wurden nicht öffentlich veröffentlicht."
+        }
+      ]
+    },
+    {
+      "version": "1.7.0",
+      "date": "2014-03-04",
+      "items": [
+        {
+          "category": "New",
+          "en": "Editable menus, a restricted website-administrator menu and network plugin/theme editor shortcuts are available.",
+          "de": "Bearbeitbare Menüs, ein eingeschränktes Website-Administrator-Menü und Verknüpfungen für Netzwerk-Plugins und den Theme-Editor sind verfügbar."
+        },
+        {
+          "category": "New",
+          "en": "Shared menus are protected from ordinary administrator edits; Stream, Snitch and WPMS Admin Reports shortcuts are supported.",
+          "de": "Gemeinsame Menüs sind vor Änderungen durch gewöhnliche Administratoren geschützt; Stream, Snitch und WPMS Admin Reports werden unterstützt."
+        },
+        {
+          "category": "Improved",
+          "en": "WP Migrate DB Pro integration and German translations were updated; obsolete pre-3.8 styling was removed.",
+          "de": "Die WP-Migrate-DB-Pro-Integration und deutsche Übersetzungen wurden aktualisiert; veraltete Darstellung für WordPress vor 3.8 wurde entfernt."
+        },
+        {
+          "category": "Fixed",
+          "en": "Duplicate network Plugin/Theme entries were corrected.",
+          "de": "Doppelte Plugin-/Theme-Einträge im Netzwerk wurden behoben."
+        }
+      ]
+    },
+    {
+      "version": "1.6.1",
+      "date": "2013-12-08",
+      "items": [
+        {
+          "category": "Fixed",
+          "en": "A Multisite function availability check was corrected.",
+          "de": "Die Verfügbarkeitsprüfung einer Multisite-Funktion wurde korrigiert."
+        }
+      ]
+    },
+    {
+      "version": "1.6.0",
+      "date": "2013-12-07",
+      "items": [
+        {
+          "category": "New",
+          "en": "Smart Security Tools and Better WP Security shortcuts are supported.",
+          "de": "Verknüpfungen für Smart Security Tools und Better WP Security werden unterstützt."
+        },
+        {
+          "category": "Improved",
+          "en": "Network New Content, Quick Cache integration and German translations were updated.",
+          "de": "Netzwerk-Neu-Menü, Quick-Cache-Integration und deutsche Übersetzungen wurden aktualisiert."
+        },
+        {
+          "category": "Fixed",
+          "en": "Website view links and duplicate network Plugin/Theme entries were corrected.",
+          "de": "Website-Ansichtslinks und doppelte Plugin-/Theme-Einträge im Netzwerk wurden korrigiert."
+        }
+      ]
+    },
+    {
+      "version": "1.5.0",
+      "date": "2013-11-21",
+      "items": [
+        {
+          "category": "New",
+          "en": "Website dashboards link to the plugin installer; Genesis Simple Sidebars and Smart Tabber Widget are supported.",
+          "de": "Website-Dashboards verlinken den Plugin-Installer; Genesis Simple Sidebars und Smart Tabber Widget werden unterstützt."
+        },
+        {
+          "category": "Improved",
+          "en": "MP6 administration styling, integrations and German translations were updated.",
+          "de": "MP6-Admin-Darstellung, Integrationen und deutsche Übersetzungen wurden aktualisiert."
+        },
+        {
+          "category": "Fixed",
+          "en": "Menu Locations and Google PageSpeed links and constant checks were corrected.",
+          "de": "Links für Menüpositionen und Google PageSpeed sowie Konstantenprüfungen wurden korrigiert."
+        },
+        {
+          "category": "Misc",
+          "en": "Multisite activation became network-only.",
+          "de": "Die Aktivierung in Multisite wurde auf Netzwerkaktivierung beschränkt."
+        }
+      ]
+    },
+    {
+      "version": "1.4.0",
+      "date": "2013-05-07",
+      "items": [
+        {
+          "category": "New",
+          "en": "Custom menu priority, Widgets/Menus/Customizer links, network New Content and single-site Plugin links are available.",
+          "de": "Eigene Menüpriorität, Widgets-/Menü-/Customizer-Links, das Netzwerk-Neu-Menü und Plugin-Links für Einzel-Websites sind verfügbar."
+        },
+        {
+          "category": "New",
+          "en": "Website view links include Pingdom and Google PageSpeed tools.",
+          "de": "Website-Ansichtslinks enthalten Werkzeuge von Pingdom und Google PageSpeed."
+        },
+        {
+          "category": "New",
+          "en": "Additional integrations: Smart Options Optimizer, Simple System Info, Hide My WP, Widget Settings Importer/Exporter, Tabify Edit Screen, Restrict Widgets, P3, Blog Copier, NS Cloner, Codestyling Localization, WP Migrate DB, Multisite Robots.txt Manager, Domain Mapping and Go Sidebar Wizard.",
+          "de": "Zusätzliche Integrationen: Smart Options Optimizer, Simple System Info, Hide My WP, Widget Settings Importer/Exporter, Tabify Edit Screen, Restrict Widgets, P3, Blog Copier, NS Cloner, Codestyling Localization, WP Migrate DB, Multisite Robots.txt Manager, Domain Mapping und Go Sidebar Wizard."
+        },
+        {
+          "category": "Improved",
+          "en": "Existing integrations, loading performance, German translations and help were updated.",
+          "de": "Bestehende Integrationen, Ladeverhalten, deutsche Übersetzungen und Hilfe wurden aktualisiert."
+        }
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2013-03-21",
+      "items": [
+        {
+          "category": "New",
+          "en": "Plugin and Theme install/upload/search shortcuts appear under New; Smart Cleanup Tools, Smart Admin Tweaks and Optimize Database after Deleting Revisions are supported.",
+          "de": "Plugin- und Theme-Verknüpfungen für Installation, Upload und Suche erscheinen unter Neu; Smart Cleanup Tools, Smart Admin Tweaks und Optimize Database after Deleting Revisions werden unterstützt."
+        },
+        {
+          "category": "Improved",
+          "en": "Network navigation, Snapshot storage links, BackWPup 3.x integration and German translations were updated.",
+          "de": "Netzwerk-Navigation, Snapshot-Speicherlinks, BackWPup-3.x-Integration und deutsche Übersetzungen wurden aktualisiert."
+        }
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2012-11-27",
+      "items": [
+        {
+          "category": "New",
+          "en": "Snapshot, Ultimate Branding and Login Security Solution are supported; Network Admin links to the main website dashboard.",
+          "de": "Snapshot, Ultimate Branding und Login Security Solution werden unterstützt; die Netzwerkverwaltung verlinkt das Dashboard der Haupt-Website."
+        },
+        {
+          "category": "Improved",
+          "en": "German translations were updated.",
+          "de": "Deutsche Übersetzungen wurden aktualisiert."
+        }
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "date": "2012-10-05",
+      "items": [
+        {
+          "category": "Fixed",
+          "en": "The Multisite Language Switcher settings link was corrected.",
+          "de": "Der Einstellungslink für Multisite Language Switcher wurde korrigiert."
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2012-09-18",
+      "items": [
+        {
+          "category": "New",
+          "en": "Integrations include User Management Tools, Network Mass Email, Organizational Message Notifier, Multisite Language Switcher, Code Snippets, Code With WP Code Snippets, BackWPup, Toolbox Modules and Relevanssi.",
+          "de": "Integrationen umfassen User Management Tools, Network Mass Email, Organizational Message Notifier, Multisite Language Switcher, Code Snippets, Code With WP Code Snippets, BackWPup, Toolbox Modules und Relevanssi."
+        },
+        {
+          "category": "New",
+          "en": "Custom toolbar menus support CSS classes.",
+          "de": "Eigene Toolbar-Menüs unterstützen CSS-Klassen."
+        },
+        {
+          "category": "Improved",
+          "en": "Integration code loads only when needed; translations were updated and screenshots moved outside the plugin package.",
+          "de": "Integrationscode wird nur bei Bedarf geladen; Übersetzungen wurden aktualisiert und Screenshots aus dem Plugin-Paket ausgelagert."
+        },
+        {
+          "category": "Misc",
+          "en": "Three-part version numbers are used from this release onward.",
+          "de": "Ab dieser Veröffentlichung werden dreiteilige Versionsnummern verwendet."
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2012-08-28",
+      "items": [
+        {
+          "category": "New",
+          "en": "Initial release with four Multisite and seven website integrations.",
+          "de": "Erstveröffentlichung mit vier Multisite- und sieben Website-Integrationen."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "group": "setup",
+      "en": {
+        "question": "Is Multisite required?",
+        "answer": "No. The plugin works on individual WordPress sites and Multisite networks. Network shortcuts appear only where applicable."
+      },
+      "de": {
+        "question": "Ist Multisite erforderlich?",
+        "answer": "Nein. Das Plugin funktioniert auf einzelnen WordPress-Websites und in Multisite-Netzwerken. Netzwerk-Verknüpfungen erscheinen nur dort, wo sie sinnvoll sind."
+      }
+    },
+    {
+      "group": "setup",
+      "en": {
+        "question": "Where are the settings?",
+        "answer": "Single site: Settings → Toolbar Additions. Network activation: Network Admin → Settings → Toolbar Additions. With site-only activation in Multisite, a super administrator uses the active website’s Settings → Toolbar Additions; settings still apply to the network."
+      },
+      "de": {
+        "question": "Wo finde ich die Einstellungen?",
+        "answer": "Einzelinstallation: Einstellungen → Toolbar-Erweiterungen. Netzwerkaktivierung: Netzwerkverwaltung → Einstellungen → Toolbar-Erweiterungen. Bei Einzelaktivierung in Multisite verwendet ein Super-Administrator Einstellungen → Toolbar-Erweiterungen auf der aktiven Website; die Einstellungen gelten weiterhin für das Netzwerk."
+      }
+    },
+    {
+      "group": "setup",
+      "en": {
+        "question": "How do I select my toolbar menu?",
+        "answer": "Create a normal navigation menu and select its source site and menu in the settings. Network activation defaults to the main website; site-only activation defaults to the active website. Activate the plugin on the source website or across the network so that shared-menu protection can run. The legacy mstba_menu location remains a fallback."
+      },
+      "de": {
+        "question": "Wie wähle ich das Toolbar-Menü?",
+        "answer": "Erstelle ein normales Navigationsmenü und wähle Quellwebsite und Menü in den Einstellungen. Netzwerkaktivierung verwendet standardmäßig die Haupt-Website; Einzelaktivierung die aktive Website. Aktiviere das Plugin auf der Quellwebsite oder netzwerkweit, damit der Schutz des gemeinsamen Menüs greifen kann. Die alte Menüposition mstba_menu bleibt als Rückfalllösung erhalten."
+      }
+    },
+    {
+      "group": "menus",
+      "en": {
+        "question": "What is the default menu title?",
+        "answer": "The name of the selected WordPress menu. Leave the custom label empty to keep this automatic title."
+      },
+      "de": {
+        "question": "Wie lautet der Standardtitel?",
+        "answer": "Wie der Name des ausgewählten WordPress-Menüs. Ein leeres eigenes Titelfeld behält diesen automatischen Namen bei."
+      }
+    },
+    {
+      "group": "menus",
+      "en": {
+        "question": "Can I change position and visibility?",
+        "answer": "Yes: first, last, before or after a selected toolbar item, or on the right. Choose frontend, admin or both, and the permitted audience. If an anchor is missing, the menu falls back to the end."
+      },
+      "de": {
+        "question": "Kann ich Position und Sichtbarkeit ändern?",
+        "answer": "Ja: zuerst, zuletzt, vor oder nach einem Toolbar-Eintrag oder rechts. Wähle Frontend, Admin oder beide und die zugelassenen Benutzer. Fehlt der Bezugseintrag, erscheint das Menü am Ende."
+      }
+    },
+    {
+      "group": "menus",
+      "en": {
+        "question": "What does menu depth mean?",
+        "answer": "One child level includes direct children; two includes their children too. Zero means all available levels. The configurable limit is ten child levels."
+      },
+      "de": {
+        "question": "Was bedeutet Menütiefe?",
+        "answer": "Eine Kindebene umfasst direkte Untereinträge; zwei zusätzlich deren Kinder. Null bedeutet alle verfügbaren Ebenen. Einstellbar sind bis zu zehn Kindebenen."
+      }
+    },
+    {
+      "group": "menus",
+      "en": {
+        "question": "Why is my menu missing on the frontend?",
+        "answer": "WordPress must display its toolbar for the current user. Also check the plugin switch, audience, frontend visibility, source site and selected menu. The plugin does not force the toolbar on for visitors."
+      },
+      "de": {
+        "question": "Warum fehlt mein Menü im Frontend?",
+        "answer": "WordPress muss die Toolbar für den aktuellen Benutzer anzeigen. Prüfe außerdem Aktivierung, Benutzerkreis, Frontend-Sichtbarkeit, Quell-Website und Menü. Das Plugin erzwingt keine Toolbar für Besucher."
+      }
+    },
+    {
+      "group": "network",
+      "en": {
+        "question": "Can ordinary site admins edit a shared menu?",
+        "answer": "The toolbar audience and permission to edit its source menu are separate. Shared Multisite source menus are protected against unauthorized admin, REST and Customizer changes."
+      },
+      "de": {
+        "question": "Dürfen Website-Administratoren das gemeinsame Menü bearbeiten?",
+        "answer": "Die Sichtbarkeit des Menüs und die Berechtigung zur Bearbeitung der Quelle sind getrennt. Gemeinsame Multisite-Quellmenüs werden vor unberechtigten Änderungen im Admin, per REST und im Customizer geschützt."
+      }
+    },
+    {
+      "group": "uploads",
+      "en": {
+        "question": "Which upload shortcuts are enabled by default?",
+        "answer": "Plugin ZIP submenu and the + New plugin entry are enabled. Theme ZIP submenu and the + New theme entry are disabled. Each has a separate switch."
+      },
+      "de": {
+        "question": "Welche Upload-Verknüpfungen sind standardmäßig aktiv?",
+        "answer": "Plugin-ZIP-Untermenü und Plugin-Eintrag unter + Neu sind aktiv. Theme-ZIP-Untermenü und Theme-Eintrag unter + Neu sind deaktiviert. Jeder Eintrag besitzt einen eigenen Schalter."
+      }
+    },
+    {
+      "group": "uploads",
+      "en": {
+        "question": "Where are the + New additions placed?",
+        "answer": "Plugin and theme additions are moved to the end of the + New group, including after late-registered content types. WordPress capabilities still determine availability."
+      },
+      "de": {
+        "question": "Wo stehen die Ergänzungen unter + Neu?",
+        "answer": "Plugin und Theme stehen am Ende der Gruppe + Neu, auch nach spät registrierten Inhaltstypen. WordPress-Berechtigungen bestimmen weiterhin ihre Verfügbarkeit."
+      }
+    },
+    {
+      "group": "uploads",
+      "en": {
+        "question": "How does Theme ZIP upload work?",
+        "answer": "The plugin provides an upload page with the native WordPress form and installer. In Multisite installation occurs in Network Admin and requires the appropriate network privileges. It does not replace ZIP validation or WordPress security checks."
+      },
+      "de": {
+        "question": "Wie funktioniert Theme-ZIP hochladen?",
+        "answer": "Das Plugin stellt eine Upload-Seite mit dem nativen WordPress-Formular und Installer bereit. In Multisite erfolgt die Installation in der Netzwerkverwaltung mit den entsprechenden Rechten. ZIP-Prüfungen und Sicherheitsprüfungen von WordPress bleiben erhalten."
+      }
+    },
+    {
+      "group": "components",
+      "en": {
+        "question": "What is the deckerweb Plugin Library?",
+        "answer": "A shared installer tab for approved deckerweb plugins. Library 0.6.0 checks package hashes and dependencies, separates installation from activation and uses one elected runtime across participating hosts. The offline catalog includes a preparation preview; online catalog updates are optional and off by default. In Multisite, network-activate a participating host to make the Library available in Network Admin."
+      },
+      "de": {
+        "question": "Was ist die deckerweb Plugin Library?",
+        "answer": "Ein gemeinsamer Installer-Reiter für freigegebene deckerweb Plugins. Library 0.6.0 prüft Paketprüfsummen und Abhängigkeiten, trennt Installation von Aktivierung und verwendet eine gemeinsam gewählte Laufzeit für teilnehmende Plugins. Der Offline-Katalog enthält eine Vorbereitungsvorschau; Online-Katalogupdates sind optional und standardmäßig aus. In Multisite muss ein teilnehmender Host netzwerkweit aktiviert sein, damit die Library in der Netzwerkverwaltung verfügbar ist."
+      }
+    },
+    {
+      "group": "components",
+      "en": {
+        "question": "Does the library contact GitHub on every page?",
+        "answer": "No. Its bundled catalog and artwork work locally. Package downloads contact their declared hosts when requested. Optional online catalog retrieval is disabled by default and uses caching and backoff when enabled."
+      },
+      "de": {
+        "question": "Kontaktiert die Library auf jeder Seite GitHub?",
+        "answer": "Nein. Mitgelieferter Katalog und Grafiken funktionieren lokal. Angeforderte Paket-Downloads kontaktieren die festgelegten Hosts. Der optionale Online-Katalog ist standardmäßig deaktiviert und verwendet Cache und Wiederholungsabstände."
+      }
+    },
+    {
+      "group": "components",
+      "en": {
+        "question": "How do plugin updates work?",
+        "answer": "The bundled deckerweb Updater 2.1.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy."
+      },
+      "de": {
+        "question": "Wie funktionieren Plugin-Updates?",
+        "answer": "Der mitgelieferte deckerweb Updater 2.1.0 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen."
+      }
+    },
+    {
+      "group": "technical",
+      "en": {
+        "question": "Which versions are supported?",
+        "answer": "WordPress 6.7 or newer and PHP 8.2 or newer. Local integration checks use PHP 8.4; CI also checks PHP 8.2. No PHP 7 compatibility is declared."
+      },
+      "de": {
+        "question": "Welche Versionen werden unterstützt?",
+        "answer": "WordPress ab 6.7 und PHP ab 8.2. Lokale Integrationsprüfungen verwenden PHP 8.4; CI prüft zusätzlich PHP 8.2. PHP-7-Kompatibilität wird nicht zugesichert."
+      }
+    },
+    {
+      "group": "technical",
+      "en": {
+        "question": "Will my 3.x menu survive the upgrade?",
+        "answer": "Yes: existing navigation menus remain in WordPress. The legacy mstba_menu location is still recognized. Review the new settings and optional shortcuts after the first upgrade. Keep a backup before replacing a major version."
+      },
+      "de": {
+        "question": "Bleibt mein 3.x-Menü beim Upgrade erhalten?",
+        "answer": "Ja: bestehende Navigationsmenüs bleiben in WordPress. Die alte Menüposition mstba_menu wird weiterhin erkannt. Prüfe nach dem ersten Upgrade neue Einstellungen und optionale Verknüpfungen. Sichere die Installation vor einem großen Versionswechsel."
+      }
+    },
+    {
+      "group": "technical",
+      "en": {
+        "question": "Why are some shortcuts absent?",
+        "answer": "Shortcuts depend on permissions, installed integrations, Multisite context and theme capabilities. Block themes offer the Site Editor; classic themes offer their applicable customization screens. File editor links are opt-in and respect WordPress restrictions."
+      },
+      "de": {
+        "question": "Warum fehlen manche Verknüpfungen?",
+        "answer": "Verknüpfungen hängen von Rechten, aktiven Integrationen, Multisite-Kontext und Theme-Funktionen ab. Block-Themes bieten den Website-Editor, klassische Themes ihre passenden Anpassungsseiten. Datei-Editoren sind optional und beachten WordPress-Einschränkungen."
+      }
+    },
+    {
+      "group": "technical",
+      "en": {
+        "question": "How does performance scale with large networks?",
+        "answer": "Menu data is reused within the request, sites are bounded by the configurable subsite limit, and frontend assets load only when needed. There is no full-network scan on every page. Exact speed still depends on your WordPress installation and other plugins."
+      },
+      "de": {
+        "question": "Wie skaliert das Plugin in großen Netzwerken?",
+        "answer": "Menüdaten werden innerhalb einer Anfrage wiederverwendet, Websites durch das konfigurierbare Limit begrenzt und Frontend-Dateien nur bei Bedarf geladen. Es gibt keine vollständige Netzwerk-Abfrage auf jeder Seite. Die tatsächliche Geschwindigkeit hängt auch von WordPress und anderen Plugins ab."
+      }
+    },
+    {
+      "group": "support",
+      "en": {
+        "question": "How do I report a problem?",
+        "answer": "For ordinary questions and bugs, use GitHub Issues or Discussions. For suspected vulnerabilities, use the repository’s private security report form; see SECURITY.md. Include plugin, Library, WordPress and PHP versions plus redacted reproduction steps. Never include credentials or private content."
+      },
+      "de": {
+        "question": "Wie melde ich einen Fehler?",
+        "answer": "Für gewöhnliche Fragen und Fehler nutze GitHub Issues oder Discussions. Vermutete Sicherheitslücken melde über das private Sicherheitsformular des Repositorys; siehe SECURITY.md. Nenne Plugin-, Library-, WordPress- und PHP-Version sowie bereinigte Schritte zur Reproduktion. Keine Zugangsdaten oder privaten Inhalte mitsenden."
+      }
+    },
+    {
+      "group": "data",
+      "en": {
+        "question": "What happens when I deactivate or uninstall?",
+        "answer": "Deactivation keeps all settings and WordPress menus. Uninstall clears this plugin’s update cache. Toolbar settings are retained unless the deletion option is enabled for that site or network. On physical removal every network’s own choice is respected. Shared Library cleanup runs only after its last installed host is removed, including inactive hosts; its own deletion option is separate. Installed plugins, navigation menus and foreign content remain untouched."
+      },
+      "de": {
+        "question": "Was passiert bei Deaktivierung oder Deinstallation?",
+        "answer": "Deaktivierung erhält alle Einstellungen und WordPress-Menüs. Deinstallation leert den Updatecache dieses Plugins. Toolbar-Einstellungen bleiben erhalten, sofern die Löschoption für die jeweilige Website oder das Netzwerk nicht aktiviert wurde. Bei physischer Entfernung wird die eigene Entscheidung jedes Netzwerks berücksichtigt. Die gemeinsame Library wird erst beim letzten installierten Host bereinigt, auch deaktivierte Hosts zählen; ihre Löschoption ist unabhängig. Installierte Plugins, Navigationsmenüs und fremde Inhalte bleiben erhalten."
+      }
+    },
+    {
+      "group": "menus",
+      "en": {
+        "question": "Can I use my personal toolbar preference?",
+        "answer": "Yes. The plugin respects WordPress’s user-profile preference for displaying the toolbar on the frontend. It does not enable the frontend toolbar for someone who has hidden it. Menu source, position and shortcut configuration remain site/network settings."
+      },
+      "de": {
+        "question": "Gilt meine persönliche Toolbar-Einstellung?",
+        "answer": "Ja. Das Plugin berücksichtigt die WordPress-Profiloption zur Anzeige der Toolbar im Frontend. Wer sie ausgeblendet hat, erhält keine erzwungene Frontend-Toolbar. Menüquelle, Position und Verknüpfungen bleiben Website-/Netzwerkeinstellungen."
+      }
+    }
+  ],
+  "unreleased": [
+    {
+      "category": "Improved",
+      "en": "Updates the shared Library to 0.6.0 and Updater to 2.1.0; improves German documentation and readable local release history.",
+      "de": "Aktualisiert die gemeinsame Library auf 0.6.0 und den Updater auf 2.1.0; verbessert die deutsche Dokumentation und den lesbaren lokalen Änderungsverlauf."
+    },
+    {
+      "category": "Fixed",
+      "en": "Checks candidate packages in bulk updates and preserves existing data during deactivation and default uninstall.",
+      "de": "Prüft Updatepakete auch bei Sammelupdates und erhält vorhandene Daten bei Deaktivierung und standardmäßiger Deinstallation."
+    },
+    {
+      "category": "Misc",
+      "en": "Site-only activation is available in Multisite for super-administrator-managed network settings.",
+      "de": "Einzelaktivierung ist in Multisite mit durch Super-Administratoren verwalteten Netzwerkeinstellungen verfügbar."
+    }
+  ],
+  "features": {
+    "en": [
+      [
+        "Your WordPress menu",
+        "Select a source site and menu independently of your theme. Keep root entries separate or group them under the menu’s name. A custom label is optional."
+      ],
+      [
+        "Position, visibility and depth",
+        "Choose first/last, before/after a reference item or the right side. Show the menu on the frontend, in administration or both. Choose one to ten child levels, or all. Missing references fall back to the end."
+      ],
+      [
+        "Upload shortcuts",
+        "Plugin and Theme additions appear last under New. Each addition and ZIP submenu has its own switch: Plugins on, Themes off. Theme uploads use a dedicated page and the native WordPress installer."
+      ],
+      [
+        "Multisite administration",
+        "Use one network-wide menu source with optional viewing by website administrators. Shared menus remain editable only by super administrators. Destination permissions still apply; website expansion is bounded."
+      ],
+      [
+        "Shared components",
+        "Library 0.6.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.1.0 uses normal WordPress updates. Assets are local; no telemetry is collected."
+      ]
+    ],
+    "de": [
+      [
+        "Dein WordPress-Menü",
+        "Wähle Quellwebsite und Menü unabhängig vom Theme. Zeige Haupteinträge einzeln oder gruppiere sie unter dem Menünamen. Eine eigene Beschriftung ist optional."
+      ],
+      [
+        "Position, Sichtbarkeit und Tiefe",
+        "Wähle zuerst/zuletzt, vor/nach einem Bezugseintrag oder die rechte Seite. Zeige das Menü im Frontend, im Admin oder in beiden. Wähle eine bis zehn Kindebenen oder alle. Fehlt der Bezugseintrag, erscheint das Menü am Ende."
+      ],
+      [
+        "Upload-Verknüpfungen",
+        "Plugin und Theme stehen unter Neu am Ende. Jeder Eintrag und jedes ZIP-Untermenü hat einen eigenen Schalter: Plugins an, Themes aus. Theme-Uploads verwenden eine eigene Seite und den nativen WordPress-Installer."
+      ],
+      [
+        "Multisite-Verwaltung",
+        "Nutze eine netzwerkweite Menüquelle mit optionaler Sichtbarkeit für Website-Administratoren. Gemeinsame Menüs dürfen nur Super-Administratoren bearbeiten. Zielseiten-Rechte gelten weiterhin; zusätzliche Website-Verknüpfungen sind begrenzt."
+      ],
+      [
+        "Gemeinsame Komponenten",
+        "Library 0.6.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.1.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie."
+      ]
+    ]
+  },
+  "intro": {
+    "en": "A configurable WordPress menu in the toolbar, with useful website and network shortcuts. Part of QuickNav; available on individual sites and Multisite networks.",
+    "de": "Ein konfigurierbares WordPress-Menü in der Toolbar mit nützlichen Website- und Netzwerk-Verknüpfungen. Teil von QuickNav; für Einzel-Websites und Multisite-Netzwerke."
+  },
+  "install": {
+    "en": "Requires WordPress 6.7+ and PHP 8.2+. Install the released ZIP via Plugins → Add New → Upload Plugin. Open Settings → Toolbar Additions. For Multisite network activation, use Network Admin → Settings → Toolbar Additions. Site-only activation uses the active site’s settings page and still requires a super administrator for network settings. The optional catalog installer needs PHP ZipArchive. Review custom 3.x snippets before a major upgrade.",
+    "de": "Benötigt WordPress 6.7+ und PHP 8.2+. Installiere die veröffentlichte ZIP über Plugins → Installieren → Plugin hochladen. Öffne Einstellungen → Toolbar-Erweiterungen. Bei Netzwerkaktivierung verwende Netzwerkverwaltung → Einstellungen → Toolbar-Erweiterungen. Einzelaktivierung verwendet die Einstellungsseite der aktiven Website; Netzwerkeinstellungen benötigen weiterhin einen Super-Administrator. Der optionale Katalog-Installer benötigt PHP ZipArchive. Prüfe eigene 3.x-Snippets vor einem großen Upgrade."
+  },
+  "groups": {
+    "en": {
+      "setup": "Getting started",
+      "menus": "Your toolbar menu",
+      "network": "Multisite and permissions",
+      "uploads": "Installation shortcuts",
+      "components": "Library and updates",
+      "data": "Your data",
+      "technical": "Compatibility and troubleshooting",
+      "support": "Support and security"
+    },
+    "de": {
+      "setup": "Einstieg",
+      "menus": "Dein Toolbar-Menü",
+      "network": "Multisite und Berechtigungen",
+      "uploads": "Installationsverknüpfungen",
+      "components": "Library und Updates",
+      "data": "Deine Daten",
+      "technical": "Kompatibilität und Fehlersuche",
+      "support": "Hilfe und Sicherheit"
+    }
+  }
+}

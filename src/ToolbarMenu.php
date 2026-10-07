@@ -1,29 +1,52 @@
 <?php
 /**
  * Multisite Toolbar Additions.
- * Copyright (c) 2012–2026 David Decker – DECKERWEB.
+ * Copyright © 2012–2026 David Decker – DECKERWEB.
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 namespace Deckerweb\MultisiteToolbar;
 
 defined( 'ABSPATH' ) || exit;
 
+/** Render a source WordPress menu with configurable position, context and depth. */
 final class ToolbarMenu {
 	private $settings;
 	private $menus;
 	private $roots = [];
+	/**
+	 * Store the services used by this instance without persistent writes.
+	 *
+	 * @param Settings $settings Current site/network setting service.
+	 * @param MenuRepository $menus Request-local source menu repository.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function __construct( Settings $settings, MenuRepository $menus ) { $this->settings = $settings; $this->menus = $menus; }
 
+	/**
+	 * Register toolbar rendering, late positioning and conditional styles.
+	 *
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function register() {
 		add_action( 'admin_bar_menu', [ $this, 'render' ], 9999 );
 		add_action( 'wp_before_admin_bar_render', [ $this, 'position' ], PHP_INT_MAX );
 		add_action( 'wp_enqueue_scripts', [ $this, 'assets' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'assets' ] );
 	}
+	/**
+	 * Enqueue toolbar styles only for an eligible visible menu.
+	 *
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function assets() {
 		if ( $this->visible() ) { wp_enqueue_style( 'mstba-toolbar', plugins_url( 'assets/toolbar.css', MSTBA_PLUGIN_FILE ), [ 'admin-bar' ], MSTBA_PLUGIN_VERSION ); }
 	}
 
+	/**
+	 * Check toolbar visibility, context, personal preference and audience rights.
+	 *
+	 * @return bool Result described above; unrelated hook values remain unchanged.
+	 */
 	public function visible() {
 		if ( ! $this->settings->get( 'enabled' ) || ! is_user_logged_in() || ! is_admin_bar_showing() ) { return false; }
 		$context = $this->settings->get( 'context' );
@@ -32,7 +55,13 @@ final class ToolbarMenu {
 		return current_user_can( 'manage_options' ) || ( is_multisite() && is_super_admin() );
 	}
 
-	/** Iterative traversal: linear cost, skips orphans and cycles without recursion. */
+	/**
+	 * Traverse menu levels iteratively, skipping cycles and orphaned entries.
+	 *
+	 * @param array $items Source menu item objects in their original order.
+	 * @param int $child_depth Child-level limit; zero includes all reachable levels.
+	 * @return array Result described above; unrelated hook values remain unchanged.
+	 */
 	public static function tree( array $items, $child_depth ) {
 		$children = [];
 		foreach ( $items as $item ) {
@@ -55,6 +84,12 @@ final class ToolbarMenu {
 		return $out;
 	}
 
+	/**
+	 * Add escaped menu nodes without changing destination permissions.
+	 *
+	 * @param \WP_Admin_Bar $bar Toolbar instance receiving public nodes.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function render( $bar ) {
 		$this->roots = [];
 		if ( ! $this->visible() ) { return; }
@@ -82,12 +117,16 @@ final class ToolbarMenu {
 		}
 	}
 
-	/** Reinsert public nodes in the desired order; never depend on Core's private tree. */
+	/**
+	 * Reinsert public toolbar nodes around the configured available anchor.
+	 *
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function position() {
 		global $wp_admin_bar;
 		if ( ! $this->roots || ! $wp_admin_bar ) { return; }
 		$position = $this->settings->get( 'position' );
-		if ( 'last' === $position || 'right' === $position ) { return; }
+		if ( 'right' === $position ) { return; }
 		$nodes = (array) $wp_admin_bar->get_nodes();
 		$top = []; $custom = [];
 		foreach ( $nodes as $id => $node ) {

@@ -1,7 +1,7 @@
 <?php
 /**
  * Multisite Toolbar Additions.
- * Copyright (c) 2012–2026 David Decker – DECKERWEB.
+ * Copyright © 2012–2026 David Decker – DECKERWEB.
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 namespace Deckerweb\MultisiteToolbar;
@@ -13,6 +13,11 @@ final class Settings {
 	const OPTION = 'mstba_settings';
 	private $values;
 
+	/**
+	 * Provide conservative defaults without writing persistent data.
+	 *
+	 * @return array Result described above; unrelated hook values remain unchanged.
+	 */
 	public static function defaults() {
 		return [
 			'enabled' => true, 'source_site' => 0, 'menu_id' => 0, 'context' => 'both',
@@ -21,14 +26,33 @@ final class Settings {
 			'network_links' => true, 'site_links' => true, 'subsite_links' => true,
 			'subsite_limit' => 25, 'menu_edit_links' => true, 'integrations' => true,
 			'resources' => true, 'file_editors' => false, 'fullscreen' => true,
-			'new_plugins' => true, 'new_themes' => false, 'plugin_zip_submenu' => true, 'theme_zip_submenu' => false,
+			'new_plugins' => true, 'new_themes' => false, 'plugin_zip_submenu' => true, 'theme_zip_submenu' => false, 'delete_data' => false,
 		];
 	}
 
+	/**
+	 * Determine whether this plugin is activated across the current network.
+	 *
+	 * @return bool True for network activation; false for a site-only copy.
+	 */
+	public static function network_active(): bool {
+		return is_multisite() && isset( get_site_option( 'active_sitewide_plugins', [] )[ plugin_basename( MSTBA_PLUGIN_FILE ) ] );
+	}
+
+	/**
+	 * Select the capability required to change the shared settings.
+	 *
+	 * @return string Result described above; unrelated hook values remain unchanged.
+	 */
 	public static function capability() {
 		return is_multisite() ? 'manage_network_options' : 'manage_options';
 	}
 
+	/**
+	 * Read and reuse site or network settings for this request.
+	 *
+	 * @return array Result described above; unrelated hook values remain unchanged.
+	 */
 	public function all() {
 		if ( null === $this->values ) {
 			$stored = is_multisite() ? get_network_option( get_current_network_id(), self::OPTION, [] ) : get_option( self::OPTION, [] );
@@ -37,6 +61,12 @@ final class Settings {
 		return $this->values;
 	}
 
+	/**
+	 * Read a setting, honoring the supported legacy constants.
+	 *
+	 * @param string $key Allowlisted setting key.
+	 * @return mixed Result described above; unrelated hook values remain unchanged.
+	 */
 	public function get( $key ) {
 		$values = $this->all();
 		$constants = [
@@ -50,16 +80,26 @@ final class Settings {
 		return $values[ $key ] ?? null;
 	}
 
+	/**
+	 * Resolve the selected source website or the network main site.
+	 *
+	 * @return int Result described above; unrelated hook values remain unchanged.
+	 */
 	public function source() {
 		$site = (int) $this->get( 'source_site' );
-		return $site ?: ( is_multisite() ? get_main_site_id() : get_current_blog_id() );
+		return $site ?: ( self::network_active() ? get_main_site_id() : get_current_blog_id() );
 	}
 
-	/** Reject malformed input; never allow posted values to select another network. */
+	/**
+	 * Validate allowlisted form values and menu ownership in this network.
+	 *
+	 * @param mixed $input Untrusted settings form values.
+	 * @return array|\WP_Error Result described above; unrelated hook values remain unchanged.
+	 */
 	public function sanitize( $input ) {
 		$input = is_array( $input ) ? $input : [];
 		$out = self::defaults();
-		foreach ( [ 'enabled', 'network_links', 'site_links', 'subsite_links', 'menu_edit_links', 'integrations', 'resources', 'file_editors', 'fullscreen', 'new_plugins', 'new_themes', 'plugin_zip_submenu', 'theme_zip_submenu' ] as $key ) {
+		foreach ( [ 'enabled', 'network_links', 'site_links', 'subsite_links', 'menu_edit_links', 'integrations', 'resources', 'file_editors', 'fullscreen', 'new_plugins', 'new_themes', 'plugin_zip_submenu', 'theme_zip_submenu', 'delete_data' ] as $key ) {
 			$out[ $key ] = isset( $input[ $key ] ) && in_array( $input[ $key ], [ '1', 1, true ], true );
 		}
 		foreach ( [ 'context' => [ 'both', 'admin', 'frontend' ], 'audience' => [ 'administrators', 'site_administrators' ], 'position' => [ 'first', 'last', 'before', 'after', 'right' ], 'anchor' => [ 'wp-logo', 'my-sites', 'site-name', 'updates', 'new-content', 'comments' ], 'layout' => [ 'original', 'grouped' ] ] as $key => $allowed ) {
@@ -87,8 +127,14 @@ final class Settings {
 		} elseif ( ! is_multisite() ) {
 			$out['source_site'] = get_current_blog_id();
 		}
-		$source = $out['source_site'] ?: ( is_multisite() ? get_main_site_id() : get_current_blog_id() );
-		$valid = MenuRepository::on_site( $source, static function () use ( $out ) {
+		$source = $out['source_site'] ?: ( self::network_active() ? get_main_site_id() : get_current_blog_id() );
+		if ( is_multisite() && ! self::network_active() && ! in_array( plugin_basename( MSTBA_PLUGIN_FILE ), (array) get_blog_option( $source, 'active_plugins', [] ), true ) ) {
+			return new \WP_Error( 'inactive_source', __( 'Network-activate this plugin or activate it on the source website before selecting that menu.', 'multisite-toolbar-additions' ) );
+		}
+		$valid = MenuRepository::on_site( $source, /** Check that the selected menu exists in the proposed source site.
+ * @return bool Result described above.
+ */
+static function () use ( $out ) {
 			return ! $out['menu_id'] || (bool) wp_get_nav_menu_object( $out['menu_id'] );
 		} );
 		if ( ! $valid ) {
@@ -97,6 +143,12 @@ final class Settings {
 		return $out;
 	}
 
+	/**
+	 * Persist validated values in the site or current network scope.
+	 *
+	 * @param array $values Previously validated settings to persist.
+	 * @return void No value; output or hooks are updated as described.
+	 */
 	public function save( array $values ) {
 		if ( is_multisite() ) {
 			update_network_option( get_current_network_id(), self::OPTION, $values );

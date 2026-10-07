@@ -1,76 +1,157 @@
 # Multisite Toolbar Additions
 
-![Launch Rail](assets/brand/banner-de.svg)
+![Multisite Toolbar Additions](assets-github/banner-de-1280x640.png)
+
+## Kurzvorstellung
 
 **Viele Sites. Ein Handgriff.**
 
-[English](README.md) · [Deutsch](README-de.md) · [Releases](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest)
+Ein konfigurierbares WordPress-Menü in der Toolbar mit nützlichen Website- und Netzwerk-Verknüpfungen. Teil von QuickNav; für Einzel-Websites und Multisite-Netzwerke.
 
-Ein konfigurierbares WordPress-Menü in der Toolbar und nützliche Netzwerk-/Website-Verknüpfungen. Einzel-Websites und Multisite werden unterstützt: zentrale Einstellungen, unabhängige Menüquelle, Position, Frontend-/Admin-Anzeige, Gruppierung und Kindebenen.
+**Version 4.0.0 · WordPress 6.7+ · PHP 8.2+**
+
+Noch nicht veröffentlichte Wartungsänderungen auf Grundlage von 4.0.0. Die veröffentlichte 4.0.0-ZIP bleibt unverändert.
+
+[English](README.md) · [Deutsch](README-de.md) · [Download](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest) · [Fragen nach Themen](https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-Deutsch)
 
 ## Inhalt
 
-[Features](#features) · [Installation](#installation) · [Documentation](#documentation) · [FAQ](#faq) · [Changelog](#changelog)
+[Auf einen Blick](#auf-einen-blick) · [Installation und erste Schritte](#installation-und-erste-schritte) · [Hauptfunktionen](#hauptfunktionen) · [FAQ](#faq) · [Changelog](#changelog) · [Über das Projekt](#über-das-projekt) · [Hilfe und Sicherheit](#hilfe-und-sicherheit) · [Lizenz und Herkunft](#lizenz-und-herkunft)
 
-## Features
+## Auf einen Blick
 
-- Direkte WordPress-Menüauswahl unabhängig vom Theme; optionale Netzwerk-Quellwebsite.
-- Links zuerst/zuletzt, vor/nach Bezugspunkten oder rechts; Frontend/Admin/beide; Gruppierung und Tiefe.
-- Schutz des gemeinsamen Multisite-Menüs; Zielgruppenwahl unter Beachtung der Zielseiten-Rechte.
-- Getrennte + Neu-/ZIP-Untermenü-Schalter; Plugins standardmäßig an, Themes aus.
-- Eigene Theme-ZIP-Seite und Netzwerk-Installationslinks; native WordPress-Uploadprüfung.
-- Netzwerk-/Website-/Unterseiten-Verknüpfungen, erkannte Integrationen, Website-Zustand und Vollbild-Toolbar.
-- deckerweb Library 0.2.0 mit neun freigegebenen Releases und Voraussetzungs-/Prüfsummenchecks.
-- DECKERWEB GitHub Updater V2, Launch-Rail-Grafiken und gemeinsamer Footer.
+- Wähle Quellwebsite und Menü unabhängig vom Theme. Zeige Haupteinträge einzeln oder gruppiere sie unter dem Menünamen. Eine eigene Beschriftung ist optional.
+- Wähle zuerst/zuletzt, vor/nach einem Bezugseintrag oder die rechte Seite. Zeige das Menü im Frontend, im Admin oder in beiden. Wähle eine bis zehn Kindebenen oder alle. Fehlt der Bezugseintrag, erscheint das Menü am Ende.
+- Plugin und Theme stehen unter Neu am Ende. Jeder Eintrag und jedes ZIP-Untermenü hat einen eigenen Schalter: Plugins an, Themes aus. Theme-Uploads verwenden eine eigene Seite und den nativen WordPress-Installer.
+- Nutze eine netzwerkweite Menüquelle mit optionaler Sichtbarkeit für Website-Administratoren. Gemeinsame Menüs dürfen nur Super-Administratoren bearbeiten. Zielseiten-Rechte gelten weiterhin; zusätzliche Website-Verknüpfungen sind begrenzt.
+- Library 0.6.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.1.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie.
 
-## Installation
+## Installation und erste Schritte
 
-Benötigt **WordPress 6.7+ und PHP 8.2+**. Release-ZIP über Plugins → Installieren → Plugin hochladen installieren, in Multisite netzwerkweit aktivieren. Einstellungen → Toolbar Additions bzw. Netzwerkverwaltung → Einstellungen → Toolbar Additions öffnen. Der optionale Katalog-Installer benötigt zusätzlich PHP ZipArchive. Eigene 3.x-Snippets vor dem großen Upgrade prüfen.
+Benötigt WordPress 6.7+ und PHP 8.2+. Installiere die veröffentlichte ZIP über Plugins → Installieren → Plugin hochladen. Öffne Einstellungen → Toolbar-Erweiterungen. Bei Netzwerkaktivierung verwende Netzwerkverwaltung → Einstellungen → Toolbar-Erweiterungen. Einzelaktivierung verwendet die Einstellungsseite der aktiven Website; Netzwerkeinstellungen benötigen weiterhin einen Super-Administrator. Der optionale Katalog-Installer benötigt PHP ZipArchive. Prüfe eigene 3.x-Snippets vor einem großen Upgrade.
 
-## Documentation
+## Hauptfunktionen
 
-[English guide](docs/wiki/English.md) · [Deutsche Anleitung](docs/wiki/Deutsch.md) · [FAQ — English](docs/wiki/FAQ-English.md) · [FAQ — Deutsch](docs/wiki/FAQ-Deutsch.md) · [Full changelog](docs/wiki/Changelog-English.md) · [Vollständiger Changelog](docs/wiki/Changelog-Deutsch.md)
+### Dein WordPress-Menü
 
-Der Footer öffnet lokale Dokumentation und den vollständigen beigefügten Changelog. GitHub dokumentiert dieselben Themen. Siehe [Umstieg](docs/MIGRATION-4.0.md), [gemeinsame Libraries](docs/LIBRARIES.md) und [Prüfumfang](docs/VERIFICATION.md).
+Wähle Quellwebsite und Menü unabhängig vom Theme. Zeige Haupteinträge einzeln oder gruppiere sie unter dem Menünamen. Eine eigene Beschriftung ist optional.
+
+### Position, Sichtbarkeit und Tiefe
+
+Wähle zuerst/zuletzt, vor/nach einem Bezugseintrag oder die rechte Seite. Zeige das Menü im Frontend, im Admin oder in beiden. Wähle eine bis zehn Kindebenen oder alle. Fehlt der Bezugseintrag, erscheint das Menü am Ende.
+
+### Upload-Verknüpfungen
+
+Plugin und Theme stehen unter Neu am Ende. Jeder Eintrag und jedes ZIP-Untermenü hat einen eigenen Schalter: Plugins an, Themes aus. Theme-Uploads verwenden eine eigene Seite und den nativen WordPress-Installer.
+
+### Multisite-Verwaltung
+
+Nutze eine netzwerkweite Menüquelle mit optionaler Sichtbarkeit für Website-Administratoren. Gemeinsame Menüs dürfen nur Super-Administratoren bearbeiten. Zielseiten-Rechte gelten weiterhin; zusätzliche Website-Verknüpfungen sind begrenzt.
+
+### Gemeinsame Komponenten
+
+Library 0.6.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.1.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie.
 
 ## FAQ
 
-**Braucht es Multisite?** Nein, Einzel-Websites werden ebenfalls unterstützt.
+### Wie wähle ich das Toolbar-Menü?
 
-**Kann ich Position und Tiefe wählen?** Ja: links/rechts, vor/nach Bezugspunkten und eine bis zehn Kindebenen oder alle.
+Erstelle ein normales Navigationsmenü und wähle Quellwebsite und Menü in den Einstellungen. Netzwerkaktivierung verwendet standardmäßig die Haupt-Website; Einzelaktivierung die aktive Website. Aktiviere das Plugin auf der Quellwebsite oder netzwerkweit, damit der Schutz des gemeinsamen Menüs greifen kann. Die alte Menüposition mstba_menu bleibt als Rückfalllösung erhalten.
 
-**Folgt eine leere Beschriftung dem Menünamen?** Ja. Eine eigene Beschriftung überschreibt den gewählten WordPress-Menünamen.
+### Kann ich Position und Sichtbarkeit ändern?
 
-**Wer darf das gemeinsame Multisite-Menü bearbeiten?** Super-Administratoren. Optionale Sichtbarkeit für Website-Administratoren vergibt keine zusätzlichen Rechte.
+Ja: zuerst, zuletzt, vor oder nach einem Toolbar-Eintrag oder rechts. Wähle Frontend, Admin oder beide und die zugelassenen Benutzer. Fehlt der Bezugseintrag, erscheint das Menü am Ende.
 
-**Welche Plugin-/Theme-Erweiterungen sind standardmäßig an?** Plugins an, Themes aus, unabhängig für + Neu und ZIP-Untermenüs.
+### Dürfen Website-Administratoren das gemeinsame Menü bearbeiten?
 
-**Ruft der Katalog automatisch externe Daten ab?** Der beigefügte Katalog arbeitet lokal. Online-Aktualisierungen benötigen ausdrückliche Konfiguration. Installation lädt das ausgewählte GitHub-Release.
+Die Sichtbarkeit des Menüs und die Berechtigung zur Bearbeitung der Quelle sind getrennt. Gemeinsame Multisite-Quellmenüs werden vor unberechtigten Änderungen im Admin, per REST und im Customizer geschützt.
 
-**Wie funktionieren Updates?** Über normale WordPress-Pluginupdates mit dem integrierten deckerweb Updater V2. Kein zusätzliches Plugin und kein Token erforderlich.
+### Welche Upload-Verknüpfungen sind standardmäßig aktiv?
+
+Plugin-ZIP-Untermenü und Plugin-Eintrag unter + Neu sind aktiv. Theme-ZIP-Untermenü und Theme-Eintrag unter + Neu sind deaktiviert. Jeder Eintrag besitzt einen eigenen Schalter.
+
+### Wie funktionieren Plugin-Updates?
+
+Der mitgelieferte deckerweb Updater 2.1.0 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen.
+
+### Was passiert bei Deaktivierung oder Deinstallation?
+
+Deaktivierung erhält alle Einstellungen und WordPress-Menüs. Deinstallation leert den Updatecache dieses Plugins. Toolbar-Einstellungen bleiben erhalten, sofern die Löschoption für die jeweilige Website oder das Netzwerk nicht aktiviert wurde. Bei physischer Entfernung wird die eigene Entscheidung jedes Netzwerks berücksichtigt. Die gemeinsame Library wird erst beim letzten installierten Host bereinigt, auch deaktivierte Hosts zählen; ihre Löschoption ist unabhängig. Installierte Plugins, Navigationsmenüs und fremde Inhalte bleiben erhalten.
+
+### Kontaktiert die Library auf jeder Seite GitHub?
+
+Nein. Mitgelieferter Katalog und Grafiken funktionieren lokal. Angeforderte Paket-Downloads kontaktieren die festgelegten Hosts. Der optionale Online-Katalog ist standardmäßig deaktiviert und verwendet Cache und Wiederholungsabstände.
+
+[Fragen nach Themen](https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-Deutsch)
 
 ## Changelog
 
-### 4.0.0 — 2026-10-01
+### Noch nicht veröffentlicht
 
-- **New:** Einstellungsseite für Menüquelle, Anzeigeort, Zielgruppe, Position, Gruppierung und Kindebenen ergänzt.
-- **New:** Getrennte Plugin-/Theme-Schalter für + Neu und ZIP-Untermenüs ergänzt; Plugins standardmäßig an, Themes aus.
-- **New:** Eigene Theme-ZIP-Seite mit abgesichertem WordPress-Installer und Multisite-Netzwerklinks ergänzt.
-- **New:** deckerweb Plugin Library 0.2.0 integriert: freigegebene Releases, lokale Icons, Abhängigkeitsprüfungen und optionale Katalogeinstellungen.
-- **Improved:** Plugin mit kleinen Klassen neu aufgebaut, Menüdaten je Anfrage wiederverwendet und zusätzliche Unterseiten-Verknüpfungen begrenzt.
-- **Improved:** Plugin- und Theme-Einträge unter + Neu ans Ende gesetzt; leere Gruppenbeschriftung übernimmt den WordPress-Menünamen.
-- **Improved:** Launch-Rail-Grafiken und gemeinsamen Footer mit sprachabhängiger Dokumentation und vollständigem lokalem Changelog eingeführt.
-- **Fixed:** Einstellungsrechte/Nonces und Menüausgabe abgesichert; gemeinsame Menüs in klassischen Formularen, REST und Customizer geschützt.
-- **Fixed:** Icons zwischengespeicherter Update-Angebote über den gemeinsamen DECKERWEB GitHub Release Updater V2 wiederhergestellt.
-- **Misc:** WordPress 6.7 und PHP 8.2 vorausgesetzt; deutsche informelle/formelle Übersetzungen und zweisprachige Dokumentation beigefügt.
-- **Misc:** Verlauf von 3.1.0/3.0.0/2.x und ältere Versionen erhalten; inkompatible Änderungen und entfernte veraltete Links dokumentiert.
+- **Verbessert:** Aktualisiert die gemeinsame Library auf 0.6.0 und den Updater auf 2.1.0; verbessert die deutsche Dokumentation und den lesbaren lokalen Änderungsverlauf.
+- **Behoben:** Prüft Updatepakete auch bei Sammelupdates und erhält vorhandene Daten bei Deaktivierung und standardmäßiger Deinstallation.
+- **Sonstiges:** Einzelaktivierung ist in Multisite mit durch Super-Administratoren verwalteten Netzwerkeinstellungen verfügbar.
 
-[Full history](docs/CHANGELOG-de.md) · [Releases](https://github.com/deckerweb/multisite-toolbar-additions/releases)
+### 4.0.0 · 2026-10-01
 
-## About
+- **Neu:** Menüquelle, Zielgruppe, Frontend-/Admin-Anzeige, Position, Gruppierung und Kindebenen sind einstellbar.
+- **Neu:** Plugin- und Theme-Verknüpfungen haben getrennte Schalter; Plugins sind standardmäßig aktiviert, Themes deaktiviert.
+- **Neu:** Theme-ZIPs lassen sich auf einer eigenen Seite mit dem WordPress-Installer auch netzwerkweit installieren.
+- **Neu:** Die mitgelieferte deckerweb Library 0.2.0 bietet freigegebene Plugins mit Paket- und Abhängigkeitsprüfung.
+- **Verbessert:** Menüdaten werden pro Anfrage wiederverwendet; zusätzliche Website-Verknüpfungen sind für große Netzwerke begrenzt.
+- **Verbessert:** Plugin- und Theme-Einträge stehen unter Neu am Ende; eine leere Gruppenbeschriftung übernimmt den WordPress-Menünamen.
+- **Verbessert:** Lokale Dokumentation, Update-Grafiken und ein gemeinsamer Footer sind auf Englisch und Deutsch verfügbar.
+- **Behoben:** Gemeinsame Menüs sind gegen unberechtigte Änderungen im klassischen Admin, per REST und im Customizer geschützt; Menüausgaben und Einstellungen werden geprüft.
+- **Behoben:** Zwischengespeicherte WordPress-Updateangebote behalten die eigenen Plugin-Icons.
+- **Sonstiges:** Benötigt WordPress 6.7 und PHP 8.2. Deutsche Sprachdateien mit Du- und Sie-Anrede sind enthalten.
 
-Für kurze Wege bei der täglichen WordPress-/Netzwerkverwaltung. Keine Telemetrie. Menüdaten werden je Anfrage wiederverwendet; kein dauerhafter Cache fertiger Menüausgaben. Die Library verwendet standardmäßig einen lokalen Katalog; GitHub-Updates und ausdrücklich ausgelöste Release-Installationen kontaktieren GitHub.
+### 3.1.0 · 2025-04-03
 
-[Issues](https://github.com/deckerweb/multisite-toolbar-additions/issues) · [Support development](https://www.paypal.me/deckerweb)
+- **Neu:** Die Toolbar bleibt im Vollbildmodus des Block-Editors verfügbar.
+- **Neu:** Verknüpfungen für Git Updater und DevKit Pro werden unterstützt; Git Updater kann dieses Plugin installieren und aktualisieren.
+- **Verbessert:** Deutsche Sprachdateien enthalten native PHP-Übersetzungskataloge.
 
-© 2012–2026 David Decker – DECKERWEB · [GPL-2.0-or-later](LICENSE)
+### 3.0.0 · 2025-03
+
+- **Verbessert:** Die Verwaltungsverknüpfungen verwenden eine kleinere Auswahl aktueller Integrationen.
+- **Sonstiges:** Das eingeschränkte Website-Administrator-Menü, veraltete Integrationen und die frühere Empfehlungs-Library wurden entfernt; das gemeinsame Super-Administrator-Menü bleibt erhalten.
+- **Sonstiges:** Der Vertrieb wechselte von WordPress.org zur direkten ZIP-Installation und GitHub.
+
+### 2.0.1 · 2019-09-23
+
+- **Verbessert:** Die Empfehlungs-Library 1.5.0 speichert Daten zwischen und vermeidet wiederholte Abfragen.
+
+### 2.0.0 · 2019-05-04
+
+- **Neu:** Eigene Plugin-/Theme-ZIP-Seiten und Installer-Verknüpfungen sind verfügbar.
+- **Neu:** Der Website-Zustand enthält Plugin-Diagnosen unter WordPress ab 5.2.
+- **Neu:** Ein Newsletter für DECKERWEB Plugins ist verfügbar.
+- **Verbessert:** Die Empfehlungs-Library 1.4.0 und deutsche Du-/Sie-Übersetzungen wurden aktualisiert.
+
+### 1.9.4 · 2018-11-03
+
+- **Verbessert:** Die Empfehlungs-Library 1.2.0 verbessert die Installer-Darstellung und Dark-Mode-Kompatibilität.
+
+### 1.9.3 · 2018-10-01
+
+- **Neu:** Eine Facebook-Gruppe bietet Unterstützung für DECKERWEB Plugins.
+- **Verbessert:** Die Empfehlungs-Library 1.1.0 verbessert Upload-Bereiche und Plugin-Karten einschließlich sichtbarer Versionsnummern.
+- **Verbessert:** Deutsche Übersetzungen wurden aktualisiert.
+
+[Vollständiger Verlauf](docs/CHANGELOG-de.md)
+
+## Über das Projekt
+
+David Decker entwickelt und pflegt dieses Plugin seit 2012. Die Serie QuickNav erleichtert die tägliche WordPress-Verwaltung. Der gewachsene Pluginname bleibt erhalten.
+
+## Hilfe und Sicherheit
+
+[Issues](https://github.com/deckerweb/multisite-toolbar-additions/issues) · [Discussions](https://github.com/deckerweb/multisite-toolbar-additions/discussions) · [Sicherheitsmeldungen](SECURITY-de.md)
+
+[Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)
+
+## Lizenz und Herkunft
+
+© 2012–2026 David Decker – DECKERWEB. [GPL v2 or later](LICENSE).
+
+Library und Updater: David Decker, GPL-2.0-or-later. Footer und Änderungsverlauf basieren auf den öffentlichen deckerweb Referenzplugins. Launch-Rail-Grafiken: David Decker, GPL-2.0-or-later; lokale Systemschriften. Quellen und Komponentenstände: [Gemeinsame Komponenten](docs/LIBRARIES-de.md).

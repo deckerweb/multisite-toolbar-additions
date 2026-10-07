@@ -1,76 +1,157 @@
 # Multisite Toolbar Additions
 
-![Launch Rail](assets/brand/banner-en.svg)
-
-**Many sites. One move.**
-
-[English](README.md) · [Deutsch](README-de.md) · [Releases](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest)
-
-A configurable WordPress toolbar menu and useful network/site shortcuts. Supports single sites and Multisite with centralized settings, independent menu source, placement, frontend/admin display, grouping and child depth.
-
-## Contents
-
-[Features](#features) · [Installation](#installation) · [Documentation](#documentation) · [FAQ](#faq) · [Changelog](#changelog)
-
-## Features
-
-- Direct WordPress menu selection, independent of theme locations; optional network-wide source website.
-- First/last, before/after references or right-side position; frontend/admin/both; grouping and child depth.
-- Shared Multisite menu protection; audience options with destination capabilities retained.
-- Independent + New / ZIP submenu switches; Plugins on and Themes off by default.
-- Dedicated theme ZIP page and network installation links; native WordPress upload handlers.
-- Network/site/subsite shortcuts, detected integrations, Site Health and fullscreen editor toolbar.
-- Bundled deckerweb Library 0.2.0 with nine approved releases and prerequisite/hash checks.
-- DECKERWEB GitHub Updater V2, Launch Rail artwork and shared footer.
-
-## Installation
-
-Requires **WordPress 6.7+ and PHP 8.2+**. Install the release ZIP through Plugins → Add New → Upload Plugin. In Multisite use network activation. Open Settings → Toolbar Additions, or Network Admin → Settings → Toolbar Additions. The optional catalog installer additionally requires PHP ZipArchive. Test custom 3.x snippets before this major upgrade.
-
-## Documentation
-
-[English guide](docs/wiki/English.md) · [Deutsche Anleitung](docs/wiki/Deutsch.md) · [FAQ — English](docs/wiki/FAQ-English.md) · [FAQ — Deutsch](docs/wiki/FAQ-Deutsch.md) · [Full changelog](docs/wiki/Changelog-English.md) · [Vollständiger Changelog](docs/wiki/Changelog-Deutsch.md)
-
-The footer opens local documentation and the complete bundled changelog. GitHub documentation mirrors the same topics. See [migration notes](docs/MIGRATION-4.0.md), [shared libraries](docs/LIBRARIES.md) and [verification scope](docs/VERIFICATION.md).
-
-## FAQ
-
-**Does it require Multisite?** No. It supports single sites too.
-
-**Can I choose the menu position and depth?** Yes: left/right, before/after references, one to ten child levels or all.
-
-**Does an empty group label follow the menu name?** Yes. A custom label overrides the selected WordPress menu name.
-
-**Who can edit the shared Multisite menu?** Super administrators. Optional viewing by website administrators grants no extra rights.
-
-**Which Plugin/Theme additions are on by default?** Plugin entries are on, Theme entries off, independently for + New and ZIP submenus.
-
-**Does the catalog make background requests?** The bundled catalog works locally. Optional online catalog updates need explicit configuration. Installation downloads the selected GitHub release.
-
-**How do updates work?** Through normal WordPress plugin updates using the bundled deckerweb Updater V2. No extra plugin or token required.
-
-## Changelog
-
-### 4.0.0 — 2026-10-01
-
-- **New:** Adds a settings page for menu source, context, audience, position, grouping and child depth.
-- **New:** Adds independent Plugin/Theme switches for + New and ZIP upload sidebar entries, with plugin-on/theme-off defaults.
-- **New:** Adds a dedicated theme ZIP upload page using WordPress’s signed installer, including Multisite network links.
-- **New:** Bundles deckerweb Plugin Library 0.2.0: approved releases, local icons, dependency checks and optional catalog settings.
-- **Improved:** Rebuilds the plugin around small classes, reuses menu data per request and bounds additional subsite shortcuts.
-- **Improved:** Shows Plugin and Theme entries last under + New; an empty grouped label follows the WordPress menu name.
-- **Improved:** Introduces Launch Rail artwork and a shared footer with localized documentation and a complete local changelog.
-- **Fixed:** Validates settings capabilities/nonces and escapes menu output; protects shared menu edits across classic forms, REST and Customizer.
-- **Fixed:** Restores icons on cached WordPress update offers through the shared DECKERWEB GitHub Release Updater V2.
-- **Misc:** Requires WordPress 6.7 and PHP 8.2; includes German informal/formal translations and bilingual documentation.
-- **Misc:** Keeps the 3.1.0/3.0.0/2.x changelog and older history available, while documenting breaking changes and removed obsolete links.
-
-[Full history](docs/CHANGELOG.md) · [Releases](https://github.com/deckerweb/multisite-toolbar-additions/releases)
+![Multisite Toolbar Additions](assets-github/banner-en-1280x640.png)
 
 ## About
 
-Built for a shorter path through everyday WordPress/network administration. No telemetry. Menu data is reused per request; no persistent rendered-menu cache is introduced. The library uses a local catalog by default; GitHub updates and explicit release installations contact GitHub.
+**Many sites. One move.**
 
-[Issues](https://github.com/deckerweb/multisite-toolbar-additions/issues) · [Support development](https://www.paypal.me/deckerweb)
+A configurable WordPress menu in the toolbar, with useful website and network shortcuts. Part of QuickNav; available on individual sites and Multisite networks.
 
-© 2012–2026 David Decker – DECKERWEB · [GPL-2.0-or-later](LICENSE)
+**Version 4.0.0 · WordPress 6.7+ · PHP 8.2+**
+
+Unpublished maintenance changes based on 4.0.0. The released 4.0.0 ZIP is unchanged.
+
+[English](README.md) · [Deutsch](README-de.md) · [Download](https://github.com/deckerweb/multisite-toolbar-additions/releases/latest) · [FAQ by topic](https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-English)
+
+## Contents
+
+[At a glance](#at-a-glance) · [Installation and first steps](#installation-and-first-steps) · [Main features](#main-features) · [FAQ](#faq) · [Changelog](#changelog) · [Project](#project) · [Support and security](#support-and-security) · [License and credits](#license-and-credits)
+
+## At a glance
+
+- Select a source site and menu independently of your theme. Keep root entries separate or group them under the menu’s name. A custom label is optional.
+- Choose first/last, before/after a reference item or the right side. Show the menu on the frontend, in administration or both. Choose one to ten child levels, or all. Missing references fall back to the end.
+- Plugin and Theme additions appear last under New. Each addition and ZIP submenu has its own switch: Plugins on, Themes off. Theme uploads use a dedicated page and the native WordPress installer.
+- Use one network-wide menu source with optional viewing by website administrators. Shared menus remain editable only by super administrators. Destination permissions still apply; website expansion is bounded.
+- Library 0.6.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.1.0 uses normal WordPress updates. Assets are local; no telemetry is collected.
+
+## Installation and first steps
+
+Requires WordPress 6.7+ and PHP 8.2+. Install the released ZIP via Plugins → Add New → Upload Plugin. Open Settings → Toolbar Additions. For Multisite network activation, use Network Admin → Settings → Toolbar Additions. Site-only activation uses the active site’s settings page and still requires a super administrator for network settings. The optional catalog installer needs PHP ZipArchive. Review custom 3.x snippets before a major upgrade.
+
+## Main features
+
+### Your WordPress menu
+
+Select a source site and menu independently of your theme. Keep root entries separate or group them under the menu’s name. A custom label is optional.
+
+### Position, visibility and depth
+
+Choose first/last, before/after a reference item or the right side. Show the menu on the frontend, in administration or both. Choose one to ten child levels, or all. Missing references fall back to the end.
+
+### Upload shortcuts
+
+Plugin and Theme additions appear last under New. Each addition and ZIP submenu has its own switch: Plugins on, Themes off. Theme uploads use a dedicated page and the native WordPress installer.
+
+### Multisite administration
+
+Use one network-wide menu source with optional viewing by website administrators. Shared menus remain editable only by super administrators. Destination permissions still apply; website expansion is bounded.
+
+### Shared components
+
+Library 0.6.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.1.0 uses normal WordPress updates. Assets are local; no telemetry is collected.
+
+## FAQ
+
+### How do I select my toolbar menu?
+
+Create a normal navigation menu and select its source site and menu in the settings. Network activation defaults to the main website; site-only activation defaults to the active website. Activate the plugin on the source website or across the network so that shared-menu protection can run. The legacy mstba_menu location remains a fallback.
+
+### Can I change position and visibility?
+
+Yes: first, last, before or after a selected toolbar item, or on the right. Choose frontend, admin or both, and the permitted audience. If an anchor is missing, the menu falls back to the end.
+
+### Can ordinary site admins edit a shared menu?
+
+The toolbar audience and permission to edit its source menu are separate. Shared Multisite source menus are protected against unauthorized admin, REST and Customizer changes.
+
+### Which upload shortcuts are enabled by default?
+
+Plugin ZIP submenu and the + New plugin entry are enabled. Theme ZIP submenu and the + New theme entry are disabled. Each has a separate switch.
+
+### How do plugin updates work?
+
+The bundled deckerweb Updater 2.1.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
+
+### What happens when I deactivate or uninstall?
+
+Deactivation keeps all settings and WordPress menus. Uninstall clears this plugin’s update cache. Toolbar settings are retained unless the deletion option is enabled for that site or network. On physical removal every network’s own choice is respected. Shared Library cleanup runs only after its last installed host is removed, including inactive hosts; its own deletion option is separate. Installed plugins, navigation menus and foreign content remain untouched.
+
+### Does the library contact GitHub on every page?
+
+No. Its bundled catalog and artwork work locally. Package downloads contact their declared hosts when requested. Optional online catalog retrieval is disabled by default and uses caching and backoff when enabled.
+
+[FAQ by topic](https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-English)
+
+## Changelog
+
+### Unreleased
+
+- **Improved:** Updates the shared Library to 0.6.0 and Updater to 2.1.0; improves German documentation and readable local release history.
+- **Fixed:** Checks candidate packages in bulk updates and preserves existing data during deactivation and default uninstall.
+- **Misc:** Site-only activation is available in Multisite for super-administrator-managed network settings.
+
+### 4.0.0 · 2026-10-01
+
+- **New:** Configure the source menu, audience, frontend/admin visibility, position, grouping and child levels.
+- **New:** Plugin and Theme shortcuts have separate switches; Plugins are enabled and Themes disabled by default.
+- **New:** Upload theme ZIPs through a dedicated page using the WordPress installer, including network installation.
+- **New:** The bundled deckerweb Library 0.2.0 offers approved plugins with package and dependency checks.
+- **Improved:** Menu data is reused per request; additional website shortcuts are limited for large networks.
+- **Improved:** Plugin and Theme entries appear last under New; an empty group label follows the WordPress menu name.
+- **Improved:** Local documentation, update artwork and a shared footer are available in English and German.
+- **Fixed:** Shared menus are protected from unauthorized classic, REST and Customizer changes; menu output and settings are validated.
+- **Fixed:** Cached WordPress update offers retain the plugin’s own icons.
+- **Misc:** Requires WordPress 6.7 and PHP 8.2. German informal and formal language resources are included.
+
+### 3.1.0 · 2025-04-03
+
+- **New:** The toolbar remains available in the fullscreen block editor.
+- **New:** Git Updater and DevKit Pro shortcuts are supported; Git Updater can install and update this plugin.
+- **Improved:** German language resources include native PHP translation catalogs.
+
+### 3.0.0 · 2025-03
+
+- **Improved:** Administration shortcuts use a smaller set of current integrations.
+- **Misc:** The restricted website-administrator menu, obsolete integrations and the former recommendations library were removed; the shared super-administrator menu remains.
+- **Misc:** Distribution moved from WordPress.org to direct ZIP installation and GitHub.
+
+### 2.0.1 · 2019-09-23
+
+- **Improved:** The recommendations library 1.5.0 caches data to reduce repeated requests.
+
+### 2.0.0 · 2019-05-04
+
+- **New:** Dedicated plugin/theme ZIP upload pages and installer shortcuts are available.
+- **New:** Site Health includes plugin diagnostics on WordPress 5.2 or newer.
+- **New:** A DECKERWEB plugin newsletter is available.
+- **Improved:** Recommendations library 1.4.0 and German Du/Sie translations were updated.
+
+### 1.9.4 · 2018-11-03
+
+- **Improved:** Recommendations library 1.2.0 improves installer styles and Dark Mode compatibility.
+
+### 1.9.3 · 2018-10-01
+
+- **New:** A Facebook group provides community support for DECKERWEB plugins.
+- **Improved:** Recommendations library 1.1.0 improves upload areas and plugin cards, including visible version numbers.
+- **Improved:** German translations were updated.
+
+[Full history](docs/CHANGELOG.md)
+
+## Project
+
+David Decker has developed and maintained this plugin since 2012. The QuickNav family shortens everyday WordPress administration. Its established name is retained.
+
+## Support and security
+
+[Issues](https://github.com/deckerweb/multisite-toolbar-additions/issues) · [Discussions](https://github.com/deckerweb/multisite-toolbar-additions/discussions) · [Security reporting](SECURITY.md)
+
+[Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)
+
+## License and credits
+
+© 2012–2026 David Decker – DECKERWEB. [GPL v2 or later](LICENSE).
+
+Library and Updater: David Decker, GPL-2.0-or-later. Footer and release history are based on public deckerweb reference plugins. Launch Rail artwork: David Decker, GPL-2.0-or-later; local system fonts. Sources and component versions: [Shared components](docs/LIBRARIES.md).

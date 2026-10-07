@@ -1,0 +1,1362 @@
+{
+  "%d child level": {
+    "de_DE": "%d Kindebene",
+    "de_DE_formal": "%d Kindebene"
+  },
+  "%s is installed but inactive. Activate it first.": {
+    "de_DE": "%s ist installiert, aber inaktiv. Bitte zuerst aktivieren.",
+    "de_DE_formal": "%s ist installiert, aber inaktiv. Bitte zuerst aktivieren."
+  },
+  "%s is missing. Install and activate it first.": {
+    "de_DE": "%s fehlt. Bitte zuerst installieren und aktivieren.",
+    "de_DE_formal": "%s fehlt. Bitte zuerst installieren und aktivieren."
+  },
+  "%s must be network activated first.": {
+    "de_DE": "%s muss zuerst netzwerkweit aktiviert werden.",
+    "de_DE_formal": "%s muss zuerst netzwerkweit aktiviert werden."
+  },
+  "%s supports activation per site only.": {
+    "de_DE": "%s unterstützt nur die Aktivierung je Website.",
+    "de_DE_formal": "%s unterstützt nur die Aktivierung je Website."
+  },
+  "Activate": {
+    "de_DE": "Aktivieren",
+    "de_DE_formal": "Aktivieren"
+  },
+  "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme.": {
+    "de_DE": "Bricks QuickNav bitte je Website aktivieren, nachdem das Bricks-Theme oder ein Child-Theme ausgewählt wurde.",
+    "de_DE_formal": "Bricks QuickNav bitte je Website aktivieren, nachdem das Bricks-Theme oder ein Child-Theme ausgewählt wurde."
+  },
+  "Activity Streams": {
+    "de_DE": "Aktivitätsprotokoll",
+    "de_DE_formal": "Aktivitätsprotokoll"
+  },
+  "Add Menu": {
+    "de_DE": "Menü hinzufügen",
+    "de_DE_formal": "Menü hinzufügen"
+  },
+  "Add Network Snippet": {
+    "de_DE": "Netzwerk-Snippet hinzufügen",
+    "de_DE_formal": "Netzwerk-Snippet hinzufügen"
+  },
+  "Add Site": {
+    "de_DE": "Website hinzufügen",
+    "de_DE_formal": "Website hinzufügen"
+  },
+  "Add Snippet": {
+    "de_DE": "Snippet hinzufügen",
+    "de_DE_formal": "Snippet hinzufügen"
+  },
+  "Add User": {
+    "de_DE": "Benutzer hinzufügen",
+    "de_DE_formal": "Benutzer hinzufügen"
+  },
+  "Admin": {
+    "de_DE": "Administration",
+    "de_DE_formal": "Administration"
+  },
+  "Administration only": {
+    "de_DE": "Nur in der Verwaltung",
+    "de_DE_formal": "Nur in der Verwaltung"
+  },
+  "After the following item": {
+    "de_DE": "Nach dem folgenden Eintrag",
+    "de_DE_formal": "Nach dem folgenden Eintrag"
+  },
+  "All": {
+    "de_DE": "Alle",
+    "de_DE_formal": "Alle"
+  },
+  "All levels": {
+    "de_DE": "Alle Ebenen",
+    "de_DE_formal": "Alle Ebenen"
+  },
+  "Already active": {
+    "de_DE": "Bereits aktiv",
+    "de_DE_formal": "Bereits aktiv"
+  },
+  "Apr": {
+    "de_DE": "Apr",
+    "de_DE_formal": "Apr"
+  },
+  "April": {
+    "de_DE": "April",
+    "de_DE_formal": "April"
+  },
+  "Archive contains too many files.": {
+    "de_DE": "Das Archiv enthält zu viele Dateien.",
+    "de_DE_formal": "Das Archiv enthält zu viele Dateien."
+  },
+  "Archive symlinks are not permitted.": {
+    "de_DE": "Symbolische Verknüpfungen sind im Archiv nicht erlaubt.",
+    "de_DE_formal": "Symbolische Verknüpfungen sind im Archiv nicht erlaubt."
+  },
+  "As of ": {
+    "de_DE": "Stand: ",
+    "de_DE_formal": "Stand: "
+  },
+  "Aug": {
+    "de_DE": "Aug",
+    "de_DE_formal": "Aug"
+  },
+  "August": {
+    "de_DE": "August",
+    "de_DE_formal": "August"
+  },
+  "Back to deckerweb": {
+    "de_DE": "Zurück zu deckerweb",
+    "de_DE_formal": "Zurück zu deckerweb"
+  },
+  "Back to settings": {
+    "de_DE": "Zurück zu den Einstellungen",
+    "de_DE_formal": "Zurück zu den Einstellungen"
+  },
+  "Before the following item": {
+    "de_DE": "Vor dem folgenden Eintrag",
+    "de_DE_formal": "Vor dem folgenden Eintrag"
+  },
+  "Block Editor Handbook": {
+    "de_DE": "Block-Editor-Handbuch",
+    "de_DE_formal": "Block-Editor-Handbuch"
+  },
+  "Builder": {
+    "de_DE": "Builder",
+    "de_DE_formal": "Builder"
+  },
+  "Cannot create temporary file.": {
+    "de_DE": "Temporäre Datei konnte nicht erstellt werden.",
+    "de_DE_formal": "Temporäre Datei konnte nicht erstellt werden."
+  },
+  "Cannot create verified archive.": {
+    "de_DE": "Geprüftes Archiv konnte nicht erstellt werden.",
+    "de_DE_formal": "Geprüftes Archiv konnte nicht erstellt werden."
+  },
+  "Cannot finalize archive.": {
+    "de_DE": "Archiv konnte nicht abgeschlossen werden.",
+    "de_DE_formal": "Archiv konnte nicht abgeschlossen werden."
+  },
+  "Cannot normalize archive.": {
+    "de_DE": "Archiv konnte nicht aufbereitet werden.",
+    "de_DE_formal": "Archiv konnte nicht aufbereitet werden."
+  },
+  "Cannot read archive entry.": {
+    "de_DE": "Archiveintrag konnte nicht gelesen werden.",
+    "de_DE_formal": "Archiveintrag konnte nicht gelesen werden."
+  },
+  "Catalog URL": {
+    "de_DE": "Katalog-URL",
+    "de_DE_formal": "Katalog-URL"
+  },
+  "Changelog": {
+    "de_DE": "Changelog",
+    "de_DE_formal": "Changelog"
+  },
+  "Check for Updates": {
+    "de_DE": "Auf Aktualisierungen prüfen",
+    "de_DE_formal": "Auf Aktualisierungen prüfen"
+  },
+  "Child levels": {
+    "de_DE": "Untermenü-Ebenen",
+    "de_DE_formal": "Untermenü-Ebenen"
+  },
+  "Choose a menu directly to keep it through theme changes. The location option is provided for upgrades from 3.x.": {
+    "de_DE": "Eine direkte Menüauswahl bleibt beim Theme-Wechsel erhalten. Die bisherige Menüposition dient dem Umstieg von Version 3.x.",
+    "de_DE_formal": "Eine direkte Menüauswahl bleibt beim Theme-Wechsel erhalten. Die bisherige Menüposition dient dem Umstieg von Version 3.x."
+  },
+  "Choose a source website, then load its menus. Loading does not save your settings.": {
+    "de_DE": "Bitte die Website auswählen und ihre Menüs laden. Dadurch werden noch keine Einstellungen gespeichert.",
+    "de_DE_formal": "Bitte die Website auswählen und ihre Menüs laden. Dadurch werden noch keine Einstellungen gespeichert."
+  },
+  "Choose an active website in this network.": {
+    "de_DE": "Bitte eine aktive Website in diesem Netzwerk auswählen.",
+    "de_DE_formal": "Bitte eine aktive Website in diesem Netzwerk auswählen."
+  },
+  "Close": {
+    "de_DE": "Schließen",
+    "de_DE_formal": "Schließen"
+  },
+  "Code Snippets": {
+    "de_DE": "Code Snippets",
+    "de_DE_formal": "Code Snippets"
+  },
+  "Coding Standards": {
+    "de_DE": "Programmierstandards",
+    "de_DE_formal": "Programmierstandards"
+  },
+  "Comments": {
+    "de_DE": "Kommentare",
+    "de_DE_formal": "Kommentare"
+  },
+  "Commerce": {
+    "de_DE": "Commerce",
+    "de_DE_formal": "Commerce"
+  },
+  "Compatible additions only": {
+    "de_DE": "Nur passende Ergänzungen",
+    "de_DE_formal": "Nur passende Ergänzungen"
+  },
+  "Content": {
+    "de_DE": "Inhalte",
+    "de_DE_formal": "Inhalte"
+  },
+  "Could not access the update filesystem.": {
+    "de_DE": "Auf das Dateisystem für das Update konnte nicht zugegriffen werden.",
+    "de_DE_formal": "Auf das Dateisystem für das Update konnte nicht zugegriffen werden."
+  },
+  "Could not create the update download file.": {
+    "de_DE": "Die Datei für den Update-Download konnte nicht erstellt werden.",
+    "de_DE_formal": "Die Datei für den Update-Download konnte nicht erstellt werden."
+  },
+  "Could not prepare the GitHub release package.": {
+    "de_DE": "Das GitHub-Release-Paket konnte nicht vorbereitet werden.",
+    "de_DE_formal": "Das GitHub-Release-Paket konnte nicht vorbereitet werden."
+  },
+  "Counted from the original menu root. One means root entries plus their direct children. Grouping does not change this limit.": {
+    "de_DE": "Gezählt ab der ursprünglichen Menüwurzel. Eine Ebene zeigt Haupteinträge und ihre direkten Untereinträge. Die Gruppierung verändert diese Grenze nicht.",
+    "de_DE_formal": "Gezählt ab der ursprünglichen Menüwurzel. Eine Ebene zeigt Haupteinträge und ihre direkten Untereinträge. Die Gruppierung verändert diese Grenze nicht."
+  },
+  "Create or edit menus": {
+    "de_DE": "Menüs erstellen oder bearbeiten",
+    "de_DE_formal": "Menüs erstellen oder bearbeiten"
+  },
+  "Custom Background": {
+    "de_DE": "Hintergrund",
+    "de_DE_formal": "Hintergrund"
+  },
+  "Custom Header": {
+    "de_DE": "Header",
+    "de_DE_formal": "Header"
+  },
+  "Customizer": {
+    "de_DE": "Customizer",
+    "de_DE_formal": "Customizer"
+  },
+  "Dashboard": {
+    "de_DE": "Dashboard",
+    "de_DE_formal": "Dashboard"
+  },
+  "Debug Information": {
+    "de_DE": "Debug-Informationen",
+    "de_DE_formal": "Debug-Informationen"
+  },
+  "Dec": {
+    "de_DE": "Dez",
+    "de_DE_formal": "Dez"
+  },
+  "December": {
+    "de_DE": "Dezember",
+    "de_DE_formal": "Dezember"
+  },
+  "Delete Library settings when removing the last host plugin": {
+    "de_DE": "Library-Einstellungen beim Entfernen des letzten Host-Plugins ebenfalls löschen",
+    "de_DE_formal": "Library-Einstellungen beim Entfernen des letzten Host-Plugins ebenfalls löschen"
+  },
+  "Delete this plugin’s settings when uninstalling": {
+    "de_DE": "Einstellungen dieses Plugins bei Deinstallation löschen",
+    "de_DE_formal": "Einstellungen dieses Plugins bei Deinstallation löschen"
+  },
+  "Details & requirements": {
+    "de_DE": "Details & Voraussetzungen",
+    "de_DE_formal": "Details & Voraussetzungen"
+  },
+  "Detected plugin integrations": {
+    "de_DE": "Erkannte Plugin-Integrationen",
+    "de_DE_formal": "Erkannte Plugin-Integrationen"
+  },
+  "Developer Resources": {
+    "de_DE": "Entwickler-Ressourcen",
+    "de_DE_formal": "Entwickler-Ressourcen"
+  },
+  "Discover more plugins by deckerweb": {
+    "de_DE": "Weitere Plugins von deckerweb entdecken",
+    "de_DE_formal": "Weitere Plugins von deckerweb entdecken"
+  },
+  "Dismiss permanently": {
+    "de_DE": "Dauerhaft schließen",
+    "de_DE_formal": "Dauerhaft schließen"
+  },
+  "Documentation": {
+    "de_DE": "Dokumentation",
+    "de_DE_formal": "Dokumentation"
+  },
+  "Done. The plugin is active.": {
+    "de_DE": "Erledigt. Das Plugin ist aktiv.",
+    "de_DE_formal": "Erledigt. Das Plugin ist aktiv."
+  },
+  "Each root item in the toolbar": {
+    "de_DE": "Jeder Haupteintrag einzeln in der Toolbar",
+    "de_DE_formal": "Jeder Haupteintrag einzeln in der Toolbar"
+  },
+  "Enter a catalog URL first.": {
+    "de_DE": "Bitte zuerst eine Katalog-URL eintragen.",
+    "de_DE_formal": "Bitte zuerst eine Katalog-URL eintragen."
+  },
+  "Everything under one toolbar item": {
+    "de_DE": "Alles unter einem gemeinsamen Toolbar-Eintrag",
+    "de_DE_formal": "Alles unter einem gemeinsamen Toolbar-Eintrag"
+  },
+  "Expanded archive is too large.": {
+    "de_DE": "Das entpackte Archiv ist zu groß.",
+    "de_DE_formal": "Das entpackte Archiv ist zu groß."
+  },
+  "Export": {
+    "de_DE": "Exportieren",
+    "de_DE_formal": "Exportieren"
+  },
+  "Export Widgets": {
+    "de_DE": "Widgets exportieren",
+    "de_DE_formal": "Widgets exportieren"
+  },
+  "F j, Y": {
+    "de_DE": "j. F Y",
+    "de_DE_formal": "j. F Y"
+  },
+  "Favorites": {
+    "de_DE": "Favoriten",
+    "de_DE_formal": "Favoriten"
+  },
+  "Feb": {
+    "de_DE": "Feb",
+    "de_DE_formal": "Feb"
+  },
+  "February": {
+    "de_DE": "Februar",
+    "de_DE_formal": "Februar"
+  },
+  "Filter": {
+    "de_DE": "Filtern",
+    "de_DE_formal": "Filtern"
+  },
+  "First on the left": {
+    "de_DE": "Links an erster Stelle",
+    "de_DE_formal": "Links an erster Stelle"
+  },
+  "Fits my installation": {
+    "de_DE": "Passt zu meiner Installation",
+    "de_DE_formal": "Passt zu meiner Installation"
+  },
+  "Fixed": {
+    "de_DE": "Behoben",
+    "de_DE_formal": "Behoben"
+  },
+  "Fri": {
+    "de_DE": "Fr",
+    "de_DE_formal": "Fr"
+  },
+  "Friday": {
+    "de_DE": "Freitag",
+    "de_DE_formal": "Freitag"
+  },
+  "Frontend and administration": {
+    "de_DE": "Website und Verwaltung",
+    "de_DE_formal": "Website und Verwaltung"
+  },
+  "Frontend only": {
+    "de_DE": "Nur auf der Website",
+    "de_DE_formal": "Nur auf der Website"
+  },
+  "Get Involved": {
+    "de_DE": "Mitwirken",
+    "de_DE_formal": "Mitwirken"
+  },
+  "GitHub Stars": {
+    "de_DE": "GitHub-Sterne",
+    "de_DE_formal": "GitHub-Sterne"
+  },
+  "GitHub release does not contain the plugin main file.": {
+    "de_DE": "Der GitHub-Release enthält nicht die Hauptdatei des Plugins.",
+    "de_DE_formal": "Der GitHub-Release enthält nicht die Hauptdatei des Plugins."
+  },
+  "Group label": {
+    "de_DE": "Beschriftung des gemeinsamen Eintrags",
+    "de_DE_formal": "Beschriftung des gemeinsamen Eintrags"
+  },
+  "Hide catalog": {
+    "de_DE": "Katalog ausblenden",
+    "de_DE_formal": "Katalog ausblenden"
+  },
+  "Import": {
+    "de_DE": "Importieren",
+    "de_DE_formal": "Importieren"
+  },
+  "Import Widgets": {
+    "de_DE": "Widgets importieren",
+    "de_DE_formal": "Widgets importieren"
+  },
+  "Improved": {
+    "de_DE": "Verbessert",
+    "de_DE_formal": "Verbessert"
+  },
+  "Install Plugin": {
+    "de_DE": "Plugin installieren",
+    "de_DE_formal": "Plugin installieren"
+  },
+  "Install Theme": {
+    "de_DE": "Theme installieren",
+    "de_DE_formal": "Theme installieren"
+  },
+  "Install Theme via Git Updater": {
+    "de_DE": "Theme über Git Updater installieren",
+    "de_DE_formal": "Theme über Git Updater installieren"
+  },
+  "Install and activate this plugin in the network admin.": {
+    "de_DE": "Dieses Plugin bitte im Netzwerk-Admin installieren und aktivieren.",
+    "de_DE_formal": "Dieses Plugin bitte im Netzwerk-Admin installieren und aktivieren."
+  },
+  "Install deckerweb plugin": {
+    "de_DE": "deckerweb-Plugin installieren",
+    "de_DE_formal": "deckerweb-Plugin installieren"
+  },
+  "Install now": {
+    "de_DE": "Jetzt installieren",
+    "de_DE_formal": "Jetzt installieren"
+  },
+  "Install via Git Updater": {
+    "de_DE": "Über Git Updater installieren",
+    "de_DE_formal": "Über Git Updater installieren"
+  },
+  "Installed": {
+    "de_DE": "Installiert",
+    "de_DE_formal": "Installiert"
+  },
+  "Installed: ": {
+    "de_DE": "Installiert: ",
+    "de_DE_formal": "Installiert: "
+  },
+  "Invalid GitHub repository URL.": {
+    "de_DE": "Ungültige GitHub-Repository-URL.",
+    "de_DE_formal": "Ungültige GitHub-Repository-URL."
+  },
+  "Invalid ZIP archive.": {
+    "de_DE": "Ungültiges ZIP-Archiv.",
+    "de_DE_formal": "Ungültiges ZIP-Archiv."
+  },
+  "Invalid approval flag.": {
+    "de_DE": "Ungültige Freigabeangabe.",
+    "de_DE_formal": "Ungültige Freigabeangabe."
+  },
+  "Invalid authentication provider.": {
+    "de_DE": "Ungültiger Authentifizierungsanbieter.",
+    "de_DE_formal": "Ungültiger Authentifizierungsanbieter."
+  },
+  "Invalid catalog field: ": {
+    "de_DE": "Ungültiges Katalogfeld: ",
+    "de_DE_formal": "Ungültiges Katalogfeld: "
+  },
+  "Invalid catalog revision.": {
+    "de_DE": "Ungültiger Katalogstand.",
+    "de_DE_formal": "Ungültiger Katalogstand."
+  },
+  "Invalid catalog schema.": {
+    "de_DE": "Ungültiges Katalogformat.",
+    "de_DE_formal": "Ungültiges Katalogformat."
+  },
+  "Invalid catalog timestamp.": {
+    "de_DE": "Ungültiger Katalogzeitpunkt.",
+    "de_DE_formal": "Ungültiger Katalogzeitpunkt."
+  },
+  "Invalid dependencies.": {
+    "de_DE": "Ungültige Abhängigkeiten.",
+    "de_DE_formal": "Ungültige Abhängigkeiten."
+  },
+  "Invalid dependency URL.": {
+    "de_DE": "Ungültige URL einer Abhängigkeit.",
+    "de_DE_formal": "Ungültige URL einer Abhängigkeit."
+  },
+  "Invalid dependency metadata.": {
+    "de_DE": "Ungültige Angaben zu Abhängigkeiten.",
+    "de_DE_formal": "Ungültige Angaben zu Abhängigkeiten."
+  },
+  "Invalid display field.": {
+    "de_DE": "Ungültiges Anzeigefeld.",
+    "de_DE_formal": "Ungültiges Anzeigefeld."
+  },
+  "Invalid icon color.": {
+    "de_DE": "Ungültige Icon-Farbe.",
+    "de_DE_formal": "Ungültige Icon-Farbe."
+  },
+  "Invalid icon label.": {
+    "de_DE": "Ungültiges Icon-Kürzel.",
+    "de_DE_formal": "Ungültiges Icon-Kürzel."
+  },
+  "Invalid identity or release metadata.": {
+    "de_DE": "Ungültige Plugin- oder Release-Angaben.",
+    "de_DE_formal": "Ungültige Plugin- oder Release-Angaben."
+  },
+  "Invalid local icon.": {
+    "de_DE": "Ungültiges lokales Icon.",
+    "de_DE_formal": "Ungültiges lokales Icon."
+  },
+  "Invalid network policy.": {
+    "de_DE": "Ungültige Netzwerkregel.",
+    "de_DE_formal": "Ungültige Netzwerkregel."
+  },
+  "Invalid network requirement.": {
+    "de_DE": "Ungültige Netzwerkanforderung.",
+    "de_DE_formal": "Ungültige Netzwerkanforderung."
+  },
+  "Invalid platform version.": {
+    "de_DE": "Ungültige Plattformversion.",
+    "de_DE_formal": "Ungültige Plattformversion."
+  },
+  "Invalid plugin series.": {
+    "de_DE": "Ungültige Plugin-Serie.",
+    "de_DE_formal": "Ungültige Plugin-Serie."
+  },
+  "Invalid star count.": {
+    "de_DE": "Ungültige Anzahl der GitHub-Sterne.",
+    "de_DE_formal": "Ungültige Anzahl der GitHub-Sterne."
+  },
+  "Invalid stars date.": {
+    "de_DE": "Ungültiges Datum der GitHub-Sterne.",
+    "de_DE_formal": "Ungültiges Datum der GitHub-Sterne."
+  },
+  "Jan": {
+    "de_DE": "Jan",
+    "de_DE_formal": "Jan"
+  },
+  "January": {
+    "de_DE": "Januar",
+    "de_DE_formal": "Januar"
+  },
+  "Jul": {
+    "de_DE": "Jul",
+    "de_DE_formal": "Jul"
+  },
+  "July": {
+    "de_DE": "Juli",
+    "de_DE_formal": "Juli"
+  },
+  "Jun": {
+    "de_DE": "Jun",
+    "de_DE_formal": "Jun"
+  },
+  "June": {
+    "de_DE": "Juni",
+    "de_DE_formal": "Juni"
+  },
+  "Keep the toolbar visible in the fullscreen block editor": {
+    "de_DE": "Toolbar im Vollbildmodus des Block-Editors anzeigen",
+    "de_DE_formal": "Toolbar im Vollbildmodus des Block-Editors anzeigen"
+  },
+  "Last on the left": {
+    "de_DE": "Links an letzter Stelle",
+    "de_DE_formal": "Links an letzter Stelle"
+  },
+  "Layout": {
+    "de_DE": "Darstellung",
+    "de_DE_formal": "Darstellung"
+  },
+  "Leave empty to use the selected menu’s name. A custom label overrides it.": {
+    "de_DE": "Leer lassen, um den Namen des ausgewählten Menüs zu übernehmen. Eine eigene Beschriftung hat Vorrang.",
+    "de_DE_formal": "Leer lassen, um den Namen des ausgewählten Menüs zu übernehmen. Eine eigene Beschriftung hat Vorrang."
+  },
+  "Library": {
+    "de_DE": "Library",
+    "de_DE_formal": "Library"
+  },
+  "Library changelog": {
+    "de_DE": "Library-Änderungsverlauf",
+    "de_DE_formal": "Library-Änderungsverlauf"
+  },
+  "Library settings": {
+    "de_DE": "Library-Einstellungen",
+    "de_DE_formal": "Library-Einstellungen"
+  },
+  "Library settings saved.": {
+    "de_DE": "Library-Einstellungen gespeichert.",
+    "de_DE_formal": "Library-Einstellungen gespeichert."
+  },
+  "Load menus": {
+    "de_DE": "Menüs laden",
+    "de_DE_formal": "Menüs laden"
+  },
+  "Manage Content": {
+    "de_DE": "Inhalte verwalten",
+    "de_DE_formal": "Inhalte verwalten"
+  },
+  "Manage installed plugins": {
+    "de_DE": "Installierte Plugins verwalten",
+    "de_DE_formal": "Installierte Plugins verwalten"
+  },
+  "Many sites. One move.": {
+    "de_DE": "Viele Sites. Ein Handgriff.",
+    "de_DE_formal": "Viele Sites. Ein Handgriff."
+  },
+  "Mar": {
+    "de_DE": "Mär",
+    "de_DE_formal": "Mär"
+  },
+  "March": {
+    "de_DE": "März",
+    "de_DE_formal": "März"
+  },
+  "Maximum websites with extra shortcuts": {
+    "de_DE": "Maximale Anzahl Websites mit zusätzlichen Schnellzugriffen",
+    "de_DE_formal": "Maximale Anzahl Websites mit zusätzlichen Schnellzugriffen"
+  },
+  "May": {
+    "de_DE": "Mai",
+    "de_DE_formal": "Mai"
+  },
+  "Media Library": {
+    "de_DE": "Mediathek",
+    "de_DE_formal": "Mediathek"
+  },
+  "Media Listing": {
+    "de_DE": "Medienliste",
+    "de_DE_formal": "Medienliste"
+  },
+  "Menu ID": {
+    "de_DE": "Menü-ID",
+    "de_DE_formal": "Menü-ID"
+  },
+  "Menu Locations": {
+    "de_DE": "Menüpositionen",
+    "de_DE_formal": "Menüpositionen"
+  },
+  "Migrate Database": {
+    "de_DE": "Datenbank migrieren",
+    "de_DE_formal": "Datenbank migrieren"
+  },
+  "Misc": {
+    "de_DE": "Sonstiges",
+    "de_DE_formal": "Sonstiges"
+  },
+  "Missing display text.": {
+    "de_DE": "Anzeigetext fehlt.",
+    "de_DE_formal": "Anzeigetext fehlt."
+  },
+  "Missing plugin header.": {
+    "de_DE": "Plugin-Header fehlt.",
+    "de_DE_formal": "Plugin-Header fehlt."
+  },
+  "Mon": {
+    "de_DE": "Mo",
+    "de_DE_formal": "Mo"
+  },
+  "Monday": {
+    "de_DE": "Montag",
+    "de_DE_formal": "Montag"
+  },
+  "More by deckerweb": {
+    "de_DE": "Mehr von deckerweb",
+    "de_DE_formal": "Mehr von deckerweb"
+  },
+  "Multisite": {
+    "de_DE": "Multisite",
+    "de_DE_formal": "Multisite"
+  },
+  "Multisite Toolbar Additions": {
+    "de_DE": "Multisite Toolbar Additions",
+    "de_DE_formal": "Multisite Toolbar Additions"
+  },
+  "My Sites": {
+    "de_DE": "Meine Websites",
+    "de_DE_formal": "Meine Websites"
+  },
+  "Network Code Snippets": {
+    "de_DE": "Netzwerk-Code-Snippets",
+    "de_DE_formal": "Netzwerk-Code-Snippets"
+  },
+  "Network Plugins": {
+    "de_DE": "Netzwerk-Plugins",
+    "de_DE_formal": "Netzwerk-Plugins"
+  },
+  "Network Reports": {
+    "de_DE": "Netzwerk-Berichte",
+    "de_DE_formal": "Netzwerk-Berichte"
+  },
+  "Network Settings": {
+    "de_DE": "Netzwerkeinstellungen",
+    "de_DE_formal": "Netzwerkeinstellungen"
+  },
+  "Network Themes": {
+    "de_DE": "Netzwerk-Themes",
+    "de_DE_formal": "Netzwerk-Themes"
+  },
+  "Network activate": {
+    "de_DE": "Netzwerkweit aktivieren",
+    "de_DE_formal": "Netzwerkweit aktivieren"
+  },
+  "Network administration and network New menu": {
+    "de_DE": "Netzwerkverwaltung und Netzwerk-Menü „Neu“",
+    "de_DE_formal": "Netzwerkverwaltung und Netzwerk-Menü „Neu“"
+  },
+  "Network permission denied.": {
+    "de_DE": "Keine Berechtigung für das Netzwerk.",
+    "de_DE_formal": "Keine Berechtigung für das Netzwerk."
+  },
+  "New": {
+    "de_DE": "Neu",
+    "de_DE_formal": "Neu"
+  },
+  "New (Network)": {
+    "de_DE": "Neu (Netzwerk)",
+    "de_DE_formal": "Neu (Netzwerk)"
+  },
+  "New content": {
+    "de_DE": "Neue Inhalte",
+    "de_DE_formal": "Neue Inhalte"
+  },
+  "No approved plugins match this selection.": {
+    "de_DE": "Keine freigegebenen Plugins passen zu dieser Auswahl.",
+    "de_DE_formal": "Keine freigegebenen Plugins passen zu dieser Auswahl."
+  },
+  "Nov": {
+    "de_DE": "Nov",
+    "de_DE_formal": "Nov"
+  },
+  "November": {
+    "de_DE": "November",
+    "de_DE_formal": "November"
+  },
+  "Oct": {
+    "de_DE": "Okt",
+    "de_DE_formal": "Okt"
+  },
+  "October": {
+    "de_DE": "Oktober",
+    "de_DE_formal": "Oktober"
+  },
+  "Off by default. Applies only when no other host is installed, including inactive hosts. Removes Library settings, installation records and introduction status. Installed plugins, their content and other plugin settings remain unchanged. Network data is shared across sites.": {
+    "de_DE": "Standardmäßig ausgeschaltet. Gilt nur, wenn kein weiterer Host installiert ist, auch kein deaktivierter. Entfernt Library-Einstellungen, Installationszuordnung und den Status des Einführungshinweises. Installierte Plugins, deren Inhalte und Einstellungen anderer Plugins bleiben erhalten. Netzwerkdaten werden gemeinsam von den Websites genutzt.",
+    "de_DE_formal": "Standardmäßig ausgeschaltet. Gilt nur, wenn kein weiterer Host installiert ist, auch kein deaktivierter. Entfernt Library-Einstellungen, Installationszuordnung und den Status des Einführungshinweises. Installierte Plugins, deren Inhalte und Einstellungen anderer Plugins bleiben erhalten. Netzwerkdaten werden gemeinsam von den Websites genutzt."
+  },
+  "Off by default. Deactivation keeps your data. Uninstall always clears this plugin’s update cache. This option deletes toolbar settings for this site or network; WordPress menus, installed plugins and shared Library data are not deleted by it.": {
+    "de_DE": "Standardmäßig aus. Deaktivierung erhält deine Daten. Deinstallation leert immer den Updatecache dieses Plugins. Diese Option löscht Toolbar-Einstellungen für diese Website bzw. das Netzwerk; WordPress-Menüs, installierte Plugins und gemeinsame Library-Daten werden dadurch nicht gelöscht.",
+    "de_DE_formal": "Standardmäßig aus. Deaktivierung erhält Ihre Daten. Deinstallation leert immer den Updatecache dieses Plugins. Diese Option löscht Toolbar-Einstellungen für diese Website bzw. das Netzwerk; WordPress-Menüs, installierte Plugins und gemeinsame Library-Daten werden dadurch nicht gelöscht."
+  },
+  "On the right, beside the account menu": {
+    "de_DE": "Rechts neben dem Benutzerkonto",
+    "de_DE_formal": "Rechts neben dem Benutzerkonto"
+  },
+  "Online catalog": {
+    "de_DE": "Online-Katalog",
+    "de_DE_formal": "Online-Katalog"
+  },
+  "Only HTTPS on raw.githubusercontent.com/deckerweb. The server receives the requesting IP address. GitHub is contacted when installing a release.": {
+    "de_DE": "Nur HTTPS auf raw.githubusercontent.com/deckerweb. Der Server sieht die anfragende IP-Adresse. Beim Installieren eines Releases wird GitHub kontaktiert.",
+    "de_DE_formal": "Nur HTTPS auf raw.githubusercontent.com/deckerweb. Der Server sieht die anfragende IP-Adresse. Beim Installieren eines Releases wird GitHub kontaktiert."
+  },
+  "Only approved releases": {
+    "de_DE": "Nur freigegebene Releases",
+    "de_DE_formal": "Nur freigegebene Releases"
+  },
+  "Only super administrators may edit the shared toolbar menu.": {
+    "de_DE": "Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeiten.",
+    "de_DE_formal": "Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeiten."
+  },
+  "Only websites already present in the toolbar are extended. Additional websites keep their normal WordPress links. File editors stay subject to WordPress security restrictions.": {
+    "de_DE": "Nur bereits in der Toolbar vorhandene Websites erhalten zusätzliche Einträge. Weitere Websites behalten ihre normalen WordPress-Links. Datei-Editoren beachten die WordPress-Sicherheitsvorgaben.",
+    "de_DE_formal": "Nur bereits in der Toolbar vorhandene Websites erhalten zusätzliche Einträge. Weitere Websites behalten ihre normalen WordPress-Links. Datei-Editoren beachten die WordPress-Sicherheitsvorgaben."
+  },
+  "Open catalog": {
+    "de_DE": "Katalog öffnen",
+    "de_DE_formal": "Katalog öffnen"
+  },
+  "Optional. The bundled catalog works immediately. Catalog requests are cached for 24 hours. No site URL, plugin list or usage data is sent.": {
+    "de_DE": "Optional. Der mitgelieferte Katalog funktioniert sofort. Katalogabfragen werden 24 Stunden zwischengespeichert. Keine Website-URL, Plugin-Liste oder Nutzungsdaten werden übertragen.",
+    "de_DE_formal": "Optional. Der mitgelieferte Katalog funktioniert sofort. Katalogabfragen werden 24 Stunden zwischengespeichert. Keine Website-URL, Plugin-Liste oder Nutzungsdaten werden übertragen."
+  },
+  "Other website ID": {
+    "de_DE": "Andere Website-ID",
+    "de_DE_formal": "Andere Website-ID"
+  },
+  "PHP ZIP support is required.": {
+    "de_DE": "PHP-ZIP-Unterstützung wird benötigt.",
+    "de_DE_formal": "PHP-ZIP-Unterstützung wird benötigt."
+  },
+  "POST required.": {
+    "de_DE": "Eine POST-Anfrage ist erforderlich.",
+    "de_DE_formal": "Eine POST-Anfrage ist erforderlich."
+  },
+  "Permission denied.": {
+    "de_DE": "Keine Berechtigung.",
+    "de_DE_formal": "Keine Berechtigung."
+  },
+  "Planned: ": {
+    "de_DE": "Geplant: ",
+    "de_DE_formal": "Geplant: "
+  },
+  "Plugin File Editor": {
+    "de_DE": "Plugin-Datei-Editor",
+    "de_DE_formal": "Plugin-Datei-Editor"
+  },
+  "Plugin Handbook": {
+    "de_DE": "Plugin-Handbuch",
+    "de_DE_formal": "Plugin-Handbuch"
+  },
+  "Plugin identity or version does not match the catalog.": {
+    "de_DE": "Plugin oder Version stimmt nicht mit dem Katalog überein.",
+    "de_DE_formal": "Plugin oder Version stimmt nicht mit dem Katalog überein."
+  },
+  "Plugin information": {
+    "de_DE": "Über das Plugin",
+    "de_DE_formal": "Über das Plugin"
+  },
+  "Plugin is not installed.": {
+    "de_DE": "Das Plugin ist nicht installiert.",
+    "de_DE_formal": "Das Plugin ist nicht installiert."
+  },
+  "Plugin series": {
+    "de_DE": "Plugin-Serien",
+    "de_DE_formal": "Plugin-Serien"
+  },
+  "Plugin website": {
+    "de_DE": "Plugin-Website",
+    "de_DE_formal": "Plugin-Website"
+  },
+  "Plugins": {
+    "de_DE": "Plugins",
+    "de_DE_formal": "Plugins"
+  },
+  "Position": {
+    "de_DE": "Position",
+    "de_DE_formal": "Position"
+  },
+  "Private mode must be boolean.": {
+    "de_DE": "Der Private-Modus muss ein boolescher Wert sein.",
+    "de_DE_formal": "Der Private-Modus muss ein boolescher Wert sein."
+  },
+  "Product website": {
+    "de_DE": "Produktwebsite",
+    "de_DE_formal": "Produktwebsite"
+  },
+  "Quick links to edit WordPress menus": {
+    "de_DE": "Schnellzugriffe zum Bearbeiten der WordPress-Menüs",
+    "de_DE_formal": "Schnellzugriffe zum Bearbeiten der WordPress-Menüs"
+  },
+  "Reference item": {
+    "de_DE": "Bezugseintrag",
+    "de_DE_formal": "Bezugseintrag"
+  },
+  "Refresh catalog": {
+    "de_DE": "Katalog aktualisieren",
+    "de_DE_formal": "Katalog aktualisieren"
+  },
+  "Release 1.0.0 is being prepared. Installation will be available after package verification.": {
+    "de_DE": "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar.",
+    "de_DE_formal": "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar."
+  },
+  "Release checksum is verified before installation. Activation is a separate step.": {
+    "de_DE": "Vor der Installation wird die Release-Prüfsumme geprüft. Die Aktivierung erfolgt separat.",
+    "de_DE_formal": "Vor der Installation wird die Release-Prüfsumme geprüft. Die Aktivierung erfolgt separat."
+  },
+  "Release in preparation": {
+    "de_DE": "Release in Vorbereitung",
+    "de_DE_formal": "Release in Vorbereitung"
+  },
+  "Release must contain exactly the approved plugin directory.": {
+    "de_DE": "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten.",
+    "de_DE_formal": "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
+  },
+  "Repository & documentation": {
+    "de_DE": "Repository & Dokumentation",
+    "de_DE_formal": "Repository & Dokumentation"
+  },
+  "Requirements shown are preliminary until the stable release is verified.": {
+    "de_DE": "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig.",
+    "de_DE_formal": "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig."
+  },
+  "Requires PHP %s or newer.": {
+    "de_DE": "Benötigt PHP %s oder neuer.",
+    "de_DE_formal": "Benötigt PHP %s oder neuer."
+  },
+  "Requires WordPress %s or newer.": {
+    "de_DE": "Benötigt WordPress %s oder neuer.",
+    "de_DE_formal": "Benötigt WordPress %s oder neuer."
+  },
+  "Requires a WordPress Multisite network.": {
+    "de_DE": "Benötigt ein WordPress-Multisite-Netzwerk.",
+    "de_DE_formal": "Benötigt ein WordPress-Multisite-Netzwerk."
+  },
+  "Reset filters": {
+    "de_DE": "Filter zurücksetzen",
+    "de_DE_formal": "Filter zurücksetzen"
+  },
+  "Retrieve approved catalog updates online": {
+    "de_DE": "Katalogfreigaben online aktualisieren",
+    "de_DE_formal": "Katalogfreigaben online aktualisieren"
+  },
+  "Sat": {
+    "de_DE": "Sa",
+    "de_DE_formal": "Sa"
+  },
+  "Saturday": {
+    "de_DE": "Samstag",
+    "de_DE_formal": "Samstag"
+  },
+  "Save settings": {
+    "de_DE": "Einstellungen speichern",
+    "de_DE_formal": "Einstellungen speichern"
+  },
+  "Scripts": {
+    "de_DE": "Scripte",
+    "de_DE_formal": "Scripte"
+  },
+  "Search Directory": {
+    "de_DE": "Verzeichnis durchsuchen",
+    "de_DE_formal": "Verzeichnis durchsuchen"
+  },
+  "Search this catalog": {
+    "de_DE": "Diesen Katalog durchsuchen",
+    "de_DE_formal": "Diesen Katalog durchsuchen"
+  },
+  "See the release on GitHub.": {
+    "de_DE": "Sieh dir den Release auf GitHub an.",
+    "de_DE_formal": "Sehen Sie sich den Release auf GitHub an."
+  },
+  "Selected by deckerweb · Installed from GitHub releases": {
+    "de_DE": "Von deckerweb ausgewählt · Installation aus GitHub-Releases",
+    "de_DE_formal": "Von deckerweb ausgewählt · Installation aus GitHub-Releases"
+  },
+  "Sep": {
+    "de_DE": "Sep",
+    "de_DE_formal": "Sep"
+  },
+  "September": {
+    "de_DE": "September",
+    "de_DE_formal": "September"
+  },
+  "Settings": {
+    "de_DE": "Einstellungen",
+    "de_DE_formal": "Einstellungen"
+  },
+  "Settings saved.": {
+    "de_DE": "Einstellungen gespeichert.",
+    "de_DE_formal": "Einstellungen gespeichert."
+  },
+  "Settings sections": {
+    "de_DE": "Einstellungsbereiche",
+    "de_DE_formal": "Einstellungsbereiche"
+  },
+  "Shared Toolbar Menu": {
+    "de_DE": "Gemeinsames Toolbar-Menü",
+    "de_DE_formal": "Gemeinsames Toolbar-Menü"
+  },
+  "Shortcuts are shown only to administrators with permission for the destination.": {
+    "de_DE": "Schnellzugriffe erscheinen nur für Administratoren mit den erforderlichen Zugriffsrechten.",
+    "de_DE_formal": "Schnellzugriffe erscheinen nur für Administratoren mit den erforderlichen Zugriffsrechten."
+  },
+  "Shortcuts for websites under My Sites": {
+    "de_DE": "Website-Schnellzugriffe unter „Meine Websites“",
+    "de_DE_formal": "Website-Schnellzugriffe unter „Meine Websites“"
+  },
+  "Show Plugins under New in the toolbar": {
+    "de_DE": "Plugins unter „+ Neu“ in der Toolbar anzeigen",
+    "de_DE_formal": "Plugins unter „+ Neu“ in der Toolbar anzeigen"
+  },
+  "Show Themes under New in the toolbar": {
+    "de_DE": "Themes unter „+ Neu“ in der Toolbar anzeigen",
+    "de_DE_formal": "Themes unter „+ Neu“ in der Toolbar anzeigen"
+  },
+  "Show deckerweb under Add Plugins": {
+    "de_DE": "deckerweb unter „Plugins hinzufügen“ anzeigen",
+    "de_DE_formal": "deckerweb unter „Plugins hinzufügen“ anzeigen"
+  },
+  "Show in": {
+    "de_DE": "Anzeigen in",
+    "de_DE_formal": "Anzeigen in"
+  },
+  "Show the custom toolbar menu": {
+    "de_DE": "Eigenes Toolbar-Menü anzeigen",
+    "de_DE_formal": "Eigenes Toolbar-Menü anzeigen"
+  },
+  "Show the plugin ZIP upload submenu": {
+    "de_DE": "Untermenü „Plugin-ZIP hochladen“ anzeigen",
+    "de_DE_formal": "Untermenü „Plugin-ZIP hochladen“ anzeigen"
+  },
+  "Show the theme ZIP upload submenu": {
+    "de_DE": "Untermenü „Theme-ZIP hochladen“ anzeigen",
+    "de_DE_formal": "Untermenü „Theme-ZIP hochladen“ anzeigen"
+  },
+  "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible.": {
+    "de_DE": "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar.",
+    "de_DE_formal": "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar."
+  },
+  "Site Editor": {
+    "de_DE": "Website-Editor",
+    "de_DE_formal": "Website-Editor"
+  },
+  "Site Health": {
+    "de_DE": "Website-Zustand",
+    "de_DE_formal": "Website-Zustand"
+  },
+  "Site Plugins": {
+    "de_DE": "Website-Plugins",
+    "de_DE_formal": "Website-Plugins"
+  },
+  "Site Settings": {
+    "de_DE": "Website-Einstellungen",
+    "de_DE_formal": "Website-Einstellungen"
+  },
+  "Site Themes": {
+    "de_DE": "Website-Themes",
+    "de_DE_formal": "Website-Themes"
+  },
+  "Site Tools": {
+    "de_DE": "Website-Werkzeuge",
+    "de_DE_formal": "Website-Werkzeuge"
+  },
+  "Small plugins. Practical improvements.": {
+    "de_DE": "Kleine Plugins. Konkrete Verbesserungen.",
+    "de_DE_formal": "Kleine Plugins. Konkrete Verbesserungen."
+  },
+  "Source website": {
+    "de_DE": "Website als Menüquelle",
+    "de_DE_formal": "Website als Menüquelle"
+  },
+  "Source: GitHub": {
+    "de_DE": "Quelle: GitHub",
+    "de_DE_formal": "Quelle: GitHub"
+  },
+  "Stored data": {
+    "de_DE": "Gespeicherte Daten",
+    "de_DE_formal": "Gespeicherte Daten"
+  },
+  "Stream Settings": {
+    "de_DE": "Stream-Einstellungen",
+    "de_DE_formal": "Stream-Einstellungen"
+  },
+  "Sun": {
+    "de_DE": "So",
+    "de_DE_formal": "So"
+  },
+  "Sunday": {
+    "de_DE": "Sonntag",
+    "de_DE_formal": "Sonntag"
+  },
+  "Super Admins": {
+    "de_DE": "Super-Administratoren",
+    "de_DE_formal": "Super-Administratoren"
+  },
+  "Super administrators and website administrators": {
+    "de_DE": "Super-Administratoren und Website-Administratoren",
+    "de_DE_formal": "Super-Administratoren und Website-Administratoren"
+  },
+  "Super administrators only": {
+    "de_DE": "Nur Super-Administratoren",
+    "de_DE_formal": "Nur Super-Administratoren"
+  },
+  "The GitHub package could not be prepared. The installed version has been kept.": {
+    "de_DE": "Das GitHub-Paket konnte nicht vorbereitet werden. Die installierte Version bleibt erhalten.",
+    "de_DE_formal": "Das GitHub-Paket konnte nicht vorbereitet werden. Die installierte Version bleibt erhalten."
+  },
+  "The GitHub package does not contain the Multisite Toolbar Additions plugin file.": {
+    "de_DE": "Das GitHub-Paket enthält die Plugin-Datei von Multisite Toolbar Additions nicht.",
+    "de_DE_formal": "Das GitHub-Paket enthält die Plugin-Datei von Multisite Toolbar Additions nicht."
+  },
+  "The GitHub release could not be downloaded.": {
+    "de_DE": "Das GitHub-Release konnte nicht heruntergeladen werden.",
+    "de_DE_formal": "Das GitHub-Release konnte nicht heruntergeladen werden."
+  },
+  "The approved release changed. Refresh updates first.": {
+    "de_DE": "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren.",
+    "de_DE_formal": "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren."
+  },
+  "The approved release could not be verified.": {
+    "de_DE": "Der freigegebene Release konnte nicht geprüft werden.",
+    "de_DE_formal": "Der freigegebene Release konnte nicht geprüft werden."
+  },
+  "The catalog URL is not an allowed first-party HTTPS endpoint.": {
+    "de_DE": "Die Katalog-URL ist keine erlaubte eigene HTTPS-Quelle.",
+    "de_DE_formal": "Die Katalog-URL ist keine erlaubte eigene HTTPS-Quelle."
+  },
+  "The catalog could not be verified. Please try again later.": {
+    "de_DE": "Der Katalog konnte nicht geprüft werden. Bitte später erneut versuchen.",
+    "de_DE_formal": "Der Katalog konnte nicht geprüft werden. Bitte später erneut versuchen."
+  },
+  "The catalog is disabled.": {
+    "de_DE": "Der Katalog ist deaktiviert.",
+    "de_DE_formal": "Der Katalog ist deaktiviert."
+  },
+  "The catalog is hidden.": {
+    "de_DE": "Der Katalog ist ausgeblendet.",
+    "de_DE_formal": "Der Katalog ist ausgeblendet."
+  },
+  "The online catalog is unavailable. Showing cached or bundled entries; online approval is checked again before installation.": {
+    "de_DE": "Der Online-Katalog ist nicht erreichbar. Angezeigt wird der gespeicherte oder mitgelieferte Katalog; vor der Installation wird die Online-Freigabe erneut geprüft.",
+    "de_DE_formal": "Der Online-Katalog ist nicht erreichbar. Angezeigt wird der gespeicherte oder mitgelieferte Katalog; vor der Installation wird die Online-Freigabe erneut geprüft."
+  },
+  "The online catalog source is not trusted.": {
+    "de_DE": "Die Online-Katalogquelle ist nicht vertrauenswürdig.",
+    "de_DE_formal": "Die Online-Katalogquelle ist nicht vertrauenswürdig."
+  },
+  "The package identity or version does not match a newer Multisite Toolbar Additions release.": {
+    "de_DE": "Paketidentität oder Version passen nicht zu einem neueren Release von Multisite Toolbar Additions.",
+    "de_DE_formal": "Paketidentität oder Version passen nicht zu einem neueren Release von Multisite Toolbar Additions."
+  },
+  "The package version differs from the offered update. Please check for updates again.": {
+    "de_DE": "Die Paketversion weicht vom angebotenen Update ab. Bitte erneut nach Updates suchen.",
+    "de_DE_formal": "Die Paketversion weicht vom angebotenen Update ab. Bitte erneut nach Updates suchen."
+  },
+  "The plugin must be installed in a stable slug directory.": {
+    "de_DE": "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein.",
+    "de_DE_formal": "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein."
+  },
+  "The private update could not be authorized. Check the repository credentials and refresh updates.": {
+    "de_DE": "Das private Update konnte nicht autorisiert werden. Prüfe die Repository-Zugangsdaten und suche erneut nach Updates.",
+    "de_DE_formal": "Das private Update konnte nicht autorisiert werden. Prüfen Sie die Repository-Zugangsdaten und suchen Sie erneut nach Updates."
+  },
+  "The private update download failed. Check credentials and try again.": {
+    "de_DE": "Der Download des privaten Updates ist fehlgeschlagen. Prüfe die Zugangsdaten und versuche es erneut.",
+    "de_DE_formal": "Der Download des privaten Updates ist fehlgeschlagen. Prüfen Sie die Zugangsdaten und versuchen Sie es erneut."
+  },
+  "The release checksum does not match. Installation stopped.": {
+    "de_DE": "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt.",
+    "de_DE_formal": "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt."
+  },
+  "The selected menu does not exist on the source website. Load its menus and choose again.": {
+    "de_DE": "Das ausgewählte Menü existiert nicht auf der Quellwebsite. Bitte ihre Menüs laden und erneut auswählen.",
+    "de_DE_formal": "Das ausgewählte Menü existiert nicht auf der Quellwebsite. Bitte ihre Menüs laden und erneut auswählen."
+  },
+  "The update filesystem is unavailable. Please try again.": {
+    "de_DE": "Das Dateisystem für Updates ist nicht verfügbar. Bitte erneut versuchen.",
+    "de_DE_formal": "Das Dateisystem für Updates ist nicht verfügbar. Bitte erneut versuchen."
+  },
+  "The update package could not be checked.": {
+    "de_DE": "Das Update-Paket konnte nicht geprüft werden.",
+    "de_DE_formal": "Das Update-Paket konnte nicht geprüft werden."
+  },
+  "The update package has missing or invalid WordPress/PHP requirements.": {
+    "de_DE": "Die WordPress-/PHP-Anforderungen im Update-Paket fehlen oder sind ungültig.",
+    "de_DE_formal": "Die WordPress-/PHP-Anforderungen im Update-Paket fehlen oder sind ungültig."
+  },
+  "Theme File Editor": {
+    "de_DE": "Theme-Datei-Editor",
+    "de_DE_formal": "Theme-Datei-Editor"
+  },
+  "Theme Handbook": {
+    "de_DE": "Theme-Handbuch",
+    "de_DE_formal": "Theme-Handbuch"
+  },
+  "Theme and plugin file editor shortcuts": {
+    "de_DE": "Schnellzugriffe auf Theme- und Plugin-Datei-Editoren",
+    "de_DE_formal": "Schnellzugriffe auf Theme- und Plugin-Datei-Editoren"
+  },
+  "Themes": {
+    "de_DE": "Themes",
+    "de_DE_formal": "Themes"
+  },
+  "This catalog requires a newer Library.": {
+    "de_DE": "Dieser Katalog benötigt eine neuere Library.",
+    "de_DE_formal": "Dieser Katalog benötigt eine neuere Library."
+  },
+  "This plugin directory already exists. Use the installed plugin; it will not be overwritten.": {
+    "de_DE": "Dieses Plugin-Verzeichnis existiert bereits. Bitte das installierte Plugin verwenden; es wird nicht überschrieben.",
+    "de_DE_formal": "Dieses Plugin-Verzeichnis existiert bereits. Bitte das installierte Plugin verwenden; es wird nicht überschrieben."
+  },
+  "This release is no longer approved.": {
+    "de_DE": "Dieses Release ist nicht mehr freigegeben.",
+    "de_DE_formal": "Dieses Release ist nicht mehr freigegeben."
+  },
+  "This release is not approved.": {
+    "de_DE": "Dieses Release ist nicht freigegeben.",
+    "de_DE_formal": "Dieses Release ist nicht freigegeben."
+  },
+  "This release requires a newer WordPress or PHP version. The installed version has been kept.": {
+    "de_DE": "Dieses Release benötigt eine neuere WordPress- oder PHP-Version. Die installierte Version bleibt erhalten.",
+    "de_DE_formal": "Dieses Release benötigt eine neuere WordPress- oder PHP-Version. Die installierte Version bleibt erhalten."
+  },
+  "Thu": {
+    "de_DE": "Do",
+    "de_DE_formal": "Do"
+  },
+  "Thursday": {
+    "de_DE": "Donnerstag",
+    "de_DE_formal": "Donnerstag"
+  },
+  "Toolbar Additions": {
+    "de_DE": "Toolbar-Erweiterungen",
+    "de_DE_formal": "Toolbar-Erweiterungen"
+  },
+  "Toolbar Menu (legacy location)": {
+    "de_DE": "Toolbar-Menü (bisherige Menüposition)",
+    "de_DE_formal": "Toolbar-Menü (bisherige Menüposition)"
+  },
+  "Toolbar Settings": {
+    "de_DE": "Toolbar-Einstellungen",
+    "de_DE_formal": "Toolbar-Einstellungen"
+  },
+  "Toolbar settings": {
+    "de_DE": "Toolbar-Einstellungen",
+    "de_DE_formal": "Toolbar-Einstellungen"
+  },
+  "Tools": {
+    "de_DE": "Werkzeuge",
+    "de_DE_formal": "Werkzeuge"
+  },
+  "Tue": {
+    "de_DE": "Di",
+    "de_DE_formal": "Di"
+  },
+  "Tuesday": {
+    "de_DE": "Dienstag",
+    "de_DE_formal": "Dienstag"
+  },
+  "Unsafe archive path.": {
+    "de_DE": "Unsicherer Archivpfad.",
+    "de_DE_formal": "Unsicherer Archivpfad."
+  },
+  "Untrusted release URL.": {
+    "de_DE": "Nicht vertrauenswürdige Release-URL.",
+    "de_DE_formal": "Nicht vertrauenswürdige Release-URL."
+  },
+  "Update %1$s to version %2$s or newer.": {
+    "de_DE": "%1$s bitte auf Version %2$s oder neuer aktualisieren.",
+    "de_DE_formal": "%1$s bitte auf Version %2$s oder neuer aktualisieren."
+  },
+  "Updates": {
+    "de_DE": "Aktualisierungen",
+    "de_DE_formal": "Aktualisierungen"
+  },
+  "Upgrade Network": {
+    "de_DE": "Netzwerk aktualisieren",
+    "de_DE_formal": "Netzwerk aktualisieren"
+  },
+  "Upload Files": {
+    "de_DE": "Dateien hochladen",
+    "de_DE_formal": "Dateien hochladen"
+  },
+  "Upload Plugin ZIP": {
+    "de_DE": "Plugin-ZIP hochladen",
+    "de_DE_formal": "Plugin-ZIP hochladen"
+  },
+  "Upload Theme ZIP": {
+    "de_DE": "Theme-ZIP hochladen",
+    "de_DE_formal": "Theme-ZIP hochladen"
+  },
+  "Upload ZIP": {
+    "de_DE": "ZIP-Datei hochladen",
+    "de_DE_formal": "ZIP-Datei hochladen"
+  },
+  "Use a WordPress menu as your toolbar. Its source is independent of the active theme.": {
+    "de_DE": "Ein WordPress-Menü als Toolbar verwenden. Die Menüquelle ist unabhängig vom aktiven Theme.",
+    "de_DE_formal": "Ein WordPress-Menü als Toolbar verwenden. Die Menüquelle ist unabhängig vom aktiven Theme."
+  },
+  "Use the existing toolbar menu location": {
+    "de_DE": "Bisherige Toolbar-Menüposition verwenden",
+    "de_DE_formal": "Bisherige Toolbar-Menüposition verwenden"
+  },
+  "Use the settings form to save changes.": {
+    "de_DE": "Verwende das Einstellungsformular zum Speichern.",
+    "de_DE_formal": "Verwenden Sie das Einstellungsformular zum Speichern."
+  },
+  "Used for before/after positions. If the item is absent, your menu appears last on the left.": {
+    "de_DE": "Für die Position vor oder nach einem Eintrag. Fehlt dieser, erscheint das Menü links an letzter Stelle.",
+    "de_DE_formal": "Für die Position vor oder nach einem Eintrag. Fehlt dieser, erscheint das Menü links an letzter Stelle."
+  },
+  "Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar.": {
+    "de_DE": "Nützliche Netzwerk- und Website-Verknüpfungen sowie ein konfigurierbares WordPress-Menü in der Toolbar.",
+    "de_DE_formal": "Nützliche Netzwerk- und Website-Verknüpfungen sowie ein konfigurierbares WordPress-Menü in der Toolbar."
+  },
+  "Useful shortcuts": {
+    "de_DE": "Nützliche Schnellzugriffe",
+    "de_DE_formal": "Nützliche Schnellzugriffe"
+  },
+  "User (Network)": {
+    "de_DE": "Benutzer (Netzwerk)",
+    "de_DE_formal": "Benutzer (Netzwerk)"
+  },
+  "User Searches": {
+    "de_DE": "Suchanfragen",
+    "de_DE_formal": "Suchanfragen"
+  },
+  "Version": {
+    "de_DE": "Version",
+    "de_DE_formal": "Version"
+  },
+  "View plugins": {
+    "de_DE": "Plugins ansehen",
+    "de_DE_formal": "Plugins ansehen"
+  },
+  "Visibility": {
+    "de_DE": "Sichtbarkeit",
+    "de_DE_formal": "Sichtbarkeit"
+  },
+  "Visibility grants no permission to linked pages. Only super administrators may edit the shared toolbar menu.": {
+    "de_DE": "Sichtbarkeit gewährt keine zusätzlichen Zugriffsrechte. Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeiten.",
+    "de_DE_formal": "Sichtbarkeit gewährt keine zusätzlichen Zugriffsrechte. Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeiten."
+  },
+  "Visible to": {
+    "de_DE": "Sichtbar für",
+    "de_DE_formal": "Sichtbar für"
+  },
+  "Website": {
+    "de_DE": "Website",
+    "de_DE_formal": "Website"
+  },
+  "Website administration, content types and Site Health": {
+    "de_DE": "Website-Verwaltung, Inhaltstypen und Website-Zustand",
+    "de_DE_formal": "Website-Verwaltung, Inhaltstypen und Website-Zustand"
+  },
+  "Website name": {
+    "de_DE": "Website-Name",
+    "de_DE_formal": "Website-Name"
+  },
+  "Wed": {
+    "de_DE": "Mi",
+    "de_DE_formal": "Mi"
+  },
+  "Wednesday": {
+    "de_DE": "Mittwoch",
+    "de_DE_formal": "Mittwoch"
+  },
+  "Widgets": {
+    "de_DE": "Widgets",
+    "de_DE_formal": "Widgets"
+  },
+  "Widgets Customizer": {
+    "de_DE": "Widget-Customizer",
+    "de_DE_formal": "Widget-Customizer"
+  },
+  "WordPress": {
+    "de_DE": "WordPress",
+    "de_DE_formal": "WordPress"
+  },
+  "WordPress Menus": {
+    "de_DE": "WordPress-Menüs",
+    "de_DE_formal": "WordPress-Menüs"
+  },
+  "WordPress developer resources": {
+    "de_DE": "WordPress-Ressourcen für Entwickler",
+    "de_DE_formal": "WordPress-Ressourcen für Entwickler"
+  },
+  "WordPress logo": {
+    "de_DE": "WordPress-Logo",
+    "de_DE_formal": "WordPress-Logo"
+  },
+  "WordPress menu": {
+    "de_DE": "WordPress-Menü",
+    "de_DE_formal": "WordPress-Menü"
+  },
+  "You already use one of my plugins. Find selected additions in the deckerweb tab.": {
+    "de_DE": "Du nutzt bereits ein Plugin von mir. Ausgewählte Ergänzungen findest du im deckerweb-Tab.",
+    "de_DE_formal": "Sie nutzen bereits ein Plugin von mir. Ausgewählte Ergänzungen finden Sie im deckerweb-Tab."
+  },
+  "You cannot change toolbar settings.": {
+    "de_DE": "Keine Berechtigung zum Ändern der Toolbar-Einstellungen.",
+    "de_DE_formal": "Keine Berechtigung zum Ändern der Toolbar-Einstellungen."
+  },
+  "Your toolbar menu": {
+    "de_DE": "Eigenes Toolbar-Menü",
+    "de_DE_formal": "Eigenes Toolbar-Menü"
+  },
+  "Network-activate this plugin or activate it on the source website before selecting that menu.": {
+    "de_DE": "Aktiviere dieses Plugin netzwerkweit oder auf der Quellwebsite, bevor du deren Menü auswählst.",
+    "de_DE_formal": "Aktivieren Sie dieses Plugin netzwerkweit oder auf der Quellwebsite, bevor Sie deren Menü auswählen."
+  },
+  "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin.": {
+    "de_DE": "Bei dieser Einzelaktivierung verwaltest du die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktiviere das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen.",
+    "de_DE_formal": "Bei dieser Einzelaktivierung verwalten Sie die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktivieren Sie das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen."
+  },
+  "Reinstall the complete plugin package to restore the shared Library. Toolbar features remain available.": {
+    "de_DE": "Installiere das vollständige Plugin-Paket erneut, um die gemeinsame Library wiederherzustellen. Die Toolbar-Funktionen bleiben verfügbar.",
+    "de_DE_formal": "Installieren Sie das vollständige Plugin-Paket erneut, um die gemeinsame Library wiederherzustellen. Die Toolbar-Funktionen bleiben verfügbar."
+  },
+  "Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates.": {
+    "de_DE": "Die Toolbar-Funktionen bleiben verfügbar. Installiere das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen.",
+    "de_DE_formal": "Die Toolbar-Funktionen bleiben verfügbar. Installieren Sie das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen."
+  }
+}
