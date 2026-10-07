@@ -1072,6 +1072,12 @@ msgstr "Theme-Uploader"
 msgid "Themes"
 msgstr "Themes"
 
+msgid "This ZIP was identified as a plugin. Please use the plugin uploader."
+msgstr "Diese ZIP wurde als Plugin erkannt. Bitte verwende den Plugin-Uploader."
+
+msgid "This ZIP was identified as a theme. Please use the theme uploader."
+msgstr "Diese ZIP wurde als Theme erkannt. Bitte verwende den Theme-Uploader."
+
 msgid "This catalog requires a newer Library."
 msgstr "Dieser Katalog benötigt eine neuere Library."
 

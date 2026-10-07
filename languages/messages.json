@@ -1423,6 +1423,14 @@
     "de_DE": "Themes",
     "de_DE_formal": "Themes"
   },
+  "This ZIP was identified as a plugin. Please use the plugin uploader.": {
+    "de_DE": "Diese ZIP wurde als Plugin erkannt. Bitte verwende den Plugin-Uploader.",
+    "de_DE_formal": "Diese ZIP wurde als Plugin erkannt. Bitte verwenden Sie den Plugin-Uploader."
+  },
+  "This ZIP was identified as a theme. Please use the theme uploader.": {
+    "de_DE": "Diese ZIP wurde als Theme erkannt. Bitte verwende den Theme-Uploader.",
+    "de_DE_formal": "Diese ZIP wurde als Theme erkannt. Bitte verwenden Sie den Theme-Uploader."
+  },
   "This catalog requires a newer Library.": {
     "de_DE": "Dieser Katalog benötigt eine neuere Library.",
     "de_DE_formal": "Dieser Katalog benötigt eine neuere Library."

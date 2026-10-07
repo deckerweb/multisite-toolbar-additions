@@ -171,7 +171,15 @@ final class Uploads {
 		$file = $_FILES['package'] ?? [];
 		if ( ! is_array( $file ) || ( $file['error'] ?? -1 ) !== UPLOAD_ERR_OK || ! is_string( $file['name'] ?? null ) || ! preg_match( '/\.zip$/iD', $file['name'] ) || ! is_string( $file['tmp_name'] ?? null ) || ! is_uploaded_file( $file['tmp_name'] ) ) { wp_send_json_error( [ 'message' => __( 'Choose one non-empty ZIP file within the upload limit.', 'multisite-toolbar-additions' ) ], 400 ); }
 		$result = self::inspect( $file['tmp_name'], $type );
-		if ( is_wp_error( $result ) ) { wp_send_json_error( [ 'message' => $result->get_error_message() ], 422 ); }
+		if ( is_wp_error( $result ) ) {
+			$response = [ 'message' => $result->get_error_message(), 'code' => $result->get_error_code() ];
+			if ( 'wrong_type' === $result->get_error_code() ) {
+				$other = 'plugin' === $type ? 'theme' : 'plugin';
+				$response['destination'] = self::allowed( $other ) ? self::url( $other ) : '';
+				$response['link_label'] = 'theme' === $other ? __( 'Switch to theme uploader', 'multisite-toolbar-additions' ) : __( 'Switch to plugin uploader', 'multisite-toolbar-additions' );
+			}
+			wp_send_json_error( $response, 422 );
+		}
 		wp_send_json_success( $result );
 	}
 	/**
@@ -188,7 +196,7 @@ final class Uploads {
 		if ( true !== $archive->open( $path ) ) { return new \WP_Error( 'package', $error ); }
 		try {
 			if ( $archive->numFiles > 10000 ) { return new \WP_Error( 'package', $error ); }
-			$roots = []; $seen = []; $headers = []; $bytes = 0; $candidates = 0; $start = microtime( true );
+			$roots = []; $seen = []; $headers = []; $opposite = []; $bytes = 0; $candidates = 0; $start = microtime( true );
 			for ( $i = 0; $i < $archive->numFiles; ++$i ) {
 				$entry = $archive->statIndex( $i );
 				if ( ! is_array( $entry ) || microtime( true ) - $start > 5 ) { return new \WP_Error( 'package', $error ); }
@@ -202,17 +210,24 @@ final class Uploads {
 				if ( $bytes > 512 * MB_IN_BYTES ) { return new \WP_Error( 'package', $error ); }
 				if ( str_starts_with( $name, '__MACOSX/' ) || '.DS_Store' === basename( $name ) ) { continue; }
 				$parts = explode( '/', rtrim( $name, '/' ) ); $roots[ $parts[0] ] = true;
-				if ( count( $parts ) !== 2 || str_ends_with( $name, '/' ) || ( 'theme' === $type ? 'style.css' !== $parts[1] : 'php' !== strtolower( pathinfo( $name, PATHINFO_EXTENSION ) ) ) ) { continue; }
+				if ( count( $parts ) !== 2 || str_ends_with( $name, '/' ) || ( 'style.css' !== $parts[1] && 'php' !== strtolower( pathinfo( $name, PATHINFO_EXTENSION ) ) ) ) { continue; }
 				if ( ++$candidates > 32 ) { return new \WP_Error( 'package', $error ); }
 				$text = $archive->getFromIndex( $i, 8192 );
 				if ( ! is_string( $text ) ) { return new \WP_Error( 'package', $error ); }
+				$entry_type = 'style.css' === $parts[1] ? 'theme' : 'plugin';
 				$data = [];
-				foreach ( [ 'name' => 'theme' === $type ? 'Theme Name' : 'Plugin Name', 'version' => 'Version', 'wp' => 'Requires at least', 'php' => 'Requires PHP', 'parent' => 'Template', 'dependencies' => 'Requires Plugins' ] as $key => $label ) {
+				foreach ( [ 'name' => 'theme' === $entry_type ? 'Theme Name' : 'Plugin Name', 'version' => 'Version', 'wp' => 'Requires at least', 'php' => 'Requires PHP', 'parent' => 'Template', 'dependencies' => 'Requires Plugins' ] as $key => $label ) {
 					$data[ $key ] = preg_match( '/^[ \t\/*#@]*' . preg_quote( $label, '/' ) . ':([^\r\n]*)/mi', $text, $match ) ? wp_html_excerpt( sanitize_text_field( preg_replace( '~\s*\*/.*~', '', $match[1] ) ), 200 ) : '';
 				}
-				if ( $data['name'] !== '' ) { $data['file'] = $name; $headers[] = $data; }
+				if ( $data['name'] !== '' ) {
+					$data['file'] = $name;
+					if ( $entry_type === $type ) { $headers[] = $data; } else { $opposite[] = $data; }
+				}
 			}
-			if ( count( $roots ) !== 1 || count( $headers ) !== 1 || ! preg_match( '/^[A-Za-z0-9_-][A-Za-z0-9_.-]*$/D', (string) key( $roots ) ) ) { return new \WP_Error( 'package', $error ); }
+			if ( count( $roots ) === 1 && preg_match( '/^[A-Za-z0-9_-][A-Za-z0-9_.-]*$/D', (string) key( $roots ) ) && ! $headers && count( $opposite ) === 1 ) {
+				return new \WP_Error( 'wrong_type', 'plugin' === $type ? __( 'This ZIP was identified as a theme. Please use the theme uploader.', 'multisite-toolbar-additions' ) : __( 'This ZIP was identified as a plugin. Please use the plugin uploader.', 'multisite-toolbar-additions' ) );
+			}
+			if ( count( $roots ) !== 1 || count( $headers ) !== 1 || $opposite || ! preg_match( '/^[A-Za-z0-9_-][A-Za-z0-9_.-]*$/D', (string) key( $roots ) ) ) { return new \WP_Error( 'package', $error ); }
 			$data = $headers[0]; $data['slug'] = (string) key( $roots );
 		} catch ( \Throwable $exception ) { return new \WP_Error( 'package', $error ); }
 		finally { $archive->close(); }

@@ -10,10 +10,10 @@
   const remove = document.createElement('button');
   remove.type = 'button'; remove.className = 'button'; remove.textContent = labels.remove; remove.hidden = true; zone.append(remove);
   const actionAnchor = document.createComment('ZIP check action'); submit.before(actionAnchor);
-  let controller = null, revision = 0, reviewedFile = null, review = null, bypass = false;
+  let controller = null, revision = 0, reviewedFile = null, review = null, bypass = false, wrongType = false;
   const reset = () => {
-   revision++; controller?.abort(); controller = null; reviewedFile = null; review = null; bypass = false;
-   actionAnchor.after(submit); panel.replaceChildren(); panel.hidden = true; panel.removeAttribute('aria-busy'); submit.disabled = false; submit.textContent = labels.check;
+   revision++; controller?.abort(); controller = null; reviewedFile = null; review = null; bypass = false; wrongType = false;
+   actionAnchor.after(submit); panel.replaceChildren(); panel.hidden = true; panel.removeAttribute('aria-busy'); submit.disabled = false; submit.hidden = false; submit.textContent = labels.check;
   };
   const valid = () => {
    const files = input.files;
@@ -59,7 +59,18 @@
     const response = await fetch(config.ajax, { method: 'POST', credentials: 'same-origin', body, signal: controller.signal });
     const payload = await response.json();
     if (revision !== current || input.files[0] !== file) return;
-    if (!response.ok || !payload.success) { fallback(payload.data?.message); return; }
+    if (!response.ok || !payload.success) {
+     if (payload.data?.code === 'wrong_type') {
+      wrongType = true; submit.hidden = true; panel.replaceChildren();
+      const note = document.createElement('p'); note.className = 'mstba-upload-type-note'; note.textContent = payload.data.message; panel.append(note);
+      if (payload.data.destination) {
+       const target = new URL(payload.data.destination,window.location.href);
+       if (['http:','https:'].includes(target.protocol)) { const link = document.createElement('a'); link.href=target.href; link.textContent=payload.data.link_label; panel.append(link); }
+      }
+      focusPanel();
+     } else fallback(payload.data?.message);
+     return;
+    }
     const rows = payload.data?.rows;
     if (!rows || typeof rows !== 'object' || Array.isArray(rows) || Object.keys(rows).length > 12) throw new Error('response');
     const dl = document.createElement('dl');
@@ -75,7 +86,7 @@
     review.addEventListener('change',()=>{submit.disabled=!review.checked;}); panel.append(submit);
     reviewedFile = file; submit.textContent = labels.install; status.textContent = ''; focusPanel();
    } catch (_) { if (revision === current) fallback(labels.failure); }
-   finally { clearTimeout(timeout); if (revision === current) { panel.removeAttribute('aria-busy'); submit.disabled = reviewedFile ? !review.checked : false; if (!reviewedFile) submit.textContent = labels.check; } }
+   finally { clearTimeout(timeout); if (revision === current) { panel.removeAttribute('aria-busy'); submit.disabled = wrongType || (reviewedFile ? !review.checked : false); if (!reviewedFile) submit.textContent = labels.check; } }
   });
  });
 })();

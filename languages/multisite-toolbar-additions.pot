@@ -1072,6 +1072,12 @@ msgstr ""
 msgid "Themes"
 msgstr ""
 
+msgid "This ZIP was identified as a plugin. Please use the plugin uploader."
+msgstr ""
+
+msgid "This ZIP was identified as a theme. Please use the theme uploader."
+msgstr ""
+
 msgid "This catalog requires a newer Library."
 msgstr ""
 

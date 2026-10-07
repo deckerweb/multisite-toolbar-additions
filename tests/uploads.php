@@ -31,6 +31,9 @@ try {
  }
  package_fixture( $temp, [ 'sample/style.css' => "/* Theme Name: Sample\nVersion: 2.0\nTemplate: twentytwentyfour\n*/" ] );
  $theme_preview=Uploads::inspect( $temp, 'theme' ); upload_check( ! is_wp_error( $theme_preview ), 'Child theme metadata' ); upload_check( count(array_filter($theme_preview['rows'],'is_string'))===count($theme_preview['rows']),'New theme preview values are strings');
+ $wrong=Uploads::inspect($temp,'plugin');upload_check(is_wp_error($wrong)&&$wrong->get_error_code()==='wrong_type','Theme in plugin uploader identified');
+ package_fixture($temp,['sample/sample.php'=>"<?php\n/* Plugin Name: Sample\nVersion: 1.0\n*/"]);$wrong=Uploads::inspect($temp,'theme');upload_check(is_wp_error($wrong)&&$wrong->get_error_code()==='wrong_type','Plugin in theme uploader identified');
+ package_fixture($temp,['sample/sample.php'=>"Plugin Name: Sample",'sample/style.css'=>"Theme Name: Sample"]);$mixed=Uploads::inspect($temp,'plugin');upload_check(is_wp_error($mixed)&&$mixed->get_error_code()!=='wrong_type','Ambiguous package gets no misleading type hint');
  $user = wp_insert_user( [ 'user_login' => 'upload-editor-' . wp_generate_uuid4(), 'user_pass' => wp_generate_password(), 'role' => 'editor' ] );
  wp_set_current_user( $user ); upload_check( ! Uploads::allowed( 'plugin' ) && is_wp_error( Uploads::inspect( $temp, 'theme' ) ), 'Unauthorized inspection rejected' ); wp_set_current_user( 1 );
  // A request-local mock covers ownership and exclusions without copying private implementation.

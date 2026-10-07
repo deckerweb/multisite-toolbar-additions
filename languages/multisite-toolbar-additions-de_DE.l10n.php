@@ -369,6 +369,8 @@ return array (
     'Theme and plugin file editor shortcuts' => 'Schnellzugriffe auf Theme- und Plugin-Datei-Editoren',
     'Theme uploader' => 'Theme-Uploader',
     'Themes' => 'Themes',
+    'This ZIP was identified as a plugin. Please use the plugin uploader.' => 'Diese ZIP wurde als Plugin erkannt. Bitte verwende den Plugin-Uploader.',
+    'This ZIP was identified as a theme. Please use the theme uploader.' => 'Diese ZIP wurde als Theme erkannt. Bitte verwende den Theme-Uploader.',
     'This catalog requires a newer Library.' => 'Dieser Katalog benötigt eine neuere Library.',
     'This plugin directory already exists. Use the installed plugin; it will not be overwritten.' => 'Dieses Plugin-Verzeichnis existiert bereits. Bitte das installierte Plugin verwenden; es wird nicht überschrieben.',
     'This release is no longer approved.' => 'Dieses Release ist nicht mehr freigegeben.',
