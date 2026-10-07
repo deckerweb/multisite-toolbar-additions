@@ -26,8 +26,19 @@ final class Settings {
 			'network_links' => true, 'site_links' => true, 'subsite_links' => true,
 			'subsite_limit' => 25, 'menu_edit_links' => true, 'integrations' => true,
 			'resources' => true, 'file_editors' => false, 'fullscreen' => true,
-			'new_plugins' => true, 'new_themes' => false, 'plugin_zip_submenu' => true, 'theme_zip_submenu' => false, 'delete_data' => false,
+			'new_plugins' => true, 'new_themes' => false, 'plugin_zip_submenu' => true, 'theme_zip_submenu' => true, 'upload_menu_defaults' => 1, 'delete_data' => false,
 		];
+	}
+
+	/**
+	 * Build a request-local settings view without saving preview values.
+	 * @param array $values Previously validated settings.
+	 * @return Settings
+	 */
+	public static function preview( array $values ): self {
+		$instance = new self();
+		$instance->values = array_replace( self::defaults(), $values );
+		return $instance;
 	}
 
 	/**
@@ -56,7 +67,11 @@ final class Settings {
 	public function all() {
 		if ( null === $this->values ) {
 			$stored = is_multisite() ? get_network_option( get_current_network_id(), self::OPTION, [] ) : get_option( self::OPTION, [] );
-			$this->values = array_replace( self::defaults(), is_array( $stored ) ? $stored : [] );
+			$stored = is_array( $stored ) ? $stored : [];
+			// The approved 4.1 preparation replaces the previous hidden-theme default once.
+			// Saving records this transition; subsequent explicit user choices remain intact.
+			if ( ! isset( $stored['upload_menu_defaults'] ) ) { $stored['theme_zip_submenu'] = true; }
+			$this->values = array_replace( self::defaults(), $stored );
 		}
 		return $this->values;
 	}

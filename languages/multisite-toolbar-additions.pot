@@ -19,6 +19,9 @@ msgstr ""
 msgid "%s supports activation per site only."
 msgstr ""
 
+msgid "A legacy constant controls whether this menu is enabled. Changing the checkbox cannot override it."
+msgstr ""
+
 msgid "Access denied."
 msgstr ""
 
@@ -46,10 +49,16 @@ msgstr ""
 msgid "Add User"
 msgstr ""
 
+msgid "Additions under New"
+msgstr ""
+
 msgid "Admin"
 msgstr ""
 
 msgid "Administration only"
+msgstr ""
+
+msgid "Administrators"
 msgstr ""
 
 msgid "After the following item"
@@ -193,6 +202,9 @@ msgstr ""
 msgid "Custom Header"
 msgstr ""
 
+msgid "Custom menu"
+msgstr ""
+
 msgid "Customizer"
 msgstr ""
 
@@ -226,6 +238,9 @@ msgstr ""
 msgid "Developer Resources"
 msgstr ""
 
+msgid "Disabled"
+msgstr ""
+
 msgid "Discover more plugins by deckerweb"
 msgstr ""
 
@@ -242,6 +257,9 @@ msgid "Drop one ZIP file here"
 msgstr ""
 
 msgid "Each root item in the toolbar"
+msgstr ""
+
+msgid "Enabled"
 msgstr ""
 
 msgid "Enter a catalog URL first."
@@ -454,6 +472,9 @@ msgstr ""
 msgid "Leave empty to use the selected menu’s name. A custom label overrides it."
 msgstr ""
 
+msgid "Level %d"
+msgstr ""
+
 msgid "Library"
 msgstr ""
 
@@ -509,6 +530,9 @@ msgid "Menu ID"
 msgstr ""
 
 msgid "Menu Locations"
+msgstr ""
+
+msgid "Menu preview and effective settings"
 msgstr ""
 
 msgid "Migrate Database"
@@ -578,6 +602,12 @@ msgid "New content"
 msgstr ""
 
 msgid "No approved plugins match this selection."
+msgstr ""
+
+msgid "No reachable root entries exist. Check the parent relationships in the WordPress menu."
+msgstr ""
+
+msgid "No source menu is available. Choose an existing menu, or assign one to the legacy toolbar location."
 msgstr ""
 
 msgid "Not installed"
@@ -664,6 +694,9 @@ msgstr ""
 msgid "Plugin series"
 msgstr ""
 
+msgid "Plugin uploader"
+msgstr ""
+
 msgid "Plugin website"
 msgstr ""
 
@@ -671,6 +704,12 @@ msgid "Plugins"
 msgstr ""
 
 msgid "Position"
+msgstr ""
+
+msgid "Position checks describe this page only. Frontend and other admin pages can have different toolbar items."
+msgstr ""
+
+msgid "Preview of unsaved settings. Save changes to apply them."
 msgstr ""
 
 msgid "Private mode must be boolean."
@@ -901,7 +940,13 @@ msgstr ""
 msgid "The package version differs from the offered update. Please check for updates again."
 msgstr ""
 
+msgid "The plugin is inactive on the source website. Activate it there or network-wide to use this menu."
+msgstr ""
+
 msgid "The plugin must be installed in a stable slug directory."
+msgstr ""
+
+msgid "The preview could not be updated. Your settings have not been changed."
 msgstr ""
 
 msgid "The preview is unavailable. No files have been installed."
@@ -910,16 +955,28 @@ msgstr ""
 msgid "The preview reads package metadata without extracting or running files. It is not a malware scan or compatibility guarantee. Installation sends the selected file to WordPress again."
 msgstr ""
 
+msgid "The preview shows the first 200 entries. The toolbar continues to use the full menu and your configured depth."
+msgstr ""
+
 msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
 msgstr ""
 
 msgid "The private update download failed. Check credentials and try again."
 msgstr ""
 
+msgid "The reference item is missing on this page. The menu will appear last on the left here."
+msgstr ""
+
 msgid "The release checksum does not match. Installation stopped."
 msgstr ""
 
+msgid "The saved source website is unavailable. Load the menus of an active website and save a new source."
+msgstr ""
+
 msgid "The selected menu does not exist on the source website. Load its menus and choose again."
+msgstr ""
+
+msgid "The selected menu has no published entries. Add menu items before using it in the toolbar."
 msgstr ""
 
 msgid "The update filesystem is unavailable. Please try again."
@@ -938,6 +995,9 @@ msgid "Theme Handbook"
 msgstr ""
 
 msgid "Theme and plugin file editor shortcuts"
+msgstr ""
+
+msgid "Theme uploader"
 msgstr ""
 
 msgid "Themes"
@@ -959,6 +1019,9 @@ msgid "This release requires a newer WordPress or PHP version. The installed ver
 msgstr ""
 
 msgid "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin."
+msgstr ""
+
+msgid "This view describes the saved settings. The preview does not change your menu, grant access to destinations, or override personal toolbar visibility."
 msgstr ""
 
 msgid "Thu"
@@ -991,6 +1054,15 @@ msgstr ""
 msgid "Tuesday"
 msgstr ""
 
+msgid "Unavailable"
+msgstr ""
+
+msgid "Unavailable for your account"
+msgstr ""
+
+msgid "Unavailable website #%d"
+msgstr ""
+
 msgid "Unknown / not declared"
 msgstr ""
 
@@ -1004,6 +1076,9 @@ msgid "Update %1$s to version %2$s or newer."
 msgstr ""
 
 msgid "Updates"
+msgstr ""
+
+msgid "Updating preview…"
 msgstr ""
 
 msgid "Upgrade Network"
@@ -1118,6 +1193,9 @@ msgid "You cannot change toolbar settings."
 msgstr ""
 
 msgid "Your toolbar menu"
+msgstr ""
+
+msgid "ZIP submenu links"
 msgstr ""
 
 msgid "ZIP version"

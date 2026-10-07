@@ -32,6 +32,7 @@ final class Admin {
 		add_action( 'admin_menu', [ $this, 'sidebar' ], 100 );
 		add_action( 'admin_menu', [ $this, 'uploads' ], 110 );
 		add_action( 'network_admin_menu', [ $this, 'uploads' ], 110 );
+		add_action( 'wp_ajax_mstba_menu_preview', [ MenuPreview::class, 'action' ] );
 		add_action( 'admin_post_mstba_save', [ $this, 'save' ] );
 		add_filter( 'plugin_action_links_' . plugin_basename( MSTBA_PLUGIN_FILE ), [ $this, 'links' ] );
 		add_filter( 'network_admin_plugin_action_links_' . plugin_basename( MSTBA_PLUGIN_FILE ), [ $this, 'links' ] );
@@ -74,6 +75,7 @@ final class Admin {
 	public function assets( $hook ) {
 		if ( ( $this->hook && $hook === $this->hook ) || ( $this->upload_hook && $hook === $this->upload_hook ) ) {
 			wp_enqueue_script( 'mstba-settings', plugins_url( 'assets/settings.js', MSTBA_PLUGIN_FILE ), [], MSTBA_PLUGIN_VERSION, true );
+			wp_localize_script( 'mstba-settings', 'mstbaMenuPreview', MenuPreview::config() );
 			wp_enqueue_script( 'mstba-admin-footer', plugins_url( 'assets/deckerweb-footer.js', MSTBA_PLUGIN_FILE ), [], '1.0.0', true );
 			wp_enqueue_style( 'mstba-admin-footer', plugins_url( 'assets/deckerweb-footer.css', MSTBA_PLUGIN_FILE ), [], '1.0.0' );
 			wp_enqueue_style( 'mstba-settings', plugins_url( 'assets/settings.css', MSTBA_PLUGIN_FILE ), [ 'mstba-admin-footer' ], MSTBA_PLUGIN_VERSION );
@@ -188,27 +190,29 @@ final class Admin {
 		}
 		if ( is_multisite() ) {
 			$site = get_site( $source );
-			if ( ! $site || (int) $site->network_id !== get_current_network_id() || $site->deleted || $site->archived || $site->spam ) {
+			if ( ( ! $site || (int) $site->network_id !== get_current_network_id() || $site->deleted || $site->archived || $site->spam ) && $source !== $this->settings->source() ) {
 				echo '<div class="wrap"><h1>' . esc_html__( 'Toolbar Additions', 'multisite-toolbar-additions' ) . '</h1><p>' . esc_html__( 'Choose an active website in this network.', 'multisite-toolbar-additions' ) . '</p><a href="' . esc_url( self::url() ) . '">' . esc_html__( 'Back to settings', 'multisite-toolbar-additions' ) . '</a></div>'; return;
 			}
 		}
-		$menus = MenuRepository::on_site( $source, /** Print the escaped field for this settings row using its captured allowed values.
+		$valid_source = ! is_multisite() || ( $site && (int) $site->network_id === get_current_network_id() && ! $site->deleted && ! $site->archived && ! $site->spam );
+		$menus = $valid_source ? MenuRepository::on_site( $source, /** Print the escaped field for this settings row using its captured allowed values.
  * @return void No return value.
  */
-static function () { return wp_get_nav_menus(); } );
-		$edit_url = get_admin_url( $source, 'nav-menus.php' );
+static function () { return wp_get_nav_menus(); } ) : [];
+		$edit_url = get_admin_url( $valid_source ? $source : get_current_blog_id(), 'nav-menus.php' );
 		echo '<div class="wrap mstba-settings">';
 		PageChrome::header();
 		if ( is_multisite() && ! Settings::network_active() ) { echo '<div class="notice notice-info inline"><p>' . esc_html__( 'This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin.', 'multisite-toolbar-additions' ) . '</p></div>'; }
 		if ( isset( $_GET['saved'] ) ) { echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'Settings saved.', 'multisite-toolbar-additions' ) . '</p></div>'; }
 		echo '<p>' . esc_html__( 'Use a WordPress menu as your toolbar. Its source is independent of the active theme.', 'multisite-toolbar-additions' ) . '</p>';
+		echo '<p><a class="button" href="#mstba-preview">' . esc_html__( 'Menu preview and effective settings', 'multisite-toolbar-additions' ) . '</a></p>';
 		if ( is_multisite() ) {
 			$sites = get_sites( [ 'network_id' => get_current_network_id(), 'number' => 101, 'deleted' => 0, 'archived' => 0, 'spam' => 0 ] );
 			$large = count( $sites ) > 100;
 			$sites = array_slice( $sites, 0, 100 );
 			$choices = [];
 			foreach ( $sites as $site ) { $choices[ $site->blog_id ] = $site->domain . $site->path; }
-			if ( ! isset( $choices[ $source ] ) ) { $site = get_site( $source ); $choices[ $source ] = $site->domain . $site->path; }
+			if ( ! isset( $choices[ $source ] ) ) { $site = get_site( $source ); $choices[ $source ] = $valid_source ? $site->domain . $site->path : sprintf( __( 'Unavailable website #%d', 'multisite-toolbar-additions' ), $source ); }
 			echo '<form method="get" action="' . esc_url( ( Settings::network_active() ? network_admin_url( 'settings.php' ) : admin_url( 'options-general.php' ) ) ) . '"><input type="hidden" name="page" value="mstba"><label for="mstba-source">' . esc_html__( 'Source website', 'multisite-toolbar-additions' ) . '</label> <select id="mstba-source" name="source">';
 			foreach ( $choices as $id => $label ) { echo '<option value="' . esc_attr( $id ) . '" ' . selected( $source, $id, false ) . '>' . esc_html( $label ) . '</option>'; }
 			echo '</select>';
@@ -271,6 +275,7 @@ function () { echo '<input class="regular-text" id="mstba-label" name="mstba[lab
 		echo '</section><section class="mstba-panel" id="mstba-data-panel"><h2>' . esc_html__( 'Stored data', 'multisite-toolbar-additions' ) . '</h2>';
 		$this->checkbox( 'delete_data', __( 'Delete this plugin’s settings when uninstalling', 'multisite-toolbar-additions' ) );
 		echo '<p class="description">' . esc_html__( 'Off by default. Deactivation keeps your data. Uninstall always clears this plugin’s update cache. This option deletes toolbar settings for this site or network; WordPress menus, installed plugins and shared Library data are not deleted by it.', 'multisite-toolbar-additions' ) . '</p></section><div class="mstba-save">'; submit_button(); echo '</div></form>';
+		MenuPreview::render( $this->settings );
 		PageChrome::footer();
 		echo '</div>';
 	}

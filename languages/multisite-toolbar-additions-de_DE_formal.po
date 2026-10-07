@@ -19,6 +19,9 @@ msgstr "%s muss zuerst netzwerkweit aktiviert werden."
 msgid "%s supports activation per site only."
 msgstr "%s unterstützt nur die Aktivierung je Website."
 
+msgid "A legacy constant controls whether this menu is enabled. Changing the checkbox cannot override it."
+msgstr "Eine bisherige Konstante steuert, ob dieses Menü aktiviert ist. Der Schalter kann sie nicht überschreiben."
+
 msgid "Access denied."
 msgstr "Zugriff verweigert."
 
@@ -46,11 +49,17 @@ msgstr "Snippet hinzufügen"
 msgid "Add User"
 msgstr "Benutzer hinzufügen"
 
+msgid "Additions under New"
+msgstr "Ergänzungen unter Neu"
+
 msgid "Admin"
 msgstr "Administration"
 
 msgid "Administration only"
 msgstr "Nur in der Verwaltung"
+
+msgid "Administrators"
+msgstr "Administratoren"
 
 msgid "After the following item"
 msgstr "Nach dem folgenden Eintrag"
@@ -193,6 +202,9 @@ msgstr "Hintergrund"
 msgid "Custom Header"
 msgstr "Header"
 
+msgid "Custom menu"
+msgstr "Eigenes Menü"
+
 msgid "Customizer"
 msgstr "Customizer"
 
@@ -226,6 +238,9 @@ msgstr "Erkannte Plugin-Integrationen"
 msgid "Developer Resources"
 msgstr "Entwickler-Ressourcen"
 
+msgid "Disabled"
+msgstr "Deaktiviert"
+
 msgid "Discover more plugins by deckerweb"
 msgstr "Weitere Plugins von deckerweb entdecken"
 
@@ -243,6 +258,9 @@ msgstr "Ziehen Sie eine ZIP-Datei hierher"
 
 msgid "Each root item in the toolbar"
 msgstr "Jeder Haupteintrag einzeln in der Toolbar"
+
+msgid "Enabled"
+msgstr "Aktiviert"
 
 msgid "Enter a catalog URL first."
 msgstr "Bitte zuerst eine Katalog-URL eintragen."
@@ -454,6 +472,9 @@ msgstr "Darstellung"
 msgid "Leave empty to use the selected menu’s name. A custom label overrides it."
 msgstr "Leer lassen, um den Namen des ausgewählten Menüs zu übernehmen. Eine eigene Beschriftung hat Vorrang."
 
+msgid "Level %d"
+msgstr "Ebene %d"
+
 msgid "Library"
 msgstr "Library"
 
@@ -510,6 +531,9 @@ msgstr "Menü-ID"
 
 msgid "Menu Locations"
 msgstr "Menüpositionen"
+
+msgid "Menu preview and effective settings"
+msgstr "Menüvorschau und wirksame Einstellungen"
 
 msgid "Migrate Database"
 msgstr "Datenbank migrieren"
@@ -579,6 +603,12 @@ msgstr "Neue Inhalte"
 
 msgid "No approved plugins match this selection."
 msgstr "Keine freigegebenen Plugins passen zu dieser Auswahl."
+
+msgid "No reachable root entries exist. Check the parent relationships in the WordPress menu."
+msgstr "Es sind keine erreichbaren Haupteinträge vorhanden. Prüfen Sie die übergeordneten Einträge im WordPress-Menü."
+
+msgid "No source menu is available. Choose an existing menu, or assign one to the legacy toolbar location."
+msgstr "Es ist kein Quellmenü verfügbar. Wählen Sie ein bestehendes Menü oder weisen Sie eines der bisherigen Toolbar-Menüposition zu."
 
 msgid "Not installed"
 msgstr "Nicht installiert"
@@ -664,6 +694,9 @@ msgstr "Das Plugin ist nicht installiert."
 msgid "Plugin series"
 msgstr "Plugin-Serien"
 
+msgid "Plugin uploader"
+msgstr "Plugin-Uploader"
+
 msgid "Plugin website"
 msgstr "Plugin-Website"
 
@@ -672,6 +705,12 @@ msgstr "Plugins"
 
 msgid "Position"
 msgstr "Position"
+
+msgid "Position checks describe this page only. Frontend and other admin pages can have different toolbar items."
+msgstr "Die Positionsprüfung gilt nur für diese Seite. Im Frontend und auf anderen Adminseiten können andere Toolbar-Einträge vorhanden sein."
+
+msgid "Preview of unsaved settings. Save changes to apply them."
+msgstr "Vorschau noch nicht gespeicherter Einstellungen. Speichern Sie die Änderungen, um sie anzuwenden."
 
 msgid "Private mode must be boolean."
 msgstr "Der Private-Modus muss ein boolescher Wert sein."
@@ -901,8 +940,14 @@ msgstr "Paketidentität oder Version passen nicht zu einem neueren Release von M
 msgid "The package version differs from the offered update. Please check for updates again."
 msgstr "Die Paketversion weicht vom angebotenen Update ab. Bitte erneut nach Updates suchen."
 
+msgid "The plugin is inactive on the source website. Activate it there or network-wide to use this menu."
+msgstr "Das Plugin ist auf der Quellwebsite nicht aktiv. Aktivieren Sie es dort oder netzwerkweit, um dieses Menü zu verwenden."
+
 msgid "The plugin must be installed in a stable slug directory."
 msgstr "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein."
+
+msgid "The preview could not be updated. Your settings have not been changed."
+msgstr "Die Vorschau konnte nicht aktualisiert werden. Ihre Einstellungen wurden nicht geändert."
 
 msgid "The preview is unavailable. No files have been installed."
 msgstr "Die Vorschau ist nicht verfügbar. Es wurden keine Dateien installiert."
@@ -910,17 +955,29 @@ msgstr "Die Vorschau ist nicht verfügbar. Es wurden keine Dateien installiert."
 msgid "The preview reads package metadata without extracting or running files. It is not a malware scan or compatibility guarantee. Installation sends the selected file to WordPress again."
 msgstr "Die Vorschau liest Paketinformationen, ohne Dateien zu entpacken oder auszuführen. Sie ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Zur Installation wird die ausgewählte Datei erneut an WordPress gesendet."
 
+msgid "The preview shows the first 200 entries. The toolbar continues to use the full menu and your configured depth."
+msgstr "Die Vorschau zeigt die ersten 200 Einträge. Die Toolbar verwendet weiterhin das vollständige Menü und Ihre eingestellte Tiefe."
+
 msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
 msgstr "Das private Update konnte nicht autorisiert werden. Prüfen Sie die Repository-Zugangsdaten und suchen Sie erneut nach Updates."
 
 msgid "The private update download failed. Check credentials and try again."
 msgstr "Der Download des privaten Updates ist fehlgeschlagen. Prüfen Sie die Zugangsdaten und versuchen Sie es erneut."
 
+msgid "The reference item is missing on this page. The menu will appear last on the left here."
+msgstr "Der Bezugseintrag fehlt auf dieser Seite. Das Menü erscheint hier zuletzt auf der linken Seite."
+
 msgid "The release checksum does not match. Installation stopped."
 msgstr "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt."
 
+msgid "The saved source website is unavailable. Load the menus of an active website and save a new source."
+msgstr "Die gespeicherte Quellwebsite ist nicht verfügbar. Laden Sie die Menüs einer aktiven Website und speichern Sie eine neue Quelle."
+
 msgid "The selected menu does not exist on the source website. Load its menus and choose again."
 msgstr "Das ausgewählte Menü existiert nicht auf der Quellwebsite. Bitte ihre Menüs laden und erneut auswählen."
+
+msgid "The selected menu has no published entries. Add menu items before using it in the toolbar."
+msgstr "Das ausgewählte Menü enthält keine veröffentlichten Einträge. Fügen Sie Menüeinträge hinzu, bevor Sie es in der Toolbar verwendest."
 
 msgid "The update filesystem is unavailable. Please try again."
 msgstr "Das Dateisystem für Updates ist nicht verfügbar. Bitte erneut versuchen."
@@ -939,6 +996,9 @@ msgstr "Theme-Handbuch"
 
 msgid "Theme and plugin file editor shortcuts"
 msgstr "Schnellzugriffe auf Theme- und Plugin-Datei-Editoren"
+
+msgid "Theme uploader"
+msgstr "Theme-Uploader"
 
 msgid "Themes"
 msgstr "Themes"
@@ -960,6 +1020,9 @@ msgstr "Dieses Release benötigt eine neuere WordPress- oder PHP-Version. Die in
 
 msgid "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin."
 msgstr "Bei dieser Einzelaktivierung verwalten Sie die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktivieren Sie das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen."
+
+msgid "This view describes the saved settings. The preview does not change your menu, grant access to destinations, or override personal toolbar visibility."
+msgstr "Diese Ansicht zeigt die gespeicherten Einstellungen. Die Vorschau verändert Ihr Menü nicht, erteilt keine Zugriffsrechte auf verlinkte Seiten und setzt die persönliche Toolbar-Sichtbarkeit nicht außer Kraft."
 
 msgid "Thu"
 msgstr "Do"
@@ -991,6 +1054,15 @@ msgstr "Di"
 msgid "Tuesday"
 msgstr "Dienstag"
 
+msgid "Unavailable"
+msgstr "Nicht verfügbar"
+
+msgid "Unavailable for your account"
+msgstr "Für Ihr Benutzerkonto nicht verfügbar"
+
+msgid "Unavailable website #%d"
+msgstr "Nicht verfügbare Website Nr. %d"
+
 msgid "Unknown / not declared"
 msgstr "Unbekannt / nicht angegeben"
 
@@ -1005,6 +1077,9 @@ msgstr "%1$s bitte auf Version %2$s oder neuer aktualisieren."
 
 msgid "Updates"
 msgstr "Aktualisierungen"
+
+msgid "Updating preview…"
+msgstr "Vorschau wird aktualisiert…"
 
 msgid "Upgrade Network"
 msgstr "Netzwerk aktualisieren"
@@ -1119,6 +1194,9 @@ msgstr "Keine Berechtigung zum Ändern der Toolbar-Einstellungen."
 
 msgid "Your toolbar menu"
 msgstr "Eigenes Toolbar-Menü"
+
+msgid "ZIP submenu links"
+msgstr "ZIP-Untermenü-Verknüpfungen"
 
 msgid "ZIP version"
 msgstr "ZIP-Version"

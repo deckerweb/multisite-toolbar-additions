@@ -38,6 +38,10 @@ WordPress muss die Toolbar für den aktuellen Benutzer anzeigen. Prüfe außerde
 
 Ja. Das Plugin berücksichtigt die WordPress-Profiloption zur Anzeige der Toolbar im Frontend. Wer sie ausgeblendet hat, erhält keine erzwungene Frontend-Toolbar. Menüquelle, Position und Verknüpfungen bleiben Website-/Netzwerkeinstellungen.
 
+### Speichert die Menüvorschau Änderungen?
+
+Nein. Ohne JavaScript zeigt sie die gespeicherten Einstellungen. Mit JavaScript aktualisiert eine Änderung an den Menüfeldern eine signierte, schreibfreie Vorschau noch nicht gespeicherter Werte. Erst Änderungen speichern sichert die Einstellungen. Vorschau-Einträge führen nicht zu den verlinkten Zielen. Die Vorschau zeigt bis zu 200 Einträge, ohne das tatsächliche Toolbar-Menü zu begrenzen. Die Prüfung des Bezugseintrags gilt für die aktuelle Seite, nicht für sämtliche Frontend- oder Adminansichten.
+
 ## Multisite und Berechtigungen
 
 ### Dürfen Website-Administratoren das gemeinsame Menü bearbeiten?
@@ -48,7 +52,7 @@ Die Sichtbarkeit des Menüs und die Berechtigung zur Bearbeitung der Quelle sind
 
 ### Welche Upload-Verknüpfungen sind standardmäßig aktiv?
 
-Plugin-ZIP-Untermenü und Plugin-Eintrag unter + Neu sind aktiv. Theme-ZIP-Untermenü und Theme-Eintrag unter + Neu sind deaktiviert. Jeder Eintrag besitzt einen eigenen Schalter.
+Plugin-ZIP- und Theme-ZIP-Admin-Untermenüs sind aktiv. Der frühere ausgeschaltete Theme-Untermenü-Standard wird einmalig ersetzt; beim nächsten Speichern wird dieser Übergang vermerkt, danach bleibt ein ausdrücklich ausgeschalteter Schalter erhalten. Unter + Neu bleibt Plugin aktiv und Theme deaktiviert. Jeder Eintrag besitzt einen eigenen Schalter. Themes steht im Website-Toolbar-Menü direkt unter Plugins, auch in Multisite.
 
 ### Wo stehen die Ergänzungen unter + Neu?
 

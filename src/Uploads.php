@@ -151,6 +151,8 @@ final class Uploads {
 		echo '<div class="mstba-upload-drop" data-limit="' . esc_attr( wp_max_upload_size() ) . '"><label for="mstba-package"><strong>' . esc_html__( 'Drop one ZIP file here', 'multisite-toolbar-additions' ) . '</strong></label><input id="mstba-package" type="file" name="' . esc_attr( $type . 'zip' ) . '" accept=".zip" required aria-describedby="mstba-upload-limit mstba-upload-status"><p id="mstba-upload-status" role="status" aria-live="polite"></p></div>';
 		echo '<p id="mstba-upload-limit">' . esc_html( sprintf( __( 'Maximum file size: %s. One ZIP package per upload.', 'multisite-toolbar-additions' ), size_format( wp_max_upload_size() ) ) ) . '</p><button class="button button-primary" type="submit" name="install-' . esc_attr( $type ) . '-submit">' . esc_html__( 'Upload and install', 'multisite-toolbar-additions' ) . '</button><section class="mstba-upload-preview" hidden aria-live="polite"></section></form>';
 		echo '<noscript><p>' . esc_html__( 'Without JavaScript, WordPress performs the upload and its native checks directly.', 'multisite-toolbar-additions' ) . '</p></noscript><p><a href="' . esc_url( is_multisite() ? network_admin_url( $type . 's.php' ) : admin_url( $type . 's.php' ) ) . '">' . esc_html__( 'Manage installed extensions', 'multisite-toolbar-additions' ) . '</a></p></section>';
+		$other = 'plugin' === $type ? 'theme' : 'plugin';
+		if ( self::allowed( $other ) ) { echo '<p><a class="button" href="' . esc_url( self::url( $other ) ) . '">' . esc_html( self::title( $other ) ) . '</a></p>'; }
 		PageChrome::footer();
 		echo '</div>';
 	}

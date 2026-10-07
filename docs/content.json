@@ -1,8 +1,8 @@
 {
   "version": "4.0.0",
   "working_tree": {
-    "en": "Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing and own plugin/theme ZIP pages with drag-and-drop and metadata preview. The released 4.0.0 ZIP is unchanged.",
-    "de": "Noch nicht veröffentlichte Vorbereitung für 4.1.0 auf Grundlage von 4.0.0: gemeinsame Leitstand-Verlinkung und eigene Plugin-/Theme-ZIP-Seiten mit Drag-and-drop und Metadatenvorschau. Die veröffentlichte 4.0.0-ZIP bleibt unverändert."
+    "en": "Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing, dedicated plugin/theme ZIP pages, read-only menu preview and effective-settings diagnostics. Both ZIP admin submenu links are now enabled by default; the Theme addition under New remains optional and off by default. The released 4.0.0 ZIP is unchanged.",
+    "de": "Noch nicht veröffentlichte Vorbereitung für 4.1.0 auf Grundlage von 4.0.0: gemeinsame Leitstand-Verlinkung, eigene Plugin-/Theme-ZIP-Seiten, schreibfreie Menüvorschau und Hinweise zu den wirksamen Einstellungen. Beide ZIP-Admin-Untermenüs sind jetzt standardmäßig aktiv; der Theme-Eintrag unter Neu bleibt optional und standardmäßig aus. Die veröffentlichte 4.0.0-ZIP bleibt unverändert."
   },
   "releases": [
     {
@@ -520,11 +520,11 @@
       "group": "uploads",
       "en": {
         "question": "Which upload shortcuts are enabled by default?",
-        "answer": "Plugin ZIP submenu and the + New plugin entry are enabled. Theme ZIP submenu and the + New theme entry are disabled. Each has a separate switch."
+        "answer": "Both Plugin ZIP and Theme ZIP admin submenu links are enabled. The previous hidden Theme submenu default transitions once; the next save records the transition and later explicit disabled choices remain effective. Under New, Plugins remain enabled and Themes disabled. Each addition has its own switch. Themes follows Plugins directly in the website toolbar menu, including Multisite."
       },
       "de": {
         "question": "Welche Upload-Verknüpfungen sind standardmäßig aktiv?",
-        "answer": "Plugin-ZIP-Untermenü und Plugin-Eintrag unter + Neu sind aktiv. Theme-ZIP-Untermenü und Theme-Eintrag unter + Neu sind deaktiviert. Jeder Eintrag besitzt einen eigenen Schalter."
+        "answer": "Plugin-ZIP- und Theme-ZIP-Admin-Untermenüs sind aktiv. Der frühere ausgeschaltete Theme-Untermenü-Standard wird einmalig ersetzt; beim nächsten Speichern wird dieser Übergang vermerkt, danach bleibt ein ausdrücklich ausgeschalteter Schalter erhalten. Unter + Neu bleibt Plugin aktiv und Theme deaktiviert. Jeder Eintrag besitzt einen eigenen Schalter. Themes steht im Website-Toolbar-Menü direkt unter Plugins, auch in Multisite."
       }
     },
     {
@@ -658,6 +658,17 @@
         "question": "Gilt meine persönliche Toolbar-Einstellung?",
         "answer": "Ja. Das Plugin berücksichtigt die WordPress-Profiloption zur Anzeige der Toolbar im Frontend. Wer sie ausgeblendet hat, erhält keine erzwungene Frontend-Toolbar. Menüquelle, Position und Verknüpfungen bleiben Website-/Netzwerkeinstellungen."
       }
+    },
+    {
+      "group": "menus",
+      "en": {
+        "question": "Does the menu preview save changes?",
+        "answer": "No. It shows saved settings without JavaScript. With JavaScript, changing a menu control updates a signed read-only preview of unsaved values. Only Save changes persists settings. Preview entries do not navigate to destinations. The preview shows up to 200 entries without limiting the actual toolbar menu. The anchor check describes the current page, not all frontend or administration contexts."
+      },
+      "de": {
+        "question": "Speichert die Menüvorschau Änderungen?",
+        "answer": "Nein. Ohne JavaScript zeigt sie die gespeicherten Einstellungen. Mit JavaScript aktualisiert eine Änderung an den Menüfeldern eine signierte, schreibfreie Vorschau noch nicht gespeicherter Werte. Erst Änderungen speichern sichert die Einstellungen. Vorschau-Einträge führen nicht zu den verlinkten Zielen. Die Vorschau zeigt bis zu 200 Einträge, ohne das tatsächliche Toolbar-Menü zu begrenzen. Die Prüfung des Bezugseintrags gilt für die aktuelle Seite, nicht für sämtliche Frontend- oder Adminansichten."
+      }
     }
   ],
   "unreleased": [
@@ -689,7 +700,7 @@
       ],
       [
         "Upload shortcuts",
-        "Plugin and Theme additions appear last under New. Each addition and ZIP submenu has its own switch: Plugins on, Themes off. Upload links use active Leitstand pages or dedicated local plugin/theme pages with drag-and-drop and bounded metadata previews; WordPress performs installation."
+        "Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Additions under New remain last and have independent switches: Plugins on, Themes off. Both ZIP admin submenu links default to on. Upload links use active Leitstand pages or dedicated local pages with drag-and-drop and bounded metadata previews; WordPress performs installation."
       ],
       [
         "Multisite administration",
@@ -698,6 +709,10 @@
       [
         "Shared components",
         "Library 0.6.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.1.0 uses normal WordPress updates. Assets are local; no telemetry is collected."
+      ],
+      [
+        "Menu preview and diagnostics",
+        "Inspect the menu structure with the selected depth and grouping without saving. A compact overview explains visibility, positioning and active uploader providers. Missing sources and page-specific missing toolbar anchors are explained."
       ]
     ],
     "de": [
@@ -711,7 +726,7 @@
       ],
       [
         "Upload-Verknüpfungen",
-        "Plugin und Theme stehen unter Neu am Ende. Jeder Eintrag und jedes ZIP-Untermenü hat einen eigenen Schalter: Plugins an, Themes aus. Upload-Links verwenden die aktiven Leitstand-Seiten oder eigene Plugin-/Theme-Seiten mit Drag-and-drop und begrenzter Metadatenvorschau; WordPress übernimmt die Installation."
+        "Plugins und Themes stehen im Website-Toolbar-Menü direkt nacheinander, auch in Multisite. Ergänzungen unter Neu stehen am Ende und besitzen unabhängige Schalter: Plugins an, Themes aus. Beide ZIP-Admin-Untermenüs sind standardmäßig an. Upload-Links verwenden die aktiven Leitstand-Seiten oder eigene Seiten mit Drag-and-drop und begrenzter Metadatenvorschau; WordPress übernimmt die Installation."
       ],
       [
         "Multisite-Verwaltung",
@@ -720,6 +735,10 @@
       [
         "Gemeinsame Komponenten",
         "Library 0.6.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.1.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie."
+      ],
+      [
+        "Menüvorschau und Hinweise",
+        "Prüfe die Menüstruktur mit ausgewählter Tiefe und Gruppierung ohne Speichern. Eine kompakte Übersicht erklärt Sichtbarkeit, Positionierung und verwendete Uploader. Fehlende Quellen und auf der aktuellen Seite fehlende Toolbar-Bezugseinträge werden erläutert."
       ]
     ]
   },

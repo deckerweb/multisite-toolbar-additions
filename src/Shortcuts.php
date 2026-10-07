@@ -171,11 +171,9 @@ final class Shortcuts {
 		$this->link( $bar, 'export', 'ddw-mstba-tools', __( 'Export', 'multisite-toolbar-additions' ), admin_url( 'export.php' ), 'export' );
 		$this->link( $bar, 'import', 'ddw-mstba-tools', __( 'Import', 'multisite-toolbar-additions' ), admin_url( 'import.php' ), 'import' );
 		$this->link( $bar, 'settings', $root, __( 'Toolbar Settings', 'multisite-toolbar-additions' ), Admin::url(), Settings::capability() );
-		if ( ! is_multisite() ) {
-			$this->link( $bar, 'siteplugins', $root, __( 'Plugins', 'multisite-toolbar-additions' ), admin_url( 'plugins.php' ), 'activate_plugins' );
-			$this->link( $bar, 'sitethemes', $root, __( 'Themes', 'multisite-toolbar-additions' ), admin_url( 'themes.php' ), 'switch_themes' );
-			$this->installers( $bar, 'ddw-mstba-siteplugins', 'ddw-mstba-sitethemes' );
-		}
+		$this->link( $bar, 'siteplugins', $root, __( 'Plugins', 'multisite-toolbar-additions' ), is_multisite() ? network_admin_url( 'plugins.php' ) : admin_url( 'plugins.php' ), is_multisite() ? 'manage_network_plugins' : 'activate_plugins' );
+		$this->link( $bar, 'sitethemes', $root, __( 'Themes', 'multisite-toolbar-additions' ), is_multisite() ? network_admin_url( 'themes.php' ) : admin_url( 'themes.php' ), is_multisite() ? 'manage_network_themes' : 'switch_themes' );
+		$this->installers( $bar, 'ddw-mstba-siteplugins', 'ddw-mstba-sitethemes' );
 		if ( $this->settings->get( 'file_editors' ) ) {
 			$this->link( $bar, 'editthemes', $root, __( 'Theme File Editor', 'multisite-toolbar-additions' ), network_admin_url( 'theme-editor.php' ), 'edit_themes' );
 			$this->link( $bar, 'editplugins', $root, __( 'Plugin File Editor', 'multisite-toolbar-additions' ), network_admin_url( 'plugin-editor.php' ), 'edit_plugins' );

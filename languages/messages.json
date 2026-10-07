@@ -19,6 +19,10 @@
     "de_DE": "%s unterstützt nur die Aktivierung je Website.",
     "de_DE_formal": "%s unterstützt nur die Aktivierung je Website."
   },
+  "A legacy constant controls whether this menu is enabled. Changing the checkbox cannot override it.": {
+    "de_DE": "Eine bisherige Konstante steuert, ob dieses Menü aktiviert ist. Der Schalter kann sie nicht überschreiben.",
+    "de_DE_formal": "Eine bisherige Konstante steuert, ob dieses Menü aktiviert ist. Der Schalter kann sie nicht überschreiben."
+  },
   "Access denied.": {
     "de_DE": "Zugriff verweigert.",
     "de_DE_formal": "Zugriff verweigert."
@@ -55,6 +59,10 @@
     "de_DE": "Benutzer hinzufügen",
     "de_DE_formal": "Benutzer hinzufügen"
   },
+  "Additions under New": {
+    "de_DE": "Ergänzungen unter Neu",
+    "de_DE_formal": "Ergänzungen unter Neu"
+  },
   "Admin": {
     "de_DE": "Administration",
     "de_DE_formal": "Administration"
@@ -62,6 +70,10 @@
   "Administration only": {
     "de_DE": "Nur in der Verwaltung",
     "de_DE_formal": "Nur in der Verwaltung"
+  },
+  "Administrators": {
+    "de_DE": "Administratoren",
+    "de_DE_formal": "Administratoren"
   },
   "After the following item": {
     "de_DE": "Nach dem folgenden Eintrag",
@@ -251,6 +263,10 @@
     "de_DE": "Header",
     "de_DE_formal": "Header"
   },
+  "Custom menu": {
+    "de_DE": "Eigenes Menü",
+    "de_DE_formal": "Eigenes Menü"
+  },
   "Customizer": {
     "de_DE": "Customizer",
     "de_DE_formal": "Customizer"
@@ -295,6 +311,10 @@
     "de_DE": "Entwickler-Ressourcen",
     "de_DE_formal": "Entwickler-Ressourcen"
   },
+  "Disabled": {
+    "de_DE": "Deaktiviert",
+    "de_DE_formal": "Deaktiviert"
+  },
   "Discover more plugins by deckerweb": {
     "de_DE": "Weitere Plugins von deckerweb entdecken",
     "de_DE_formal": "Weitere Plugins von deckerweb entdecken"
@@ -318,6 +338,10 @@
   "Each root item in the toolbar": {
     "de_DE": "Jeder Haupteintrag einzeln in der Toolbar",
     "de_DE_formal": "Jeder Haupteintrag einzeln in der Toolbar"
+  },
+  "Enabled": {
+    "de_DE": "Aktiviert",
+    "de_DE_formal": "Aktiviert"
   },
   "Enter a catalog URL first.": {
     "de_DE": "Bitte zuerst eine Katalog-URL eintragen.",
@@ -599,6 +623,10 @@
     "de_DE": "Leer lassen, um den Namen des ausgewählten Menüs zu übernehmen. Eine eigene Beschriftung hat Vorrang.",
     "de_DE_formal": "Leer lassen, um den Namen des ausgewählten Menüs zu übernehmen. Eine eigene Beschriftung hat Vorrang."
   },
+  "Level %d": {
+    "de_DE": "Ebene %d",
+    "de_DE_formal": "Ebene %d"
+  },
   "Library": {
     "de_DE": "Library",
     "de_DE_formal": "Library"
@@ -674,6 +702,10 @@
   "Menu Locations": {
     "de_DE": "Menüpositionen",
     "de_DE_formal": "Menüpositionen"
+  },
+  "Menu preview and effective settings": {
+    "de_DE": "Menüvorschau und wirksame Einstellungen",
+    "de_DE_formal": "Menüvorschau und wirksame Einstellungen"
   },
   "Migrate Database": {
     "de_DE": "Datenbank migrieren",
@@ -766,6 +798,14 @@
   "No approved plugins match this selection.": {
     "de_DE": "Keine freigegebenen Plugins passen zu dieser Auswahl.",
     "de_DE_formal": "Keine freigegebenen Plugins passen zu dieser Auswahl."
+  },
+  "No reachable root entries exist. Check the parent relationships in the WordPress menu.": {
+    "de_DE": "Es sind keine erreichbaren Haupteinträge vorhanden. Prüfe die übergeordneten Einträge im WordPress-Menü.",
+    "de_DE_formal": "Es sind keine erreichbaren Haupteinträge vorhanden. Prüfen Sie die übergeordneten Einträge im WordPress-Menü."
+  },
+  "No source menu is available. Choose an existing menu, or assign one to the legacy toolbar location.": {
+    "de_DE": "Es ist kein Quellmenü verfügbar. Wähle ein bestehendes Menü oder weise eines der bisherigen Toolbar-Menüposition zu.",
+    "de_DE_formal": "Es ist kein Quellmenü verfügbar. Wählen Sie ein bestehendes Menü oder weisen Sie eines der bisherigen Toolbar-Menüposition zu."
   },
   "Not installed": {
     "de_DE": "Nicht installiert",
@@ -879,6 +919,10 @@
     "de_DE": "Plugin-Serien",
     "de_DE_formal": "Plugin-Serien"
   },
+  "Plugin uploader": {
+    "de_DE": "Plugin-Uploader",
+    "de_DE_formal": "Plugin-Uploader"
+  },
   "Plugin website": {
     "de_DE": "Plugin-Website",
     "de_DE_formal": "Plugin-Website"
@@ -890,6 +934,14 @@
   "Position": {
     "de_DE": "Position",
     "de_DE_formal": "Position"
+  },
+  "Position checks describe this page only. Frontend and other admin pages can have different toolbar items.": {
+    "de_DE": "Die Positionsprüfung gilt nur für diese Seite. Im Frontend und auf anderen Adminseiten können andere Toolbar-Einträge vorhanden sein.",
+    "de_DE_formal": "Die Positionsprüfung gilt nur für diese Seite. Im Frontend und auf anderen Adminseiten können andere Toolbar-Einträge vorhanden sein."
+  },
+  "Preview of unsaved settings. Save changes to apply them.": {
+    "de_DE": "Vorschau noch nicht gespeicherter Einstellungen. Speichere die Änderungen, um sie anzuwenden.",
+    "de_DE_formal": "Vorschau noch nicht gespeicherter Einstellungen. Speichern Sie die Änderungen, um sie anzuwenden."
   },
   "Private mode must be boolean.": {
     "de_DE": "Der Private-Modus muss ein boolescher Wert sein.",
@@ -1195,9 +1247,17 @@
     "de_DE": "Die Paketversion weicht vom angebotenen Update ab. Bitte erneut nach Updates suchen.",
     "de_DE_formal": "Die Paketversion weicht vom angebotenen Update ab. Bitte erneut nach Updates suchen."
   },
+  "The plugin is inactive on the source website. Activate it there or network-wide to use this menu.": {
+    "de_DE": "Das Plugin ist auf der Quellwebsite nicht aktiv. Aktiviere es dort oder netzwerkweit, um dieses Menü zu verwenden.",
+    "de_DE_formal": "Das Plugin ist auf der Quellwebsite nicht aktiv. Aktivieren Sie es dort oder netzwerkweit, um dieses Menü zu verwenden."
+  },
   "The plugin must be installed in a stable slug directory.": {
     "de_DE": "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein.",
     "de_DE_formal": "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein."
+  },
+  "The preview could not be updated. Your settings have not been changed.": {
+    "de_DE": "Die Vorschau konnte nicht aktualisiert werden. Deine Einstellungen wurden nicht geändert.",
+    "de_DE_formal": "Die Vorschau konnte nicht aktualisiert werden. Ihre Einstellungen wurden nicht geändert."
   },
   "The preview is unavailable. No files have been installed.": {
     "de_DE": "Die Vorschau ist nicht verfügbar. Es wurden keine Dateien installiert.",
@@ -1207,6 +1267,10 @@
     "de_DE": "Die Vorschau liest Paketinformationen, ohne Dateien zu entpacken oder auszuführen. Sie ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Zur Installation wird die ausgewählte Datei erneut an WordPress gesendet.",
     "de_DE_formal": "Die Vorschau liest Paketinformationen, ohne Dateien zu entpacken oder auszuführen. Sie ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Zur Installation wird die ausgewählte Datei erneut an WordPress gesendet."
   },
+  "The preview shows the first 200 entries. The toolbar continues to use the full menu and your configured depth.": {
+    "de_DE": "Die Vorschau zeigt die ersten 200 Einträge. Die Toolbar verwendet weiterhin das vollständige Menü und deine eingestellte Tiefe.",
+    "de_DE_formal": "Die Vorschau zeigt die ersten 200 Einträge. Die Toolbar verwendet weiterhin das vollständige Menü und Ihre eingestellte Tiefe."
+  },
   "The private update could not be authorized. Check the repository credentials and refresh updates.": {
     "de_DE": "Das private Update konnte nicht autorisiert werden. Prüfe die Repository-Zugangsdaten und suche erneut nach Updates.",
     "de_DE_formal": "Das private Update konnte nicht autorisiert werden. Prüfen Sie die Repository-Zugangsdaten und suchen Sie erneut nach Updates."
@@ -1215,13 +1279,25 @@
     "de_DE": "Der Download des privaten Updates ist fehlgeschlagen. Prüfe die Zugangsdaten und versuche es erneut.",
     "de_DE_formal": "Der Download des privaten Updates ist fehlgeschlagen. Prüfen Sie die Zugangsdaten und versuchen Sie es erneut."
   },
+  "The reference item is missing on this page. The menu will appear last on the left here.": {
+    "de_DE": "Der Bezugseintrag fehlt auf dieser Seite. Das Menü erscheint hier zuletzt auf der linken Seite.",
+    "de_DE_formal": "Der Bezugseintrag fehlt auf dieser Seite. Das Menü erscheint hier zuletzt auf der linken Seite."
+  },
   "The release checksum does not match. Installation stopped.": {
     "de_DE": "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt.",
     "de_DE_formal": "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt."
   },
+  "The saved source website is unavailable. Load the menus of an active website and save a new source.": {
+    "de_DE": "Die gespeicherte Quellwebsite ist nicht verfügbar. Lade die Menüs einer aktiven Website und speichere eine neue Quelle.",
+    "de_DE_formal": "Die gespeicherte Quellwebsite ist nicht verfügbar. Laden Sie die Menüs einer aktiven Website und speichern Sie eine neue Quelle."
+  },
   "The selected menu does not exist on the source website. Load its menus and choose again.": {
     "de_DE": "Das ausgewählte Menü existiert nicht auf der Quellwebsite. Bitte ihre Menüs laden und erneut auswählen.",
     "de_DE_formal": "Das ausgewählte Menü existiert nicht auf der Quellwebsite. Bitte ihre Menüs laden und erneut auswählen."
+  },
+  "The selected menu has no published entries. Add menu items before using it in the toolbar.": {
+    "de_DE": "Das ausgewählte Menü enthält keine veröffentlichten Einträge. Füge Menüeinträge hinzu, bevor du es in der Toolbar verwendest.",
+    "de_DE_formal": "Das ausgewählte Menü enthält keine veröffentlichten Einträge. Fügen Sie Menüeinträge hinzu, bevor Sie es in der Toolbar verwendest."
   },
   "The update filesystem is unavailable. Please try again.": {
     "de_DE": "Das Dateisystem für Updates ist nicht verfügbar. Bitte erneut versuchen.",
@@ -1246,6 +1322,10 @@
   "Theme and plugin file editor shortcuts": {
     "de_DE": "Schnellzugriffe auf Theme- und Plugin-Datei-Editoren",
     "de_DE_formal": "Schnellzugriffe auf Theme- und Plugin-Datei-Editoren"
+  },
+  "Theme uploader": {
+    "de_DE": "Theme-Uploader",
+    "de_DE_formal": "Theme-Uploader"
   },
   "Themes": {
     "de_DE": "Themes",
@@ -1274,6 +1354,10 @@
   "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin.": {
     "de_DE": "Bei dieser Einzelaktivierung verwaltest du die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktiviere das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen.",
     "de_DE_formal": "Bei dieser Einzelaktivierung verwalten Sie die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktivieren Sie das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen."
+  },
+  "This view describes the saved settings. The preview does not change your menu, grant access to destinations, or override personal toolbar visibility.": {
+    "de_DE": "Diese Ansicht zeigt die gespeicherten Einstellungen. Die Vorschau verändert dein Menü nicht, erteilt keine Zugriffsrechte auf verlinkte Seiten und setzt die persönliche Toolbar-Sichtbarkeit nicht außer Kraft.",
+    "de_DE_formal": "Diese Ansicht zeigt die gespeicherten Einstellungen. Die Vorschau verändert Ihr Menü nicht, erteilt keine Zugriffsrechte auf verlinkte Seiten und setzt die persönliche Toolbar-Sichtbarkeit nicht außer Kraft."
   },
   "Thu": {
     "de_DE": "Do",
@@ -1315,6 +1399,18 @@
     "de_DE": "Dienstag",
     "de_DE_formal": "Dienstag"
   },
+  "Unavailable": {
+    "de_DE": "Nicht verfügbar",
+    "de_DE_formal": "Nicht verfügbar"
+  },
+  "Unavailable for your account": {
+    "de_DE": "Für dein Benutzerkonto nicht verfügbar",
+    "de_DE_formal": "Für Ihr Benutzerkonto nicht verfügbar"
+  },
+  "Unavailable website #%d": {
+    "de_DE": "Nicht verfügbare Website Nr. %d",
+    "de_DE_formal": "Nicht verfügbare Website Nr. %d"
+  },
   "Unknown / not declared": {
     "de_DE": "Unbekannt / nicht angegeben",
     "de_DE_formal": "Unbekannt / nicht angegeben"
@@ -1334,6 +1430,10 @@
   "Updates": {
     "de_DE": "Aktualisierungen",
     "de_DE_formal": "Aktualisierungen"
+  },
+  "Updating preview…": {
+    "de_DE": "Vorschau wird aktualisiert…",
+    "de_DE_formal": "Vorschau wird aktualisiert…"
   },
   "Upgrade Network": {
     "de_DE": "Netzwerk aktualisieren",
@@ -1486,6 +1586,10 @@
   "Your toolbar menu": {
     "de_DE": "Eigenes Toolbar-Menü",
     "de_DE_formal": "Eigenes Toolbar-Menü"
+  },
+  "ZIP submenu links": {
+    "de_DE": "ZIP-Untermenü-Verknüpfungen",
+    "de_DE_formal": "ZIP-Untermenü-Verknüpfungen"
   },
   "ZIP version": {
     "de_DE": "ZIP-Version",

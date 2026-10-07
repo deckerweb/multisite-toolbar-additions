@@ -38,6 +38,10 @@ WordPress must display its toolbar for the current user. Also check the plugin s
 
 Yes. The plugin respects WordPress’s user-profile preference for displaying the toolbar on the frontend. It does not enable the frontend toolbar for someone who has hidden it. Menu source, position and shortcut configuration remain site/network settings.
 
+### Does the menu preview save changes?
+
+No. It shows saved settings without JavaScript. With JavaScript, changing a menu control updates a signed read-only preview of unsaved values. Only Save changes persists settings. Preview entries do not navigate to destinations. The preview shows up to 200 entries without limiting the actual toolbar menu. The anchor check describes the current page, not all frontend or administration contexts.
+
 ## Multisite and permissions
 
 ### Can ordinary site admins edit a shared menu?
@@ -48,7 +52,7 @@ The toolbar audience and permission to edit its source menu are separate. Shared
 
 ### Which upload shortcuts are enabled by default?
 
-Plugin ZIP submenu and the + New plugin entry are enabled. Theme ZIP submenu and the + New theme entry are disabled. Each has a separate switch.
+Both Plugin ZIP and Theme ZIP admin submenu links are enabled. The previous hidden Theme submenu default transitions once; the next save records the transition and later explicit disabled choices remain effective. Under New, Plugins remain enabled and Themes disabled. Each addition has its own switch. Themes follows Plugins directly in the website toolbar menu, including Multisite.
 
 ### Where are the + New additions placed?
 
