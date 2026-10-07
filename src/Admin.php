@@ -30,8 +30,8 @@ final class Admin {
 		add_action( 'admin_enqueue_scripts', [ $this, 'assets' ] );
 		add_action( 'network_admin_menu', [ $this, 'page' ] );
 		add_action( 'admin_menu', [ $this, 'sidebar' ], 100 );
-		add_action( 'admin_menu', [ $this, 'uploads' ], 100 );
-		add_action( 'network_admin_menu', [ $this, 'uploads' ], 100 );
+		add_action( 'admin_menu', [ $this, 'uploads' ], 110 );
+		add_action( 'network_admin_menu', [ $this, 'uploads' ], 110 );
 		add_action( 'admin_post_mstba_save', [ $this, 'save' ] );
 		add_filter( 'plugin_action_links_' . plugin_basename( MSTBA_PLUGIN_FILE ), [ $this, 'links' ] );
 		add_filter( 'network_admin_plugin_action_links_' . plugin_basename( MSTBA_PLUGIN_FILE ), [ $this, 'links' ] );
@@ -97,49 +97,20 @@ final class Admin {
 	 * @return string Result described above; unrelated hook values remain unchanged.
 	 */
 	public static function upload_url( $type ) {
-		$path = 'theme' === $type ? 'themes.php?page=mstba-theme-upload' : 'plugin-install.php?tab=upload';
-		return is_multisite() && ( 'theme' !== $type || Settings::network_active() ) ? network_admin_url( $path ) : admin_url( $path );
+		return Uploads::url( $type );
 	}
 	/**
-	 * Register enabled ZIP links and retain the dedicated theme upload route.
+	 * Register upload navigation through the shared provider resolver.
 	 *
-	 * @return void No value; output or hooks are updated as described.
+	 * @return void
 	 */
-	public function uploads() {
-		if ( $this->settings->get( 'plugin_zip_submenu' ) && current_user_can( 'install_plugins' ) ) {
-			add_submenu_page( 'plugins.php', __( 'Upload Plugin ZIP', 'multisite-toolbar-additions' ), __( 'Upload Plugin ZIP', 'multisite-toolbar-additions' ), 'install_plugins', self::upload_url( 'plugin' ) );
-		}
-		if ( ! current_user_can( 'install_themes' ) ) { return; }
-		if ( Settings::network_active() && ! is_network_admin() ) {
-			if ( ! $this->settings->get( 'theme_zip_submenu' ) ) { return; }
-			add_submenu_page( 'themes.php', __( 'Upload Theme ZIP', 'multisite-toolbar-additions' ), __( 'Upload Theme ZIP', 'multisite-toolbar-additions' ), 'install_themes', self::upload_url( 'theme' ) );
-		} else {
-			$this->upload_hook = add_submenu_page( 'themes.php', __( 'Upload Theme ZIP', 'multisite-toolbar-additions' ), __( 'Upload Theme ZIP', 'multisite-toolbar-additions' ), 'install_themes', 'mstba-theme-upload', [ $this, 'theme_upload' ] );
-			if ( ! $this->settings->get( 'theme_zip_submenu' ) ) { remove_submenu_page( 'themes.php', 'mstba-theme-upload' ); }
-		}
-	}
+	public function uploads() { Uploads::menu( $this->settings ); }
 	/**
-	 * Print Core’s signed theme upload form for authorized theme installers.
+	 * Keep the existing theme callback available for integrations.
 	 *
-	 * @return void No value; output or hooks are updated as described.
+	 * @return void
 	 */
-	public function theme_upload() {
-		if ( ! current_user_can( 'install_themes' ) || ( Settings::network_active() && ! is_network_admin() ) ) {
-			wp_die( esc_html__( 'Sorry, you are not allowed to install themes on this site.' ), '', [ 'response' => 403 ] );
-		}
-		require_once ABSPATH . 'wp-admin/includes/theme-install.php';
-		echo '<div class="wrap mstba-settings">';
-		PageChrome::header( __( 'Upload Theme ZIP', 'multisite-toolbar-additions' ), false );
-		echo '<section class="mstba-panel"><h2>' . esc_html__( 'Upload Theme ZIP', 'multisite-toolbar-additions' ) . '</h2>';
-		ob_start();
-		install_themes_upload();
-		$form = ob_get_clean();
-		if ( is_multisite() ) { $form = str_replace( esc_url( self_admin_url( 'update.php?action=upload-theme' ) ), esc_url( network_admin_url( 'update.php?action=upload-theme' ) ), $form ); }
-		echo $form; // Core-rendered signed form; only its fixed action destination is replaced.
-		echo '</section>';
-		PageChrome::footer();
-		echo '</div>';
-	}
+	public function theme_upload() { Uploads::screen( 'theme' ); }
 
 	/**
 	 * Prepend the settings action link for authorized administrators.

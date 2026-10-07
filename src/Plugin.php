@@ -24,6 +24,7 @@ final class Plugin {
 		( new Shortcuts( $settings ) )->register();
 		( new MenuGuard( $settings ) )->register();
 		( new GitHubUpdates() )->register();
+		Uploads::register();
 		if ( is_admin() ) { ( new Admin( $settings ) )->register(); }
 		add_action( 'init', /** Run the scoped WordPress callback without persisting settings.
  * @return void No return value.

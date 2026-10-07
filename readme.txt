@@ -15,11 +15,11 @@ WordPress menus and useful administration shortcuts in the toolbar.
 
 A configurable WordPress menu in the toolbar, with useful website and network shortcuts. Part of QuickNav; available on individual sites and Multisite networks.
 
-Unpublished maintenance changes based on 4.0.0. The released 4.0.0 ZIP is unchanged.
+Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing and own plugin/theme ZIP pages with drag-and-drop and metadata preview. The released 4.0.0 ZIP is unchanged.
 
 * Select a source site and menu independently of your theme. Keep root entries separate or group them under the menu’s name. A custom label is optional.
 * Choose first/last, before/after a reference item or the right side. Show the menu on the frontend, in administration or both. Choose one to ten child levels, or all. Missing references fall back to the end.
-* Plugin and Theme additions appear last under New. Each addition and ZIP submenu has its own switch: Plugins on, Themes off. Theme uploads use a dedicated page and the native WordPress installer.
+* Plugin and Theme additions appear last under New. Each addition and ZIP submenu has its own switch: Plugins on, Themes off. Upload links use active Leitstand pages or dedicated local plugin/theme pages with drag-and-drop and bounded metadata previews; WordPress performs installation.
 * Use one network-wide menu source with optional viewing by website administrators. Shared menus remain editable only by super administrators. Destination permissions still apply; website expansion is bounded.
 * Library 0.6.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.1.0 uses normal WordPress updates. Assets are local; no telemetry is collected.
 

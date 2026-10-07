@@ -4,7 +4,7 @@
 
 A configurable WordPress menu in the toolbar, with useful website and network shortcuts. Part of QuickNav; available on individual sites and Multisite networks.
 
-Unpublished maintenance changes based on 4.0.0. The released 4.0.0 ZIP is unchanged.
+Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing and own plugin/theme ZIP pages with drag-and-drop and metadata preview. The released 4.0.0 ZIP is unchanged.
 
 ## Installation and first steps
 
@@ -20,7 +20,7 @@ Choose first/last, before/after a reference item or the right side. Show the men
 
 ## Upload shortcuts
 
-Plugin and Theme additions appear last under New. Each addition and ZIP submenu has its own switch: Plugins on, Themes off. Theme uploads use a dedicated page and the native WordPress installer.
+Plugin and Theme additions appear last under New. Each addition and ZIP submenu has its own switch: Plugins on, Themes off. Upload links use active Leitstand pages or dedicated local plugin/theme pages with drag-and-drop and bounded metadata previews; WordPress performs installation.
 
 ## Multisite administration
 

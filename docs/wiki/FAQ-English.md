@@ -54,9 +54,9 @@ Plugin ZIP submenu and the + New plugin entry are enabled. Theme ZIP submenu and
 
 Plugin and theme additions are moved to the end of the + New group, including after late-registered content types. WordPress capabilities still determine availability.
 
-### How does Theme ZIP upload work?
+### How do the plugin and theme ZIP uploaders work?
 
-The plugin provides an upload page with the native WordPress form and installer. In Multisite installation occurs in Network Admin and requires the appropriate network privileges. It does not replace ZIP validation or WordPress security checks.
+When Leitstand is active and its uploader is accessible to you, the toolbar and admin menu use its pages without duplicate upload screens. Otherwise this plugin provides its own pages with drag-and-drop, size validation and temporary metadata previews. WordPress handles installation and replacement. Native uploads work directly without JavaScript. Previews are not malware scans or compatibility guarantees and do not use the Leitstand usage index. Multisite files are shared across all websites and networks; installation remains restricted to authorized users. Leitstand user exclusions are respected. This plugin’s switches control its own menu links, not existing Leitstand entries.
 
 ## Library and updates
 

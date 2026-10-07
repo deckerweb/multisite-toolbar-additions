@@ -122,7 +122,7 @@ final class Shortcuts {
 	private function installers( $bar, $plugins, $themes, $prefix = '' ) {
 		foreach ( [ [ $plugins, 'plugin', 'install_plugins' ], [ $themes, 'theme', 'install_themes' ] ] as [ $parent, $type, $cap ] ) {
 			$this->link( $bar, $prefix . $type . '-search', $parent, __( 'Search Directory', 'multisite-toolbar-additions' ), network_admin_url( $type . '-install.php' ), $cap );
-			$this->link( $bar, $prefix . $type . '-upload', $parent, __( 'Upload ZIP', 'multisite-toolbar-additions' ), Admin::upload_url( $type ), $cap );
+			if ( Uploads::allowed( $type ) ) { $this->link( $bar, $prefix . $type . '-upload', $parent, Uploads::title( $type ), Admin::upload_url( $type ), $cap ); }
 			$this->link( $bar, $prefix . $type . '-favorites', $parent, __( 'Favorites', 'multisite-toolbar-additions' ), network_admin_url( $type . '-install.php?' . ( 'theme' === $type ? 'browse' : 'tab' ) . '=favorites' ), $cap );
 		}
 	}
@@ -191,7 +191,7 @@ final class Shortcuts {
 		foreach ( [ 'addnew_plugin' => [ 'plugin', 'install_plugins', __( 'Install Plugin', 'multisite-toolbar-additions' ) ], 'addnew_theme' => [ 'theme', 'install_themes', __( 'Install Theme', 'multisite-toolbar-additions' ) ] ] as $id => [ $type, $cap, $label ] ) {
 			if ( ! $this->settings->get( 'new_' . ( 'plugin' === $type ? 'plugins' : 'themes' ) ) ) { continue; }
 			$this->link( $bar, $id, 'new-content', $label, network_admin_url( $type . '-install.php' ), $cap );
-			$this->link( $bar, $id . '-upload', 'ddw-mstba-' . $id, __( 'Upload ZIP', 'multisite-toolbar-additions' ), Admin::upload_url( $type ), $cap );
+			if ( Uploads::allowed( $type ) ) { $this->link( $bar, $id . '-upload', 'ddw-mstba-' . $id, Uploads::title( $type ), Admin::upload_url( $type ), $cap ); }
 		}
 	}
 

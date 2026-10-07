@@ -54,9 +54,9 @@ Plugin-ZIP-Untermenü und Plugin-Eintrag unter + Neu sind aktiv. Theme-ZIP-Unter
 
 Plugin und Theme stehen am Ende der Gruppe + Neu, auch nach spät registrierten Inhaltstypen. WordPress-Berechtigungen bestimmen weiterhin ihre Verfügbarkeit.
 
-### Wie funktioniert Theme-ZIP hochladen?
+### Wie funktionieren die Plugin- und Theme-ZIP-Uploader?
 
-Das Plugin stellt eine Upload-Seite mit dem nativen WordPress-Formular und Installer bereit. In Multisite erfolgt die Installation in der Netzwerkverwaltung mit den entsprechenden Rechten. ZIP-Prüfungen und Sicherheitsprüfungen von WordPress bleiben erhalten.
+Ist Leitstand aktiv und sein Uploader für dich verfügbar, führen Toolbar und Adminmenü zu dessen Seiten; doppelte Upload-Seiten werden vermieden. Sonst stellt dieses Plugin eigene Seiten mit Drag-and-drop, Größenprüfung und temporärer Metadatenvorschau bereit. Installation und Ersetzen übernimmt WordPress. Ohne JavaScript funktioniert der native Upload direkt. Die Vorschau ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Sie verwendet keinen Leitstand-Nutzungsindex. In Multisite gelten gemeinsame Dateien für sämtliche Websites und Netzwerke; nur entsprechend berechtigte Benutzer können installieren. Leitstand-Benutzerausschlüsse werden berücksichtigt. Die Schalter dieses Plugins steuern seine eigenen Menüverknüpfungen, nicht bereits vorhandene Leitstand-Einträge.
 
 ## Library und Updates
 

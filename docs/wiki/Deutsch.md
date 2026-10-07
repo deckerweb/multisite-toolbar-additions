@@ -4,7 +4,7 @@
 
 Ein konfigurierbares WordPress-Menü in der Toolbar mit nützlichen Website- und Netzwerk-Verknüpfungen. Teil von QuickNav; für Einzel-Websites und Multisite-Netzwerke.
 
-Noch nicht veröffentlichte Wartungsänderungen auf Grundlage von 4.0.0. Die veröffentlichte 4.0.0-ZIP bleibt unverändert.
+Noch nicht veröffentlichte Vorbereitung für 4.1.0 auf Grundlage von 4.0.0: gemeinsame Leitstand-Verlinkung und eigene Plugin-/Theme-ZIP-Seiten mit Drag-and-drop und Metadatenvorschau. Die veröffentlichte 4.0.0-ZIP bleibt unverändert.
 
 ## Installation und erste Schritte
 
@@ -20,7 +20,7 @@ Wähle zuerst/zuletzt, vor/nach einem Bezugseintrag oder die rechte Seite. Zeige
 
 ## Upload-Verknüpfungen
 
-Plugin und Theme stehen unter Neu am Ende. Jeder Eintrag und jedes ZIP-Untermenü hat einen eigenen Schalter: Plugins an, Themes aus. Theme-Uploads verwenden eine eigene Seite und den nativen WordPress-Installer.
+Plugin und Theme stehen unter Neu am Ende. Jeder Eintrag und jedes ZIP-Untermenü hat einen eigenen Schalter: Plugins an, Themes aus. Upload-Links verwenden die aktiven Leitstand-Seiten oder eigene Plugin-/Theme-Seiten mit Drag-and-drop und begrenzter Metadatenvorschau; WordPress übernimmt die Installation.
 
 ## Multisite-Verwaltung
 

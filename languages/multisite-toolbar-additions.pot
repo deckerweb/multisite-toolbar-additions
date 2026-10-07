@@ -19,6 +19,9 @@ msgstr ""
 msgid "%s supports activation per site only."
 msgstr ""
 
+msgid "Access denied."
+msgstr ""
+
 msgid "Activate"
 msgstr ""
 
@@ -118,7 +121,13 @@ msgstr ""
 msgid "Changelog"
 msgstr ""
 
+msgid "Check ZIP"
+msgstr ""
+
 msgid "Check for Updates"
+msgstr ""
+
+msgid "Checking ZIP…"
 msgstr ""
 
 msgid "Child levels"
@@ -131,6 +140,12 @@ msgid "Choose a source website, then load its menus. Loading does not save your 
 msgstr ""
 
 msgid "Choose an active website in this network."
+msgstr ""
+
+msgid "Choose one non-empty ZIP file within the upload limit."
+msgstr ""
+
+msgid "Choose the installable ZIP from the provider. WordPress checks the package and confirms replacement of an existing version."
 msgstr ""
 
 msgid "Close"
@@ -152,6 +167,9 @@ msgid "Compatible additions only"
 msgstr ""
 
 msgid "Content"
+msgstr ""
+
+msgid "Continue with native WordPress checks"
 msgstr ""
 
 msgid "Could not access the update filesystem."
@@ -190,6 +208,9 @@ msgstr ""
 msgid "December"
 msgstr ""
 
+msgid "Declared plugin dependencies"
+msgstr ""
+
 msgid "Delete Library settings when removing the last host plugin"
 msgstr ""
 
@@ -215,6 +236,9 @@ msgid "Documentation"
 msgstr ""
 
 msgid "Done. The plugin is active."
+msgstr ""
+
+msgid "Drop one ZIP file here"
 msgstr ""
 
 msgid "Each root item in the toolbar"
@@ -245,6 +269,9 @@ msgid "Feb"
 msgstr ""
 
 msgid "February"
+msgstr ""
+
+msgid "Files are shared by the entire Multisite installation. Replacing them can affect every website and network using this extension."
 msgstr ""
 
 msgid "Filter"
@@ -286,6 +313,12 @@ msgstr ""
 msgid "Hide catalog"
 msgstr ""
 
+msgid "Higher version"
+msgstr ""
+
+msgid "I reviewed the package details."
+msgstr ""
+
 msgid "Import"
 msgstr ""
 
@@ -317,6 +350,9 @@ msgid "Install via Git Updater"
 msgstr ""
 
 msgid "Installed"
+msgstr ""
+
+msgid "Installed version"
 msgstr ""
 
 msgid "Installed: "
@@ -433,7 +469,13 @@ msgstr ""
 msgid "Load menus"
 msgstr ""
 
+msgid "Lower version — possible downgrade"
+msgstr ""
+
 msgid "Manage Content"
+msgstr ""
+
+msgid "Manage installed extensions"
 msgstr ""
 
 msgid "Manage installed plugins"
@@ -446,6 +488,9 @@ msgid "Mar"
 msgstr ""
 
 msgid "March"
+msgstr ""
+
+msgid "Maximum file size: %s. One ZIP package per upload."
 msgstr ""
 
 msgid "Maximum websites with extra shortcuts"
@@ -520,6 +565,9 @@ msgstr ""
 msgid "Network permission denied."
 msgstr ""
 
+msgid "Network-activate this plugin or activate it on the source website before selecting that menu."
+msgstr ""
+
 msgid "New"
 msgstr ""
 
@@ -530,6 +578,9 @@ msgid "New content"
 msgstr ""
 
 msgid "No approved plugins match this selection."
+msgstr ""
+
+msgid "Not installed"
 msgstr ""
 
 msgid "Nov"
@@ -583,6 +634,12 @@ msgstr ""
 msgid "POST required."
 msgstr ""
 
+msgid "Package name"
+msgstr ""
+
+msgid "Parent theme"
+msgstr ""
+
 msgid "Permission denied."
 msgstr ""
 
@@ -631,6 +688,9 @@ msgstr ""
 msgid "Refresh catalog"
 msgstr ""
 
+msgid "Reinstall the complete plugin package to restore the shared Library. Toolbar features remain available."
+msgstr ""
+
 msgid "Release 1.0.0 is being prepared. Installation will be available after package verification."
 msgstr ""
 
@@ -643,7 +703,16 @@ msgstr ""
 msgid "Release must contain exactly the approved plugin directory."
 msgstr ""
 
+msgid "Remove selected file"
+msgstr ""
+
 msgid "Repository & documentation"
+msgstr ""
+
+msgid "Requirement met"
+msgstr ""
+
+msgid "Requirement not met"
 msgstr ""
 
 msgid "Requirements shown are preliminary until the stable release is verified."
@@ -662,6 +731,9 @@ msgid "Reset filters"
 msgstr ""
 
 msgid "Retrieve approved catalog updates online"
+msgstr ""
+
+msgid "Same version — files may still differ"
 msgstr ""
 
 msgid "Sat"
@@ -784,6 +856,9 @@ msgstr ""
 msgid "Super administrators only"
 msgstr ""
 
+msgid "Target folder"
+msgstr ""
+
 msgid "The GitHub package could not be prepared. The installed version has been kept."
 msgstr ""
 
@@ -817,6 +892,9 @@ msgstr ""
 msgid "The online catalog source is not trusted."
 msgstr ""
 
+msgid "The package cannot be previewed safely. Use the provider installation ZIP or continue with native WordPress checks."
+msgstr ""
+
 msgid "The package identity or version does not match a newer Multisite Toolbar Additions release."
 msgstr ""
 
@@ -824,6 +902,12 @@ msgid "The package version differs from the offered update. Please check for upd
 msgstr ""
 
 msgid "The plugin must be installed in a stable slug directory."
+msgstr ""
+
+msgid "The preview is unavailable. No files have been installed."
+msgstr ""
+
+msgid "The preview reads package metadata without extracting or running files. It is not a malware scan or compatibility guarantee. Installation sends the selected file to WordPress again."
 msgstr ""
 
 msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
@@ -874,6 +958,9 @@ msgstr ""
 msgid "This release requires a newer WordPress or PHP version. The installed version has been kept."
 msgstr ""
 
+msgid "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin."
+msgstr ""
+
 msgid "Thu"
 msgstr ""
 
@@ -889,6 +976,9 @@ msgstr ""
 msgid "Toolbar Settings"
 msgstr ""
 
+msgid "Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates."
+msgstr ""
+
 msgid "Toolbar settings"
 msgstr ""
 
@@ -899,6 +989,9 @@ msgid "Tue"
 msgstr ""
 
 msgid "Tuesday"
+msgstr ""
+
+msgid "Unknown / not declared"
 msgstr ""
 
 msgid "Unsafe archive path."
@@ -928,6 +1021,15 @@ msgstr ""
 msgid "Upload ZIP"
 msgstr ""
 
+msgid "Upload and install"
+msgstr ""
+
+msgid "Upload plugin ZIP"
+msgstr ""
+
+msgid "Upload theme ZIP"
+msgstr ""
+
 msgid "Use a WordPress menu as your toolbar. Its source is independent of the active theme."
 msgstr ""
 
@@ -953,6 +1055,9 @@ msgid "User Searches"
 msgstr ""
 
 msgid "Version"
+msgstr ""
+
+msgid "Version comparison"
 msgstr ""
 
 msgid "View plugins"
@@ -988,6 +1093,9 @@ msgstr ""
 msgid "Widgets Customizer"
 msgstr ""
 
+msgid "Without JavaScript, WordPress performs the upload and its native checks directly."
+msgstr ""
+
 msgid "WordPress"
 msgstr ""
 
@@ -1012,14 +1120,5 @@ msgstr ""
 msgid "Your toolbar menu"
 msgstr ""
 
-msgid "Network-activate this plugin or activate it on the source website before selecting that menu."
-msgstr ""
-
-msgid "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin."
-msgstr ""
-
-msgid "Reinstall the complete plugin package to restore the shared Library. Toolbar features remain available."
-msgstr ""
-
-msgid "Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates."
+msgid "ZIP version"
 msgstr ""

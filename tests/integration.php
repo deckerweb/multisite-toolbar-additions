@@ -112,8 +112,8 @@ $old_page=$GLOBALS['pagenow']??null;$_GET['upload']='1';$GLOBALS['pagenow']='the
 // Dedicated upload page uses Core's signed installer and network destination.
 $admin=new Admin($s);$saved_submenu=$GLOBALS['submenu']??[];$GLOBALS['submenu']=[];
 set_current_screen('dashboard');$admin->uploads();
-verify(in_array(Admin::upload_url('plugin'),array_column($GLOBALS['submenu']['plugins.php']??[],2),true),'Plugin ZIP submenu available in site dashboard');
-verify(in_array(is_multisite()?Admin::upload_url('theme'):'mstba-theme-upload',array_column($GLOBALS['submenu']['themes.php']??[],2),true),'Theme ZIP submenu available in site dashboard');
+verify(in_array(Settings::network_active()&&!is_network_admin()?Admin::upload_url('plugin'):'mstba-plugin-upload',array_column($GLOBALS['submenu']['plugins.php']??[],2),true),'Plugin ZIP submenu available in site dashboard');
+verify(in_array(Settings::network_active()&&!is_network_admin()?Admin::upload_url('theme'):'mstba-theme-upload',array_column($GLOBALS['submenu']['themes.php']??[],2),true),'Theme ZIP submenu available in site dashboard');
 set_current_screen(is_multisite()?'themes-network':'themes');$GLOBALS['submenu']=[];$admin->uploads();
 verify(in_array('mstba-theme-upload',array_column($GLOBALS['submenu']['themes.php']??[],2),true),'Dedicated theme upload page registered in installation admin');
 ob_start();$admin->theme_upload();$upload=ob_get_clean();
@@ -125,7 +125,7 @@ try{$admin->theme_upload();verify(false,'Unauthorized upload page must reject ac
 wp_set_current_user(1);set_current_screen('dashboard');$GLOBALS['submenu']=$saved_submenu;
 $s=configure();$b=bar();$shortcuts=new Shortcuts($s);$shortcuts->render($b);
 verify((bool)$b->get_node('ddw-mstba-addnew_plugin') && !$b->get_node('ddw-mstba-addnew_theme'),'New defaults: plugins on, themes off');
-$GLOBALS['submenu']=[];(new Admin($s))->uploads();verify(in_array(Admin::upload_url('plugin'),array_column($GLOBALS['submenu']['plugins.php']??[],2),true) && !in_array('mstba-theme-upload',array_column($GLOBALS['submenu']['themes.php']??[],2),true),'ZIP submenu defaults: plugins on, themes off');
+$GLOBALS['submenu']=[];(new Admin($s))->uploads();verify(in_array(Settings::network_active()&&!is_network_admin()?Admin::upload_url('plugin'):'mstba-plugin-upload',array_column($GLOBALS['submenu']['plugins.php']??[],2),true) && !in_array('mstba-theme-upload',array_column($GLOBALS['submenu']['themes.php']??[],2),true),'ZIP submenu defaults: plugins on, themes off');
 $s=configure(['new_plugins'=>true,'new_themes'=>true,'site_links'=>false]);$b=bar();$shortcuts=new Shortcuts($s);$shortcuts->render($b);$b->add_node(['id'=>'late-custom-type','parent'=>'new-content','title'=>'Late content type']);$GLOBALS['wp_admin_bar']=$b;$shortcuts->new_last();$new_ids=[];foreach($b->get_nodes() as $node){if($node->parent==='new-content'){$new_ids[]=$node->id;}}
 verify(array_slice($new_ids,-2)===['ddw-mstba-addnew_plugin','ddw-mstba-addnew_theme'],'Plugin and theme entries follow late content types');verify((bool)$b->get_node('ddw-mstba-addnew_theme-upload'),'Reordering retains ZIP child links');
 $s=configure(['new_plugins'=>false,'new_themes'=>false,'plugin_zip_submenu'=>false,'theme_zip_submenu'=>false]);$b=bar();(new Shortcuts($s))->render($b);verify(!$b->get_node('ddw-mstba-addnew_plugin') && !$b->get_node('ddw-mstba-addnew_theme'),'Both New additions can be disabled');$GLOBALS['submenu']=[];(new Admin($s))->uploads();verify(empty($GLOBALS['submenu']['plugins.php']) && empty($GLOBALS['submenu']['themes.php']),'Both ZIP submenus can be disabled');$GLOBALS['submenu']=$saved_submenu;

@@ -1,8 +1,8 @@
 {
   "version": "4.0.0",
   "working_tree": {
-    "en": "Unpublished maintenance changes based on 4.0.0. The released 4.0.0 ZIP is unchanged.",
-    "de": "Noch nicht veröffentlichte Wartungsänderungen auf Grundlage von 4.0.0. Die veröffentlichte 4.0.0-ZIP bleibt unverändert."
+    "en": "Unpublished preparation for 4.1.0 based on 4.0.0: shared Leitstand uploader routing and own plugin/theme ZIP pages with drag-and-drop and metadata preview. The released 4.0.0 ZIP is unchanged.",
+    "de": "Noch nicht veröffentlichte Vorbereitung für 4.1.0 auf Grundlage von 4.0.0: gemeinsame Leitstand-Verlinkung und eigene Plugin-/Theme-ZIP-Seiten mit Drag-and-drop und Metadatenvorschau. Die veröffentlichte 4.0.0-ZIP bleibt unverändert."
   },
   "releases": [
     {
@@ -541,12 +541,12 @@
     {
       "group": "uploads",
       "en": {
-        "question": "How does Theme ZIP upload work?",
-        "answer": "The plugin provides an upload page with the native WordPress form and installer. In Multisite installation occurs in Network Admin and requires the appropriate network privileges. It does not replace ZIP validation or WordPress security checks."
+        "question": "How do the plugin and theme ZIP uploaders work?",
+        "answer": "When Leitstand is active and its uploader is accessible to you, the toolbar and admin menu use its pages without duplicate upload screens. Otherwise this plugin provides its own pages with drag-and-drop, size validation and temporary metadata previews. WordPress handles installation and replacement. Native uploads work directly without JavaScript. Previews are not malware scans or compatibility guarantees and do not use the Leitstand usage index. Multisite files are shared across all websites and networks; installation remains restricted to authorized users. Leitstand user exclusions are respected. This plugin’s switches control its own menu links, not existing Leitstand entries."
       },
       "de": {
-        "question": "Wie funktioniert Theme-ZIP hochladen?",
-        "answer": "Das Plugin stellt eine Upload-Seite mit dem nativen WordPress-Formular und Installer bereit. In Multisite erfolgt die Installation in der Netzwerkverwaltung mit den entsprechenden Rechten. ZIP-Prüfungen und Sicherheitsprüfungen von WordPress bleiben erhalten."
+        "question": "Wie funktionieren die Plugin- und Theme-ZIP-Uploader?",
+        "answer": "Ist Leitstand aktiv und sein Uploader für dich verfügbar, führen Toolbar und Adminmenü zu dessen Seiten; doppelte Upload-Seiten werden vermieden. Sonst stellt dieses Plugin eigene Seiten mit Drag-and-drop, Größenprüfung und temporärer Metadatenvorschau bereit. Installation und Ersetzen übernimmt WordPress. Ohne JavaScript funktioniert der native Upload direkt. Die Vorschau ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Sie verwendet keinen Leitstand-Nutzungsindex. In Multisite gelten gemeinsame Dateien für sämtliche Websites und Netzwerke; nur entsprechend berechtigte Benutzer können installieren. Leitstand-Benutzerausschlüsse werden berücksichtigt. Die Schalter dieses Plugins steuern seine eigenen Menüverknüpfungen, nicht bereits vorhandene Leitstand-Einträge."
       }
     },
     {
@@ -689,7 +689,7 @@
       ],
       [
         "Upload shortcuts",
-        "Plugin and Theme additions appear last under New. Each addition and ZIP submenu has its own switch: Plugins on, Themes off. Theme uploads use a dedicated page and the native WordPress installer."
+        "Plugin and Theme additions appear last under New. Each addition and ZIP submenu has its own switch: Plugins on, Themes off. Upload links use active Leitstand pages or dedicated local plugin/theme pages with drag-and-drop and bounded metadata previews; WordPress performs installation."
       ],
       [
         "Multisite administration",
@@ -711,7 +711,7 @@
       ],
       [
         "Upload-Verknüpfungen",
-        "Plugin und Theme stehen unter Neu am Ende. Jeder Eintrag und jedes ZIP-Untermenü hat einen eigenen Schalter: Plugins an, Themes aus. Theme-Uploads verwenden eine eigene Seite und den nativen WordPress-Installer."
+        "Plugin und Theme stehen unter Neu am Ende. Jeder Eintrag und jedes ZIP-Untermenü hat einen eigenen Schalter: Plugins an, Themes aus. Upload-Links verwenden die aktiven Leitstand-Seiten oder eigene Plugin-/Theme-Seiten mit Drag-and-drop und begrenzter Metadatenvorschau; WordPress übernimmt die Installation."
       ],
       [
         "Multisite-Verwaltung",

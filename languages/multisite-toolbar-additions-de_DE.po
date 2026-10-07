@@ -19,6 +19,9 @@ msgstr "%s muss zuerst netzwerkweit aktiviert werden."
 msgid "%s supports activation per site only."
 msgstr "%s unterstützt nur die Aktivierung je Website."
 
+msgid "Access denied."
+msgstr "Zugriff verweigert."
+
 msgid "Activate"
 msgstr "Aktivieren"
 
@@ -118,8 +121,14 @@ msgstr "Katalog-URL"
 msgid "Changelog"
 msgstr "Changelog"
 
+msgid "Check ZIP"
+msgstr "ZIP prüfen"
+
 msgid "Check for Updates"
 msgstr "Auf Aktualisierungen prüfen"
+
+msgid "Checking ZIP…"
+msgstr "ZIP wird geprüft…"
 
 msgid "Child levels"
 msgstr "Untermenü-Ebenen"
@@ -132,6 +141,12 @@ msgstr "Bitte die Website auswählen und ihre Menüs laden. Dadurch werden noch 
 
 msgid "Choose an active website in this network."
 msgstr "Bitte eine aktive Website in diesem Netzwerk auswählen."
+
+msgid "Choose one non-empty ZIP file within the upload limit."
+msgstr "Wähle eine nicht leere ZIP-Datei innerhalb des Upload-Limits."
+
+msgid "Choose the installable ZIP from the provider. WordPress checks the package and confirms replacement of an existing version."
+msgstr "Wähle die installierbare ZIP-Datei des Anbieters. WordPress prüft das Paket und fragt vor dem Ersetzen einer vorhandenen Version nach."
 
 msgid "Close"
 msgstr "Schließen"
@@ -153,6 +168,9 @@ msgstr "Nur passende Ergänzungen"
 
 msgid "Content"
 msgstr "Inhalte"
+
+msgid "Continue with native WordPress checks"
+msgstr "Mit den WordPress-Prüfungen fortfahren"
 
 msgid "Could not access the update filesystem."
 msgstr "Auf das Dateisystem für das Update konnte nicht zugegriffen werden."
@@ -190,6 +208,9 @@ msgstr "Dez"
 msgid "December"
 msgstr "Dezember"
 
+msgid "Declared plugin dependencies"
+msgstr "Angegebene Plugin-Abhängigkeiten"
+
 msgid "Delete Library settings when removing the last host plugin"
 msgstr "Library-Einstellungen beim Entfernen des letzten Host-Plugins ebenfalls löschen"
 
@@ -216,6 +237,9 @@ msgstr "Dokumentation"
 
 msgid "Done. The plugin is active."
 msgstr "Erledigt. Das Plugin ist aktiv."
+
+msgid "Drop one ZIP file here"
+msgstr "Ziehe eine ZIP-Datei hierher"
 
 msgid "Each root item in the toolbar"
 msgstr "Jeder Haupteintrag einzeln in der Toolbar"
@@ -246,6 +270,9 @@ msgstr "Feb"
 
 msgid "February"
 msgstr "Februar"
+
+msgid "Files are shared by the entire Multisite installation. Replacing them can affect every website and network using this extension."
+msgstr "Die Dateien werden von der gesamten Multisite-Installation gemeinsam genutzt. Ihr Austausch kann jede Website und jedes Netzwerk betreffen, das diese Erweiterung verwendet."
 
 msgid "Filter"
 msgstr "Filtern"
@@ -286,6 +313,12 @@ msgstr "Beschriftung des gemeinsamen Eintrags"
 msgid "Hide catalog"
 msgstr "Katalog ausblenden"
 
+msgid "Higher version"
+msgstr "Höhere Version"
+
+msgid "I reviewed the package details."
+msgstr "Ich habe die Paketdetails geprüft."
+
 msgid "Import"
 msgstr "Importieren"
 
@@ -318,6 +351,9 @@ msgstr "Über Git Updater installieren"
 
 msgid "Installed"
 msgstr "Installiert"
+
+msgid "Installed version"
+msgstr "Installierte Version"
 
 msgid "Installed: "
 msgstr "Installiert: "
@@ -433,8 +469,14 @@ msgstr "Library-Einstellungen gespeichert."
 msgid "Load menus"
 msgstr "Menüs laden"
 
+msgid "Lower version — possible downgrade"
+msgstr "Niedrigere Version — möglicher Downgrade"
+
 msgid "Manage Content"
 msgstr "Inhalte verwalten"
+
+msgid "Manage installed extensions"
+msgstr "Installierte Erweiterungen verwalten"
 
 msgid "Manage installed plugins"
 msgstr "Installierte Plugins verwalten"
@@ -447,6 +489,9 @@ msgstr "Mär"
 
 msgid "March"
 msgstr "März"
+
+msgid "Maximum file size: %s. One ZIP package per upload."
+msgstr "Maximale Dateigröße: %s. Ein ZIP-Paket pro Upload."
 
 msgid "Maximum websites with extra shortcuts"
 msgstr "Maximale Anzahl Websites mit zusätzlichen Schnellzugriffen"
@@ -520,6 +565,9 @@ msgstr "Netzwerkverwaltung und Netzwerk-Menü „Neu“"
 msgid "Network permission denied."
 msgstr "Keine Berechtigung für das Netzwerk."
 
+msgid "Network-activate this plugin or activate it on the source website before selecting that menu."
+msgstr "Aktiviere dieses Plugin netzwerkweit oder auf der Quellwebsite, bevor du deren Menü auswählst."
+
 msgid "New"
 msgstr "Neu"
 
@@ -531,6 +579,9 @@ msgstr "Neue Inhalte"
 
 msgid "No approved plugins match this selection."
 msgstr "Keine freigegebenen Plugins passen zu dieser Auswahl."
+
+msgid "Not installed"
+msgstr "Nicht installiert"
 
 msgid "Nov"
 msgstr "Nov"
@@ -583,6 +634,12 @@ msgstr "PHP-ZIP-Unterstützung wird benötigt."
 msgid "POST required."
 msgstr "Eine POST-Anfrage ist erforderlich."
 
+msgid "Package name"
+msgstr "Paketname"
+
+msgid "Parent theme"
+msgstr "Eltern-Theme"
+
 msgid "Permission denied."
 msgstr "Keine Berechtigung."
 
@@ -631,6 +688,9 @@ msgstr "Bezugseintrag"
 msgid "Refresh catalog"
 msgstr "Katalog aktualisieren"
 
+msgid "Reinstall the complete plugin package to restore the shared Library. Toolbar features remain available."
+msgstr "Installiere das vollständige Plugin-Paket erneut, um die gemeinsame Library wiederherzustellen. Die Toolbar-Funktionen bleiben verfügbar."
+
 msgid "Release 1.0.0 is being prepared. Installation will be available after package verification."
 msgstr "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar."
 
@@ -643,8 +703,17 @@ msgstr "Release in Vorbereitung"
 msgid "Release must contain exactly the approved plugin directory."
 msgstr "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
 
+msgid "Remove selected file"
+msgstr "Ausgewählte Datei entfernen"
+
 msgid "Repository & documentation"
 msgstr "Repository & Dokumentation"
+
+msgid "Requirement met"
+msgstr "Anforderung erfüllt"
+
+msgid "Requirement not met"
+msgstr "Anforderung nicht erfüllt"
 
 msgid "Requirements shown are preliminary until the stable release is verified."
 msgstr "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig."
@@ -663,6 +732,9 @@ msgstr "Filter zurücksetzen"
 
 msgid "Retrieve approved catalog updates online"
 msgstr "Katalogfreigaben online aktualisieren"
+
+msgid "Same version — files may still differ"
+msgstr "Gleiche Version — Dateien können trotzdem abweichen"
 
 msgid "Sat"
 msgstr "Sa"
@@ -784,6 +856,9 @@ msgstr "Super-Administratoren und Website-Administratoren"
 msgid "Super administrators only"
 msgstr "Nur Super-Administratoren"
 
+msgid "Target folder"
+msgstr "Zielordner"
+
 msgid "The GitHub package could not be prepared. The installed version has been kept."
 msgstr "Das GitHub-Paket konnte nicht vorbereitet werden. Die installierte Version bleibt erhalten."
 
@@ -817,6 +892,9 @@ msgstr "Der Online-Katalog ist nicht erreichbar. Angezeigt wird der gespeicherte
 msgid "The online catalog source is not trusted."
 msgstr "Die Online-Katalogquelle ist nicht vertrauenswürdig."
 
+msgid "The package cannot be previewed safely. Use the provider installation ZIP or continue with native WordPress checks."
+msgstr "Das Paket lässt sich nicht sicher in der Vorschau prüfen. Verwende die Installations-ZIP des Anbieters oder fahre mit den WordPress-Prüfungen fort."
+
 msgid "The package identity or version does not match a newer Multisite Toolbar Additions release."
 msgstr "Paketidentität oder Version passen nicht zu einem neueren Release von Multisite Toolbar Additions."
 
@@ -825,6 +903,12 @@ msgstr "Die Paketversion weicht vom angebotenen Update ab. Bitte erneut nach Upd
 
 msgid "The plugin must be installed in a stable slug directory."
 msgstr "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein."
+
+msgid "The preview is unavailable. No files have been installed."
+msgstr "Die Vorschau ist nicht verfügbar. Es wurden keine Dateien installiert."
+
+msgid "The preview reads package metadata without extracting or running files. It is not a malware scan or compatibility guarantee. Installation sends the selected file to WordPress again."
+msgstr "Die Vorschau liest Paketinformationen, ohne Dateien zu entpacken oder auszuführen. Sie ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Zur Installation wird die ausgewählte Datei erneut an WordPress gesendet."
 
 msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
 msgstr "Das private Update konnte nicht autorisiert werden. Prüfe die Repository-Zugangsdaten und suche erneut nach Updates."
@@ -874,6 +958,9 @@ msgstr "Dieses Release ist nicht freigegeben."
 msgid "This release requires a newer WordPress or PHP version. The installed version has been kept."
 msgstr "Dieses Release benötigt eine neuere WordPress- oder PHP-Version. Die installierte Version bleibt erhalten."
 
+msgid "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin."
+msgstr "Bei dieser Einzelaktivierung verwaltest du die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktiviere das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen."
+
 msgid "Thu"
 msgstr "Do"
 
@@ -889,6 +976,9 @@ msgstr "Toolbar-Menü (bisherige Menüposition)"
 msgid "Toolbar Settings"
 msgstr "Toolbar-Einstellungen"
 
+msgid "Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates."
+msgstr "Die Toolbar-Funktionen bleiben verfügbar. Installiere das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen."
+
 msgid "Toolbar settings"
 msgstr "Toolbar-Einstellungen"
 
@@ -900,6 +990,9 @@ msgstr "Di"
 
 msgid "Tuesday"
 msgstr "Dienstag"
+
+msgid "Unknown / not declared"
+msgstr "Unbekannt / nicht angegeben"
 
 msgid "Unsafe archive path."
 msgstr "Unsicherer Archivpfad."
@@ -928,6 +1021,15 @@ msgstr "Theme-ZIP hochladen"
 msgid "Upload ZIP"
 msgstr "ZIP-Datei hochladen"
 
+msgid "Upload and install"
+msgstr "Hochladen und installieren"
+
+msgid "Upload plugin ZIP"
+msgstr "Plugin-ZIP hochladen"
+
+msgid "Upload theme ZIP"
+msgstr "Theme-ZIP hochladen"
+
 msgid "Use a WordPress menu as your toolbar. Its source is independent of the active theme."
 msgstr "Ein WordPress-Menü als Toolbar verwenden. Die Menüquelle ist unabhängig vom aktiven Theme."
 
@@ -954,6 +1056,9 @@ msgstr "Suchanfragen"
 
 msgid "Version"
 msgstr "Version"
+
+msgid "Version comparison"
+msgstr "Versionsvergleich"
 
 msgid "View plugins"
 msgstr "Plugins ansehen"
@@ -988,6 +1093,9 @@ msgstr "Widgets"
 msgid "Widgets Customizer"
 msgstr "Widget-Customizer"
 
+msgid "Without JavaScript, WordPress performs the upload and its native checks directly."
+msgstr "Ohne JavaScript übernimmt WordPress den Upload und seine Prüfungen direkt."
+
 msgid "WordPress"
 msgstr "WordPress"
 
@@ -1012,14 +1120,5 @@ msgstr "Keine Berechtigung zum Ändern der Toolbar-Einstellungen."
 msgid "Your toolbar menu"
 msgstr "Eigenes Toolbar-Menü"
 
-msgid "Network-activate this plugin or activate it on the source website before selecting that menu."
-msgstr "Aktiviere dieses Plugin netzwerkweit oder auf der Quellwebsite, bevor du deren Menü auswählst."
-
-msgid "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin."
-msgstr "Bei dieser Einzelaktivierung verwaltest du die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktiviere das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen."
-
-msgid "Reinstall the complete plugin package to restore the shared Library. Toolbar features remain available."
-msgstr "Installiere das vollständige Plugin-Paket erneut, um die gemeinsame Library wiederherzustellen. Die Toolbar-Funktionen bleiben verfügbar."
-
-msgid "Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates."
-msgstr "Die Toolbar-Funktionen bleiben verfügbar. Installiere das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen."
+msgid "ZIP version"
+msgstr "ZIP-Version"

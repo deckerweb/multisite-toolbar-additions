@@ -19,6 +19,10 @@
     "de_DE": "%s unterstützt nur die Aktivierung je Website.",
     "de_DE_formal": "%s unterstützt nur die Aktivierung je Website."
   },
+  "Access denied.": {
+    "de_DE": "Zugriff verweigert.",
+    "de_DE_formal": "Zugriff verweigert."
+  },
   "Activate": {
     "de_DE": "Aktivieren",
     "de_DE_formal": "Aktivieren"
@@ -151,9 +155,17 @@
     "de_DE": "Changelog",
     "de_DE_formal": "Changelog"
   },
+  "Check ZIP": {
+    "de_DE": "ZIP prüfen",
+    "de_DE_formal": "ZIP prüfen"
+  },
   "Check for Updates": {
     "de_DE": "Auf Aktualisierungen prüfen",
     "de_DE_formal": "Auf Aktualisierungen prüfen"
+  },
+  "Checking ZIP…": {
+    "de_DE": "ZIP wird geprüft…",
+    "de_DE_formal": "ZIP wird geprüft…"
   },
   "Child levels": {
     "de_DE": "Untermenü-Ebenen",
@@ -170,6 +182,14 @@
   "Choose an active website in this network.": {
     "de_DE": "Bitte eine aktive Website in diesem Netzwerk auswählen.",
     "de_DE_formal": "Bitte eine aktive Website in diesem Netzwerk auswählen."
+  },
+  "Choose one non-empty ZIP file within the upload limit.": {
+    "de_DE": "Wähle eine nicht leere ZIP-Datei innerhalb des Upload-Limits.",
+    "de_DE_formal": "Wählen Sie eine nicht leere ZIP-Datei innerhalb des Upload-Limits."
+  },
+  "Choose the installable ZIP from the provider. WordPress checks the package and confirms replacement of an existing version.": {
+    "de_DE": "Wähle die installierbare ZIP-Datei des Anbieters. WordPress prüft das Paket und fragt vor dem Ersetzen einer vorhandenen Version nach.",
+    "de_DE_formal": "Wählen Sie die installierbare ZIP-Datei des Anbieters. WordPress prüft das Paket und fragt vor dem Ersetzen einer vorhandenen Version nach."
   },
   "Close": {
     "de_DE": "Schließen",
@@ -198,6 +218,10 @@
   "Content": {
     "de_DE": "Inhalte",
     "de_DE_formal": "Inhalte"
+  },
+  "Continue with native WordPress checks": {
+    "de_DE": "Mit den WordPress-Prüfungen fortfahren",
+    "de_DE_formal": "Mit den WordPress-Prüfungen fortfahren"
   },
   "Could not access the update filesystem.": {
     "de_DE": "Auf das Dateisystem für das Update konnte nicht zugegriffen werden.",
@@ -247,6 +271,10 @@
     "de_DE": "Dezember",
     "de_DE_formal": "Dezember"
   },
+  "Declared plugin dependencies": {
+    "de_DE": "Angegebene Plugin-Abhängigkeiten",
+    "de_DE_formal": "Angegebene Plugin-Abhängigkeiten"
+  },
   "Delete Library settings when removing the last host plugin": {
     "de_DE": "Library-Einstellungen beim Entfernen des letzten Host-Plugins ebenfalls löschen",
     "de_DE_formal": "Library-Einstellungen beim Entfernen des letzten Host-Plugins ebenfalls löschen"
@@ -282,6 +310,10 @@
   "Done. The plugin is active.": {
     "de_DE": "Erledigt. Das Plugin ist aktiv.",
     "de_DE_formal": "Erledigt. Das Plugin ist aktiv."
+  },
+  "Drop one ZIP file here": {
+    "de_DE": "Ziehe eine ZIP-Datei hierher",
+    "de_DE_formal": "Ziehen Sie eine ZIP-Datei hierher"
   },
   "Each root item in the toolbar": {
     "de_DE": "Jeder Haupteintrag einzeln in der Toolbar",
@@ -322,6 +354,10 @@
   "February": {
     "de_DE": "Februar",
     "de_DE_formal": "Februar"
+  },
+  "Files are shared by the entire Multisite installation. Replacing them can affect every website and network using this extension.": {
+    "de_DE": "Die Dateien werden von der gesamten Multisite-Installation gemeinsam genutzt. Ihr Austausch kann jede Website und jedes Netzwerk betreffen, das diese Erweiterung verwendet.",
+    "de_DE_formal": "Die Dateien werden von der gesamten Multisite-Installation gemeinsam genutzt. Ihr Austausch kann jede Website und jedes Netzwerk betreffen, das diese Erweiterung verwendet."
   },
   "Filter": {
     "de_DE": "Filtern",
@@ -375,6 +411,14 @@
     "de_DE": "Katalog ausblenden",
     "de_DE_formal": "Katalog ausblenden"
   },
+  "Higher version": {
+    "de_DE": "Höhere Version",
+    "de_DE_formal": "Höhere Version"
+  },
+  "I reviewed the package details.": {
+    "de_DE": "Ich habe die Paketdetails geprüft.",
+    "de_DE_formal": "Ich habe die Paketdetails geprüft."
+  },
   "Import": {
     "de_DE": "Importieren",
     "de_DE_formal": "Importieren"
@@ -418,6 +462,10 @@
   "Installed": {
     "de_DE": "Installiert",
     "de_DE_formal": "Installiert"
+  },
+  "Installed version": {
+    "de_DE": "Installierte Version",
+    "de_DE_formal": "Installierte Version"
   },
   "Installed: ": {
     "de_DE": "Installiert: ",
@@ -571,9 +619,17 @@
     "de_DE": "Menüs laden",
     "de_DE_formal": "Menüs laden"
   },
+  "Lower version — possible downgrade": {
+    "de_DE": "Niedrigere Version — möglicher Downgrade",
+    "de_DE_formal": "Niedrigere Version — möglicher Downgrade"
+  },
   "Manage Content": {
     "de_DE": "Inhalte verwalten",
     "de_DE_formal": "Inhalte verwalten"
+  },
+  "Manage installed extensions": {
+    "de_DE": "Installierte Erweiterungen verwalten",
+    "de_DE_formal": "Installierte Erweiterungen verwalten"
   },
   "Manage installed plugins": {
     "de_DE": "Installierte Plugins verwalten",
@@ -590,6 +646,10 @@
   "March": {
     "de_DE": "März",
     "de_DE_formal": "März"
+  },
+  "Maximum file size: %s. One ZIP package per upload.": {
+    "de_DE": "Maximale Dateigröße: %s. Ein ZIP-Paket pro Upload.",
+    "de_DE_formal": "Maximale Dateigröße: %s. Ein ZIP-Paket pro Upload."
   },
   "Maximum websites with extra shortcuts": {
     "de_DE": "Maximale Anzahl Websites mit zusätzlichen Schnellzugriffen",
@@ -687,6 +747,10 @@
     "de_DE": "Keine Berechtigung für das Netzwerk.",
     "de_DE_formal": "Keine Berechtigung für das Netzwerk."
   },
+  "Network-activate this plugin or activate it on the source website before selecting that menu.": {
+    "de_DE": "Aktiviere dieses Plugin netzwerkweit oder auf der Quellwebsite, bevor du deren Menü auswählst.",
+    "de_DE_formal": "Aktivieren Sie dieses Plugin netzwerkweit oder auf der Quellwebsite, bevor Sie deren Menü auswählen."
+  },
   "New": {
     "de_DE": "Neu",
     "de_DE_formal": "Neu"
@@ -702,6 +766,10 @@
   "No approved plugins match this selection.": {
     "de_DE": "Keine freigegebenen Plugins passen zu dieser Auswahl.",
     "de_DE_formal": "Keine freigegebenen Plugins passen zu dieser Auswahl."
+  },
+  "Not installed": {
+    "de_DE": "Nicht installiert",
+    "de_DE_formal": "Nicht installiert"
   },
   "Nov": {
     "de_DE": "Nov",
@@ -771,6 +839,14 @@
     "de_DE": "Eine POST-Anfrage ist erforderlich.",
     "de_DE_formal": "Eine POST-Anfrage ist erforderlich."
   },
+  "Package name": {
+    "de_DE": "Paketname",
+    "de_DE_formal": "Paketname"
+  },
+  "Parent theme": {
+    "de_DE": "Eltern-Theme",
+    "de_DE_formal": "Eltern-Theme"
+  },
   "Permission denied.": {
     "de_DE": "Keine Berechtigung.",
     "de_DE_formal": "Keine Berechtigung."
@@ -835,6 +911,10 @@
     "de_DE": "Katalog aktualisieren",
     "de_DE_formal": "Katalog aktualisieren"
   },
+  "Reinstall the complete plugin package to restore the shared Library. Toolbar features remain available.": {
+    "de_DE": "Installiere das vollständige Plugin-Paket erneut, um die gemeinsame Library wiederherzustellen. Die Toolbar-Funktionen bleiben verfügbar.",
+    "de_DE_formal": "Installieren Sie das vollständige Plugin-Paket erneut, um die gemeinsame Library wiederherzustellen. Die Toolbar-Funktionen bleiben verfügbar."
+  },
   "Release 1.0.0 is being prepared. Installation will be available after package verification.": {
     "de_DE": "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar.",
     "de_DE_formal": "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar."
@@ -851,9 +931,21 @@
     "de_DE": "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten.",
     "de_DE_formal": "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
   },
+  "Remove selected file": {
+    "de_DE": "Ausgewählte Datei entfernen",
+    "de_DE_formal": "Ausgewählte Datei entfernen"
+  },
   "Repository & documentation": {
     "de_DE": "Repository & Dokumentation",
     "de_DE_formal": "Repository & Dokumentation"
+  },
+  "Requirement met": {
+    "de_DE": "Anforderung erfüllt",
+    "de_DE_formal": "Anforderung erfüllt"
+  },
+  "Requirement not met": {
+    "de_DE": "Anforderung nicht erfüllt",
+    "de_DE_formal": "Anforderung nicht erfüllt"
   },
   "Requirements shown are preliminary until the stable release is verified.": {
     "de_DE": "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig.",
@@ -878,6 +970,10 @@
   "Retrieve approved catalog updates online": {
     "de_DE": "Katalogfreigaben online aktualisieren",
     "de_DE_formal": "Katalogfreigaben online aktualisieren"
+  },
+  "Same version — files may still differ": {
+    "de_DE": "Gleiche Version — Dateien können trotzdem abweichen",
+    "de_DE_formal": "Gleiche Version — Dateien können trotzdem abweichen"
   },
   "Sat": {
     "de_DE": "Sa",
@@ -1039,6 +1135,10 @@
     "de_DE": "Nur Super-Administratoren",
     "de_DE_formal": "Nur Super-Administratoren"
   },
+  "Target folder": {
+    "de_DE": "Zielordner",
+    "de_DE_formal": "Zielordner"
+  },
   "The GitHub package could not be prepared. The installed version has been kept.": {
     "de_DE": "Das GitHub-Paket konnte nicht vorbereitet werden. Die installierte Version bleibt erhalten.",
     "de_DE_formal": "Das GitHub-Paket konnte nicht vorbereitet werden. Die installierte Version bleibt erhalten."
@@ -1083,6 +1183,10 @@
     "de_DE": "Die Online-Katalogquelle ist nicht vertrauenswürdig.",
     "de_DE_formal": "Die Online-Katalogquelle ist nicht vertrauenswürdig."
   },
+  "The package cannot be previewed safely. Use the provider installation ZIP or continue with native WordPress checks.": {
+    "de_DE": "Das Paket lässt sich nicht sicher in der Vorschau prüfen. Verwende die Installations-ZIP des Anbieters oder fahre mit den WordPress-Prüfungen fort.",
+    "de_DE_formal": "Das Paket lässt sich nicht sicher in der Vorschau prüfen. Verwenden Sie die Installations-ZIP des Anbieters oder fahren Sie mit den WordPress-Prüfungen fort."
+  },
   "The package identity or version does not match a newer Multisite Toolbar Additions release.": {
     "de_DE": "Paketidentität oder Version passen nicht zu einem neueren Release von Multisite Toolbar Additions.",
     "de_DE_formal": "Paketidentität oder Version passen nicht zu einem neueren Release von Multisite Toolbar Additions."
@@ -1094,6 +1198,14 @@
   "The plugin must be installed in a stable slug directory.": {
     "de_DE": "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein.",
     "de_DE_formal": "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein."
+  },
+  "The preview is unavailable. No files have been installed.": {
+    "de_DE": "Die Vorschau ist nicht verfügbar. Es wurden keine Dateien installiert.",
+    "de_DE_formal": "Die Vorschau ist nicht verfügbar. Es wurden keine Dateien installiert."
+  },
+  "The preview reads package metadata without extracting or running files. It is not a malware scan or compatibility guarantee. Installation sends the selected file to WordPress again.": {
+    "de_DE": "Die Vorschau liest Paketinformationen, ohne Dateien zu entpacken oder auszuführen. Sie ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Zur Installation wird die ausgewählte Datei erneut an WordPress gesendet.",
+    "de_DE_formal": "Die Vorschau liest Paketinformationen, ohne Dateien zu entpacken oder auszuführen. Sie ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Zur Installation wird die ausgewählte Datei erneut an WordPress gesendet."
   },
   "The private update could not be authorized. Check the repository credentials and refresh updates.": {
     "de_DE": "Das private Update konnte nicht autorisiert werden. Prüfe die Repository-Zugangsdaten und suche erneut nach Updates.",
@@ -1159,6 +1271,10 @@
     "de_DE": "Dieses Release benötigt eine neuere WordPress- oder PHP-Version. Die installierte Version bleibt erhalten.",
     "de_DE_formal": "Dieses Release benötigt eine neuere WordPress- oder PHP-Version. Die installierte Version bleibt erhalten."
   },
+  "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin.": {
+    "de_DE": "Bei dieser Einzelaktivierung verwaltest du die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktiviere das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen.",
+    "de_DE_formal": "Bei dieser Einzelaktivierung verwalten Sie die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktivieren Sie das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen."
+  },
   "Thu": {
     "de_DE": "Do",
     "de_DE_formal": "Do"
@@ -1179,6 +1295,10 @@
     "de_DE": "Toolbar-Einstellungen",
     "de_DE_formal": "Toolbar-Einstellungen"
   },
+  "Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates.": {
+    "de_DE": "Die Toolbar-Funktionen bleiben verfügbar. Installiere das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen.",
+    "de_DE_formal": "Die Toolbar-Funktionen bleiben verfügbar. Installieren Sie das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen."
+  },
   "Toolbar settings": {
     "de_DE": "Toolbar-Einstellungen",
     "de_DE_formal": "Toolbar-Einstellungen"
@@ -1194,6 +1314,10 @@
   "Tuesday": {
     "de_DE": "Dienstag",
     "de_DE_formal": "Dienstag"
+  },
+  "Unknown / not declared": {
+    "de_DE": "Unbekannt / nicht angegeben",
+    "de_DE_formal": "Unbekannt / nicht angegeben"
   },
   "Unsafe archive path.": {
     "de_DE": "Unsicherer Archivpfad.",
@@ -1231,6 +1355,18 @@
     "de_DE": "ZIP-Datei hochladen",
     "de_DE_formal": "ZIP-Datei hochladen"
   },
+  "Upload and install": {
+    "de_DE": "Hochladen und installieren",
+    "de_DE_formal": "Hochladen und installieren"
+  },
+  "Upload plugin ZIP": {
+    "de_DE": "Plugin-ZIP hochladen",
+    "de_DE_formal": "Plugin-ZIP hochladen"
+  },
+  "Upload theme ZIP": {
+    "de_DE": "Theme-ZIP hochladen",
+    "de_DE_formal": "Theme-ZIP hochladen"
+  },
   "Use a WordPress menu as your toolbar. Its source is independent of the active theme.": {
     "de_DE": "Ein WordPress-Menü als Toolbar verwenden. Die Menüquelle ist unabhängig vom aktiven Theme.",
     "de_DE_formal": "Ein WordPress-Menü als Toolbar verwenden. Die Menüquelle ist unabhängig vom aktiven Theme."
@@ -1266,6 +1402,10 @@
   "Version": {
     "de_DE": "Version",
     "de_DE_formal": "Version"
+  },
+  "Version comparison": {
+    "de_DE": "Versionsvergleich",
+    "de_DE_formal": "Versionsvergleich"
   },
   "View plugins": {
     "de_DE": "Plugins ansehen",
@@ -1311,6 +1451,10 @@
     "de_DE": "Widget-Customizer",
     "de_DE_formal": "Widget-Customizer"
   },
+  "Without JavaScript, WordPress performs the upload and its native checks directly.": {
+    "de_DE": "Ohne JavaScript übernimmt WordPress den Upload und seine Prüfungen direkt.",
+    "de_DE_formal": "Ohne JavaScript übernimmt WordPress den Upload und seine Prüfungen direkt."
+  },
   "WordPress": {
     "de_DE": "WordPress",
     "de_DE_formal": "WordPress"
@@ -1343,20 +1487,8 @@
     "de_DE": "Eigenes Toolbar-Menü",
     "de_DE_formal": "Eigenes Toolbar-Menü"
   },
-  "Network-activate this plugin or activate it on the source website before selecting that menu.": {
-    "de_DE": "Aktiviere dieses Plugin netzwerkweit oder auf der Quellwebsite, bevor du deren Menü auswählst.",
-    "de_DE_formal": "Aktivieren Sie dieses Plugin netzwerkweit oder auf der Quellwebsite, bevor Sie deren Menü auswählen."
-  },
-  "This site-only activation manages network toolbar settings from this website. Network-activate this plugin to use its Library in Network Admin.": {
-    "de_DE": "Bei dieser Einzelaktivierung verwaltest du die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktiviere das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen.",
-    "de_DE_formal": "Bei dieser Einzelaktivierung verwalten Sie die Netzwerk-Toolbar-Einstellungen von dieser Website aus. Aktivieren Sie das Plugin netzwerkweit, um seine Library in der Netzwerkverwaltung zu nutzen."
-  },
-  "Reinstall the complete plugin package to restore the shared Library. Toolbar features remain available.": {
-    "de_DE": "Installiere das vollständige Plugin-Paket erneut, um die gemeinsame Library wiederherzustellen. Die Toolbar-Funktionen bleiben verfügbar.",
-    "de_DE_formal": "Installieren Sie das vollständige Plugin-Paket erneut, um die gemeinsame Library wiederherzustellen. Die Toolbar-Funktionen bleiben verfügbar."
-  },
-  "Toolbar features remain available. Reinstall the complete plugin package to restore GitHub updates.": {
-    "de_DE": "Die Toolbar-Funktionen bleiben verfügbar. Installiere das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen.",
-    "de_DE_formal": "Die Toolbar-Funktionen bleiben verfügbar. Installieren Sie das vollständige Plugin-Paket erneut, um GitHub-Updates wiederherzustellen."
+  "ZIP version": {
+    "de_DE": "ZIP-Version",
+    "de_DE_formal": "ZIP-Version"
   }
 }
