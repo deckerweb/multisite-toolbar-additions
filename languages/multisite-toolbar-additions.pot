@@ -157,6 +157,9 @@ msgstr ""
 msgid "Child levels"
 msgstr ""
 
+msgid "Choose ZIP"
+msgstr ""
+
 msgid "Choose a menu directly to keep it through theme changes. The location option is provided for upgrades from 3.x."
 msgstr ""
 
@@ -371,6 +374,9 @@ msgid "Import Widgets"
 msgstr ""
 
 msgid "Improved"
+msgstr ""
+
+msgid "Install"
 msgstr ""
 
 msgid "Install Plugin"
@@ -817,6 +823,9 @@ msgstr ""
 msgid "Retrieve approved catalog updates online"
 msgstr ""
 
+msgid "Review package"
+msgstr ""
+
 msgid "Same version — files may still differ"
 msgstr ""
 
@@ -923,6 +932,9 @@ msgid "Source website"
 msgstr ""
 
 msgid "Source: GitHub"
+msgstr ""
+
+msgid "Steps:"
 msgstr ""
 
 msgid "Stored data"

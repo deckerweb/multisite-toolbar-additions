@@ -120,10 +120,10 @@ final class Uploads {
 		$page = isset( $_GET['page'] ) && is_string( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
 		$type = 'mstba-theme-upload' === $page ? 'theme' : 'plugin';
 		if ( ! in_array( $page, [ 'mstba-plugin-upload', 'mstba-theme-upload' ], true ) || ! self::allowed( $type ) || self::leitstand( $type ) ) { return; }
-		wp_enqueue_style( 'mstba-admin-footer', plugins_url( 'assets/deckerweb-footer.css', MSTBA_PLUGIN_FILE ), [], '1.0.0' );
-		wp_enqueue_script( 'mstba-admin-footer', plugins_url( 'assets/deckerweb-footer.js', MSTBA_PLUGIN_FILE ), [], '1.0.0', true );
-		wp_enqueue_style( 'mstba-upload', plugins_url( 'assets/upload.css', MSTBA_PLUGIN_FILE ), [], MSTBA_PLUGIN_VERSION );
-		wp_enqueue_script( 'mstba-upload', plugins_url( 'assets/upload.js', MSTBA_PLUGIN_FILE ), [], MSTBA_PLUGIN_VERSION, true );
+		wp_enqueue_style( 'mstba-admin-footer', plugins_url( 'assets/deckerweb-footer.css', MSTBA_PLUGIN_FILE ), [], PageChrome::asset_version( 'deckerweb-footer.css' ) );
+		wp_enqueue_script( 'mstba-admin-footer', plugins_url( 'assets/deckerweb-footer.js', MSTBA_PLUGIN_FILE ), [], PageChrome::asset_version( 'deckerweb-footer.js' ), true );
+		wp_enqueue_style( 'mstba-upload', plugins_url( 'assets/upload.css', MSTBA_PLUGIN_FILE ), [], PageChrome::asset_version( 'upload.css' ) );
+		wp_enqueue_script( 'mstba-upload', plugins_url( 'assets/upload.js', MSTBA_PLUGIN_FILE ), [], PageChrome::asset_version( 'upload.js' ), true );
 		wp_localize_script( 'mstba-upload', 'mstbaUpload', [ 'ajax' => admin_url( 'admin-ajax.php' ), 'nonce' => wp_create_nonce( 'mstba_zip_preview' ), 'type' => $type, 'labels' => [
 			'invalid' => __( 'Choose one non-empty ZIP file within the upload limit.', 'multisite-toolbar-additions' ),
 			'check' => __( 'Check ZIP', 'multisite-toolbar-additions' ), 'busy' => __( 'Checking ZIP…', 'multisite-toolbar-additions' ),
@@ -149,7 +149,7 @@ final class Uploads {
 		echo '<p>' . esc_html__( 'Choose the installable ZIP from the provider. WordPress checks the package and confirms replacement of an existing version.', 'multisite-toolbar-additions' ) . '</p>';
 		if ( is_multisite() ) { echo '<p>' . esc_html__( 'Files are shared by the entire Multisite installation. Replacing them can affect every website and network using this extension.', 'multisite-toolbar-additions' ) . '</p>'; }
 		echo '<details class="mstba-upload-help"><summary>' . esc_html__( 'What is checked before installation?', 'multisite-toolbar-additions' ) . '</summary><p>' . esc_html__( 'The preview reads package metadata without extracting or running files. It is not a malware scan or compatibility guarantee. Installation sends the selected file to WordPress again.', 'multisite-toolbar-additions' ) . '</p></details>';
-		echo '<ol class="mstba-upload-steps"><li>' . esc_html__( '1. Choose ZIP', 'multisite-toolbar-additions' ) . '</li><li>' . esc_html__( '2. Review package', 'multisite-toolbar-additions' ) . '</li><li>' . esc_html__( '3. Install', 'multisite-toolbar-additions' ) . '</li></ol>';
+		echo '<div class="mstba-step-line"><strong>' . esc_html__( 'Steps:', 'multisite-toolbar-additions' ) . '</strong><ol class="mstba-upload-steps" role="list"><li><span class="mstba-step-number" aria-hidden="true">1</span>' . esc_html__( 'Choose ZIP', 'multisite-toolbar-additions' ) . '</li><li><span class="mstba-step-number" aria-hidden="true">2</span>' . esc_html__( 'Review package', 'multisite-toolbar-additions' ) . '</li><li><span class="mstba-step-number" aria-hidden="true">3</span>' . esc_html__( 'Install', 'multisite-toolbar-additions' ) . '</li></ol></div>';
 		echo '<form method="post" enctype="multipart/form-data" action="' . esc_url( $action ) . '">';
 		wp_nonce_field( $type . '-upload' );
 		echo '<div class="mstba-upload-drop" data-limit="' . esc_attr( wp_max_upload_size() ) . '"><label for="mstba-package"><strong>' . esc_html__( 'Drop one ZIP file here', 'multisite-toolbar-additions' ) . '</strong></label><input id="mstba-package" type="file" name="' . esc_attr( $type . 'zip' ) . '" accept=".zip" required aria-describedby="mstba-upload-limit mstba-upload-status"><p id="mstba-upload-status" role="status" aria-live="polite"></p></div>';

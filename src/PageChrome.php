@@ -11,6 +11,22 @@ defined( 'ABSPATH' ) || exit;
 /** Provide localized branding, navigation and local settings documentation. */
 final class PageChrome {
 	/**
+	 * Version local presentation files by content, including unpublished same-version test packages.
+	 * @param string $file Fixed asset basename supplied by this plugin.
+	 * @return string
+	 */
+	public static function asset_version( string $file ): string {
+		static $versions = [];
+		if ( ! preg_match( '/^[a-z0-9-]+\.(?:css|js)$/D', $file ) ) { return MSTBA_PLUGIN_VERSION; }
+		if ( ! isset( $versions[ $file ] ) ) {
+			$path = MSTBA_PLUGIN_DIR . 'assets/' . $file;
+			$hash = is_file( $path ) && is_readable( $path ) ? hash_file( 'sha256', $path ) : false;
+			$versions[ $file ] = MSTBA_PLUGIN_VERSION . ( $hash ? '-' . substr( $hash, 0, 12 ) : '' );
+		}
+		return $versions[ $file ];
+	}
+
+	/**
 	 * Print the localized settings identity and in-page section navigation.
 	 *
 	 * @param string $section Optional translated context label; empty uses toolbar settings.

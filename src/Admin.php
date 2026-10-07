@@ -74,11 +74,11 @@ final class Admin {
 	 */
 	public function assets( $hook ) {
 		if ( ( $this->hook && $hook === $this->hook ) || ( $this->upload_hook && $hook === $this->upload_hook ) ) {
-			wp_enqueue_script( 'mstba-settings', plugins_url( 'assets/settings.js', MSTBA_PLUGIN_FILE ), [], MSTBA_PLUGIN_VERSION, true );
+			wp_enqueue_script( 'mstba-settings', plugins_url( 'assets/settings.js', MSTBA_PLUGIN_FILE ), [], PageChrome::asset_version( 'settings.js' ), true );
 			wp_localize_script( 'mstba-settings', 'mstbaMenuPreview', MenuPreview::config() );
-			wp_enqueue_script( 'mstba-admin-footer', plugins_url( 'assets/deckerweb-footer.js', MSTBA_PLUGIN_FILE ), [], '1.0.0', true );
-			wp_enqueue_style( 'mstba-admin-footer', plugins_url( 'assets/deckerweb-footer.css', MSTBA_PLUGIN_FILE ), [], '1.0.0' );
-			wp_enqueue_style( 'mstba-settings', plugins_url( 'assets/settings.css', MSTBA_PLUGIN_FILE ), [ 'mstba-admin-footer' ], MSTBA_PLUGIN_VERSION );
+			wp_enqueue_script( 'mstba-admin-footer', plugins_url( 'assets/deckerweb-footer.js', MSTBA_PLUGIN_FILE ), [], PageChrome::asset_version( 'deckerweb-footer.js' ), true );
+			wp_enqueue_style( 'mstba-admin-footer', plugins_url( 'assets/deckerweb-footer.css', MSTBA_PLUGIN_FILE ), [], PageChrome::asset_version( 'deckerweb-footer.css' ) );
+			wp_enqueue_style( 'mstba-settings', plugins_url( 'assets/settings.css', MSTBA_PLUGIN_FILE ), [ 'mstba-admin-footer' ], PageChrome::asset_version( 'settings.css' ) );
 		}
 	}
 	/**

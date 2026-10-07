@@ -203,6 +203,10 @@
     "de_DE": "Untermenü-Ebenen",
     "de_DE_formal": "Untermenü-Ebenen"
   },
+  "Choose ZIP": {
+    "de_DE": "ZIP auswählen",
+    "de_DE_formal": "ZIP auswählen"
+  },
   "Choose a menu directly to keep it through theme changes. The location option is provided for upgrades from 3.x.": {
     "de_DE": "Eine direkte Menüauswahl bleibt beim Theme-Wechsel erhalten. Die bisherige Menüposition dient dem Umstieg von Version 3.x.",
     "de_DE_formal": "Eine direkte Menüauswahl bleibt beim Theme-Wechsel erhalten. Die bisherige Menüposition dient dem Umstieg von Version 3.x."
@@ -490,6 +494,10 @@
   "Improved": {
     "de_DE": "Verbessert",
     "de_DE_formal": "Verbessert"
+  },
+  "Install": {
+    "de_DE": "Installieren",
+    "de_DE_formal": "Installieren"
   },
   "Install Plugin": {
     "de_DE": "Plugin installieren",
@@ -1083,6 +1091,10 @@
     "de_DE": "Katalogfreigaben online aktualisieren",
     "de_DE_formal": "Katalogfreigaben online aktualisieren"
   },
+  "Review package": {
+    "de_DE": "Paket prüfen",
+    "de_DE_formal": "Paket prüfen"
+  },
   "Same version — files may still differ": {
     "de_DE": "Gleiche Version — Dateien können trotzdem abweichen",
     "de_DE_formal": "Gleiche Version — Dateien können trotzdem abweichen"
@@ -1226,6 +1238,10 @@
   "Source: GitHub": {
     "de_DE": "Quelle: GitHub",
     "de_DE_formal": "Quelle: GitHub"
+  },
+  "Steps:": {
+    "de_DE": "Schritte:",
+    "de_DE_formal": "Schritte:"
   },
   "Stored data": {
     "de_DE": "Gespeicherte Daten",
