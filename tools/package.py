@@ -11,7 +11,7 @@ out=Path(args.output or root/'dist').resolve();out.mkdir(parents=True,exist_ok=T
 version=re.search(r'Version:\s*(\d+\.\d+\.\d+)',(root/'multisite-toolbar-additions.php').read_text()).group(1)
 explicit={'multisite-toolbar-additions.php','uninstall.php','index.php','LICENSE','readme.txt','readme-de.txt','readme-de-formal.txt','SECURITY.md','SECURITY-de.md'}
 styles={'upload.css','upload.js','editor.css','toolbar.css','settings.css','settings.js','deckerweb-footer.css','deckerweb-footer.js'}
-brand={'icon.svg','icon-128x128.png','icon-256x256.png','icon-mono.svg',*[f'banner-{lang}-{size}.png' for lang in ('en','de') for size in ('772x250','1544x500')]}
+brand={'FONT-LICENSE.txt','icon.svg','icon-128x128.png','icon-256x256.png','icon-mono.svg',*[f'banner-{lang}-{size}.png' for lang in ('en','de') for size in ('772x250','1544x500')]}
 docs={'changelog.txt','changelog-de.txt','changelog-full.txt','changelog-full-de.txt',*[f'{name}{suffix}.md' for name in ('LIBRARIES','DATA','MIGRATION-4.0','RELEASE-POLICY','GLOSSARY') for suffix in ('','-de')]}
 files=sorted(p for p in root.rglob('*') if p.is_file() and not set(p.relative_to(root).parts)&{'.git','__pycache__','dist'} and out not in p.parents and p.name!='.DS_Store')
 built=[]

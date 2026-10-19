@@ -177,4 +177,4 @@ David Decker entwickelt und pflegt dieses Plugin seit 2012. Die Serie QuickNav e
 
 © 2012–2026 David Decker – DECKERWEB. [GPL v2 or later](LICENSE).
 
-Library und Updater: David Decker, GPL-2.0-or-later. Footer und Änderungsverlauf basieren auf den öffentlichen deckerweb Referenzplugins. Launch-Rail-Grafiken: David Decker, GPL-2.0-or-later; lokale Systemschriften. Quellen und Komponentenstände: [Gemeinsame Komponenten](docs/LIBRARIES-de.md).
+Library und Updater: David Decker, GPL-2.0-or-later. Footer und Änderungsverlauf basieren auf den öffentlichen deckerweb Referenzplugins. Launch-Rail-Grafiken: David Decker, GPL-2.0-or-later; Manrope, SIL OFL 1.1. Quellen und Komponentenstände: [Gemeinsame Komponenten](docs/LIBRARIES-de.md).

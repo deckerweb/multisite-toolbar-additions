@@ -177,4 +177,4 @@ David Decker has developed and maintained this plugin since 2012. The QuickNav f
 
 © 2012–2026 David Decker – DECKERWEB. [GPL v2 or later](LICENSE).
 
-Library and Updater: David Decker, GPL-2.0-or-later. Footer and release history are based on public deckerweb reference plugins. Launch Rail artwork: David Decker, GPL-2.0-or-later; local system fonts. Sources and component versions: [Shared components](docs/LIBRARIES.md).
+Library and Updater: David Decker, GPL-2.0-or-later. Footer and release history are based on public deckerweb reference plugins. Launch Rail artwork: David Decker, GPL-2.0-or-later; Manrope, SIL OFL 1.1. Sources and component versions: [Shared components](docs/LIBRARIES.md).

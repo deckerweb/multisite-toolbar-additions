@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc"><title id="title">Multisite Toolbar Additions — Launch Rail</title><desc id="desc">A toolbar rail connects two website tiles. An orange shortcut arrow jumps beyond the rail.</desc><rect width="256" height="256" rx="58" fill="#123640"/>
-<path d="M72 98v45q0 18 18 18h31M124 99v70" fill="none" stroke="#b9eed9" stroke-width="12" stroke-linecap="round"/>
-<rect x="38" y="50" width="180" height="62" rx="18" fill="#f6f3e9"/>
-<rect x="52" y="65" width="36" height="32" rx="8" fill="#123640"/>
-<rect x="99" y="65" width="36" height="32" rx="8" fill="#123640"/>
-<rect x="146" y="65" width="58" height="32" rx="8" fill="#b9eed9"/>
-<rect x="45" y="155" width="48" height="43" rx="11" fill="#b9eed9"/>
-<path d="M58 170h21" stroke="#123640" stroke-width="5" stroke-linecap="round"/>
-<rect x="104" y="155" width="44" height="43" rx="11" fill="#f6f3e9"/>
-<path d="M116 170h19" stroke="#123640" stroke-width="5" stroke-linecap="round"/>
-<path d="m158 141 69-20-20 69-18-19-21 21-16-16 21-21Z" fill="#fa815f"/>
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc"><title id="title">Multisite Toolbar Additions — Launch Rail</title><desc id="desc">A toolbar rail connects two website tiles. An orange shortcut arrow jumps beyond the rail.</desc><defs><linearGradient id="icon-background" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#102b3c" /><stop offset="1" stop-color="#194951" /></linearGradient></defs><rect width="256" height="256" rx="58" fill="url(#icon-background)" />
+<path d="M72 98v45q0 18 18 18h31M124 99v70" fill="none" stroke="#b9eed9" stroke-width="12" stroke-linecap="round" />
+<rect x="38" y="50" width="180" height="62" rx="18" fill="#f6f3e9" />
+<rect x="52" y="65" width="36" height="32" rx="8" fill="#123640" />
+<rect x="99" y="65" width="36" height="32" rx="8" fill="#123640" />
+<rect x="146" y="65" width="58" height="32" rx="8" fill="#b9eed9" />
+<rect x="45" y="155" width="48" height="43" rx="11" fill="#b9eed9" />
+<path d="M58 170h21" stroke="#123640" stroke-width="5" stroke-linecap="round" />
+<rect x="104" y="155" width="44" height="43" rx="11" fill="#f6f3e9" />
+<path d="M116 170h19" stroke="#123640" stroke-width="5" stroke-linecap="round" />
+<path d="m158 141 69-20-20 69-18-19-21 21-16-16 21-21Z" fill="#fa815f" />
 </svg>
