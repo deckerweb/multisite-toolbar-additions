@@ -62,13 +62,13 @@ Plugin und Theme stehen am Ende der Gruppe + Neu, auch nach spät registrierten 
 
 ### Wie funktionieren die Plugin- und Theme-ZIP-Uploader?
 
-Ist Leitstand aktiv und sein Uploader für dich verfügbar, führen Toolbar und Adminmenü zu dessen Seiten; doppelte Upload-Seiten werden vermieden. Sonst stellt dieses Plugin eigene Seiten mit Drag-and-drop, Größenprüfung und temporärer Metadatenvorschau bereit. Installation und Ersetzen übernimmt WordPress. Ohne JavaScript funktioniert der native Upload direkt. Die Vorschau ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Sie verwendet keinen Leitstand-Nutzungsindex. In Multisite gelten gemeinsame Dateien für sämtliche Websites und Netzwerke; nur entsprechend berechtigte Benutzer können installieren. Leitstand-Benutzerausschlüsse werden berücksichtigt. Die Schalter dieses Plugins steuern seine eigenen Menüverknüpfungen, nicht bereits vorhandene Leitstand-Einträge. Wähle eine ZIP-Datei, prüfe ihre Paketinformationen, bestätige das Paket und verwende darunter Plugin jetzt installieren oder Theme jetzt installieren. Die Vorschau installiert nichts. Der Uploader-Wechsel ist eine getrennte Navigation. Mehr Abstand trennt den Footer vom Arbeitsablauf. Ein eindeutig erkanntes Theme im Plugin-Uploader oder Plugin im Theme-Uploader erhält einen dezenten Hinweis mit Link zum passenden Uploader. Bekannte Typverwechslungen bieten auf dieser Seite keine Installationsaktion; mehrdeutige Pakete erhalten keine irreführende Typzuordnung.
+Ist ein gemeinsamer Upload-Anbieter aktiv und sein Uploader für dich verfügbar, führen Toolbar und Adminmenü zu dessen Seiten; doppelte Upload-Seiten werden vermieden. Sonst stellt dieses Plugin eigene Seiten mit Drag-and-drop, Größenprüfung und temporärer Metadatenvorschau bereit. Installation und Ersetzen übernimmt WordPress. Ohne JavaScript funktioniert der native Upload direkt. Die Vorschau ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Sie verwendet keinen anbieterspezifischen Nutzungsindex. In Multisite gelten gemeinsame Dateien für sämtliche Websites und Netzwerke; nur entsprechend berechtigte Benutzer können installieren. Benutzerausschlüsse des Anbieters werden berücksichtigt. Die Schalter dieses Plugins steuern seine eigenen Menüverknüpfungen, nicht bereits vorhandene Einträge des Anbieters. Wähle eine ZIP-Datei, prüfe ihre Paketinformationen, bestätige das Paket und verwende darunter Plugin jetzt installieren oder Theme jetzt installieren. Die Vorschau installiert nichts. Der Uploader-Wechsel ist eine getrennte Navigation. Mehr Abstand trennt den Footer vom Arbeitsablauf. Ein eindeutig erkanntes Theme im Plugin-Uploader oder Plugin im Theme-Uploader erhält einen dezenten Hinweis mit Link zum passenden Uploader. Bekannte Typverwechslungen bieten auf dieser Seite keine Installationsaktion; mehrdeutige Pakete erhalten keine irreführende Typzuordnung.
 
 ## Library und Updates
 
 ### Was ist die deckerweb Plugin Library?
 
-Ein gemeinsamer Installer-Reiter für freigegebene deckerweb Plugins. Library 0.6.0 prüft Paketprüfsummen und Abhängigkeiten, trennt Installation von Aktivierung und verwendet eine gemeinsam gewählte Laufzeit für teilnehmende Plugins. Der Offline-Katalog enthält eine Vorbereitungsvorschau; Online-Katalogupdates sind optional und standardmäßig aus. In Multisite muss ein teilnehmender Host netzwerkweit aktiviert sein, damit die Library in der Netzwerkverwaltung verfügbar ist.
+Ein gemeinsamer Installer-Reiter für freigegebene deckerweb Plugins. Library 1.1.0 prüft Paketprüfsummen und Abhängigkeiten, trennt Installation von Aktivierung und verwendet eine gemeinsam gewählte Laufzeit für teilnehmende Plugins. Der mitgelieferte Katalog enthält freigegebene Veröffentlichungen; Online-Katalogupdates sind optional und standardmäßig aus. In Multisite muss ein teilnehmender Host netzwerkweit aktiviert sein, damit die Library in der Netzwerkverwaltung verfügbar ist.
 
 ### Kontaktiert die Library auf jeder Seite GitHub?
 
@@ -76,7 +76,7 @@ Nein. Mitgelieferter Katalog und Grafiken funktionieren lokal. Angeforderte Pake
 
 ### Wie funktionieren Plugin-Updates?
 
-Der mitgelieferte deckerweb Updater 2.1.0 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen.
+Der mitgelieferte deckerweb Updater 2.2.0 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen.
 
 ## Deine Daten
 

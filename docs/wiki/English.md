@@ -24,7 +24,7 @@ Choose first/last, before/after a reference item or the right side. Show the men
 
 ## Upload shortcuts
 
-Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Additions under New remain last and have independent switches: Plugins on, Themes off. Both ZIP admin submenu links default to on. Upload links use active Leitstand pages or dedicated local pages with drag-and-drop and bounded metadata previews; WordPress performs installation.
+Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Additions under New remain last and have independent switches: Plugins on, Themes off. Both ZIP admin submenu links default to on. Upload links use available shared uploader pages or dedicated local pages with drag-and-drop and bounded metadata previews; WordPress performs installation.
 
 ## Multisite administration
 
@@ -32,11 +32,19 @@ Use one network-wide menu source with optional viewing by website administrators
 
 ## Shared components
 
-Library 0.6.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.1.0 uses normal WordPress updates. Assets are local; no telemetry is collected.
+Library 1.1.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.2.0 uses normal WordPress updates. Assets are local; no telemetry is collected.
 
 ## Menu preview and diagnostics
 
 Inspect the menu structure with the selected depth and grouping without saving. A compact overview explains visibility, positioning and active uploader providers. Missing sources and page-specific missing toolbar anchors are explained.
+
+## Admin Tools
+
+Active DevKit Pro, WP Debug Toolkit and WP Admin Cleaner appear in a compact group below the website toolbar entry. Verified module and settings links are available to administrators and super administrators only. Plugin access restrictions remain respected. Keep the group below the website entry or place it on the right with one of three original icons. Its label is customizable. WP Debug Toolkit opens its installed Debug Viewer first, using the configured slug; plugin settings remain directly available.
+
+## Library shortcuts
+
+The deckerweb catalog appears under New and Toolbar Settings when available. Library Settings remain accessible even when the catalog is hidden. Multisite links require an active network host and matching permissions.
 
 ## Data and permissions
 

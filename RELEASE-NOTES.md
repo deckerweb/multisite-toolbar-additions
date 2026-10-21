@@ -1,22 +1,19 @@
-# Multisite Toolbar Additions 4.1.0
+# Multisite Toolbar Additions 4.2.0
 
 ## English
 
-For single WordPress sites and Multisite networks. Both have been supported since 2012.
-
-New plugin/theme ZIP upload pages reuse active Leitstand uploaders or provide local previews with clear confirmation and type-mismatch guidance. A toolbar-style menu preview, effective-settings overview and sticky save bar make configuration easier. Both ZIP admin submenu links are enabled by default; the separate Theme addition under New remains off by default. Later explicit submenu choices remain effective.
-
-Includes Library 0.6.0 and Updater 2.1.0, stronger bulk-update package checks and controlled data cleanup. Existing menus and settings are retained. Requirements remain WordPress 6.7+ and PHP 8.2+.
+- **New:** A compact Admin Tools group links active DevKit Pro, WP Debug Toolkit and WP Admin Cleaner, with verified module/tab destinations and administrator-only access. Position, label and right-hand icon are configurable.
+- **New:** Open the deckerweb plugin catalog from New and from Toolbar Settings; shared Library settings are linked when available. Hidden catalogs and account permissions remain respected.
+- **Improved:** Library 1.1.0 and Updater 2.2.0 provide shared catalog controls, verified catalog-based updates and clearer guidance when Git Updater is active. Online catalog access remains optional and initially off.
+- **Improved:** Updated local artwork and clearer, localized administration documentation. WordPress 6.7 and PHP 8.2 requirements are unchanged.
+- **Fixed:** Documentation and changelog dialogs remain hidden when closed despite conflicting admin styles; closing also works without the document controller.
+- **Fixed:** Settings and preview requests validate incoming values at their boundaries; generated preview and document markup is restricted at output. Existing toolbar settings and WordPress menus are retained.
 
 ## Deutsch
 
-Für einzelne WordPress-Websites und Multisite-Netzwerke. Beide werden seit 2012 unterstützt.
-
-Neue Plugin-/Theme-ZIP-Seiten verwenden aktive Leitstand-Uploader oder bieten eigene Paketvorschauen mit klarer Bestätigung und Hinweisen bei vertauschten Pakettypen. Toolbar-Menüvorschau, Übersicht wirksamer Einstellungen und erreichbare Speichern-Leiste erleichtern die Konfiguration. Beide ZIP-Admin-Untermenüs sind standardmäßig aktiv; der separate Theme-Eintrag unter Neu bleibt standardmäßig aus. Spätere ausdrückliche Untermenü-Schalterentscheidungen bleiben erhalten.
-
-Enthält Library 0.6.0 und Updater 2.1.0, strengere Paketprüfungen bei Sammelupdates und geregelte Datenbereinigung. Bestehende Menüs und Einstellungen bleiben erhalten. Voraussetzungen bleiben WordPress 6.7+ und PHP 8.2+.
-
-[English guide](https://github.com/deckerweb/multisite-toolbar-additions/wiki/English) · [Deutsche Anleitung](https://github.com/deckerweb/multisite-toolbar-additions/wiki/Deutsch)
-
-Install multisite-toolbar-additions-4.1.0.zip. The source archive is separate.
-Installiere multisite-toolbar-additions-4.1.0.zip. Das Quellarchiv ist getrennt.
+- **Neu:** Eine kompakte Gruppe Admin-Werkzeuge verlinkt aktives DevKit Pro, WP Debug Toolkit und WP Admin Cleaner mit geprüften Modul-/Tab-Zielen und Zugriff nur für Administratoren. Position, Name und Icon für die rechte Position sind einstellbar.
+- **Neu:** Der deckerweb Plugin-Katalog ist unter Neu und Toolbar-Einstellungen erreichbar; verfügbare Library-Einstellungen sind ebenfalls verlinkt. Ausgeblendete Kataloge und Benutzerrechte bleiben berücksichtigt.
+- **Verbessert:** Library 1.1.0 und Updater 2.2.0 bieten gemeinsame Katalogsteuerung, geprüfte Katalogupdates und klarere Hinweise bei aktivem Git Updater. Online-Katalogabfragen bleiben optional und standardmäßig aus.
+- **Verbessert:** Aktualisierte lokale Grafiken und verständlichere, übersetzte Verwaltungsdokumentation. WordPress 6.7 und PHP 8.2 bleiben die Mindestanforderungen.
+- **Behoben:** Doku- und Changelog-Dialoge bleiben geschlossen auch bei kollidierenden Admin-Stilen unsichtbar; das Schließen funktioniert auch ohne den Dokument-Controller.
+- **Behoben:** Einstellungen und Vorschauanfragen prüfen eingehende Werte direkt bei der Übernahme; Vorschau- und Dokumentausgaben sind auf erlaubtes HTML begrenzt. Bestehende Toolbar-Einstellungen und WordPress-Menüs bleiben erhalten.

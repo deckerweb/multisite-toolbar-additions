@@ -25,6 +25,7 @@ final class Settings {
 			'child_depth' => 0, 'layout' => 'original', 'label' => '',
 			'network_links' => true, 'site_links' => true, 'subsite_links' => true,
 			'subsite_limit' => 25, 'menu_edit_links' => true, 'integrations' => true,
+			'admin_tools_position' => 'site', 'admin_tools_label' => '', 'admin_tools_icon' => 'toolbox',
 			'resources' => true, 'file_editors' => false, 'fullscreen' => true,
 			'new_plugins' => true, 'new_themes' => false, 'plugin_zip_submenu' => true, 'theme_zip_submenu' => true, 'upload_menu_defaults' => 1, 'delete_data' => false,
 		];
@@ -117,7 +118,7 @@ final class Settings {
 		foreach ( [ 'enabled', 'network_links', 'site_links', 'subsite_links', 'menu_edit_links', 'integrations', 'resources', 'file_editors', 'fullscreen', 'new_plugins', 'new_themes', 'plugin_zip_submenu', 'theme_zip_submenu', 'delete_data' ] as $key ) {
 			$out[ $key ] = isset( $input[ $key ] ) && in_array( $input[ $key ], [ '1', 1, true ], true );
 		}
-		foreach ( [ 'context' => [ 'both', 'admin', 'frontend' ], 'audience' => [ 'administrators', 'site_administrators' ], 'position' => [ 'first', 'last', 'before', 'after', 'right' ], 'anchor' => [ 'wp-logo', 'my-sites', 'site-name', 'updates', 'new-content', 'comments' ], 'layout' => [ 'original', 'grouped' ] ] as $key => $allowed ) {
+		foreach ( [ 'context' => [ 'both', 'admin', 'frontend' ], 'audience' => [ 'administrators', 'site_administrators' ], 'position' => [ 'first', 'last', 'before', 'after', 'right' ], 'anchor' => [ 'wp-logo', 'my-sites', 'site-name', 'updates', 'new-content', 'comments' ], 'admin_tools_position' => [ 'site', 'right' ], 'admin_tools_icon' => [ 'toolbox', 'compass', 'sliders' ], 'layout' => [ 'original', 'grouped' ] ] as $key => $allowed ) {
 			if ( isset( $input[ $key ] ) && is_string( $input[ $key ] ) && in_array( $input[ $key ], $allowed, true ) ) {
 				$out[ $key ] = $input[ $key ];
 			}
@@ -131,6 +132,7 @@ final class Settings {
 		$out['subsite_limit'] = max( 1, min( 100, $out['subsite_limit'] ) );
 		$out['label'] = isset( $input['label'] ) && is_string( $input['label'] ) ? sanitize_text_field( $input['label'] ) : $out['label'];
 		$out['label'] = wp_html_excerpt( $out['label'], 80, '' );
+		$out['admin_tools_label'] = isset( $input['admin_tools_label'] ) && is_string( $input['admin_tools_label'] ) ? wp_html_excerpt( sanitize_text_field( $input['admin_tools_label'] ), 80, '' ) : '';
 		if ( '' === $out['label'] ) {
 			$out['label'] = self::defaults()['label'];
 		}

@@ -10,5 +10,5 @@ require_once __DIR__ . '/src/Lifecycle.php';
 \Deckerweb\MultisiteToolbar\Lifecycle::uninstall();
 if ( is_readable( __DIR__ . '/includes/deckerweb-plugin-library/lifecycle.php' ) ) {
 	require_once __DIR__ . '/includes/deckerweb-plugin-library/lifecycle.php';
-	if ( function_exists( 'deckerweb_library_uninstall_v2' ) ) { deckerweb_library_uninstall_v2( __DIR__ . '/multisite-toolbar-additions.php' ); }
+	if ( function_exists( 'deckerweb_library_uninstall_v3' ) ) { deckerweb_library_uninstall_v3( __DIR__ . '/multisite-toolbar-additions.php' ); }
 }

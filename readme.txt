@@ -5,7 +5,7 @@ Tags: toolbar, admin bar, multisite, navigation
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 4.1.0
+Stable tag: 4.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,10 +23,12 @@ I created Multisite Toolbar Additions in 2012 for my own needs. Since then, it h
 
 * Select a source site and menu independently of your theme. Keep root entries separate or group them under the menu’s name. A custom label is optional.
 * Choose first/last, before/after a reference item or the right side. Show the menu on the frontend, in administration or both. Choose one to ten child levels, or all. Missing references fall back to the end.
-* Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Additions under New remain last and have independent switches: Plugins on, Themes off. Both ZIP admin submenu links default to on. Upload links use active Leitstand pages or dedicated local pages with drag-and-drop and bounded metadata previews; WordPress performs installation.
+* Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Additions under New remain last and have independent switches: Plugins on, Themes off. Both ZIP admin submenu links default to on. Upload links use available shared uploader pages or dedicated local pages with drag-and-drop and bounded metadata previews; WordPress performs installation.
 * Use one network-wide menu source with optional viewing by website administrators. Shared menus remain editable only by super administrators. Destination permissions still apply; website expansion is bounded.
-* Library 0.6.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.1.0 uses normal WordPress updates. Assets are local; no telemetry is collected.
+* Library 1.1.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.2.0 uses normal WordPress updates. Assets are local; no telemetry is collected.
 * Inspect the menu structure with the selected depth and grouping without saving. A compact overview explains visibility, positioning and active uploader providers. Missing sources and page-specific missing toolbar anchors are explained.
+* Active DevKit Pro, WP Debug Toolkit and WP Admin Cleaner appear in a compact group below the website toolbar entry. Verified module and settings links are available to administrators and super administrators only. Plugin access restrictions remain respected. Keep the group below the website entry or place it on the right with one of three original icons. Its label is customizable. WP Debug Toolkit opens its installed Debug Viewer first, using the configured slug; plugin settings remain directly available.
+* The deckerweb catalog appears under New and Toolbar Settings when available. Library Settings remain accessible even when the catalog is hidden. Multisite links require an active network host and matching permissions.
 
 == Installation ==
 
@@ -56,7 +58,7 @@ Both Plugin ZIP and Theme ZIP admin submenu links are enabled. The previous hidd
 
 = How do plugin updates work? =
 
-The bundled deckerweb Updater 2.1.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
+The bundled deckerweb Updater 2.2.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
 
 = What happens when I deactivate or uninstall? =
 
@@ -66,9 +68,18 @@ FAQ by topic: https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-
 
 == Changelog ==
 
+= 4.2.0 · 2026-10-21 =
+
+* New: A compact Admin Tools group links active DevKit Pro, WP Debug Toolkit and WP Admin Cleaner, with verified module/tab destinations and administrator-only access. Position, label and right-hand icon are configurable.
+* New: Open the deckerweb plugin catalog from New and from Toolbar Settings; shared Library settings are linked when available. Hidden catalogs and account permissions remain respected.
+* Improved: Library 1.1.0 and Updater 2.2.0 provide shared catalog controls, verified catalog-based updates and clearer guidance when Git Updater is active. Online catalog access remains optional and initially off.
+* Improved: Updated local artwork and clearer, localized administration documentation. WordPress 6.7 and PHP 8.2 requirements are unchanged.
+* Fixed: Documentation and changelog dialogs remain hidden when closed despite conflicting admin styles; closing also works without the document controller.
+* Fixed: Settings and preview requests validate incoming values at their boundaries; generated preview and document markup is restricted at output. Existing toolbar settings and WordPress menus are retained.
+
 = 4.1.0 · 2026-10-07 =
 
-* New: Dedicated plugin and theme ZIP upload pages include drag-and-drop, package previews and explicit installation confirmation. Active Leitstand uploaders are reused without duplicate pages.
+* New: Dedicated plugin and theme ZIP upload pages include drag-and-drop, package previews and explicit installation confirmation. Available shared uploaders are reused without duplicate pages.
 * New: Preview menu structure, grouping and child levels without saving; see effective settings, active uploaders and explanations for missing menu sources or toolbar reference items.
 * Improved: A sticky save bar keeps saving accessible and warns before discarding unsaved changes. The group-label field is larger.
 * Improved: Both ZIP admin submenu links are enabled by default; the previous hidden Theme submenu default transitions once. Later explicit choices remain respected. The separate Theme addition under New remains off by default.
@@ -117,14 +128,10 @@ FAQ by topic: https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-
 * New: A DECKERWEB plugin newsletter is available.
 * Improved: Recommendations library 1.4.0 and German Du/Sie translations were updated.
 
-= 1.9.4 · 2018-11-03 =
-
-* Improved: Recommendations library 1.2.0 improves installer styles and Dark Mode compatibility.
-
 == Upgrade Notice ==
 
-= 4.1.0 =
-Adds ZIP upload pages and menu previews. Both ZIP admin submenu links default to enabled; the Theme addition under New remains disabled by default. Settings and WordPress menus are retained. WordPress 6.7/PHP 8.2 requirements are unchanged.
+= 4.2.0 =
+Adds Admin Tools and Library shortcuts; updates shared components and dialogs. Settings and WordPress menus are retained. WordPress 6.7/PHP 8.2 requirements are unchanged.
 
 == Credits ==
 

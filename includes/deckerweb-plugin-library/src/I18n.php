@@ -1,6 +1,6 @@
 <?php
 /** Copyright 2026 David Decker – DECKERWEB. SPDX-License-Identifier: GPL-2.0-or-later */
-namespace Deckerweb\PluginLibrary\V0_6_0;
+namespace Deckerweb\PluginLibrary\V1_1_0;
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 /** Load component messages into the elected host's existing domain, never an extra domain. */
 final class I18n {
@@ -27,7 +27,7 @@ final class I18n {
   * Load the current locale into the host domain and translate one source message.
   *
   * @param string $message English source message.
-  * @return string Result of the operation; errors are returned or rejected as documented by the caller.
+  * @return string Translated message or original English when no translation is available.
   */
  public static function text( string $message ): string {
   $locale = determine_locale();
@@ -49,7 +49,7 @@ final class I18n {
   * Format a component date using site preferences and localized day or month names.
   *
   * @param string $iso ISO date from the local release history.
-  * @return string Result of the operation; errors are returned or rejected as documented by the caller.
+  * @return string Localized formatted date using the current site date format.
   */
  public static function date( string $iso ): string {
   $format = get_option( 'date_format' );

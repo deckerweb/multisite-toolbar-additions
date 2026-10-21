@@ -21,6 +21,7 @@ final class MenuPreview {
 			'error' => __( 'The preview could not be updated. Your settings have not been changed.', 'multisite-toolbar-additions' ),
 			'anchor' => __( 'The reference item is missing on this page. The menu will appear last on the left here.', 'multisite-toolbar-additions' ),
 			'anchorScope' => __( 'Position checks describe this page only. Frontend and other admin pages can have different toolbar items.', 'multisite-toolbar-additions' ),
+			/* translators: Placeholder values are the displayed count, website identifier or formatted upload size. */
 			'level' => __( 'Level %d', 'multisite-toolbar-additions' ),
 			'saved' => __( 'All changes saved', 'multisite-toolbar-additions' ),
 			'unsaved' => __( 'Unsaved changes', 'multisite-toolbar-additions' ),
@@ -77,7 +78,7 @@ final class MenuPreview {
 		$summary[ __( 'ZIP submenu links', 'multisite-toolbar-additions' ) ] = 'Plugin: ' . ( $settings->get( 'plugin_zip_submenu' ) ? __( 'Enabled', 'multisite-toolbar-additions' ) : __( 'Disabled', 'multisite-toolbar-additions' ) ) . ' · Theme: ' . ( $settings->get( 'theme_zip_submenu' ) ? __( 'Enabled', 'multisite-toolbar-additions' ) : __( 'Disabled', 'multisite-toolbar-additions' ) );
 		$summary[ __( 'Additions under New', 'multisite-toolbar-additions' ) ] = 'Plugin: ' . ( $settings->get( 'new_plugins' ) ? __( 'Enabled', 'multisite-toolbar-additions' ) : __( 'Disabled', 'multisite-toolbar-additions' ) ) . ' · Theme: ' . ( $settings->get( 'new_themes' ) ? __( 'Enabled', 'multisite-toolbar-additions' ) : __( 'Disabled', 'multisite-toolbar-additions' ) );
 		foreach ( [ 'plugin', 'theme' ] as $type ) {
-			$summary[ self::uploader_label( $type ) ] = ! Uploads::allowed( $type ) ? __( 'Unavailable for your account', 'multisite-toolbar-additions' ) : ( Uploads::leitstand( $type ) ? 'Leitstand' : 'Multisite Toolbar Additions' );
+			$summary[ self::uploader_label( $type ) ] = ! Uploads::allowed( $type ) ? __( 'Unavailable for your account', 'multisite-toolbar-additions' ) : ( Uploads::leitstand( $type ) ? __( 'Shared uploader', 'multisite-toolbar-additions' ) : 'Multisite Toolbar Additions' );
 		}
 		return [ 'rows' => $rows, 'summary' => $summary, 'warnings' => $warnings, 'group' => 'grouped' === $settings->get( 'layout' ) ? ( $settings->get( 'label' ) ?: $name ) : '', 'position' => $settings->get( 'position' ), 'anchor' => $settings->get( 'anchor' ) ];
 	}
@@ -120,10 +121,11 @@ final class MenuPreview {
 		foreach ( $data['rows'] as $index => $row ) {
 			while ( $stack && end( $stack ) >= $row['depth'] ) { array_pop( $stack ); echo '</ul></details></li>'; }
 			$has_children = isset( $data['rows'][ $index + 1 ] ) && $data['rows'][ $index + 1 ]['depth'] > $row['depth'];
-			echo '<li style="--mstba-level:' . min( 4, $row['depth'] ) . '">';
+			echo '<li class="mstba-level-' . esc_attr( min( 4, $row['depth'] ) ) . '">';
+			/* translators: Placeholder values are the displayed count, website identifier or formatted upload size. */
 			$title = esc_html( $row['title'] ) . '<span class="screen-reader-text"> · ' . esc_html( sprintf( __( 'Level %d', 'multisite-toolbar-additions' ), $row['depth'] ) ) . '</span>';
-			if ( $has_children ) { echo '<details open><summary>' . $title . '</summary><ul>'; $stack[] = $row['depth']; }
-			else { echo '<span class="mstba-model-label">' . $title . '</span></li>'; }
+			if ( $has_children ) { echo '<details open><summary>' . wp_kses( $title, [ 'span' => [ 'class' => true ] ] ) . '</summary><ul>'; $stack[] = $row['depth']; }
+			else { echo '<span class="mstba-model-label">' . wp_kses( $title, [ 'span' => [ 'class' => true ] ] ) . '</span></li>'; }
 		}
 		while ( $stack ) { array_pop( $stack ); echo '</ul></details></li>'; }
 		echo '</ul>';
@@ -136,10 +138,10 @@ final class MenuPreview {
 	 * @return void
 	 */
 	public static function action(): void {
-		if ( 'POST' !== ( $_SERVER['REQUEST_METHOD'] ?? '' ) || ! current_user_can( Settings::capability() ) ) { wp_send_json_error( [ 'message' => __( 'Access denied.', 'multisite-toolbar-additions' ) ], 403 ); }
+		if ( 'POST' !== ( isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) : '' ) || ! current_user_can( Settings::capability() ) ) { wp_send_json_error( [ 'message' => __( 'Access denied.', 'multisite-toolbar-additions' ) ], 403 ); }
 		check_ajax_referer( 'mstba_menu_preview', 'nonce' );
 		$settings = new Settings();
-		$values = $settings->sanitize( isset( $_POST['mstba'] ) ? wp_unslash( $_POST['mstba'] ) : [] );
+		$values = $settings->sanitize( isset( $_POST['mstba'] ) ? map_deep( wp_unslash( $_POST['mstba'] ), 'sanitize_text_field' ) : [] );
 		if ( is_wp_error( $values ) ) { wp_send_json_error( [ 'message' => $values->get_error_message() ], 400 ); }
 		wp_send_json_success( self::snapshot( Settings::preview( $values ) ) );
 	}

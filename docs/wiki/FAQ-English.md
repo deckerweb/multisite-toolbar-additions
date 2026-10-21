@@ -62,13 +62,13 @@ Plugin and theme additions are moved to the end of the + New group, including af
 
 ### How do the plugin and theme ZIP uploaders work?
 
-When Leitstand is active and its uploader is accessible to you, the toolbar and admin menu use its pages without duplicate upload screens. Otherwise this plugin provides its own pages with drag-and-drop, size validation and temporary metadata previews. WordPress handles installation and replacement. Native uploads work directly without JavaScript. Previews are not malware scans or compatibility guarantees and do not use the Leitstand usage index. Multisite files are shared across all websites and networks; installation remains restricted to authorized users. Leitstand user exclusions are respected. This plugin’s switches control its own menu links, not existing Leitstand entries. Choose one ZIP, review its metadata, confirm the package and use Install plugin now or Install theme now beneath the result. No installation happens during preview. The uploader switch is separate navigation. More space separates the footer from the workflow. An unambiguously detected theme in the plugin uploader, or plugin in the theme uploader, shows a discreet notice and a link to the correct uploader. Known mismatches provide no installation action on that page; ambiguous packages are not assigned a misleading type.
+When another uploader provider is active and its uploader is accessible to you, the toolbar and admin menu use its pages without duplicate upload screens. Otherwise this plugin provides its own pages with drag-and-drop, size validation and temporary metadata previews. WordPress handles installation and replacement. Native uploads work directly without JavaScript. Previews are not malware scans or compatibility guarantees and do not use a provider-specific usage index. Multisite files are shared across all websites and networks; installation remains restricted to authorized users. Provider-specific user exclusions are respected. This plugin’s switches control its own menu links, not existing provider entries. Choose one ZIP, review its metadata, confirm the package and use Install plugin now or Install theme now beneath the result. No installation happens during preview. The uploader switch is separate navigation. More space separates the footer from the workflow. An unambiguously detected theme in the plugin uploader, or plugin in the theme uploader, shows a discreet notice and a link to the correct uploader. Known mismatches provide no installation action on that page; ambiguous packages are not assigned a misleading type.
 
 ## Library and updates
 
 ### What is the deckerweb Plugin Library?
 
-A shared installer tab for approved deckerweb plugins. Library 0.6.0 checks package hashes and dependencies, separates installation from activation and uses one elected runtime across participating hosts. The offline catalog includes a preparation preview; online catalog updates are optional and off by default. In Multisite, network-activate a participating host to make the Library available in Network Admin.
+A shared installer tab for approved deckerweb plugins. Library 1.1.0 checks package hashes and dependencies, separates installation from activation and uses one elected runtime across participating hosts. The offline catalog includes a preparation preview; online catalog updates are optional and off by default. In Multisite, network-activate a participating host to make the Library available in Network Admin.
 
 ### Does the library contact GitHub on every page?
 
@@ -76,7 +76,7 @@ No. Its bundled catalog and artwork work locally. Package downloads contact thei
 
 ### How do plugin updates work?
 
-The bundled deckerweb Updater 2.1.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
+The bundled deckerweb Updater 2.2.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
 
 ## Your data
 

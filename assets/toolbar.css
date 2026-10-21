@@ -25,3 +25,15 @@
 		box-shadow: none;
 	}
 }
+
+#wpadminbar #wp-admin-bar-ddw-mstba-admin-tools .ab-icon::before { content: none; }
+#wpadminbar .mstba-tools-root > .ab-item .ab-icon { width: 20px; margin-right: 6px; }
+#wpadminbar .mstba-tool-icon { display: block; margin-top: 0; }
+@media screen and (max-width: 782px) {
+ #wpadminbar li.mstba-tools-root { display: block; }
+ #wpadminbar .mstba-tools-root > .ab-item .ab-icon { width: 24px; height: 24px; margin: 10px 0 0; padding: 0; }
+ #wpadminbar .mstba-tools-root .mstba-tool-icon { width: 24px; height: 24px; }
+ #wpadminbar .mstba-tools-root > .ab-item .mstba-tools-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+ #wpadminbar .mstba-tools-root > .ab-sub-wrapper { position: fixed; top: 46px; left: 0; right: 0; width: 100%; max-height: calc(100vh - 46px); overflow-y: auto; }
+ #wpadminbar .mstba-tools-root .ab-sub-wrapper .ab-sub-wrapper { position: static; margin-left: 12px; min-width: 0; box-shadow: none; }
+}

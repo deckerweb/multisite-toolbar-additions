@@ -76,7 +76,7 @@ try {
  file_put_contents( $peer_dir . '/includes/deckerweb-plugin-library/bootstrap.php', "<?php // Installed inactive Library host.\n" );
  update_site_option( 'deckerweb_library_settings_v1', [ 'delete_settings' => true, 'online' => false ] );
  update_site_option( 'deckerweb_library_installed_v1', [ 'foreign-plugin' => 'Retain installed plugin record' ] );
- lifecycle_check( ! deckerweb_library_uninstall_v2( MSTBA_PLUGIN_FILE ), 'Inactive installed peer prevents final-host cleanup' );
+ lifecycle_check( ! deckerweb_library_uninstall_v3( MSTBA_PLUGIN_FILE ), 'Inactive installed peer prevents final-host cleanup' );
  lifecycle_check( false !== get_site_option( 'deckerweb_library_settings_v1', false ), 'Shared preferences retained for inactive peer' );
  unlink( $peer_dir . '/includes/deckerweb-plugin-library/bootstrap.php' );
  unlink( $peer_dir . '/mstba-lifecycle-peer.php' );
@@ -85,12 +85,12 @@ try {
  $lib_cache = 'dwl_catalog_' . md5( 'https://raw.githubusercontent.com/deckerweb/example/main/catalog.json' );
  set_site_transient( $lib_cache, [ 'test' => true ], 300 );
  update_site_option( 'deckerweb_library_cache_keys_v2', [ $lib_cache ] );
- lifecycle_check( deckerweb_library_uninstall_v2( MSTBA_PLUGIN_FILE ), 'Last installed host cleanup runs' );
+ lifecycle_check( deckerweb_library_uninstall_v3( MSTBA_PLUGIN_FILE ), 'Last installed host cleanup runs' );
  lifecycle_check( false === get_site_transient( $lib_cache ), 'Final-host cleanup removes tracked Library cache' );
  lifecycle_check( false !== get_site_option( 'deckerweb_library_settings_v1', false ), 'Library preferences retained by default' );
  lifecycle_check( false !== get_site_option( 'deckerweb_library_installed_v1', false ), 'Library install records retained by default' );
  update_site_option( 'deckerweb_library_settings_v1', [ 'delete_settings' => true ] );
- lifecycle_check( deckerweb_library_uninstall_v2( MSTBA_PLUGIN_FILE ), 'Explicit Library deletion runs only for final host' );
+ lifecycle_check( deckerweb_library_uninstall_v3( MSTBA_PLUGIN_FILE ), 'Explicit Library deletion runs only for final host' );
  lifecycle_check( false === get_site_option( 'deckerweb_library_settings_v1', false ), 'Explicit Library deletion removes own preferences' );
  lifecycle_check( false === get_site_option( 'deckerweb_library_installed_v1', false ), 'Explicit Library deletion removes own install records' );
  lifecycle_check( is_file( MSTBA_PLUGIN_FILE ), 'No installed host or plugin content is removed by cleanup' );

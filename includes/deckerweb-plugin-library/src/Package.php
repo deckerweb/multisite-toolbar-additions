@@ -1,6 +1,6 @@
 <?php
 /** Copyright 2026 David Decker – DECKERWEB. SPDX-License-Identifier: GPL-2.0-or-later */
-namespace Deckerweb\PluginLibrary\V0_6_0;
+namespace Deckerweb\PluginLibrary\V1_1_0;
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /** Verify the original release, then normalize a bounded, single-plugin archive. */
@@ -11,7 +11,7 @@ final class Package {
 	 * Download a bounded approved ZIP and return its verified normalized archive.
 	 *
 	 * @param array $entry Validated approved catalog entry and dependency metadata.
-	 * @return string|\WP_Error Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return string|\WP_Error Verified normalized temporary ZIP path or WP_Error; caller must remove successful files.
 	 * Successful temporary archives must be removed by the caller after use.
 	 */
 	public static function download( array $entry ) {
@@ -39,9 +39,9 @@ final class Package {
 	/**
 	 * Check the original checksum and ZIP safety, then stream a normalized temporary package.
 	 *
-	 * @param string $file Plugin basename or temporary archive path as required by this operation.
+	 * @param string $file Original ZIP file path.
 	 * @param array $entry Validated approved catalog entry and dependency metadata.
-	 * @return string|\WP_Error Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return string|\WP_Error Verified normalized temporary ZIP path or WP_Error; original input file is not removed.
 	 * Successful temporary archives must be removed by the caller after use.
 	 */
 	public static function verify( string $file, array $entry ) {
@@ -109,6 +109,11 @@ final class Package {
   */
  private static function track( string $path ): void {
   $paths = get_site_option( 'deckerweb_library_temp_v2', [] );
+  /**
+   * Keep only existing tracked paths; expired entries need no deletion.
+   * @param mixed $p Candidate path from component-owned storage.
+   * @return bool Whether the path is a string naming an existing entry.
+   */
   $paths = array_values( array_filter( is_array( $paths ) ? $paths : [], static fn( $p ): bool => is_string( $p ) && file_exists( $p ) ) );
   if ( ! in_array( $path, $paths, true ) ) { $paths[] = $path; update_site_option( 'deckerweb_library_temp_v2', $paths ); }
  }

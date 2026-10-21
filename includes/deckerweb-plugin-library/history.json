@@ -1,5 +1,173 @@
 [
   {
+    "version": "1.1.0",
+    "date": "2026-10-21",
+    "changes": {
+      "Improved": [
+        {
+          "en": "Updated approved catalog and local original icons, with fewer duplicate image files. Initials use consistent subtle background colors; cards highlight on hover and keyboard focus.",
+          "de": "Aktualisierter freigegebener Katalog und lokale Originalicons mit weniger Bild-Doppeldateien. Kürzel erhalten dezente Hintergrundfarben; Karten reagieren auf Maus und Tastaturfokus."
+        }
+      ],
+      "Fixed": [
+        {
+          "en": "Stricter normalization of administration inputs and contextual protection of catalog output.",
+          "de": "Strengere Bereinigung von Admin-Eingaben und kontextgerechte Absicherung der Katalogausgabe."
+        },
+        {
+          "en": "Inline updates work with Git Updater nonce checks without weakening Library authorization; failed actions retain their error styling.",
+          "de": "Inline-Updates berücksichtigen die Nonce-Prüfung von Git Updater, ohne die Library-Autorisierung abzuschwächen; fehlgeschlagene Aktionen bleiben als Fehler erkennbar."
+        },
+        {
+          "en": "Explicit catalog updates recognize matching GitHub source-archive offers while installing only the approved, checksum-verified release asset.",
+          "de": "Gezielte Katalogupdates erkennen passende GitHub-Quellarchivangebote und installieren weiterhin ausschließlich das freigegebene Release-ZIP mit geprüfter Prüfsumme."
+        }
+      ]
+    }
+  },
+  {
+    "version": "1.0.0",
+    "date": "2026-10-15",
+    "changes": {
+      "New": [
+        {
+          "en": "Personal catalog sorting, stable random discovery and copyable technical information in Library settings.",
+          "de": "Persönliche Katalogsortierung, stabile Zufallsansicht und kopierbare technische Informationen in den Library-Einstellungen."
+        }
+      ],
+      "Improved": [
+        {
+          "en": "Remembered filters, clearer catalog provenance and plugin activation states, refreshed approved releases and local original icons.",
+          "de": "Gespeicherte Filter, klarer Katalogstatus und Plugin-Aktivierungszustand, aktualisierte freigegebene Releases und lokale Originalicons."
+        }
+      ],
+      "Fixed": [
+        {
+          "en": "Inline installation supplies native plugin identity for Git Updater compatibility. Changelog dialogs retain native close and documentation-link fallbacks.",
+          "de": "Inline-Installationen übergeben die native Pluginidentität für die Zusammenarbeit mit Git Updater. Verlaufsdialoge behalten native Schließ- und Dokumentationslink-Fallbacks."
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.9.0",
+    "date": "2026-10-10",
+    "changes": {
+      "New": [
+        {
+          "en": "Update verified installed catalog plugins directly in their cards, including older releases without an updater.",
+          "de": "Geprüfte installierte Katalogplugins direkt in ihren Karten aktualisieren, einschließlich älterer Releases ohne Updater."
+        },
+        {
+          "en": "Catalog-defined series, localized categories, ordering and versioned safe-pause dependency rules.",
+          "de": "Katalogdefinierte Serien, übersetzte Kategorien, Reihenfolge und versionsabhängige Regeln für sichere Funktionspausen."
+        }
+      ],
+      "Improved": [
+        {
+          "en": "Current approved catalog packages and local original icons, including Builder Content Guide and the Admin series.",
+          "de": "Aktuelle freigegebene Katalogpakete und lokale Originalicons, einschließlich Builder Content Guide und Admin-Serie."
+        },
+        {
+          "en": "Save shared preferences in place and keep Library operations inside WordPress administration.",
+          "de": "Gemeinsame Einstellungen direkt speichern und Library-Aktionen innerhalb der WordPress-Verwaltung halten."
+        }
+      ],
+      "Fixed": [
+        {
+          "en": "Early fallback messages use host translation resources; activation handoff documentation is directly attached to the function.",
+          "de": "Frühe Ausfallmeldungen verwenden Host-Sprachressourcen; die Aktivierungsübergabe ist direkt an der Funktion dokumentiert."
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.8.1",
+    "date": "2026-10-08",
+    "changes": {
+      "Fixed": [
+        {
+          "en": "Final-host uninstall removes current catalog and update caches as well as legacy caches.",
+          "de": "Beim Entfernen des letzten Hosts werden aktuelle Katalog- und Update-Caches ebenso wie ältere Caches bereinigt."
+        },
+        {
+          "en": "The current uninstall entry point remains effective when an older cleanup copy was loaded first.",
+          "de": "Der aktuelle Deinstallationseinstieg bleibt wirksam, wenn zuvor eine ältere Cleanup-Kopie geladen wurde."
+        }
+      ],
+      "New": [
+        {
+          "en": "Tools and Shop catalog series, with backward-compatible metadata.",
+          "de": "Katalogserien Werkzeuge und Shop mit rückwärtskompatiblen Metadaten."
+        }
+      ],
+      "Improved": [
+        {
+          "en": "The bundled catalog includes all 20 approved plugins and their current local icons.",
+          "de": "Der mitgelieferte Katalog enthält alle 20 freigegebenen Plugins und ihre aktuellen lokalen Icons."
+        },
+        {
+          "en": "Check the plugin status after interrupted inline actions without repeating a successful operation.",
+          "de": "Nach unterbrochenen Inline-Aktionen den Plugin-Status prüfen, ohne eine erfolgreiche Aktion zu wiederholen."
+        },
+        {
+          "en": "Match builder runtime markers to the active installation and apply the versioned Oxygen QuickNav 2.0 activation contract.",
+          "de": "Builder-Laufzeitmarker der aktiven Installation zuordnen und den versionsabhängigen Aktivierungsvertrag von Oxygen QuickNav 2.0 berücksichtigen."
+        },
+        {
+          "en": "Updated Oxygen QuickNav2.0.0 and Quick Edit Featured Image1.4.0 packages, requirements and original icons.",
+          "de": "Pakete, Voraussetzungen und Originalicons von Oxygen QuickNav2.0.0 und Quick Edit Featured Image1.4.0 aktualisiert."
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.7.0",
+    "date": "2026-10-07",
+    "changes": {
+      "Improved": [
+        {
+          "en": "Install and activate catalog plugins directly in their cards, with inline status and errors.",
+          "de": "Katalogplugins direkt in ihrer Karte installieren und aktivieren, mit Status und Fehlern an Ort und Stelle."
+        },
+        {
+          "en": "Use the approved three-character fallback labels when no original icon is available.",
+          "de": "Die freigegebenen dreistelligen Fallback-Kürzel verwenden, wenn kein Originalicon verfügbar ist."
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.6.1",
+    "date": "2026-10-07",
+    "changes": {
+      "Improved": [
+        {
+          "en": "Updated approved plugin releases and original catalog icons.",
+          "de": "Freigegebene Plugin-Releases und originale Katalogicons aktualisiert."
+        },
+        {
+          "en": "The settings footer shows the local Library SVG icon, name and version.",
+          "de": "Der Einstellungs-Footer zeigt das lokale SVG-Icon, den Namen und die Version der Library."
+        }
+      ],
+      "Fixed": [
+        {
+          "en": "Daily Scripture 1.0.0 and newer can be network activated, including beside an older embedded Library.",
+          "de": "Daily Scripture ab 1.0.0 kann auch neben einer älteren eingebetteten Library netzwerkweit aktiviert werden."
+        },
+        {
+          "en": "Single filtered results retain normal card width on wide screens.",
+          "de": "Einzelne gefilterte Treffer behalten auf breiten Ansichten die normale Kartenbreite."
+        },
+        {
+          "en": "Multisite Toolbar Additions is also available for single websites and site activation.",
+          "de": "Multisite Toolbar Additions wird auch für einzelne Websites und Website-Aktivierung angeboten."
+        }
+      ]
+    }
+  },
+  {
     "version": "0.6.0",
     "date": "2026-10-06",
     "changes": {

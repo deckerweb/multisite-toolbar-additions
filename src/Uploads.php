@@ -24,7 +24,7 @@ final class Uploads {
 	 * @return void
 	 */
 	public static function redirect(): void {
-		if ( 'GET' !== ( $_SERVER['REQUEST_METHOD'] ?? '' ) ) { return; }
+		if ( 'GET' !== ( isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) : '' ) ) { return; }
 		$page = isset( $_GET['page'] ) && is_string( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
 		if ( ! in_array( $page, [ 'mstba-plugin-upload', 'mstba-theme-upload' ], true ) ) { return; }
 		$type = 'mstba-theme-upload' === $page ? 'theme' : 'plugin';
@@ -153,6 +153,7 @@ final class Uploads {
 		echo '<form method="post" enctype="multipart/form-data" action="' . esc_url( $action ) . '">';
 		wp_nonce_field( $type . '-upload' );
 		echo '<div class="mstba-upload-drop" data-limit="' . esc_attr( wp_max_upload_size() ) . '"><label for="mstba-package"><strong>' . esc_html__( 'Drop one ZIP file here', 'multisite-toolbar-additions' ) . '</strong></label><input id="mstba-package" type="file" name="' . esc_attr( $type . 'zip' ) . '" accept=".zip" required aria-describedby="mstba-upload-limit mstba-upload-status"><p id="mstba-upload-status" role="status" aria-live="polite"></p></div>';
+		/* translators: Placeholder values are the displayed count, website identifier or formatted upload size. */
 		echo '<p id="mstba-upload-limit">' . esc_html( sprintf( __( 'Maximum file size: %s. One ZIP package per upload.', 'multisite-toolbar-additions' ), size_format( wp_max_upload_size() ) ) ) . '</p><button class="button button-primary" type="submit" name="install-' . esc_attr( $type ) . '-submit">' . esc_html( 'plugin' === $type ? __( 'Install plugin now', 'multisite-toolbar-additions' ) : __( 'Install theme now', 'multisite-toolbar-additions' ) ) . '</button><section class="mstba-upload-preview" hidden aria-live="polite"></section></form>';
 		echo '<noscript><p>' . esc_html__( 'Without JavaScript, WordPress performs the upload and its native checks directly.', 'multisite-toolbar-additions' ) . '</p></noscript><p><a href="' . esc_url( is_multisite() ? network_admin_url( $type . 's.php' ) : admin_url( $type . 's.php' ) ) . '">' . esc_html__( 'Manage installed extensions', 'multisite-toolbar-additions' ) . '</a></p></section>';
 		$other = 'plugin' === $type ? 'theme' : 'plugin';
@@ -165,8 +166,8 @@ final class Uploads {
 	 * @return void
 	 */
 	public static function preview(): void {
-		$type = isset( $_POST['type'] ) && is_string( $_POST['type'] ) ? wp_unslash( $_POST['type'] ) : '';
-		if ( 'POST' !== ( $_SERVER['REQUEST_METHOD'] ?? '' ) || ! self::allowed( $type ) ) { wp_send_json_error( [ 'message' => __( 'Access denied.', 'multisite-toolbar-additions' ) ], 403 ); }
+		$type = isset( $_POST['type'] ) && is_string( $_POST['type'] ) ? sanitize_key( wp_unslash( $_POST['type'] ) ) : '';
+		if ( 'POST' !== ( isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) : '' ) || ! self::allowed( $type ) ) { wp_send_json_error( [ 'message' => __( 'Access denied.', 'multisite-toolbar-additions' ) ], 403 ); }
 		check_ajax_referer( 'mstba_zip_preview', 'nonce' );
 		$file = $_FILES['package'] ?? [];
 		if ( ! is_array( $file ) || ( $file['error'] ?? -1 ) !== UPLOAD_ERR_OK || ! is_string( $file['name'] ?? null ) || ! preg_match( '/\.zip$/iD', $file['name'] ) || ! is_string( $file['tmp_name'] ?? null ) || ! is_uploaded_file( $file['tmp_name'] ) ) { wp_send_json_error( [ 'message' => __( 'Choose one non-empty ZIP file within the upload limit.', 'multisite-toolbar-additions' ) ], 400 ); }
@@ -237,6 +238,7 @@ final class Uploads {
 		foreach ( [ 'wp' => get_bloginfo( 'version' ), 'php' => PHP_VERSION ] as $key => $current ) {
 			$required = $data[ $key ];
 			$state = $required && preg_match( '/^[0-9]+(?:\.[0-9]+){0,3}$/D', $required ) ? ( version_compare( $current, $required, '>=' ) ? __( 'Requirement met', 'multisite-toolbar-additions' ) : __( 'Requirement not met', 'multisite-toolbar-additions' ) ) : __( 'Unknown / not declared', 'multisite-toolbar-additions' );
+			/* translators: Placeholder values are the displayed count, website identifier or formatted upload size. */
 			$rows[ 'wp' === $key ? 'WordPress' : 'PHP' ] = sprintf( __( 'Required: %1$s · Current: %2$s · %3$s', 'multisite-toolbar-additions' ), $required ?: __( 'Unknown / not declared', 'multisite-toolbar-additions' ), $current, $state );
 		}
 		if ( $installed && $data['version'] && preg_match( '/^[0-9]+(?:\.[0-9]+){0,3}$/D', $installed ) && preg_match( '/^[0-9]+(?:\.[0-9]+){0,3}$/D', $data['version'] ) ) {

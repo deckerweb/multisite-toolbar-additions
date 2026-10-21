@@ -8,7 +8,7 @@
 #deckerweb-library h2{margin:0;font-size:22px;font-weight:400}
 #deckerweb-library .dwl-heading p{margin:6px 0 0;color:#50575e}
 #deckerweb-library .dwl-filter{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:20px}
-#deckerweb-library .dwl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+#deckerweb-library .dwl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:20px}
 #deckerweb-library .dwl-card{background:#fff;border:1px solid #c3c4c7;display:flex;flex-direction:column}
 #deckerweb-library .dwl-body{padding:22px;flex:1}
 #deckerweb-library .dwl-title{display:flex;align-items:flex-start;gap:16px}
@@ -58,3 +58,25 @@
 #deckerweb-library .dwl-series-manage-content{background:#e8f1ef;color:#31534b}
 
 #deckerweb-library .dwl-series-connect{background:#edf0f7;color:#39476a}
+
+#deckerweb-library.dwl-settings-footer{margin-top:28px;padding-top:18px;border-top:1px solid #dcdcde}
+#deckerweb-library .dwl-settings-brand{display:flex;align-items:center;gap:14px;flex-wrap:nowrap}
+#deckerweb-library .dwl-settings-brand>img{width:52px;height:52px;flex:0 0 52px}
+#deckerweb-library .dwl-settings-brand>div{min-width:0;line-height:1.8;overflow-wrap:anywhere}
+
+#deckerweb-library.dwl-settings-footer [data-dwl-history]{margin-inline-start:18px}
+.wrap .dwl-settings-catalog-link{margin:26px 0 32px;padding:8px 0}
+.wrap .dwl-settings-catalog-link .button{padding-inline:16px}
+#deckerweb-library .dwl-inline-status{margin:10px 0;color:#22713b;overflow-wrap:anywhere}
+#deckerweb-library .dwl-inline-error{color:#b32d2e}
+#deckerweb-library .dwl-action[aria-busy=true] .button{cursor:progress}
+
+#deckerweb-library .dwl-icon-fallback{font-size:20px;letter-spacing:-.3px}
+
+#dwl-history:not([open]),#dwl-history[hidden]{display:none!important} .dwl-filter-chip{display:inline-block;margin:0 8px 8px 0}.dwl-diagnostics{margin:24px 0}.dwl-diagnostics summary{cursor:pointer;font-weight:600}.dwl-catalog-status,.dwl-install-state{color:#50575e}.dwl-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
+
+/* Subtle card feedback preserves native control focus and never shifts layout. */
+#deckerweb-library .dwl-card:hover,
+#deckerweb-library .dwl-card:focus-within{border-color:#8c9aab;box-shadow:0 2px 8px rgba(30,45,65,.09)}
+@media (prefers-reduced-motion:no-preference){#deckerweb-library .dwl-card{transition:border-color .15s ease,box-shadow .15s ease}}
+@media (forced-colors:active){#deckerweb-library .dwl-card:focus-within{outline:1px solid Highlight;outline-offset:2px}}

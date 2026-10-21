@@ -53,7 +53,7 @@
    result.rows.forEach((row,index) => {
     const depth = Math.max(0,Math.min(200,Number(row.depth)||0));
     while (lists.length > depth + 1) lists.pop();
-    const li = element('li'); li.style.setProperty('--mstba-level',String(Math.min(4,depth))); (lists[depth] || tree).append(li);
+    const li = element('li'); li.classList.add('mstba-level-'+String(Math.min(4,depth))); (lists[depth] || tree).append(li);
     const label = element(index + 1 < result.rows.length && result.rows[index+1].depth > depth ? 'summary' : 'span',row.title);
     const level = element('span',' · ' + config.labels.level.replace('%d',String(depth))); level.className = 'screen-reader-text'; label.append(level);
     if (label.tagName === 'SUMMARY') { const details = element('details'); details.open = true; const children = element('ul'); details.append(label,children); li.append(details); lists[depth+1] = children; }
@@ -97,5 +97,23 @@
  window.addEventListener('beforeunload',event=>{if(!allowNavigation && dirty()){event.preventDefault();event.returnValue='';}});
  reload.hidden = false;
  reload.addEventListener('click',()=>{if(dirty() && !window.confirm(config.labels.discard))return;allowNavigation=true;window.location.reload();});
+ refresh();
+})();
+
+/* Original tools icons and label: local preview, no requests or settings writes. */
+(() => {
+ const position = document.getElementById('mstba-admin_tools_position');
+ const icon = document.getElementById('mstba-admin_tools_icon');
+ const label = document.getElementById('mstba-admin_tools_label');
+ const sample = document.getElementById('mstba-tools-sample-label');
+ if (!position || !icon || !label || !sample) return;
+ const refresh = () => {
+  document.getElementById('mstba-row-admin_tools_icon').hidden = position.value !== 'right';
+  document.querySelectorAll('[data-mstba-tools-icon]').forEach(node => { node.hidden = node.dataset.mstbaToolsIcon !== icon.value; });
+  sample.textContent = label.value.trim() || sample.dataset.default;
+ };
+ position.addEventListener('change', refresh);
+ icon.addEventListener('change', refresh);
+ label.addEventListener('input', refresh);
  refresh();
 })();

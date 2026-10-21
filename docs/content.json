@@ -1,18 +1,54 @@
 {
-  "version": "4.1.0",
+  "version": "4.2.0",
   "working_tree": {
     "en": "",
     "de": ""
   },
   "releases": [
     {
+      "version": "4.2.0",
+      "date": "2026-10-21",
+      "items": [
+        {
+          "category": "New",
+          "en": "A compact Admin Tools group links active DevKit Pro, WP Debug Toolkit and WP Admin Cleaner, with verified module/tab destinations and administrator-only access. Position, label and right-hand icon are configurable.",
+          "de": "Eine kompakte Gruppe Admin-Werkzeuge verlinkt aktives DevKit Pro, WP Debug Toolkit und WP Admin Cleaner mit geprüften Modul-/Tab-Zielen und Zugriff nur für Administratoren. Position, Name und Icon für die rechte Position sind einstellbar."
+        },
+        {
+          "category": "Fixed",
+          "en": "Documentation and changelog dialogs remain hidden when closed despite conflicting admin styles; closing also works without the document controller.",
+          "de": "Doku- und Changelog-Dialoge bleiben geschlossen auch bei kollidierenden Admin-Stilen unsichtbar; das Schließen funktioniert auch ohne den Dokument-Controller."
+        },
+        {
+          "category": "New",
+          "en": "Open the deckerweb plugin catalog from New and from Toolbar Settings; shared Library settings are linked when available. Hidden catalogs and account permissions remain respected.",
+          "de": "Der deckerweb Plugin-Katalog ist unter Neu und Toolbar-Einstellungen erreichbar; verfügbare Library-Einstellungen sind ebenfalls verlinkt. Ausgeblendete Kataloge und Benutzerrechte bleiben berücksichtigt."
+        },
+        {
+          "category": "Improved",
+          "en": "Library 1.1.0 and Updater 2.2.0 provide shared catalog controls, verified catalog-based updates and clearer guidance when Git Updater is active. Online catalog access remains optional and initially off.",
+          "de": "Library 1.1.0 und Updater 2.2.0 bieten gemeinsame Katalogsteuerung, geprüfte Katalogupdates und klarere Hinweise bei aktivem Git Updater. Online-Katalogabfragen bleiben optional und standardmäßig aus."
+        },
+        {
+          "category": "Improved",
+          "en": "Updated local artwork and clearer, localized administration documentation. WordPress 6.7 and PHP 8.2 requirements are unchanged.",
+          "de": "Aktualisierte lokale Grafiken und verständlichere, übersetzte Verwaltungsdokumentation. WordPress 6.7 und PHP 8.2 bleiben die Mindestanforderungen."
+        },
+        {
+          "category": "Fixed",
+          "en": "Settings and preview requests validate incoming values at their boundaries; generated preview and document markup is restricted at output. Existing toolbar settings and WordPress menus are retained.",
+          "de": "Einstellungen und Vorschauanfragen prüfen eingehende Werte direkt bei der Übernahme; Vorschau- und Dokumentausgaben sind auf erlaubtes HTML begrenzt. Bestehende Toolbar-Einstellungen und WordPress-Menüs bleiben erhalten."
+        }
+      ]
+    },
+    {
       "version": "4.1.0",
       "date": "2026-10-07",
       "items": [
         {
           "category": "New",
-          "en": "Dedicated plugin and theme ZIP upload pages include drag-and-drop, package previews and explicit installation confirmation. Active Leitstand uploaders are reused without duplicate pages.",
-          "de": "Eigene Plugin- und Theme-ZIP-Seiten bieten Drag-and-drop, Paketvorschau und ausdrückliche Installationsbestätigung. Aktive Leitstand-Uploader werden ohne doppelte Seiten verwendet."
+          "en": "Dedicated plugin and theme ZIP upload pages include drag-and-drop, package previews and explicit installation confirmation. Available shared uploaders are reused without duplicate pages.",
+          "de": "Eigene Plugin- und Theme-ZIP-Seiten bieten Drag-and-drop, Paketvorschau und ausdrückliche Installationsbestätigung. Verfügbare gemeinsame Uploader werden ohne doppelte Seiten verwendet."
         },
         {
           "category": "New",
@@ -597,22 +633,22 @@
       "group": "uploads",
       "en": {
         "question": "How do the plugin and theme ZIP uploaders work?",
-        "answer": "When Leitstand is active and its uploader is accessible to you, the toolbar and admin menu use its pages without duplicate upload screens. Otherwise this plugin provides its own pages with drag-and-drop, size validation and temporary metadata previews. WordPress handles installation and replacement. Native uploads work directly without JavaScript. Previews are not malware scans or compatibility guarantees and do not use the Leitstand usage index. Multisite files are shared across all websites and networks; installation remains restricted to authorized users. Leitstand user exclusions are respected. This plugin’s switches control its own menu links, not existing Leitstand entries. Choose one ZIP, review its metadata, confirm the package and use Install plugin now or Install theme now beneath the result. No installation happens during preview. The uploader switch is separate navigation. More space separates the footer from the workflow. An unambiguously detected theme in the plugin uploader, or plugin in the theme uploader, shows a discreet notice and a link to the correct uploader. Known mismatches provide no installation action on that page; ambiguous packages are not assigned a misleading type."
+        "answer": "When another uploader provider is active and its uploader is accessible to you, the toolbar and admin menu use its pages without duplicate upload screens. Otherwise this plugin provides its own pages with drag-and-drop, size validation and temporary metadata previews. WordPress handles installation and replacement. Native uploads work directly without JavaScript. Previews are not malware scans or compatibility guarantees and do not use a provider-specific usage index. Multisite files are shared across all websites and networks; installation remains restricted to authorized users. Provider-specific user exclusions are respected. This plugin’s switches control its own menu links, not existing provider entries. Choose one ZIP, review its metadata, confirm the package and use Install plugin now or Install theme now beneath the result. No installation happens during preview. The uploader switch is separate navigation. More space separates the footer from the workflow. An unambiguously detected theme in the plugin uploader, or plugin in the theme uploader, shows a discreet notice and a link to the correct uploader. Known mismatches provide no installation action on that page; ambiguous packages are not assigned a misleading type."
       },
       "de": {
         "question": "Wie funktionieren die Plugin- und Theme-ZIP-Uploader?",
-        "answer": "Ist Leitstand aktiv und sein Uploader für dich verfügbar, führen Toolbar und Adminmenü zu dessen Seiten; doppelte Upload-Seiten werden vermieden. Sonst stellt dieses Plugin eigene Seiten mit Drag-and-drop, Größenprüfung und temporärer Metadatenvorschau bereit. Installation und Ersetzen übernimmt WordPress. Ohne JavaScript funktioniert der native Upload direkt. Die Vorschau ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Sie verwendet keinen Leitstand-Nutzungsindex. In Multisite gelten gemeinsame Dateien für sämtliche Websites und Netzwerke; nur entsprechend berechtigte Benutzer können installieren. Leitstand-Benutzerausschlüsse werden berücksichtigt. Die Schalter dieses Plugins steuern seine eigenen Menüverknüpfungen, nicht bereits vorhandene Leitstand-Einträge. Wähle eine ZIP-Datei, prüfe ihre Paketinformationen, bestätige das Paket und verwende darunter Plugin jetzt installieren oder Theme jetzt installieren. Die Vorschau installiert nichts. Der Uploader-Wechsel ist eine getrennte Navigation. Mehr Abstand trennt den Footer vom Arbeitsablauf. Ein eindeutig erkanntes Theme im Plugin-Uploader oder Plugin im Theme-Uploader erhält einen dezenten Hinweis mit Link zum passenden Uploader. Bekannte Typverwechslungen bieten auf dieser Seite keine Installationsaktion; mehrdeutige Pakete erhalten keine irreführende Typzuordnung."
+        "answer": "Ist ein gemeinsamer Upload-Anbieter aktiv und sein Uploader für dich verfügbar, führen Toolbar und Adminmenü zu dessen Seiten; doppelte Upload-Seiten werden vermieden. Sonst stellt dieses Plugin eigene Seiten mit Drag-and-drop, Größenprüfung und temporärer Metadatenvorschau bereit. Installation und Ersetzen übernimmt WordPress. Ohne JavaScript funktioniert der native Upload direkt. Die Vorschau ist keine Schadsoftwareprüfung oder Kompatibilitätsgarantie. Sie verwendet keinen anbieterspezifischen Nutzungsindex. In Multisite gelten gemeinsame Dateien für sämtliche Websites und Netzwerke; nur entsprechend berechtigte Benutzer können installieren. Benutzerausschlüsse des Anbieters werden berücksichtigt. Die Schalter dieses Plugins steuern seine eigenen Menüverknüpfungen, nicht bereits vorhandene Einträge des Anbieters. Wähle eine ZIP-Datei, prüfe ihre Paketinformationen, bestätige das Paket und verwende darunter Plugin jetzt installieren oder Theme jetzt installieren. Die Vorschau installiert nichts. Der Uploader-Wechsel ist eine getrennte Navigation. Mehr Abstand trennt den Footer vom Arbeitsablauf. Ein eindeutig erkanntes Theme im Plugin-Uploader oder Plugin im Theme-Uploader erhält einen dezenten Hinweis mit Link zum passenden Uploader. Bekannte Typverwechslungen bieten auf dieser Seite keine Installationsaktion; mehrdeutige Pakete erhalten keine irreführende Typzuordnung."
       }
     },
     {
       "group": "components",
       "en": {
         "question": "What is the deckerweb Plugin Library?",
-        "answer": "A shared installer tab for approved deckerweb plugins. Library 0.6.0 checks package hashes and dependencies, separates installation from activation and uses one elected runtime across participating hosts. The offline catalog includes a preparation preview; online catalog updates are optional and off by default. In Multisite, network-activate a participating host to make the Library available in Network Admin."
+        "answer": "A shared installer tab for approved deckerweb plugins. Library 1.1.0 checks package hashes and dependencies, separates installation from activation and uses one elected runtime across participating hosts. The offline catalog includes a preparation preview; online catalog updates are optional and off by default. In Multisite, network-activate a participating host to make the Library available in Network Admin."
       },
       "de": {
         "question": "Was ist die deckerweb Plugin Library?",
-        "answer": "Ein gemeinsamer Installer-Reiter für freigegebene deckerweb Plugins. Library 0.6.0 prüft Paketprüfsummen und Abhängigkeiten, trennt Installation von Aktivierung und verwendet eine gemeinsam gewählte Laufzeit für teilnehmende Plugins. Der Offline-Katalog enthält eine Vorbereitungsvorschau; Online-Katalogupdates sind optional und standardmäßig aus. In Multisite muss ein teilnehmender Host netzwerkweit aktiviert sein, damit die Library in der Netzwerkverwaltung verfügbar ist."
+        "answer": "Ein gemeinsamer Installer-Reiter für freigegebene deckerweb Plugins. Library 1.1.0 prüft Paketprüfsummen und Abhängigkeiten, trennt Installation von Aktivierung und verwendet eine gemeinsam gewählte Laufzeit für teilnehmende Plugins. Der mitgelieferte Katalog enthält freigegebene Veröffentlichungen; Online-Katalogupdates sind optional und standardmäßig aus. In Multisite muss ein teilnehmender Host netzwerkweit aktiviert sein, damit die Library in der Netzwerkverwaltung verfügbar ist."
       }
     },
     {
@@ -630,11 +666,11 @@
       "group": "components",
       "en": {
         "question": "How do plugin updates work?",
-        "answer": "The bundled deckerweb Updater 2.1.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy."
+        "answer": "The bundled deckerweb Updater 2.2.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy."
       },
       "de": {
         "question": "Wie funktionieren Plugin-Updates?",
-        "answer": "Der mitgelieferte deckerweb Updater 2.1.0 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen."
+        "answer": "Der mitgelieferte deckerweb Updater 2.2.0 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen."
       }
     },
     {
@@ -739,7 +775,7 @@
       ],
       [
         "Upload shortcuts",
-        "Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Additions under New remain last and have independent switches: Plugins on, Themes off. Both ZIP admin submenu links default to on. Upload links use active Leitstand pages or dedicated local pages with drag-and-drop and bounded metadata previews; WordPress performs installation."
+        "Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Additions under New remain last and have independent switches: Plugins on, Themes off. Both ZIP admin submenu links default to on. Upload links use available shared uploader pages or dedicated local pages with drag-and-drop and bounded metadata previews; WordPress performs installation."
       ],
       [
         "Multisite administration",
@@ -747,11 +783,19 @@
       ],
       [
         "Shared components",
-        "Library 0.6.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.1.0 uses normal WordPress updates. Assets are local; no telemetry is collected."
+        "Library 1.1.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.2.0 uses normal WordPress updates. Assets are local; no telemetry is collected."
       ],
       [
         "Menu preview and diagnostics",
         "Inspect the menu structure with the selected depth and grouping without saving. A compact overview explains visibility, positioning and active uploader providers. Missing sources and page-specific missing toolbar anchors are explained."
+      ],
+      [
+        "Admin Tools",
+        "Active DevKit Pro, WP Debug Toolkit and WP Admin Cleaner appear in a compact group below the website toolbar entry. Verified module and settings links are available to administrators and super administrators only. Plugin access restrictions remain respected. Keep the group below the website entry or place it on the right with one of three original icons. Its label is customizable. WP Debug Toolkit opens its installed Debug Viewer first, using the configured slug; plugin settings remain directly available."
+      ],
+      [
+        "Library shortcuts",
+        "The deckerweb catalog appears under New and Toolbar Settings when available. Library Settings remain accessible even when the catalog is hidden. Multisite links require an active network host and matching permissions."
       ]
     ],
     "de": [
@@ -765,7 +809,7 @@
       ],
       [
         "Upload-Verknüpfungen",
-        "Plugins und Themes stehen im Website-Toolbar-Menü direkt nacheinander, auch in Multisite. Ergänzungen unter Neu stehen am Ende und besitzen unabhängige Schalter: Plugins an, Themes aus. Beide ZIP-Admin-Untermenüs sind standardmäßig an. Upload-Links verwenden die aktiven Leitstand-Seiten oder eigene Seiten mit Drag-and-drop und begrenzter Metadatenvorschau; WordPress übernimmt die Installation."
+        "Plugins und Themes stehen im Website-Toolbar-Menü direkt nacheinander, auch in Multisite. Ergänzungen unter Neu stehen am Ende und besitzen unabhängige Schalter: Plugins an, Themes aus. Beide ZIP-Admin-Untermenüs sind standardmäßig an. Upload-Links verwenden die verfügbaren gemeinsamen Upload-Seiten oder eigene Seiten mit Drag-and-drop und begrenzter Metadatenvorschau; WordPress übernimmt die Installation."
       ],
       [
         "Multisite-Verwaltung",
@@ -773,11 +817,19 @@
       ],
       [
         "Gemeinsame Komponenten",
-        "Library 0.6.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.1.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie."
+        "Library 1.1.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.2.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie."
       ],
       [
         "Menüvorschau und Hinweise",
         "Prüfe die Menüstruktur mit ausgewählter Tiefe und Gruppierung ohne Speichern. Eine kompakte Übersicht erklärt Sichtbarkeit, Positionierung und verwendete Uploader. Fehlende Quellen und auf der aktuellen Seite fehlende Toolbar-Bezugseinträge werden erläutert."
+      ],
+      [
+        "Admin-Werkzeuge",
+        "Aktives DevKit Pro, WP Debug Toolkit und WP Admin Cleaner erscheinen in einer kompakten Gruppe unter dem Website-Eintrag der Toolbar. Geprüfte Modul- und Einstellungslinks sind nur für Administratoren und Super-Administratoren sichtbar. Zugriffsbeschränkungen der Plugins bleiben erhalten. Die Gruppe lässt sich unter dem Website-Eintrag oder rechts mit einem von drei eigenen Icons platzieren. Ihr Name ist anpassbar. WP Debug Toolkit öffnet zuerst seinen eingerichteten Debug Viewer mit dem konfigurierten Slug; die Plugin-Einstellungen bleiben direkt erreichbar."
+      ],
+      [
+        "Library-Verknüpfungen",
+        "Der deckerweb Katalog erscheint bei Verfügbarkeit unter Neu und Toolbar-Einstellungen. Library-Einstellungen bleiben auch bei ausgeblendetem Katalog erreichbar. Multisite-Verknüpfungen benötigen einen netzwerkaktiven Host und passende Berechtigungen."
       ]
     ]
   },

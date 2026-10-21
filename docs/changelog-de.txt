@@ -1,6 +1,15 @@
+= 4.2.0 · 2026-10-21 =
+
+* Neu: Eine kompakte Gruppe Admin-Werkzeuge verlinkt aktives DevKit Pro, WP Debug Toolkit und WP Admin Cleaner mit geprüften Modul-/Tab-Zielen und Zugriff nur für Administratoren. Position, Name und Icon für die rechte Position sind einstellbar.
+* Neu: Der deckerweb Plugin-Katalog ist unter Neu und Toolbar-Einstellungen erreichbar; verfügbare Library-Einstellungen sind ebenfalls verlinkt. Ausgeblendete Kataloge und Benutzerrechte bleiben berücksichtigt.
+* Verbessert: Library 1.1.0 und Updater 2.2.0 bieten gemeinsame Katalogsteuerung, geprüfte Katalogupdates und klarere Hinweise bei aktivem Git Updater. Online-Katalogabfragen bleiben optional und standardmäßig aus.
+* Verbessert: Aktualisierte lokale Grafiken und verständlichere, übersetzte Verwaltungsdokumentation. WordPress 6.7 und PHP 8.2 bleiben die Mindestanforderungen.
+* Behoben: Doku- und Changelog-Dialoge bleiben geschlossen auch bei kollidierenden Admin-Stilen unsichtbar; das Schließen funktioniert auch ohne den Dokument-Controller.
+* Behoben: Einstellungen und Vorschauanfragen prüfen eingehende Werte direkt bei der Übernahme; Vorschau- und Dokumentausgaben sind auf erlaubtes HTML begrenzt. Bestehende Toolbar-Einstellungen und WordPress-Menüs bleiben erhalten.
+
 = 4.1.0 · 2026-10-07 =
 
-* Neu: Eigene Plugin- und Theme-ZIP-Seiten bieten Drag-and-drop, Paketvorschau und ausdrückliche Installationsbestätigung. Aktive Leitstand-Uploader werden ohne doppelte Seiten verwendet.
+* Neu: Eigene Plugin- und Theme-ZIP-Seiten bieten Drag-and-drop, Paketvorschau und ausdrückliche Installationsbestätigung. Verfügbare gemeinsame Uploader werden ohne doppelte Seiten verwendet.
 * Neu: Menüstruktur, Gruppierung und Kindebenen lassen sich ohne Speichern prüfen; die Übersicht zeigt wirksame Einstellungen, verwendete Uploader und Hinweise zu fehlenden Menüquellen oder Toolbar-Bezugseinträgen.
 * Verbessert: Eine beim Scrollen erreichbare Speichern-Leiste warnt vor dem Verlust ungespeicherter Änderungen. Das Feld für die gemeinsame Menübeschriftung ist größer.
 * Verbessert: Beide ZIP-Admin-Untermenüs sind standardmäßig aktiv; der bisher ausgeschaltete Theme-Untermenü-Standard wird einmalig ersetzt. Spätere ausdrückliche Schalterentscheidungen bleiben erhalten. Der separate Theme-Eintrag unter Neu bleibt standardmäßig aus.
@@ -48,7 +57,3 @@
 * Neu: Der Website-Zustand enthält Plugin-Diagnosen unter WordPress ab 5.2.
 * Neu: Ein Newsletter für DECKERWEB Plugins ist verfügbar.
 * Verbessert: Die Empfehlungs-Library 1.4.0 und deutsche Du-/Sie-Übersetzungen wurden aktualisiert.
-
-= 1.9.4 · 2018-11-03 =
-
-* Verbessert: Die Empfehlungs-Library 1.2.0 verbessert die Installer-Darstellung und Dark-Mode-Kompatibilität.

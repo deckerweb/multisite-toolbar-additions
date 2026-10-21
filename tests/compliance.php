@@ -23,7 +23,7 @@ try {
   foreach ( $messages as $source => $translation ) {
    compliance_check( __( $source, $domain ) === $translation[$locale], 'Translated message in ' . $locale . ': ' . $source );
   }
-  compliance_check( Deckerweb\PluginLibrary\V0_6_0\Library::t( 'Only approved releases' ) === $messages['Only approved releases'][$locale], 'Library shares host domain in ' . $locale );
+  compliance_check( Deckerweb\PluginLibrary\V1_1_0\Library::t( 'Only approved releases' ) === $messages['Only approved releases'][$locale], 'Library shares host domain in ' . $locale );
   $translator = require MSTBA_PLUGIN_DIR . 'includes/updater-translations.php';
   compliance_check( $translator( 'See the release on GitHub.' ) === $messages['See the release on GitHub.'][$locale], 'Updater uses host callback in ' . $locale );
   ob_start(); Deckerweb\MultisiteToolbar\PageChrome::footer(); $html = ob_get_clean();

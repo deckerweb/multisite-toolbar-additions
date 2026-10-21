@@ -32,6 +32,13 @@ final class GitHubUpdates {
 				return;
 			}
 		}
+		$options = [];
+		if ( defined( '\\Deckerweb\\GitHubReleaseUpdater\\V2\\Updater::SUPPORTS_HOST_TRANSLATIONS' ) && is_readable( MSTBA_PLUGIN_DIR . 'includes/updater-translations.php' ) ) {
+			$options['translate'] = require MSTBA_PLUGIN_DIR . 'includes/updater-translations.php';
+		}
+		if ( defined( '\\Deckerweb\\GitHubReleaseUpdater\\V2\\Updater::SUPPORTS_CATALOG_PROVIDER' ) && function_exists( 'deckerweb_library_updater_options_v1' ) ) {
+			$options = array_merge( $options, deckerweb_library_updater_options_v1( MSTBA_PLUGIN_FILE, self::REPOSITORY ) );
+		}
 		try {
 			$updater = new \Deckerweb\GitHubReleaseUpdater\V2\Updater(
 				MSTBA_PLUGIN_FILE,
@@ -39,7 +46,7 @@ final class GitHubUpdates {
 				'Multisite Toolbar Additions',
 				__( 'Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar.', 'multisite-toolbar-additions' ),
 				$this->artwork(),
-				defined( '\\Deckerweb\\GitHubReleaseUpdater\\V2\\Updater::SUPPORTS_HOST_TRANSLATIONS' ) && is_readable( MSTBA_PLUGIN_DIR . 'includes/updater-translations.php' ) ? [ 'translate' => require MSTBA_PLUGIN_DIR . 'includes/updater-translations.php' ] : []
+				$options
 			);
 		} catch ( \InvalidArgumentException $error ) {
 			// An unsupported installation directory must not break toolbar rendering.

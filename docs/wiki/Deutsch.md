@@ -24,7 +24,7 @@ Wähle zuerst/zuletzt, vor/nach einem Bezugseintrag oder die rechte Seite. Zeige
 
 ## Upload-Verknüpfungen
 
-Plugins und Themes stehen im Website-Toolbar-Menü direkt nacheinander, auch in Multisite. Ergänzungen unter Neu stehen am Ende und besitzen unabhängige Schalter: Plugins an, Themes aus. Beide ZIP-Admin-Untermenüs sind standardmäßig an. Upload-Links verwenden die aktiven Leitstand-Seiten oder eigene Seiten mit Drag-and-drop und begrenzter Metadatenvorschau; WordPress übernimmt die Installation.
+Plugins und Themes stehen im Website-Toolbar-Menü direkt nacheinander, auch in Multisite. Ergänzungen unter Neu stehen am Ende und besitzen unabhängige Schalter: Plugins an, Themes aus. Beide ZIP-Admin-Untermenüs sind standardmäßig an. Upload-Links verwenden die verfügbaren gemeinsamen Upload-Seiten oder eigene Seiten mit Drag-and-drop und begrenzter Metadatenvorschau; WordPress übernimmt die Installation.
 
 ## Multisite-Verwaltung
 
@@ -32,11 +32,19 @@ Nutze eine netzwerkweite Menüquelle mit optionaler Sichtbarkeit für Website-Ad
 
 ## Gemeinsame Komponenten
 
-Library 0.6.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.1.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie.
+Library 1.1.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.2.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie.
 
 ## Menüvorschau und Hinweise
 
 Prüfe die Menüstruktur mit ausgewählter Tiefe und Gruppierung ohne Speichern. Eine kompakte Übersicht erklärt Sichtbarkeit, Positionierung und verwendete Uploader. Fehlende Quellen und auf der aktuellen Seite fehlende Toolbar-Bezugseinträge werden erläutert.
+
+## Admin-Werkzeuge
+
+Aktives DevKit Pro, WP Debug Toolkit und WP Admin Cleaner erscheinen in einer kompakten Gruppe unter dem Website-Eintrag der Toolbar. Geprüfte Modul- und Einstellungslinks sind nur für Administratoren und Super-Administratoren sichtbar. Zugriffsbeschränkungen der Plugins bleiben erhalten. Die Gruppe lässt sich unter dem Website-Eintrag oder rechts mit einem von drei eigenen Icons platzieren. Ihr Name ist anpassbar. WP Debug Toolkit öffnet zuerst seinen eingerichteten Debug Viewer mit dem konfigurierten Slug; die Plugin-Einstellungen bleiben direkt erreichbar.
+
+## Library-Verknüpfungen
+
+Der deckerweb Katalog erscheint bei Verfügbarkeit unter Neu und Toolbar-Einstellungen. Library-Einstellungen bleiben auch bei ausgeblendetem Katalog erreichbar. Multisite-Verknüpfungen benötigen einen netzwerkaktiven Host und passende Berechtigungen.
 
 ## Daten und Berechtigungen
 

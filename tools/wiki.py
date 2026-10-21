@@ -8,4 +8,4 @@ base='https://github.com/deckerweb/multisite-toolbar-additions/wiki/'
 for path in (root/'docs/wiki').glob('*.md'):
  text=re.sub(r'\]\((?:\./)?([^/)#]+)\.md(#[^)]*)?\)',lambda m:']('+base+m[1]+(m[2] or '')+')',path.read_text())
  (output/path.name).write_text(text)
-print('Prepared 8 local Wiki pages; no remote changes.')
+print('Prepared '+str(len(list((root/'docs/wiki').glob('*.md'))))+' local Wiki pages; no remote changes.')

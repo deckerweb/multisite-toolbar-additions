@@ -16,3 +16,7 @@
 .ddw-changelog-version{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.ddw-changelog-version h3{margin:0;font-size:18px}.ddw-changelog-version span{color:#52626d}
 .ddw-changelog-entries{list-style:none;padding:0}.ddw-changelog-entries li{display:flex;align-items:baseline;gap:10px;margin:12px 0}.ddw-changelog-badge{flex:none;min-width:76px;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:600;color:#1d2327;background:#edf0f2}.ddw-changelog-new{background:#e4f3e8;color:#1c5930}.ddw-changelog-improved{background:#e5edf9;color:#21466d}.ddw-changelog-fixed{background:#fff1dc;color:#6a470c}.ddw-changelog-misc{background:#eeebf5;color:#4b386b}
 @media(max-width:600px){.ddw-changelog-entries li{display:block}.ddw-changelog-badge{display:inline-block;margin-inline-end:8px}}
+
+/* Foreign dialog display rules must never expose closed local documents. */
+dialog.ddw-document-dialog:not([open]),dialog.ddw-document-dialog[hidden]{display:none!important}
+.ddw-document-dialog .ddw-document-close-form{margin:0;padding:0;border:0;background:none}

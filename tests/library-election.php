@@ -27,7 +27,7 @@ function candidate( $version, $host, $php = '8.0', $wp = '6.4', $corrupt = false
 function choose( $candidates ) {
  unset( $GLOBALS['deckerweb_library_runtime_v1'] );
  $GLOBALS['deckerweb_library_candidates_v1'] = $candidates;
- deckerweb_library_elect_v2();
+ deckerweb_library_elect_v090();
  return $GLOBALS['deckerweb_library_runtime_v1'] ?? null;
 }
 try {
@@ -40,10 +40,10 @@ try {
  election_check( choose( [candidate('0.8.0','/newer.php','8.0','99.0'),$new] )->chosen['version'] === '0.6.0', 'Incompatible WordPress candidate skipped before include' );
  $equal = candidate( '0.6.0', '/plugins/aaa/aaa.php' );
  election_check( choose( [$new,$equal] )->chosen['host'] === '/plugins/aaa/aaa.php', 'Equal-version election uses deterministic basename' );
- $runtime = $GLOBALS['deckerweb_library_runtime_v1']; deckerweb_library_elect_v2();
+ $runtime = $GLOBALS['deckerweb_library_runtime_v1']; deckerweb_library_elect_v090();
  election_check( $runtime === $GLOBALS['deckerweb_library_runtime_v1'], 'Repeated election does not add a second runtime' );
  unset( $GLOBALS['deckerweb_library_runtime_v1'] ); $GLOBALS['deckerweb_library_candidates_v1'] = [];
- deckerweb_library_register_v2( $new['host'], [], $new['dir'] ); deckerweb_library_elect_v2();
+ deckerweb_library_register_v2( $new['host'], [], $new['dir'] ); deckerweb_library_elect_v090();
  election_check( $GLOBALS['deckerweb_library_runtime_v1']->chosen['version'] === '0.6.0', 'Explicit v2 registration works beside a legacy function' );
  election_check( choose( [$bad] ) === null, 'All invalid candidates fail safely without loading code' );
 } finally { foreach ( $temps as $dir ) { foreach ( glob( $dir . '/*' ) as $file ) { unlink( $file ); } rmdir( $dir ); } }

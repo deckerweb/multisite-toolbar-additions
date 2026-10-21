@@ -132,10 +132,10 @@ final class Admin {
 	 * @return void No value; output or hooks are updated as described.
 	 */
 	public function save() {
-		if ( 'POST' !== ( $_SERVER['REQUEST_METHOD'] ?? '' ) ) { wp_die( esc_html__( 'Use the settings form to save changes.', 'multisite-toolbar-additions' ), '', [ 'response' => 405 ] ); }
+		if ( 'POST' !== ( isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) : '' ) ) { wp_die( esc_html__( 'Use the settings form to save changes.', 'multisite-toolbar-additions' ), '', [ 'response' => 405 ] ); }
 		if ( ! current_user_can( Settings::capability() ) ) { wp_die( esc_html__( 'You cannot change toolbar settings.', 'multisite-toolbar-additions' ), '', [ 'response' => 403 ] ); }
 		check_admin_referer( 'mstba_save' );
-		$values = $this->settings->sanitize( isset( $_POST['mstba'] ) ? wp_unslash( $_POST['mstba'] ) : [] );
+		$values = $this->settings->sanitize( isset( $_POST['mstba'] ) ? map_deep( wp_unslash( $_POST['mstba'] ), 'sanitize_text_field' ) : [] );
 		if ( is_wp_error( $values ) ) { wp_die( esc_html( $values->get_error_message() ), '', [ 'response' => 400, 'back_link' => true ] ); }
 		$this->settings->save( $values );
 		wp_safe_redirect( add_query_arg( 'saved', '1', self::url() ) );
@@ -184,8 +184,8 @@ final class Admin {
 		if ( ! current_user_can( Settings::capability() ) ) { return; }
 		$source = $this->settings->source();
 		if ( is_multisite() ) {
-			$requested = $_GET['source_id'] ?? 0;
-			if ( ! is_scalar( $requested ) || ! absint( $requested ) ) { $requested = $_GET['source'] ?? $source; }
+			$requested = isset( $_GET['source_id'] ) && is_string( $_GET['source_id'] ) ? absint( wp_unslash( $_GET['source_id'] ) ) : 0;
+			if ( ! is_scalar( $requested ) || ! absint( $requested ) ) { $requested = isset( $_GET['source'] ) && is_string( $_GET['source'] ) ? absint( wp_unslash( $_GET['source'] ) ) : $source; }
 			if ( is_scalar( $requested ) ) { $source = absint( $requested ) ?: get_main_site_id(); }
 		}
 		if ( is_multisite() ) {
@@ -212,6 +212,7 @@ static function () { return wp_get_nav_menus(); } ) : [];
 			$sites = array_slice( $sites, 0, 100 );
 			$choices = [];
 			foreach ( $sites as $site ) { $choices[ $site->blog_id ] = $site->domain . $site->path; }
+			/* translators: Placeholder values are the displayed count, website identifier or formatted upload size. */
 			if ( ! isset( $choices[ $source ] ) ) { $site = get_site( $source ); $choices[ $source ] = $valid_source ? $site->domain . $site->path : sprintf( __( 'Unavailable website #%d', 'multisite-toolbar-additions' ), $source ); }
 			echo '<form method="get" action="' . esc_url( ( Settings::network_active() ? network_admin_url( 'settings.php' ) : admin_url( 'options-general.php' ) ) ) . '"><input type="hidden" name="page" value="mstba"><label for="mstba-source">' . esc_html__( 'Source website', 'multisite-toolbar-additions' ) . '</label> <select id="mstba-source" name="source">';
 			foreach ( $choices as $id => $label ) { echo '<option value="' . esc_attr( $id ) . '" ' . selected( $source, $id, false ) . '>' . esc_html( $label ) . '</option>'; }
@@ -256,6 +257,7 @@ function () { $this->select( 'anchor', [ 'wp-logo' => __( 'WordPress logo', 'mul
  */
 function () {
 			$options = [ 0 => __( 'All levels', 'multisite-toolbar-additions' ) ];
+			/* translators: Placeholder values are the displayed count, website identifier or formatted upload size. */
 			for ( $i = 1; $i <= 10; ++$i ) { $options[ $i ] = sprintf( _n( '%d child level', '%d child levels', $i, 'multisite-toolbar-additions' ), $i ); }
 			$this->select( 'child_depth', $options );
 			echo '<p class="description">' . esc_html__( 'Counted from the original menu root. One means root entries plus their direct children. Grouping does not change this limit.', 'multisite-toolbar-additions' ) . '</p>';
@@ -273,6 +275,33 @@ function () { echo '<input class="regular-text" id="mstba-label" name="mstba[lab
 		if ( is_multisite() ) {
 		echo '<p><label for="mstba-subsite_limit">' . esc_html__( 'Maximum websites with extra shortcuts', 'multisite-toolbar-additions' ) . '</label> <input id="mstba-subsite_limit" type="number" min="1" max="100" name="mstba[subsite_limit]" value="' . esc_attr( $this->settings->get( 'subsite_limit' ) ) . '"></p><p class="description">' . esc_html__( 'Only websites already present in the toolbar are extended. Additional websites keep their normal WordPress links. File editors stay subject to WordPress security restrictions.', 'multisite-toolbar-additions' ) . '</p>';
 		}
+
+		echo '</section><section class="mstba-panel" id="mstba-admin-tools-panel"><h2>' . esc_html__( 'Admin Tools', 'multisite-toolbar-additions' ) . '</h2><p class="description">' . esc_html__( 'Active administration tools are grouped here for administrators and super administrators. The Detected plugin integrations switch controls this group.', 'multisite-toolbar-additions' ) . '</p><table class="form-table" role="presentation">';
+		$this->row( 'admin_tools_position', __( 'Tools position', 'multisite-toolbar-additions' ), /** Render the allowed tools destinations.
+		 * @return void
+		 */
+		function () {
+			$this->select( 'admin_tools_position', [ 'site' => __( 'Under the website entry', 'multisite-toolbar-additions' ), 'right' => __( 'Right side of the toolbar', 'multisite-toolbar-additions' ) ] );
+		} );
+		$this->row( 'admin_tools_label', __( 'Tools label', 'multisite-toolbar-additions' ), /** Render the escaped optional tools label.
+		 * @return void
+		 */
+		function () {
+			echo '<input class="regular-text" type="text" id="mstba-admin_tools_label" name="mstba[admin_tools_label]" maxlength="80" value="' . esc_attr( $this->settings->get( 'admin_tools_label' ) ) . '" placeholder="' . esc_attr__( 'Admin Tools', 'multisite-toolbar-additions' ) . '"><p class="description">' . esc_html__( 'Leave empty to use Admin Tools in the current language.', 'multisite-toolbar-additions' ) . '</p>';
+		} );
+		$this->row( 'admin_tools_icon', __( 'Tools icon', 'multisite-toolbar-additions' ), /** Render original allowlisted icons and an accessible text label.
+		 * @return void
+		 */
+		function () {
+			$this->select( 'admin_tools_icon', [ 'toolbox' => __( 'Toolbox', 'multisite-toolbar-additions' ), 'compass' => __( 'Compass', 'multisite-toolbar-additions' ), 'sliders' => __( 'Controls', 'multisite-toolbar-additions' ) ] );
+			echo '<p class="description">' . esc_html__( 'Used when the tools appear on the right. On small screens, the icon keeps the toolbar compact; the label remains accessible.', 'multisite-toolbar-additions' ) . '</p><div class="mstba-tools-sample" aria-hidden="true">';
+			foreach ( [ 'toolbox', 'compass', 'sliders' ] as $icon ) {
+				echo '<span data-mstba-tools-icon="' . esc_attr( $icon ) . '"' . ( $icon !== $this->settings->get( 'admin_tools_icon' ) ? ' hidden' : '' ) . '>' . wp_kses( AdminTools::icon( $icon ), AdminTools::icon_tags() ) . '</span>';
+			}
+			$label = trim( (string) $this->settings->get( 'admin_tools_label' ) );
+			echo '<span id="mstba-tools-sample-label" data-default="' . esc_attr__( 'Admin Tools', 'multisite-toolbar-additions' ) . '">' . esc_html( $label ?: __( 'Admin Tools', 'multisite-toolbar-additions' ) ) . '</span></div>';
+		} );
+		echo '</table>';
 		echo '</section><section class="mstba-panel" id="mstba-data-panel"><h2>' . esc_html__( 'Stored data', 'multisite-toolbar-additions' ) . '</h2>';
 		$this->checkbox( 'delete_data', __( 'Delete this plugin’s settings when uninstalling', 'multisite-toolbar-additions' ) );
 		echo '<p class="description">' . esc_html__( 'Off by default. Deactivation keeps your data. Uninstall always clears this plugin’s update cache. This option deletes toolbar settings for this site or network; WordPress menus, installed plugins and shared Library data are not deleted by it.', 'multisite-toolbar-additions' ) . '</p></section><p class="description">' . esc_html__( 'Use Save all changes in the bar above to apply your settings.', 'multisite-toolbar-additions' ) . '</p></form>';

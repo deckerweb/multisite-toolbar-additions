@@ -10,19 +10,46 @@ msgstr ""
 msgid "%s supports activation per site only."
 msgstr ""
 
+msgid "Action cancelled."
+msgstr ""
+
 msgid "Activate"
 msgstr ""
 
 msgid "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme."
 msgstr ""
 
+msgid "Activating…"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Active filters: "
+msgstr ""
+
 msgid "Admin"
+msgstr ""
+
+msgid "Affected features remain paused until their requirements are met."
 msgstr ""
 
 msgid "All"
 msgstr ""
 
 msgid "Already active"
+msgstr ""
+
+msgid "Already up to date."
+msgstr ""
+
+msgid "Another action for this plugin is running. Please wait."
+msgstr ""
+
+msgid "Another component interrupted the request. If Git Updater is active, temporarily deactivate it and retry."
+msgstr ""
+
+msgid "Another updater provides a different release. Refresh updates before continuing."
 msgstr ""
 
 msgid "Apr"
@@ -52,6 +79,12 @@ msgstr ""
 msgid "Builder"
 msgstr ""
 
+msgid "Bundled catalog"
+msgstr ""
+
+msgid "Cached or bundled catalog"
+msgstr ""
+
 msgid "Cannot create temporary file."
 msgstr ""
 
@@ -70,7 +103,16 @@ msgstr ""
 msgid "Catalog URL"
 msgstr ""
 
+msgid "Catalog refreshed."
+msgstr ""
+
 msgid "Changelog"
+msgstr ""
+
+msgid "Check status"
+msgstr ""
+
+msgid "Checking status…"
 msgstr ""
 
 msgid "Close"
@@ -83,6 +125,12 @@ msgid "Compatible additions only"
 msgstr ""
 
 msgid "Content"
+msgstr ""
+
+msgid "Copied."
+msgstr ""
+
+msgid "Copy diagnostic information"
 msgstr ""
 
 msgid "Dec"
@@ -100,7 +148,13 @@ msgstr ""
 msgid "Discover more plugins by deckerweb"
 msgstr ""
 
+msgid "Discover randomly"
+msgstr ""
+
 msgid "Dismiss permanently"
+msgstr ""
+
+msgid "Dismiss this notice"
 msgstr ""
 
 msgid "Done. The plugin is active."
@@ -121,6 +175,12 @@ msgstr ""
 msgid "February"
 msgstr ""
 
+msgid "Filesystem credentials are required."
+msgstr ""
+
+msgid "Filesystem credentials are required. Use the catalog with JavaScript enabled or the native Plugins screen."
+msgstr ""
+
 msgid "Filter"
 msgstr ""
 
@@ -134,6 +194,9 @@ msgid "Fri"
 msgstr ""
 
 msgid "Friday"
+msgstr ""
+
+msgid "Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider."
 msgstr ""
 
 msgid "GitHub Stars"
@@ -154,10 +217,22 @@ msgstr ""
 msgid "Install now"
 msgstr ""
 
+msgid "Installation cancelled."
+msgstr ""
+
+msgid "Installation failed."
+msgstr ""
+
 msgid "Installed"
 msgstr ""
 
+msgid "Installed · inactive"
+msgstr ""
+
 msgid "Installed: "
+msgstr ""
+
+msgid "Installing…"
 msgstr ""
 
 msgid "Invalid ZIP archive."
@@ -214,6 +289,9 @@ msgstr ""
 msgid "Invalid plugin series."
 msgstr ""
 
+msgid "Invalid sort order."
+msgstr ""
+
 msgid "Invalid star count."
 msgstr ""
 
@@ -236,6 +314,9 @@ msgid "Jun"
 msgstr ""
 
 msgid "June"
+msgstr ""
+
+msgid "Last successful check: "
 msgstr ""
 
 msgid "Library"
@@ -286,7 +367,16 @@ msgstr ""
 msgid "Multisite"
 msgstr ""
 
+msgid "Name A–Z"
+msgstr ""
+
+msgid "Name Z–A"
+msgstr ""
+
 msgid "Network activate"
+msgstr ""
+
+msgid "Network active"
 msgstr ""
 
 msgid "Network permission denied."
@@ -296,6 +386,9 @@ msgid "New"
 msgstr ""
 
 msgid "No approved plugins match this selection."
+msgstr ""
+
+msgid "Not installed. You can try again."
 msgstr ""
 
 msgid "Nov"
@@ -337,6 +430,9 @@ msgstr ""
 msgid "Permission denied."
 msgstr ""
 
+msgid "Permission denied. Reload the page and check your permissions."
+msgstr ""
+
 msgid "Planned: "
 msgstr ""
 
@@ -352,6 +448,9 @@ msgstr ""
 msgid "Product website"
 msgstr ""
 
+msgid "Recently updated"
+msgstr ""
+
 msgid "Refresh catalog"
 msgstr ""
 
@@ -365,6 +464,9 @@ msgid "Release in preparation"
 msgstr ""
 
 msgid "Release must contain exactly the approved plugin directory."
+msgstr ""
+
+msgid "Remove filter: "
 msgstr ""
 
 msgid "Repository & documentation"
@@ -385,6 +487,9 @@ msgstr ""
 msgid "Reset filters"
 msgstr ""
 
+msgid "Reset view"
+msgstr ""
+
 msgid "Retrieve approved catalog updates online"
 msgstr ""
 
@@ -403,6 +508,9 @@ msgstr ""
 msgid "Search this catalog"
 msgstr ""
 
+msgid "Select and copy the text."
+msgstr ""
+
 msgid "Selected by deckerweb · Installed from GitHub releases"
 msgstr ""
 
@@ -412,16 +520,31 @@ msgstr ""
 msgid "September"
 msgstr ""
 
+msgid "Settings saved."
+msgstr ""
+
+msgid "Shop"
+msgstr ""
+
 msgid "Show deckerweb under Add Plugins"
 msgstr ""
 
 msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
 msgstr ""
 
+msgid "Shuffle again"
+msgstr ""
+
 msgid "Small plugins. Practical improvements."
 msgstr ""
 
+msgid "Sort by"
+msgstr ""
+
 msgid "Source: GitHub"
+msgstr ""
+
+msgid "Standard"
 msgstr ""
 
 msgid "Sun"
@@ -430,7 +553,16 @@ msgstr ""
 msgid "Sunday"
 msgstr ""
 
+msgid "Technical information"
+msgstr ""
+
 msgid "The GitHub release could not be downloaded."
+msgstr ""
+
+msgid "The action is still running. Check its status again."
+msgstr ""
+
+msgid "The approved package could not be verified."
 msgstr ""
 
 msgid "The approved release changed. Refresh updates first."
@@ -451,6 +583,12 @@ msgstr ""
 msgid "The catalog is hidden."
 msgstr ""
 
+msgid "The deckerweb catalog could not load. Check platform requirements and the complete Library integration in the host plugin."
+msgstr ""
+
+msgid "The installed plugin identity could not be verified for this catalog update."
+msgstr ""
+
 msgid "The online catalog is unavailable. Showing cached or bundled entries; online approval is checked again before installation."
 msgstr ""
 
@@ -458,6 +596,18 @@ msgid "The online catalog source is not trusted."
 msgstr ""
 
 msgid "The release checksum does not match. Installation stopped."
+msgstr ""
+
+msgid "The request could not be completed. Check the plugin status before trying again."
+msgstr ""
+
+msgid "The requirements below describe the offered release."
+msgstr ""
+
+msgid "The update has not been confirmed. You can try again."
+msgstr ""
+
+msgid "These details contain component versions and catalog status, without credentials or site content."
 msgstr ""
 
 msgid "This catalog requires a newer Library."
@@ -478,6 +628,9 @@ msgstr ""
 msgid "Thursday"
 msgstr ""
 
+msgid "Tools"
+msgstr ""
+
 msgid "Tue"
 msgstr ""
 
@@ -491,6 +644,21 @@ msgid "Untrusted release URL."
 msgstr ""
 
 msgid "Update %1$s to version %2$s or newer."
+msgstr ""
+
+msgid "Update available"
+msgstr ""
+
+msgid "Update failed."
+msgstr ""
+
+msgid "Update to %s"
+msgstr ""
+
+msgid "Updated"
+msgstr ""
+
+msgid "Updating…"
 msgstr ""
 
 msgid "View plugins"

@@ -1,6 +1,6 @@
 # Copyright © 2012–2026 David Decker – DECKERWEB. GPL-2.0-or-later.
 msgid ""
-msgstr "Project-Id-Version: Multisite Toolbar Additions 4.1.0\nReport-Msgid-Bugs-To: https://github.com/deckerweb/multisite-toolbar-additions/issues\nPOT-Creation-Date: 2026-10-07 12:00+0200\nPO-Revision-Date: 2026-10-07 12:00+0200\nLast-Translator: David Decker – DECKERWEB\nLanguage-Team: German\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: de_DE_formal\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: Multisite Toolbar Additions 4.2.0\nReport-Msgid-Bugs-To: https://github.com/deckerweb/multisite-toolbar-additions/issues\nPOT-Creation-Date: 2026-10-21 16:00+0200\nPO-Revision-Date: 2026-10-21 16:00+0200\nLast-Translator: David Decker – DECKERWEB\nLanguage-Team: German\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: de_DE_formal\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "%d child level"
 msgid_plural "%d child levels"
@@ -43,6 +43,9 @@ msgstr "Aktivieren"
 msgid "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme."
 msgstr "Bricks QuickNav bitte je Website aktivieren, nachdem das Bricks-Theme oder ein Child-Theme ausgewählt wurde."
 
+msgid "Active administration tools are grouped here for administrators and super administrators. The Detected plugin integrations switch controls this group."
+msgstr "Aktive Admin-Werkzeuge werden hier für Administratoren und Super-Administratoren gebündelt. Der Schalter für erkannte Plugin-Integrationen steuert diese Gruppe."
+
 msgid "Activity Streams"
 msgstr "Aktivitätsprotokoll"
 
@@ -66,6 +69,9 @@ msgstr "Ergänzungen unter Neu"
 
 msgid "Admin"
 msgstr "Administration"
+
+msgid "Admin Tools"
+msgstr "Admin-Werkzeuge"
 
 msgid "Administration only"
 msgstr "Nur in der Verwaltung"
@@ -143,7 +149,7 @@ msgid "Catalog URL"
 msgstr "Katalog-URL"
 
 msgid "Changelog"
-msgstr "Changelog"
+msgstr "Änderungsverlauf"
 
 msgid "Check ZIP"
 msgstr "ZIP prüfen"
@@ -190,6 +196,9 @@ msgstr "Kommentare"
 msgid "Commerce"
 msgstr "Commerce"
 
+msgid "Compass"
+msgstr "Kompass"
+
 msgid "Compatible additions only"
 msgstr "Nur passende Ergänzungen"
 
@@ -205,6 +214,9 @@ msgstr "Inhalte"
 msgid "Continue with native WordPress checks"
 msgstr "Mit den WordPress-Prüfungen fortfahren"
 
+msgid "Controls"
+msgstr "Regler"
+
 msgid "Could not access the update filesystem."
 msgstr "Auf das Dateisystem für das Update konnte nicht zugegriffen werden."
 
@@ -219,6 +231,9 @@ msgstr "Gezählt ab der ursprünglichen Menüwurzel. Eine Ebene zeigt Haupteintr
 
 msgid "Create or edit menus"
 msgstr "Menüs erstellen oder bearbeiten"
+
+msgid "Cron Inspector"
+msgstr "Cron-Prüfung"
 
 msgid "Custom Background"
 msgstr "Hintergrund"
@@ -237,6 +252,9 @@ msgstr "Dashboard"
 
 msgid "Debug Information"
 msgstr "Debug-Informationen"
+
+msgid "Debug Viewer Settings"
+msgstr "Debug-Viewer-Einstellungen"
 
 msgid "Dec"
 msgstr "Dez"
@@ -295,6 +313,12 @@ msgstr "Aktiviert"
 msgid "Enter a catalog URL first."
 msgstr "Bitte zuerst eine Katalog-URL eintragen."
 
+msgid "Error Log"
+msgstr "Fehlerprotokoll"
+
+msgid "Error Notifications"
+msgstr "Fehlerbenachrichtigungen"
+
 msgid "Everything under one toolbar item"
 msgstr "Alles unter einem gemeinsamen Toolbar-Eintrag"
 
@@ -318,6 +342,9 @@ msgstr "Feb"
 
 msgid "February"
 msgstr "Februar"
+
+msgid "File Manager"
+msgstr "Dateimanager"
 
 msgid "Files are shared by the entire Multisite installation. Replacing them can affect every website and network using this extension."
 msgstr "Die Dateien werden von der gesamten Multisite-Installation gemeinsam genutzt. Ihr Austausch kann jede Website und jedes Netzwerk betreffen, das diese Erweiterung verwendet."
@@ -511,6 +538,9 @@ msgstr "Links an letzter Stelle"
 msgid "Layout"
 msgstr "Darstellung"
 
+msgid "Leave empty to use Admin Tools in the current language."
+msgstr "Leer lassen, um Admin-Werkzeuge in der aktuellen Sprache zu verwenden."
+
 msgid "Leave empty to use the selected menu’s name. A custom label overrides it."
 msgstr "Leer lassen, um den Namen des ausgewählten Menüs zu übernehmen. Eine eigene Beschriftung hat Vorrang."
 
@@ -531,6 +561,9 @@ msgstr "Library-Einstellungen gespeichert."
 
 msgid "Load menus"
 msgstr "Menüs laden"
+
+msgid "Log Settings"
+msgstr "Protokoll-Einstellungen"
 
 msgid "Lower version — possible downgrade"
 msgstr "Niedrigere Version — möglicher Downgrade"
@@ -694,6 +727,9 @@ msgstr "Nur Super-Administratoren dürfen das gemeinsame Toolbar-Menü bearbeite
 msgid "Only websites already present in the toolbar are extended. Additional websites keep their normal WordPress links. File editors stay subject to WordPress security restrictions."
 msgstr "Nur bereits in der Toolbar vorhandene Websites erhalten zusätzliche Einträge. Weitere Websites behalten ihre normalen WordPress-Links. Datei-Editoren beachten die WordPress-Sicherheitsvorgaben."
 
+msgid "Open Debug Viewer"
+msgstr "Debug Viewer öffnen"
+
 msgid "Open catalog"
 msgstr "Katalog öffnen"
 
@@ -702,6 +738,9 @@ msgstr "Optional. Der mitgelieferte Katalog funktioniert sofort. Katalogabfragen
 
 msgid "Other website ID"
 msgstr "Andere Website-ID"
+
+msgid "PHP Settings"
+msgstr "PHP-Einstellungen"
 
 msgid "PHP ZIP support is required."
 msgstr "PHP-ZIP-Unterstützung wird benötigt."
@@ -718,8 +757,11 @@ msgstr "Paketvorschau bereit. Es wurde noch nichts installiert."
 msgid "Parent theme"
 msgstr "Eltern-Theme"
 
+msgid "Performance"
+msgstr "Performance"
+
 msgid "Permission denied."
-msgstr "Keine Berechtigung."
+msgstr "Zugriff verweigert."
 
 msgid "Planned: "
 msgstr "Geplant: "
@@ -729,6 +771,9 @@ msgstr "Plugin-Datei-Editor"
 
 msgid "Plugin Handbook"
 msgstr "Plugin-Handbuch"
+
+msgid "Plugin Settings"
+msgstr "Plugin-Einstellungen"
 
 msgid "Plugin identity or version does not match the catalog."
 msgstr "Plugin oder Version stimmt nicht mit dem Katalog überein."
@@ -828,6 +873,9 @@ msgstr "Katalogfreigaben online aktualisieren"
 
 msgid "Review package"
 msgstr "Paket prüfen"
+
+msgid "Right side of the toolbar"
+msgstr "Rechts in der Toolbar"
 
 msgid "Same version — files may still differ"
 msgstr "Gleiche Version — Dateien können trotzdem abweichen"
@@ -980,10 +1028,10 @@ msgid "The GitHub release could not be downloaded."
 msgstr "Das GitHub-Release konnte nicht heruntergeladen werden."
 
 msgid "The approved release changed. Refresh updates first."
-msgstr "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren."
+msgstr "Die freigegebene Version hat sich geändert. Suchen Sie zuerst erneut nach Updates."
 
 msgid "The approved release could not be verified."
-msgstr "Der freigegebene Release konnte nicht geprüft werden."
+msgstr "Die freigegebene Version konnte nicht geprüft werden."
 
 msgid "The catalog URL is not an allowed first-party HTTPS endpoint."
 msgstr "Die Katalog-URL ist keine erlaubte eigene HTTPS-Quelle."
@@ -1126,8 +1174,20 @@ msgstr "Toolbar-Vorschau"
 msgid "Toolbar settings"
 msgstr "Toolbar-Einstellungen"
 
+msgid "Toolbox"
+msgstr "Werkzeugkasten"
+
 msgid "Tools"
 msgstr "Werkzeuge"
+
+msgid "Tools icon"
+msgstr "Icon der Werkzeuge"
+
+msgid "Tools label"
+msgstr "Name der Werkzeuge"
+
+msgid "Tools position"
+msgstr "Position der Werkzeuge"
 
 msgid "Tue"
 msgstr "Di"
@@ -1143,6 +1203,9 @@ msgstr "Für Ihr Benutzerkonto nicht verfügbar"
 
 msgid "Unavailable website #%d"
 msgstr "Nicht verfügbare Website Nr. %d"
+
+msgid "Under the website entry"
+msgstr "Unter dem Website-Eintrag"
 
 msgid "Unknown / not declared"
 msgstr "Unbekannt / nicht angegeben"
@@ -1203,6 +1266,9 @@ msgstr "Verwenden Sie das Einstellungsformular zum Speichern."
 
 msgid "Used for before/after positions. If the item is absent, your menu appears last on the left."
 msgstr "Für die Position vor oder nach einem Eintrag. Fehlt dieser, erscheint das Menü links an letzter Stelle."
+
+msgid "Used when the tools appear on the right. On small screens, the icon keeps the toolbar compact; the label remains accessible."
+msgstr "Wird bei der Position rechts verwendet. Auf kleinen Bildschirmen hält das Icon die Toolbar kompakt; der Name bleibt für Screenreader zugänglich."
 
 msgid "Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar."
 msgstr "Nützliche Netzwerk- und Website-Verknüpfungen sowie ein konfigurierbares WordPress-Menü in der Toolbar."
@@ -1290,3 +1356,177 @@ msgstr "ZIP-Untermenü-Verknüpfungen"
 
 msgid "ZIP version"
 msgstr "ZIP-Version"
+
+msgid "Installing…"
+msgstr "Wird installiert…"
+
+msgid "Activating…"
+msgstr "Wird aktiviert…"
+
+msgid "The request could not be completed. Check the plugin status before trying again."
+msgstr "Die Anfrage konnte nicht abgeschlossen werden. Vor einem erneuten Versuch den Plugin-Status prüfen."
+
+msgid "Installation cancelled."
+msgstr "Installation abgebrochen."
+
+msgid "Another action for this plugin is running. Please wait."
+msgstr "Für dieses Plugin läuft bereits eine Aktion. Bitte warten."
+
+msgid "Filesystem credentials are required."
+msgstr "Zugangsdaten für das Dateisystem werden benötigt."
+
+msgid "Installation failed."
+msgstr "Installation fehlgeschlagen."
+
+msgid "Shop"
+msgstr "Shop"
+
+msgid "Check status"
+msgstr "Status prüfen"
+
+msgid "The action is still running. Check its status again."
+msgstr "Die Aktion läuft noch. Bitte den Status erneut prüfen."
+
+msgid "Not installed. You can try again."
+msgstr "Nicht installiert. Ein erneuter Versuch ist möglich."
+
+msgid "Checking status…"
+msgstr "Status wird geprüft…"
+
+msgid "The requirements below describe the offered release."
+msgstr "Die folgenden Voraussetzungen beziehen sich auf den angebotenen Release."
+
+msgid "Affected features remain paused until their requirements are met."
+msgstr "Betroffene Funktionen pausieren, bis ihre Voraussetzungen erfüllt sind."
+
+msgid "Update to %s"
+msgstr "Auf %s aktualisieren"
+
+msgid "Updated"
+msgstr "Aktualisiert"
+
+msgid "Already up to date."
+msgstr "Bereits aktuell."
+
+msgid "Updating…"
+msgstr "Wird aktualisiert…"
+
+msgid "The installed plugin identity could not be verified for this catalog update."
+msgstr "Die Identität des installierten Plugins konnte für dieses Katalogupdate nicht bestätigt werden."
+
+msgid "Another updater provides a different release. Refresh updates before continuing."
+msgstr "Ein anderer Updater bietet einen abweichenden Release an. Bitte die Updateinformationen vor dem Fortfahren aktualisieren."
+
+msgid "The update has not been confirmed. You can try again."
+msgstr "Die Aktualisierung wurde nicht bestätigt. Sie können es erneut versuchen."
+
+msgid "Update failed."
+msgstr "Aktualisierung fehlgeschlagen."
+
+msgid "Catalog refreshed."
+msgstr "Katalog aktualisiert."
+
+msgid "Filesystem credentials are required. Use the catalog with JavaScript enabled or the native Plugins screen."
+msgstr "Dateisystem-Zugangsdaten sind erforderlich. Bitte den Katalog mit aktiviertem JavaScript oder die WordPress-Pluginverwaltung verwenden."
+
+msgid "The deckerweb catalog could not load. Check platform requirements and the complete Library integration in the host plugin."
+msgstr "Der deckerweb-Katalog konnte nicht geladen werden. Bitte PHP-/WordPress-Anforderungen und die vollständige Library-Einbindung im Host-Plugin prüfen."
+
+msgid "The approved package could not be verified."
+msgstr "Das freigegebene Paket konnte nicht geprüft werden."
+
+msgid "Action cancelled."
+msgstr "Vorgang abgebrochen."
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Name A–Z"
+msgstr "Name A–Z"
+
+msgid "Name Z–A"
+msgstr "Name Z–A"
+
+msgid "Recently updated"
+msgstr "Zuletzt aktualisiert"
+
+msgid "Discover randomly"
+msgstr "Zufällig entdecken"
+
+msgid "Sort by"
+msgstr "Sortieren nach"
+
+msgid "Shuffle again"
+msgstr "Neu mischen"
+
+msgid "Reset view"
+msgstr "Ansicht zurücksetzen"
+
+msgid "Invalid sort order."
+msgstr "Ungültige Sortierung."
+
+msgid "Technical information"
+msgstr "Technische Informationen"
+
+msgid "Copy diagnostic information"
+msgstr "Diagnoseinformationen kopieren"
+
+msgid "These details contain component versions and catalog status, without credentials or site content."
+msgstr "Diese Angaben enthalten Komponentenversionen und den Katalogstatus, keine Zugangsdaten oder Website-Inhalte."
+
+msgid "Copied."
+msgstr "Kopiert."
+
+msgid "Select and copy the text."
+msgstr "Text markieren und kopieren."
+
+msgid "Cached or bundled catalog"
+msgstr "Gespeicherter oder mitgelieferter Katalog"
+
+msgid "Bundled catalog"
+msgstr "Mitgelieferter Katalog"
+
+msgid "Last successful check: "
+msgstr "Zuletzt erfolgreich geprüft: "
+
+msgid "Network active"
+msgstr "Netzwerkweit aktiv"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Installed · inactive"
+msgstr "Installiert · inaktiv"
+
+msgid "Update available"
+msgstr "Update verfügbar"
+
+msgid "Active filters: "
+msgstr "Aktive Filter: "
+
+msgid "Remove filter: "
+msgstr "Filter entfernen: "
+
+msgid "Dismiss this notice"
+msgstr "Diesen Hinweis ausblenden"
+
+msgid "Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider."
+msgstr "Git Updater ist aktiv. Wenn eine deckerweb-Installation oder ein Update fehlschlägt, deaktivieren Sie Git Updater vorübergehend und versuchen Sie es erneut. Aktivieren Sie ihn danach wieder, wenn andere Plugins oder Themes ihn benötigen. Lassen Sie ihn nur dauerhaft deaktiviert, wenn diese Erweiterungen einen anderen zuverlässigen Updateweg besitzen."
+
+msgid "Permission denied. Reload the page and check your permissions."
+msgstr "Zugriff verweigert. Laden Sie die Seite neu und prüfen Sie Ihre Berechtigungen."
+
+msgid "Another component interrupted the request. If Git Updater is active, temporarily deactivate it and retry."
+msgstr "Eine andere Komponente hat die Anfrage unterbrochen. Falls Git Updater aktiv ist, deaktivieren Sie ihn vorübergehend und wiederholen Sie den Vorgang."
+
+msgid "Public catalog callbacks require both providers and cannot be used in private mode."
+msgstr "Öffentliche Katalog-Callbacks benötigen beide Anbieter und können nicht im Private-Modus verwendet werden."
+
+msgid "deckerweb Plugin Catalog"
+msgstr "deckerweb Plugin-Katalog"
+
+msgid "Library Settings"
+msgstr "Library-Einstellungen"
+
+msgid "Shared uploader"
+msgstr "Gemeinsamer Uploader"

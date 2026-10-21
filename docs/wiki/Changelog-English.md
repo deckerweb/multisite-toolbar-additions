@@ -2,9 +2,18 @@
 
 [English](Changelog-English.md) · [Deutsch](Changelog-Deutsch.md)
 
+### 4.2.0 · 2026-10-21
+
+- **New:** A compact Admin Tools group links active DevKit Pro, WP Debug Toolkit and WP Admin Cleaner, with verified module/tab destinations and administrator-only access. Position, label and right-hand icon are configurable.
+- **New:** Open the deckerweb plugin catalog from New and from Toolbar Settings; shared Library settings are linked when available. Hidden catalogs and account permissions remain respected.
+- **Improved:** Library 1.1.0 and Updater 2.2.0 provide shared catalog controls, verified catalog-based updates and clearer guidance when Git Updater is active. Online catalog access remains optional and initially off.
+- **Improved:** Updated local artwork and clearer, localized administration documentation. WordPress 6.7 and PHP 8.2 requirements are unchanged.
+- **Fixed:** Documentation and changelog dialogs remain hidden when closed despite conflicting admin styles; closing also works without the document controller.
+- **Fixed:** Settings and preview requests validate incoming values at their boundaries; generated preview and document markup is restricted at output. Existing toolbar settings and WordPress menus are retained.
+
 ### 4.1.0 · 2026-10-07
 
-- **New:** Dedicated plugin and theme ZIP upload pages include drag-and-drop, package previews and explicit installation confirmation. Active Leitstand uploaders are reused without duplicate pages.
+- **New:** Dedicated plugin and theme ZIP upload pages include drag-and-drop, package previews and explicit installation confirmation. Available shared uploaders are reused without duplicate pages.
 - **New:** Preview menu structure, grouping and child levels without saving; see effective settings, active uploaders and explanations for missing menu sources or toolbar reference items.
 - **Improved:** A sticky save bar keeps saving accessible and warns before discarding unsaved changes. The group-label field is larger.
 - **Improved:** Both ZIP admin submenu links are enabled by default; the previous hidden Theme submenu default transitions once. Later explicit choices remain respected. The separate Theme addition under New remains off by default.

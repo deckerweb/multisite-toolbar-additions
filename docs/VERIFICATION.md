@@ -4,8 +4,10 @@
 
 For single WordPress sites and Multisite networks. Both have been supported since 2012.
 
-Version 4.1.0 is checked on disposable WordPress 6.7 single-site and 7.1.2 Multisite installations with SQLite, using PHP 8.2.29 and 8.4.5. Coverage includes source-menu protection, visibility and positioning, menu previews, signed settings saves, plugin/theme uploads and type guidance, update-candidate validation, lifecycle/data scopes and host-owned English/German translations.
+Version 4.2.0 was checked from its actual installable ZIP on isolated WordPress 6.7.10, 6.9.10, 7.0.7 and 7.1.3 installations with SQLite, using PHP 8.2.29 and 8.4.5. Multisite coverage uses WordPress 7.1.3. All 50 package test runs passed, covering menu protection, positioning, upload inspection, update-candidate validation, Library shortcuts and host translations.
 
-Desktop/mobile browser checks cover saving and unsaved-change warnings, native keyboard disclosures, read-only previews, uploader confirmation, type mismatches and native-installer handoff. Package inspection includes required files, metadata, translations, local assets and embedded-component hashes. Browser tests intercept final extension installation; native package-upgrade checks use separate disposable installations.
+Native updates from the published 4.1.0 package retained settings, unrelated data and single-site/network activation. Additional tests cover the Admin Tools and debug-viewer contracts, lifecycle cleanup and menu previews. English/German settings and preview screens, documentation dialogs, ten browser conflict cases and invalid-nonce rejection were checked. The actual package was inspected for required files, local assets and exact embedded-component hashes.
 
-These tests do not certify every third-party integration, MySQL/MariaDB environment, persistent object cache, FTP/SSH installer, Multinetwork setup or screen-reader combination. ZIP metadata previews are not malware scans or compatibility guarantees. User-owned WordPress menus remain separate from plugin settings.
+Official Plugin Check 2.1.0 was run in static and available runtime modes. Remaining findings were assessed individually for the GitHub distribution and embedded components; findings are not suppressed, and this does not represent an error-free report or a security guarantee.
+
+These tests do not certify every third-party integration, MySQL/MariaDB environment, persistent object cache, FTP/SSH installer, Multinetwork setup or screen-reader combination. Premium tool interfaces were not independently retested under real licenses. ZIP metadata previews are not malware scans or compatibility guarantees. User-owned WordPress menus remain separate from plugin settings.

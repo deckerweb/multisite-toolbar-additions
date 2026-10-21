@@ -30,7 +30,7 @@ if ( ! class_exists( StructuredFooter::class, false ) ) {
 				$target = $id . '-document-' . sanitize_html_class( $key );
 				$text = (string) $document['text'];
 				$html = 'changelog' === $key ? \Deckerweb_Changelog_Renderer_V1::render( $text ) : self::document( $text );
-				echo '<dialog class="ddw-document-dialog" id="' . esc_attr( $target ) . '" aria-labelledby="' . esc_attr( $target . '-title' ) . '"><div class="ddw-document-header"><h2 id="' . esc_attr( $target . '-title' ) . '">' . esc_html( $document['label'] ) . '</h2><button type="button" class="button" data-ddw-close>' . esc_html( $config['close'] ) . '</button></div><div class="ddw-document-content" tabindex="0">' . $html . '</div></dialog>';
+				echo '<dialog hidden class="ddw-document-dialog" id="' . esc_attr( $target ) . '" aria-labelledby="' . esc_attr( $target . '-title' ) . '"><div class="ddw-document-header"><h2 id="' . esc_attr( $target . '-title' ) . '">' . esc_html( $document['label'] ) . '</h2><form method="dialog" class="ddw-document-close-form"><button type="submit" class="button" data-ddw-close>' . esc_html( $config['close'] ) . '</button></form></div><div class="ddw-document-content" tabindex="0">' . wp_kses_post( $html ) . '</div></dialog>';
 			}
 		}
 

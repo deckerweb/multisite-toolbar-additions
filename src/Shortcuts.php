@@ -24,6 +24,9 @@ final class Shortcuts {
 	 * @return void No value; output or hooks are updated as described.
 	 */
 	public function register() {
+		$tools = new AdminTools( $this->settings );
+		add_action( 'wp_enqueue_scripts', [ $tools, 'assets' ] );
+		add_action( 'admin_enqueue_scripts', [ $tools, 'assets' ] );
 		add_action( 'admin_bar_menu', [ $this, 'render' ], 100 );
 		add_action( 'wp_before_admin_bar_render', [ $this, 'new_last' ], PHP_INT_MAX );
 	}
@@ -63,12 +66,15 @@ final class Shortcuts {
 	 * @return void No value; output or hooks are updated as described.
 	 */
 	public function render( $bar ) {
-		if ( ! is_user_logged_in() || ! is_admin_bar_showing() || ( is_multisite() ? ! is_super_admin() : ! current_user_can( 'manage_options' ) ) ) { return; }
+		if ( ! is_user_logged_in() || ! is_admin_bar_showing() ) { return; }
+		if ( $this->settings->get( 'integrations' ) ) { ( new AdminTools( $this->settings ) )->render( $bar ); }
+		if ( ( is_multisite() ? ! is_super_admin() : ! current_user_can( 'manage_options' ) ) ) { return; }
 		if ( is_multisite() && $this->settings->get( 'network_links' ) ) { $this->network( $bar ); }
 		if ( $this->settings->get( 'site_links' ) ) { $this->site( $bar ); }
 		if ( is_multisite() && $this->settings->get( 'subsite_links' ) ) { $this->subsites( $bar ); }
 		if ( $this->settings->get( 'integrations' ) ) { ( new Integrations() )->render( $bar ); }
 		$this->new_items( $bar );
+		LibraryLinks::render( $bar );
 		if ( $this->settings->get( 'resources' ) ) { $this->resources( $bar ); }
 	}
 	/**

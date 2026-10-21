@@ -4,13 +4,13 @@ define('WP_ADMIN', true);
 $_SERVER['HTTP_HOST']='localhost';
 require $argv[1];
 require_once ABSPATH.'wp-admin/includes/plugin.php';
-use Deckerweb\PluginLibrary\V0_6_0\Library;
-use Deckerweb\PluginLibrary\V0_6_0\Catalog;
+use Deckerweb\PluginLibrary\V1_1_0\Library;
+use Deckerweb\PluginLibrary\V1_1_0\Catalog;
 $checks=0;
 function check_library($ok,$name){global $checks;++$checks;if(!$ok){throw new RuntimeException($name);}}
 $runtime=$GLOBALS['deckerweb_library_runtime_v1']??null;
 check_library($runtime instanceof Library,'Library elected on real plugin bootstrap');
-check_library(Library::VERSION==='0.6.0','Expected shared runtime version');
+check_library(Library::VERSION==='1.1.0','Expected shared runtime version');
 check_library(has_filter('install_plugins_tabs',[$runtime,'tabs'])!==false,'Installer integration registered');
 $previous=get_site_option(Library::OPTION,null);
 try {
@@ -25,12 +25,12 @@ try {
  check_library(!isset($runtime->tabs([])['deckerweb']),'Discovery can be disabled');
  $catalog=json_decode(file_get_contents(MSTBA_PLUGIN_DIR.'includes/deckerweb-plugin-library/catalog.json'),true);
  $valid=Catalog::validate($catalog);
- check_library(!is_wp_error($valid)&&count($valid)===17,'Seventeen approved releases pass validation; preview is excluded from actions');
+ check_library(!is_wp_error($valid)&&count($valid)===27,'Twenty-seven bundled approved releases pass validation');
  $bad=$catalog;$bad['plugins'][0]['sha256']='invalid';check_library(is_wp_error(Catalog::validate($bad)),'Malformed digest rejected');
  $bad=$catalog;$bad['plugins'][0]['download_url']='https://evil.example/plugin.zip';check_library(is_wp_error(Catalog::validate($bad)),'Unapproved download origin rejected');
  check_library(!Catalog::trusted_source('http://deckerweb.de/catalog.json'),'Online catalog requires HTTPS');
  check_library(!Catalog::trusted_source('https://evil.example/catalog.json'),'Online catalog origin restricted');
- $before=$GLOBALS['deckerweb_library_runtime_v1'];deckerweb_library_elect_v2();check_library($before===$GLOBALS['deckerweb_library_runtime_v1'],'Repeated election keeps single runtime');
+ $before=$GLOBALS['deckerweb_library_runtime_v1'];deckerweb_library_elect_v090();check_library($before===$GLOBALS['deckerweb_library_runtime_v1'],'Repeated election keeps single runtime');
  ob_start();Deckerweb\MultisiteToolbar\PageChrome::footer();$footer=ob_get_clean();
  check_library(strpos($footer,'3.1')!==false&&strpos($footer,'4.0.0')!==false,'Footer includes recent release history');
 } finally {

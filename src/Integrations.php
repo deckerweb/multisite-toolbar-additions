@@ -53,7 +53,6 @@ final class Integrations {
 			$links[] = [ 'gitupdater-plugin', __( 'Install via Git Updater', 'multisite-toolbar-additions' ), $path . '&tab=git_updater_install_plugin', 'install_plugins', $network_mode ];
 			$links[] = [ 'gitupdater-theme', __( 'Install Theme via Git Updater', 'multisite-toolbar-additions' ), $path . '&tab=git_updater_install_theme', 'install_themes', $network_mode ];
 		}
-		if ( defined( 'DPDEVKIT_URL' ) ) { $links[] = [ 'devkit', 'DevKit Pro', 'admin.php?page=devkit', 'install_plugins', false ]; }
 		if ( class_exists( 'TablePress' ) ) { $links[] = [ 'tablepress', 'TablePress', 'admin.php?page=tablepress', 'tablepress_edit_tables', false ]; }
 		// Retain opt-in-by-detection destinations for existing installations of older plugins.
 		if ( function_exists( 'dm_text_domain' ) ) { $links[] = [ 'domain-mapping', 'Domain Mapping', 'settings.php?page=dm_domains_admin', 'manage_network_options', true ]; }
