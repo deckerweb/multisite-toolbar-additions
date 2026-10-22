@@ -76,7 +76,7 @@ No. Its bundled catalog and artwork work locally. Package downloads contact thei
 
 ### How do plugin updates work?
 
-The bundled deckerweb Updater 2.2.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
+The bundled deckerweb Updater 2.2.1 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
 
 ## Your data
 

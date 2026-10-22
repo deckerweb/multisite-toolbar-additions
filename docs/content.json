@@ -1,10 +1,21 @@
 {
-  "version": "4.2.0",
+  "version": "4.2.1",
   "working_tree": {
     "en": "",
     "de": ""
   },
   "releases": [
+    {
+      "version": "4.2.1",
+      "date": "2026-10-22",
+      "items": [
+        {
+          "category": "Fixed",
+          "en": "Updater 2.2.1 keeps this plugin’s update handling independent of older updater copies loaded by other plugins and clears its own versioned metadata caches on uninstall.",
+          "de": "Updater 2.2.1 hält die Updateversorgung dieses Plugins unabhängig von älteren Updater-Kopien anderer Plugins und bereinigt die eigenen versionsbezogenen Metadaten-Caches bei der Deinstallation."
+        }
+      ]
+    },
     {
       "version": "4.2.0",
       "date": "2026-10-21",
@@ -666,11 +677,11 @@
       "group": "components",
       "en": {
         "question": "How do plugin updates work?",
-        "answer": "The bundled deckerweb Updater 2.2.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy."
+        "answer": "The bundled deckerweb Updater 2.2.1 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy."
       },
       "de": {
         "question": "Wie funktionieren Plugin-Updates?",
-        "answer": "Der mitgelieferte deckerweb Updater 2.2.0 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen."
+        "answer": "Der mitgelieferte deckerweb Updater 2.2.1 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen."
       }
     },
     {
@@ -783,7 +794,7 @@
       ],
       [
         "Shared components",
-        "Library 1.1.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.2.0 uses normal WordPress updates. Assets are local; no telemetry is collected."
+        "Library 1.1.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.2.1 uses normal WordPress updates. Assets are local; no telemetry is collected."
       ],
       [
         "Menu preview and diagnostics",
@@ -817,7 +828,7 @@
       ],
       [
         "Gemeinsame Komponenten",
-        "Library 1.1.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.2.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie."
+        "Library 1.1.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.2.1 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie."
       ],
       [
         "Menüvorschau und Hinweise",

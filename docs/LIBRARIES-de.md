@@ -10,9 +10,9 @@ Unveränderte Laufzeit aus [deckerweb-plugin-library, v1.1.0](https://github.com
 
 Installation prüft Berechtigungen, Nonce, Abhängigkeiten, Identität, Archivschutz und SHA-256 vor der Normalisierung. Aktivierung ist getrennt. Installationsregister und Caches sind gemeinsam und bleiben erhalten, solange ein anderer Host installiert ist, auch deaktiviert. Die gemeinsame Bereinigung mit Protokoll drei erhält benötigte Daten, solange ein weiterer aktiver oder inaktiver Host installiert ist. Andere installierte Hosts werden hier nicht verändert.
 
-## deckerweb Updater 2.2.0
+## deckerweb Updater 2.2.1
 
-Offizielle Laufzeit, bytegleich aus der stabilen Veröffentlichung übernommen. Quelle: [offizielle Laufzeit](https://github.com/deckerweb/deckerweb-updater/blob/v2.2.0/runtime/deckerweb-github-release-updater-v2.php), GPL-2.0-or-later, David Decker. Nur öffentlicher Repository-Modus; es wird kein Token benötigt oder erhoben. Host-Übersetzungen und Grafiken werden nach init übergeben. Die zuerst geladene V2-Klasse wird gemeinsam verwendet; eine ältere Klasse bleibt mit dem öffentlichen Konstruktor kompatibel, besitzt aber keinen neuen Übersetzungs-Callback. Für vollständig lokalisierte Komponentenfehler müssen ältere Host-Kopien aktualisiert werden.
+Offizielle Laufzeit, bytegleich aus der stabilen Veröffentlichung übernommen. Quelle: [offizielle Laufzeit](https://github.com/deckerweb/deckerweb-updater/blob/v2.2.1/runtime/deckerweb-github-release-updater-v2.php), GPL-2.0-or-later, David Decker. Nur öffentlicher Repository-Modus; es wird kein Token benötigt oder erhoben. Host-Übersetzungen und Grafiken werden nach init übergeben. Jeder Host lädt seine gepinnte Laufzeit und verwendet deren zurückgegebenen Klassennamen. Ältere Updater anderer Plugins werden nicht ersetzt; die Updateversorgung bleibt von deren Ladereihenfolge unabhängig.
 
 Der Host prüft vor dem Austausch Paketidentität, Angebotsversion und WordPress-/PHP-Anforderungen, auch im Core-Sammelupdatepfad. Automatische Updates steuert weiterhin WordPress. Die optionale Library-Anbindung nutzt freigegebene Metadaten und Paketprüfsummen bei aktiviertem Online-Katalog. Ist Online ausgeschaltet, bleiben direkte GitHub-Updateprüfungen erhalten. Die hosteigene Paketprüfung bleibt aktiv.
 

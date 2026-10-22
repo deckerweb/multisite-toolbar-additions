@@ -1,5 +1,5 @@
-# Stable 4.2.0 release.
-name: Release 4.2.0
+# Stable 4.2.1 release.
+name: Release 4.2.1
 on:
   push:
     branches: [master]
@@ -7,7 +7,7 @@ permissions:
   contents: read
 jobs:
   validate:
-    if: github.repository == 'deckerweb/multisite-toolbar-additions' && startsWith(github.event.head_commit.message, 'Release 4.2.0')
+    if: github.repository == 'deckerweb/multisite-toolbar-additions' && startsWith(github.event.head_commit.message, 'Release 4.2.1')
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -34,8 +34,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view v4.2.0 >/dev/null 2>&1; then
+          if gh release view v4.2.1 >/dev/null 2>&1; then
             echo 'Release already exists; refusing to replace it.'
             exit 1
           fi
-          gh release create v4.2.0 dist/multisite-toolbar-additions-4.2.0.zip dist/multisite-toolbar-additions-4.2.0-source.zip dist/SHA256SUMS --target "$GITHUB_SHA" --title 'Multisite Toolbar Additions 4.2.0' --notes-file RELEASE-NOTES.md --latest
+          gh release create v4.2.1 dist/multisite-toolbar-additions-4.2.1.zip dist/multisite-toolbar-additions-4.2.1-source.zip dist/SHA256SUMS --target "$GITHUB_SHA" --title 'Multisite Toolbar Additions 4.2.1' --notes-file RELEASE-NOTES.md --latest

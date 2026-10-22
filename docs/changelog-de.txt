@@ -1,3 +1,7 @@
+= 4.2.1 · 2026-10-22 =
+
+* Behoben: Updater 2.2.1 hält die Updateversorgung dieses Plugins unabhängig von älteren Updater-Kopien anderer Plugins und bereinigt die eigenen versionsbezogenen Metadaten-Caches bei der Deinstallation.
+
 = 4.2.0 · 2026-10-21 =
 
 * Neu: Eine kompakte Gruppe Admin-Werkzeuge verlinkt aktives DevKit Pro, WP Debug Toolkit und WP Admin Cleaner mit geprüften Modul-/Tab-Zielen und Zugriff nur für Administratoren. Position, Name und Icon für die rechte Position sind einstellbar.
@@ -50,10 +54,3 @@
 = 2.0.1 · 2019-09-23 =
 
 * Verbessert: Die Empfehlungs-Library 1.5.0 speichert Daten zwischen und vermeidet wiederholte Abfragen.
-
-= 2.0.0 · 2019-05-04 =
-
-* Neu: Eigene Plugin-/Theme-ZIP-Seiten und Installer-Verknüpfungen sind verfügbar.
-* Neu: Der Website-Zustand enthält Plugin-Diagnosen unter WordPress ab 5.2.
-* Neu: Ein Newsletter für DECKERWEB Plugins ist verfügbar.
-* Verbessert: Die Empfehlungs-Library 1.4.0 und deutsche Du-/Sie-Übersetzungen wurden aktualisiert.

@@ -32,7 +32,7 @@ Nutze eine netzwerkweite Menüquelle mit optionaler Sichtbarkeit für Website-Ad
 
 ## Gemeinsame Komponenten
 
-Library 1.1.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.2.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie.
+Library 1.1.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.2.1 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie.
 
 ## Menüvorschau und Hinweise
 

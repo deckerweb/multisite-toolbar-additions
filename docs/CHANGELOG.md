@@ -2,6 +2,10 @@
 
 [English](CHANGELOG.md) · [Deutsch](CHANGELOG-de.md)
 
+### 4.2.1 · 2026-10-22
+
+- **Fixed:** Updater 2.2.1 keeps this plugin’s update handling independent of older updater copies loaded by other plugins and clears its own versioned metadata caches on uninstall.
+
 ### 4.2.0 · 2026-10-21
 
 - **New:** A compact Admin Tools group links active DevKit Pro, WP Debug Toolkit and WP Admin Cleaner, with verified module/tab destinations and administrator-only access. Position, label and right-hand icon are configurable.

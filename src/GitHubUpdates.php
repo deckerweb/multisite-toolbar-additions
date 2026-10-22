@@ -21,26 +21,27 @@ final class GitHubUpdates {
 
 	/** Load the shared versioned class once, including beside other deckerweb plugins. @return void */
 	public function boot(): void {
-		if ( ! class_exists( '\Deckerweb\GitHubReleaseUpdater\V2\Updater' ) ) {
-			try {
-				$path = MSTBA_PLUGIN_DIR . 'includes/deckerweb-github-release-updater-v2.php';
-				if ( ! is_readable( $path ) ) { throw new \RuntimeException( 'Missing updater.' ); }
-				require_once $path;
-			} catch ( \Throwable $error ) {
-				add_action( 'admin_notices', [ $this, 'unavailable_notice' ] );
-				add_action( 'network_admin_notices', [ $this, 'unavailable_notice' ] );
-				return;
+		try {
+			$path = MSTBA_PLUGIN_DIR . 'includes/deckerweb-github-release-updater-v2.php';
+			if ( ! is_readable( $path ) ) { throw new \RuntimeException( 'Missing updater.' ); }
+			$updater_class = require $path;
+			if ( ! is_string( $updater_class ) || ! class_exists( $updater_class, false ) ) {
+				throw new \RuntimeException( 'Invalid updater implementation.' );
 			}
+		} catch ( \Throwable $error ) {
+			add_action( 'admin_notices', [ $this, 'unavailable_notice' ] );
+			add_action( 'network_admin_notices', [ $this, 'unavailable_notice' ] );
+			return;
 		}
 		$options = [];
-		if ( defined( '\\Deckerweb\\GitHubReleaseUpdater\\V2\\Updater::SUPPORTS_HOST_TRANSLATIONS' ) && is_readable( MSTBA_PLUGIN_DIR . 'includes/updater-translations.php' ) ) {
+		if ( defined( $updater_class . '::SUPPORTS_HOST_TRANSLATIONS' ) && is_readable( MSTBA_PLUGIN_DIR . 'includes/updater-translations.php' ) ) {
 			$options['translate'] = require MSTBA_PLUGIN_DIR . 'includes/updater-translations.php';
 		}
-		if ( defined( '\\Deckerweb\\GitHubReleaseUpdater\\V2\\Updater::SUPPORTS_CATALOG_PROVIDER' ) && function_exists( 'deckerweb_library_updater_options_v1' ) ) {
+		if ( defined( $updater_class . '::SUPPORTS_CATALOG_PROVIDER' ) && function_exists( 'deckerweb_library_updater_options_v1' ) ) {
 			$options = array_merge( $options, deckerweb_library_updater_options_v1( MSTBA_PLUGIN_FILE, self::REPOSITORY ) );
 		}
 		try {
-			$updater = new \Deckerweb\GitHubReleaseUpdater\V2\Updater(
+			$updater = new $updater_class(
 				MSTBA_PLUGIN_FILE,
 				self::REPOSITORY,
 				'Multisite Toolbar Additions',

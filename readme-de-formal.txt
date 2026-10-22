@@ -5,7 +5,7 @@ Tags: toolbar, admin bar, multisite, navigation
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 4.2.0
+Stable tag: 4.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,7 @@ Multisite Toolbar Additions habe ich 2012 für meinen eigenen Bedarf entwickelt.
 * Wählen Sie zuerst/zuletzt, vor/nach einem Bezugseintrag oder die rechte Seite. Zeigen Sie das Menü im Frontend, im Admin oder in beiden. Wählen Sie eine bis zehn Kindebenen oder alle. Fehlt der Bezugseintrag, erscheint das Menü am Ende.
 * Plugins und Themes stehen im Website-Toolbar-Menü direkt nacheinander, auch in Multisite. Ergänzungen unter Neu stehen am Ende und besitzen unabhängige Schalter: Plugins an, Themes aus. Beide ZIP-Admin-Untermenüs sind standardmäßig an. Upload-Links verwenden die verfügbaren gemeinsamen Upload-Seiten oder eigene Seiten mit Drag-and-drop und begrenzter Metadatenvorschau; WordPress übernimmt die Installation.
 * Nutzen Sie eine netzwerkweite Menüquelle mit optionaler Sichtbarkeit für Website-Administratoren. Gemeinsame Menüs dürfen nur Super-Administratoren bearbeiten. Zielseiten-Rechte gelten weiterhin; zusätzliche Website-Verknüpfungen sind begrenzt.
-* Library 1.1.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.2.0 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie.
+* Library 1.1.0 bietet kuratierte Plugins mit Voraussetzungs-/Prüfsummenprüfung und optionalen Online-Katalogupdates. Updater 2.2.1 nutzt normale WordPress-Updates. Assets sind lokal; es gibt keine Telemetrie.
 * Prüfen Sie die Menüstruktur mit ausgewählter Tiefe und Gruppierung ohne Speichern. Eine kompakte Übersicht erklärt Sichtbarkeit, Positionierung und verwendete Uploader. Fehlende Quellen und auf der aktuellen Seite fehlende Toolbar-Bezugseinträge werden erläutert.
 * Aktives DevKit Pro, WP Debug Toolkit und WP Admin Cleaner erscheinen in einer kompakten Gruppe unter dem Website-Eintrag der Toolbar. Geprüfte Modul- und Einstellungslinks sind nur für Administratoren und Super-Administratoren sichtbar. Zugriffsbeschränkungen der Plugins bleiben erhalten. Die Gruppe lässt sich unter dem Website-Eintrag oder rechts mit einem von drei eigenen Icons platzieren. Ihr Name ist anpassbar. WP Debug Toolkit öffnet zuerst seinen eingerichteten Debug Viewer mit dem konfigurierten Slug; die Plugin-Einstellungen bleiben direkt erreichbar.
 * Der deckerweb Katalog erscheint bei Verfügbarkeit unter Neu und Toolbar-Einstellungen. Library-Einstellungen bleiben auch bei ausgeblendetem Katalog erreichbar. Multisite-Verknüpfungen benötigen einen netzwerkaktiven Host und passende Berechtigungen.
@@ -58,7 +58,7 @@ Plugin-ZIP- und Theme-ZIP-Admin-Untermenüs sind aktiv. Der frühere ausgeschalt
 
 = Wie funktionieren Plugin-Updates? =
 
-Der mitgelieferte deckerweb Updater 2.2.0 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen.
+Der mitgelieferte deckerweb Updater 2.2.1 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen.
 
 = Was passiert bei Deaktivierung oder Deinstallation? =
 
@@ -67,6 +67,10 @@ Deaktivierung erhält alle Einstellungen und WordPress-Menüs. Deinstallation le
 Fragen nach Themen: https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-Deutsch
 
 == Changelog ==
+
+= 4.2.1 · 2026-10-22 =
+
+* Behoben: Updater 2.2.1 hält die Updateversorgung dieses Plugins unabhängig von älteren Updater-Kopien anderer Plugins und bereinigt die eigenen versionsbezogenen Metadaten-Caches bei der Deinstallation.
 
 = 4.2.0 · 2026-10-21 =
 
@@ -121,17 +125,10 @@ Fragen nach Themen: https://github.com/deckerweb/multisite-toolbar-additions/wik
 
 * Verbessert: Die Empfehlungs-Library 1.5.0 speichert Daten zwischen und vermeidet wiederholte Abfragen.
 
-= 2.0.0 · 2019-05-04 =
-
-* Neu: Eigene Plugin-/Theme-ZIP-Seiten und Installer-Verknüpfungen sind verfügbar.
-* Neu: Der Website-Zustand enthält Plugin-Diagnosen unter WordPress ab 5.2.
-* Neu: Ein Newsletter für DECKERWEB Plugins ist verfügbar.
-* Verbessert: Die Empfehlungs-Library 1.4.0 und deutsche Du-/Sie-Übersetzungen wurden aktualisiert.
-
 == Upgrade Notice ==
 
-= 4.2.0 =
-Admin-Werkzeuge und Library-Verknüpfungen ergänzt; gemeinsame Komponenten und Dialoge aktualisiert. Einstellungen und WordPress-Menüs bleiben erhalten. WordPress 6.7/PHP 8.2 weiterhin erforderlich.
+= 4.2.1 =
+Updater 2.2.1 verbessert die Zusammenarbeit mit älteren Updater-Kopien. Einstellungen und WordPress-Menüs bleiben erhalten. WordPress 6.7/PHP 8.2 weiterhin erforderlich.
 
 == Credits ==
 

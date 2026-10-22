@@ -76,7 +76,7 @@ Nein. Mitgelieferter Katalog und Grafiken funktionieren lokal. Angeforderte Pake
 
 ### Wie funktionieren Plugin-Updates?
 
-Der mitgelieferte deckerweb Updater 2.2.0 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen.
+Der mitgelieferte deckerweb Updater 2.2.1 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen.
 
 ## Deine Daten
 

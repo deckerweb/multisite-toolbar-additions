@@ -32,7 +32,7 @@ Use one network-wide menu source with optional viewing by website administrators
 
 ## Shared components
 
-Library 1.1.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.2.0 uses normal WordPress updates. Assets are local; no telemetry is collected.
+Library 1.1.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.2.1 uses normal WordPress updates. Assets are local; no telemetry is collected.
 
 ## Menu preview and diagnostics
 
