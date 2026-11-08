@@ -2,6 +2,10 @@
 
 [English](Changelog-English.md) · [Deutsch](Changelog-Deutsch.md)
 
+### 4.2.2 · 2026-11-08
+
+- **Fixed:** Update deckerweb Library to 1.3.0 and Updater to 2.4.0, with catalog-independent updates, bounded downloads and stricter package checks.
+
 ### 4.2.1 · 2026-10-22
 
 - **Fixed:** Updater 2.2.1 keeps this plugin’s update handling independent of older updater copies loaded by other plugins and clears its own versioned metadata caches on uninstall.

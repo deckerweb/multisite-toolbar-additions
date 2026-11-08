@@ -4,13 +4,13 @@ define('WP_ADMIN', true);
 $_SERVER['HTTP_HOST']='localhost';
 require $argv[1];
 require_once ABSPATH.'wp-admin/includes/plugin.php';
-use Deckerweb\PluginLibrary\V1_1_0\Library;
-use Deckerweb\PluginLibrary\V1_1_0\Catalog;
+use Deckerweb\PluginLibrary\V1_3_0\Library;
+use Deckerweb\PluginLibrary\V1_3_0\Catalog;
 $checks=0;
 function check_library($ok,$name){global $checks;++$checks;if(!$ok){throw new RuntimeException($name);}}
 $runtime=$GLOBALS['deckerweb_library_runtime_v1']??null;
 check_library($runtime instanceof Library,'Library elected on real plugin bootstrap');
-check_library(Library::VERSION==='1.1.0','Expected shared runtime version');
+check_library(Library::VERSION==='1.3.0','Expected shared runtime version');
 check_library(has_filter('install_plugins_tabs',[$runtime,'tabs'])!==false,'Installer integration registered');
 $previous=get_site_option(Library::OPTION,null);
 try {

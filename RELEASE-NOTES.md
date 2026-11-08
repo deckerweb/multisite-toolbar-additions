@@ -1,9 +1,9 @@
-# Multisite Toolbar Additions 4.2.1
+# Multisite Toolbar Additions 4.2.2
 
 ## English
 
-- **Fixed:** Updater 2.2.1 keeps this plugin’s update handling independent of older updater copies loaded by other plugins and clears its own versioned metadata caches on uninstall.
+- **Fixed:** Updated deckerweb Library to 1.3.0 and Updater to 2.4.0. Normal plugin updates are independent of the catalog; update packages receive stricter identity and compatibility checks.
 
 ## Deutsch
 
-- **Behoben:** Updater 2.2.1 hält die Updateversorgung dieses Plugins unabhängig von älteren Updater-Kopien anderer Plugins und bereinigt die eigenen versionsbezogenen Metadaten-Caches bei der Deinstallation.
+- **Behoben:** deckerweb Library auf 1.3.0 und Updater auf 2.4.0 aktualisiert. Normale Plugin-Updates sind unabhängig vom Katalog; Updatepakete werden strenger auf Identität und Kompatibilität geprüft.

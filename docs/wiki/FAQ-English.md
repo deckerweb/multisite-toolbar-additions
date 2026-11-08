@@ -68,7 +68,7 @@ When another uploader provider is active and its uploader is accessible to you, 
 
 ### What is the deckerweb Plugin Library?
 
-A shared installer tab for approved deckerweb plugins. Library 1.1.0 checks package hashes and dependencies, separates installation from activation and uses one elected runtime across participating hosts. The offline catalog includes a preparation preview; online catalog updates are optional and off by default. In Multisite, network-activate a participating host to make the Library available in Network Admin.
+A shared installer tab for approved deckerweb plugins. Library 1.3.0 checks package hashes and dependencies, separates installation from activation and uses one elected runtime across participating hosts. The offline catalog includes a preparation preview; online catalog updates are optional and off by default. In Multisite, network-activate a participating host to make the Library available in Network Admin.
 
 ### Does the library contact GitHub on every page?
 
@@ -76,7 +76,7 @@ No. Its bundled catalog and artwork work locally. Package downloads contact thei
 
 ### How do plugin updates work?
 
-The bundled deckerweb Updater 2.2.1 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
+The bundled deckerweb Updater 2.4.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
 
 ## Your data
 

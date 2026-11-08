@@ -5,7 +5,7 @@ Tags: toolbar, admin bar, multisite, navigation
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 4.2.1
+Stable tag: 4.2.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,7 @@ I created Multisite Toolbar Additions in 2012 for my own needs. Since then, it h
 * Choose first/last, before/after a reference item or the right side. Show the menu on the frontend, in administration or both. Choose one to ten child levels, or all. Missing references fall back to the end.
 * Plugins and Themes appear consecutively in the website toolbar menu, including Multisite. Additions under New remain last and have independent switches: Plugins on, Themes off. Both ZIP admin submenu links default to on. Upload links use available shared uploader pages or dedicated local pages with drag-and-drop and bounded metadata previews; WordPress performs installation.
 * Use one network-wide menu source with optional viewing by website administrators. Shared menus remain editable only by super administrators. Destination permissions still apply; website expansion is bounded.
-* Library 1.1.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.2.1 uses normal WordPress updates. Assets are local; no telemetry is collected.
+* Library 1.3.0 offers curated plugins with prerequisite/hash checks and optional online catalog updates. Updater 2.4.0 uses normal WordPress updates. Assets are local; no telemetry is collected.
 * Inspect the menu structure with the selected depth and grouping without saving. A compact overview explains visibility, positioning and active uploader providers. Missing sources and page-specific missing toolbar anchors are explained.
 * Active DevKit Pro, WP Debug Toolkit and WP Admin Cleaner appear in a compact group below the website toolbar entry. Verified module and settings links are available to administrators and super administrators only. Plugin access restrictions remain respected. Keep the group below the website entry or place it on the right with one of three original icons. Its label is customizable. WP Debug Toolkit opens its installed Debug Viewer first, using the configured slug; plugin settings remain directly available.
 * The deckerweb catalog appears under New and Toolbar Settings when available. Library Settings remain accessible even when the catalog is hidden. Multisite links require an active network host and matching permissions.
@@ -58,7 +58,7 @@ Both Plugin ZIP and Theme ZIP admin submenu links are enabled. The previous hidd
 
 = How do plugin updates work? =
 
-The bundled deckerweb Updater 2.2.1 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
+The bundled deckerweb Updater 2.4.0 checks this fixed public repository and caches release metadata. WordPress controls individual, bulk and automatic updates. The plugin does not enable automatic updates. Packages must match the offered version, plugin identity and platform requirements before replacing the installed copy.
 
 = What happens when I deactivate or uninstall? =
 
@@ -67,6 +67,10 @@ Deactivation keeps all settings and WordPress menus. Uninstall clears this plugi
 FAQ by topic: https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-English
 
 == Changelog ==
+
+= 4.2.2 · 2026-11-08 =
+
+* Fixed: Update deckerweb Library to 1.3.0 and Updater to 2.4.0, with catalog-independent updates, bounded downloads and stricter package checks.
 
 = 4.2.1 · 2026-10-22 =
 
@@ -121,13 +125,9 @@ FAQ by topic: https://github.com/deckerweb/multisite-toolbar-additions/wiki/FAQ-
 * Misc: The restricted website-administrator menu, obsolete integrations and the former recommendations library were removed; the shared super-administrator menu remains.
 * Misc: Distribution moved from WordPress.org to direct ZIP installation and GitHub.
 
-= 2.0.1 · 2019-09-23 =
-
-* Improved: The recommendations library 1.5.0 caches data to reduce repeated requests.
-
 == Upgrade Notice ==
 
-= 4.2.1 =
+= 4.2.2 =
 Updater 2.2.1 improves coexistence with older updater copies. Settings and WordPress menus are retained. WordPress 6.7/PHP 8.2 requirements are unchanged.
 
 == Credits ==

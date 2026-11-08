@@ -68,7 +68,7 @@ Ist ein gemeinsamer Upload-Anbieter aktiv und sein Uploader für dich verfügbar
 
 ### Was ist die deckerweb Plugin Library?
 
-Ein gemeinsamer Installer-Reiter für freigegebene deckerweb Plugins. Library 1.1.0 prüft Paketprüfsummen und Abhängigkeiten, trennt Installation von Aktivierung und verwendet eine gemeinsam gewählte Laufzeit für teilnehmende Plugins. Der mitgelieferte Katalog enthält freigegebene Veröffentlichungen; Online-Katalogupdates sind optional und standardmäßig aus. In Multisite muss ein teilnehmender Host netzwerkweit aktiviert sein, damit die Library in der Netzwerkverwaltung verfügbar ist.
+Ein gemeinsamer Installer-Reiter für freigegebene deckerweb Plugins. Library 1.3.0 prüft Paketprüfsummen und Abhängigkeiten, trennt Installation von Aktivierung und verwendet eine gemeinsam gewählte Laufzeit für teilnehmende Plugins. Der mitgelieferte Katalog enthält freigegebene Veröffentlichungen; Online-Katalogupdates sind optional und standardmäßig aus. In Multisite muss ein teilnehmender Host netzwerkweit aktiviert sein, damit die Library in der Netzwerkverwaltung verfügbar ist.
 
 ### Kontaktiert die Library auf jeder Seite GitHub?
 
@@ -76,7 +76,7 @@ Nein. Mitgelieferter Katalog und Grafiken funktionieren lokal. Angeforderte Pake
 
 ### Wie funktionieren Plugin-Updates?
 
-Der mitgelieferte deckerweb Updater 2.2.1 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen.
+Der mitgelieferte deckerweb Updater 2.4.0 prüft dieses festgelegte öffentliche Repository und speichert Release-Metadaten zwischen. WordPress steuert einzelne, gemeinsame und automatische Updates. Das Plugin aktiviert keine automatischen Updates. Pakete müssen vor dem Austausch Angebotsversion, Plugin-Identität und Plattformanforderungen erfüllen.
 
 ## Deine Daten
 

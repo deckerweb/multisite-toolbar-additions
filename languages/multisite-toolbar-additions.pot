@@ -1,11 +1,120 @@
 # Copyright © 2012–2026 David Decker – DECKERWEB. GPL-2.0-or-later.
 msgid ""
-msgstr "Project-Id-Version: Multisite Toolbar Additions 4.2.0\nReport-Msgid-Bugs-To: https://github.com/deckerweb/multisite-toolbar-additions/issues\nPOT-Creation-Date: 2026-10-21 16:00+0200\nPO-Revision-Date: 2026-10-21 16:00+0200\nLast-Translator: David Decker – DECKERWEB\nLanguage-Team: German\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+msgstr "Project-Id-Version: Multisite Toolbar Additions 4.2.2\nReport-Msgid-Bugs-To: https://github.com/deckerweb/multisite-toolbar-additions/issues\nPOT-Creation-Date: 2026-10-21 16:00+0200\nPO-Revision-Date: 2026-10-21 16:00+0200\nLast-Translator: David Decker – DECKERWEB\nLanguage-Team: German\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
 
-msgid "%d child level"
-msgid_plural "%d child levels"
-msgstr[0] ""
-msgstr[1] ""
+msgid "Archive verification"
+msgstr ""
+
+msgid "Catalog approval"
+msgstr ""
+
+msgid "Catalog diagnostics require a public catalog provider."
+msgstr ""
+
+msgid "Checksum verification"
+msgstr ""
+
+msgid "Could not access the update filesystem."
+msgstr ""
+
+msgid "Could not create the update download file."
+msgstr ""
+
+msgid "Could not prepare the GitHub release package."
+msgstr ""
+
+msgid "Dismiss this notice"
+msgstr ""
+
+msgid "Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider."
+msgstr ""
+
+msgid "GitHub release does not contain the plugin main file."
+msgstr ""
+
+msgid "HTTP status: %d."
+msgstr ""
+
+msgid "Invalid GitHub repository URL."
+msgstr ""
+
+msgid "Invalid authentication provider."
+msgstr ""
+
+msgid "Invalid package cleanup provider."
+msgstr ""
+
+msgid "Invalid private download limits."
+msgstr ""
+
+msgid "Manage installed plugins"
+msgstr ""
+
+msgid "Package download"
+msgstr ""
+
+msgid "Permission denied."
+msgstr ""
+
+msgid "Private mode must be boolean."
+msgstr ""
+
+msgid "Public catalog callbacks require both providers and cannot be used in private mode."
+msgstr ""
+
+msgid "Safe package cleanup is unavailable for this update provider."
+msgstr ""
+
+msgid "See the release on GitHub."
+msgstr ""
+
+msgid "The approved release changed. Refresh updates first."
+msgstr ""
+
+msgid "The approved release could not be verified."
+msgstr ""
+
+msgid "The archive or plugin identity could not be verified. Installation was stopped."
+msgstr ""
+
+msgid "The package does not match the approved checksum. Installation was stopped."
+msgstr ""
+
+msgid "The plugin must be installed in a stable slug directory."
+msgstr ""
+
+msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
+msgstr ""
+
+msgid "The private update download failed. Check credentials and try again."
+msgstr ""
+
+msgid "The secure connection to the update server failed."
+msgstr ""
+
+msgid "The update package identity, version or requirements could not be verified."
+msgstr ""
+
+msgid "The update provider did not return valid update data."
+msgstr ""
+
+msgid "The update request timed out. Try again later."
+msgstr ""
+
+msgid "The update server address could not be resolved."
+msgstr ""
+
+msgid "The update server could not be reached. Try again later."
+msgstr ""
+
+msgid "The update server returned an unsuccessful HTTP response."
+msgstr ""
+
+msgid "Update stopped at %1$s: %2$s"
+msgstr ""
+
+msgid "%1$s of %2$s plugins"
+msgstr ""
 
 msgid "%s is installed but inactive. Activate it first."
 msgstr ""
@@ -19,22 +128,7 @@ msgstr ""
 msgid "%s supports activation per site only."
 msgstr ""
 
-msgid "1. Choose ZIP"
-msgstr ""
-
-msgid "2. Review package"
-msgstr ""
-
-msgid "2. Review the package"
-msgstr ""
-
-msgid "3. Install"
-msgstr ""
-
-msgid "A legacy constant controls whether this menu is enabled. Changing the checkbox cannot override it."
-msgstr ""
-
-msgid "Access denied."
+msgid "Action cancelled."
 msgstr ""
 
 msgid "Activate"
@@ -43,55 +137,37 @@ msgstr ""
 msgid "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme."
 msgstr ""
 
-msgid "Active administration tools are grouped here for administrators and super administrators. The Detected plugin integrations switch controls this group."
+msgid "Activating…"
 msgstr ""
 
-msgid "Activity Streams"
+msgid "Active"
 msgstr ""
 
-msgid "Add Menu"
-msgstr ""
-
-msgid "Add Network Snippet"
-msgstr ""
-
-msgid "Add Site"
-msgstr ""
-
-msgid "Add Snippet"
-msgstr ""
-
-msgid "Add User"
-msgstr ""
-
-msgid "Additions under New"
+msgid "Active filters: "
 msgstr ""
 
 msgid "Admin"
 msgstr ""
 
-msgid "Admin Tools"
-msgstr ""
-
-msgid "Administration only"
-msgstr ""
-
-msgid "Administrators"
-msgstr ""
-
-msgid "After the following item"
+msgid "Affected features remain paused until their requirements are met."
 msgstr ""
 
 msgid "All"
 msgstr ""
 
-msgid "All changes saved"
-msgstr ""
-
-msgid "All levels"
-msgstr ""
-
 msgid "Already active"
+msgstr ""
+
+msgid "Already up to date."
+msgstr ""
+
+msgid "Another action for this plugin is running. Please wait."
+msgstr ""
+
+msgid "Another component interrupted the request. If Git Updater is active, temporarily deactivate it and retry."
+msgstr ""
+
+msgid "Another updater provides a different release. Refresh updates before continuing."
 msgstr ""
 
 msgid "Apr"
@@ -118,16 +194,13 @@ msgstr ""
 msgid "Back to deckerweb"
 msgstr ""
 
-msgid "Back to settings"
-msgstr ""
-
-msgid "Before the following item"
-msgstr ""
-
-msgid "Block Editor Handbook"
-msgstr ""
-
 msgid "Builder"
+msgstr ""
+
+msgid "Bundled catalog"
+msgstr ""
+
+msgid "Cached or bundled catalog"
 msgstr ""
 
 msgid "Cannot create temporary file."
@@ -148,112 +221,43 @@ msgstr ""
 msgid "Catalog URL"
 msgstr ""
 
+msgid "Catalog refreshed."
+msgstr ""
+
+msgid "Catalog retrieval does not limit updates of installed plugins. Those use their normal WordPress update provider."
+msgstr ""
+
+msgid "Catalog verification"
+msgstr ""
+
 msgid "Changelog"
 msgstr ""
 
-msgid "Check ZIP"
+msgid "Check status"
 msgstr ""
 
-msgid "Check for Updates"
-msgstr ""
-
-msgid "Checking ZIP…"
-msgstr ""
-
-msgid "Child levels"
-msgstr ""
-
-msgid "Choose ZIP"
-msgstr ""
-
-msgid "Choose a menu directly to keep it through theme changes. The location option is provided for upgrades from 3.x."
-msgstr ""
-
-msgid "Choose a source website, then load its menus. Loading does not save your settings."
-msgstr ""
-
-msgid "Choose an active website in this network."
-msgstr ""
-
-msgid "Choose one non-empty ZIP file within the upload limit."
-msgstr ""
-
-msgid "Choose the installable ZIP from the provider. WordPress checks the package and confirms replacement of an existing version."
+msgid "Checking status…"
 msgstr ""
 
 msgid "Close"
 msgstr ""
 
-msgid "Code Snippets"
-msgstr ""
-
-msgid "Coding Standards"
-msgstr ""
-
-msgid "Comments"
-msgstr ""
-
 msgid "Commerce"
-msgstr ""
-
-msgid "Compass"
 msgstr ""
 
 msgid "Compatible additions only"
 msgstr ""
 
-msgid "Configurable WordPress toolbar menus and practical shortcuts for single sites and Multisite networks."
-msgstr ""
-
-msgid "Confirm the package below, then choose Install now."
+msgid "Connection failed. Please try again later."
 msgstr ""
 
 msgid "Content"
 msgstr ""
 
-msgid "Continue with native WordPress checks"
+msgid "Copied."
 msgstr ""
 
-msgid "Controls"
-msgstr ""
-
-msgid "Could not access the update filesystem."
-msgstr ""
-
-msgid "Could not create the update download file."
-msgstr ""
-
-msgid "Could not prepare the GitHub release package."
-msgstr ""
-
-msgid "Counted from the original menu root. One means root entries plus their direct children. Grouping does not change this limit."
-msgstr ""
-
-msgid "Create or edit menus"
-msgstr ""
-
-msgid "Cron Inspector"
-msgstr ""
-
-msgid "Custom Background"
-msgstr ""
-
-msgid "Custom Header"
-msgstr ""
-
-msgid "Custom menu"
-msgstr ""
-
-msgid "Customizer"
-msgstr ""
-
-msgid "Dashboard"
-msgstr ""
-
-msgid "Debug Information"
-msgstr ""
-
-msgid "Debug Viewer Settings"
+msgid "Copy diagnostic information"
 msgstr ""
 
 msgid "Dec"
@@ -262,79 +266,31 @@ msgstr ""
 msgid "December"
 msgstr ""
 
-msgid "Declared plugin dependencies"
-msgstr ""
-
 msgid "Delete Library settings when removing the last host plugin"
-msgstr ""
-
-msgid "Delete this plugin’s settings when uninstalling"
 msgstr ""
 
 msgid "Details & requirements"
 msgstr ""
 
-msgid "Detected plugin integrations"
-msgstr ""
-
-msgid "Developer Resources"
-msgstr ""
-
-msgid "Disabled"
-msgstr ""
-
-msgid "Discard unsaved changes and reload the page?"
-msgstr ""
-
 msgid "Discover more plugins by deckerweb"
+msgstr ""
+
+msgid "Discover randomly"
 msgstr ""
 
 msgid "Dismiss permanently"
 msgstr ""
 
-msgid "Documentation"
-msgstr ""
-
 msgid "Done. The plugin is active."
-msgstr ""
-
-msgid "Drop one ZIP file here"
-msgstr ""
-
-msgid "Each root item in the toolbar"
-msgstr ""
-
-msgid "Effective settings"
-msgstr ""
-
-msgid "Enabled"
 msgstr ""
 
 msgid "Enter a catalog URL first."
 msgstr ""
 
-msgid "Error Log"
-msgstr ""
-
-msgid "Error Notifications"
-msgstr ""
-
-msgid "Everything under one toolbar item"
-msgstr ""
-
 msgid "Expanded archive is too large."
 msgstr ""
 
-msgid "Export"
-msgstr ""
-
-msgid "Export Widgets"
-msgstr ""
-
 msgid "F j, Y"
-msgstr ""
-
-msgid "Favorites"
 msgstr ""
 
 msgid "Feb"
@@ -343,16 +299,13 @@ msgstr ""
 msgid "February"
 msgstr ""
 
-msgid "File Manager"
+msgid "Filesystem credentials are required."
 msgstr ""
 
-msgid "Files are shared by the entire Multisite installation. Replacing them can affect every website and network using this extension."
+msgid "Filesystem credentials are required. Use the catalog with JavaScript enabled or the native Plugins screen."
 msgstr ""
 
 msgid "Filter"
-msgstr ""
-
-msgid "First on the left"
 msgstr ""
 
 msgid "Fits my installation"
@@ -367,55 +320,16 @@ msgstr ""
 msgid "Friday"
 msgstr ""
 
-msgid "Frontend and administration"
-msgstr ""
-
-msgid "Frontend only"
-msgstr ""
-
-msgid "Get Involved"
-msgstr ""
-
 msgid "GitHub Stars"
-msgstr ""
-
-msgid "GitHub release does not contain the plugin main file."
-msgstr ""
-
-msgid "Group label"
 msgstr ""
 
 msgid "Hide catalog"
 msgstr ""
 
-msgid "Higher version"
-msgstr ""
-
-msgid "I checked these package details and want to install this ZIP."
-msgstr ""
-
-msgid "I reviewed the package details."
-msgstr ""
-
-msgid "Import"
-msgstr ""
-
-msgid "Import Widgets"
-msgstr ""
-
 msgid "Improved"
 msgstr ""
 
-msgid "Install"
-msgstr ""
-
-msgid "Install Plugin"
-msgstr ""
-
-msgid "Install Theme"
-msgstr ""
-
-msgid "Install Theme via Git Updater"
+msgid "Inactive"
 msgstr ""
 
 msgid "Install and activate this plugin in the network admin."
@@ -427,34 +341,34 @@ msgstr ""
 msgid "Install now"
 msgstr ""
 
-msgid "Install plugin now"
+msgid "Installation cancelled."
 msgstr ""
 
-msgid "Install theme now"
-msgstr ""
-
-msgid "Install via Git Updater"
+msgid "Installation failed."
 msgstr ""
 
 msgid "Installed"
 msgstr ""
 
-msgid "Installed version"
+msgid "Installed plugin identity does not match the approved release."
+msgstr ""
+
+msgid "Installed plugins use their normal update provider. Reload the update information and try again."
+msgstr ""
+
+msgid "Installed · inactive"
 msgstr ""
 
 msgid "Installed: "
 msgstr ""
 
-msgid "Invalid GitHub repository URL."
+msgid "Installing…"
 msgstr ""
 
 msgid "Invalid ZIP archive."
 msgstr ""
 
 msgid "Invalid approval flag."
-msgstr ""
-
-msgid "Invalid authentication provider."
 msgstr ""
 
 msgid "Invalid catalog field: "
@@ -505,10 +419,16 @@ msgstr ""
 msgid "Invalid plugin series."
 msgstr ""
 
+msgid "Invalid sort order."
+msgstr ""
+
 msgid "Invalid star count."
 msgstr ""
 
 msgid "Invalid stars date."
+msgstr ""
+
+msgid "Invalid status filter."
 msgstr ""
 
 msgid "Jan"
@@ -529,22 +449,7 @@ msgstr ""
 msgid "June"
 msgstr ""
 
-msgid "Keep the toolbar visible in the fullscreen block editor"
-msgstr ""
-
-msgid "Last on the left"
-msgstr ""
-
-msgid "Layout"
-msgstr ""
-
-msgid "Leave empty to use Admin Tools in the current language."
-msgstr ""
-
-msgid "Leave empty to use the selected menu’s name. A custom label overrides it."
-msgstr ""
-
-msgid "Level %d"
+msgid "Last successful check: "
 msgstr ""
 
 msgid "Library"
@@ -559,25 +464,7 @@ msgstr ""
 msgid "Library settings saved."
 msgstr ""
 
-msgid "Load menus"
-msgstr ""
-
-msgid "Log Settings"
-msgstr ""
-
-msgid "Lower version — possible downgrade"
-msgstr ""
-
 msgid "Manage Content"
-msgstr ""
-
-msgid "Manage installed extensions"
-msgstr ""
-
-msgid "Manage installed plugins"
-msgstr ""
-
-msgid "Many sites. One move."
 msgstr ""
 
 msgid "Mar"
@@ -586,31 +473,7 @@ msgstr ""
 msgid "March"
 msgstr ""
 
-msgid "Maximum file size: %s. One ZIP package per upload."
-msgstr ""
-
-msgid "Maximum websites with extra shortcuts"
-msgstr ""
-
 msgid "May"
-msgstr ""
-
-msgid "Media Library"
-msgstr ""
-
-msgid "Media Listing"
-msgstr ""
-
-msgid "Menu ID"
-msgstr ""
-
-msgid "Menu Locations"
-msgstr ""
-
-msgid "Menu preview and effective settings"
-msgstr ""
-
-msgid "Migrate Database"
 msgstr ""
 
 msgid "Misc"
@@ -632,6 +495,686 @@ msgid "More by deckerweb"
 msgstr ""
 
 msgid "Multisite"
+msgstr ""
+
+msgid "Name A–Z"
+msgstr ""
+
+msgid "Name Z–A"
+msgstr ""
+
+msgid "Network activate"
+msgstr ""
+
+msgid "Network active"
+msgstr ""
+
+msgid "Network permission denied."
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "No approved plugins match this selection."
+msgstr ""
+
+msgid "No update reported."
+msgstr ""
+
+msgid "Not installed"
+msgstr ""
+
+msgid "Not installed. You can try again."
+msgstr ""
+
+msgid "Nov"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "Off by default. Applies only when no other host is installed, including inactive hosts. Removes Library settings, installation records and introduction status. Installed plugins, their content and other plugin settings remain unchanged. Network data is shared across sites."
+msgstr ""
+
+msgid "Online catalog"
+msgstr ""
+
+msgid "Only HTTPS on raw.githubusercontent.com/deckerweb. The server receives the requesting IP address. GitHub is contacted when installing a release."
+msgstr ""
+
+msgid "Only approved releases"
+msgstr ""
+
+msgid "Open catalog"
+msgstr ""
+
+msgid "Optional. The bundled catalog works immediately. Catalog requests are cached for 24 hours. No site URL, plugin list or usage data is sent."
+msgstr ""
+
+msgid "PHP ZIP support is required."
+msgstr ""
+
+msgid "POST required."
+msgstr ""
+
+msgid "Permission denied. Reload the page and check your permissions."
+msgstr ""
+
+msgid "Planned: "
+msgstr ""
+
+msgid "Plugin identity or version does not match the catalog."
+msgstr ""
+
+msgid "Plugin is not installed."
+msgstr ""
+
+msgid "Plugin series"
+msgstr ""
+
+msgid "Plugin status"
+msgstr ""
+
+msgid "Product website"
+msgstr ""
+
+msgid "Recently updated"
+msgstr ""
+
+msgid "Refresh catalog"
+msgstr ""
+
+msgid "Release 1.0.0 is being prepared. Installation will be available after package verification."
+msgstr ""
+
+msgid "Release checksum is verified before installation. Activation is a separate step."
+msgstr ""
+
+msgid "Release in preparation"
+msgstr ""
+
+msgid "Release must contain exactly the approved plugin directory."
+msgstr ""
+
+msgid "Remove filter: "
+msgstr ""
+
+msgid "Repository & documentation"
+msgstr ""
+
+msgid "Requirements shown are preliminary until the stable release is verified."
+msgstr ""
+
+msgid "Requires PHP %s or newer."
+msgstr ""
+
+msgid "Requires WordPress %s or newer."
+msgstr ""
+
+msgid "Requires a WordPress Multisite network."
+msgstr ""
+
+msgid "Reset filters"
+msgstr ""
+
+msgid "Reset view"
+msgstr ""
+
+msgid "Retrieve approved catalog updates online"
+msgstr ""
+
+msgid "Sat"
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
+msgid "Save settings"
+msgstr ""
+
+msgid "Scripts"
+msgstr ""
+
+msgid "Search this catalog"
+msgstr ""
+
+msgid "Select and copy the text."
+msgstr ""
+
+msgid "Selected by deckerweb · Installed from GitHub releases"
+msgstr ""
+
+msgid "Sep"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "Settings saved."
+msgstr ""
+
+msgid "Shop"
+msgstr ""
+
+msgid "Show deckerweb under Add Plugins"
+msgstr ""
+
+msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
+msgstr ""
+
+msgid "Shuffle again"
+msgstr ""
+
+msgid "Small plugins. Practical improvements."
+msgstr ""
+
+msgid "Sort by"
+msgstr ""
+
+msgid "Source: GitHub"
+msgstr ""
+
+msgid "Stage: %1$s. %2$s"
+msgstr ""
+
+msgid "Standard"
+msgstr ""
+
+msgid "Sun"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
+
+msgid "Technical information"
+msgstr ""
+
+msgid "The GitHub release could not be downloaded."
+msgstr ""
+
+msgid "The action is still running. Check its status again."
+msgstr ""
+
+msgid "The approved package could not be verified."
+msgstr ""
+
+msgid "The catalog URL is not an allowed first-party HTTPS endpoint."
+msgstr ""
+
+msgid "The catalog could not be verified. Please try again later."
+msgstr ""
+
+msgid "The catalog is disabled."
+msgstr ""
+
+msgid "The catalog is hidden."
+msgstr ""
+
+msgid "The catalog response is invalid, incompatible or too large."
+msgstr ""
+
+msgid "The connection timed out. Please try again later."
+msgstr ""
+
+msgid "The deckerweb catalog could not load. Check platform requirements and the complete Library integration in the host plugin."
+msgstr ""
+
+msgid "The installed plugin identity could not be verified for this catalog update."
+msgstr ""
+
+msgid "The installed plugin identity could not be verified. Use the Plugins screen to review it."
+msgstr ""
+
+msgid "The online catalog is unavailable. Showing cached or bundled entries; online approval is checked again before installation."
+msgstr ""
+
+msgid "The online catalog source is not trusted."
+msgstr ""
+
+msgid "The package checksum does not match the approved release. Installation was stopped."
+msgstr ""
+
+msgid "The package did not pass the archive or plugin identity checks. Installation was stopped."
+msgstr ""
+
+msgid "The release checksum does not match. Installation stopped."
+msgstr ""
+
+msgid "The request could not be completed. Check the plugin status before trying again."
+msgstr ""
+
+msgid "The requirements below describe the catalog version for first installation, not an installed-plugin update."
+msgstr ""
+
+msgid "The requirements below describe the offered release."
+msgstr ""
+
+msgid "The secure connection could not be verified."
+msgstr ""
+
+msgid "The server address could not be resolved."
+msgstr ""
+
+msgid "The server returned HTTP %d. Please try again later."
+msgstr ""
+
+msgid "The update has not been confirmed. You can try again."
+msgstr ""
+
+msgid "These details contain component versions and catalog status, without credentials or site content."
+msgstr ""
+
+msgid "This catalog requires a newer Library."
+msgstr ""
+
+msgid "This plugin directory already exists. Use the installed plugin; it will not be overwritten."
+msgstr ""
+
+msgid "This release is no longer approved."
+msgstr ""
+
+msgid "This release is not approved."
+msgstr ""
+
+msgid "Thu"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
+msgid "Tools"
+msgstr ""
+
+msgid "Tue"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
+
+msgid "Unsafe archive path."
+msgstr ""
+
+msgid "Untrusted release URL."
+msgstr ""
+
+msgid "Update %1$s to version %2$s or newer."
+msgstr ""
+
+msgid "Update available"
+msgstr ""
+
+msgid "Update available: %s"
+msgstr ""
+
+msgid "Update failed."
+msgstr ""
+
+msgid "Update information changed. Reload the page and try again."
+msgstr ""
+
+msgid "Update to %s"
+msgstr ""
+
+msgid "Updated"
+msgstr ""
+
+msgid "Updating…"
+msgstr ""
+
+msgid "Use the Plugins screen to manage this installed plugin."
+msgstr ""
+
+msgid "Verified first installations · Independent plugin updates"
+msgstr ""
+
+msgid "View plugins"
+msgstr ""
+
+msgid "Visibility"
+msgstr ""
+
+msgid "Wed"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
+
+msgid "WordPress"
+msgstr ""
+
+msgid "You already use one of my plugins. Find selected additions in the deckerweb tab."
+msgstr ""
+
+msgid "%d child level"
+msgid_plural "%d child levels"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "1. Choose ZIP"
+msgstr ""
+
+msgid "2. Review package"
+msgstr ""
+
+msgid "2. Review the package"
+msgstr ""
+
+msgid "3. Install"
+msgstr ""
+
+msgid "A legacy constant controls whether this menu is enabled. Changing the checkbox cannot override it."
+msgstr ""
+
+msgid "Access denied."
+msgstr ""
+
+msgid "Active administration tools are grouped here for administrators and super administrators. The Detected plugin integrations switch controls this group."
+msgstr ""
+
+msgid "Activity Streams"
+msgstr ""
+
+msgid "Add Menu"
+msgstr ""
+
+msgid "Add Network Snippet"
+msgstr ""
+
+msgid "Add Site"
+msgstr ""
+
+msgid "Add Snippet"
+msgstr ""
+
+msgid "Add User"
+msgstr ""
+
+msgid "Additions under New"
+msgstr ""
+
+msgid "Admin Tools"
+msgstr ""
+
+msgid "Administration only"
+msgstr ""
+
+msgid "Administrators"
+msgstr ""
+
+msgid "After the following item"
+msgstr ""
+
+msgid "All changes saved"
+msgstr ""
+
+msgid "All levels"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Before the following item"
+msgstr ""
+
+msgid "Block Editor Handbook"
+msgstr ""
+
+msgid "Check ZIP"
+msgstr ""
+
+msgid "Check for Updates"
+msgstr ""
+
+msgid "Checking ZIP…"
+msgstr ""
+
+msgid "Child levels"
+msgstr ""
+
+msgid "Choose ZIP"
+msgstr ""
+
+msgid "Choose a menu directly to keep it through theme changes. The location option is provided for upgrades from 3.x."
+msgstr ""
+
+msgid "Choose a source website, then load its menus. Loading does not save your settings."
+msgstr ""
+
+msgid "Choose an active website in this network."
+msgstr ""
+
+msgid "Choose one non-empty ZIP file within the upload limit."
+msgstr ""
+
+msgid "Choose the installable ZIP from the provider. WordPress checks the package and confirms replacement of an existing version."
+msgstr ""
+
+msgid "Code Snippets"
+msgstr ""
+
+msgid "Coding Standards"
+msgstr ""
+
+msgid "Comments"
+msgstr ""
+
+msgid "Compass"
+msgstr ""
+
+msgid "Configurable WordPress toolbar menus and practical shortcuts for single sites and Multisite networks."
+msgstr ""
+
+msgid "Confirm the package below, then choose Install now."
+msgstr ""
+
+msgid "Continue with native WordPress checks"
+msgstr ""
+
+msgid "Controls"
+msgstr ""
+
+msgid "Counted from the original menu root. One means root entries plus their direct children. Grouping does not change this limit."
+msgstr ""
+
+msgid "Create or edit menus"
+msgstr ""
+
+msgid "Cron Inspector"
+msgstr ""
+
+msgid "Custom Background"
+msgstr ""
+
+msgid "Custom Header"
+msgstr ""
+
+msgid "Custom menu"
+msgstr ""
+
+msgid "Customizer"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Debug Information"
+msgstr ""
+
+msgid "Debug Viewer Settings"
+msgstr ""
+
+msgid "Declared plugin dependencies"
+msgstr ""
+
+msgid "Delete this plugin’s settings when uninstalling"
+msgstr ""
+
+msgid "Detected plugin integrations"
+msgstr ""
+
+msgid "Developer Resources"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Discard unsaved changes and reload the page?"
+msgstr ""
+
+msgid "Documentation"
+msgstr ""
+
+msgid "Drop one ZIP file here"
+msgstr ""
+
+msgid "Each root item in the toolbar"
+msgstr ""
+
+msgid "Effective settings"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Error Log"
+msgstr ""
+
+msgid "Error Notifications"
+msgstr ""
+
+msgid "Everything under one toolbar item"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Export Widgets"
+msgstr ""
+
+msgid "Favorites"
+msgstr ""
+
+msgid "File Manager"
+msgstr ""
+
+msgid "Files are shared by the entire Multisite installation. Replacing them can affect every website and network using this extension."
+msgstr ""
+
+msgid "First on the left"
+msgstr ""
+
+msgid "Frontend and administration"
+msgstr ""
+
+msgid "Frontend only"
+msgstr ""
+
+msgid "Get Involved"
+msgstr ""
+
+msgid "Group label"
+msgstr ""
+
+msgid "Higher version"
+msgstr ""
+
+msgid "I checked these package details and want to install this ZIP."
+msgstr ""
+
+msgid "I reviewed the package details."
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "Import Widgets"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Install Plugin"
+msgstr ""
+
+msgid "Install Theme"
+msgstr ""
+
+msgid "Install Theme via Git Updater"
+msgstr ""
+
+msgid "Install plugin now"
+msgstr ""
+
+msgid "Install theme now"
+msgstr ""
+
+msgid "Install via Git Updater"
+msgstr ""
+
+msgid "Installed version"
+msgstr ""
+
+msgid "Keep the toolbar visible in the fullscreen block editor"
+msgstr ""
+
+msgid "Last on the left"
+msgstr ""
+
+msgid "Layout"
+msgstr ""
+
+msgid "Leave empty to use Admin Tools in the current language."
+msgstr ""
+
+msgid "Leave empty to use the selected menu’s name. A custom label overrides it."
+msgstr ""
+
+msgid "Level %d"
+msgstr ""
+
+msgid "Load menus"
+msgstr ""
+
+msgid "Log Settings"
+msgstr ""
+
+msgid "Lower version — possible downgrade"
+msgstr ""
+
+msgid "Manage installed extensions"
+msgstr ""
+
+msgid "Many sites. One move."
+msgstr ""
+
+msgid "Maximum file size: %s. One ZIP package per upload."
+msgstr ""
+
+msgid "Maximum websites with extra shortcuts"
+msgstr ""
+
+msgid "Media Library"
+msgstr ""
+
+msgid "Media Listing"
+msgstr ""
+
+msgid "Menu ID"
+msgstr ""
+
+msgid "Menu Locations"
+msgstr ""
+
+msgid "Menu preview and effective settings"
+msgstr ""
+
+msgid "Migrate Database"
 msgstr ""
 
 msgid "Multisite Toolbar Additions"
@@ -658,19 +1201,10 @@ msgstr ""
 msgid "Network Themes"
 msgstr ""
 
-msgid "Network activate"
-msgstr ""
-
 msgid "Network administration and network New menu"
 msgstr ""
 
-msgid "Network permission denied."
-msgstr ""
-
 msgid "Network-activate this plugin or activate it on the source website before selecting that menu."
-msgstr ""
-
-msgid "New"
 msgstr ""
 
 msgid "New (Network)"
@@ -679,46 +1213,16 @@ msgstr ""
 msgid "New content"
 msgstr ""
 
-msgid "No approved plugins match this selection."
-msgstr ""
-
 msgid "No reachable root entries exist. Check the parent relationships in the WordPress menu."
 msgstr ""
 
 msgid "No source menu is available. Choose an existing menu, or assign one to the legacy toolbar location."
 msgstr ""
 
-msgid "Not installed"
-msgstr ""
-
-msgid "Nov"
-msgstr ""
-
-msgid "November"
-msgstr ""
-
-msgid "Oct"
-msgstr ""
-
-msgid "October"
-msgstr ""
-
-msgid "Off by default. Applies only when no other host is installed, including inactive hosts. Removes Library settings, installation records and introduction status. Installed plugins, their content and other plugin settings remain unchanged. Network data is shared across sites."
-msgstr ""
-
 msgid "Off by default. Deactivation keeps your data. Uninstall always clears this plugin’s update cache. This option deletes toolbar settings for this site or network; WordPress menus, installed plugins and shared Library data are not deleted by it."
 msgstr ""
 
 msgid "On the right, beside the account menu"
-msgstr ""
-
-msgid "Online catalog"
-msgstr ""
-
-msgid "Only HTTPS on raw.githubusercontent.com/deckerweb. The server receives the requesting IP address. GitHub is contacted when installing a release."
-msgstr ""
-
-msgid "Only approved releases"
 msgstr ""
 
 msgid "Only super administrators may edit the shared toolbar menu."
@@ -730,22 +1234,10 @@ msgstr ""
 msgid "Open Debug Viewer"
 msgstr ""
 
-msgid "Open catalog"
-msgstr ""
-
-msgid "Optional. The bundled catalog works immediately. Catalog requests are cached for 24 hours. No site URL, plugin list or usage data is sent."
-msgstr ""
-
 msgid "Other website ID"
 msgstr ""
 
 msgid "PHP Settings"
-msgstr ""
-
-msgid "PHP ZIP support is required."
-msgstr ""
-
-msgid "POST required."
 msgstr ""
 
 msgid "Package name"
@@ -760,12 +1252,6 @@ msgstr ""
 msgid "Performance"
 msgstr ""
 
-msgid "Permission denied."
-msgstr ""
-
-msgid "Planned: "
-msgstr ""
-
 msgid "Plugin File Editor"
 msgstr ""
 
@@ -775,16 +1261,7 @@ msgstr ""
 msgid "Plugin Settings"
 msgstr ""
 
-msgid "Plugin identity or version does not match the catalog."
-msgstr ""
-
 msgid "Plugin information"
-msgstr ""
-
-msgid "Plugin is not installed."
-msgstr ""
-
-msgid "Plugin series"
 msgstr ""
 
 msgid "Plugin uploader"
@@ -805,43 +1282,19 @@ msgstr ""
 msgid "Preview of unsaved settings. Save changes to apply them."
 msgstr ""
 
-msgid "Private mode must be boolean."
-msgstr ""
-
-msgid "Product website"
-msgstr ""
-
 msgid "Quick links to edit WordPress menus"
 msgstr ""
 
 msgid "Reference item"
 msgstr ""
 
-msgid "Refresh catalog"
-msgstr ""
-
 msgid "Reinstall the complete plugin package to restore the shared Library. Toolbar features remain available."
-msgstr ""
-
-msgid "Release 1.0.0 is being prepared. Installation will be available after package verification."
-msgstr ""
-
-msgid "Release checksum is verified before installation. Activation is a separate step."
-msgstr ""
-
-msgid "Release in preparation"
-msgstr ""
-
-msgid "Release must contain exactly the approved plugin directory."
 msgstr ""
 
 msgid "Reload page"
 msgstr ""
 
 msgid "Remove selected file"
-msgstr ""
-
-msgid "Repository & documentation"
 msgstr ""
 
 msgid "Required: %1$s · Current: %2$s · %3$s"
@@ -853,24 +1306,6 @@ msgstr ""
 msgid "Requirement not met"
 msgstr ""
 
-msgid "Requirements shown are preliminary until the stable release is verified."
-msgstr ""
-
-msgid "Requires PHP %s or newer."
-msgstr ""
-
-msgid "Requires WordPress %s or newer."
-msgstr ""
-
-msgid "Requires a WordPress Multisite network."
-msgstr ""
-
-msgid "Reset filters"
-msgstr ""
-
-msgid "Retrieve approved catalog updates online"
-msgstr ""
-
 msgid "Review package"
 msgstr ""
 
@@ -880,43 +1315,13 @@ msgstr ""
 msgid "Same version — files may still differ"
 msgstr ""
 
-msgid "Sat"
-msgstr ""
-
-msgid "Saturday"
-msgstr ""
-
 msgid "Save all changes"
-msgstr ""
-
-msgid "Save settings"
-msgstr ""
-
-msgid "Scripts"
 msgstr ""
 
 msgid "Search Directory"
 msgstr ""
 
-msgid "Search this catalog"
-msgstr ""
-
-msgid "See the release on GitHub."
-msgstr ""
-
-msgid "Selected by deckerweb · Installed from GitHub releases"
-msgstr ""
-
-msgid "Sep"
-msgstr ""
-
-msgid "September"
-msgstr ""
-
 msgid "Settings"
-msgstr ""
-
-msgid "Settings saved."
 msgstr ""
 
 msgid "Settings sections"
@@ -937,9 +1342,6 @@ msgstr ""
 msgid "Show Themes under New in the toolbar"
 msgstr ""
 
-msgid "Show deckerweb under Add Plugins"
-msgstr ""
-
 msgid "Show in"
 msgstr ""
 
@@ -950,9 +1352,6 @@ msgid "Show the plugin ZIP upload submenu"
 msgstr ""
 
 msgid "Show the theme ZIP upload submenu"
-msgstr ""
-
-msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
 msgstr ""
 
 msgid "Simplified toolbar preview. Expand entries to explore their children; destination links are not opened."
@@ -976,13 +1375,7 @@ msgstr ""
 msgid "Site Tools"
 msgstr ""
 
-msgid "Small plugins. Practical improvements."
-msgstr ""
-
 msgid "Source website"
-msgstr ""
-
-msgid "Source: GitHub"
 msgstr ""
 
 msgid "Steps:"
@@ -992,12 +1385,6 @@ msgid "Stored data"
 msgstr ""
 
 msgid "Stream Settings"
-msgstr ""
-
-msgid "Sun"
-msgstr ""
-
-msgid "Sunday"
 msgstr ""
 
 msgid "Super Admins"
@@ -1024,33 +1411,6 @@ msgstr ""
 msgid "The GitHub package does not contain the Multisite Toolbar Additions plugin file."
 msgstr ""
 
-msgid "The GitHub release could not be downloaded."
-msgstr ""
-
-msgid "The approved release changed. Refresh updates first."
-msgstr ""
-
-msgid "The approved release could not be verified."
-msgstr ""
-
-msgid "The catalog URL is not an allowed first-party HTTPS endpoint."
-msgstr ""
-
-msgid "The catalog could not be verified. Please try again later."
-msgstr ""
-
-msgid "The catalog is disabled."
-msgstr ""
-
-msgid "The catalog is hidden."
-msgstr ""
-
-msgid "The online catalog is unavailable. Showing cached or bundled entries; online approval is checked again before installation."
-msgstr ""
-
-msgid "The online catalog source is not trusted."
-msgstr ""
-
 msgid "The package cannot be previewed safely. Use the provider installation ZIP or continue with native WordPress checks."
 msgstr ""
 
@@ -1061,9 +1421,6 @@ msgid "The package version differs from the offered update. Please check for upd
 msgstr ""
 
 msgid "The plugin is inactive on the source website. Activate it there or network-wide to use this menu."
-msgstr ""
-
-msgid "The plugin must be installed in a stable slug directory."
 msgstr ""
 
 msgid "The preview could not be updated. Your settings have not been changed."
@@ -1078,16 +1435,7 @@ msgstr ""
 msgid "The preview shows the first 200 entries. The toolbar continues to use the full menu and your configured depth."
 msgstr ""
 
-msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
-msgstr ""
-
-msgid "The private update download failed. Check credentials and try again."
-msgstr ""
-
 msgid "The reference item is missing on this page. The menu will appear last on the left here."
-msgstr ""
-
-msgid "The release checksum does not match. Installation stopped."
 msgstr ""
 
 msgid "The saved source website is unavailable. Load the menus of an active website and save a new source."
@@ -1129,18 +1477,6 @@ msgstr ""
 msgid "This ZIP was identified as a theme. Please use the theme uploader."
 msgstr ""
 
-msgid "This catalog requires a newer Library."
-msgstr ""
-
-msgid "This plugin directory already exists. Use the installed plugin; it will not be overwritten."
-msgstr ""
-
-msgid "This release is no longer approved."
-msgstr ""
-
-msgid "This release is not approved."
-msgstr ""
-
 msgid "This release requires a newer WordPress or PHP version. The installed version has been kept."
 msgstr ""
 
@@ -1148,12 +1484,6 @@ msgid "This site-only activation manages network toolbar settings from this webs
 msgstr ""
 
 msgid "This view describes the saved settings. The preview does not change your menu, grant access to destinations, or override personal toolbar visibility."
-msgstr ""
-
-msgid "Thu"
-msgstr ""
-
-msgid "Thursday"
 msgstr ""
 
 msgid "Toolbar Additions"
@@ -1177,9 +1507,6 @@ msgstr ""
 msgid "Toolbox"
 msgstr ""
 
-msgid "Tools"
-msgstr ""
-
 msgid "Tools icon"
 msgstr ""
 
@@ -1187,12 +1514,6 @@ msgid "Tools label"
 msgstr ""
 
 msgid "Tools position"
-msgstr ""
-
-msgid "Tue"
-msgstr ""
-
-msgid "Tuesday"
 msgstr ""
 
 msgid "Unavailable"
@@ -1210,16 +1531,7 @@ msgstr ""
 msgid "Unknown / not declared"
 msgstr ""
 
-msgid "Unsafe archive path."
-msgstr ""
-
 msgid "Unsaved changes"
-msgstr ""
-
-msgid "Untrusted release URL."
-msgstr ""
-
-msgid "Update %1$s to version %2$s or newer."
 msgstr ""
 
 msgid "Updates"
@@ -1288,12 +1600,6 @@ msgstr ""
 msgid "Version comparison"
 msgstr ""
 
-msgid "View plugins"
-msgstr ""
-
-msgid "Visibility"
-msgstr ""
-
 msgid "Visibility grants no permission to linked pages. Only super administrators may edit the shared toolbar menu."
 msgstr ""
 
@@ -1309,12 +1615,6 @@ msgstr ""
 msgid "Website name"
 msgstr ""
 
-msgid "Wed"
-msgstr ""
-
-msgid "Wednesday"
-msgstr ""
-
 msgid "What is checked before installation?"
 msgstr ""
 
@@ -1325,9 +1625,6 @@ msgid "Widgets Customizer"
 msgstr ""
 
 msgid "Without JavaScript, WordPress performs the upload and its native checks directly."
-msgstr ""
-
-msgid "WordPress"
 msgstr ""
 
 msgid "WordPress Menus"
@@ -1342,9 +1639,6 @@ msgstr ""
 msgid "WordPress menu"
 msgstr ""
 
-msgid "You already use one of my plugins. Find selected additions in the deckerweb tab."
-msgstr ""
-
 msgid "You cannot change toolbar settings."
 msgstr ""
 
@@ -1355,171 +1649,6 @@ msgid "ZIP submenu links"
 msgstr ""
 
 msgid "ZIP version"
-msgstr ""
-
-msgid "Installing…"
-msgstr ""
-
-msgid "Activating…"
-msgstr ""
-
-msgid "The request could not be completed. Check the plugin status before trying again."
-msgstr ""
-
-msgid "Installation cancelled."
-msgstr ""
-
-msgid "Another action for this plugin is running. Please wait."
-msgstr ""
-
-msgid "Filesystem credentials are required."
-msgstr ""
-
-msgid "Installation failed."
-msgstr ""
-
-msgid "Shop"
-msgstr ""
-
-msgid "Check status"
-msgstr ""
-
-msgid "The action is still running. Check its status again."
-msgstr ""
-
-msgid "Not installed. You can try again."
-msgstr ""
-
-msgid "Checking status…"
-msgstr ""
-
-msgid "The requirements below describe the offered release."
-msgstr ""
-
-msgid "Affected features remain paused until their requirements are met."
-msgstr ""
-
-msgid "Update to %s"
-msgstr ""
-
-msgid "Updated"
-msgstr ""
-
-msgid "Already up to date."
-msgstr ""
-
-msgid "Updating…"
-msgstr ""
-
-msgid "The installed plugin identity could not be verified for this catalog update."
-msgstr ""
-
-msgid "Another updater provides a different release. Refresh updates before continuing."
-msgstr ""
-
-msgid "The update has not been confirmed. You can try again."
-msgstr ""
-
-msgid "Update failed."
-msgstr ""
-
-msgid "Catalog refreshed."
-msgstr ""
-
-msgid "Filesystem credentials are required. Use the catalog with JavaScript enabled or the native Plugins screen."
-msgstr ""
-
-msgid "The deckerweb catalog could not load. Check platform requirements and the complete Library integration in the host plugin."
-msgstr ""
-
-msgid "The approved package could not be verified."
-msgstr ""
-
-msgid "Action cancelled."
-msgstr ""
-
-msgid "Standard"
-msgstr ""
-
-msgid "Name A–Z"
-msgstr ""
-
-msgid "Name Z–A"
-msgstr ""
-
-msgid "Recently updated"
-msgstr ""
-
-msgid "Discover randomly"
-msgstr ""
-
-msgid "Sort by"
-msgstr ""
-
-msgid "Shuffle again"
-msgstr ""
-
-msgid "Reset view"
-msgstr ""
-
-msgid "Invalid sort order."
-msgstr ""
-
-msgid "Technical information"
-msgstr ""
-
-msgid "Copy diagnostic information"
-msgstr ""
-
-msgid "These details contain component versions and catalog status, without credentials or site content."
-msgstr ""
-
-msgid "Copied."
-msgstr ""
-
-msgid "Select and copy the text."
-msgstr ""
-
-msgid "Cached or bundled catalog"
-msgstr ""
-
-msgid "Bundled catalog"
-msgstr ""
-
-msgid "Last successful check: "
-msgstr ""
-
-msgid "Network active"
-msgstr ""
-
-msgid "Active"
-msgstr ""
-
-msgid "Installed · inactive"
-msgstr ""
-
-msgid "Update available"
-msgstr ""
-
-msgid "Active filters: "
-msgstr ""
-
-msgid "Remove filter: "
-msgstr ""
-
-msgid "Dismiss this notice"
-msgstr ""
-
-msgid "Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider."
-msgstr ""
-
-msgid "Permission denied. Reload the page and check your permissions."
-msgstr ""
-
-msgid "Another component interrupted the request. If Git Updater is active, temporarily deactivate it and retry."
-msgstr ""
-
-msgid "Public catalog callbacks require both providers and cannot be used in private mode."
 msgstr ""
 
 msgid "deckerweb Plugin Catalog"
